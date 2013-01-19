@@ -36,7 +36,6 @@ class AbstractPhp < Formula
     depends_on 'jpeg'
     depends_on 'libpng'
     depends_on 'libxml2' unless MacOS.version >= :mountain_lion
-    depends_on 'mcrypt'
     depends_on 'openssl' if build.include? 'with-homebrew-openssl'
     depends_on 'tidy' if build.include? 'with-tidy'
     depends_on 'unixodbc' if build.include? 'with-unixodbc'
@@ -180,7 +179,6 @@ INFO
       "--with-gd",
       "--enable-gd-native-ttf",
       "--with-freetype-dir=#{Formula.factory('freetype').prefix}",
-      "--with-mcrypt=#{Formula.factory('mcrypt').prefix}",
       "--with-jpeg-dir=#{Formula.factory('jpeg').prefix}",
       "--with-png-dir=#{Formula.factory('libpng').prefix}",
       "--with-gettext=#{Formula.factory('gettext').prefix}",
@@ -405,6 +403,17 @@ INFO
           brew install php#{php_version_path.to_s}-intl
     EOS
     end
+    
+    if build.include?('with-mcrypt')
+    s << <<-EOS.undent
+      ✩✩✩✩  Mcrypt ✩✩✩✩
+
+      mcrypt is no longer included by default, install it as a separate extension:
+
+          brew install php#{php_version_path.to_s}-mcrypt
+    EOS
+    end
+
 
     if build.include? 'with-fpm'
       s << <<-EOS.undent
