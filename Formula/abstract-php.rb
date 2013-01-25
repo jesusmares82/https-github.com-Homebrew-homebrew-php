@@ -35,7 +35,7 @@ class AbstractPhp < Formula
     depends_on 'imap-uw' if build.include? 'with-imap'
     depends_on 'jpeg'
     depends_on 'libpng'
-    depends_on 'libxml2' unless MacOS.version >= :mountain_lion
+    depends_on 'libxml2' unless MacOS.version >= :lion
     depends_on 'openssl' if build.include? 'with-homebrew-openssl'
     depends_on 'tidy' if build.include? 'with-tidy'
     depends_on 'unixodbc' if build.include? 'with-unixodbc'
@@ -191,7 +191,7 @@ INFO
     args << "--with-curl" if MacOS.version >= :lion
     args << "--with-curl=#{Formula.factory('curl').prefix}" unless MacOS.version >= :lion
 
-    unless MacOS.version >= :mountain_lion
+    unless MacOS.version >= :lion
       args << "--with-libxml-dir=#{Formula.factory('libxml2').prefix}"
     end
 
@@ -403,7 +403,7 @@ INFO
           brew install php#{php_version_path.to_s}-intl
     EOS
     end
-    
+
     if build.include?('with-mcrypt')
     s << <<-EOS.undent
       ✩✩✩✩  Mcrypt ✩✩✩✩
