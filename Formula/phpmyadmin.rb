@@ -13,8 +13,18 @@ class Phpmyadmin < Formula
   url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.5/phpMyAdmin-3.5.5-all-languages.tar.bz2'
   sha1 '79034f4417c6363a9542b73f6b15305331bbef03'
 
-  depends_on 'josegonzalez/php/php53-mcrypt' if php53_installed?
-  depends_on 'josegonzalez/php/php54-mcrypt' if php54_installed?
+  if build.include? 'without-mcrypt' && MacOS.prefer_64_bit?
+    raise "64-bit machines cannot use phpmyadmin without mcrypt"
+  end
+
+  unless build.include? 'without-mcrypt'
+    depends_on 'josegonzalez/php/php53-mcrypt' if php53_installed?
+    depends_on 'josegonzalez/php/php54-mcrypt' if php54_installed?
+  end
+
+  unless MacOS.prefer_64_bit?
+    option 'without-mcrypt', "Exclude the php-mcrypt module"
+  end
 
   def install
     (share+'phpmyadmin').install Dir['*']
