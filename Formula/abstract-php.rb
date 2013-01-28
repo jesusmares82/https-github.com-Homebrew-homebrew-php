@@ -136,14 +136,6 @@ INFO
     end
   end
 
-  def apache_libexec
-    if build.include? 'homebrew-apxs'
-      "#{HOMEBREW_PREFIX}/libexec"
-    else
-      libexec
-    end
-  end
-
   def install_args
     args = [
       "--prefix=#{prefix}",
@@ -225,7 +217,7 @@ INFO
     # Build Apache module by default
     if build_apache?
       args << "--with-apxs2=#{apache_apxs}"
-      args << "--libexecdir=#{apache_libexec}"
+      args << "--libexecdir=#{libexec}"
     end
 
     if build.include? 'with-gmp'
@@ -317,8 +309,8 @@ INFO
     if build_apache?
       # Use Homebrew prefix for the Apache libexec folder
       inreplace "Makefile",
-        "INSTALL_IT = $(mkinstalldirs) '$(INSTALL_ROOT)/usr/libexec/apache2' && $(mkinstalldirs) '$(INSTALL_ROOT)/private/etc/apache2' && /usr/sbin/apxs -S LIBEXECDIR='$(INSTALL_ROOT)/usr/libexec/apache2' -S SYSCONFDIR='$(INSTALL_ROOT)/private/etc/apache2' -i -a -n php5 libs/libphp5.so",
-        "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' && $(mkinstalldirs) '$(INSTALL_ROOT)/private/etc/apache2' && /usr/sbin/apxs -S LIBEXECDIR='#{libexec}/apache2' -S SYSCONFDIR='$(INSTALL_ROOT)/private/etc/apache2' -i -a -n php5 libs/libphp5.so"
+        /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
+        "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2 LIBEXECDIR='#{libexec}/apache2' \\4"
     end
 
     if build.include?('with-intl') && build_intl?
