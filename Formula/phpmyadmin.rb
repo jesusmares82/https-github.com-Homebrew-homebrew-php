@@ -13,7 +13,7 @@ class Phpmyadmin < Formula
   url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.5/phpMyAdmin-3.5.5-all-languages.tar.bz2'
   sha1 '79034f4417c6363a9542b73f6b15305331bbef03'
 
-  if build.include? 'without-mcrypt' && MacOS.prefer_64_bit?
+  if build.include?('without-mcrypt') && MacOS.prefer_64_bit?
     raise "64-bit machines cannot use phpmyadmin without mcrypt"
   end
 
