@@ -7,6 +7,11 @@ class Php54Memcache < AbstractPhp54Extension
   sha1 '15235e0f85b54c429bdbf8f6b529243580e504a7'
   head 'https://svn.php.net/repository/pecl/memcache/trunk/', :using => :svn
 
+  devel do
+    url 'http://pecl.php.net/get/memcache-3.0.7.tgz'
+    sha1 'bd5df709eb9c6dabdcd8886b76eca18cbfa6fa3f'
+  end
+
   def install
     Dir.chdir "memcache-#{version}" unless build.head?
 
