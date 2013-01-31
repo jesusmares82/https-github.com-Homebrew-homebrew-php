@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Midgard2 < AbstractPhp54Extension
   init
   homepage 'http://www.midgard-project.org'
-  url 'https://github.com/midgardproject/midgard-php5.git', :using => :git, :tag => '12.09.1'
+  url 'https://github.com/midgardproject/midgard-php5.git', :tag => '12.09.1'
   version '12.09.1'
   head 'https://github.com/midgardproject/midgard-php5.git', :branch => 'ratatoskr'
 
