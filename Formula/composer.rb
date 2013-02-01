@@ -8,8 +8,8 @@ class Composer < Formula
   sha1 'f01c2bbbd5d9d56fe7b2250081d66c40dbe9a3e6'
   version '1.0.0-alpha6'
 
-  depends_on PhpMetaRequirement.new
-  depends_on ComposerRequirement.new
+  depends_on PhpMetaRequirement
+  depends_on ComposerRequirement
 
   def install
     libexec.install "composer.phar"

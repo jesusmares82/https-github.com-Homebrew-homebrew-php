@@ -11,9 +11,9 @@ class PhpCsFixer < Formula
   head 'https://github.com/fabpot/PHP-CS-Fixer.git'
 
   def self.init
-    depends_on PhpMetaRequirement.new
-    depends_on PharRequirement.new
-    depends_on PharBuildingRequirement.new
+    depends_on PhpMetaRequirement
+    depends_on PharRequirement
+    depends_on PharBuildingRequirement
     depends_on "composer"
     depends_on "php53" if Formula.factory("php53").installed?
     depends_on "php54" if Formula.factory("php54").installed?

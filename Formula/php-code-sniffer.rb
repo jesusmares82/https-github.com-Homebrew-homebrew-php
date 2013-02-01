@@ -7,7 +7,7 @@ class PhpCodeSniffer < Formula
   sha1 '1265ffea3689d0cdaf5b660654a0794d9d39e486'
   version '1.4.3'
 
-  depends_on PhpMetaRequirement.new
+  depends_on PhpMetaRequirement
 
   def install
     prefix.install Dir['PHP_CodeSniffer-1.4.3/*']

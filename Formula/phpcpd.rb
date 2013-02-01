@@ -8,8 +8,8 @@ class Phpcpd < Formula
   sha1 '86d59e472a424ab41bb657d41b77dc01a4868dc7'
   version '1.4.0'
 
-  depends_on PhpMetaRequirement.new
-  depends_on PharRequirement.new
+  depends_on PhpMetaRequirement
+  depends_on PharRequirement
 
   def install
     libexec.install "phpcpd.phar"

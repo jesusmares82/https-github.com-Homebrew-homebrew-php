@@ -8,8 +8,8 @@ class PhpMd < Formula
   sha1 '84ea7e1a2df395f13bf54ebeb1c23474a1ce6b9d'
   version '1.4.1'
 
-  depends_on PhpMetaRequirement.new
-  depends_on PharRequirement.new
+  depends_on PhpMetaRequirement
+  depends_on PharRequirement
 
   def install
     libexec.install "phpmd.phar"
