@@ -5,7 +5,7 @@ require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 
 class PhpMd < Formula
   homepage 'http://phpmd.org/'
   url 'http://static.phpmd.org/php/1.4.1/phpmd.phar'
-  sha1 'a13ab5dd6abb9691c9e844770a79e8ae6be7a43e'
+  sha1 '84ea7e1a2df395f13bf54ebeb1c23474a1ce6b9d'
   version '1.4.1'
 
   depends_on PhpMetaRequirement.new
