@@ -1,5 +1,4 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'xhgui53-requirement')
 
 class Php53Xhgui < AbstractPhp53Extension
   init
@@ -9,7 +8,8 @@ class Php53Xhgui < AbstractPhp53Extension
   head 'https://github.com/preinheimer/xhprof.git'
   version '58ceef1'
 
-  depends_on Xhgui53Requirement.new
+  conflicts_with 'php53-xhprof'
+
   depends_on 'pcre'
 
   def install

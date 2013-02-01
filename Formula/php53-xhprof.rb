@@ -1,5 +1,4 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'xhprof53-requirement')
 
 class Php53Xhprof < AbstractPhp53Extension
   init
@@ -7,7 +6,8 @@ class Php53Xhprof < AbstractPhp53Extension
   url 'http://pecl.php.net/get/xhprof-0.9.2.tgz'
   sha1 'cef6bfb3374e05c7b7445249a304e066d4fd8574'
 
-  depends_on Xhprof53Requirement.new
+  conflicts_with 'php53-xhgui'
+  
   depends_on 'pcre'
 
   def install
