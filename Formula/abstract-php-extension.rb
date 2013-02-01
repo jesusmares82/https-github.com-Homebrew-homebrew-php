@@ -178,7 +178,7 @@ EOS
 
   def options
     options = []
-    options << ["without-config-file", "Do not add #{config_filename} to #{config_scandir_path}"] if config_file
+    options << ["--without-config-file", "Do not add #{config_filename} to #{config_scandir_path}"] if config_file
     options
   end
 end
