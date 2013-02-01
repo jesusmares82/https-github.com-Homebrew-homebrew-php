@@ -30,15 +30,15 @@ class AbstractPhp < Formula
     depends_on 'freetds' if build.include? 'with-mssql'
     depends_on 'freetype'
     depends_on 'gettext'
-    depends_on 'gmp' if build.include? 'with-gmp'
+    depends_on 'gmp' => :optional
     depends_on 'icu4c' if build.include?('with-intl') && build_intl?
     depends_on 'imap-uw' if build.include? 'with-imap'
     depends_on 'jpeg'
     depends_on 'libpng'
     depends_on 'libxml2' unless MacOS.version >= :lion
     depends_on 'openssl' if build.include? 'with-homebrew-openssl'
-    depends_on 'tidy' if build.include? 'with-tidy'
-    depends_on 'unixodbc' if build.include? 'with-unixodbc'
+    depends_on 'tidy' => :optional
+    depends_on 'unixodbc' => :optional
     depends_on 'homebrew/dupes/zlib'
 
     # Sanity Checks
@@ -57,14 +57,11 @@ class AbstractPhp < Formula
     option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'with-pgsql', 'Include PostgreSQL support'
     option 'with-mssql', 'Include MSSQL-DB support'
-    option 'with-unixodbc', 'Include unixODBC support'
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-apache)'
     option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
     option 'without-apache', 'Build without shared Apache 2.0 Handler module'
     option 'with-intl', 'Include internationalization support'
     option 'with-imap', 'Include IMAP extension'
-    option 'with-gmp', 'Include GMP support'
-    option 'with-tidy', 'Include Tidy support'
     option 'without-pear', 'Build without PEAR'
     option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
     option 'without-bz2', 'Build without bz2 support'
