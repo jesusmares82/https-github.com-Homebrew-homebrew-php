@@ -1,7 +1,7 @@
 require 'formula'
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'php-meta-requirement')
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'phar-requirement')
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'phar-building-requirement')
+require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new(__FILE__).realpath)
+require File.expand_path("../../Requirements/phar-requirement", Pathname.new(__FILE__).realpath)
+require File.expand_path("../../Requirements/phar-building-requirement", Pathname.new(__FILE__).realpath)
 
 class PhpCsFixer < Formula
   homepage 'http://cs.sensiolabs.org'

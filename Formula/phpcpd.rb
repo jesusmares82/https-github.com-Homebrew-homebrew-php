@@ -1,6 +1,6 @@
 require 'formula'
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'php-meta-requirement')
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'phar-requirement')
+require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new(__FILE__).realpath)
+require File.expand_path("../../Requirements/phar-requirement", Pathname.new(__FILE__).realpath)
 
 class Phpcpd < Formula
   homepage 'https://github.com/sebastianbergmann/phpcpd'

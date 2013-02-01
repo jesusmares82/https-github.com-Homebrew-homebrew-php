@@ -1,6 +1,6 @@
 require 'formula'
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'php-meta-requirement')
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'composer-requirement')
+require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new(__FILE__).realpath)
+require File.expand_path("../../Requirements/composer-requirement", Pathname.new(__FILE__).realpath)
 
 class Composer < Formula
   homepage 'http://getcomposer.org'

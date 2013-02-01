@@ -1,5 +1,5 @@
 require 'formula'
-require File.join(HOMEBREW_LIBRARY, 'Taps', 'josegonzalez-php', 'Requirements', 'php-meta-requirement')
+require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new(__FILE__).realpath)
 
 class PhpCodeSniffer < Formula
   homepage 'http://pear.php.net/package/PHP_CodeSniffer'
