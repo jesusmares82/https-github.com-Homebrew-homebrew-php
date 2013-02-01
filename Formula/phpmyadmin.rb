@@ -18,8 +18,8 @@ class Phpmyadmin < Formula
   end
 
   unless build.include? 'without-mcrypt'
-    depends_on 'josegonzalez/php/php53-mcrypt' if php53_installed?
-    depends_on 'josegonzalez/php/php54-mcrypt' if php54_installed?
+    depends_on 'php53-mcrypt' if php53_installed?
+    depends_on 'php54-mcrypt' if php54_installed?
   end
 
   unless MacOS.prefer_64_bit?
