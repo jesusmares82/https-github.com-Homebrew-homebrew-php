@@ -63,6 +63,7 @@ class AbstractPhp < Formula
     option 'with-intl', 'Include internationalization support'
     option 'with-imap', 'Include IMAP extension'
     option 'without-pear', 'Build without PEAR'
+    option 'with-thread-safety', 'Build with thread safety'
     option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
     option 'without-bz2', 'Build without bz2 support'
   end
@@ -282,6 +283,10 @@ INFO
 
     if build.include? 'without-pear'
       args << "--without-pear"
+    end
+
+    if build.include? 'with-thread-safety'
+      args << "--enable-maintainer-zts"
     end
 
     args
