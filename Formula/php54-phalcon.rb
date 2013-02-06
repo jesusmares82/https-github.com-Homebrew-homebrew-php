@@ -3,24 +3,25 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Phalcon < AbstractPhp54Extension
   init
   homepage 'http://phalconphp.com/'
-  url 'https://github.com/phalcon/cphalcon/tarball/v0.4.5'
-  version '0.4.5'
-  sha1 'e941f84eb236492507245b539bec7cdb69def14a'
+  url 'https://github.com/phalcon/cphalcon/tarball/v0.9.0'
+  version '0.9.0'
+  sha1 'e269e35f75967c2460e76078ee8ac064fe75157b'
   head 'git://github.com/phalcon/cphalcon.git', :using => :git
 
  depends_on 'pcre'
 
   def install
-    if build.head?
-      Dir.chdir "build"
+    if MacOS.prefer_64_bit?
+      Dir.chdir 'build/64bits'
     else
-      Dir.chdir "release"
+      Dir.chdir 'build/32bits'
     end
 
     ENV.universal_binary if build.universal?
+    ENV.gcc
+    ENV['CFLAGS'] = '-O2 -fno-delete-null-pointer-checks -finline-functions -fomit-frame-pointer'
 
     safe_phpize
-    system 'export CFLAGS="-O2 -fno-delete-null-pointer-checks"'
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--enable-phalcon"
