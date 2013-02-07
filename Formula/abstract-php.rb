@@ -365,7 +365,7 @@ INFO
 
       s << <<-EOS.undent
         To enable PHP in Apache add the following to httpd.conf and restart Apache:
-            LoadModule php5_module    #{HOMEBREW_PREFIX}/opt/php#{php_version_path.to_s}/apache2/libphp5.so
+            LoadModule php5_module    #{HOMEBREW_PREFIX}/opt/php#{php_version_path.to_s}/libexec/apache2/libphp5.so
       EOS
     end
 
