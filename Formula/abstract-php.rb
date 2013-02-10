@@ -37,7 +37,7 @@ class AbstractPhp < Formula
     depends_on 'libpng'
     depends_on 'libxml2' unless MacOS.version >= :lion
     depends_on 'openssl' if build.include? 'with-homebrew-openssl'
-    depends_on 'tidy' => :optional
+    depends_on 'homebrew/dupes/tidy' if build.include? 'with-tidy'
     depends_on 'unixodbc' => :optional
     depends_on 'homebrew/dupes/zlib'
 
@@ -63,6 +63,7 @@ class AbstractPhp < Formula
     option 'with-intl', 'Include internationalization support'
     option 'with-imap', 'Include IMAP extension'
     option 'without-pear', 'Build without PEAR'
+    option 'with-tidy', 'Include Tidy support'
     option 'with-thread-safety', 'Build with thread safety'
     option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
     option 'without-bz2', 'Build without bz2 support'
