@@ -14,9 +14,9 @@ class Php54Uuid < AbstractPhp54Extension
     p = []
 
     if build.head?
-      p << "https://raw.github.com/gist/2902360/eb354918f0afff2b4fcd7869d5a49719a2b32312/uuid-trunk.patch"
+      p << "https://gist.github.com/phoenixsong6/4958223/raw/e802b0e6daebb4403dc77c81e149c5f8c8f49b7e/php-uuid-trunk.patch"
     else
-      p << "https://raw.github.com/gist/2891193/c538ae506aafd1d61f166fa3c1409dca61d100c6/uuid.patch"
+      p << "https://gist.github.com/phoenixsong6/4958223/raw/4ad7ebf2bff53887f64ac5be802b85ea5856fa85/php-uuid.patch"
     end
 
     return p
