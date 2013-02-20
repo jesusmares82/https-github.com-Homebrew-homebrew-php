@@ -184,15 +184,15 @@ EOS
 end
 
 class AbstractPhp53Extension < AbstractPhpExtension
-  def self.init
-    super
-    depends_on "php53" unless build.include?('without-homebrew-php')
+  def self.init opts=[]
+    super()
+    depends_on "php53" => opts unless build.include?('without-homebrew-php')
   end
 end
 
 class AbstractPhp54Extension < AbstractPhpExtension
-  def self.init
-    super
-    depends_on "php54" unless build.include?('without-homebrew-php')
+  def self.init opts=[]
+    super()
+    depends_on "php54" => opts unless build.include?('without-homebrew-php')
   end
 end
