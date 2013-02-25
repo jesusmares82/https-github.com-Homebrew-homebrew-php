@@ -10,8 +10,8 @@ end
 
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
-  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.5/phpMyAdmin-3.5.5-all-languages.tar.bz2'
-  sha1 '79034f4417c6363a9542b73f6b15305331bbef03'
+  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/3.5.7/phpMyAdmin-3.5.7-all-languages.tar.bz2'
+  sha1 'c2bc008778156f0af5b92aa7038b72754162a6c3'
 
   if build.include?('without-mcrypt') && MacOS.prefer_64_bit?
     raise "64-bit machines cannot use phpmyadmin without mcrypt"
