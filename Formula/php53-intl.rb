@@ -17,6 +17,7 @@ class Php53Intl < AbstractPhp53Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
+                          "--with-icu-dir=#{Formula.factory('icu4c').opt_prefix}",
                           "--enable-intl"
     system "make"
     prefix.install "modules/intl.so"
