@@ -23,14 +23,14 @@ class Php53Memcached < AbstractPhp53Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-libmemcached-dir=#{Formula.factory('libmemcached').prefix}"
+    args << "--with-libmemcached-dir=#{Formula.factory('libmemcached').opt_prefix}"
     args << "--enable-memcached-igbinary" if build.include? 'with-igbinary'
 
     safe_phpize
 
     if build.include? 'with-igbinary'
       system "mkdir -p ext/igbinary"
-      cp "#{Formula.factory('php53-igbinary').prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
+      cp "#{Formula.factory('php53-igbinary').opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
     end
 
     system "./configure", *args

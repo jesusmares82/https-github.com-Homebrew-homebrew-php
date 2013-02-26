@@ -169,7 +169,7 @@ INFO
       "--enable-mbregex",
       "--enable-bcmath",
       "--enable-calendar",
-      "--with-zlib=#{Formula.factory('zlib').prefix}",
+      "--with-zlib=#{Formula.factory('zlib').opt_prefix}",
       "--with-ldap",
       "--with-ldap-sasl=/usr",
       "--with-xmlrpc",
@@ -177,10 +177,10 @@ INFO
       "--with-xsl=/usr",
       "--with-gd",
       "--enable-gd-native-ttf",
-      "--with-freetype-dir=#{Formula.factory('freetype').prefix}",
-      "--with-jpeg-dir=#{Formula.factory('jpeg').prefix}",
-      "--with-png-dir=#{Formula.factory('libpng').prefix}",
-      "--with-gettext=#{Formula.factory('gettext').prefix}",
+      "--with-freetype-dir=#{Formula.factory('freetype').opt_prefix}",
+      "--with-jpeg-dir=#{Formula.factory('jpeg').opt_prefix}",
+      "--with-png-dir=#{Formula.factory('libpng').opt_prefix}",
+      "--with-gettext=#{Formula.factory('gettext').opt_prefix}",
       "--with-snmp=/usr",
       "--with-libedit",
       "--mandir=#{man}",
@@ -188,10 +188,10 @@ INFO
     ]
 
     args << "--with-curl" if MacOS.version >= :lion
-    args << "--with-curl=#{Formula.factory('curl').prefix}" unless MacOS.version >= :lion
+    args << "--with-curl=#{Formula.factory('curl').opt_prefix}" unless MacOS.version >= :lion
 
     unless MacOS.version >= :lion
-      args << "--with-libxml-dir=#{Formula.factory('libxml2').prefix}"
+      args << "--with-libxml-dir=#{Formula.factory('libxml2').opt_prefix}"
     end
 
     unless build.include? 'without-bz2'
@@ -205,7 +205,7 @@ INFO
     end
 
     if build.include? 'with-homebrew-openssl'
-      args << "--with-openssl=" + Formula.factory('openssl').prefix.to_s
+      args << "--with-openssl=" + Formula.factory('openssl').opt_prefix.to_s
     else
       args << "--with-openssl=/usr"
     end
@@ -229,23 +229,23 @@ INFO
     end
 
     if build.include? 'with-gmp'
-      args << "--with-gmp=#{Formula.factory('gmp').prefix}"
+      args << "--with-gmp=#{Formula.factory('gmp').opt_prefix}"
     end
 
     if build.include? 'with-imap'
-      args << "--with-imap=#{Formula.factory('imap-uw').prefix}"
+      args << "--with-imap=#{Formula.factory('imap-uw').opt_prefix}"
       args << "--with-imap-ssl=/usr"
     end
 
     if build.include? 'with-intl'
       opoo "INTL is broken as of mxcl/homebrew#03ed757c, please install php#{php_version_path.to_s}-intl" unless build_intl?
       args << "--enable-intl" if build_intl?
-      args << "--with-icu-dir=#{Formula.factory('icu4c').prefix}" if build_intl?
+      args << "--with-icu-dir=#{Formula.factory('icu4c').opt_prefix}" if build_intl?
     end
 
     if build.include? 'with-mssql'
-      args << "--with-mssql=#{Formula.factory('freetds').prefix}"
-      args << "--with-pdo-dblib=#{Formula.factory('freetds').prefix}"
+      args << "--with-mssql=#{Formula.factory('freetds').opt_prefix}"
+      args << "--with-pdo-dblib=#{Formula.factory('freetds').opt_prefix}"
     end
 
     if build.include? 'with-libmysql'
@@ -261,9 +261,9 @@ INFO
     end
 
     if build.include?('with-pgsql')
-      if File.directory?(Formula.factory('postgresql').prefix.to_s)
-        args << "--with-pgsql=#{Formula.factory('postgresql').prefix}"
-        args << "--with-pdo-pgsql=#{Formula.factory('postgresql').prefix}"
+      if File.directory?(Formula.factory('postgresql').opt_prefix.to_s)
+        args << "--with-pgsql=#{Formula.factory('postgresql').opt_prefix}"
+        args << "--with-pdo-pgsql=#{Formula.factory('postgresql').opt_prefix}"
       else
         args << "--with-pgsql=#{`pg_config --includedir`}"
         args << "--with-pdo-pgsql=#{`which pg_config`}"
@@ -271,12 +271,12 @@ INFO
     end
 
     if build.include? 'with-tidy'
-      args << "--with-tidy=#{Formula.factory('tidy').prefix}"
+      args << "--with-tidy=#{Formula.factory('tidy').opt_prefix}"
     end
 
     if build.include? 'with-unixodbc'
-      args << "--with-unixODBC=#{Formula.factory('unixodbc').prefix}"
-      args << "--with-pdo-odbc=unixODBC,#{Formula.factory('unixodbc').prefix}"
+      args << "--with-unixODBC=#{Formula.factory('unixodbc').opt_prefix}"
+      args << "--with-pdo-odbc=unixODBC,#{Formula.factory('unixodbc').opt_prefix}"
     else
       args << "--with-iodbc"
       args << "--with-pdo-odbc=generic,/usr,iodbc"

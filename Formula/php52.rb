@@ -26,15 +26,15 @@ class Php52 < AbstractPhp
       defaults.delete "--with-mysql=mysqlnd"
       defaults.delete "--with-pdo-mysql=mysqlnd"
 
-      defaults << "--with-mysqli=#{Formula.factory('mysql').prefix}/bin/mysql_config"
-      defaults << "--with-mysql=#{Formula.factory('mysql').prefix}/bin/mysql_config"
-      defaults << "--with-pdo-mysql=#{Formula.factory('mysql').prefix}/bin/mysql_config"
+      defaults << "--with-mysqli=#{Formula.factory('mysql').opt_prefix}/bin/mysql_config"
+      defaults << "--with-mysql=#{Formula.factory('mysql').opt_prefix}/bin/mysql_config"
+      defaults << "--with-pdo-mysql=#{Formula.factory('mysql').opt_prefix}/bin/mysql_config"
     end
 
     defaults + [
       "--enable-zend-multibyte",
       "--enable-sqlite-utf8",
-      "--with-mhash=#{Formula.factory('mhash').prefix}"
+      "--with-mhash=#{Formula.factory('mhash').opt_prefix}"
     ]
   end
 

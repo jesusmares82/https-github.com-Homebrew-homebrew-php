@@ -19,7 +19,7 @@ class Php54Libvirt < AbstractPhp54Extension
     # safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-libvirt=#{Formula.factory('libvirt').prefix}"
+                          "--with-libvirt=#{Formula.factory('libvirt').opt_prefix}"
     system "make"
     prefix.install 'src/libvirt-php.so' => 'libvirt.so'
     write_config_file unless build.include? "without-config-file"

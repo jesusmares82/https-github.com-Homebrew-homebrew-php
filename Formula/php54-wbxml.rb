@@ -22,7 +22,7 @@ class Php54Wbxml < AbstractPhp54Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-wbxml=#{Formula.factory('libwbxml').prefix}"
+                          "--with-wbxml=#{Formula.factory('libwbxml').opt_prefix}"
     system "make"
     prefix.install "modules/wbxml.so"
     write_config_file unless build.include? "without-config-file"

@@ -18,7 +18,7 @@ class Php53Mcrypt < AbstractPhp53Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--disable-dependency-tracking",
-                          "--with-mcrypt=#{Formula.factory('mcrypt').prefix}"
+                          "--with-mcrypt=#{Formula.factory('mcrypt').opt_prefix}"
     system "make"
     prefix.install "modules/mcrypt.so"
     write_config_file unless build.include? "without-config-file"
