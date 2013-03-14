@@ -3,9 +3,9 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Intl < AbstractPhp53Extension
   init
   homepage 'http://php.net/manual/en/book.intl.php'
-  url 'http://www.php.net/get/php-5.3.21.tar.bz2/from/this/mirror'
-  sha1 'd67d2569b4782cf2faa049f22b08819ad8b15009'
-  version '5.3.21'
+  url 'http://www.php.net/get/php-5.3.22.tar.bz2/from/this/mirror'
+  sha1 '8a0948040d70bd7ebf1f3001c4462649b43d5ab0'
+  version '5.3.22'
 
   depends_on 'icu4c'
 
