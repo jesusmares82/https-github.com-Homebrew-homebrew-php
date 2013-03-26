@@ -6,6 +6,8 @@ class Php53 < AbstractPhp
   sha1 'fe9d84ada4747629f31051f9c689629261558056'
   version '5.3.23'
 
+  head 'https://github.com/php/php-src.git', :branch => 'PHP-5.3'
+
   depends_on 'libevent' if build.include? 'with-fpm'
 
   def install_args

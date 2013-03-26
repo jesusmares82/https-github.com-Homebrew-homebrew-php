@@ -6,6 +6,8 @@ class Php52 < AbstractPhp
   sha1 'd68f3b09f766990d815a3c4c63c157db8dab8095'
   version '5.2.17'
 
+  head 'https://github.com/php/php-src.git', :branch => 'PHP-5.2'
+
   depends_on 'mhash'
   depends_on 'libevent' if build.include? 'with-fpm'
 
