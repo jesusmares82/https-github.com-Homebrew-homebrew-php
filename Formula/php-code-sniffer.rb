@@ -3,9 +3,9 @@ require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new
 
 class PhpCodeSniffer < Formula
   homepage 'http://pear.php.net/package/PHP_CodeSniffer'
-  url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.4.4.tgz'
-  sha1 '4df07b8236fa5548c308cb107a0a6a45c7b2487a'
-  version '1.4.4'
+  url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.4.5.tgz'
+  sha1 '718fad7d11fc34c16475c51c8f4a9629d0e5f864'
+  version '1.4.5'
 
   depends_on PhpMetaRequirement
 
