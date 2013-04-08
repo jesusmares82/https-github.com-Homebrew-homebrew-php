@@ -8,8 +8,8 @@ class Php55Memcache < AbstractPhp55Extension
   head 'https://svn.php.net/repository/pecl/memcache/trunk/'
 
   devel do
-    url 'http://pecl.php.net/get/memcache-3.0.7.tgz'
-    sha1 'bd5df709eb9c6dabdcd8886b76eca18cbfa6fa3f'
+    url 'http://pecl.php.net/get/memcache-3.0.8.tgz'
+    sha1 '681ece0258958d60902d6bbf0cf1f2171a0cc47c'
   end
 
   def install
