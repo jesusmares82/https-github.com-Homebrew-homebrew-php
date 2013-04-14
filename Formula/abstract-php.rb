@@ -242,9 +242,9 @@ INFO
 
     if build.include? 'with-libmysql'
       args << "--with-mysql-sock=/tmp/mysql.sock"
-      args << "--with-mysqli=#{$HOMEBREW_PREFIX}/bin/mysql_config"
-      args << "--with-mysql=#{$HOMEBREW_PREFIX}"
-      args << "--with-pdo-mysql=#{$HOMEBREW_PREFIX}"
+      args << "--with-mysqli=#{HOMEBREW_PREFIX}/bin/mysql_config"
+      args << "--with-mysql=#{HOMEBREW_PREFIX}"
+      args << "--with-pdo-mysql=#{HOMEBREW_PREFIX}"
     elsif !build.include? 'without-mysql'
       args << "--with-mysql-sock=/tmp/mysql.sock"
       args << "--with-mysqli=mysqlnd"
@@ -430,9 +430,9 @@ INFO
 
       if MacOS.version >= :mountain_lion
         s << <<-EOS.undent
-          Mountain Lion comes with php-fpm pre-installed, to ensure you are using the brew version you need to make sure #{$HOMEBREW_PREFIX}/sbin is before /usr/sbin in your PATH:
+          Mountain Lion comes with php-fpm pre-installed, to ensure you are using the brew version you need to make sure #{HOMEBREW_PREFIX}/sbin is before /usr/sbin in your PATH:
 
-            PATH="#{$HOMEBREW_PREFIX}/sbin:$PATH"
+            PATH="#{HOMEBREW_PREFIX}/sbin:$PATH"
         EOS
       end
 
