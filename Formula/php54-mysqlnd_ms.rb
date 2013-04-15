@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class MysqlndMs < AbstractPhp54Extension
+class Php54MysqlndMs < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/mysqlnd_ms'
   url 'http://pecl.php.net/get/mysqlnd_ms-1.4.2.tgz'
