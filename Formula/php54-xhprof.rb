@@ -3,10 +3,10 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Xhprof < AbstractPhp54Extension
   init
   homepage 'https://github.com/facebook/xhprof'
-  url 'https://github.com/facebook/xhprof/tarball/270b75dddf871271fe81ed416e122bd158a883f6'
-  sha1 'bcab304b002043d1b31a4e66231e4ec93573e30c'
+  url 'https://github.com/facebook/xhprof/tarball/254eb24dcfa763c76c57b472093ebc4b81af2b7d'
+  sha1 '601e6f02776ef9a1292de2e3e75e644a7114689a'
   head 'https://github.com/facebook/xhprof.git'
-  version '270b75d'
+  version '254eb24'
 
   conflicts_with 'php54-xhgui'
 
