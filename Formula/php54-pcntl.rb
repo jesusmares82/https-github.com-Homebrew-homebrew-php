@@ -4,8 +4,8 @@ class Php54Pcntl < AbstractPhp54Extension
   init
   homepage 'http://php.net/manual/en/book.pcntl.php'
   url 'http://www.php.net/get/php-5.4.13.tar.bz2/from/this/mirror'
-  sha1 '5c229046b5f1d5c1dcd8df6e9cb388aa11504236'
-  version '5.4.13'
+  sha1 '68e90795071f769b8fda22af7d71092d09f42dea'
+  version '5.4.14'
 
   def install
     Dir.chdir "ext/pcntl"
