@@ -130,7 +130,11 @@ INFO
 
   def apache_apxs
     if build.include? 'homebrew-apxs'
-      "#{HOMEBREW_PREFIX}/sbin/apxs"
+      ['sbin', 'bin'].each do |dir|
+        if File.exist?(location = "#{HOMEBREW_PREFIX}/#{dir}/apxs")
+          return location
+        end
+      end
     else
       '/usr/sbin/apxs'
     end
