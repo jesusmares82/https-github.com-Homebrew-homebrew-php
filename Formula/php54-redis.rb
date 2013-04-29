@@ -2,8 +2,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
 class Php54Redis < AbstractPhp54Extension
   homepage 'https://github.com/nicolasff/phpredis'
-  url 'https://github.com/nicolasff/phpredis/tarball/2.2.2'
-  sha1 '156677eab43a9d4337d3254ae4e957a6039ed861'
+  url 'https://github.com/nicolasff/phpredis/tarball/2.2.3'
+  sha1 '84480a8c494f14eee7bb295e5a6dbdb9185f487b'
   head 'https://github.com/nicolasff/phpredis.git'
 
   def self.init
