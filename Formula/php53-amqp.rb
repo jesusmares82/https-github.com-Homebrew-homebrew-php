@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Amqp < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/amqp'
-  url 'http://pecl.php.net/get/amqp-1.0.9.tgz'
-  sha1 '020ae71214fa2f57aeb70f0ec139ffe43a477ded'
+  url 'http://pecl.php.net/get/amqp-1.0.10.tgz'
+  sha1 '7bfcbc78f9bc6ad58abada45b0c833e7006e1424'
   head 'http://svn.php.net/repository/pecl/amqp/trunk/', :using => :svn
 
   depends_on 'rabbitmq-c'
