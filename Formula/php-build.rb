@@ -6,6 +6,7 @@ class PhpBuild < Formula
   version '0.9.0'
   head 'https://github.com/CHH/php-build.git'
 
+  depends_on 'wget'
   depends_on 'autoconf' => :build
 
   def install
