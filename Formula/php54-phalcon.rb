@@ -5,7 +5,7 @@ class Php54Phalcon < AbstractPhp54Extension
   homepage 'http://phalconphp.com/'
   url 'https://github.com/phalcon/cphalcon/tarball/1.1.0'
   version '1.1.0'
-  sha1 '402a1da8fcc9ab67f89da50ecef4510355f6cef6'
+  sha1 'cc3dbc94885aa6e7b1a87570dbbdac5e831eacd3'
   head 'git://github.com/phalcon/cphalcon.git', :using => :git
 
   depends_on 'pcre'
