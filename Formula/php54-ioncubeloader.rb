@@ -5,7 +5,7 @@ class Php54Ioncubeloader < AbstractPhp54Extension
   homepage 'http://www.ioncube.com/loaders.php'
   if Hardware.is_64_bit?
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz'
-    sha1 '67432f4b117cbd06b8e1297636bf3c0844b188da'
+    sha1 '067c47387725db434ab0e7d486a2d6eff6fab37c'
     version '4.2.2'
   else
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz'
