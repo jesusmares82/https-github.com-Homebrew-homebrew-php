@@ -6,7 +6,6 @@ class Php54Geoip < AbstractPhp54Extension
   url 'http://pecl.php.net/get/geoip-1.0.8.tgz'
   sha1 'f8d17da3e192002332ab54b9b4ab0f5deeaf9f15'
   head 'https://svn.php.net/repository/pecl/geoip/trunk/', :using => :svn
-  version '1.0.8'
 
   depends_on 'geoip'
 
