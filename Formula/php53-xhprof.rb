@@ -2,16 +2,18 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
 class Php53Xhprof < AbstractPhp53Extension
   init
-  homepage 'http://mirror.facebook.net/facebook/xhprof/doc.html'
-  url 'http://pecl.php.net/get/xhprof-0.9.2.tgz'
-  sha1 'cef6bfb3374e05c7b7445249a304e066d4fd8574'
+  homepage 'https://github.com/facebook/xhprof'
+  url 'https://github.com/facebook/xhprof/tarball/254eb24dcfa763c76c57b472093ebc4b81af2b7d'
+  sha1 '601e6f02776ef9a1292de2e3e75e644a7114689a'
+  head 'https://github.com/facebook/xhprof.git'
+  version '254eb24'
 
   conflicts_with 'php53-xhgui'
 
   depends_on 'pcre'
 
   def install
-    Dir.chdir "xhprof-#{version}/extension" do
+    Dir.chdir "extension" do
       ENV.universal_binary if build.universal?
 
       safe_phpize
@@ -21,9 +23,7 @@ class Php53Xhprof < AbstractPhp53Extension
       prefix.install "modules/xhprof.so"
     end
 
-    Dir.chdir "xhprof-#{version}" do
-      prefix.install %w(xhprof_html xhprof_lib)
-    end
+    prefix.install %w(xhprof_html xhprof_lib)
     write_config_file unless build.include? "without-config-file"
   end
 end
