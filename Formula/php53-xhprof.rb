@@ -7,7 +7,7 @@ class Php53Xhprof < AbstractPhp53Extension
   sha1 'cef6bfb3374e05c7b7445249a304e066d4fd8574'
 
   conflicts_with 'php53-xhgui'
-  
+
   depends_on 'pcre'
 
   def install

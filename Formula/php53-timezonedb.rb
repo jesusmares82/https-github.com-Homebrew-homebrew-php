@@ -6,7 +6,6 @@ class Php53Timezonedb < AbstractPhp53Extension
   url 'http://pecl.php.net/get/timezonedb-2013.2.tgz'
   version '2013.2'
   sha1 '8bade3e0c5427ddaa0ba7148cef0e2569bce31ec'
-
   head 'https://svn.php.net/repository/pecl/timezonedb/trunk/', :using => :svn
 
   def install

@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Libvirt < AbstractPhp53Extension
   init
   homepage 'http://libvirt.org/php'
-  url 'git://libvirt.org/libvirt-php', :using => :git, :tag => 'libvirt-php-0.4.7' 
+  url 'git://libvirt.org/libvirt-php', :using => :git, :tag => 'libvirt-php-0.4.7'
   version '0.4.7'
 
   depends_on 'automake' => :build
