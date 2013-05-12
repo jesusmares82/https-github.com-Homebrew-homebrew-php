@@ -1,19 +1,15 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
 class Php54Memcached < AbstractPhp54Extension
+  init
   homepage 'http://pecl.php.net/package/memcached'
   url 'http://pecl.php.net/get/memcached-2.1.0.tgz'
   sha1 '16fac6bfae8ec7e2367fda588b74df88c6f11a8e'
   head 'https://github.com/php-memcached-dev/php-memcached.git'
 
-  def self.init
-    super
-    option 'with-igbinary', "Build with igbinary support"
-    depends_on 'libmemcached'
-    depends_on 'php54-igbinary' if build.include?('with-igbinary')
-  end
-
-  init
+  option 'with-igbinary', "Build with igbinary support"
+  depends_on 'libmemcached'
+  depends_on 'php54-igbinary' if build.include?('with-igbinary')
 
   def install
     Dir.chdir "memcached-#{version}" unless build.head?

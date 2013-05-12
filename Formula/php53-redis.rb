@@ -1,18 +1,14 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
 class Php53Redis < AbstractPhp53Extension
+  init
   homepage 'https://github.com/nicolasff/phpredis'
   url 'https://github.com/nicolasff/phpredis/tarball/2.2.3'
   sha1 '84480a8c494f14eee7bb295e5a6dbdb9185f487b'
   head 'https://github.com/nicolasff/phpredis.git'
 
-  def self.init
-    super
-    option 'with-igbinary', "Build with igbinary support"
-    depends_on 'php53-igbinary' if build.include?('with-igbinary')
-  end
-
-  init
+  option 'with-igbinary', "Build with igbinary support"
+  depends_on 'php53-igbinary' if build.include?('with-igbinary')
 
   fails_with :clang do
     build 318

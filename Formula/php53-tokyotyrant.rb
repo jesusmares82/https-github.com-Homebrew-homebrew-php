@@ -1,6 +1,7 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
 class Php53Tokyotyrant < AbstractPhp54Extension
+  init
   homepage 'http://pecl.php.net/package/tokyo_tyrant'
   url 'http://pecl.php.net/get/tokyo_tyrant-0.7.0.tgz'
   sha1 'a3ad6dd4aa59cc99a0da05563e7c5f94020975cc'
@@ -10,12 +11,6 @@ class Php53Tokyotyrant < AbstractPhp54Extension
   depends_on 'tokyo-tyrant'
 
   def extension; "tokyo_tyrant"; end
-
-  def self.init
-    super
-  end
-
-  init
 
   def install
     Dir.chdir "tokyo_tyrant-#{version}" unless build.head?
