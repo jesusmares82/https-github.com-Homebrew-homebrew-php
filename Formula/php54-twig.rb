@@ -4,8 +4,8 @@ class Php54Twig < AbstractPhp54Extension
   init
   homepage 'http://twig.sensiolabs.org/'
   url 'https://github.com/fabpot/Twig.git', :tag => 'v1.12.3'
-  version '1.12.3'
   head 'https://github.com/fabpot/Twig.git'
+  version '1.12.3'
 
   def install
     ENV.universal_binary if build.universal?
