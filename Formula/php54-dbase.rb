@@ -5,7 +5,7 @@ class Php54Dbase < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/dbase/5.1.0'
   url 'http://pecl.php.net/get/dbase-5.1.0.tgz'
   sha1 'e3740fae3eba6a5d65ca928445f15d58e529201d'
-  version '5.1.0'
+  head 'https://svn.php.net/repository/pecl/dbase/trunk/', :using => :svn
 
   def install
     Dir.chdir "dbase-5.1.0"
