@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php53Tokyotyrant < AbstractPhp54Extension
+class Php53Tokyotyrant < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/tokyo_tyrant'
   url 'http://pecl.php.net/get/tokyo_tyrant-0.7.0.tgz'
