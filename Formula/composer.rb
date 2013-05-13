@@ -5,8 +5,8 @@ require File.expand_path("../../Requirements/composer-requirement", Pathname.new
 class Composer < Formula
   homepage 'http://getcomposer.org'
   url 'http://getcomposer.org/download/1.0.0-alpha6/composer.phar'
-  sha1 'f01c2bbbd5d9d56fe7b2250081d66c40dbe9a3e6'
-  version '1.0.0-alpha6'
+  sha1 '4f8513bea6daa4f70007e4344944c2fe458650ac'
+  version '1.0.0-alpha7'
 
   depends_on PhpMetaRequirement
   depends_on ComposerRequirement
