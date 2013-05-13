@@ -4,7 +4,7 @@ require File.expand_path("../../Requirements/composer-requirement", Pathname.new
 
 class Composer < Formula
   homepage 'http://getcomposer.org'
-  url 'http://getcomposer.org/download/1.0.0-alpha6/composer.phar'
+  url 'http://getcomposer.org/download/1.0.0-alpha7/composer.phar'
   sha1 '4f8513bea6daa4f70007e4344944c2fe458650ac'
   version '1.0.0-alpha7'
 
