@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php54Ioncubeloader < AbstractPhp54Extension
+class Php55Ioncubeloader < AbstractPhp55Extension
   init
   homepage 'http://www.ioncube.com/loaders.php'
   version '4.2.2'

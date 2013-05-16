@@ -8,8 +8,8 @@ class Php55Xhgui < AbstractPhp55Extension
   head 'https://github.com/preinheimer/xhgui.git'
   version 'ee00acb'
 
-  depends_on 'php54-xhprof'
-  depends_on 'php54-mongo'
+  depends_on 'php55-xhprof'
+  depends_on 'php55-mongo'
   depends_on 'mongodb'
 
   def install

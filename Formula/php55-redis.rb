@@ -8,7 +8,7 @@ class Php55Redis < AbstractPhp55Extension
   head 'https://github.com/nicolasff/phpredis.git'
 
   option 'with-igbinary', "Build with igbinary support"
-  depends_on 'php54-igbinary' if build.include?('with-igbinary')
+  depends_on 'php55-igbinary' if build.include?('with-igbinary')
 
   fails_with :clang do
     build 318

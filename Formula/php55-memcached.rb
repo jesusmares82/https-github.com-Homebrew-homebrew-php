@@ -9,7 +9,7 @@ class Php55Memcached < AbstractPhp55Extension
 
   option 'with-igbinary', "Build with igbinary support"
   depends_on 'libmemcached'
-  depends_on 'php54-igbinary' if build.include?('with-igbinary')
+  depends_on 'php55-igbinary' if build.include?('with-igbinary')
 
   def install
     Dir.chdir "memcached-#{version}" unless build.head?
@@ -26,7 +26,7 @@ class Php55Memcached < AbstractPhp55Extension
 
     if build.include? 'with-igbinary'
       system "mkdir -p ext/igbinary"
-      cp "#{Formula.factory('php54-igbinary').opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
+      cp "#{Formula.factory('php55-igbinary').opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
     end
 
     system "./configure", *args
