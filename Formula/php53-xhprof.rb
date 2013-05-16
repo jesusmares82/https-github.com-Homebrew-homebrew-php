@@ -8,8 +8,6 @@ class Php53Xhprof < AbstractPhp53Extension
   head 'https://github.com/facebook/xhprof.git'
   version '254eb24'
 
-  conflicts_with 'php53-xhgui'
-
   depends_on 'pcre'
 
   def install
