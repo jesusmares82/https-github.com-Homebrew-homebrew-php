@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php54Dbase < AbstractPhp53Extension
+class Php54Dbase < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/dbase/5.1.0'
   url 'http://pecl.php.net/get/dbase-5.1.0.tgz'
