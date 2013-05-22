@@ -3,9 +3,9 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Xdebug < AbstractPhp54Extension
   init
   homepage 'http://xdebug.org'
-  url 'http://xdebug.org/files/xdebug-2.2.1.tgz'
-  sha1 '8b4aec5f68f2193d07bf4839ee46ff547740ed7e'
-  head 'https://github.com/derickr/xdebug.git'
+  url 'http://xdebug.org/files/xdebug-2.2.3.tgz'
+  sha1 '045dee86f69051d7944da594db648b337a97f48a'
+  head 'https://github.com/xdebug/xdebug.git'
 
   def extension_type; "zend_extension"; end
 
