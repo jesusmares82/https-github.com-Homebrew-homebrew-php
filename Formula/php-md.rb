@@ -14,7 +14,7 @@ class PhpMd < Formula
   def install
     libexec.install "phpmd.phar"
     sh = libexec + "phpmd"
-    sh.write("#!/bin/sh\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpmd.phar $*")
+    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpmd.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end

@@ -14,7 +14,7 @@ class Phploc < Formula
   def install
     libexec.install "phploc.phar"
     sh = libexec + "phploc"
-    sh.write("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phploc.phar $*")
+    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phploc.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end

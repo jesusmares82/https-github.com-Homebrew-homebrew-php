@@ -14,7 +14,7 @@ class Phpcpd < Formula
   def install
     libexec.install "phpcpd.phar"
     sh = libexec + "phpcpd"
-    sh.write("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpcpd.phar $*")
+    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpcpd.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end

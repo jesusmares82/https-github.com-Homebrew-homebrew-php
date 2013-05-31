@@ -12,7 +12,7 @@ class PhpCodeSniffer < Formula
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
     sh = libexec + "phpcs"
-    sh.write("/usr/bin/env php #{prefix}/scripts/phpcs $*")
+    sh.write("#!/bin/sh\n\n/usr/bin/env php #{prefix}/scripts/phpcs $*")
     chmod 0755, sh
     bin.install_symlink sh
   end

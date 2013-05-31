@@ -14,7 +14,7 @@ class Pdepend < Formula
   def install
     libexec.install "pdepend.phar"
     sh = libexec + "pdepend"
-    sh.write("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/pdepend.phar $*")
+    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/pdepend.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end

@@ -34,7 +34,7 @@ class PhpCsFixer < Formula
 
     libexec.install "php-cs-fixer.phar"
     sh = libexec + "php-cs-fixer"
-    sh.write("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/php-cs-fixer.phar $*")
+    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/php-cs-fixer.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end
