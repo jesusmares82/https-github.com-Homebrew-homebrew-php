@@ -23,13 +23,21 @@ class Php52 < AbstractPhp
     'http://php-fpm.org/downloads/php-5.2.17-fpm-0.5.14.diff.gz'
   end
 
+  def install
+    super
+
+    if File.exists?(bin + 'php.dSYM')
+      mv bin + 'php.dSYM', bin + 'php'
+    end
+
+    if File.exists?(bin + 'php-cgi.dSYM')
+      mv bin + 'php-cgi.dSYM', bin + 'php-cgi'
+    end
+  end
+
   def install_args
     defaults = super
     defaults.delete '--with-mhash'
-
-    if build.include?('with-fpm')
-      defaults << '--enable-fastcgi'
-    end
 
     if build.include?('with-mysql') || build.include?('with-mariadb')
       defaults.delete '--with-mysqli=mysqlnd'
