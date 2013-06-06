@@ -207,6 +207,7 @@ INFO
     end
 
     if build.include? 'with-fpm'
+      args << "--enable-fastcgi"
       args << "--enable-fpm"
       args << "--with-fpm-user=_www"
       args << "--with-fpm-group=_www"
