@@ -38,7 +38,7 @@ class AbstractPhp < Formula
     depends_on 'libxml2' unless MacOS.version >= :lion
     depends_on 'openssl' if build.include? 'with-homebrew-openssl'
     depends_on 'homebrew/dupes/tidy' if build.include? 'with-tidy'
-    depends_on 'unixodbc' => :optional
+    depends_on 'unixodbc'
     depends_on 'homebrew/dupes/zlib'
 
     # Sanity Checks
@@ -179,6 +179,8 @@ INFO
       "--with-gettext=#{Formula.factory('gettext').opt_prefix}",
       "--with-snmp=/usr",
       "--with-libedit",
+      "--with-unixODBC=#{Formula.factory('unixodbc').opt_prefix}",
+      "--with-pdo-odbc=unixODBC,#{Formula.factory('unixodbc').opt_prefix}",
       "--mandir=#{man}",
       "--with-mhash",
     ]
@@ -271,14 +273,6 @@ INFO
       args << "--with-tidy=#{Formula.factory('tidy').opt_prefix}"
     end
 
-    if build.include? 'with-unixodbc'
-      args << "--with-unixODBC=#{Formula.factory('unixodbc').opt_prefix}"
-      args << "--with-pdo-odbc=unixODBC,#{Formula.factory('unixodbc').opt_prefix}"
-    else
-      args << "--with-iodbc"
-      args << "--with-pdo-odbc=generic,/usr,iodbc"
-    end
-
     if build.include? 'without-pear'
       args << "--without-pear"
     end
@@ -310,6 +304,13 @@ INFO
 
     system "./buildconf" if build.head?
     system "./configure", *args
+
+    # https://bugs.php.net/bug.php?id=62460
+    if php_version.to_s == '5.3'
+      inreplace "Makefile",
+        'EXEEXT = .dSYM',
+        'EXEEXT = '
+    end
 
     if build_apache?
       # Use Homebrew prefix for the Apache libexec folder
