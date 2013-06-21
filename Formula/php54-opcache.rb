@@ -20,7 +20,7 @@ class Php54Opcache < AbstractPhp54Extension
     write_config_file unless build.include? "without-config-file"
   end
   
-  def module_path; "#{(Formula.factory php_formula).lib}/php/extensions/no-debug-zts-20100525/opcache.so"; end
+  def module_path; "#{(Formula.factory php_formula).lib}/php/extensions/no-debug-non-zts-20100525/opcache.so"; end
 
   def config_file
     super + <<-EOS.undent
