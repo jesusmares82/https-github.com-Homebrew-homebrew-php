@@ -5,7 +5,7 @@ class Php53Amqp < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/amqp'
   url 'http://pecl.php.net/get/amqp-1.0.10.tgz'
   sha1 '7bfcbc78f9bc6ad58abada45b0c833e7006e1424'
-  head 'http://svn.php.net/repository/pecl/amqp/trunk/', :using => :svn
+  head 'http://svn.php.net/repository/pecl/amqp/trunk/'
 
   depends_on 'rabbitmq-c'
 
