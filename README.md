@@ -18,6 +18,12 @@ Bugs inevitably happen - none of us is running EVERY conceivable setup - but hop
 - If you are using Mountain Lion `10.8.x`, please install [XQuartz](http://xquartz.macosforge.org/landing/) so that the `png.h` header exists for compilation of certain brews. Mountain Lion removes X11, which contained numerous headers. A permanent fix is forthcoming.
 - If you upgraded to Mountain Lion `10.8.x`, please also upgrade to the latest XCode, 4.4.
 - File an awesome bug report, using the information in the next section.
+- If you have a failing install due to `GD build test failed`, try running the following before attempting to reinstall:
+
+```
+    brew rm freetype jpeg libpng gd zlib
+    brew install freetype jpeg libpng gd zlib
+```
 
 Doing all of these might be a hassle, but will more than likely ensure you either have a working install or get help as soon as possible.
 
