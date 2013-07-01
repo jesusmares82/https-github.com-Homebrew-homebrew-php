@@ -67,6 +67,7 @@ class AbstractPhp < Formula
     option 'with-thread-safety', 'Build with thread safety'
     option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
     option 'without-bz2', 'Build without bz2 support'
+    option 'without-pcntl', 'Build without Process Control support'
   end
 
   def config_path
@@ -156,7 +157,6 @@ INFO
       "--enable-ftp",
       "--enable-sockets",
       "--enable-zip",
-      "--enable-pcntl",
       "--enable-shmop",
       "--enable-sysvsem",
       "--enable-sysvshm",
@@ -279,6 +279,10 @@ INFO
 
     if build.include? 'with-thread-safety'
       args << "--enable-maintainer-zts"
+    end
+
+    unless build.include? 'without-pcntl'
+      args << "--enable-pcntl"
     end
 
     args
