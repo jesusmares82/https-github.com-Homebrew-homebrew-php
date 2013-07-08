@@ -2,9 +2,9 @@ require 'formula'
 
 class Phpunit < Formula
   homepage 'http://phpunit.de/manual/current/en/'
-  url 'http://pear.phpunit.de/get/phpunit.phar'
-  sha1 'e3644434a01dab6292b0d2319cc52e85a08ce807'
-  version '3.7.21'
+  url 'http://pear.phpunit.de/get/phpunit-3.7.22.phar'
+  sha1 '88d4919ffc91c9aec8aea2b28e500d3e43e2b13b'
+  version '3.7.22'
 
   def install
     libexec.install "phpunit.phar"
