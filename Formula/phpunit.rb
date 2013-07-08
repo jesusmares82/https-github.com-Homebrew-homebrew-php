@@ -7,9 +7,9 @@ class Phpunit < Formula
   version '3.7.22'
 
   def install
-    libexec.install "phpunit.phar"
+    libexec.install "phpunit-#{version}.phar"
     sh = libexec + "phpunit"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpunit.phar $*")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpunit-#{version}.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end
