@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php54Opcache < AbstractPhp54Extension
+class Php55Opcache < AbstractPhp55Extension
   init
   homepage 'https://github.com/zend-dev/ZendOptimizerPlus'
   url 'https://github.com/zend-dev/ZendOptimizerPlus/archive/v7.0.2.tar.gz'
