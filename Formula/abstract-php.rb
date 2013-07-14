@@ -124,7 +124,7 @@ INFO
       mv("#{user_pear}-backup", user_pear) if File.exists? "#{user_pear}-backup"
       mv("#{config_pearrc}-backup", config_pearrc) if File.exists? "#{config_pearrc}-backup"
       mv("#{user_pearrc}-backup", user_pearrc) if File.exists? "#{user_pearrc}-backup"
-      throw e
+      raise
     end
   end
 
