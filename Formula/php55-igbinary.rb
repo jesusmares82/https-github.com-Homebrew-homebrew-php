@@ -13,10 +13,11 @@ class Php55Igbinary < AbstractPhp55Extension
     ENV.universal_binary if build.universal?
 
     safe_phpize
+    system "rm apc_serializer.h"
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
     system "make"
-    include.install %w(apc_serializer.h hash.h hash_function.h igbinary.h php_igbinary.h)
+    include.install %w(hash.h hash_function.h igbinary.h php_igbinary.h)
     prefix.install %w(modules/igbinary.so)
     write_config_file unless build.include? "without-config-file"
   end
