@@ -4,7 +4,6 @@ class Phpunit < Formula
   homepage 'http://phpunit.de/manual/current/en/'
   url 'http://pear.phpunit.de/get/phpunit-3.7.22.phar'
   sha1 '88d4919ffc91c9aec8aea2b28e500d3e43e2b13b'
-  version '3.7.22'
 
   def install
     libexec.install "phpunit-#{version}.phar"
