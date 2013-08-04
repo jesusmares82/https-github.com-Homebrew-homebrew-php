@@ -4,7 +4,7 @@ require File.expand_path("../../Requirements/phar-requirement", Pathname.new(__F
 
 class Pdepend < Formula
   homepage 'http://pdepend.org/'
-  url 'http://static.pdepend.org/php/latest/pdepend.phar'
+  url 'http://static.pdepend.org/php/1.1.0/pdepend.phar'
   sha1 'd91fb76e03160bbe957078e95cbf88cb47cdf132'
   version '1.1.0'
 
