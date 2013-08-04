@@ -2,10 +2,8 @@ require 'formula'
 
 class WpCli < Formula
   homepage 'https://github.com/wp-cli/wp-cli/'
-  url 'https://github.com/wp-cli/wp-cli.git', :tag => 'v0.9.1'
-  version '0.9.1'
-
-  head 'https://github.com/wp-cli/wp-cli.git'
+  url 'https://github.com/wp-cli/wp-cli/archive/v0.10.2.tar.gz'
+  sha1 'd738b48292dd59d989e1cd7071b37f51ef2ebe11'
 
   def install
     prefix.install Dir['src/*']
