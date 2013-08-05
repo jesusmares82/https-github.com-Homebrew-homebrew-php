@@ -2,7 +2,10 @@ require File.join(File.dirname(__FILE__), 'homebrew-php-requirement')
 
 class PhpMetaRequirement < HomebrewPhpRequirement
   def satisfied?
-    %w{php53 php54 php55}.any? { |php| Formula.factory(php).installed? }
+    %w{php53 php54 php55}.any? do |php|
+        f = Formula.factory(php)
+        f.rack.directory? && f.rack.children.length > 0
+    end
   end
 
   def message
