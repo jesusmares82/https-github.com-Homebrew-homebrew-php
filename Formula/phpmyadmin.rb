@@ -1,5 +1,9 @@
 require 'formula'
 
+def php55_installed?
+  `php -v`.match(/5\.5\./)
+end
+
 def php54_installed?
   `php -v`.match(/5\.4\./)
 end
@@ -20,6 +24,7 @@ class Phpmyadmin < Formula
   unless build.include? 'without-mcrypt'
     depends_on 'php53-mcrypt' if php53_installed?
     depends_on 'php54-mcrypt' if php54_installed?
+    depends_on 'php55-mcrypt' if php55_installed?
   end
 
   unless MacOS.prefer_64_bit?
