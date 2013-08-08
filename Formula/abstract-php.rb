@@ -405,9 +405,10 @@ INFO
     s << <<-EOS.undent
       ✩✩✩✩ Extensions ✩✩✩✩
 
-      If you are having issues with custom extension compiling, ensure that this php is
-      in your PATH:
-          PATH="$(brew --prefix josegonzalez/php/php#{php_version_path.to_s})/bin:$PATH"
+      If you are having issues with custom extension compiling, ensure that
+      you are using the brew version, by placing #{HOMEBREW_PREFIX}/bin before /usr/sbin in your PATH:
+      
+            PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
 
       PHP#{php_version_path.to_s} Extensions will always be compiled against this PHP. Please install them
       using --without-homebrew-php to enable compiling against system PHP.
