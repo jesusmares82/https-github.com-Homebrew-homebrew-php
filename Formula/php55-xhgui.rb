@@ -17,10 +17,6 @@ class Php55Xhgui < AbstractPhp55Extension
     (prefix + 'web/cache').chmod 0777
   end
 
-  def options
-    []
-  end
-
   def caveats
     caveats = <<-EOS
 
