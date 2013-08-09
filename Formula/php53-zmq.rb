@@ -7,7 +7,7 @@ class Php53Zmq < AbstractPhp53Extension
   sha1 '9be2a968985d1af87bc8549a5c0944fba9a80e6d'
   head 'https://github.com/mkoppanen/php-zmq.git'
 
-  depends_on 'pkg-config'
+  depends_on 'pkg-config' => :build
 
   def install
     ENV.universal_binary if build.universal?
