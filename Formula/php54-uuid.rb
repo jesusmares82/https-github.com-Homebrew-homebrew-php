@@ -5,7 +5,7 @@ class Php54Uuid < AbstractPhp54Extension
   homepage 'http://pecl.php.net/package/uuid'
   url 'http://pecl.php.net/get/uuid-1.0.3.tgz'
   sha1 'f51820a310ade0eb7200375486bf88d721d89f17'
-  head 'https://svn.php.net/repository/pecl/uuid/trunk', :using => :svn
+  head 'https://svn.php.net/repository/pecl/uuid/trunk'
 
   def patches
     # fixes build errors on OSX 10.6 and 10.7

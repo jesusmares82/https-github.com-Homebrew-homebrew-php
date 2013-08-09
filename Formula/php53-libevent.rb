@@ -5,7 +5,7 @@ class Php53Libevent < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/libevent'
   url 'http://pecl.php.net/get/libevent-0.0.5.tgz'
   sha1 '0817616ef02a5ab2bbc804dad121239391578956'
-  head 'http://svn.php.net/repository/pecl/libevent/trunk/', :using => :svn
+  head 'http://svn.php.net/repository/pecl/libevent/trunk/'
 
   depends_on 'libevent'
 

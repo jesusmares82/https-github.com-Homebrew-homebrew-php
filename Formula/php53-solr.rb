@@ -5,7 +5,7 @@ class Php53Solr < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/solr'
   url 'http://pecl.php.net/get/solr-1.0.2.tgz'
   sha1 '2412c77bd86e70bfcd25473a7ed70e4631ffafcc'
-  head 'https://svn.php.net/repository/pecl/solr/trunk/', :using => :svn
+  head 'https://svn.php.net/repository/pecl/solr/trunk/'
 
   def install
     Dir.chdir "solr-#{version}" unless build.head?

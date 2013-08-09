@@ -5,7 +5,7 @@ class Php53Gearman < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/gearman'
   url 'http://pecl.php.net/get/gearman-1.1.1.tgz'
   sha1 '98b8601b7cc921c4894a265aa6731263ecb60037'
-  head 'https://svn.php.net/repository/pecl/gearman/trunk/', :using => :svn
+  head 'https://svn.php.net/repository/pecl/gearman/trunk/'
 
   depends_on 'gearman'
 

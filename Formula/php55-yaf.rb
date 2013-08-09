@@ -5,7 +5,7 @@ class Php55Yaf < AbstractPhp55Extension
   homepage 'http://pecl.php.net/package/yaf'
   url 'http://pecl.php.net/get/yaf-2.2.9.tgz'
   sha1 '6640fda6de95185cf898b0116a5136275634c42d'
-  head 'https://svn.php.net/repository/pecl/yaf/trunk/', :using => :svn
+  head 'https://svn.php.net/repository/pecl/yaf/trunk/'
 
   depends_on 'pcre'
 

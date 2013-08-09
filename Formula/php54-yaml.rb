@@ -5,7 +5,7 @@ class Php54Yaml < AbstractPhp54Extension
   homepage 'http://pecl.php.net/package/yaml'
   url 'http://pecl.php.net/get/yaml-1.1.0.tgz'
   sha1 '8ab77d3e49eed6944bbb3130c054288402f484d7'
-  head 'https://svn.php.net/repository/pecl/yaml/trunk', :using => :svn
+  head 'https://svn.php.net/repository/pecl/yaml/trunk'
 
   depends_on 'libyaml'
 

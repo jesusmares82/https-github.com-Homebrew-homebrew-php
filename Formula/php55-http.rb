@@ -5,7 +5,7 @@ class Php55Http < AbstractPhp55Extension
   homepage 'http://pecl.php.net/package/pecl_http'
   url 'http://pecl.php.net/get/pecl_http-1.7.6.tgz'
   sha1 '44e28b6d2d9d352c5b949f14bc4dd612e4365c85'
-  head 'http://svn.php.net/repository/pecl/http/trunk/', :using => :svn
+  head 'http://svn.php.net/repository/pecl/http/trunk/'
 
   devel do
     url 'http://pecl.php.net/get/pecl_http-2.0.0beta4.tgz'

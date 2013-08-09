@@ -5,7 +5,7 @@ class Php55Igbinary < AbstractPhp55Extension
   homepage 'http://pecl.php.net/package/igbinary'
   url 'http://pecl.php.net/get/igbinary-1.1.1.tgz'
   sha1 'cebe34d18dd167a40a712a6826415e3e5395ab27'
-  head 'https://github.com/igbinary/igbinary.git', :using => :git
+  head 'https://github.com/igbinary/igbinary.git'
 
   def install
     Dir.chdir "igbinary-#{version}" unless build.head?

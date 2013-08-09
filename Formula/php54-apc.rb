@@ -5,7 +5,7 @@ class Php54Apc < AbstractPhp54Extension
   homepage 'http://pecl.php.net/package/apc'
   url 'http://pecl.php.net/get/APC-3.1.13.tgz'
   sha1 'cafd6ba92ac1c9f500a6c1e300bbe8819daddfae'
-  head 'https://svn.php.net/repository/pecl/apc/trunk/', :using => :svn
+  head 'https://svn.php.net/repository/pecl/apc/trunk/'
 
   depends_on 'pcre'
 

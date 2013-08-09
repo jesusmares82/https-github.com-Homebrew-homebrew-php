@@ -5,7 +5,7 @@ class Php53Proctitle < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/proctitle'
   url 'http://pecl.php.net/get/proctitle-0.1.2.tgz'
   sha1 '9fe4e5a807d83fa15bdb59fac16189103b2dd398'
-  head 'https://github.com/MagicalTux/proctitle.git', :using => :git
+  head 'https://github.com/MagicalTux/proctitle.git'
 
   def install
     Dir.chdir "proctitle-#{version}" unless build.head?

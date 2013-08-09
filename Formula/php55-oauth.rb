@@ -5,7 +5,7 @@ class Php55Oauth < AbstractPhp55Extension
   homepage 'http://pecl.php.net/package/oauth'
   url 'http://pecl.php.net/get/oauth-1.2.3.tgz'
   sha1 'e2a42961c8134746fc0cd8ef9bd433f760b94975'
-  head 'https://svn.php.net/repository/pecl/oauth/trunk', :using => :svn
+  head 'https://svn.php.net/repository/pecl/oauth/trunk'
 
   def install
     Dir.chdir "oauth-#{version}" unless build.head?

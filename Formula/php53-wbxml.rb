@@ -5,7 +5,7 @@ class Php53Wbxml < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/wbxml'
   url 'http://pecl.php.net/get/wbxml-1.0.3.tgz'
   sha1 '2cf4705ad135a9695b3fc8e5e7135f6ad89623e6'
-  head 'https://svn.php.net/repository/pecl/wbxml/trunk/', :using => :svn
+  head 'https://svn.php.net/repository/pecl/wbxml/trunk/'
 
   depends_on 'libwbxml'
 

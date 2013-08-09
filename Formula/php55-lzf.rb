@@ -5,7 +5,7 @@ class Php55Lzf < AbstractPhp55Extension
   homepage 'http://pecl.php.net/package/lzf'
   url 'http://pecl.php.net/get/LZF-1.6.2.tgz'
   sha1 '9e24976b65a000ea09f0860daa1de13d5de4f022'
-  head 'http://svn.php.net/repository/pecl/lzf/trunk/', :using => :svn
+  head 'http://svn.php.net/repository/pecl/lzf/trunk/'
 
   def install
     Dir.chdir "LZF-#{version}" unless build.head?

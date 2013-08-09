@@ -5,7 +5,7 @@ class Php54Snappy < AbstractPhp54Extension
   homepage 'http://code.google.com/p/php-snappy/'
   url 'http://php-snappy.googlecode.com/files/php-snappy-0.0.2.tar.gz'
   sha1 '8537def4d9358830c26119e321a9080db1228c78'
-  head 'http://php-snappy.googlecode.com/svn/trunk/', :using => :svn
+  head 'http://php-snappy.googlecode.com/svn/trunk/'
 
   depends_on 'snappy'
 
