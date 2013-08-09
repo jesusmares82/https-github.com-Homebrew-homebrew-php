@@ -5,7 +5,7 @@ class Php53Phalcon < AbstractPhp53Extension
   homepage 'http://phalconphp.com/'
   url 'https://github.com/phalcon/cphalcon/archive/v1.2.1.tar.gz'
   sha1 '5d6f6f5c8d466d0714c37d17078905d00ecd3146'
-  head 'git://github.com/phalcon/cphalcon.git', :using => :git
+  head 'https://github.com/phalcon/cphalcon.git', :using => :git
   version '1.2.1'
 
   depends_on 'pcre'
