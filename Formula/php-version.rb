@@ -2,8 +2,8 @@ require 'formula'
 
 class PhpVersion < Formula
   homepage  'http://wilmoore.github.com/php-version'
-  url       'https://github.com/wilmoore/php-version/tarball/0.9.8'
-  sha1      'da1798b6dc4bbd0a4a8d4fe1a1a96a2b74f74475'
+  url       'https://github.com/wilmoore/php-version/archive/0.9.8.tar.gz'
+  sha1      '461471fde3907c2a356250de18e081916214176f'
   head      'https://github.com/wilmoore/php-version.git'
 
   def install

@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Xhgui < AbstractPhp55Extension
   init
   homepage 'https://github.com/preinheimer/xhgui'
-  url 'https://github.com/preinheimer/xhgui/tarball/ee00acb209d09d3ee0614117971fd3ac517e4097'
-  sha1 '8a0d168e90c6939e3260be2d435021a25a5053ba'
+  url 'https://github.com/preinheimer/xhgui/archive/ee00acb209d09d3ee0614117971fd3ac517e4097.tar.gz'
+  sha1 'c6a103de999e4df2976cfd3bfb1390726972529b'
   head 'https://github.com/preinheimer/xhgui.git'
   version 'ee00acb'
 
