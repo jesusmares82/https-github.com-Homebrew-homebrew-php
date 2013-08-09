@@ -5,7 +5,6 @@ class Php53Msgpack < AbstractPhp53Extension
   homepage 'http://pecl.php.net/package/msgpack'
   url 'http://pecl.php.net/get/msgpack-0.5.5.tgz'
   sha1 '67c83c359619e8f7f153a83bdf3708c5ff39e491'
-  version '0.5.5'
   head 'https://github.com/msgpack/msgpack-php.git'
 
   def install

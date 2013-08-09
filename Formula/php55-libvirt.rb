@@ -5,7 +5,6 @@ class Php55Libvirt < AbstractPhp55Extension
   homepage 'http://libvirt.org/php'
   url 'http://libvirt.org/sources/php/libvirt-php-0.4.8.tar.gz'
   sha1 '933c20e70f83107d056528b8c665a024da9bc7a4'
-  version '0.4.8'
 
   depends_on 'pkg-config' => :build
   depends_on 'libvirt'

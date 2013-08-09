@@ -6,7 +6,6 @@ class Php55Runkit < AbstractPhp55Extension
   url 'https://github.com/downloads/zenovich/runkit/runkit-1.0.3.tgz'
   sha1 'f0d0c8b0451666dcfdc5250abeff5622aedf3926'
   head 'https://github.com/zenovich/runkit.git'
-  version '1.0.3'
 
   def install
     Dir.chdir "runkit-#{version}" unless build.head?

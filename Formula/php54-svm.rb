@@ -6,7 +6,6 @@ class Php54Svm < AbstractPhp54Extension
   url 'https://github.com/ianbarber/php-svm/archive/0.1.9.tar.gz'
   sha1 'e59c663f22b7bb3db53bf784e5d85e21f5719a18'
   head 'https://github.com/ianbarber/php-svm.git'
-  version '0.1.9'
 
   def install
     ENV.universal_binary if build.universal?

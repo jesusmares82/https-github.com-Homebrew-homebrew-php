@@ -5,7 +5,6 @@ class Php53Twig < AbstractPhp53Extension
   homepage 'http://twig.sensiolabs.org/'
   url 'https://github.com/fabpot/Twig.git', :tag => 'v1.13.0'
   head 'https://github.com/fabpot/Twig.git'
-  version '1.13.0'
 
   def install
     ENV.universal_binary if build.universal?
