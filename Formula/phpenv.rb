@@ -2,7 +2,10 @@ require 'formula'
 
 class Phpenv < Formula
   homepage 'https://github.com/CHH/phpenv'
+  url 'https://github.com/CHH/phpenv/archive/01a2c1e25096f8ff10f2f781428a5d470e1ecaba.tar.gz'
+  sha1 '749d430a3c4354b1e27c3101026518689aed51a4'
   head 'https://github.com/CHH/phpenv.git'
+  version '01a2c1e'
 
   option 'skip-install', "Do not run phpenv-install.sh"
 
