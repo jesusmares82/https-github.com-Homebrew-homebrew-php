@@ -12,8 +12,6 @@ class Php54Ioncubeloader < AbstractPhp54Extension
     sha1 'a370d6cab86fe32be8df7ac4c2a1e16fa55c3742'
   end
 
-  skip_clean :all
-
   def extension_type; "zend_extension"; end
 
   def install
