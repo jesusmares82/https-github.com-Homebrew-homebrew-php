@@ -95,11 +95,11 @@ Tap the repository into your brew installation:
 
 **Note:** For a list of available configuration options run:
 
-    brew options php54
+    brew options php55
 
-Then install php53, php54, or any formulae you might need:
+Then install php53, php54, php55, or any formulae you might need:
 
-    brew install php54
+    brew install php55
 
 That's it!
 
