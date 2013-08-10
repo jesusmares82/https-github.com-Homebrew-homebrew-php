@@ -7,7 +7,6 @@ class PhpCsFixer < Formula
   homepage 'http://cs.sensiolabs.org'
   url 'https://github.com/fabpot/PHP-CS-Fixer/archive/v0.2.0.tar.gz'
   sha1 'b656560c28b31da179b1a4a53a23b9e356d582ff'
-  version '0.2.0'
   head 'https://github.com/fabpot/PHP-CS-Fixer.git'
 
   def self.init

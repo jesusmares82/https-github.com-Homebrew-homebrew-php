@@ -4,7 +4,6 @@ class Php55Apcu < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/apcu'
   url 'http://pecl.php.net/get/apcu-4.0.1.tgz'
-  version '4.0.1'
   sha1 'f7569e959e7ff09c90de3636f4638be766bab5fd'
   head 'https://github.com/krakjoe/apcu.git'
 

@@ -5,7 +5,6 @@ class PhpCodeSniffer < Formula
   homepage 'http://pear.php.net/package/PHP_CodeSniffer'
   url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.4.6.tgz'
   sha1 'db0e93bbbeda70ec86e32ca4642e9db9932bdd64'
-  version '1.4.6'
 
   depends_on PhpMetaRequirement
 

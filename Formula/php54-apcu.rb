@@ -4,7 +4,6 @@ class Php54Apcu < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/apcu'
   url 'http://pecl.php.net/get/apcu-4.0.0.tgz'
-  version '4.0.0'
   sha1 'acb373b28cffefad6c19634ee0d504f209c23808'
 
   depends_on 'pcre'

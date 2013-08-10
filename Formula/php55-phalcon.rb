@@ -6,7 +6,6 @@ class Php55Phalcon < AbstractPhp55Extension
   url 'https://github.com/phalcon/cphalcon/archive/v1.2.1.tar.gz'
   sha1 '5d6f6f5c8d466d0714c37d17078905d00ecd3146'
   head 'https://github.com/phalcon/cphalcon.git'
-  version '1.2.1'
 
   depends_on 'pcre'
 

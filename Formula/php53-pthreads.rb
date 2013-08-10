@@ -6,7 +6,6 @@ class Php53Pthreads < AbstractPhp53Extension
   url 'http://pecl.php.net/get/pthreads-0.0.44.tgz'
   sha1 'aef4e5e8dd6278f3cb3f997975406401cbce097f'
   head 'https://github.com/krakjoe/pthreads.git'
-  version '0.0.44'
 
   def install
     Dir.chdir "pthreads-#{version}" unless build.head?

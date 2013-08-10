@@ -5,7 +5,6 @@ class Php55Midgard2 < AbstractPhp55Extension
   homepage 'http://www.midgard-project.org'
   url 'https://github.com/midgardproject/midgard-php5.git', :tag => '12.09.1'
   head 'https://github.com/midgardproject/midgard-php5.git', :branch => 'ratatoskr'
-  version '12.09.1'
 
   depends_on 'pkg-config' => :build
   depends_on 'midgard2'
