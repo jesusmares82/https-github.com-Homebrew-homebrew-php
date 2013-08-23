@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Ev < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/ev'
-  url 'http://pecl.php.net/get/ev-0.2.3.tgz'
-  sha1 '9b818ac6f23994f8b53cc164f65bf649d4562c9c'
+  url 'http://pecl.php.net/get/ev-0.2.10.tgz'
+  sha1 'c096e13752cd919a5af8d300f71134492eae8e01'
   head 'https://bitbucket.org/osmanov/pecl-ev.git'
 
   depends_on 'libev'
