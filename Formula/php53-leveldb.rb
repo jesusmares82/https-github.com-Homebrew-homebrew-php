@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php55Leveldb < AbstractPhp53Extension
+class Php53Leveldb < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/leveldb'
   url 'http://pecl.php.net/get/leveldb-0.1.3.tgz'
