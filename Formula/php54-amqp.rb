@@ -10,7 +10,7 @@ class Php54Amqp < AbstractPhp54Extension
   depends_on 'rabbitmq-c'
 
   def install
-    Dir.chdir "amqp-#{version}" unless build.build_head?
+    Dir.chdir "amqp-#{version}" unless build.head?
 
     ENV.universal_binary if build.universal?
 
