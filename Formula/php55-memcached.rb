@@ -11,6 +11,11 @@ class Php55Memcached < AbstractPhp55Extension
   depends_on 'libmemcached'
   depends_on 'php55-igbinary' if build.include?('with-igbinary')
 
+  def patches
+    # adapt to libmemcached >= 1.0.9 new instance API (source: paravoid/php-memcached 37069e18ad399a8cc03d5fe9757e1481814ecb44)
+    "https://gist.github.com/ablyler/6331007/raw/"
+  end
+
   def install
     Dir.chdir "memcached-#{version}" unless build.head?
 
