@@ -66,6 +66,7 @@ class AbstractPhp < Formula
     option 'with-tidy', 'Include Tidy support'
     option 'with-thread-safety', 'Build with thread safety'
     option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
+    option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
     option 'without-bz2', 'Build without bz2 support'
     option 'without-pcntl', 'Build without Process Control support'
   end
@@ -174,7 +175,6 @@ INFO
       "--with-ldap-sasl=/usr",
       "--with-xmlrpc",
       "--with-kerberos=/usr",
-      "--with-xsl=/usr",
       "--with-gd",
       "--enable-gd-native-ttf",
       "--with-freetype-dir=#{Formula.factory('freetype').opt_prefix}",
@@ -210,6 +210,12 @@ INFO
       args << "--with-openssl=" + Formula.factory('openssl').opt_prefix.to_s
     else
       args << "--with-openssl=/usr"
+    end
+
+    if build.include? 'with-homebrew-libxslt'
+      args << "--with-xsl=" + Formula.factory('libxslt').opt_prefix.to_s
+    else
+      args << "--with-xsl=/usr"
     end
 
     if build.include? 'with-fpm'
