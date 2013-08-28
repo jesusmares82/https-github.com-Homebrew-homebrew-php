@@ -1,30 +1,19 @@
 require 'formula'
 
-def php55_installed?
-  `php -v`.match(/5\.5\./)
-end
-
-def php54_installed?
-  `php -v`.match(/5\.4\./)
-end
-
-def php53_installed?
-  `php -v`.match(/5\.3\./)
-end
-
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
-  url 'http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/4.0.4/phpMyAdmin-4.0.4-all-languages.tar.bz2'
-  sha1 '572cf575af7dc05a419c2aad71796d44175a3501'
+  url 'https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_0_5.tar.gz'
+  sha1 '79b6f1ffffafdd710d03b0e9d16c80a166f64902'
+  head 'https://github.com/phpmyadmin/phpmyadmin.git'
 
   if build.include?('without-mcrypt') && MacOS.prefer_64_bit?
     raise "64-bit machines cannot use phpmyadmin without mcrypt"
   end
 
   unless build.include? 'without-mcrypt'
-    depends_on 'php53-mcrypt' if php53_installed?
-    depends_on 'php54-mcrypt' if php54_installed?
-    depends_on 'php55-mcrypt' if php55_installed?
+    depends_on "php53-mcrypt" if Formula.factory("php53").linked_keg.exist?
+    depends_on "php54-mcrypt" if Formula.factory("php54").linked_keg.exist?
+    depends_on "php55-mcrypt" if Formula.factory("php55").linked_keg.exist?
   end
 
   unless MacOS.prefer_64_bit?
@@ -52,11 +41,11 @@ class Phpmyadmin < Formula
     Then, open http://localhost/phpmyadmin
 
     More documentation : file://#{share}/phpmyadmin/Documentation.html
-    
+
     Don't forget to copy config.sample.inc.php to config.inc.php and :
       - change your secret blowfish
       - uncomment the configuration lines (pma, pmapass ...)
-    
+
     EOS
   end
 end
