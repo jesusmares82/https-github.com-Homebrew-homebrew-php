@@ -2,8 +2,9 @@ require 'formula'
 
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
-  url 'https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_0_5.tar.gz'
-  sha1 '79b6f1ffffafdd710d03b0e9d16c80a166f64902'
+  url 'http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/4.0.5/phpMyAdmin-4.0.5-all-languages.tar.gz/download#!md5!3adfd4bf54a944c9fea9e30cb7f956c3'
+  sha1 '82d44152a445e9a614bdfac405e74a80d08f7881'
+  version '4.0.5'
   head 'https://github.com/phpmyadmin/phpmyadmin.git'
 
   if build.include?('without-mcrypt') && MacOS.prefer_64_bit?
@@ -40,7 +41,7 @@ class Phpmyadmin < Formula
       </Directory>
     Then, open http://localhost/phpmyadmin
 
-    More documentation : file://#{share}/phpmyadmin/Documentation.html
+    More documentation : file://#{share}/phpmyadmin/doc/
 
     Don't forget to copy config.sample.inc.php to config.inc.php and :
       - change your secret blowfish
