@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Gearman < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/gearman'
-  url 'http://pecl.php.net/get/gearman-1.1.1.tgz'
-  sha1 '98b8601b7cc921c4894a265aa6731263ecb60037'
+  url 'http://pecl.php.net/get/gearman-1.1.2.tgz'
+  sha1 '4b4d92b0dec9aabf8cd1ed6eba1f0cf8414117c9'
   head 'https://svn.php.net/repository/pecl/gearman/trunk/'
 
   depends_on 'gearman'
