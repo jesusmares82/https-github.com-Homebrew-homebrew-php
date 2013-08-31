@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Leveldb < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/leveldb'
-  url 'http://pecl.php.net/get/leveldb-0.1.3.tgz'
-  sha1 'b2a63425e6591b4334e43a447403b70a5f6db7e3'
+  url 'http://pecl.php.net/get/leveldb-0.1.4.tgz'
+  sha1 '9a15fb0105516533c38de32dc2a1164f9620e046'
   head 'https://github.com/reeze/php-leveldb.git'
 
   depends_on 'leveldb'
