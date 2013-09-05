@@ -3,13 +3,14 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Ioncubeloader < AbstractPhp55Extension
   init
   homepage 'http://www.ioncube.com/loaders.php'
-  version '4.2.2'
   if Hardware.is_64_bit?
+    version '4.4.2'
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz'
-    sha1 '067c47387725db434ab0e7d486a2d6eff6fab37c'
+    sha1 '7599ebe5aa30fbd2877c15ef36c1cef55186d002'
   else
+    version '4.4.1'
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz'
-    sha1 'a370d6cab86fe32be8df7ac4c2a1e16fa55c3742'
+    sha1 '3c79f5234de43c215935b6dd4367d66f7b9a63ac'
   end
 
   def extension_type; "zend_extension"; end
