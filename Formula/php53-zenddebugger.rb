@@ -13,8 +13,6 @@ class Php53Zenddebugger < AbstractPhp53Extension
     version '20110410'
   end
 
-  skip_clean :all
-
   def extension_type; "zend_extension"; end
 
   option '32-bit', "Build 32-bit only."
