@@ -2,15 +2,19 @@ require 'formula'
 
 class Phpsh < Formula
   homepage 'http://www.phpsh.org/'
-  url 'https://github.com/facebook/phpsh.git'
-  version "1.3"
+  url 'https://github.com/facebook/phpsh/archive/1.3.tar.gz'
+  sha1 'cc5b28667514047b286b587f8f054495eef2c654'
 
-  depends_on 'python'
+  depends_on 'pcre'
+  depends_on :python
 
   def install
-    system "python","setup.py", "install","--prefix=#{prefix}"
+    python do
+      system python, "setup.py", "install", "--prefix=#{prefix}"
+    end
+
     man1.install ['src/doc/phpsh.1']
-    system "rm","-rf","#{prefix}/man"
+    rm_rf("#{prefix}/man")
     bin.install ['src/phpsh']
   end
 end
