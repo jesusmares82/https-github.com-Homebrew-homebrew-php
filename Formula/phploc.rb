@@ -4,17 +4,16 @@ require File.expand_path("../../Requirements/phar-requirement", Pathname.new(__F
 
 class Phploc < Formula
   homepage 'https://github.com/sebastianbergmann/phploc'
-  url 'http://pear.phpunit.de/get/phploc.phar'
-  sha1 'cb91ecab64886637e627a7e3bfbe114e5be56df8'
-  version '1.7.4'
+  url 'https://phar.phpunit.de/phploc-2.0.2.phar'
+  sha1 'e05183e34512dc62d3d79f1760d1927beeab1167'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
 
   def install
-    libexec.install "phploc.phar"
+    libexec.install "phploc-#{version}.phar"
     sh = libexec + "phploc"
-    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phploc.phar $*")
+    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phploc-#{version}.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end
