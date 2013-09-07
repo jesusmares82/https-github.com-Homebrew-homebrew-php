@@ -2,7 +2,8 @@ require 'formula'
 
 class PhpBuild < Formula
   homepage 'http://chh.github.com/php-build/'
-  url 'https://github.com/CHH/php-build.git', :tag => 'v0.9.0'
+  url 'https://github.com/CHH/php-build/archive/v0.10.0.tar.gz'
+  sha1 '22d2c97c4fba1f260b148ade17543a703ae95589'
   head 'https://github.com/CHH/php-build.git'
 
   depends_on 'wget'
