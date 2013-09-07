@@ -8,7 +8,6 @@ class Php54Opcache < AbstractPhp54Extension
   head 'https://github.com/zendtech/ZendOptimizerPlus.git'
 
   depends_on 'pcre'
-  depends_on 'autoconf'
 
   def extension_type; "zend_extension"; end
 

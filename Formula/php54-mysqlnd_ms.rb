@@ -7,8 +7,6 @@ class Php54MysqlndMs < AbstractPhp54Extension
   sha1 'b074ee9f696ec17422638e1d554a0665320f4df9'
   head 'https://svn.php.net/repository/pecl/mysqlnd_ms/trunk/'
 
-  depends_on 'autoconf' => :build
-
   def extension
     "mysqlnd_ms"
   end
