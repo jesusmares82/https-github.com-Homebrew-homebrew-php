@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Pthreads < AbstractPhp54Extension
   init ['with-thread-safety']
   homepage 'http://pecl.php.net/package/pthreads'
-  url 'http://pecl.php.net/get/pthreads-0.0.44.tgz'
-  sha1 'aef4e5e8dd6278f3cb3f997975406401cbce097f'
+  url 'http://pecl.php.net/get/pthreads-0.0.45.tgz'
+  sha1 '16335470385f57483bc420b2a3e0a6eb87c06042'
   head 'https://github.com/krakjoe/pthreads.git'
 
   def install
