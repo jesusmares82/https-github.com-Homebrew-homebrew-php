@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Graphdat < AbstractPhp55Extension
   init
   homepage 'http://www.graphdat.com/'
-  url 'http://pecl.php.net/get/graphdat-1.0.1.tgz'
-  sha1 '7f3d691d3700e363d29437432a0a97099e4b7600'
+  url 'http://pecl.php.net/get/graphdat-1.0.2.tgz'
+  sha1 '3aca2e9d4e20cc864a2ad05f59db81cb49817fc2'
   head 'https://github.com/alphashack/graphdat-sdk-php.git'
 
   def install
