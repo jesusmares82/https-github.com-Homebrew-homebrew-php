@@ -155,7 +155,7 @@ The following kinds of brews are allowed:
 
 - PHP Extensions: They may be built with PECL, but installation via homebrew is sometimes much easier.
 - PHP Utilities: php-version, php-build fall under this category
-- Common PHP Web Applications: phpmyadmin goes here. Note that Wordpress would not because it requires other migration steps, such as database migrations etc.
+- Common PHP Web Applications: phpmyadmin goes here. Note that WordPress would not because it requires other migration steps, such as database migrations etc.
 - PHP Frameworks: These are to be reviewed on a case-by-case basis. Generally, only a recent, stable version of a popular framework will be allowed.
 
 If you have any concerns as to whether your formula belongs in PHP, just open a pull request with the formula and we'll take it from there.
