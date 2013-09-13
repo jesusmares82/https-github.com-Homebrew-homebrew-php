@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php55Riak < AbstractPhp55Extension
+class Php53Riak < AbstractPhp53Extension
   init
   homepage 'http://phpriak.bachpedersen.dk/'
   url 'http://pecl.php.net/get/riak-0.5.1.tgz'
