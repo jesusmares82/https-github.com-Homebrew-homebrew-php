@@ -3,9 +3,11 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Apcu < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/apcu'
-  url 'http://pecl.php.net/get/apcu-4.0.0.tgz'
-  sha1 'acb373b28cffefad6c19634ee0d504f209c23808'
+  url 'http://pecl.php.net/get/apcu-4.0.2.tgz'
+  sha1 'dd8a2ed00304501318f678a7f5b7364af4fc7dcf'
+  head 'https://github.com/krakjoe/apcu.git'
 
+  option 'with-apc-bc', "Wether APCu should provide APC full compatibility support"
   depends_on 'pcre'
 
   def install
@@ -13,25 +15,27 @@ class Php54Apcu < AbstractPhp54Extension
 
     ENV.universal_binary if build.universal?
 
+    args = []
+    args << "--enable-apcu"
+    args << "--enable-apc-bc" if build.include? 'with-apc-bc'
+
     safe_phpize
+
     system "./configure", "--prefix=#{prefix}",
-                          "--enable-apc",
-                          phpconfig
+                          phpconfig,
+                          *args
     system "make"
-    prefix.install %w(modules/apcu.so)
+    prefix.install "modules/apcu.so"
     write_config_file unless build.include? "without-config-file"
   end
 
   def config_file
     super + <<-EOS.undent
       apc.enabled=1
-      apc.shm_segments=1
       apc.shm_size=64M
       apc.ttl=7200
-      apc.user_ttl=7200
-      apc.num_files_hint=1024
       apc.mmap_file_mask=/tmp/apc.XXXXXX
-      apc.enable_cli=0
+      apc.enable_cli=1
     EOS
   end
 end
