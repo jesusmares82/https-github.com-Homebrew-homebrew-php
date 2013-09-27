@@ -70,6 +70,10 @@ class AbstractPhp < Formula
     option 'without-pcntl', 'Build without Process Control support'
   end
 
+  # Fixes the pear .lock permissions issue that keeps it from operating correctly.
+  # Thanks mistym & #machomebrew
+  skip_clean 'lib/php/.lock'
+
   def config_path
     etc+"php/"+php_version.to_s
   end
