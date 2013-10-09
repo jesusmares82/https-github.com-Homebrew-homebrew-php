@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Riak < AbstractPhp53Extension
   init
   homepage 'http://phpriak.bachpedersen.dk/'
-  url 'http://pecl.php.net/get/riak-0.5.1.tgz'
-  sha1 '6d55a8867253e9f32cd15770043ec1d2c307962d'
+  url 'http://pecl.php.net/get/riak-0.6.0.tgz'
+  sha1 'c79696f884fe517987a217c13aee761d47e0c2f1'
   head 'https://github.com/TriKaspar/php_riak.git'
 
   option 'with-riak', 'Also install Riak locally'
@@ -27,7 +27,10 @@ class Php53Riak < AbstractPhp53Extension
   def config_file
     super + <<-EOS.undent
       riak.persistent.connections=20
-      riak.persistent.timeout=1000
+      riak.persistent.timeout=1800
+      riak.socket.keep_alive=1
+      riak.socket.recv_timeout=10000
+      riak.socket.send_timeout=10000
     EOS
   end
 
