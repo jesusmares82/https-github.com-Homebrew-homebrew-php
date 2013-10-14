@@ -17,4 +17,8 @@ class Phpsh < Formula
     rm_rf("#{prefix}/man")
     bin.install ['src/phpsh']
   end
+  
+  def caveats
+    python.standard_caveats if python
+  end
 end
