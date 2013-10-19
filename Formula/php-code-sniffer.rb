@@ -6,6 +6,11 @@ class PhpCodeSniffer < Formula
   url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.4.7.tgz'
   sha1 '436448942bd7a12d37083f1c0838c9ba297dcb5c'
 
+  devel do
+    url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.5.0RC4.tgz'
+    sha1 '0f713d8b02b730f6ac2ccf497d5931dc77888018'
+  end
+
   depends_on PhpMetaRequirement
 
   def install
