@@ -2,9 +2,9 @@ require 'formula'
 
 class Phpunit < Formula
   homepage 'http://phpunit.de/manual/current/en/'
-  url 'https://github.com/sebastianbergmann/phpunit/releases/download/3.7.27/phpunit.phar'
-  sha1 'dc693b34a62644f61cfc01a22d9654ff4b8764af'
-  version '3.7.27'
+  url 'https://github.com/sebastianbergmann/phpunit/releases/download/3.7.28/phpunit.phar'
+  sha1 '4acc07c1730d85e2016a1ed613a1355a9d271636'
+  version '3.7.28'
 
   def install
     mv "phpunit.phar", "phpunit-#{version}.phar"
