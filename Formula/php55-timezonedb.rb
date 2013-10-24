@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Timezonedb < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/timezonedb'
-  url 'http://pecl.php.net/get/timezonedb-2013.4.tgz'
-  sha1 '9910eec433d07fc64d908280dc9743200bb89bbd'
+  url 'http://pecl.php.net/get/timezonedb-2013.7.tgz'
+  sha1 '01c41e0cf9e7c62474029878ea0e580c8aecc29f'
   head 'https://svn.php.net/repository/pecl/timezonedb/trunk/'
 
   def install
