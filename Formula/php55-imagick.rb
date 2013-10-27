@@ -13,7 +13,7 @@ class Php55Imagick < AbstractPhp55Extension
   def patches
     # Rationale: Fix for the header file MagickWand.h
     #     could not be located error during ./configure
-    #     
+    #
     # Original error message:
     #     checking for MagickWand.h header file...
     #     configure: error: Cannot locate header file MagickWand.h
