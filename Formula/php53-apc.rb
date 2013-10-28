@@ -9,7 +9,6 @@ class Php53Apc < AbstractPhp53Extension
 
   devel do
     url 'http://pecl.php.net/get/APC-3.1.13.tgz'
-    version '3.1.13'
     sha1 'cafd6ba92ac1c9f500a6c1e300bbe8819daddfae'
   end
 
