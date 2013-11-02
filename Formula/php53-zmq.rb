@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Zmq < AbstractPhp53Extension
   init
   homepage 'http://php.zero.mq/'
-  url 'https://github.com/mkoppanen/php-zmq/archive/1.0.8.tar.gz'
-  sha1 '62a1390941540f899dd6ae1826f30a15e082b474'
+  url 'https://github.com/mkoppanen/php-zmq/archive/1.1.1.tar.gz'
+  sha1 '7c90908d80f13c06f3704efa19b96fc78fa7770f'
   head 'https://github.com/mkoppanen/php-zmq.git'
 
   depends_on 'pkg-config' => :build
