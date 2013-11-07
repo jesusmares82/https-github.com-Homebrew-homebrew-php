@@ -2,9 +2,13 @@ require 'formula'
 
 class Phplint < Formula
   homepage 'http://www.icosaedro.it/phplint/'
-  url 'http://www.icosaedro.it/phplint/phplint-pure-c-1.1_20120402.tar.gz'
-  sha256 '7027bf0a4e676ddd53c7b4bf7707a0773baab6565b2a1541f5e5ba1d2694e08c'
-  version '1.1'
+  url 'http://www.icosaedro.it/phplint/phplint-pure-c-1.1_20130803.tar.gz'
+  sha256 '30620b170315e9b9df1f69fdf809a1ec0e4829263e7b9949d88ab22b4ce80388'
+  version '1.1-20130803'
+  fails_with :clang do
+    build 500
+    cause 'Clang which does not support nested functions. Use gcc instead.'
+  end
 
   def patches
     # Rationale: The ./configure tosses up errors that can be ignored, but homebrew
@@ -15,7 +19,7 @@ class Phplint < Formula
   end
 
   def install
-    ENV.llvm
+    ENV.gcc
     # See: http://www.icosaedro.it/phplint/download.html (Note 1)
     system "#{ENV.cc} -fnested-functions src/phplint.c -o src/phplint"
     bin.install 'src/phplint'
