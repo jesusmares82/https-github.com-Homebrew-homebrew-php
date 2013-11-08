@@ -5,12 +5,11 @@ class Php55Yaz < AbstractPhp55Extension
   homepage 'http://www.indexdata.com/phpyaz'
   url 'http://pecl.php.net/get/yaz-1.1.6.tgz'
   sha1 '6add3d6dda5a676cdf74378ab968fd64e348c91f'
-  version '1.1.6'
-  
+
   depends_on "yaz"
 
   def install
-    Dir.chdir "yaz-#{version}" unless build.head?
+    Dir.chdir "yaz-#{version}"
 
     ENV.universal_binary if build.universal?
 
