@@ -6,6 +6,7 @@ A centralized repository for PHP-related brews.
 
 Bugs inevitably happen - none of us is running EVERY conceivable setup - but hopefully the install process can be made smoother through the following tips:
 
+- I you have recently upgraded you Mac OS version or XCode, read [this section](#common-upgrade-issues).
 - Upgrade your Mac to the latest patch version. So if you are on `10.7.0`, upgrade to `10.7.4` etc.
 - Ensure XCode is installed and up to date.
 - Run `brew update`. If you tapped an old version of `homebrew-php` or have an old brew installation, this may cause some installation issues.
@@ -29,7 +30,18 @@ Bugs inevitably happen - none of us is running EVERY conceivable setup - but hop
 
 Doing all of these might be a hassle, but will more than likely ensure you either have a working install or get help as soon as possible.
 
+## Common upgrade issues
 
+If you have recently upgraded your Mac OSX version or XCode, you may have some compilation or missing libraries issues. The following information may help you solve most of the problems:
+
+- Ensure you have properly upgrade CLT depending on your XCode version.
+- Proceed step by step to isolate the responsible formula. If you need to install `php55` and `php55-imagick`, don't do `brew install php55 php55-imagick`. Just do `brew install php55`, ensure everything is working as expected, check the output of `phpinfo()`, restart your Apache server with `sudo apachectl restart`. Then you can install the next formula `brew install php55-imagick`.
+- If `php53`, `php54`or `php55` build fails, remove all their dependencies and reinstall the formula.
+For instance:
+If `brew install php55` fails, do the following: `brew rm php55 && brew deps php55 | xargs brew rm`
+If `brew install php55 -- with-gmp` fails, do the following: brew rm php55 && brew deps php55 --with-gmp | xargs brew rm`.
+Then reinstall a clean version of the formula: `brew update && brew upgrade && brew install php55`.
+- If an extension build fails, try also to remove all its dependencies and reinstall it.
 ----
 **SUPERHACK DANGEROUS DONT DO IT**
 
