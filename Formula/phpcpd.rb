@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", Pathname.new(__F
 
 class Phpcpd < Formula
   homepage 'https://github.com/sebastianbergmann/phpcpd'
-  url 'https://phar.phpunit.de/phpcpd-1.4.3.phar'
-  sha1 '8a71cfd8bf46fc52a19040b6d22af0ffeebecddf'
+  url 'https://phar.phpunit.de/phpcpd-2.0.0.phar'
+  sha1 'b4bdf58928fbf8c0afc899fdde0a1a7f79863b72'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
