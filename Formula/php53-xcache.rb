@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Xcache < AbstractPhp53Extension
   init
   homepage 'http://xcache.lighttpd.net'
-  url 'http://xcache.lighttpd.net/pub/Releases/3.0.1/xcache-3.0.1.tar.bz2'
-  sha1 'abd5c1cdff3e2f2207e1d39eb99470ffd48efc0f'
+  url 'http://xcache.lighttpd.net/pub/Releases/3.1.0/xcache-3.1.0.tar.bz2'
+  sha1 'db30f642de9bc97538fe4f85940e8a69a1a365c8'
 
   def extension_type; "extension"; end
 
