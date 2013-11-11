@@ -8,7 +8,7 @@ class Php55Zmq < AbstractPhp55Extension
   head 'https://github.com/mkoppanen/php-zmq.git'
 
   depends_on 'pkg-config' => :build
-  depends_on 'zeromq'  
+  depends_on 'zeromq'
 
   def install
     ENV.universal_binary if build.universal?
