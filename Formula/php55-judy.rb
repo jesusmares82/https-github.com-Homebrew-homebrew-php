@@ -6,7 +6,7 @@ class Php55Judy < AbstractPhp55Extension
   url 'http://pecl.php.net/get/judy-1.0.2.tgz'
   sha1 '3051e72a3ef5d05cbe5ba938841dd2bdef36e9b8'
   head 'https://github.com/orieg/php-judy.git'
-  
+
   depends_on "judy"
 
   def install
