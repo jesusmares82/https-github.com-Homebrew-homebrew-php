@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Raphf < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/raphf'
-  url 'http://pecl.php.net/get/raphf-1.0.2.tgz'
-  sha1 '5780a4a141119d4a5b63d22ee9a986801b437bf0'
+  url 'http://pecl.php.net/get/raphf-1.0.3.tgz'
+  sha1 'e08d5194dcfe94612677bcaa34c509e3f7475446'
 
   def install
     Dir.chdir "raphf-#{version}" unless build.head?
