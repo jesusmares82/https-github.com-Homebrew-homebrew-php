@@ -24,8 +24,8 @@ Bugs inevitably happen - none of us is running EVERY conceivable setup - but hop
 - If you have a failing install due to `GD build test failed`, try running the following before attempting to reinstall:
 
 ```
-    brew rm freetype jpeg libpng gd zlib
-    brew install freetype jpeg libpng gd zlib
+brew rm freetype jpeg libpng gd zlib
+brew install freetype jpeg libpng gd zlib
 ```
 
 Doing all of these might be a hassle, but will more than likely ensure you either have a working install or get help as soon as possible.
@@ -124,25 +124,31 @@ Using multiple PHP versions from `homebrew-php` is pretty straightforward.
 
 If using Apache, you will need to update the `LoadModule` call. For convenience, simply comment out the old PHP version:
 
-    # /etc/apache2/httpd.conf
-    # Swapping from PHP53 to PHP54
-    # $HOMEBREW_PREFIX is normally `/usr/local`
-    # LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php53/5.3.25/libexec/apache2/libphp5.so
-    LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php54/5.4.15/libexec/apache2/libphp5.so
+```sh
+# /etc/apache2/httpd.conf
+# Swapping from PHP53 to PHP54
+# $HOMEBREW_PREFIX is normally `/usr/local`
+# LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php53/5.3.25/libexec/apache2/libphp5.so
+LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php54/5.4.15/libexec/apache2/libphp5.so
+```
 
 If using FPM, you will need to unload the `plist` controlling php, or manually stop the daemon, via your command line:
 
-    # Swapping from PHP53 to PHP54
-    # $HOMEBREW_PREFIX is normally `/usr/local`
-    cp $HOMEBREW_PREFIX/Cellar/php54/5.4.15/homebrew-php.josegonzalez.php54.plist ~/Library/LaunchAgents/
-    launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php53.plist
-    launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+```sh
+# Swapping from PHP53 to PHP54
+# $HOMEBREW_PREFIX is normally `/usr/local`
+cp $HOMEBREW_PREFIX/Cellar/php54/5.4.15/homebrew-php.josegonzalez.php54.plist ~/Library/LaunchAgents/
+launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php53.plist
+launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+```
 
 If you would like to swap the PHP you use on the command line, you should update the `$PATH` variable in either your `.bashrc` or `.bash_profile`:
 
-    # Swapping from PHP53 to PHP54
-    # export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
-    export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+```sh
+# Swapping from PHP53 to PHP54
+# export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
+export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+```
 
 Please be aware that you must make this type of change EACH time you swap between PHP `minor` versions. You will typically only need to update the Apache/FPM when upgrading your php `patch` version.
 
@@ -154,7 +160,9 @@ If installing `php53` or `php54`, please note that all extensions installed with
 
 It would be nice to be able to use the `phpcs` command via commandline, or other utilities. You will need to add the installed php's `bin` directory to your path. The following would be added to your `.bashrc` or `.bash_profile` when running the `php54` brew:
 
-    export PATH="$(brew --prefix php54)/bin:$PATH"
+```sh
+export PATH="$(brew --prefix php54)/bin:$PATH"
+```
 
 Some caveats:
 
@@ -179,29 +187,30 @@ PHP Extensions MUST be prefixed with `phpVERSION`. For example, instead of the `
 
 The template for the `php54-example` pecl extension would be as follows. Please use it as an example for any new extension formulae:
 
-    require File.join(File.dirname(__FILE__), 'abstract-php-extension')
+require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-    class Php54Example < AbstractPhp54Extension
-      init
-      homepage 'http://pecl.php.net/package/example'
-      url 'http://pecl.php.net/get/example-1.0.tgz'
-      sha1 'SOMEHASHHERE'
-      version '1.0'
-      head 'https://svn.php.net/repository/pecl/example/trunk', :using => :svn
+```ruby
+class Php54Example < AbstractPhp54Extension
+  init
+  homepage 'http://pecl.php.net/package/example'
+  url 'http://pecl.php.net/get/example-1.0.tgz'
+  sha1 'SOMEHASHHERE'
+  version '1.0'
+  head 'https://svn.php.net/repository/pecl/example/trunk', :using => :svn
 
-      def install
-        Dir.chdir "example-#{version}" unless build.head?
+  def install
+    Dir.chdir "example-#{version}" unless build.head?
 
-        ENV.universal_binary if build.universal?
+    ENV.universal_binary if build.universal?
 
-        safe_phpize
-        system "./configure", "--prefix=#{prefix}",
-                              phpconfig
-        system "make"
-        prefix.install "modules/example.so"
-        write_config_file unless build.include? "without-config-file"
-      end
-    end
+    safe_phpize
+    system "./configure", "--prefix=#{prefix}", phpconfig
+    system "make"
+    prefix.install "modules/example.so"
+    write_config_file unless build.include? "without-config-file"
+  end
+end
+```
 
 Before testing the extension, you will need run the command `brew tap --repair` to create a symlink in `$HOMEBREW_PREFIX/Library/Formula`.
 
