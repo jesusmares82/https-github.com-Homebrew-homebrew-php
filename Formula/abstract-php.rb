@@ -26,7 +26,7 @@ class AbstractPhp < Formula
     # So PHP extensions don't report missing symbols
     skip_clean ['bin', 'sbin']
 
-    depends_on 'curl' unless MacOS.version >= :lion
+    depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
     depends_on 'freetds' if build.include? 'with-mssql'
     depends_on 'freetype'
     depends_on 'gettext'
@@ -52,6 +52,7 @@ class AbstractPhp < Formula
 
     option '32-bit', "Build 32-bit only."
     option 'homebrew-apxs', 'Build against apxs in Homebrew prefix'
+    option 'with-homebrew-curl', 'Include Curl support via Homebrew'
     option 'with-debug', 'Compile with debugging symbols'
     option 'with-libmysql', 'Include (old-style) libmysql support'
     option 'without-mysql', 'Remove MySQL/MariaDB support'
@@ -189,8 +190,11 @@ INFO
       "--with-mhash",
     ]
 
-    args << "--with-curl" if MacOS.version >= :lion
-    args << "--with-curl=#{Formula.factory('curl').opt_prefix}" unless MacOS.version >= :lion
+    if build.include?('with-homebrew-curl') || MacOS.version < :lion
+      args << "--with-curl=#{Formula.factory('curl').opt_prefix}"
+    else
+      args << "--with-curl"
+    end
 
     unless MacOS.version >= :lion
       args << "--with-libxml-dir=#{Formula.factory('libxml2').opt_prefix}"
