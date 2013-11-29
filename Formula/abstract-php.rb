@@ -178,7 +178,7 @@ INFO
       "--with-kerberos=/usr",
       "--with-gd",
       "--enable-gd-native-ttf",
-      "--with-freetype-dir=#{Formula.factory('freetype').opt_prefix}",
+      "--with-freetype-dir=#{Formula.factory('freetype').opt_prefix}/include/freetype2",
       "--with-jpeg-dir=#{Formula.factory('jpeg').opt_prefix}",
       "--with-png-dir=#{Formula.factory('libpng').opt_prefix}",
       "--with-gettext=#{Formula.factory('gettext').opt_prefix}",

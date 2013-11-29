@@ -27,5 +27,23 @@ class Php54 < AbstractPhp
   def php_version_path
     54
   end
-
+  
+  def patches
+    DATA
+  end
 end
+
+__END__
+diff --git a/configure b/configure
+index d506892..51617e8 100755
+--- a/configure
++++ b/configure
+@@ -38277,7 +38277,7 @@ fi
+   if test "$PHP_FREETYPE_DIR" != "no"; then
+ 
+     for i in $PHP_FREETYPE_DIR /usr/local /usr; do
+-      if test -f "$i/include/freetype2/freetype/freetype.h"; then
++      if test -f "$i/include/freetype2/freetype.h"; then
+         FREETYPE2_DIR=$i
+         FREETYPE2_INC_DIR=$i/include/freetype2
+         break
