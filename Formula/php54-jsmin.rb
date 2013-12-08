@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php54Jsmin < AbstractPhp53Extension
+class Php54Jsmin < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/jsmin'
   url 'http://pecl.php.net/get/jsmin-0.1.1.tgz'
