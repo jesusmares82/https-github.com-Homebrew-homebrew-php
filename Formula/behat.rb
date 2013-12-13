@@ -6,15 +6,14 @@ class Behat < Formula
   homepage 'http://behat.org/'
   url 'http://behat.org/downloads/behat-2.4.5.phar'
   sha1 '0c9b1950c106d0ad52a96010cf68484d2cfcd837'
-  version '2.4.5'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
 
   def install
-    libexec.install "behat-2.4.5.phar"
+    libexec.install "behat-#{version}.phar"
     sh = libexec + "behat"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/behat-2.4.5.phar $*")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/behat-#{version}.phar $*")
     chmod 0755, sh
     bin.install_symlink sh
   end
@@ -31,5 +30,4 @@ class Behat < Formula
       "brew home behat".
     EOS
   end
-
 end
