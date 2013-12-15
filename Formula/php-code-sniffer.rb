@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new
 
 class PhpCodeSniffer < Formula
   homepage 'http://pear.php.net/package/PHP_CodeSniffer'
-  url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.5.0.tgz'
-  sha1 '90989729621af47b683306695960bce31393245d'
+  url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.5.1.tgz'
+  sha1 'a68b66cc1a88b7f5359270ab72292fff33587b00'
 
   depends_on PhpMetaRequirement
 
@@ -14,6 +14,11 @@ class PhpCodeSniffer < Formula
     sh.write("#!/bin/sh\n\n/usr/bin/env php #{prefix}/scripts/phpcs $*")
     chmod 0755, sh
     bin.install_symlink sh
+
+    # Create a place for other formulas to link their standards.
+    standards = etc/name/"Standards"
+    (standards).mkpath
+    system "#{bin}/phpcs", "--config-set", "installed_paths", "#{standards}"
   end
 
   def caveats; <<-EOS.undent
