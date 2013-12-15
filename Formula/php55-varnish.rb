@@ -7,7 +7,7 @@ class Php55Varnish < AbstractPhp55Extension
   sha1 '9cc3b308c6dccb4bbf376fce4bcc2268aa7a7c1d'
 
   def install
-    Dir.chdir "varnish-#{version}" unless build.head?
+    Dir.chdir "varnish-#{version}"
 
     ENV.universal_binary if build.universal?
 

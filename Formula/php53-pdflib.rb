@@ -9,7 +9,7 @@ class Php53Pdflib < AbstractPhp53Extension
   depends_on "pdflib-lite"
 
   def install
-    Dir.chdir "pdflib-#{version}" unless build.head?
+    Dir.chdir "pdflib-#{version}"
 
     ENV.universal_binary if build.universal?
 

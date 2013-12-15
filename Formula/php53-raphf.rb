@@ -7,7 +7,7 @@ class Php53Raphf < AbstractPhp53Extension
   sha1 'ba1528c32a4fb1f632da321f67875d3be6322ce1'
 
   def install
-    Dir.chdir "raphf-#{version}" unless build.head?
+    Dir.chdir "raphf-#{version}"
 
     ENV.universal_binary if build.universal?
 

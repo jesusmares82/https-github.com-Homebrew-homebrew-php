@@ -10,7 +10,7 @@ class Php53Sphinx < AbstractPhp53Extension
   depends_on 'libsphinxclient'
 
   def install
-    Dir.chdir "sphinx-#{version}" unless build.head?
+    Dir.chdir "sphinx-#{version}"
 
     args = []
     args << "--prefix=#{prefix}"
