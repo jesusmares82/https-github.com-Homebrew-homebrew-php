@@ -323,13 +323,6 @@ INFO
     system "./buildconf" if build.head?
     system "./configure", *args
 
-    # https://bugs.php.net/bug.php?id=62460
-    if php_version.to_s == '5.3'
-      inreplace "Makefile",
-        'EXEEXT = .dSYM',
-        'EXEEXT = '
-    end
-
     if build_apache?
       # Use Homebrew prefix for the Apache libexec folder
       inreplace "Makefile",
