@@ -8,25 +8,37 @@ class PhpCodeSniffer < Formula
 
   depends_on PhpMetaRequirement
 
+  def phpcs_standards
+    etc+name+'Standards'
+  end
+
+  def phpcs_script_name
+    'phpcs'
+  end
+
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
-    sh = libexec + "phpcs"
-    sh.write("#!/bin/sh\n\n/usr/bin/env php #{prefix}/scripts/phpcs $*")
-    chmod 0755, sh
-    bin.install_symlink sh
+    (libexec+phpcs_script_name).write <<-EOS.undent
+      #!/bin/sh
+      /usr/bin/env php "#{prefix}/scripts/phpcs" "$@"
+    EOS
+    chmod 0755, libexec+phpcs_script_name
+    bin.install_symlink libexec+phpcs_script_name
 
     # Create a place for other formulas to link their standards.
-    standards = etc/name/"Standards"
-    (standards).mkpath
-    system "#{bin}/phpcs", "--config-set", "installed_paths", "#{standards}"
+    phpcs_standards.mkpath
+    system bin+phpcs_script_name, '--config-set', 'installed_paths', phpcs_standards
   end
 
   def caveats; <<-EOS.undent
     Verify your installation by running:
-      "phpcs --version".
+
+      #{phpcs_script_name} --version
 
     You can read more about phpcs by running:
-      "brew home php-code-sniffer".
+
+      brew home #{name}
+
     EOS
   end
 end
