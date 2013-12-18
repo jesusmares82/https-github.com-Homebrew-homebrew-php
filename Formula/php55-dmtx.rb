@@ -4,8 +4,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Dmtx < AbstractPhp55Extension
   init
   homepage 'http://www.libdmtx.org'
-  url 'https://github.com/maZahaca/php-dmtx/archive/0.0.2-dev.tar.gz'
-  sha1 'b5fc8cc244d29177a35995afd968b8d2ddf22e31'
+  url 'https://github.com/maZahaca/php-dmtx/archive/0.0.3-dev.tar.gz'
+  sha1 '98a5712cdcfd4273fffb66f0372e3a0027d36d29'
   head 'https://github.com/maZahaca/php-dmtx.git'
 
   depends_on 'libdmtx'
