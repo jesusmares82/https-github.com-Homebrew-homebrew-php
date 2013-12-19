@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Pdflib < AbstractPhp55Extension
   init
   homepage 'http://www.pdflib.com'
-  url 'http://pecl.php.net/get/pdflib-3.0.1.tgz'
-  sha1 '464b5fb640c30d218ae0ea64f9061591ec2a61eb'
+  url 'http://pecl.php.net/get/pdflib-3.0.2.tgz'
+  sha1 '162c60e89bd6105379ebe2bc3bdd1b4d8bb31cd3'
 
   depends_on "pdflib-lite"
 
