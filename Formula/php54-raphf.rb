@@ -15,6 +15,7 @@ class Php54Raphf < AbstractPhp54Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
     system "make"
+    include.install %w(php_raphf.h)
     prefix.install "modules/raphf.so"
     write_config_file unless build.include? "without-config-file"
   end
