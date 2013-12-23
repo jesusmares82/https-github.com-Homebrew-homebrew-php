@@ -145,10 +145,18 @@ class AbstractPhpExtension < Formula
     end
 
     caveats << <<-EOS
-  * Restart your webserver.
-  * Write a PHP page that calls "phpinfo();"
-  * Load it in a browser and look for the info on the #{extension} module.
-  * If you see it, you have been successful!
+  * Validate installation via one of the following methods:
+  *
+  * Using PHP from a webserver:
+  * - Restart your webserver.
+  * - Write a PHP page that calls "phpinfo();"
+  * - Load it in a browser and look for the info on the #{extension} module.
+  * - If you see it, you have been successful!
+  *
+  * Using PHP from the command line:
+  * - Run "php -i" (command-line "phpinfo()")
+  * - Look for the info on the #{extension} module.
+  * - If you see it, you have been successful!
 EOS
 
     caveats.join("\n")
