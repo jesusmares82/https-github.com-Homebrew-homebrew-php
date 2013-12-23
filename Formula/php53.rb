@@ -44,3 +44,25 @@ index d506892..51617e8 100755
          FREETYPE2_DIR=$i
          FREETYPE2_INC_DIR=$i/include/freetype2
          break
+@@ -107971,7 +107971,7 @@
+ LDFLAGS="$LDFLAGS $PHP_AIX_LDFLAGS"
+
+ case $host_alias in
+-*darwin9*|*darwin10*|*darwin11*|*darwin12*)
++*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*)
+   ac_cv_exeext=
+   ;;
+ esac
+diff --git a/configure.in b/configure.in
+index 4bf50ad..b0c9747 100644
+--- a/configure.in
++++ b/configure.in
+@@ -1338,7 +1338,7 @@ LDFLAGS="$LDFLAGS $PHP_AIX_LDFLAGS"
+ dnl Autoconf 2.13's libtool checks go slightly nuts on Mac OS X 10.5, 10.6, 10.7 and 10.8.
+ dnl This hack works around it. Ugly.
+ case $host_alias in
+-*darwin9*|*darwin10*|*darwin11*|*darwin12*)
++*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*)
+   ac_cv_exeext=
+   ;;
+ esac
