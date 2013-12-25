@@ -2,9 +2,8 @@ require 'formula'
 
 class Codeception < Formula
   homepage 'http://codeception.com/quickstart'
-  url 'https://github.com/Codeception/Codeception/raw/1.8/package/codecept.phar'
-  sha1 '75b69ad9eef41881fa64b59703bf6a8db877e56b'
-  version '1.8.0'
+  url 'http://codeception.com/releases/1.8.1/codecept.phar'
+  sha1 '3541b1366d6fd35cd45505566da5f41016e8b579'
 
   def install
     mv "codecept.phar", "codecept-#{version}.phar"
