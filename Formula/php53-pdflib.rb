@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Pdflib < AbstractPhp53Extension
   init
   homepage 'http://www.pdflib.com'
-  url 'http://pecl.php.net/get/pdflib-3.0.2.tgz'
-  sha1 '162c60e89bd6105379ebe2bc3bdd1b4d8bb31cd3'
+  url 'http://pecl.php.net/get/pdflib-3.0.3.tgz'
+  sha1 '6ef3c51049f979e084ff4e4bbd54f64f23c7697c'
 
   depends_on "pdflib-lite"
 
@@ -14,8 +14,7 @@ class Php53Pdflib < AbstractPhp53Extension
     ENV.universal_binary if build.universal?
 
     safe_phpize
-    system "./configure", "--prefix=#{prefix}",
-                          phpconfig
+    system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
     prefix.install "modules/pdf.so"
     write_config_file unless build.include? "without-config-file"
