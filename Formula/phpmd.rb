@@ -6,7 +6,6 @@ class Phpmd < Formula
   homepage 'http://phpmd.org'
   url 'http://static.phpmd.org/php/1.5.0/phpmd.phar'
   sha1 '4e64bd506afad7e9aa1b0c1f4216660395e347ac'
-  version '1.5.0'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
