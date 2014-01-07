@@ -6,6 +6,10 @@ class Php53Thrift < AbstractPhp53Extension
   url 'https://github.com/apache/thrift/archive/thrift-0.9.0.tar.gz'
   sha1 'b30577fb631efe74333114a339a8b62014fe5eec'
 
+  def module_path
+    prefix / "thrift_protocol.so"
+  end
+
   def install
     Dir.chdir "lib/php/src/ext/thrift_protocol"
 
