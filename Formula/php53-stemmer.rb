@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php53Stemmer < AbstractPhp55Extension
+class Php53Stemmer < AbstractPhp53Extension
   init
   homepage 'https://github.com/hthetiot/php-stemmer'
   url 'https://github.com/hthetiot/php-stemmer/archive/0f32673f89e72049a6c43a4d5966a88b81aff039.tar.gz'
