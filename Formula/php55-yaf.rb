@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Yaf < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/yaf'
-  url 'http://pecl.php.net/get/yaf-2.2.9.tgz'
-  sha1 '6640fda6de95185cf898b0116a5136275634c42d'
+  url 'http://pecl.php.net/get/yaf-2.3.1.tgz'
+  sha1 'cde4c0f28d43401cf18d5a6e682b77333bdeafa3'
   head 'https://svn.php.net/repository/pecl/yaf/trunk/'
 
   depends_on 'pcre'
@@ -15,8 +15,7 @@ class Php55Yaf < AbstractPhp55Extension
     ENV.universal_binary if build.universal?
 
     safe_phpize
-    system "./configure", "--prefix=#{prefix}",
-                          phpconfig
+    system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
     prefix.install "modules/yaf.so"
     write_config_file unless build.include? "without-config-file"
