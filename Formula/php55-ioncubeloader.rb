@@ -3,9 +3,9 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Ioncubeloader < AbstractPhp55Extension
   init
   homepage 'http://www.ioncube.com/loaders.php'
-  version '4.5.0'
+  version '4.5.2'
   url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz'
-  sha1 '62b2b2f0328cbee95e71fae0f03ea87f611a6a3c'
+  sha1 '2b9b32901eb08f7ffa0702fde4f12104c2dcd12e'
   depends_on :arch => :x86_64
 
   def extension_type; "zend_extension"; end
