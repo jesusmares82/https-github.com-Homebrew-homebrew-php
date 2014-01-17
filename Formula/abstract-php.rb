@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 require 'formula'
 require File.join(File.dirname(__FILE__), 'abstract-php-version')
 
