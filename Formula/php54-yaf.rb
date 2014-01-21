@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Yaf < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/yaf'
-  url 'http://pecl.php.net/get/yaf-2.3.1.tgz'
-  sha1 'cde4c0f28d43401cf18d5a6e682b77333bdeafa3'
+  url 'http://pecl.php.net/get/yaf-2.3.2.tgz'
+  sha1 '03a59027a9b3d7b20b898238cb5322e346a5a907'
   head 'https://svn.php.net/repository/pecl/yaf/trunk/'
 
   depends_on 'pcre'
