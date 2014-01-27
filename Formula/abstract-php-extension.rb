@@ -1,4 +1,5 @@
 require 'formula'
+require File.join(File.dirname(__FILE__), 'abstract-php-versions')
 
 class UnsupportedPhpApiError < RuntimeError
   attr :name
@@ -214,5 +215,14 @@ class AbstractPhp55Extension < AbstractPhpExtension
   def self.init opts=[]
     super()
     depends_on "php55" => opts unless build.include?('without-homebrew-php')
+  end
+end
+
+class AbstractPhp56Extension < AbstractPhpExtension
+  include Php56Defs
+  
+  def self.init opts=[]
+    super()
+    depends_on "php56" => opts unless build.include?('without-homebrew-php')
   end
 end

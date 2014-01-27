@@ -1,0 +1,22 @@
+require File.join(File.dirname(__FILE__), 'abstract-php-extension')
+
+class Php56Graphdat < AbstractPhp56Extension
+  init
+  homepage 'http://www.graphdat.com/'
+  url 'http://pecl.php.net/get/graphdat-1.0.2.tgz'
+  sha1 '3aca2e9d4e20cc864a2ad05f59db81cb49817fc2'
+  head 'https://github.com/alphashack/graphdat-sdk-php.git'
+
+  def install
+    Dir.chdir "graphdat-#{version}" unless build.head?
+
+    ENV.universal_binary if build.universal?
+
+    safe_phpize
+    system "./configure", "--prefix=#{prefix}",
+                          phpconfig
+    system "make"
+    prefix.install "modules/graphdat.so"
+    write_config_file unless build.include? "without-config-file"
+  end
+end

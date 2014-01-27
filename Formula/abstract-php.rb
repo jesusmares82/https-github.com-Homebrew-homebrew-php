@@ -1,4 +1,5 @@
 require 'formula'
+require File.join(File.dirname(__FILE__), 'abstract-php-versions')
 
 def postgres_installed?
   `which pg_config`.length > 0
