@@ -2,8 +2,8 @@ require 'formula'
 
 class PhpVersion < Formula
   homepage  'https://github.com/wilmoore/php-version#simple-php-version-switching'
-  url       'https://github.com/wilmoore/php-version/archive/0.10.3.tar.gz'
-  sha1      '0123a21af41c75dc6cc76db28440af6742e9cfeb'
+  url       'https://github.com/wilmoore/php-version/archive/0.10.4.tar.gz'
+  sha1      '57afc04e73475465fb28fd446e97478aecae0e9a'
   head      'https://github.com/wilmoore/php-version.git'
 
   def install
