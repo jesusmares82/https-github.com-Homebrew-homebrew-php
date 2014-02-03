@@ -8,9 +8,9 @@ class Php54Ioncubeloader < AbstractPhp54Extension
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz'
     sha1 '2b9b32901eb08f7ffa0702fde4f12104c2dcd12e'
   else
-    version '4.4.1'
+    version '4.5.2'
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz'
-    sha1 'd8033fbbcd0ad6f48103c1b5429ec21414e13e22'
+    sha1 'b502134dcde6aa6ec3f652397a00c86a1fd4c744'
   end
 
   def extension_type; "zend_extension"; end
