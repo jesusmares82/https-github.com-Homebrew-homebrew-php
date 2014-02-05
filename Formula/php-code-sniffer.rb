@@ -21,6 +21,10 @@ class PhpCodeSniffer < Formula
     'phpcs'
   end
 
+  def phpcbf_script_name
+    'phpcbf'
+  end
+
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
     (libexec+phpcs_script_name).write <<-EOS.undent
@@ -29,6 +33,17 @@ class PhpCodeSniffer < Formula
     EOS
     chmod 0755, libexec+phpcs_script_name
     bin.install_symlink libexec+phpcs_script_name
+
+    # The alpha release comes with "PHP Code Beautifier and Fixer".
+    # See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
+    if build.devel?
+      (libexec+phpcbf_script_name).write <<-EOS.undent
+        #!/bin/sh
+        /usr/bin/env php "#{prefix}/scripts/phpcbf" "$@"
+        EOS
+      chmod 0755, libexec+phpcbf_script_name
+      bin.install_symlink libexec+phpcbf_script_name
+    end
 
     # Create a place for other formulas to link their standards.
     phpcs_standards.mkpath
