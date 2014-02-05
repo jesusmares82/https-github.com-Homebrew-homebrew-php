@@ -1,5 +1,5 @@
 require 'formula'
-require File.join(File.dirname(__FILE__), 'abstract-php-versions')
+require File.join(File.dirname(__FILE__), 'abstract-php-version')
 
 def postgres_installed?
   `which pg_config`.length > 0
@@ -415,7 +415,7 @@ INFO
 
       If you are having issues with custom extension compiling, ensure that
       you are using the brew version, by placing #{HOMEBREW_PREFIX}/bin before /usr/sbin in your PATH:
-      
+
             PATH="#{HOMEBREW_PREFIX}/bin:$PATH"
 
       PHP#{php_version_path.to_s} Extensions will always be compiled against this PHP. Please install them
@@ -425,9 +425,9 @@ INFO
     s << <<-EOS.undent
       ✩✩✩✩ PHP CLI ✩✩✩✩
 
-      If you wish to swap the PHP you use on the command line, you should add the following to ~/.bashrc, 
+      If you wish to swap the PHP you use on the command line, you should add the following to ~/.bashrc,
       ~/.zshrc, ~/.profile or your shell's equivalent configuration file:
-      
+
             export PATH="$(brew --prefix josegonzalez/php/php#{php_version.to_s.gsub('.','')})/bin:$PATH"
     EOS
 

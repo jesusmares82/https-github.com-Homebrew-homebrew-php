@@ -2,8 +2,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php')
 
 class Php56 < AbstractPhp
   init
-  include Php56Defs
-  
+  include AbstractPhpVersion::Php56Defs
+
   url     PHP_SRC_TARBALL
   sha256  PHP_CHECKSUM[:sha256]
   version PHP_VERSION
