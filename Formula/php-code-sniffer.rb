@@ -33,6 +33,12 @@ class PhpCodeSniffer < Formula
     # Create a place for other formulas to link their standards.
     phpcs_standards.mkpath
     system bin+phpcs_script_name, '--config-set', 'installed_paths', phpcs_standards
+
+    # Fix shebang line of phpcs-svn-pre-commit script.
+    # See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Using-the-SVN-pre-commit-Hook
+    inreplace "#{prefix}/scripts/phpcs-svn-pre-commit" do |s|
+      s.gsub! /^#!@php_bin@/, "#!#{HOMEBREW_PREFIX}/bin/php"
+    end
   end
 
   def caveats; <<-EOS.undent
