@@ -455,7 +455,7 @@ INFO
     end
 
 
-    if build.include? 'with-fpm'
+    if build.include?('with-fpm')
       s << <<-EOS.undent
         ✩✩✩✩ FPM ✩✩✩✩
 
@@ -497,6 +497,9 @@ INFO
       system "#{sbin}/php-fpm -y #{config_path}/php-fpm.conf -t"
     end
   end
+
+  # Override Formula#plist_name
+  def plist_name; "homebrew-php.josegonzalez.php#{php_version.to_s.gsub('.','')}" end
 
   def php_fpm_startup_plist; <<-EOPLIST.undent
     <?xml version="1.0" encoding="UTF-8"?>
