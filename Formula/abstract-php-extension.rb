@@ -53,6 +53,15 @@ class AbstractPhpExtension < Formula
     end
   end
 
+  # Hack to allow uses to work, which requries version
+  def version
+    if defined?(active_spec) && defined?(active_spec.version)
+      active_spec.version
+    else
+      'abstract'
+    end
+  end
+
   def self.init
     depends_on 'autoconf' => :build
 

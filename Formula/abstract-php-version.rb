@@ -10,6 +10,15 @@ class AbstractPhpVersion < Formula
     end
   end
 
+  # Hack to allow uses to work, which requries version
+  def version
+    if defined?(active_spec) && defined?(active_spec.version)
+      active_spec.version
+    else
+      'abstract'
+    end
+  end
+
   module Php53Defs
     PHP_SRC_TARBALL = 'http://www.php.net/get/php-5.3.28.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
