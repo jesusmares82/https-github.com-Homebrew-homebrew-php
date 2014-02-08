@@ -2,11 +2,13 @@ require File.join(File.dirname(__FILE__), 'abstract-php')
 
 class Php55 < AbstractPhp
   init
-  url 'http://www.php.net/get/php-5.5.9.tar.bz2/from/this/mirror'
-  sha1 'd5dac90bc09f197b73b5bfcc3ca7dd6187f32e16'
-  version '5.5.9'
+  include AbstractPhpVersion::Php55Defs
 
-  head 'https://github.com/php/php-src.git', :branch => 'PHP-5.5'
+  url     PHP_SRC_TARBALL
+  sha256  PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
+
+  head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   # Leopard requires Hombrew OpenSSL to build correctly
   depends_on 'openssl' if MacOS.version == :leopard

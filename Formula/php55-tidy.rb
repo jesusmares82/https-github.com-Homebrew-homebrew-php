@@ -3,9 +3,9 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Tidy < AbstractPhp55Extension
   init
   homepage 'http://php.net/manual/en/book.tidy.php'
-  url 'http://www.php.net/get/php-5.5.9.tar.bz2/from/this/mirror'
-  sha1 'd5dac90bc09f197b73b5bfcc3ca7dd6187f32e16'
-  version '5.5.9'
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
 
   def install
     Dir.chdir "ext/tidy"
