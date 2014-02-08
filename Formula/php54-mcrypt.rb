@@ -3,9 +3,9 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Mcrypt < AbstractPhp54Extension
   init
   homepage 'http://php.net/manual/en/book.mcrypt.php'
-  url 'http://www.php.net/get/php-5.4.24.tar.bz2/from/this/mirror'
-  sha1 '0f6c16e393a837b1576e3a332ade6ae7c1f5305b'
-  version '5.4.24'
+  url 'http://www.php.net/get/php-5.4.25.tar.bz2/from/this/mirror'
+  sha1 'de42bf7c55f6b16e29b01ada24d9d5055e89a2a7'
+  version '5.4.25'
 
   depends_on 'mcrypt'
 
