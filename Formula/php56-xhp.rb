@@ -11,6 +11,14 @@ class Php56Xhp < AbstractPhp56Extension
   depends_on 'pcre'
   depends_on 're2c'
 
+  fails_with :clang do
+    build 500
+    cause <<-EOS.undent
+      Clang which does not support the standard rope implementation. Use gcc instead.
+      Source: https://github.com/facebook/xhp/commit/8aa2d9fa6bf3a114e113ba5c554181279545fb2f
+    EOS
+  end
+
   def install
     ENV.universal_binary if build.universal?
 
