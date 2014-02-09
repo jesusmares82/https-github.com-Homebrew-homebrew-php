@@ -70,6 +70,7 @@ class AbstractPhp < Formula
     option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'with-pgsql', 'Include PostgreSQL support'
     option 'with-mssql', 'Include MSSQL-DB support'
+    option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-apache)'
     option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
     option 'without-apache', 'Build without shared Apache 2.0 Handler module'
@@ -285,13 +286,21 @@ INFO
       args << "--with-pdo-mysql=mysqlnd"
     end
 
-    if build.include?('with-pgsql')
+    if build.include? 'with-pgsql'
       if File.directory?(Formula.factory('postgresql').opt_prefix.to_s)
         args << "--with-pgsql=#{Formula.factory('postgresql').opt_prefix}"
         args << "--with-pdo-pgsql=#{Formula.factory('postgresql').opt_prefix}"
       else
         args << "--with-pgsql=#{`pg_config --includedir`}"
         args << "--with-pdo-pgsql=#{`which pg_config`}"
+      end
+    end
+
+    if build.include? 'with-pdo-oci'
+      if ENV.has_key?('ORACLE_HOME')
+        args << "--with-pdo-oci=#{ENV['ORACLE_HOME']}"
+      else
+        raise "Environmental variable ORACLE_HOME must be set to use --with-pdo-oci option."
       end
     end
 
