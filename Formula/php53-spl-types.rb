@@ -17,4 +17,8 @@ class Php53SplTypes < AbstractPhp53Extension
     prefix.install "modules/spl_types.so"
     write_config_file unless build.include? "without-config-file"
   end
+
+  def extension
+    'spl_types'
+  end
 end
