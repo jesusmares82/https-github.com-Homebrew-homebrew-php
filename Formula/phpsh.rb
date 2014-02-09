@@ -9,16 +9,10 @@ class Phpsh < Formula
   depends_on :python
 
   def install
-    python do
-      system python, "setup.py", "install", "--prefix=#{prefix}"
-    end
+    system "python", "setup.py", "install", "--prefix=#{prefix}"
 
     man1.install ['src/doc/phpsh.1']
     rm_rf("#{prefix}/man")
     bin.install ['src/phpsh']
-  end
-
-  def caveats
-    python.standard_caveats if python
   end
 end
