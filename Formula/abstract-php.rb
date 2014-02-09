@@ -62,7 +62,6 @@ class AbstractPhp < Formula
       raise "Cannot specify more than one executable to build."
     end
 
-    option '32-bit', "Build 32-bit only."
     option 'homebrew-apxs', 'Build against apxs in Homebrew prefix'
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
     option 'with-debug', 'Compile with debugging symbols'
