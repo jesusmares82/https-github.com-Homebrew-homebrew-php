@@ -45,9 +45,23 @@ class PhpCodeSniffer < Formula
       bin.install_symlink libexec+phpcbf_script_name
     end
 
+    # Make sure the config file is preserved on upgrades. We do that
+    # be substituting @data_dir@ with #{etc} and making sure the
+    # folder #{etc}/PHP_CodeSniffer exists.
+    (etc+'PHP_CodeSniffer').mkpath
+    inreplace "#{prefix}/CodeSniffer.php" do |s|
+      s.gsub! /@data_dir@/, "#{etc}"
+    end
+
     # Create a place for other formulas to link their standards.
     phpcs_standards.mkpath
-    system bin+phpcs_script_name, '--config-set', 'installed_paths', phpcs_standards
+
+    # Configure installed_paths, but don't overwrite it if already set
+    # (preserve config).
+    `#{bin+phpcs_script_name} --config-show | grep -q installed_paths`
+    unless $?.to_i == 0
+      system bin+phpcs_script_name, '--config-set', 'installed_paths', phpcs_standards
+    end
 
     # Fix shebang line of phpcs-svn-pre-commit script.
     # See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Using-the-SVN-pre-commit-Hook
