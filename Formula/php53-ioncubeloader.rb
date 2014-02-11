@@ -4,13 +4,13 @@ class Php53Ioncubeloader < AbstractPhp53Extension
   init
   homepage 'http://www.ioncube.com/loaders.php'
   if Hardware.is_64_bit?
-    version '4.5.2'
+    version '4.5.3'
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz'
-    sha1 '2b9b32901eb08f7ffa0702fde4f12104c2dcd12e'
+    sha1 '8db9d893b8be25519fc5cbebe76895fdfb510992'
   else
-    version '4.5.2'
+    version '4.5.3'
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz'
-    sha1 'b502134dcde6aa6ec3f652397a00c86a1fd4c744'
+    sha1 'e42a3fa4869449771c245891ed5f2fab2ed44e64'
   end
 
   def extension_type; "zend_extension"; end
