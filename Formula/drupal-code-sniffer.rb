@@ -7,10 +7,12 @@ class DrupalCodeSniffer < Formula
   head 'http://git.drupal.org/project/coder.git', :branch => '7.x-2.x'
   sha1 '61a154980d049de98d95c6efc83f491593a0e71d'
 
+  option 'without-drush-command', "Don't install drush command"
+
   depends_on 'php-code-sniffer'
 
   def phpcs_standards
-    etc+'php-code-sniffer'+'Standards'
+    Formula.factory('php-code-sniffer').phpcs_standards
   end
 
   def drupal_standard_name
@@ -33,36 +35,36 @@ class DrupalCodeSniffer < Formula
 
     # Link Drupal Coder Sniffer into /usr/local/share/drush/commands
     # for integration with Drush.
-    drush_commands.mkpath
-    if File.symlink? drush_commands+name
-      File.delete drush_commands+name
+    unless build.without? 'drush-command'
+      drush_commands.mkpath
+      if File.symlink? drush_commands+name
+        File.delete drush_commands+name
+      end
+      drush_commands.install_symlink prefix+'coder_sniffer' => name
     end
-    drush_commands.install_symlink prefix+'coder_sniffer' => name
   end
 
-  def caveats; <<-EOS.undent
-    Drupal Coder Sniffer is linked to "#{phpcs_standards+drupal_standard_name}"
-    and to "#{drush_commands+name}".
+  def caveats;
+    s = ""
+    s += <<-EOS.undent
+    Drupal Coder Sniffer is linked to "#{phpcs_standards+drupal_standard_name}".
 
     You can verify whether PHP Code Sniffer has detected the standard by running:
 
-      phpcs -i
-
-    To have Drush discover the standard either add the following to drushrc.php:
-
-      $options['include'][] = '#{drush_commands}';
-
-    Or add this to, i.e., your ~/.profile:
-
-      export SHARE_PREFIX="$(brew --prefix)"
-
-    If https://github.com/Homebrew/homebrew/pull/25245 is accepted Drush will
-    recognize it automatically.
-
-    You can verify whether Drush has discovered the standard by running:
-
-      drush drupalcs --help
+      #{Formula.factory('php-code-sniffer').phpcs_script_name} -i
 
     EOS
+
+    if !build.without? 'drush-command'
+          s += <<-EOS.undent
+          Drupal Coder Sniffer is installed as a drush command in "#{drush_commands+name}".
+
+          You can verify whether Drush has discovered the standard by running:
+
+            drush drupalcs --help
+        EOS
+    end
+
+    return s
   end
 end
