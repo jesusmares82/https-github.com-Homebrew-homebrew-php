@@ -53,12 +53,14 @@ class AbstractPhpExtension < Formula
     end
   end
 
-  # Hack to allow uses to work, which requries version
-  def version
-    if defined?(active_spec) && defined?(active_spec.version)
-      active_spec.version
-    else
-      'abstract'
+  # Hack to allow 'brew uses' to work, which requires deps, version, and requirements
+  %w(deps requirements version).each do |method|
+    define_method(method) do
+      if defined?(active_spec) && active_spec.respond_to?(method)
+        active_spec.send(method)
+      else
+        method === 'version' ? 'abstract' : []
+      end
     end
   end
 
