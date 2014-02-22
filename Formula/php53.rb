@@ -10,7 +10,19 @@ class Php53 < AbstractPhp
 
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
+  # build dependancy needed to fix issue #962
+  depends_on 'autoconf' => :build
+  depends_on 're2c' => :build
+  depends_on 'flex' => :build
+  depends_on 'bison27' => :build
+
   depends_on 'libevent' if build.include? 'with-fpm'
+
+  def install
+    # files need to be regenerated to fix issue #962
+    system "rm Zend/zend_{language,ini}_parser.[ch]"
+    super()
+  end
 
   def install_args
     super + [
@@ -68,3 +80,67 @@ index 4bf50ad..b0c9747 100644
    ac_cv_exeext=
    ;;
  esac
+diff --git a/Zend/zend_language_parser.y b/Zend/zend_language_parser.y
+index d24fc9c..4314efb 100644
+--- a/Zend/zend_language_parser.y
++++ b/Zend/zend_language_parser.y
+@@ -38,10 +38,6 @@
+
+ #define YYERROR_VERBOSE
+ #define YYSTYPE znode
+-#ifdef ZTS
+-# define YYPARSE_PARAM tsrm_ls
+-# define YYLEX_PARAM tsrm_ls
+-#endif
+
+
+ %}
+@@ -49,6 +45,13 @@
+ %pure_parser
+ %expect 2
+
++%code requires {
++#ifdef ZTS
++# define YYPARSE_PARAM tsrm_ls
++# define YYLEX_PARAM tsrm_ls
++#endif
++}
++
+ %left T_INCLUDE T_INCLUDE_ONCE T_EVAL T_REQUIRE T_REQUIRE_ONCE
+ %left ','
+ %left T_LOGICAL_OR
+diff --git a/configure b/configure
+--- a/configure
++++ b/configure
+@@ -3019,12 +3019,7 @@
+       if test -n "$bison_version_vars"; then
+         set $bison_version_vars
+         bison_version="${1}.${2}"
+-        for bison_check_version in $bison_version_list; do
+-          if test "$bison_version" = "$bison_check_version"; then
+-            php_cv_bison_version="$bison_check_version (ok)"
+-            break
+-          fi
+-        done
++        php_cv_bison_version="$bison_version (ok)"
+       fi
+     
+ fi
+diff --git a/Zend/acinclude.m4 b/Zend/acinclude.m4
+index 77430ab..5aeed94 100644
+--- a/Zend/acinclude.m4
++++ b/Zend/acinclude.m4
+@@ -17,12 +17,7 @@ AC_DEFUN([LIBZEND_BISON_CHECK],[
+       if test -n "$bison_version_vars"; then
+         set $bison_version_vars
+         bison_version="${1}.${2}"
+-        for bison_check_version in $bison_version_list; do
+-          if test "$bison_version" = "$bison_check_version"; then
+-            php_cv_bison_version="$bison_check_version (ok)"
+-            break
+-          fi
+-        done
++        php_cv_bison_version="$bison_version (ok)"
+       fi
+     ])
+   fi
