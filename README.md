@@ -85,6 +85,7 @@ this repository.
 * [Homebrew](https://github.com/mxcl/homebrew)
 * Snow Leopard, Lion, Mountain Lion. Untested everywhere else.
 * The homebrew `dupes` tap - `brew tap homebrew/dupes`
+* The homebrew `versions` tap - `brew tap homebrew/versions`
 
 ## Installation
 
@@ -93,6 +94,10 @@ _[Brew Tap]_
 Setup the `homebrew/dupes` tap which has dependencies we need:
 
     brew tap homebrew/dupes
+
+Setup the `homebrew/versions` tap which has dependencies we need:
+
+    brew tap homebrew/versions
 
 Then, run the following in your commandline:
 
@@ -103,6 +108,10 @@ Then, run the following in your commandline:
 Tap the `homebrew/dupes` repository into your brew installation:
 
     brew tap homebrew/dupes
+
+Tap the `homebrew/versions` repository into your brew installation:
+
+    brew tap homebrew/versions
 
 Tap the repository into your brew installation:
 
