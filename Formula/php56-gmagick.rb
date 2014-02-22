@@ -13,9 +13,14 @@ class Php56Gmagick < AbstractPhp56Extension
 
     ENV.universal_binary if build.universal?
 
+    args = []
+    args << "--prefix=#{prefix}"
+    args << phpconfig
+    args << "--with-gmagick=#{Formula.factory('graphicsmagick').opt_prefix}"
+
     safe_phpize
-    system "./configure", "--prefix=#{prefix}",
-                          phpconfig
+    system "./configure", *args
+    
     system "make"
     prefix.install "modules/gmagick.so"
     write_config_file unless build.include? "without-config-file"
