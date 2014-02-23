@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Opcache < AbstractPhp54Extension
   init
   homepage 'https://github.com/zend-dev/ZendOptimizerPlus'
-  url 'https://github.com/zend-dev/ZendOptimizerPlus/archive/v7.0.2.tar.gz'
-  sha1 'f35625d237f8dd2f6a01e50e3062657fce9b8be4'
+  url 'https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.3.tar.gz'
+  sha1 'e03bd1e0286cef4fadf725d4ebf5cc69bbd07bc6'
   head 'https://github.com/zendtech/ZendOptimizerPlus.git'
 
   depends_on 'pcre'
