@@ -6,7 +6,6 @@ class Envoy < Formula
   homepage 'https://github.com/laravel/envoy'
   url 'https://github.com/laravel/envoy/raw/1.0.5/envoy.phar'
   sha1 '0e9a3097fdbffb5037d7746e5071d2f772948b3e'
-  version '1.0.5'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement

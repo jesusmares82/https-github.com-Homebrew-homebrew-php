@@ -20,7 +20,7 @@ class Php54Gmagick < AbstractPhp54Extension
 
     safe_phpize
     system "./configure", *args
-    
+
     system "make"
     prefix.install "modules/gmagick.so"
     write_config_file unless build.include? "without-config-file"
