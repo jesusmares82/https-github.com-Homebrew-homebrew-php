@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Thrift < AbstractPhp54Extension
   init
   homepage 'http://thrift.apache.org/'
-  url 'https://github.com/apache/thrift/archive/thrift-0.9.0.tar.gz'
-  sha1 'b30577fb631efe74333114a339a8b62014fe5eec'
+  url 'https://github.com/apache/thrift/archive/0.9.1.tar.gz'
+  sha1 '9009293ede029289c9a64365faff31ac20597758'
 
   def module_path
     prefix / "thrift_protocol.so"
