@@ -15,14 +15,14 @@ class Php54PdoDblib < AbstractPhp54Extension
 
   def install
 
-    touch "#{Formula.factory('freetds').opt_prefix}/include/tds.h"
-    touch "#{Formula.factory('freetds').opt_prefix}/lib/libtds.a"
+    touch "#{Formula['freetds'].opt_prefix}/include/tds.h"
+    touch "#{Formula['freetds'].opt_prefix}/lib/libtds.a"
     Dir.chdir "ext/pdo_dblib" unless build.head?
 
     ENV.universal_binary if build.universal?
 
     safe_phpize
-    system "./configure", "--prefix=#{prefix}", "--with-pdo-dblib=#{Formula.factory('freetds').opt_prefix}", phpconfig
+    system "./configure", "--prefix=#{prefix}", "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}", phpconfig
     system "make"
     prefix.install "modules/pdo_dblib.so"
     write_config_file unless build.include? "without-config-file"

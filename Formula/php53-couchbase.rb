@@ -19,14 +19,14 @@ class Php53Couchbase < AbstractPhp53Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-libcouchbase-dir=#{Formula.factory('libcouchbase').opt_prefix}"
+    args << "--with-libcouchbase-dir=#{Formula['libcouchbase'].opt_prefix}"
     args << "--enable-couchbase-igbinary" if build.include? 'with-igbinary'
 
     safe_phpize
 
     if build.include? 'with-igbinary'
       system "mkdir -p ext/igbinary"
-      cp "#{Formula.factory('php53-igbinary').opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
+      cp "#{Formula['php53-igbinary'].opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
     end
 
     system "./configure", *args

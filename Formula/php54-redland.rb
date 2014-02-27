@@ -17,9 +17,9 @@ class Php54Redland < AbstractPhp54Extension
   end
 
   def install
-    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula.factory('redland')).lib}/pkgconfig", ':'
-    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula.factory('raptor')).lib}/pkgconfig", ':'
-    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula.factory('rasqal')).lib}/pkgconfig", ':'
+    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula['redland']).lib}/pkgconfig", ':'
+    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula['raptor']).lib}/pkgconfig", ':'
+    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula['rasqal']).lib}/pkgconfig", ':'
 
     args = %W[
       --disable-debug

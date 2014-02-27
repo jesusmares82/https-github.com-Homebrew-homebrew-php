@@ -24,16 +24,16 @@ class Php56Http < AbstractPhp56Extension
 
     # link in the raphf extension header
     system "mkdir -p ext/raphf"
-    cp "#{Formula.factory('php56-raphf').opt_prefix}/include/php_raphf.h", "ext/raphf/php_raphf.h"
+    cp "#{Formula['php56-raphf'].opt_prefix}/include/php_raphf.h", "ext/raphf/php_raphf.h"
 
     # link in the propro extension header
     system "mkdir -p ext/propro"
-    cp "#{Formula.factory('php56-propro').opt_prefix}/include/php_propro.h", "ext/propro/php_propro.h"
+    cp "#{Formula['php56-propro'].opt_prefix}/include/php_propro.h", "ext/propro/php_propro.h"
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-libevent-dir=#{Formula.factory('libevent').opt_prefix}",
-                          "--with-curl-dir=#{Formula.factory('curl').opt_prefix}"
+                          "--with-libevent-dir=#{Formula['libevent'].opt_prefix}",
+                          "--with-curl-dir=#{Formula['curl'].opt_prefix}"
     system "make"
     prefix.install "modules/http.so"
     write_config_file unless build.include? "without-config-file"

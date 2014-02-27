@@ -22,7 +22,7 @@ class Php54Zookeeper < AbstractPhp54Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-libzookeeper-dir=#{Formula.factory('zookeeper').opt_prefix}"
+    args << "--with-libzookeeper-dir=#{Formula['zookeeper'].opt_prefix}"
     args << "--disable-zookeeper-session" if build.include? 'disable-session'
 
     safe_phpize

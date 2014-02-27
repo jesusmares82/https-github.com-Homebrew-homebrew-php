@@ -3,7 +3,7 @@ require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new
 
 class Phppgadmin < Formula
   homepage 'http://phppgadmin.sourceforge.net/'
-  url 'http://downloads.sourceforge.net/project/phppgadmin/phpPgAdmin%20%5Bstable%5D/phpPgAdmin-5.1/phpPgAdmin-5.1.tar.gz'
+  url 'https://downloads.sourceforge.net/project/phppgadmin/phpPgAdmin%20%5Bstable%5D/phpPgAdmin-5.1/phpPgAdmin-5.1.tar.gz'
   sha1 'ef90fc9942c67ab95f063cacc43911a40d34fbc1'
 
   depends_on PhpMetaRequirement

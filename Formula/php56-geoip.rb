@@ -17,7 +17,7 @@ class Php56Geoip < AbstractPhp56Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-geoip=#{Formula.factory('geoip').opt_prefix}"
+                          "--with-geoip=#{Formula['geoip'].opt_prefix}"
     system "make"
     prefix.install "modules/geoip.so"
     write_config_file unless build.include? "without-config-file"

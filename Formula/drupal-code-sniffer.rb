@@ -12,7 +12,7 @@ class DrupalCodeSniffer < Formula
   depends_on 'php-code-sniffer'
 
   def phpcs_standards
-    Formula.factory('php-code-sniffer').phpcs_standards
+    Formula['php-code-sniffer'].phpcs_standards
   end
 
   def drupal_standard_name
@@ -51,7 +51,7 @@ class DrupalCodeSniffer < Formula
 
     You can verify whether PHP Code Sniffer has detected the standard by running:
 
-      #{Formula.factory('php-code-sniffer').phpcs_script_name} -i
+      #{Formula['php-code-sniffer'].phpcs_script_name} -i
 
     EOS
 

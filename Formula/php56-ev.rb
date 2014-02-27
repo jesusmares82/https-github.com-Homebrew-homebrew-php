@@ -17,7 +17,7 @@ class Php56Ev < AbstractPhp56Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-libev=#{Formula.factory('libev').opt_prefix}"
+                          "--with-libev=#{Formula['libev'].opt_prefix}"
     system "make"
     prefix.install "modules/ev.so"
     write_config_file unless build.include? "without-config-file"

@@ -17,7 +17,7 @@ class Php53Gearman < AbstractPhp53Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-gearman=#{Formula.factory('gearman').opt_prefix}"
+                          "--with-gearman=#{Formula['gearman'].opt_prefix}"
     system "make"
     prefix.install "modules/gearman.so"
     write_config_file unless build.include? "without-config-file"

@@ -192,33 +192,33 @@ INFO
       "--enable-mbregex",
       "--enable-bcmath",
       "--enable-calendar",
-      "--with-zlib=#{Formula.factory('zlib').opt_prefix}",
+      "--with-zlib=#{Formula['zlib'].opt_prefix}",
       "--with-ldap",
       "--with-ldap-sasl=/usr",
       "--with-xmlrpc",
       "--with-kerberos=/usr",
       "--with-gd",
       "--enable-gd-native-ttf",
-      "--with-freetype-dir=#{Formula.factory('freetype').opt_prefix}",
-      "--with-jpeg-dir=#{Formula.factory('jpeg').opt_prefix}",
-      "--with-png-dir=#{Formula.factory('libpng').opt_prefix}",
-      "--with-gettext=#{Formula.factory('gettext').opt_prefix}",
+      "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
+      "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
+      "--with-png-dir=#{Formula['libpng'].opt_prefix}",
+      "--with-gettext=#{Formula['gettext'].opt_prefix}",
       "--with-snmp=/usr",
       "--with-libedit",
-      "--with-unixODBC=#{Formula.factory('unixodbc').opt_prefix}",
-      "--with-pdo-odbc=unixODBC,#{Formula.factory('unixodbc').opt_prefix}",
+      "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
+      "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
       "--mandir=#{man}",
       "--with-mhash",
     ]
 
     if build.include?('with-homebrew-curl') || MacOS.version < :lion
-      args << "--with-curl=#{Formula.factory('curl').opt_prefix}"
+      args << "--with-curl=#{Formula['curl'].opt_prefix}"
     else
       args << "--with-curl"
     end
 
     unless MacOS.version >= :lion
-      args << "--with-libxml-dir=#{Formula.factory('libxml2').opt_prefix}"
+      args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
     end
 
     unless build.include? 'without-bz2'
@@ -232,13 +232,13 @@ INFO
     end
 
     if build.include? 'with-homebrew-openssl'
-      args << "--with-openssl=" + Formula.factory('openssl').opt_prefix.to_s
+      args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
     else
       args << "--with-openssl=/usr"
     end
 
     if build.include? 'with-homebrew-libxslt'
-      args << "--with-xsl=" + Formula.factory('libxslt').opt_prefix.to_s
+      args << "--with-xsl=" + Formula['libxslt'].opt_prefix.to_s
     else
       args << "--with-xsl=/usr"
     end
@@ -263,23 +263,23 @@ INFO
     end
 
     if build.include? 'with-gmp'
-      args << "--with-gmp=#{Formula.factory('gmp').opt_prefix}"
+      args << "--with-gmp=#{Formula['gmp'].opt_prefix}"
     end
 
     if build.include? 'with-imap'
-      args << "--with-imap=#{Formula.factory('imap-uw').opt_prefix}"
+      args << "--with-imap=#{Formula['imap-uw'].opt_prefix}"
       args << "--with-imap-ssl=/usr"
     end
 
     if build.include? 'with-intl'
       opoo "INTL is broken as of mxcl/homebrew#03ed757c, please install php#{php_version_path.to_s}-intl" unless build_intl?
       args << "--enable-intl" if build_intl?
-      args << "--with-icu-dir=#{Formula.factory('icu4c').opt_prefix}" if build_intl?
+      args << "--with-icu-dir=#{Formula['icu4c'].opt_prefix}" if build_intl?
     end
 
     if build.include? 'with-mssql'
-      args << "--with-mssql=#{Formula.factory('freetds').opt_prefix}"
-      args << "--with-pdo-dblib=#{Formula.factory('freetds').opt_prefix}"
+      args << "--with-mssql=#{Formula['freetds'].opt_prefix}"
+      args << "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}"
     end
 
     if build.include? 'with-libmysql'
@@ -295,9 +295,9 @@ INFO
     end
 
     if build.include? 'with-pgsql'
-      if File.directory?(Formula.factory('postgresql').opt_prefix.to_s)
-        args << "--with-pgsql=#{Formula.factory('postgresql').opt_prefix}"
-        args << "--with-pdo-pgsql=#{Formula.factory('postgresql').opt_prefix}"
+      if File.directory?(Formula['postgresql'].opt_prefix.to_s)
+        args << "--with-pgsql=#{Formula['postgresql'].opt_prefix}"
+        args << "--with-pdo-pgsql=#{Formula['postgresql'].opt_prefix}"
       else
         args << "--with-pgsql=#{`pg_config --includedir`}"
         args << "--with-pdo-pgsql=#{`which pg_config`}"
@@ -313,7 +313,7 @@ INFO
     end
 
     if build.include? 'with-tidy'
-      args << "--with-tidy=#{Formula.factory('tidy').opt_prefix}"
+      args << "--with-tidy=#{Formula['tidy'].opt_prefix}"
     end
 
     if build.include? 'without-pear'

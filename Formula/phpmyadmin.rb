@@ -11,9 +11,10 @@ class Phpmyadmin < Formula
   end
 
   unless build.include? 'without-mcrypt'
-    depends_on "php53-mcrypt" if Formula.factory("php53").linked_keg.exist?
-    depends_on "php54-mcrypt" if Formula.factory("php54").linked_keg.exist?
-    depends_on "php55-mcrypt" if Formula.factory("php55").linked_keg.exist?
+    depends_on "php53-mcrypt" if Formula['php53'].linked_keg.exist?
+    depends_on "php54-mcrypt" if Formula['php54'].linked_keg.exist?
+    depends_on "php55-mcrypt" if Formula['php55'].linked_keg.exist?
+    depends_on "php56-mcrypt" if Formula['php56'].linked_keg.exist?
   end
 
   unless MacOS.prefer_64_bit?

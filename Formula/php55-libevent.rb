@@ -17,7 +17,7 @@ class Php55Libevent < AbstractPhp55Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-libevent=#{Formula.factory('libevent').opt_prefix}"
+                          "--with-libevent=#{Formula['libevent'].opt_prefix}"
     system "make"
     prefix.install "modules/libevent.so"
     write_config_file unless build.include? "without-config-file"

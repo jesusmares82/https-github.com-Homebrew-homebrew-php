@@ -85,8 +85,8 @@ class AbstractPhpExtension < Formula
 
   def safe_phpize
     cmd = ''
-    cmd << "PHP_AUTOCONF=\"#{Formula.factory('autoconf').opt_prefix}/bin/autoconf\" "
-    cmd << "PHP_AUTOHEADER=\"#{Formula.factory('autoconf').opt_prefix}/bin/autoheader\" "
+    cmd << "PHP_AUTOCONF=\"#{Formula['autoconf'].opt_prefix}/bin/autoconf\" "
+    cmd << "PHP_AUTOHEADER=\"#{Formula['autoconf'].opt_prefix}/bin/autoheader\" "
     cmd << phpize
 
     system cmd
@@ -96,7 +96,7 @@ class AbstractPhpExtension < Formula
     if build.include? 'without-homebrew-php'
       "phpize"
     else
-      "#{(Formula.factory php_formula).bin}/phpize"
+      "#{(Formula[php_formula]).bin}/phpize"
     end
   end
 
@@ -104,7 +104,7 @@ class AbstractPhpExtension < Formula
     if build.include? 'without-homebrew-php'
       "php.ini presented by \"php --ini\""
     else
-      "#{(Formula.factory php_formula).config_path}/php.ini"
+      "#{(Formula[php_formula]).config_path}/php.ini"
     end
   end
 
@@ -112,7 +112,7 @@ class AbstractPhpExtension < Formula
     if build.include? 'without-homebrew-php'
       ""
     else
-      "--with-php-config=#{(Formula.factory php_formula).bin}/php-config"
+      "--with-php-config=#{(Formula[php_formula]).bin}/php-config"
     end
   end
 

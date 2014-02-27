@@ -18,7 +18,7 @@ class Php56Pspell < AbstractPhp56Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--disable-debug",
-                          "--with-pspell=#{Formula.factory('aspell').opt_prefix}"
+                          "--with-pspell=#{Formula['aspell'].opt_prefix}"
     system "make"
     prefix.install "modules/pspell.so"
     write_config_file unless build.include? "without-config-file"

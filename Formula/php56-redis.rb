@@ -21,7 +21,7 @@ class Php56Redis < AbstractPhp56Extension
 
     if build.include? 'with-igbinary'
       system "mkdir -p ext/igbinary"
-      cp "#{Formula.factory('php56-igbinary').opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
+      cp "#{Formula['php56-igbinary'].opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
     end
 
     system "./configure", "--prefix=#{prefix}",

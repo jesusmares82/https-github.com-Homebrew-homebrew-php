@@ -4,7 +4,6 @@ class Php52 < AbstractPhp
   init
   url 'http://museum.php.net/php5/php-5.2.17.tar.bz2'
   sha1 'd68f3b09f766990d815a3c4c63c157db8dab8095'
-  version '5.2.17'
 
   head 'https://github.com/php/php-src.git', :branch => 'PHP-5.2'
 
@@ -44,15 +43,15 @@ class Php52 < AbstractPhp
       defaults.delete '--with-mysql=mysqlnd'
       defaults.delete '--with-pdo-mysql=mysqlnd'
 
-      defaults << "--with-mysqli=#{Formula.factory('mysql').opt_prefix}/bin/mysql_config"
-      defaults << "--with-mysql=#{Formula.factory('mysql').opt_prefix}/bin/mysql_config"
-      defaults << "--with-pdo-mysql=#{Formula.factory('mysql').opt_prefix}/bin/mysql_config"
+      defaults << "--with-mysqli=#{Formula['mysql'].opt_prefix}/bin/mysql_config"
+      defaults << "--with-mysql=#{Formula['mysql'].opt_prefix}/bin/mysql_config"
+      defaults << "--with-pdo-mysql=#{Formula['mysql'].opt_prefix}/bin/mysql_config"
     end
 
     defaults + [
       '--enable-zend-multibyte',
       '--enable-sqlite-utf8',
-      "--with-mhash=#{Formula.factory('mhash').opt_prefix}"
+      "--with-mhash=#{Formula['mhash'].opt_prefix}"
     ]
   end
 

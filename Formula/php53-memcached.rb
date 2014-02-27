@@ -29,7 +29,7 @@ class Php53Memcached < AbstractPhp53Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-libmemcached-dir=#{Formula.factory('libmemcached').opt_prefix}"
+    args << "--with-libmemcached-dir=#{Formula['libmemcached'].opt_prefix}"
     args << "--enable-memcached-igbinary" if build.include? 'with-igbinary'
     args << "--enable-memcached-sasl" if build.include? 'with-sasl'
 
@@ -37,7 +37,7 @@ class Php53Memcached < AbstractPhp53Extension
 
     if build.include? 'with-igbinary'
       system "mkdir -p ext/igbinary"
-      cp "#{Formula.factory('php53-igbinary').opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
+      cp "#{Formula['php53-igbinary'].opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
     end
 
     system "./configure", *args

@@ -17,7 +17,7 @@ class Php56Leveldb < AbstractPhp56Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-leveldb=#{Formula.factory('leveldb').opt_prefix}"
+    args << "--with-leveldb=#{Formula['leveldb'].opt_prefix}"
 
     safe_phpize
     system "./configure", *args

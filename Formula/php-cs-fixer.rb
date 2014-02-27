@@ -14,9 +14,10 @@ class PhpCsFixer < Formula
     depends_on PharRequirement
     depends_on PharBuildingRequirement
     depends_on "composer"
-    depends_on "php53" if Formula.factory("php53").linked_keg.exist?
-    depends_on "php54" if Formula.factory("php54").linked_keg.exist?
-    depends_on "php55" if Formula.factory("php55").linked_keg.exist?
+    depends_on "php53" if Formula['php53'].linked_keg.exist?
+    depends_on "php54" if Formula['php54'].linked_keg.exist?
+    depends_on "php55" if Formula['php55'].linked_keg.exist?
+    depends_on "php56" if Formula['php56'].linked_keg.exist?
  end
 
   init
@@ -27,7 +28,7 @@ class PhpCsFixer < Formula
     cmd = [
       "mkdir -p src",
       "rsync -a --exclude 'src' . src/",
-      "cd src && /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off  #{Formula.factory('composer').libexec}/composer.phar install",
+      "cd src && /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off  #{Formula['composer'].libexec}/composer.phar install",
       "cd src && sed -i '' '1d' php-cs-fixer",
       "php -f genphar.php",
     ].each { |c| `#{c}` }

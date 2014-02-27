@@ -16,7 +16,7 @@ class Php53Gmagick < AbstractPhp53Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-gmagick=#{Formula.factory('graphicsmagick').opt_prefix}"
+    args << "--with-gmagick=#{Formula['graphicsmagick'].opt_prefix}"
 
     safe_phpize
     system "./configure", *args
