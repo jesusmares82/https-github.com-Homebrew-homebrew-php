@@ -40,7 +40,7 @@ class AbstractPhp < Formula
     # So PHP extensions don't report missing symbols
     skip_clean ['bin', 'sbin']
 
-    if build.head?
+    head do
       depends_on 'autoconf' => :build
       depends_on 're2c' => :build
       depends_on 'flex' => :build
