@@ -18,6 +18,10 @@ class Php53 < AbstractPhp
 
   depends_on 'libevent' if build.include? 'with-fpm'
 
+  if build.include? 'with-phpdbg'
+    raise "phpdbg is not supported for this version of PHP"
+  end
+
   def install
     # files need to be regenerated to fix issue #962
     system "rm Zend/zend_{language,ini}_parser.[ch]"

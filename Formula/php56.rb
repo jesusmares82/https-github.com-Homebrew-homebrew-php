@@ -16,13 +16,11 @@ class Php56 < AbstractPhp
   def install_args
     args = super
     args << "--with-homebrew-openssl" if MacOS.version == :leopard
-    args + [
-      "--enable-zend-signals",
-      "--enable-dtrace",
-      "--enable-opcache",
-      ## Causing issues on Mavericks (10.9.1)
-      "--disable-phpdbg"
-    ]
+    args << "--enable-zend-signals"
+    args << "--enable-dtrace" unless build.include? 'with-phpdbg'
+    # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
+    args << "--disable-phpdbg" unless build.include? 'with-phpdbg'
+    args << "--enable-opcache"
   end
 
   def php_version

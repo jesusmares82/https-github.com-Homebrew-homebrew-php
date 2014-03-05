@@ -10,6 +10,10 @@ class Php52 < AbstractPhp
   depends_on 'mhash'
   depends_on 'libevent' if build.include? 'with-fpm'
 
+  if build.include? 'with-phpdbg'
+    raise "phpdbg is not supported for this version of PHP"
+  end
+
   def php_version
     5.2
   end

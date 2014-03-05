@@ -81,6 +81,7 @@ class AbstractPhp < Formula
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-apache)'
     option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
+    option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
     option 'without-apache', 'Build without shared Apache 2.0 Handler module'
     option 'with-intl', 'Include internationalization support'
     option 'with-imap', 'Include IMAP extension'
@@ -328,6 +329,10 @@ INFO
       args << "--enable-pcntl"
     end
 
+    if build.include? 'with-phpdbg'
+      args << "--enable-phpdbg"
+    end
+
     args
   end
 
@@ -348,7 +353,6 @@ INFO
 
   def _install
     args = install_args
-
     system "./buildconf" if build.head?
     system "./configure", *args
 
