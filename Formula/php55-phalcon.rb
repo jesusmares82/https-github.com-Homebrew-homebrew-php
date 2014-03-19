@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Phalcon < AbstractPhp55Extension
   init
   homepage 'http://phalconphp.com/'
-  url 'https://github.com/phalcon/cphalcon/archive/v1.2.6.tar.gz'
-  sha1 'e21b611103d41b163456a4ae02d04053d3f42dcb'
+  url 'https://github.com/phalcon/cphalcon/archive/1.3.0.tar.gz'
+  sha1 '122517118769a6d41bf5f467477c25c495eda31f'
   head 'https://github.com/phalcon/cphalcon.git'
 
   depends_on 'pcre'
