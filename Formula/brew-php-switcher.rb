@@ -1,10 +1,11 @@
 require "formula"
 
 class BrewPhpSwitcher < Formula
-  homepage "https://github.com/philcook/php-switcher"
-  url 'https://github.com/philcook/php-switcher/archive/f4f6b22916ee87464464464d7233dd8bc04e940c.tar.gz'
-  sha1 'a048eb62eca90a8ecb34f88bbb0df87426203f57'
-  version "f4f6b22"
+  homepage "https://github.com/philcook/brew-php-switcher"
+  url 'https://github.com/philcook/brew-php-switcher/archive/v1.3.tar.gz'
+  sha1 'c72670804305fc2f389c579a8355b07f4ebe5b23'
+  head 'https://github.com/philcook/brew-php-switcher.git'
+  version "1.3"
 
   def install
     bin.install "phpswitch.sh"
@@ -12,5 +13,13 @@ class BrewPhpSwitcher < Formula
     sh.write("#!/usr/bin/env sh\n\nsh #{bin}/phpswitch.sh $*")
     chmod 0755, sh
     bin.install_symlink sh
+  end
+  
+  def caveats; <<-EOS.undent
+    To run brew php switcher do the following:
+      "brew-php-switcher 53".
+
+    You can select php version 53,54,55 or 56.
+    EOS
   end
 end
