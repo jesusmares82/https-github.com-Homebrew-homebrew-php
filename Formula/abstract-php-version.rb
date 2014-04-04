@@ -50,9 +50,9 @@ class AbstractPhpVersion < Formula
     PHP_BRANCH      = 'PHP-5.4'
 
     PHP_CHECKSUM    = {
-                        :md5    => '3080690bbb14d798a511e325a81a6f32',
-                        :sha1   => '93925d3cee16f3638937ded0226c9c04fb54cd69',
-                        :sha256 => 'a70dc68eeed902f8378fded473d53e4e37be645b941554dcf4237559cbda2bb3',
+                        :md5    => '1c6e99187d25023411b663ea09f145ee',
+                        :sha1   => '798f2a803d81b386da62e1986ac0f743ecb6c3be',
+                        :sha256 => '09dcc44cded735e1cf1b1b9f2749d1a0fd90e03378b6a70364a662f4740e61e2',
                       }
   end
 
