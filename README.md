@@ -233,7 +233,7 @@ Please note that your formula installation may deviate significantly from the ab
 
 The ordering of formula attributes, such as the `homepage`, `url`, `sha1`, etc. should follow the above order for consistency. The `version` is only included when the URL does not include a version in the filename. `head` installations are not required.
 
-All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.28`, `5.4.26` and `5.5.10`.
+All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.28`, `5.4.26` and `5.5.11`.
 
 Please also consider adding PHP extensions for the PHP 5. alpha version : `5.6.0-alpha3`.
 
