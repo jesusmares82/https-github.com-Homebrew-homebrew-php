@@ -6,11 +6,11 @@ class Php55Ioncubeloader < AbstractPhp55Extension
   if Hardware.is_64_bit?
     version '4.6.0'
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz'
-    sha1 '39cdebc7bd77b0fd21bf2a9ed8df5e620a9d6ed5'
+    sha1 '81f8bf68ca7f5cb0c143e4efc05a0248fc7f0328'
   else
     version '4.6.0'
     url 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz'
-    sha1 '5c36e22544c2e39c3c5a4ff8490d2bfb9b6cf4b8'
+    sha1 'd1bc5498e8a59d775faa22206a23f0276b71fc19'
   end
 
   def extension_type; "zend_extension"; end
