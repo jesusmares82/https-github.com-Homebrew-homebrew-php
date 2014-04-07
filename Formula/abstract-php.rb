@@ -12,7 +12,7 @@ def build_intl?
 end
 
 class AbstractPhp < Formula
-  def initialize name='__UNKNOWN__', path=nil
+  def initialize name="__UNKNOWN__", *args
     begin
       raise "One does not simply install an AbstractPhp formula" if name == "abstract-php"
       super
