@@ -2,10 +2,10 @@ require 'formula'
 
 class DrupalCodeSniffer < Formula
   homepage 'https://drupal.org/project/coder'
-  version '7.x-2.1'
+  version '7.x-2.2'
   url "http://ftp.drupal.org/files/projects/coder-#{version}.tar.gz"
   head 'http://git.drupal.org/project/coder.git', :branch => '7.x-2.x'
-  sha1 '61a154980d049de98d95c6efc83f491593a0e71d'
+  sha1 '9d3591f1035c9b0cd2d406d83a9071f94b826e09'
 
   option 'without-drush-command', "Don't install drush command"
 
