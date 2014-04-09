@@ -15,7 +15,7 @@ class Php56SplTypes < AbstractPhp56Extension
     system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
     prefix.install "modules/spl_types.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 
   def extension

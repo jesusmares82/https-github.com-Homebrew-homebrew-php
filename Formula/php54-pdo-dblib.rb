@@ -25,6 +25,6 @@ class Php54PdoDblib < AbstractPhp54Extension
     system "./configure", "--prefix=#{prefix}", "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}", phpconfig
     system "make"
     prefix.install "modules/pdo_dblib.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

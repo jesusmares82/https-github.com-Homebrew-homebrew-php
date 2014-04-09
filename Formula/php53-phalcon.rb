@@ -24,6 +24,6 @@ class Php53Phalcon < AbstractPhp53Extension
                           "--enable-phalcon"
     system "make"
     prefix.install "modules/phalcon.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

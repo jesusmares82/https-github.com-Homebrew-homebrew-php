@@ -19,6 +19,6 @@ class Php53Tidy < AbstractPhp53Extension
                           "--with-tidy"
     system "make"
     prefix.install "modules/tidy.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

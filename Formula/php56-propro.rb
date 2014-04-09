@@ -16,6 +16,6 @@ class Php56Propro < AbstractPhp56Extension
     system "make"
     include.install %w(php_propro.h)
     prefix.install "modules/propro.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

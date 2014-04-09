@@ -5,7 +5,6 @@ class BrewPhpSwitcher < Formula
   url 'https://github.com/philcook/brew-php-switcher/archive/v1.3.tar.gz'
   sha1 'c72670804305fc2f389c579a8355b07f4ebe5b23'
   head 'https://github.com/philcook/brew-php-switcher.git'
-  version "1.3"
 
   def install
     bin.install "phpswitch.sh"
@@ -14,7 +13,7 @@ class BrewPhpSwitcher < Formula
     chmod 0755, sh
     bin.install_symlink sh
   end
-  
+
   def caveats; <<-EOS.undent
     To run brew php switcher do the following:
       "brew-php-switcher 53".

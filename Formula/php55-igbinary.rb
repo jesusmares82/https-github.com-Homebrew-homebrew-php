@@ -19,6 +19,6 @@ class Php55Igbinary < AbstractPhp55Extension
     system "make"
     include.install %w(hash.h hash_function.h igbinary.h php_igbinary.h)
     prefix.install %w(modules/igbinary.so)
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

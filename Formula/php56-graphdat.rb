@@ -17,6 +17,6 @@ class Php56Graphdat < AbstractPhp56Extension
                           phpconfig
     system "make"
     prefix.install "modules/graphdat.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

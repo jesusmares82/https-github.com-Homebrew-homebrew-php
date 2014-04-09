@@ -36,7 +36,7 @@ class Php54Http < AbstractPhp54Extension
                           "--with-curl-dir=#{Formula['curl'].opt_prefix}"
     system "make"
     prefix.install "modules/http.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
 
     # remove old configuration file
     old_config_filepath = config_scandir_path / "ext-http.ini"

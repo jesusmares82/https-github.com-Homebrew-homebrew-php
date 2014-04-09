@@ -8,9 +8,9 @@ class Php52 < AbstractPhp
   head 'https://github.com/php/php-src.git', :branch => 'PHP-5.2'
 
   depends_on 'mhash'
-  depends_on 'libevent' if build.include? 'with-fpm'
+  depends_on 'libevent' if build.with? 'fpm'
 
-  if build.include? 'with-phpdbg'
+  if build.with? 'phpdbg'
     raise "phpdbg is not supported for this version of PHP"
   end
 
@@ -42,7 +42,7 @@ class Php52 < AbstractPhp
     defaults = super
     defaults.delete '--with-mhash'
 
-    if build.include?('with-mysql') || build.include?('with-mariadb')
+    if build.with?('mysql') || build.with?('mariadb')
       defaults.delete '--with-mysqli=mysqlnd'
       defaults.delete '--with-mysql=mysqlnd'
       defaults.delete '--with-pdo-mysql=mysqlnd'

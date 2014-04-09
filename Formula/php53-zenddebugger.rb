@@ -18,7 +18,7 @@ class Php53Zenddebugger < AbstractPhp53Extension
   def install
     prefix.install "5_3_x_comp/ZendDebugger.so"
     prefix.install "dummy.php"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 
   def config_file

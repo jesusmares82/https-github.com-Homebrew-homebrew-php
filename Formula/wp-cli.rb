@@ -15,10 +15,10 @@ class WpCli < Formula
     system "#{HOMEBREW_PREFIX}/bin/composer install"
     prefix.install Dir['*']
 
-    unless build.without? 'bash-completion'
+    if build.with? 'bash-completion'
       (prefix + 'etc/bash_completion.d').install "#{prefix}/utils/wp-completion.bash"
     end
-    unless build.without? 'package-index'
+    if build.with? 'package-index'
       system "#{HOMEBREW_PREFIX}/bin/composer config --file='#{prefix}/composer.json' repositories.wp-cli composer http://wp-cli.org/package-index/"
     end
   end

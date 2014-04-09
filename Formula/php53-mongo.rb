@@ -17,6 +17,6 @@ class Php53Mongo < AbstractPhp53Extension
                           phpconfig
     system "make"
     prefix.install "modules/mongo.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

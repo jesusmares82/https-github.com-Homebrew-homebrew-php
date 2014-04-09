@@ -35,7 +35,7 @@ class DrupalCodeSniffer < Formula
 
     # Link Drupal Coder Sniffer into /usr/local/share/drush/commands
     # for integration with Drush.
-    unless build.without? 'drush-command'
+    if build.with? 'drush-command'
       drush_commands.mkpath
       if File.symlink? drush_commands+name
         File.delete drush_commands+name
@@ -55,7 +55,7 @@ class DrupalCodeSniffer < Formula
 
     EOS
 
-    if !build.without? 'drush-command'
+    if build.with? 'drush-command'
           s += <<-EOS.undent
           Drupal Coder Sniffer is installed as a drush command in "#{drush_commands+name}".
 

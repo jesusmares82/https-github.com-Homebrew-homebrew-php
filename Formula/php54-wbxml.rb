@@ -25,7 +25,7 @@ class Php54Wbxml < AbstractPhp54Extension
                           "--with-wbxml=#{Formula['libwbxml'].opt_prefix}"
     system "make"
     prefix.install "modules/wbxml.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end
 

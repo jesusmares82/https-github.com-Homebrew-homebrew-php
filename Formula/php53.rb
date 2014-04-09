@@ -16,9 +16,9 @@ class Php53 < AbstractPhp
   depends_on 'flex' => :build
   depends_on 'bison27' => :build
 
-  depends_on 'libevent' if build.include? 'with-fpm'
+  depends_on 'libevent' if build.with? 'fpm'
 
-  if build.include? 'with-phpdbg'
+  if build.with? 'phpdbg'
     raise "phpdbg is not supported for this version of PHP"
   end
 

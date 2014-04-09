@@ -21,6 +21,6 @@ class Php53Mcrypt < AbstractPhp53Extension
                           "--with-mcrypt=#{Formula['mcrypt'].opt_prefix}"
     system "make"
     prefix.install "modules/mcrypt.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

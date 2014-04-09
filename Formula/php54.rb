@@ -11,7 +11,7 @@ class Php54 < AbstractPhp
 
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
-  if build.include? 'with-phpdbg'
+  if build.with? 'phpdbg'
     # needed to regenerate the configure script
     depends_on 'autoconf' => :build
     depends_on 're2c' => :build
@@ -31,11 +31,11 @@ class Php54 < AbstractPhp
     args << "--with-homebrew-openssl" if MacOS.version == :leopard
     args << "--enable-zend-signals"
     # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
-    args << "--enable-dtrace" unless build.include? 'with-phpdbg'
+    args << "--enable-dtrace" if build.without? 'phpdbg'
   end
 
   def _install
-    if build.include? 'with-phpdbg'
+    if build.with? 'phpdbg'
       resource('phpdbg').stage buildpath/'sapi/phpdbg'
 
       # force the configure file to be rebuilt (needed to support phpdbg)

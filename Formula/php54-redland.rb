@@ -31,7 +31,7 @@ class Php54Redland < AbstractPhp54Extension
     system "./configure", *args
     system "make"
     prefix.install "php/#{extension}.dylib"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 
   def module_path

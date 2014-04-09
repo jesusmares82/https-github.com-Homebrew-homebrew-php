@@ -6,11 +6,11 @@ class Phpmyadmin < Formula
   sha1 '2292ba2daffd48a1ad12275212a09633f883d9fb'
   head 'https://github.com/phpmyadmin/phpmyadmin.git'
 
-  if build.include?('without-mcrypt') && MacOS.prefer_64_bit?
+  if build.without?('mcrypt') && MacOS.prefer_64_bit?
     raise "64-bit machines cannot use phpmyadmin without mcrypt"
   end
 
-  unless build.include? 'without-mcrypt'
+  if build.with? 'mcrypt'
     depends_on "php53-mcrypt" if Formula['php53'].linked_keg.exist?
     depends_on "php54-mcrypt" if Formula['php54'].linked_keg.exist?
     depends_on "php55-mcrypt" if Formula['php55'].linked_keg.exist?

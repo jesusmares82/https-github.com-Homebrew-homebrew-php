@@ -21,6 +21,6 @@ class Php56Sphinx < AbstractPhp56Extension
     system "./configure", *args
     system "make"
     prefix.install "modules/sphinx.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

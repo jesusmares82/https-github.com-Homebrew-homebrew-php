@@ -20,6 +20,6 @@ class Php56Libevent < AbstractPhp56Extension
                           "--with-libevent=#{Formula['libevent'].opt_prefix}"
     system "make"
     prefix.install "modules/libevent.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

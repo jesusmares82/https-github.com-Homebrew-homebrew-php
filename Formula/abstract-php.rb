@@ -48,22 +48,22 @@ class AbstractPhp < Formula
     end
 
     depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
-    depends_on 'freetds' if build.include? 'with-mssql'
+    depends_on 'freetds' if build.with? 'mssql'
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
     depends_on 'icu4c' if build.include?('with-intl') && build_intl?
-    depends_on 'imap-uw' if build.include? 'with-imap'
+    depends_on 'imap-uw' if build.with? 'imap'
     depends_on 'jpeg'
     depends_on 'libpng'
     depends_on 'libxml2' unless MacOS.version >= :lion
-    depends_on 'openssl' if build.include? 'with-homebrew-openssl'
-    depends_on 'homebrew/dupes/tidy' if build.include? 'with-tidy'
+    depends_on 'openssl' if build.with? 'homebrew-openssl'
+    depends_on 'homebrew/dupes/tidy' if build.with? 'tidy'
     depends_on 'unixodbc'
     depends_on 'homebrew/dupes/zlib'
 
     # Sanity Checks
-    if build.include? 'with-pgsql'
+    if build.with? 'pgsql'
       depends_on 'postgresql' => :recommended unless postgres_installed?
     end
 
@@ -108,7 +108,7 @@ class AbstractPhp < Formula
   end
 
   def build_apache?
-    build.include?('with-apache') || !(build.include?('without-apache') || build.include?('with-cgi') || build.include?('with-fpm'))
+    build.with?('apache') || !(build.without?('apache') || build.with?('cgi') || build.with?('fpm'))
   end
 
   def php_version
@@ -223,29 +223,29 @@ INFO
       args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
     end
 
-    unless build.include? 'without-bz2'
+    if build.with? 'bz2'
       args << '--with-bz2=/usr'
     end
 
-    if build.include? 'with-debug'
+    if build.with? 'debug'
       args << "--enable-debug"
     else
       args << "--disable-debug"
     end
 
-    if build.include? 'with-homebrew-openssl'
+    if build.with? 'homebrew-openssl'
       args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
     else
       args << "--with-openssl=/usr"
     end
 
-    if build.include? 'with-homebrew-libxslt'
+    if build.with? 'homebrew-libxslt'
       args << "--with-xsl=" + Formula['libxslt'].opt_prefix.to_s
     else
       args << "--with-xsl=/usr"
     end
 
-    if build.include? 'with-fpm'
+    if build.with? 'fpm'
       args << "--enable-fastcgi"
       args << "--enable-fpm"
       args << "--with-fpm-user=_www"
@@ -254,7 +254,7 @@ INFO
       touch prefix+'var/log/php-fpm.log'
       plist_path.write plist
       plist_path.chmod 0644
-    elsif build.include? 'with-cgi'
+    elsif build.with? 'cgi'
       args << "--enable-cgi"
     end
 
@@ -264,39 +264,39 @@ INFO
       args << "--libexecdir=#{libexec}"
     end
 
-    if build.include? 'with-gmp'
+    if build.with? 'gmp'
       args << "--with-gmp=#{Formula['gmp'].opt_prefix}"
     end
 
-    if build.include? 'with-imap'
+    if build.with? 'imap'
       args << "--with-imap=#{Formula['imap-uw'].opt_prefix}"
       args << "--with-imap-ssl=/usr"
     end
 
-    if build.include? 'with-intl'
+    if build.with? 'intl'
       opoo "INTL is broken as of mxcl/homebrew#03ed757c, please install php#{php_version_path.to_s}-intl" unless build_intl?
       args << "--enable-intl" if build_intl?
       args << "--with-icu-dir=#{Formula['icu4c'].opt_prefix}" if build_intl?
     end
 
-    if build.include? 'with-mssql'
+    if build.with? 'mssql'
       args << "--with-mssql=#{Formula['freetds'].opt_prefix}"
       args << "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}"
     end
 
-    if build.include? 'with-libmysql'
+    if build.with? 'libmysql'
       args << "--with-mysql-sock=/tmp/mysql.sock"
       args << "--with-mysqli=#{HOMEBREW_PREFIX}/bin/mysql_config"
       args << "--with-mysql=#{HOMEBREW_PREFIX}"
       args << "--with-pdo-mysql=#{HOMEBREW_PREFIX}"
-    elsif !build.include? 'without-mysql'
+    elsif build.with? 'mysql'
       args << "--with-mysql-sock=/tmp/mysql.sock"
       args << "--with-mysqli=mysqlnd"
       args << "--with-mysql=mysqlnd"
       args << "--with-pdo-mysql=mysqlnd"
     end
 
-    if build.include? 'with-pgsql'
+    if build.with? 'pgsql'
       if File.directory?(Formula['postgresql'].opt_prefix.to_s)
         args << "--with-pgsql=#{Formula['postgresql'].opt_prefix}"
         args << "--with-pdo-pgsql=#{Formula['postgresql'].opt_prefix}"
@@ -306,7 +306,7 @@ INFO
       end
     end
 
-    if build.include? 'with-pdo-oci'
+    if build.with? 'pdo-oci'
       if ENV.has_key?('ORACLE_HOME')
         args << "--with-pdo-oci=#{ENV['ORACLE_HOME']}"
       else
@@ -314,23 +314,23 @@ INFO
       end
     end
 
-    if build.include? 'with-tidy'
+    if build.with? 'tidy'
       args << "--with-tidy=#{Formula['tidy'].opt_prefix}"
     end
 
-    if build.include? 'without-pear'
+    if build.without? 'pear'
       args << "--without-pear"
     end
 
-    if build.include? 'with-thread-safety'
+    if build.with? 'thread-safety'
       args << "--enable-maintainer-zts"
     end
 
-    unless build.include? 'without-pcntl'
+    if build.with? 'pcntl'
       args << "--enable-pcntl"
     end
 
-    if build.include? 'with-phpdbg'
+    if build.with? 'phpdbg'
       args << "--enable-phpdbg"
     end
 
@@ -342,7 +342,7 @@ INFO
   end
 
   def skip_pear_config_set?
-    build.include? 'without-pear'
+    build.without? 'pear'
   end
 
   def patches
@@ -380,7 +380,7 @@ INFO
 
     system bin+"pear", "config-set", "php_ini", config_path+"php.ini" unless skip_pear_config_set?
 
-    if build.include? 'with-fpm'
+    if build.with? 'fpm'
       if File.exists?('sapi/fpm/init.d.php-fpm')
         sbin.install 'sapi/fpm/init.d.php-fpm' => "php#{php_version_path.to_s}-fpm"
       end
@@ -433,7 +433,7 @@ INFO
           #{config_path}/php.ini
     EOS
 
-    unless build.include? 'without-pear'
+    if build.with? 'pear'
       s << <<-EOS.undent
         ✩✩✩✩ PEAR ✩✩✩✩
 

@@ -21,6 +21,6 @@ class Php53Pspell < AbstractPhp53Extension
                           "--with-pspell=#{Formula['aspell'].opt_prefix}"
     system "make"
     prefix.install "modules/pspell.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

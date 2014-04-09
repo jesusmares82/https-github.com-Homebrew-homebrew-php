@@ -9,7 +9,7 @@ class Php53Couchbase < AbstractPhp53Extension
 
   option 'with-igbinary', "Build with igbinary support"
   depends_on 'libcouchbase'
-  depends_on 'php53-igbinary' if build.include?('with-igbinary')
+  depends_on 'php53-igbinary' if build.with? "igbinary"
 
   def install
     Dir.chdir "couchbase-#{version}" unless build.head?
@@ -20,11 +20,11 @@ class Php53Couchbase < AbstractPhp53Extension
     args << "--prefix=#{prefix}"
     args << phpconfig
     args << "--with-libcouchbase-dir=#{Formula['libcouchbase'].opt_prefix}"
-    args << "--enable-couchbase-igbinary" if build.include? 'with-igbinary'
+    args << "--enable-couchbase-igbinary" if build.with? 'igbinary'
 
     safe_phpize
 
-    if build.include? 'with-igbinary'
+    if build.with? 'igbinary'
       system "mkdir -p ext/igbinary"
       cp "#{Formula['php53-igbinary'].opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
     end
@@ -32,6 +32,6 @@ class Php53Couchbase < AbstractPhp53Extension
     system "./configure", *args
     system "make"
     prefix.install "modules/couchbase.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end

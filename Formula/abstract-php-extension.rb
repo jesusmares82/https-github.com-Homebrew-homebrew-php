@@ -28,7 +28,7 @@ class AbstractPhpExtension < Formula
       raise "One does not simply install an AbstractPhpExtension" if name == "abstract-php-extension"
       sup = super
 
-      if build.include? 'without-homebrew-php'
+      if build.without? 'homebrew-php'
         installed_php_version = nil
         i = IO.popen("#{phpize} -v")
         out = i.readlines.join("")
@@ -93,7 +93,7 @@ class AbstractPhpExtension < Formula
   end
 
   def phpize
-    if build.include? 'without-homebrew-php'
+    if build.without? 'homebrew-php'
       "phpize"
     else
       "#{(Formula[php_formula]).bin}/phpize"
@@ -101,7 +101,7 @@ class AbstractPhpExtension < Formula
   end
 
   def phpini
-    if build.include? 'without-homebrew-php'
+    if build.without? 'homebrew-php'
       "php.ini presented by \"php --ini\""
     else
       "#{(Formula[php_formula]).config_path}/php.ini"
@@ -109,7 +109,7 @@ class AbstractPhpExtension < Formula
   end
 
   def phpconfig
-    if build.include? 'without-homebrew-php'
+    if build.without? 'homebrew-php'
       ""
     else
       "--with-php-config=#{(Formula[php_formula]).bin}/php-config"
@@ -148,7 +148,7 @@ class AbstractPhpExtension < Formula
   def caveats
     caveats = [ "To finish installing #{extension} for PHP #{php_branch}:" ]
 
-    if build.include? "without-config-file"
+    if build.without? "config-file"
       caveats << "  * Add the following line to #{phpini}:\n"
       caveats << config_file
     else
@@ -213,7 +213,7 @@ class AbstractPhp53Extension < AbstractPhpExtension
 
   def self.init opts=[]
     super()
-    depends_on "php53" => opts unless build.include?('without-homebrew-php')
+    depends_on "php53" => opts if build.with?('homebrew-php')
   end
 end
 
@@ -222,7 +222,7 @@ class AbstractPhp54Extension < AbstractPhpExtension
 
   def self.init opts=[]
     super()
-    depends_on "php54" => opts unless build.include?('without-homebrew-php')
+    depends_on "php54" => opts if build.with?('homebrew-php')
   end
 end
 
@@ -231,7 +231,7 @@ class AbstractPhp55Extension < AbstractPhpExtension
 
   def self.init opts=[]
     super()
-    depends_on "php55" => opts unless build.include?('without-homebrew-php')
+    depends_on "php55" => opts if build.with?('homebrew-php')
   end
 end
 
@@ -240,6 +240,6 @@ class AbstractPhp56Extension < AbstractPhpExtension
 
   def self.init opts=[]
     super()
-    depends_on "php56" => opts unless build.include?('without-homebrew-php')
+    depends_on "php56" => opts if build.with?('homebrew-php')
   end
 end

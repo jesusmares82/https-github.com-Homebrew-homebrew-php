@@ -17,9 +17,9 @@ class Php56 < AbstractPhp
     args = super
     args << "--with-homebrew-openssl" if MacOS.version == :leopard
     args << "--enable-zend-signals"
-    args << "--enable-dtrace" unless build.include? 'with-phpdbg'
+    args << "--enable-dtrace" if build.without? 'phpdbg'
     # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
-    args << "--disable-phpdbg" unless build.include? 'with-phpdbg'
+    args << "--disable-phpdbg" if build.without? 'phpdbg'
     args << "--enable-opcache"
   end
 
