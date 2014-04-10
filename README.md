@@ -101,7 +101,7 @@ Setup the `homebrew/versions` tap which has dependencies we need:
 
 Then, run the following in your commandline:
 
-    brew tap josegonzalez/homebrew-php
+    brew tap homebrew/homebrew-php
 
 ## Usage
 
@@ -115,7 +115,7 @@ Tap the `homebrew/versions` repository into your brew installation:
 
 Tap the repository into your brew installation:
 
-    brew tap josegonzalez/homebrew-php
+    brew tap homebrew/homebrew-php
 
 **Note:** For a list of available configuration options run:
 
