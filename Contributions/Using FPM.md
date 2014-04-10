@@ -7,7 +7,7 @@ This is a step-by-step guide to set up PHP-FPM to work with OS X built-in Apache
 2. Read caveats
 3. `brew install php54 --with-fpm`
 4. Read caveats
-5. `launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist`
+5. `launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist`
 6. Create a properly configured virtual host (see below)
 7. Restart Apache
 

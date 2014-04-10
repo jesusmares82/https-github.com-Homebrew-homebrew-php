@@ -252,8 +252,8 @@ INFO
       args << "--with-fpm-group=_www"
       (prefix+'var/log').mkpath
       touch prefix+'var/log/php-fpm.log'
-      (prefix+"homebrew-php.josegonzalez.php#{php_version.to_s.gsub('.','')}.plist").write php_fpm_startup_plist
-      (prefix+"homebrew-php.josegonzalez.php#{php_version.to_s.gsub('.','')}.plist").chmod 0644
+      plist_path.write plist
+      plist_path.chmod 0644
     elsif build.include? 'with-cgi'
       args << "--enable-cgi"
     end
@@ -493,13 +493,13 @@ INFO
         To launch php-fpm on startup:
             * If this is your first install:
                 mkdir -p ~/Library/LaunchAgents
-                cp #{prefix}/homebrew-php.josegonzalez.php#{php_version_path.to_s}.plist ~/Library/LaunchAgents/
-                launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php#{php_version_path.to_s}.plist
+                cp #{plist_path} ~/Library/LaunchAgents/
+                launchctl load -w ~/Library/LaunchAgents/#{plist_name}.plist
 
-            * If this is an upgrade and you already have the homebrew-php.josegonzalez.php#{php_version_path.to_s}.plist loaded:
-                launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php#{php_version_path.to_s}.plist
-                cp #{prefix}/homebrew-php.josegonzalez.php#{php_version_path.to_s}.plist ~/Library/LaunchAgents/
-                launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php#{php_version_path.to_s}.plist
+            * If this is an upgrade and you already have the #{plist_name}.plist loaded:
+                launchctl unload -w ~/Library/LaunchAgents/#{plist_name}.plist
+                cp #{plist_path} ~/Library/LaunchAgents/
+                launchctl load -w ~/Library/LaunchAgents/#{plist_name}.plist
 
         The control script is located at #{sbin}/php#{php_version_path.to_s}-fpm
       EOS
@@ -515,7 +515,7 @@ INFO
       s << <<-EOS.undent
         You may also need to edit the plist to use the correct "UserName".
 
-        Please note that the plist was called 'org.php-fpm.plist' in old versions
+        Please note that the plist was called 'homebrew-php.josegonzalez.php#{php_version.to_s.gsub('.','')}.plist' in old versions
         of this formula.
       EOS
     end
@@ -529,10 +529,7 @@ INFO
     end
   end
 
-  # Override Formula#plist_name
-  def plist_name; "homebrew-php.josegonzalez.php#{php_version.to_s.gsub('.','')}" end
-
-  def php_fpm_startup_plist; <<-EOPLIST.undent
+  def plist; <<-EOPLIST.undent
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
@@ -540,7 +537,7 @@ INFO
       <key>KeepAlive</key>
       <true/>
       <key>Label</key>
-      <string>homebrew-php.josegonzalez.php#{php_version_path.to_s}</string>
+      <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
         <string>#{sbin}/php-fpm</string>

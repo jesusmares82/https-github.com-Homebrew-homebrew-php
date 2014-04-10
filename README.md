@@ -148,9 +148,9 @@ If using FPM, you will need to unload the `plist` controlling php, or manually s
 ```sh
 # Swapping from PHP53 to PHP54
 # $HOMEBREW_PREFIX is normally `/usr/local`
-cp $HOMEBREW_PREFIX/Cellar/php54/5.4.15/homebrew-php.josegonzalez.php54.plist ~/Library/LaunchAgents/
-launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php53.plist
-launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+cp $HOMEBREW_PREFIX/Cellar/php54/5.4.15/homebrew.mxcl.php54.plist ~/Library/LaunchAgents/
+launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php53.plist
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist
 ```
 
 If you would like to swap the PHP you use on the command line, you should update the `$PATH` variable in either your `.bashrc` or `.bash_profile`:
