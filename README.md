@@ -7,11 +7,11 @@ A centralized repository for PHP-related brews.
 Bugs inevitably happen - none of us is running EVERY conceivable setup - but hopefully the install process can be made smoother through the following tips:
 
 - If you have recently upgraded your Mac OS version or Xcode, read [this section](#common-upgrade-issues).
-- Upgrade your OS X to the latest patch version. So if you are on `10.7.0`, upgrade to `10.7.4` etc.
+- Upgrade your OS X to the latest patch version. So if you are on `10.9.0`, upgrade to `10.9.2` etc.
 - Ensure Xcode is installed and up to date.
 - Run `brew update`. If you tapped an old version of `homebrew-php` or have an old brew installation, this may cause some installation issues.
-- Run `brew upgrade`. This will upgrade all installed formulae. Sometimes an old version of a formula is installed and this breaks our dependency management. Unfortunately, there is currently no way to force homebrew to upgrade only those we depend upon. This is a possible fix for those with `libxml` related compilation issues.
-- If `brew doctor` complains about `Error: Failed to import: homebrew-php-requirement` or similar, you can find broken php requirement files using `find $(brew --prefix)/Library/Formula -type l -name "*requirement.rb"`. Run this with the `-delete` flag if you are sure the results of the find contain only the files producing import failures. You can also remove them manually.
+- Run `brew upgrade`. This will upgrade all installed formulae. Sometimes an old version of a formula is installed and this breaks our dependency management. Unfortunately, there is currently no way to force Homebrew to upgrade only those we depend upon. This is a possible fix for those with `libxml` related compilation issues.
+- If `brew doctor` complains about `Error: Failed to import: homebrew-php-requirement` or similar, you can find broken PHP requirement files using `find $(brew --prefix)/Library/Formula -type l -name "*requirement.rb"`. Run this with the `-delete` flag if you are sure the results of the find contain only the files producing import failures. You can also remove them manually.
 - If you upgraded to Mavericks 10.9.x, please also upgrade to the latest Xcode, 5.0.1 and make sure you re-install Command Line Tools: `xcode-select --install`
 - On Mavericks 10.9.x, if  `xcode-select --install` displays the error message `Can't install the software because it is not currently available from the Software Update server.`, download Command Line Tools from [Apple Developer]( https://developer.apple.com/downloads/index.action?name=Command%20Line%20Tools).
 ![Xcode 5 command line tool installation](http://i.imgur.com/BKde0XJ.jpg)
@@ -20,7 +20,7 @@ Bugs inevitably happen - none of us is running EVERY conceivable setup - but hop
 - Delete your `~/.pearrc` file before attempting to install a `PHP` version, as the pear step will fail if an existing, incompatible version exists. We try to detect and remove them ourselves, but sometimes this fails.
 - Run `brew doctor` and fix any issues you can.
 - If you are using Mountain Lion `10.8.x`, please install [XQuartz](http://xquartz.macosforge.org/landing/) so that the `png.h` header exists for compilation of certain brews. Mountain Lion removes X11, which contained numerous headers. A permanent fix is forthcoming.
-- If you upgraded to Mountain Lion `10.8.x`, please also upgrade to the latest Xcode, 4.4.
+- If you upgraded to Mountain Lion `10.8.x`, please also upgrade to the latest Xcode, 5.1.
 - File an awesome bug report, using the information in the next section.
 - If you have a failing install due to `GD build test failed`, try running the following before attempting to reinstall:
 
@@ -72,20 +72,16 @@ This will help us diagnose your issues much quicker, as well as find commonaliti
 
 This repository contains **PHP-related** formulae for [Homebrew](https://github.com/mxcl/homebrew).
 
-(This replaces the php formulae that used to live under [adamv's homebrew-alt repository](https://github.com/adamv/homebrew-alt).)
+(This replaces the PHP formulae that used to live under [adamv's homebrew-alt repository](https://github.com/adamv/homebrew-alt).)
 
-The purpose of this repository is to allow PHP developers to quickly retrieve
-working, up-to-date formulae. The mainline homebrew repositories are maintained
-by non-php developers, so testing/maintaining PHP-related brews has fallen by
-the wayside. If you are a PHP developer using homebrew, please contribute to
-this repository.
+The purpose of this repository is to allow PHP developers to quickly retrieve working, up-to-date formulae. The mainline Homebrew repositories are maintained by non-php developers, so testing/maintaining PHP-related brews has fallen by the wayside. If you are a PHP developer using Homebrew, please contribute to this repository.
 
 ## Requirements
 
 * [Homebrew](https://github.com/mxcl/homebrew)
-* Snow Leopard, Lion, Mountain Lion. Untested everywhere else.
-* The homebrew `dupes` tap - `brew tap homebrew/dupes`
-* The homebrew `versions` tap - `brew tap homebrew/versions`
+* Snow Leopard, Lion, Mountain Lion, Mavericks. Untested everywhere else.
+* The Homebrew `dupes` tap - `brew tap homebrew/dupes`
+* The Homebrew `versions` tap - `brew tap homebrew/versions`
 
 ## Installation
 
@@ -99,7 +95,7 @@ Setup the `homebrew/versions` tap which has dependencies we need:
 
     brew tap homebrew/versions
 
-Then, run the following in your commandline:
+Then, run the following in your command-line:
 
     brew tap homebrew/homebrew-php
 
@@ -137,71 +133,71 @@ If using Apache, you will need to update the `LoadModule` call. For convenience,
 
 ```sh
 # /etc/apache2/httpd.conf
-# Swapping from PHP53 to PHP54
+# Swapping from PHP 5.4 to PHP 5.5
 # $HOMEBREW_PREFIX is normally `/usr/local`
-# LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php53/5.3.25/libexec/apache2/libphp5.so
-LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php54/5.4.15/libexec/apache2/libphp5.so
+# LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php54/5.4.27/libexec/apache2/libphp5.so
+LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php55/5.5.11/libexec/apache2/libphp5.so
 ```
 
 If using FPM, you will need to unload the `plist` controlling php, or manually stop the daemon, via your command line:
 
 ```sh
-# Swapping from PHP53 to PHP54
+# Swapping from PHP 5.4 to PHP 5.5
 # $HOMEBREW_PREFIX is normally `/usr/local`
-cp $HOMEBREW_PREFIX/Cellar/php54/5.4.15/homebrew.mxcl.php54.plist ~/Library/LaunchAgents/
-launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php53.plist
-launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist
+cp $HOMEBREW_PREFIX/Cellar/php55/5.5.11/homebrew.mxcl.php55.plist ~/Library/LaunchAgents/
+launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php54.plist
+launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist
 ```
 
-If you would like to swap the PHP you use on the command line, you should update the `$PATH` variable in either your `.bashrc` or `.bash_profile`:
+If you would like to swap the PHP you use on the command line, you should update the `$PATH` variable in either your `.profile`, `.zshrc`, `.bashrc` or `.bash_profile`:
 
 ```sh
-# Swapping from PHP53 to PHP54
-# export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
-export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+# Swapping from PHP 5.4 to PHP 5.5
+# export PATH="$(brew --prefix homebrew/php/php54)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 ```
 
-Please be aware that you must make this type of change EACH time you swap between PHP `minor` versions. You will typically only need to update the Apache/FPM when upgrading your php `patch` version.
+Please be aware that you must make this type of change EACH time you swap between PHP `minor` versions. You will typically only need to update the Apache/FPM when upgrading your PHP `patch` version.
 
 ### PEAR Extensions
 
-If installing `php53` or `php54`, please note that all extensions installed with the included `pear` will be installed to the respective php's bin path. For example, supposing you installed `PHP_CodeSniffer` as follows:
+If installing `php53`, `php54` or `php55`, please note that all extensions installed with the included `pear` will be installed to the respective php's bin path. For example, supposing you installed `PHP_CodeSniffer` as follows:
 
     pear install PHP_CodeSniffer
 
-It would be nice to be able to use the `phpcs` command via commandline, or other utilities. You will need to add the installed php's `bin` directory to your path. The following would be added to your `.bashrc` or `.bash_profile` when running the `php54` brew:
+It would be nice to be able to use the `phpcs` command via command-line, or other utilities. You will need to add the installed php's `bin` directory to your path. The following would be added to your `.bashrc` or `.bash_profile` when running the `php55` brew:
 
 ```sh
-export PATH="$(brew --prefix php54)/bin:$PATH"
+export PATH="$(brew --prefix php55)/bin:$PATH"
 ```
 
 Some caveats:
 
-- Remember to use the proper php version in that export. So if you installed the `php53` formula, use `php53` instead of `php54` in the export.
-- Updating your installed php will result in the binaries no longer existing within your path. In such cases, you will need to reinstall the pear extensions. Alternatives include installing `pear` outside of `homebrew-php` or using the `homebrew-php` version of your extension.
-- Uninstalling your `homebrew-php` php formula will also remove the extensions.
+- Remember to use the proper PHP version in that export. So if you installed the `php54` formula, use `php54` instead of `php55` in the export.
+- Updating your installed PHP will result in the binaries no longer existing within your path. In such cases, you will need to reinstall the pear extensions. Alternatives include installing `pear` outside of `homebrew-php` or using the `homebrew-php` version of your extension.
+- Uninstalling your `homebrew-php` PHP formula will also remove the extensions.
 
 ## Contributing
 
 The following kinds of brews are allowed:
 
-- PHP Extensions: They may be built with PECL, but installation via homebrew is sometimes much easier.
+- PHP Extensions: They may be built with PECL, but installation via Homebrew is sometimes much easier.
 - PHP Utilities: php-version, php-build fall under this category.
-- Common PHP Web Applications: phpmyadmin goes here. Note that WordPress would not qualify because it requires other migration steps, such as database migrations etc.
-- PHP Frameworks: These are to be reviewed on a case-by-case basis. Generally, only a recent, stable version of a popular framework will be allowed.
+- Common PHP Web Applications: phpMyAdmin goes here. Note that WordPress would not qualify because it requires other migration steps, such as database migrations etc.
+- PHP Frameworks: these are to be reviewed on a case-by-case basis. Generally, only a recent, stable version of a popular framework will be allowed.
 
 If you have any concerns as to whether your formula belongs in PHP, just open a pull request with the formula and we'll take it from there.
 
 ### PHP Extension definitions
 
-PHP Extensions MUST be prefixed with `phpVERSION`. For example, instead of the `Solr` formula for PHP54 in `solr.rb`, we would have `Php54Solr` inside of `php54-solr.rb`. This is to remove any possible conflicts with mainline homebrew formulae.
+PHP Extensions MUST be prefixed with `phpVERSION`. For example, instead of the `Solr` formula for PHP55 in `solr.rb`, we would have `Php55Solr` inside of `php55-solr.rb`. This is to remove any possible conflicts with mainline Homebrew formulae.
 
-The template for the `php54-example` pecl extension would be as follows. Please use it as an example for any new extension formulae:
-
-require File.join(File.dirname(__FILE__), 'abstract-php-extension')
+The template for the `php55-example` pecl extension would be as follows. Please use it as an example for any new extension formulae:
 
 ```ruby
-class Php54Example < AbstractPhp54Extension
+require File.join(File.dirname(__FILE__), 'abstract-php-extension')
+
+class Php55Example < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/example'
   url 'http://pecl.php.net/get/example-1.0.tgz'
@@ -227,7 +223,7 @@ Before testing the extension, you will need run the command `brew tap --repair` 
 
 Before finalizing the extension, run the command `brew audit` to check that your formula respects Homebrew best practice and syntax.
 
-Defining extensions inheriting AbstractPhp5(345). Extension will provide a `write_config_file` which add `ext-{extension}.ini` to `conf.d`, don’t forget to remove it manually upon extension removal. Please see [abstract-php-extension.rb](Formula/abstract-php-extension.rb) for more details.
+Defining extensions inheriting AbstractPhp5(3456). Extension will provide a `write_config_file` which add `ext-{extension}.ini` to `conf.d`, don’t forget to remove it manually upon extension removal. Please see [abstract-php-extension.rb](Formula/abstract-php-extension.rb) for more details.
 
 Please note that your formula installation may deviate significantly from the above; caveats should more or less stay the same, as they give explicit instructions to users as to how to ensure the extension is properly installed.
 
@@ -235,31 +231,19 @@ The ordering of formula attributes, such as the `homepage`, `url`, `sha1`, etc. 
 
 All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.28`, `5.4.27` and `5.5.11`.
 
-Please also consider adding PHP extensions for the PHP 5. alpha version : `5.6.0-alpha3`.
+Please also consider adding PHP extensions for PHP 5.6 beta version : `5.6.0-beta1`.
 
 ## Todo
 
-* ~~Proper PHP Versioning? See issue [#1](https://github.com/josegonzalez/homebrew-php/issues/8)~~
+* ~~Proper PHP Versioning? See issue [#1](https://github.com/homebrew/homebrew-php/issues/8)~~
 * ~~Pull out all PHP-related brews from Homebrew~~
 
 ## License
 
-Copyright (c) 2012 Jose Diaz-Gonzalez and other contributors
+Copyright (c) 2012-2014 Jose Diaz-Gonzalez and other contributors
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
