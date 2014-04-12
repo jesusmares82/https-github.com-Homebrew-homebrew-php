@@ -42,14 +42,6 @@ If you have recently upgraded your Mac OS X version or Xcode, you may have some 
 - If an extension build fails, try also to remove all its dependencies and reinstall it.
 - Sometimes it appears that a formula is not available anymore, do the following: `brew tap --repair`.
 
-----
-
-**SUPERHACK DANGEROUS DON'T DO IT**
-
-If none of the above works, and we are unable to fix your issue after you've filed a bug report, try installing the [`OS X GCC Installer`](https://github.com/kennethreitz/osx-gcc-installer/). A small number of users have reported success after doing so.
-
-----
-
 ### Filing Bug Reports
 
 Please include the following information in your bug report:
