@@ -170,7 +170,22 @@ INFO
     end
   end
 
-  def install_args
+  def default_config
+    "./php.ini-development"
+  end
+
+  def skip_pear_config_set?
+    build.without? 'pear'
+  end
+
+  def patches
+    # Bug in PHP 5.x causes build to fail on OSX 10.5 Leopard due to
+    # outdated system libraries being first on library search path:
+    # https://bugs.php.net/bug.php?id=44294
+    "https://gist.github.com/ablyler/6579338/raw/5713096862e271ca78e733b95e0235d80fed671a/Makefile.global.diff" if MacOS.version == :leopard
+  end
+
+  def _install
     args = [
       "--prefix=#{prefix}",
       "--localstatedir=#{var}",
@@ -334,26 +349,6 @@ INFO
       args << "--enable-phpdbg"
     end
 
-    args
-  end
-
-  def default_config
-    "./php.ini-development"
-  end
-
-  def skip_pear_config_set?
-    build.without? 'pear'
-  end
-
-  def patches
-    # Bug in PHP 5.x causes build to fail on OSX 10.5 Leopard due to
-    # outdated system libraries being first on library search path:
-    # https://bugs.php.net/bug.php?id=44294
-    "https://gist.github.com/ablyler/6579338/raw/5713096862e271ca78e733b95e0235d80fed671a/Makefile.global.diff" if MacOS.version == :leopard
-  end
-
-  def _install
-    args = install_args
     system "./buildconf" if build.head?
     system "./configure", *args
 
