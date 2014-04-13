@@ -77,7 +77,7 @@ Then follow the onscreen instructions to configure Apache to use mod_fastcgi.
 
 ## Installing Homebrew's PHP with support for PHP-FPM
 
-Refer to https://github.com/josegonzalez/homebrew-php. You will need to add --with-fpm when you install the formula, e.g.
+Refer to https://github.com/Homebrew/homebrew-php. You will need to add --with-fpm when you install the formula, e.g.
 
 ```
     brew install php54 --with-fpm

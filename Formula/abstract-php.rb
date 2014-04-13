@@ -456,7 +456,7 @@ INFO
       If you wish to swap the PHP you use on the command line, you should add the following to ~/.bashrc,
       ~/.zshrc, ~/.profile or your shell's equivalent configuration file:
 
-            export PATH="$(brew --prefix josegonzalez/php/php#{php_version.to_s.gsub('.','')})/bin:$PATH"
+            export PATH="$(brew --prefix homebrew/php/php#{php_version.to_s.gsub('.','')})/bin:$PATH"
     EOS
 
     if build.include?('with-intl') && !build_intl?
