@@ -83,7 +83,6 @@ class AbstractPhp < Formula
     option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
     option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
     option 'with-apache', 'Enable building of shared Apache 2.0 Handler module, overriding any options which disable apache'
-    option 'without-apache', 'Build without shared Apache 2.0 Handler module'
     option 'with-intl', 'Include internationalization support'
     option 'with-imap', 'Include IMAP extension'
     option 'without-pear', 'Build without PEAR'
@@ -108,7 +107,7 @@ class AbstractPhp < Formula
   end
 
   def build_apache?
-    build.with?('apache') || !(build.without?('apache') || build.with?('cgi') || build.with?('fpm'))
+    build.with?('apache') || !(build.with?('cgi') || build.with?('fpm'))
   end
 
   def php_version
