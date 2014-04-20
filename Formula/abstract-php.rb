@@ -74,7 +74,7 @@ class AbstractPhp < Formula
     option 'homebrew-apxs', 'Build against apxs in Homebrew prefix'
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
     option 'with-debug', 'Compile with debugging symbols'
-    option 'with-libmysql', 'Include (old-style) libmysql support'
+    option 'with-libmysql', 'Include (old-style) libmysql support instead of mysqlnd'
     option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'with-pgsql', 'Include PostgreSQL support'
     option 'with-mssql', 'Include MSSQL-DB support'
