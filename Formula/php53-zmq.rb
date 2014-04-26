@@ -13,6 +13,10 @@ class Php53Zmq < AbstractPhp53Extension
   def install
     ENV.universal_binary if build.universal?
 
+    inreplace "package.xml", "@PACKAGE_VERSION@", version
+    inreplace "php-zmq.spec", "@PACKAGE_VERSION@", version
+    inreplace "php_zmq.h", "@PACKAGE_VERSION@", version
+
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
