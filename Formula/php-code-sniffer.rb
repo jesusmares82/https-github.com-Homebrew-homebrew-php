@@ -1,5 +1,5 @@
 require 'formula'
-require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new(__FILE__).realpath)
+require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class PhpCodeSniffer < Formula
   homepage 'http://pear.php.net/package/PHP_CodeSniffer'

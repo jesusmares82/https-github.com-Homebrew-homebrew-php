@@ -1,6 +1,6 @@
 require 'formula'
-require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new(__FILE__).realpath)
-require File.expand_path("../../Requirements/composer-requirement", Pathname.new(__FILE__).realpath)
+require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
+require File.expand_path("../../Requirements/composer-requirement", __FILE__)
 
 class Composer < Formula
   homepage 'http://getcomposer.org'

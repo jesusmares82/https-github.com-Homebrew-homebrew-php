@@ -1,7 +1,7 @@
 require 'formula'
-require File.expand_path("../../Requirements/php-meta-requirement", Pathname.new(__FILE__).realpath)
-require File.expand_path("../../Requirements/phar-requirement", Pathname.new(__FILE__).realpath)
-require File.expand_path("../../Requirements/phar-building-requirement", Pathname.new(__FILE__).realpath)
+require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
+require File.expand_path("../../Requirements/phar-requirement", __FILE__)
+require File.expand_path("../../Requirements/phar-building-requirement", __FILE__)
 
 class PhpCsFixer < Formula
   homepage 'http://cs.sensiolabs.org'
