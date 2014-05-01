@@ -2,12 +2,17 @@ require 'formula'
 
 class Boris < Formula
   homepage 'https://github.com/d11wtq/boris/'
-  url      'https://github.com/d11wtq/boris/archive/v1.0.6.tar.gz'
-  sha1     '40c2babb786e76b7a8e82e21405b71322ef56291'
+  url      'https://github.com/d11wtq/boris/releases/download/v1.0.8/boris.phar'
+  sha1     '69aeccda5d8b8dcc666b9f472c7ae33173660d26'
+  version  '1.0.8'
   head     'https://github.com/d11wtq/boris.git'
 
   def install
-    prefix.install Dir['*']
+    libexec.install "boris.phar"
+    sh = libexec + "boris"
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/boris.phar $*")
+    chmod 0755, sh
+    bin.install_symlink sh
   end
 
   test do
