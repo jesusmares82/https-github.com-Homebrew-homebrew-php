@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Redis < AbstractPhp54Extension
   init
   homepage 'https://github.com/nicolasff/phpredis'
-  url 'https://github.com/nicolasff/phpredis/archive/2.2.4.tar.gz'
-  sha1 'e3b66ee2fc64549403f94c687e24ff121d564909'
+  url 'https://github.com/nicolasff/phpredis/archive/2.2.5.tar.gz'
+  sha1 'a2d09bcefb440b2e3fb3b9a08d05810fc3224c9b'
   head 'https://github.com/nicolasff/phpredis.git'
 
   option 'with-igbinary', "Build with igbinary support"
