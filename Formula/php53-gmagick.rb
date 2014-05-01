@@ -23,6 +23,6 @@ class Php53Gmagick < AbstractPhp53Extension
 
     system "make"
     prefix.install "modules/gmagick.so"
-    write_config_file if build.with? "config-file"  
+    write_config_file if build.with? "config-file"
   end
 end
