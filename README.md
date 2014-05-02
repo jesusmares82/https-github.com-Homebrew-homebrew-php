@@ -127,7 +127,7 @@ If using Apache, you will need to update the `LoadModule` call. For convenience,
 # /etc/apache2/httpd.conf
 # Swapping from PHP 5.4 to PHP 5.5
 # $HOMEBREW_PREFIX is normally `/usr/local`
-# LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php54/5.4.27/libexec/apache2/libphp5.so
+# LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php54/5.4.28/libexec/apache2/libphp5.so
 LoadModule php5_module    $HOMEBREW_PREFIX/Cellar/php55/5.5.12/libexec/apache2/libphp5.so
 ```
 
@@ -221,7 +221,7 @@ Please note that your formula installation may deviate significantly from the ab
 
 The ordering of formula attributes, such as the `homepage`, `url`, `sha1`, etc. should follow the above order for consistency. The `version` is only included when the URL does not include a version in the filename. `head` installations are not required.
 
-All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.28`, `5.4.27` and `5.5.12`.
+All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.28`, `5.4.28` and `5.5.12`.
 
 Please also consider adding PHP extensions for PHP 5.6 beta version : `5.6.0-beta1`.
 
