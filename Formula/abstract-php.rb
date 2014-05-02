@@ -61,6 +61,7 @@ class AbstractPhp < Formula
     depends_on 'homebrew/dupes/tidy' if build.include?('with-tidy')
     depends_on 'unixodbc'
     depends_on 'homebrew/dupes/zlib'
+    depends_on 'libtool' => :build if build.without? 'disable-opcache'
 
     # Sanity Checks
     if build.with? 'pgsql'
@@ -92,6 +93,7 @@ class AbstractPhp < Formula
     option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
     option 'without-bz2', 'Build without bz2 support'
     option 'without-pcntl', 'Build without Process Control support'
+    option 'disable-opcache', 'Build without Opcache extension'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
