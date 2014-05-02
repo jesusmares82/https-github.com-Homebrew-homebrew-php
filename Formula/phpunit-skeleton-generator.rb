@@ -1,4 +1,6 @@
-require "formula"
+require 'formula'
+require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
+require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class PhpunitSkeletonGenerator < Formula
   homepage 'http://phpunit.de/manual/current/en/'
