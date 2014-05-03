@@ -44,5 +44,5 @@ class Php56Riak < AbstractPhp56Extension
         brew install riak
 
     EOS
-   end
+  end
 end

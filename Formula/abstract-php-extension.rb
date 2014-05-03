@@ -140,7 +140,7 @@ class AbstractPhpExtension < Formula
       [#{extension}]
       #{extension_type}="#{module_path}"
       EOS
-    rescue Exception => e
+    rescue Exception
       nil
     end
   end
