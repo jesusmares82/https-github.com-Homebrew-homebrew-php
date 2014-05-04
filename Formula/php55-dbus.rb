@@ -1,0 +1,22 @@
+require File.join(File.dirname(__FILE__), 'abstract-php-extension')
+
+class Php55Dbus < AbstractPhp55Extension
+  init
+  homepage 'http://pecl.php.net/package/dbus'
+  url 'http://pecl.php.net/get/dbus-0.1.1.tgz'
+  sha1 '63fb2be1d97e0f310c42c89c8e8be7f2e98f89f4'
+  head 'http://svn.php.net/repository/pecl/dbus/trunk/'
+
+  depends_on 'pkg-config' => :build
+  depends_on 'dbus' => :build
+
+  def install
+    Dir.chdir "dbus-#{version}" unless build.head?
+
+    safe_phpize
+    system "./configure", "--prefix=#{prefix}", phpconfig
+    system "make"
+    prefix.install "modules/dbus.so"
+    write_config_file if build.with? "config-file"
+  end
+end
