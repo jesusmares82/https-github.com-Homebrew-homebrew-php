@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpunit < Formula
   homepage 'http://phpunit.de/manual/current/en/'
-  url 'https://phar.phpunit.de/phpunit-4.0.7.phar'
-  sha1 '38951386355ed099650b323a7a1c9621ddc07b26'
+  url 'https://phar.phpunit.de/phpunit-4.1.0.phar'
+  sha1 '2fbb282779e5b2efd809ccb2094b48f2d9504b39'
 
   def install
     libexec.install "phpunit-#{version}.phar"
