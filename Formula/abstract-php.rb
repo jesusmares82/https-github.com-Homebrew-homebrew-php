@@ -48,17 +48,17 @@ class AbstractPhp < Formula
     end
 
     depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
-    depends_on 'freetds' if build.with? 'mssql'
+    depends_on 'freetds' if build.include?('with-mssql')
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
     depends_on 'icu4c' if build.include?('with-intl') && build_intl?
-    depends_on 'imap-uw' if build.with? 'imap'
+    depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
     depends_on 'libxml2' unless MacOS.version >= :lion
-    depends_on 'openssl' if build.with? 'homebrew-openssl'
-    depends_on 'homebrew/dupes/tidy' if build.with? 'tidy'
+    depends_on 'openssl' if build.include?('with-homebrew-openssl')
+    depends_on 'homebrew/dupes/tidy' if build.include?('with-tidy')
     depends_on 'unixodbc'
     depends_on 'homebrew/dupes/zlib'
 
