@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Http < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/pecl_http'
-  url 'http://pecl.php.net/get/pecl_http-2.0.5.tgz'
-  sha1 'b3585b18322a448861f07d6f5c8a2721d030baac'
+  url 'http://pecl.php.net/get/pecl_http-2.0.6.tgz'
+  sha1 '9a2193bb5b032106f759ac622d3dd055140a0295'
   head 'https://git.php.net/repository/pecl/http/pecl_http.git'
 
   depends_on 'curl' => :build
