@@ -8,7 +8,7 @@ class Php54Dbus < AbstractPhp54Extension
   head 'http://svn.php.net/repository/pecl/dbus/trunk/'
 
   depends_on 'pkg-config' => :build
-  depends_on 'dbus' => :build
+  depends_on 'd-bus' => :build
 
   def install
     Dir.chdir "dbus-#{version}" unless build.head?
