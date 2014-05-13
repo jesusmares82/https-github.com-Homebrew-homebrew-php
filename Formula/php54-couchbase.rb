@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Couchbase < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/couchbase'
-  url 'http://pecl.php.net/get/couchbase-1.2.1.tgz'
-  sha1 '8edf49806eb4f63c8f9e329d3043d304c913541f'
+  url 'http://pecl.php.net/get/couchbase-1.2.2.tgz'
+  sha1 '29cef6c0692a8e3fa3220d62fcf57b442499a2b0'
   head 'https://github.com/couchbase/php-ext-couchbase.git'
 
   option 'with-igbinary', "Build with igbinary support"
