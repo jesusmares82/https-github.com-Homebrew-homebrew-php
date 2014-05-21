@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Riak < AbstractPhp53Extension
   init
   homepage 'http://phpriak.bachpedersen.dk/'
-  url 'http://pecl.php.net/get/riak-1.1.5.tgz'
-  sha1 '358eb2ca0015d04e693b50bd386075a88c42e23d'
+  url 'http://pecl.php.net/get/riak-1.1.6.tgz'
+  sha1 '4aebf6b612a02d6e5a9098f851b0545f64bf4d09'
   head 'https://github.com/TriKaspar/php_riak.git'
 
   option 'with-riak', 'Also install Riak locally'
