@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php53Yar < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/yar'
-  url 'http://pecl.php.net/get/yar-1.2.2.tgz'
-  sha1 '882937c7892a4252ec03714f783317c4a1df66f3'
+  url 'http://pecl.php.net/get/yar-1.2.3.tgz'
+  sha1 '7593e07b8d881cdce56764545f21f7d405297107'
 
   def install
     Dir.chdir "yar-#{version}"
