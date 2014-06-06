@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Codeception < Formula
   homepage 'http://codeception.com/quickstart'
-  url 'http://codeception.com/releases/1.8.5/codecept.phar'
-  sha1 'c0e9ebe64f1b5fb9edc3c82d074880ec2abf0a13'
+  url 'http://codeception.com/releases/2.0.0/codecept.phar'
+  sha1 '4f9171f2fb2ade9ab043b6412839a2d4aad74a55'
 
   def install
     mv "codecept.phar", "codecept-#{version}.phar"
