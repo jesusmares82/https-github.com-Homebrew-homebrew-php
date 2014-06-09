@@ -29,11 +29,11 @@ class Php52 < AbstractPhp
   def install
     super
 
-    if File.exists?(bin + 'php.dSYM')
+    if File.exist?(bin + 'php.dSYM')
       mv bin + 'php.dSYM', bin + 'php'
     end
 
-    if File.exists?(bin + 'php-cgi.dSYM')
+    if File.exist?(bin + 'php-cgi.dSYM')
       mv bin + 'php-cgi.dSYM', bin + 'php-cgi'
     end
   end
