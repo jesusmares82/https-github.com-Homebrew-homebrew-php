@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Apcu < AbstractPhp55Extension
   init
   homepage 'http://pecl.php.net/package/apcu'
-  url 'http://pecl.php.net/get/apcu-4.0.5.tgz'
-  sha1 '01ff332dc197c1979f294b7c9339345f3c6382dd'
+  url 'http://pecl.php.net/get/apcu-4.0.6.tgz'
+  sha1 'f4841f20b333638381b3180ffa1f66b69de1de0f'
   head 'https://github.com/krakjoe/apcu.git'
 
   option 'with-apc-bc', "Wether APCu should provide APC full compatibility support"
