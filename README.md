@@ -240,7 +240,7 @@ The ordering of formula attributes, such as the `homepage`, `url`, `sha1`, etc. 
 
 All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.28`, `5.4.29` and `5.5.13`.
 
-Please also consider adding PHP extensions for PHP 5.6 beta version : `5.6.0-beta4`.
+Please also consider adding PHP extensions for PHP 5.6: `5.6.0-rc1`.
 
 ## Todo
 
