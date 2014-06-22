@@ -76,8 +76,6 @@ The purpose of this repository is to allow PHP developers to quickly retrieve wo
 
 ## Installation
 
-_[Brew Tap]_
-
 Setup the `homebrew/dupes` tap which has dependencies we need:
 
 ```sh
@@ -98,31 +96,13 @@ brew tap homebrew/homebrew-php
 
 ## Usage
 
-Tap the `homebrew/dupes` repository into your brew installation:
-
-```sh
-brew tap homebrew/dupes
-```
-
-Tap the `homebrew/versions` repository into your brew installation:
-
-```sh
-brew tap homebrew/versions
-```
-
-Tap the repository into your brew installation:
-
-```sh
-brew tap homebrew/homebrew-php
-```
-
 **Note:** For a list of available configuration options run:
 
 ```sh
 brew options php55
 ```
 
-Then install `php53`, `php54`, `php55`, or any formulae you might need:
+Once the tap is installed, you can install `php53`, `php54`, `php55`, or any formulae you might need via:
 
 ```sh
 brew install php55
