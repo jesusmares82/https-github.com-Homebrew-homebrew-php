@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Augmentedtypes < AbstractPhp54Extension
   init
   homepage 'https://github.com/box/augmented_types'
-  url 'https://github.com/box/augmented_types/archive/v0.5.2.tar.gz'
-  sha1 '289537c8ec853c35516d1d81cb5665800df45b0b'
+  url 'https://github.com/box/augmented_types/archive/v0.6.2.tar.gz'
+  sha1 'fcb4223b94f4af09d9a8fa67917e945f89faafe5'
   head 'https://github.com/box/augmented_types.git'
 
   def extension_type; "zend_extension"; end
