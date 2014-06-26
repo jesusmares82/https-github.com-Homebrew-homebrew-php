@@ -23,7 +23,7 @@ class InvalidPhpizeError < RuntimeError
 end
 
 class AbstractPhpExtension < Formula
-  def initialize name="__UNKNOWN__", *args
+  def initialize(name, *args)
     begin
       raise "One does not simply install an AbstractPhpExtension" if name == "abstract-php-extension"
       sup = super

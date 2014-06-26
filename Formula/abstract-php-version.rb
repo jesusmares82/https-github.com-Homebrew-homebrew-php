@@ -1,5 +1,5 @@
 class AbstractPhpVersion < Formula
-  def initialize name="__UNKNOWN__", *args
+  def initialize(name, *args)
     begin
       raise "One does not simply install an AbstractPhp formula" if name == "abstract-php-version"
       super
