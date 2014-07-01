@@ -2,6 +2,13 @@
 
 A centralized repository for PHP-related brews.
 
+## Bugs happen
+
+The more information you provide and the more detailed your report is, the easier for us to fix it.
+The best practice in filling a bug report can be seen for this issue https://github.com/Homebrew/homebrew-php/issues/1225.
+
+Please refer to [this section](#filing-bug-reports) for more information.
+
 ## Common Issues
 
 Bugs inevitably happen - none of us is running EVERY conceivable setup - but hopefully the install process can be made smoother through the following tips:
@@ -42,6 +49,27 @@ If you have recently upgraded your Mac OS X version or Xcode, you may have some 
 - Sometimes it appears that a formula is not available anymore, do the following: `brew tap --repair`.
 
 ### Filing Bug Reports
+
+The best practice for filling bug reports can be found here : https://github.com/Homebrew/homebrew-php/issues/1225.
+
+A blank bug report template can be found [here](https://gist.githubusercontent.com/lucasmichot/413c340c3fd97fef4cc0/raw/ce219a1cf2cd128764fce83628c47bf7e0d8adef/homebrew-php-bug-report-template).
+
+You can also copy/paste this markdown and add it in the description of your bug report:
+
+```
+<problem description>
+
+Parameter | Value
+------------------ | ------------------
+**OS X Version:** | <your OSX version>
+**Homebrew Version:** | <your Homebrew version>
+**PHP Version in use:** | <your PHP version>
+**Xcode Version:** | <your Xcode version>
+**Output of gcc -v:** | <result of the CLI output>
+**Output of php -v:** | <result of the CLI output>
+**Output of brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here within a gist** | <result of the CLI output>
+**Output of brew doctor within a gist** | <the link to your public Gist>
+```
 
 Please include the following information in your bug report:
 
