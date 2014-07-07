@@ -38,7 +38,7 @@ class AbstractPhp < Formula
     homepage 'http://php.net'
 
     # So PHP extensions don't report missing symbols
-    skip_clean ['bin', 'sbin']
+    skip_clean 'bin', 'sbin'
 
     head do
       depends_on 'autoconf' => :build
