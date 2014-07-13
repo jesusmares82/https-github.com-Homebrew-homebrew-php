@@ -7,7 +7,7 @@ class Php56Apcu < AbstractPhp56Extension
   sha1 'f4841f20b333638381b3180ffa1f66b69de1de0f'
   head 'https://github.com/krakjoe/apcu.git'
 
-  option 'with-apc-bc', "Wether APCu should provide APC full compatibility support"
+  option 'with-apc-bc', "Whether APCu should provide APC full compatibility support"
   depends_on 'pcre'
 
   def install
