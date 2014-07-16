@@ -14,7 +14,7 @@ class Php53 < AbstractPhp
   depends_on 'autoconf' => :build
   depends_on 're2c' => :build
   depends_on 'flex' => :build
-  depends_on 'bison27' => :build
+  depends_on 'homebrew/versions/bison27' => :build
 
   depends_on 'libevent' if build.with? 'fpm'
 

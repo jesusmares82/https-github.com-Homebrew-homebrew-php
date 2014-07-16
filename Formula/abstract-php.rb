@@ -44,7 +44,7 @@ class AbstractPhp < Formula
       depends_on 'autoconf' => :build
       depends_on 're2c' => :build
       depends_on 'flex' => :build
-      depends_on 'bison27' => :build
+      depends_on 'homebrew/versions/bison27' => :build
     end
 
     depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
