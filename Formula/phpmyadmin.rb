@@ -2,8 +2,8 @@ require 'formula'
 
 class Phpmyadmin < Formula
   homepage 'http://www.phpmyadmin.net'
-  url 'https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_2_5.tar.gz'
-  sha256 '94d4d9ef10dd9efcfe8f3859b99b679420aee63901c392bcb61b97b0f4bb48c6'
+  url 'https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_2_6.tar.gz'
+  sha256 '20546f9a307a87fb8910f4652fff8fcbbc5150e91f1d481fa4f782f291f8705d'
   head 'https://github.com/phpmyadmin/phpmyadmin.git'
 
   if build.with? 'mcrypt'
