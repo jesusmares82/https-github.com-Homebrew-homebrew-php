@@ -19,6 +19,11 @@ class Phpmyadmin < Formula
 
   def install
     (share+'phpmyadmin').install Dir['*']
+
+    if !(File.exists?(etc+'phpmyadmin.config.inc.php'))
+      cp (share+'phpmyadmin/config.sample.inc.php'), (etc+'phpmyadmin.config.inc.php')
+    end
+    ln_s (etc+'phpmyadmin.config.inc.php'), (share+'phpmyadmin/config.inc.php')
   end
 
   def caveats; <<-EOS.undent
@@ -39,7 +44,8 @@ class Phpmyadmin < Formula
 
     More documentation : file://#{share}/phpmyadmin/doc/
 
-    Don't forget to copy config.sample.inc.php to config.inc.php and :
+    Configuration has been copied to #{etc}/phpmyadmin.config.inc.php
+    Don't forget to:
       - change your secret blowfish
       - uncomment the configuration lines (pma, pmapass ...)
 
