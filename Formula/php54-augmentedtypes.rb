@@ -3,9 +3,11 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php54Augmentedtypes < AbstractPhp54Extension
   init
   homepage 'https://github.com/box/augmented_types'
-  url 'https://github.com/box/augmented_types/archive/v0.6.2.tar.gz'
-  sha1 'fcb4223b94f4af09d9a8fa67917e945f89faafe5'
+  url 'https://github.com/box/augmented_types/archive/v0.6.5.tar.gz'
+  sha1 '5f96071aa9c0736d6eebf9d217f1348281397a97'
   head 'https://github.com/box/augmented_types.git'
+
+  option 'without-default-enforcement', "Turn off Augmented Types enforcement by default"
 
   def extension_type; "zend_extension"; end
 
@@ -24,8 +26,12 @@ class Php54Augmentedtypes < AbstractPhp54Extension
   end
 
   def config_file
-    super + <<-EOS.undent
-      augmented_types.enforce_by_default = 1
-    EOS
+    if active_spec.build.with? 'default-enforcement'
+      super + <<-EOS.undent
+        augmented_types.enforce_by_default = 1
+      EOS
+    else
+      super
+    end
   end
 end
