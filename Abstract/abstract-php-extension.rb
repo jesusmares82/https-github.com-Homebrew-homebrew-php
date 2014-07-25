@@ -23,43 +23,23 @@ class InvalidPhpizeError < RuntimeError
 end
 
 class AbstractPhpExtension < Formula
-  def initialize(name, *args)
-    begin
-      raise "One does not simply install an AbstractPhpExtension" if name == "abstract-php-extension"
-      sup = super
+  def initialize(*)
+    super
 
-      if build.without? 'homebrew-php'
-        installed_php_version = nil
-        i = IO.popen("#{phpize} -v")
-        out = i.readlines.join("")
-        i.close
-        { 53 => 20090626, 54 => 20100412 }.each do |v, api|
-          installed_php_version = v.to_s if out.match(/#{api}/)
-        end
-
-        raise UnsupportedPhpApiError.new if installed_php_version.nil?
-
-        required_php_version = php_branch.sub('.', '').to_s
-        unless installed_php_version == required_php_version
-          raise InvalidPhpizeError.new(installed_php_version, required_php_version)
-        end
+    if build.without? 'homebrew-php'
+      installed_php_version = nil
+      i = IO.popen("#{phpize} -v")
+      out = i.readlines.join("")
+      i.close
+      { 53 => 20090626, 54 => 20100412 }.each do |v, api|
+        installed_php_version = v.to_s if out.match(/#{api}/)
       end
 
-      sup
-    rescue Exception => e
-      # Hack so that we pass all brew doctor tests
-      reraise = e.backtrace.select { |l| l.match(/(doctor|cleanup|leaves|uses)\.rb/) }
-      raise e if reraise.empty?
-    end
-  end
+      raise UnsupportedPhpApiError.new if installed_php_version.nil?
 
-  # Hack to allow 'brew uses' to work, which requires deps, version, and requirements
-  %w(deps requirements version).each do |method|
-    define_method(method) do
-      if defined?(active_spec) && active_spec.respond_to?(method)
-        active_spec.send(method)
-      else
-        method === 'version' ? 'abstract' : []
+      required_php_version = php_branch.sub('.', '').to_s
+      unless installed_php_version == required_php_version
+        raise InvalidPhpizeError.new(installed_php_version, required_php_version)
       end
     end
   end
