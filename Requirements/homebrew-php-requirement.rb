@@ -9,6 +9,12 @@ class HomebrewPhpRequirement < Requirement
     false
   end
 
+  # Hack to allow homebrew tap to symlink
+  # these and shut brew doctor up
+  def keg_only?
+    false
+  end
+
   def message
     "A requirement as failed"
   end
