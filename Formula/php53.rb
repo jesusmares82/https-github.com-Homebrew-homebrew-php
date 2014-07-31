@@ -1,4 +1,4 @@
-require File.expand_path("../../Abstract/abstract-php", __FILE__)
+require File.join(File.dirname(__FILE__), 'abstract-php')
 
 class Php53 < AbstractPhp
   init

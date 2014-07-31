@@ -1,4 +1,4 @@
-require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
+require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
 class Php56Yaml < AbstractPhp56Extension
   init
