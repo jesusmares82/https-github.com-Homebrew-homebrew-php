@@ -3,12 +3,12 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class PhpCodeSniffer < Formula
   homepage 'http://pear.php.net/package/PHP_CodeSniffer'
-  url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.5.3.tgz'
-  sha1 'b5006f4f11a564c9de9660967210b606637fa145'
+  url 'http://download.pear.php.net/package/PHP_CodeSniffer-1.5.4.tgz'
+  sha1 'ca7c3f78055f5681beda41ec581f029e92f1142e'
 
   devel do
-    url 'http://download.pear.php.net/package/PHP_CodeSniffer-2.0.0a2.tgz'
-    sha1 '1db15c6ae2387a4dea3589d9192b010430f3300a'
+    url 'http://download.pear.php.net/package/PHP_CodeSniffer-2.0.0RC1.tgz'
+    sha1 '005c65771f2c9995159ea2bf500ef05b32d4f012'
   end
 
   depends_on PhpMetaRequirement
