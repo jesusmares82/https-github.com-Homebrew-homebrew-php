@@ -28,7 +28,7 @@ class PhpCodeSniffer < Formula
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
     (libexec+phpcs_script_name).write <<-EOS.undent
-      #!/usr/bin/env php -q
+      #!/usr/bin/env php
       <?php
       require_once "#{prefix}/scripts/phpcs"
     EOS
@@ -39,7 +39,7 @@ class PhpCodeSniffer < Formula
     # See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
     if build.devel?
       (libexec+phpcbf_script_name).write <<-EOS.undent
-        #!/usr/bin/env php -q
+        #!/usr/bin/env php
         <?php
         require_once "#{prefix}/scripts/phpcbf"
         EOS
