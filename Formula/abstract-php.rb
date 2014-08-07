@@ -186,7 +186,7 @@ INFO
     "https://gist.github.com/ablyler/6579338/raw/5713096862e271ca78e733b95e0235d80fed671a/Makefile.global.diff" if MacOS.version == :leopard
   end
 
-  def install_args
+  def install_arguments
     args = [
       "--prefix=#{prefix}",
       "--localstatedir=#{var}",
@@ -355,7 +355,7 @@ INFO
 
   def _install
     system "./buildconf" if build.head?
-    system "./configure", *install_args()
+    system "./configure", *install_arguments()
 
     if build_apache?
       # Use Homebrew prefix for the Apache libexec folder
