@@ -68,6 +68,7 @@ class AbstractPhpExtension < Formula
     depends_on 'autoconf' => :build
 
     option 'without-homebrew-php', "Ignore homebrew PHP and use default instead"
+    option 'without-config-file', "Do not install extension config file"
   end
 
   def php_branch
@@ -199,12 +200,6 @@ EOS
       config_scandir_path.mkpath
       config_filepath.write(config_file)
     end
-  end
-
-  def options
-    options = []
-    options << ["--without-config-file", "Do not add #{config_filename} to #{config_scandir_path}"] if config_file
-    options
   end
 end
 
