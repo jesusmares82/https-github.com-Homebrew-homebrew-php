@@ -52,8 +52,9 @@ class Php52 < AbstractPhp
       defaults << "--with-pdo-mysql=#{Formula['mysql'].opt_prefix}/bin/mysql_config"
     end
 
+    defaults << "--enable-zend-multibyte" if build.include? 'disable-zend-multibyte'
+
     defaults + [
-      '--enable-zend-multibyte',
       '--enable-sqlite-utf8',
       "--with-mhash=#{Formula['mhash'].opt_prefix}"
     ]

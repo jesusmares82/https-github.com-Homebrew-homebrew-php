@@ -94,6 +94,7 @@ class AbstractPhp < Formula
     option 'without-bz2', 'Build without bz2 support'
     option 'without-pcntl', 'Build without Process Control support'
     option 'disable-opcache', 'Build without Opcache extension'
+    option 'disable-zend-multibyte', 'Disable auto-detection of Unicode encoded scripts (PHP 5.2 and 5.3 only)'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
@@ -186,7 +187,7 @@ INFO
     "https://gist.github.com/ablyler/6579338/raw/5713096862e271ca78e733b95e0235d80fed671a/Makefile.global.diff" if MacOS.version == :leopard
   end
 
-  def install_arguments
+  def install_args
     args = [
       "--prefix=#{prefix}",
       "--localstatedir=#{var}",
@@ -355,7 +356,7 @@ INFO
 
   def _install
     system "./buildconf" if build.head?
-    system "./configure", *install_arguments()
+    system "./configure", *install_args()
 
     if build_apache?
       # Use Homebrew prefix for the Apache libexec folder

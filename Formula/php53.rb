@@ -29,10 +29,9 @@ class Php53 < AbstractPhp
   end
 
   def install_args
-    super + [
-      "--enable-zend-multibyte",
-      "--enable-sqlite-utf8",
-    ]
+    args = super
+    args << "--enable-zend-multibyte" unless build.include? 'disable-zend-multibyte'
+    args << "--enable-sqlite-utf8"
   end
 
   def php_version
