@@ -7,10 +7,6 @@ def postgres_installed?
   `which pg_config`.length > 0
 end
 
-def build_intl?
-  false
-end
-
 class AbstractPhp < Formula
   def initialize(name, *args)
     begin
@@ -52,7 +48,7 @@ class AbstractPhp < Formula
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
-    depends_on 'icu4c' if build.include?('with-intl') && build_intl?
+    depends_on 'icu4c'
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
@@ -84,7 +80,6 @@ class AbstractPhp < Formula
     option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
     option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
     option 'with-apache', 'Enable building of shared Apache 2.0 Handler module, overriding any options which disable apache'
-    option 'with-intl', 'Include internationalization support'
     option 'with-imap', 'Include IMAP extension'
     option 'without-pear', 'Build without PEAR'
     option 'with-tidy', 'Include Tidy support'
@@ -198,6 +193,7 @@ INFO
       "--enable-dba",
       "--with-ndbm=/usr",
       "--enable-exif",
+      "--enable-intl",
       "--enable-soap",
       "--enable-wddx",
       "--enable-ftp",
@@ -219,6 +215,7 @@ INFO
       "--with-gd",
       "--enable-gd-native-ttf",
       "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
+      "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-gettext=#{Formula['gettext'].opt_prefix}",
@@ -290,12 +287,6 @@ INFO
       args << "--with-imap-ssl=/usr"
     end
 
-    if build.with? 'intl'
-      opoo "INTL is broken as of mxcl/homebrew#03ed757c, please install php#{php_version_path.to_s}-intl" unless build_intl?
-      args << "--enable-intl" if build_intl?
-      args << "--with-icu-dir=#{Formula['icu4c'].opt_prefix}" if build_intl?
-    end
-
     if build.with? 'mssql'
       args << "--with-mssql=#{Formula['freetds'].opt_prefix}"
       args << "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}"
@@ -365,10 +356,8 @@ INFO
         "INSTALL_IT = $(mkinstalldirs) '#{libexec}/apache2' \\2 LIBEXECDIR='#{libexec}/apache2' \\4"
     end
 
-    if build.include?('with-intl') && build_intl?
-      inreplace 'Makefile' do |s|
-        s.change_make_var! "EXTRA_LIBS", "\\1 -lstdc++"
-      end
+    inreplace 'Makefile' do |s|
+      s.change_make_var! "EXTRA_LIBS", "\\1 -lstdc++"
     end
 
     system "make"
@@ -464,17 +453,6 @@ INFO
 
             export PATH="$(brew --prefix homebrew/php/php#{php_version.to_s.gsub('.','')})/bin:$PATH"
     EOS
-
-    if build.include?('with-intl') && !build_intl?
-    s << <<-EOS.undent
-      ✩✩✩✩✩ INTL Support ✩✩✩✩✩
-
-      icu4c is broken as of mxcl/homebrew#03ed757c, so you will need to install intl as
-      a separate extension:
-
-          brew install php#{php_version_path.to_s}-intl
-    EOS
-    end
 
     if build.include?('with-mcrypt')
     s << <<-EOS.undent
