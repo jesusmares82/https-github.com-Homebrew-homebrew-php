@@ -27,22 +27,28 @@ class PhpCodeSniffer < Formula
 
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
-    (libexec+phpcs_script_name).write <<-EOS.undent
-      #!/bin/sh
-      /usr/bin/env php "#{prefix}/scripts/phpcs" "$@"
-    EOS
-    chmod 0755, libexec+phpcs_script_name
-    bin.install_symlink libexec+phpcs_script_name
+    if File.symlink? libexec+phpcs_script_name
+      File.delete libexec+phpcs_script_name
+    end
+    libexec.install_symlink prefix+'scripts'+phpcs_script_name
+    
+    if File.symlink? bin+phpcs_script_name
+      File.delete bin+phpcs_script_name
+    end
+    bin.install_symlink prefix+'scripts'+phpcs_script_name
 
     # The alpha release comes with "PHP Code Beautifier and Fixer".
     # See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
     if build.devel?
-      (libexec+phpcbf_script_name).write <<-EOS.undent
-        #!/bin/sh
-        /usr/bin/env php "#{prefix}/scripts/phpcbf" "$@"
-        EOS
-      chmod 0755, libexec+phpcbf_script_name
-      bin.install_symlink libexec+phpcbf_script_name
+      if File.symlink? libexec+phpcbf_script_name
+        File.delete libexec+phpcbf_script_name
+      end
+      libexec.install_symlink prefix+'scripts'+phpcbf_script_name
+
+      if File.symlink? bin+phpcbf_script_name
+        File.delete bin+phpcbf_script_name
+      end      
+      bin.install_symlink prefix+'scripts'+phpcbf_script_name
     end
 
     # Make sure the config file is preserved on upgrades. We do that
