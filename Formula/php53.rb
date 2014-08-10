@@ -66,7 +66,7 @@ index d506892..51617e8 100755
 
  case $host_alias in
 -*darwin9*|*darwin10*|*darwin11*|*darwin12*)
-+*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*)
++*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*|*darwin14*)
    ac_cv_exeext=
    ;;
  esac
@@ -79,7 +79,7 @@ index 4bf50ad..b0c9747 100644
  dnl This hack works around it. Ugly.
  case $host_alias in
 -*darwin9*|*darwin10*|*darwin11*|*darwin12*)
-+*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*)
++*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*|*darwin14*)
    ac_cv_exeext=
    ;;
  esac
