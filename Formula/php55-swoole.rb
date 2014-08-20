@@ -3,8 +3,8 @@ require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 class Php55Swoole < AbstractPhp55Extension
   init
   homepage 'https://github.com/matyhtf/swoole'
-  url 'http://pecl.php.net/get/swoole-1.7.2.tgz'
-  sha1 'a6cab2378246bb0ce160f46eb992351b9df03cd5'
+  url 'http://pecl.php.net/get/swoole-1.7.4.tgz'
+  sha1 'b09d47d27bf810cc8798384c8f21feb80a2a55f0'
   head 'https://github.com/matyhtf/swoole.git'
 
   def install
