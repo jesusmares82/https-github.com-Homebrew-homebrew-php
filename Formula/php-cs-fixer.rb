@@ -5,8 +5,8 @@ require File.expand_path("../../Requirements/phar-building-requirement", __FILE_
 
 class PhpCsFixer < Formula
   homepage 'http://cs.sensiolabs.org'
-  url 'https://github.com/fabpot/PHP-CS-Fixer/archive/v0.5.4.tar.gz'
-  sha1 'd53a25dc58f97b8c2ce5d700c396578907bd2d81'
+  url 'https://github.com/fabpot/PHP-CS-Fixer/archive/v0.5.7.tar.gz'
+  sha1 '82fe00e47588294b7b556bfb975fe6299e69d886'
   head 'https://github.com/fabpot/PHP-CS-Fixer.git'
 
   def self.init
