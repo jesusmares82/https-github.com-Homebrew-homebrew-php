@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php54Binpack < AbstractPhp55Extension
+class Php54Binpack < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/binpack'
   url 'http://pecl.php.net/get/binpack-1.0.1.tgz'
