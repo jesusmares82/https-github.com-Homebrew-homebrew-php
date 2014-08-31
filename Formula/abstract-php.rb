@@ -234,8 +234,8 @@ INFO
     end
 
     if build.with? 'snmp'
-      if MacOS.version >= :yosemite && build.include?('with-thread-safety')
-        raise "Please add --without-snmp if you wish to use --with-thread-safety on >= Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
+      if MacOS.version >= :yosemite && (build.include?('with-thread-safety') || build.include?('with-homebrew-openssl'))
+        raise "Please add --without-snmp if you wish to use --with-thread-safety or --with-homebrew-openssl on >= Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
       end
 
       args << "--with-snmp=/usr"
