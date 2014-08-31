@@ -370,6 +370,12 @@ INFO
 
     system bin+"pear", "config-set", "php_ini", config_path+"php.ini" unless skip_pear_config_set?
 
+    # remove intl.ini, since it is now always compiled into php
+    intl_config = config_path + "conf.d/ext-intl.ini"
+    if intl_config.file?
+      File.delete intl_config
+    end
+
     if build.with? 'fpm'
       if File.exist?('sapi/fpm/init.d.php-fpm')
         sbin.install 'sapi/fpm/init.d.php-fpm' => "php#{php_version_path.to_s}-fpm"
