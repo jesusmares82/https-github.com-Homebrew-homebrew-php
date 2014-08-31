@@ -87,6 +87,7 @@ class AbstractPhp < Formula
     option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
     option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
     option 'without-bz2', 'Build without bz2 support'
+    option 'without-snmp', 'Build without SNMP support'
     option 'without-pcntl', 'Build without Process Control support'
     option 'disable-opcache', 'Build without Opcache extension'
     option 'disable-zend-multibyte', 'Disable auto-detection of Unicode encoded scripts (PHP 5.2 and 5.3 only)'
@@ -219,7 +220,6 @@ INFO
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-gettext=#{Formula['gettext'].opt_prefix}",
-      "--with-snmp=/usr",
       "--with-libedit",
       "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
       "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
@@ -231,6 +231,14 @@ INFO
       args << "--with-curl=#{Formula['curl'].opt_prefix}"
     else
       args << "--with-curl"
+    end
+
+    if build.with? 'snmp'
+      if MacOS.version >= :yosemite && build.include?('with-thread-safety')
+        raise "Please add --without-snmp if you wish to use --with-thread-safety on >= Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
+      end
+
+      args << "--with-snmp=/usr"
     end
 
     unless MacOS.version >= :lion
