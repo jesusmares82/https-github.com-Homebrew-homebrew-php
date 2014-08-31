@@ -239,6 +239,8 @@ INFO
       end
 
       args << "--with-snmp=/usr"
+    else
+      args << "--without-snmp"
     end
 
     unless MacOS.version >= :lion
