@@ -8,28 +8,6 @@ def postgres_installed?
 end
 
 class AbstractPhp < Formula
-  def initialize(name, *args)
-    begin
-      raise "One does not simply install an AbstractPhp formula" if name == "abstract-php"
-      super
-    rescue Exception => e
-      # Hack so that we pass all brew doctor tests
-      reraise = e.backtrace.select { |l| l.match(/(doctor|cleanup|leaves|uses)\.rb/) }
-      raise e if reraise.empty?
-    end
-  end
-
-  # Hack to allow 'brew uses' to work, which requires deps, version, and requirements
-  %w(deps requirements version).each do |method|
-    define_method(method) do
-      if defined?(active_spec) && active_spec.respond_to?(method)
-        active_spec.send(method)
-      else
-        method === 'version' ? 'abstract' : []
-      end
-    end
-  end
-
   def self.init
     homepage 'http://php.net'
 
