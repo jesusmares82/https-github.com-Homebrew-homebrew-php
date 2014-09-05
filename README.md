@@ -212,7 +212,7 @@ PHP Extensions MUST be prefixed with `phpVERSION`. For example, instead of the `
 The template for the `php55-example` pecl extension would be as follows. Please use it as an example for any new extension formulae:
 
 ```ruby
-require File.join(File.dirname(__FILE__), 'abstract-php-extension')
+require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Example < AbstractPhp55Extension
   init
