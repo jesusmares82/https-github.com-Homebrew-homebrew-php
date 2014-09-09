@@ -12,7 +12,7 @@ class Boris < Formula
   def install
     libexec.install "boris.phar"
     sh = libexec + "boris"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/boris.phar $*")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/boris.phar \"$@\"")
     chmod 0755, sh
     bin.install_symlink sh
   end
