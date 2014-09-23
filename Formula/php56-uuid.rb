@@ -7,19 +7,18 @@ class Php56Uuid < AbstractPhp56Extension
   sha1 'f51820a310ade0eb7200375486bf88d721d89f17'
   head 'https://svn.php.net/repository/pecl/uuid/trunk'
 
-  def patches
-    # fixes build errors on OSX 10.6 and 10.7
-    # https://bugs.php.net/bug.php?id=62009
-    # https://bugs.php.net/bug.php?id=58311
-    p = []
-
-    if build.head?
-      p << "https://gist.github.com/phoenixsong6/4958223/raw/e802b0e6daebb4403dc77c81e149c5f8c8f49b7e/php-uuid-trunk.patch"
-    else
-      p << "https://gist.github.com/phoenixsong6/4958223/raw/4ad7ebf2bff53887f64ac5be802b85ea5856fa85/php-uuid.patch"
+  stable do
+    patch do
+      url "https://gist.github.com/phoenixsong6/4958223/raw/4ad7ebf2bff53887f64ac5be802b85ea5856fa85/php-uuid.patch"
+      sha1 "274dfb222ee214a876b2e5bd070b711ce79fd859"
     end
+  end
 
-    return p
+  head do
+    patch do
+      url "https://gist.github.com/phoenixsong6/4958223/raw/e802b0e6daebb4403dc77c81e149c5f8c8f49b7e/php-uuid-trunk.patch"
+      sha1 "b5fbab7574cf035d318fd932ea5bd4bca0aa44e9"
+    end
   end
 
   def install

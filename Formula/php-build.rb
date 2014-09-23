@@ -15,7 +15,7 @@ class PhpBuild < Formula
     man1.install Dir['man/php-build.1']
   end
 
-  def test
+  test do
     system "php-build --definitions"
   end
 

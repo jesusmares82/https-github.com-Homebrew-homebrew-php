@@ -40,7 +40,7 @@ class PhpCsFixer < Formula
     bin.install_symlink sh
   end
 
-  def test
+  test do
     system 'php-cs-fixer --version'
   end
 

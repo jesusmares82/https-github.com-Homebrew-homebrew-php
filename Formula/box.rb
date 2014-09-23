@@ -18,7 +18,7 @@ class Box < Formula
     bin.install_symlink sh
   end
 
-  def test
+  test do
     system 'box --version'
   end
 

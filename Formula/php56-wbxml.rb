@@ -9,7 +9,7 @@ class Php56Wbxml < AbstractPhp56Extension
 
   depends_on 'libwbxml'
 
-  def patches
+  patch do
     # php-wbxml looks for the libwbxml headers in the wrong location
     DATA
   end

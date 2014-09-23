@@ -42,7 +42,7 @@ class Php53 < AbstractPhp
     53
   end
 
-  def patches
+  patch do
     DATA
   end
 end

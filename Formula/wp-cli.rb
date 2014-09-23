@@ -23,7 +23,7 @@ class WpCli < Formula
     end
   end
 
-  def test
+  test do
     system "#{bin}/wp --info"
   end
 end

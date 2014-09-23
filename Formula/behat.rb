@@ -19,7 +19,7 @@ class Behat < Formula
     bin.install_symlink sh
   end
 
-  def test
+  test do
     system 'behat --version'
   end
 

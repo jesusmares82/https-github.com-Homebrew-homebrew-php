@@ -10,7 +10,7 @@ class Phplint < Formula
     cause 'Clang which does not support nested functions. Use gcc instead.'
   end
 
-  def patches
+  patch do
     # Rationale: The ./configure tosses up errors that can be ignored, but homebrew
     #     still catches them, so I've just patched in the file that gets created.
     #     As for phpl, it's useful because it includes the default modules with

@@ -18,7 +18,7 @@ class Pdepend < Formula
     bin.install_symlink sh
   end
 
-  def test
+  test do
     system 'pdepend --version'
   end
 

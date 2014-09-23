@@ -10,7 +10,7 @@ class Php56Imagick < AbstractPhp56Extension
   depends_on 'pkg-config' => :build
   depends_on 'imagemagick'
 
-  def patches
+  patch do
     # Rationale: Fix for the header file MagickWand.h
     #     could not be located error during ./configure
     #
