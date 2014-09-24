@@ -10,13 +10,11 @@ class Phplint < Formula
     cause 'Clang which does not support nested functions. Use gcc instead.'
   end
 
-  patch do
-    # Rationale: The ./configure tosses up errors that can be ignored, but homebrew
-    #     still catches them, so I've just patched in the file that gets created.
-    #     As for phpl, it's useful because it includes the default modules with
-    #     --modules-path, but the default options are WAY too verbose.
-    DATA
-  end
+  # Rationale: The ./configure tosses up errors that can be ignored, but homebrew
+  #     still catches them, so I've just patched in the file that gets created.
+  #     As for phpl, it's useful because it includes the default modules with
+  #     --modules-path, but the default options are WAY too verbose.
+  patch :DATA
 
   def install
     system "#{ENV.cc} -fnested-functions src/phplint.c -o src/phplint"

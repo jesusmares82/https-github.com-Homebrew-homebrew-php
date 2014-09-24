@@ -8,10 +8,8 @@ class Phpsh < Formula
   depends_on 'pcre'
   depends_on :python
 
-  patch do
-    # fixes https://github.com/facebook/phpsh/pull/46 and https://github.com/josegonzalez/homebrew-php/issues/966
-    DATA
-  end
+  # fixes https://github.com/facebook/phpsh/pull/46 and https://github.com/josegonzalez/homebrew-php/issues/966
+  patch :DATA
 
   def install
     system "python", "setup.py", "install", "--prefix=#{prefix}"
