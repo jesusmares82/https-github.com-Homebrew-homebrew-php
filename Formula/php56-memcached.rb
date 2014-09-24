@@ -18,7 +18,8 @@ class Php56Memcached < AbstractPhp56Extension
 
   patch do
     # adapt to libmemcached >= 1.0.9 new instance API (source: paravoid/php-memcached 37069e18ad399a8cc03d5fe9757e1481814ecb44)
-    "https://gist.githubusercontent.com/ablyler/6331007/raw/409ef282616859b2a7d19ba703c9b736576db16e/libmemcache-new-instance-api.patch"
+    url "https://gist.githubusercontent.com/ablyler/6331007/raw/409ef282616859b2a7d19ba703c9b736576db16e/libmemcache-new-instance-api.patch"
+    sha1 "bc958b0d50b7a260c13dc71451e6c35c08bc7c35"
   end
 
   def install
