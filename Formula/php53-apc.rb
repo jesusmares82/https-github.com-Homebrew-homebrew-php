@@ -14,10 +14,10 @@ class Php53Apc < AbstractPhp53Extension
 
   depends_on 'pcre'
 
-  patch do
+  stable do
     # fixes "Incorrect version tag: APC 3.1.10 shows 3.1.9"
     # https://bugs.php.net/bug.php?id=61695
-    DATA if version == '3.1.10'
+    patch :DATA
   end
 
   def install
