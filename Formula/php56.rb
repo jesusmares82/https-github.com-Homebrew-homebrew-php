@@ -19,7 +19,14 @@ class Php56 < AbstractPhp
     args << "--enable-zend-signals"
     args << "--enable-dtrace" if build.without? 'phpdbg'
     # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
-    args << "--disable-phpdbg" if build.without? 'phpdbg'
+    if build.without? 'phpdbg'
+      args << "--disable-phpdbg"
+    else
+      args << "--enable-phpdbg"
+      if build.with? 'debug'
+        args << "--enable-phpdbg-debug"
+      end
+    end
     if build.include? 'disable-opcache'
       args << "--disable-opcache"
     else
