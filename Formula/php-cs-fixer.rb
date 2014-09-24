@@ -9,18 +9,14 @@ class PhpCsFixer < Formula
   sha1 '82fe00e47588294b7b556bfb975fe6299e69d886'
   head 'https://github.com/fabpot/PHP-CS-Fixer.git'
 
-  def self.init
-    depends_on PhpMetaRequirement
-    depends_on PharRequirement
-    depends_on PharBuildingRequirement
-    depends_on "composer"
-    depends_on "php53" if Formula['php53'].linked_keg.exist?
-    depends_on "php54" if Formula['php54'].linked_keg.exist?
-    depends_on "php55" if Formula['php55'].linked_keg.exist?
-    depends_on "php56" if Formula['php56'].linked_keg.exist?
-  end
-
-  init
+  depends_on PhpMetaRequirement
+  depends_on PharRequirement
+  depends_on PharBuildingRequirement
+  depends_on "composer"
+  depends_on "php53" if Formula['php53'].linked_keg.exist?
+  depends_on "php54" if Formula['php54'].linked_keg.exist?
+  depends_on "php55" if Formula['php55'].linked_keg.exist?
+  depends_on "php56" if Formula['php56'].linked_keg.exist?
 
   def install
     File.open("genphar.php", 'w') {|f| f.write(phar_stub) }
