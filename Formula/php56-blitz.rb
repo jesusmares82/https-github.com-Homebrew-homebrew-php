@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php56Blitz < AbstractPhp56Extension
   init
   homepage 'http://alexeyrybak.com/blitz/blitz_en.html'
-  url 'http://alexeyrybak.com/blitz/all-releases/blitz-0.8.11.tar.gz'
-  sha1 '4bca63ebf9f33c5d76a3db7412f9a5ed8be152cd'
+  url 'http://alexeyrybak.com/blitz/all-releases/blitz-0.8.12.tar.gz'
+  sha1 '26d23d43e7ee7953138da22068f0f70e41c6d86f'
 
   head 'https://github.com/alexeyrybak/blitz.git'
 
