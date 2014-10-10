@@ -18,6 +18,7 @@ class AbstractPhp < Formula
     end
 
     depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
+    depends_on 'enchant' => :optional
     depends_on 'freetds' if build.include?('with-mssql')
     depends_on 'freetype'
     depends_on 'gettext'
@@ -258,6 +259,10 @@ INFO
     if build_apache?
       args << "--with-apxs2=#{apache_apxs}"
       args << "--libexecdir=#{libexec}"
+    end
+
+    if build.with? 'enchant'
+      args << "--with-enchant=#{Formula['enchant'].opt_prefix}"
     end
 
     if build.with? 'gmp'
