@@ -272,7 +272,12 @@ INFO
 
     if build.with? 'imap'
       args << "--with-imap=#{Formula['imap-uw'].opt_prefix}"
-      args << "--with-imap-ssl=/usr"
+      
+      if build.with? 'homebrew-openssl'
+        args << "--with-imap-ssl=" + Formula['openssl'].opt_prefix.to_s
+      else
+        args << "--with-imap-ssl=/usr"
+      end
     end
 
     if build.with? 'mssql'
