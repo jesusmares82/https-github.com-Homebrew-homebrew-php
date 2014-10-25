@@ -2,8 +2,8 @@ require "formula"
 
 class Drush < Formula
   homepage "https://github.com/drush-ops/drush"
-  url "https://github.com/drush-ops/drush/archive/6.3.0.tar.gz"
-  sha1 "90fde5acfbd6feefad02453ee9f31a0ac6d2f80e"
+  url "https://github.com/drush-ops/drush/archive/6.4.0.tar.gz"
+  sha1 "99e338a399bd300964beaabf31dee3a99bbdfeae"
 
   head do
     url "https://github.com/drush-ops/drush.git"
