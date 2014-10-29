@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpdox < Formula
   homepage 'https://github.com/theseer/phpdox'
-  url 'http://phpdox.de/releases/phpdox-0.5.phar'
-  sha1 '49916f9d9ee4c7e9291ccd85334e4cd9a38a73b6'
+  url 'http://phpdox.de/releases/phpdox-0.7.0.phar'
+  sha1 'e8b3f31de7cde804c6f5eede69b0d210eafc7aac'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
