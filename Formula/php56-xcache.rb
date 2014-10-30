@@ -3,10 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php56Xcache < AbstractPhp56Extension
   init
   homepage 'http://xcache.lighttpd.net'
-  url 'http://xcache.lighttpd.net/pub/Releases/3.1.0/xcache-3.1.0.tar.bz2'
-  sha1 'db30f642de9bc97538fe4f85940e8a69a1a365c8'
-
-  def extension_type; "zend_extension"; end
+  url 'http://xcache.lighttpd.net/pub/Releases/3.2.0/xcache-3.2.0.tar.bz2'
+  sha1 '711f56b66d8da884214fa311a28e1d299bb73e05'
 
   def install
     ENV.universal_binary if build.universal?
