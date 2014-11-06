@@ -8,7 +8,6 @@ class Php56Runkit < AbstractPhp56Extension
   head 'https://github.com/zenovich/runkit.git'
   version '5e179e9'
 
-  
   patch do
     url "https://github.com/zenovich/runkit/pull/71.diff"
     sha1 "c5ede24d0200d728e73ba19d3d22df1b496d0fc7"
