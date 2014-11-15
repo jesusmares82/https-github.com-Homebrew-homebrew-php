@@ -9,7 +9,7 @@ end
 
 class AbstractPhp < Formula
   def self.init
-    homepage 'http://php.net'
+    homepage 'https://php.net'
 
     # So PHP extensions don't report missing symbols
     skip_clean 'bin', 'sbin'
