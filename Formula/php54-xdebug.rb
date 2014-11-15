@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Xdebug < AbstractPhp54Extension
   init
   homepage 'http://xdebug.org'
-  url 'http://xdebug.org/files/xdebug-2.2.5.tgz'
-  sha1 '62d388e07a45cab9eee498e7905c92a7e5d023cc'
+  url 'http://xdebug.org/files/xdebug-2.2.6.tgz'
+  sha1 '829b7e37eb8c198bdb4924ad337741ea84cb81a1'
   head 'https://github.com/xdebug/xdebug.git'
 
   def extension_type; "zend_extension"; end
