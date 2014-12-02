@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php56Gmagick < AbstractPhp56Extension
   init
   homepage 'http://pecl.php.net/package/gmagick'
-  url 'http://pecl.php.net/get/gmagick-1.1.6RC2.tgz'
-  sha1 '8779b2d8d1b836f2f69bc93744a905b277ab2690'
+  url 'http://pecl.php.net/get/gmagick-1.1.7RC2.tgz'
+  sha1 'c8eaf11c9e963854b1690d70971670dece6eec42'
 
   depends_on "graphicsmagick"
 
