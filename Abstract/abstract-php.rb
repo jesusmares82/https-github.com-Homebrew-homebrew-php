@@ -356,7 +356,16 @@ INFO
     ENV.deparallelize # parallel install fails on some systems
     system "make install"
 
-    config_path.install default_config => "php.ini" unless File.exist? config_path+"php.ini"
+    unless File.exist? config_path+"php.ini"
+      config_path.install default_config => "php.ini"
+
+      unless build.with? 'disable-opcache'
+        inreplace config_path+"php.ini" do |s|
+          s.sub!(/^(\[opcache\].*)$/, "\\1\n; Load the opcache extension\nzend_extension=opcache.so\n")
+          s.gsub!(/^;?opcache\.enable\s*=.+$/,'opcache.enable=0')
+        end
+      end
+    end
 
     chmod_R 0775, lib+"php"
 
