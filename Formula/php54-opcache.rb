@@ -7,6 +7,13 @@ class Php54Opcache < AbstractPhp54Extension
   sha1 'e03bd1e0286cef4fadf725d4ebf5cc69bbd07bc6'
   head 'https://github.com/zendtech/ZendOptimizerPlus.git'
 
+  bottle do
+    root_url "https://downloads.sf.net/project/machomebrew/Bottles/php"
+    sha1 "f9f8451eeb11510015d943372b4a3613558d772c" => :yosemite
+    sha1 "bab9ff57106c0227aee91c0843a57a15398f4ae9" => :mavericks
+    sha1 "1da0ebbce4772cae18e4a632400ff17569484f87" => :mountain_lion
+  end
+
   depends_on 'pcre'
 
   def extension_type; "zend_extension"; end
