@@ -48,15 +48,15 @@ class AbstractPhpVersion < Formula
   end
 
   module Php56Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.6.3.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.6.4.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.6.3'
+    PHP_VERSION     = '5.6.4'
     PHP_BRANCH      = 'PHP-5.6'
 
     PHP_CHECKSUM    = {
-                        :md5    => '13fb79d464b08392703e311778dd7ec0',
-                        :sha1   => '05cb83b781b5a1259ee7ba4eda4b6fa48a58ffec',
-                        :sha256 => '8986b20124d14430d795165e47801ef065a38d5855bea39d0d47b13ab9ad4009',
+                        :md5    => 'd31629e9c2fb5f438ab2dc0aa597cd82',
+                        :sha1   => '3ee5b504fd8dbbcacb80acc573f536851f83eead',
+                        :sha256 => '576f9001b612f5ddc22f447311bbec321e2c959b6a52259d664c4ba04ef044f1',
                       }
   end
 end
