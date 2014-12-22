@@ -37,8 +37,13 @@ class Phpmyadmin < Formula
       <Directory #{HOMEBREW_PREFIX}/share/phpmyadmin/>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
-        Order allow,deny
-        Allow from all
+        <IfModule mod_authz_core.c>
+          Require all granted
+        </IfModule>
+        <IfModule !mod_authz_core.c>
+          Order allow,deny
+          Allow from all
+        </IfModule>
       </Directory>
     Then, open http://localhost/phpmyadmin
 
