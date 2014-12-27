@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Redis < AbstractPhp53Extension
   init
-  homepage 'https://github.com/nicolasff/phpredis'
-  url 'https://github.com/nicolasff/phpredis/archive/2.2.5.tar.gz'
-  sha1 'a2d09bcefb440b2e3fb3b9a08d05810fc3224c9b'
-  head 'https://github.com/nicolasff/phpredis.git'
+  homepage 'https://github.com/phpredis/phpredis'
+  url 'https://github.com/phpredis/phpredis/archive/2.2.6.tar.gz'
+  sha1 'df3d6c9c4d48bf5c1dbcfc64947f7cec828b5014'
+  head 'https://github.com/phpredis/phpredis.git'
 
   option 'with-igbinary', "Build with igbinary support"
 
