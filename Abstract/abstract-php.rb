@@ -70,7 +70,7 @@ class AbstractPhp < Formula
   skip_clean 'lib/php/.lock'
 
   def config_path
-    etc+"php/"+php_version
+    etc+"php"+php_version
   end
 
   def home_path
