@@ -47,10 +47,10 @@ class Php54 < AbstractPhp
   end
 
   def php_version
-    5.4
+    "5.4"
   end
 
   def php_version_path
-    54
+    "54"
   end
 end

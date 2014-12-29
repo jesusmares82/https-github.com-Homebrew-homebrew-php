@@ -37,11 +37,11 @@ class Php53 < AbstractPhp
   end
 
   def php_version
-    5.3
+    "5.3"
   end
 
   def php_version_path
-    53
+    "53"
   end
 
   patch :DATA

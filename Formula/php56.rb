@@ -35,10 +35,10 @@ class Php56 < AbstractPhp
   end
 
   def php_version
-    5.6
+    "5.6"
   end
 
   def php_version_path
-    56
+    "56"
   end
 end

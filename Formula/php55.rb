@@ -52,10 +52,10 @@ class Php55 < AbstractPhp
   end
 
   def php_version
-    5.5
+    "5.5"
   end
 
   def php_version_path
-    55
+    "55"
   end
 end
