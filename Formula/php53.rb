@@ -25,7 +25,7 @@ class Php53 < AbstractPhp
   def install
     # files need to be regenerated to fix issue #962
     system "rm Zend/zend_{language,ini}_parser.[ch]"
-    super()
+    super
   end
 
   def install_args
