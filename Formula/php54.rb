@@ -28,7 +28,6 @@ class Php54 < AbstractPhp
 
   def install_args
     args = super
-    args << "--with-homebrew-openssl" if MacOS.version == :leopard
     args << "--enable-zend-signals"
     # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
     args << "--enable-dtrace" if build.without? 'phpdbg'
