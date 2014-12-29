@@ -63,7 +63,6 @@ class AbstractPhp < Formula
     option 'without-snmp', 'Build without SNMP support'
     option 'without-pcntl', 'Build without Process Control support'
     option 'disable-opcache', 'Build without Opcache extension'
-    option 'disable-zend-multibyte', 'Disable auto-detection of Unicode encoded scripts (PHP 5.2 and 5.3 only)'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
