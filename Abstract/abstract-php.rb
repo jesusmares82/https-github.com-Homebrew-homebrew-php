@@ -3,10 +3,6 @@
 require 'formula'
 require File.join(File.dirname(__FILE__), 'abstract-php-version')
 
-def postgres_installed?
-  `which pg_config`.length > 0
-end
-
 class AbstractPhp < Formula
   def self.init
     homepage 'https://php.net'
@@ -37,10 +33,10 @@ class AbstractPhp < Formula
     depends_on 'homebrew/dupes/zlib'
     depends_on 'libtool' => :build if build.without? 'disable-opcache'
 
+    deprecated_option "with-pgsql" => "with-postgresql"
+    depends_on :postgresql => :optional
+
     # Sanity Checks
-    if build.with? 'pgsql'
-      depends_on 'postgresql' => :recommended unless postgres_installed?
-    end
 
     if build.include?('with-cgi') && build.include?('with-fpm')
       raise "Cannot specify more than one executable to build."
@@ -51,7 +47,6 @@ class AbstractPhp < Formula
     option 'with-debug', 'Compile with debugging symbols'
     option 'with-libmysql', 'Include (old-style) libmysql support instead of mysqlnd'
     option 'without-mysql', 'Remove MySQL/MariaDB support'
-    option 'with-pgsql', 'Include PostgreSQL support'
     option 'with-mssql', 'Include MSSQL-DB support'
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-apache)'
@@ -297,8 +292,8 @@ INFO
       args << "--with-pdo-mysql=mysqlnd"
     end
 
-    if build.with? 'pgsql'
-      if File.directory?(Formula['postgresql'].opt_prefix.to_s)
+    if build.with? 'postgresql'
+      if Formula['postgresql'].opt_prefix.directory?
         args << "--with-pgsql=#{Formula['postgresql'].opt_prefix}"
         args << "--with-pdo-pgsql=#{Formula['postgresql'].opt_prefix}"
       else
