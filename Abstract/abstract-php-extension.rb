@@ -69,7 +69,7 @@ class AbstractPhpExtension < Formula
     if build.without? 'homebrew-php'
       "phpize"
     else
-      "#{(Formula[php_formula]).bin}/phpize"
+      "#{Formula[php_formula].opt_bin}/phpize"
     end
   end
 
@@ -77,7 +77,7 @@ class AbstractPhpExtension < Formula
     if build.without? 'homebrew-php'
       "php.ini presented by \"php --ini\""
     else
-      "#{(Formula[php_formula]).config_path}/php.ini"
+      "#{Formula[php_formula].config_path}/php.ini"
     end
   end
 
@@ -85,7 +85,7 @@ class AbstractPhpExtension < Formula
     if build.without? 'homebrew-php'
       ""
     else
-      "--with-php-config=#{(Formula[php_formula]).bin}/php-config"
+      "--with-php-config=#{Formula[php_formula].opt_bin}/php-config"
     end
   end
 
