@@ -60,12 +60,9 @@ class AbstractPhpExtension < Formula
   end
 
   def safe_phpize
-    cmd = ''
-    cmd << "PHP_AUTOCONF=\"#{Formula['autoconf'].opt_prefix}/bin/autoconf\" "
-    cmd << "PHP_AUTOHEADER=\"#{Formula['autoconf'].opt_prefix}/bin/autoheader\" "
-    cmd << phpize
-
-    system cmd
+    ENV["PHP_AUTOCONF"] = "#{Formula["autoconf"].opt_bin}/autoconf"
+    ENV["PHP_AUTOHEADER"] = "#{Formula["autoconf"].opt_bin}/autoheader"
+    system phpize
   end
 
   def phpize
