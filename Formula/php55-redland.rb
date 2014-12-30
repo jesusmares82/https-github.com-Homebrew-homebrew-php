@@ -17,12 +17,7 @@ class Php55Redland < AbstractPhp55Extension
   end
 
   def install
-    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula['redland']).lib}/pkgconfig", ':'
-    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula['raptor']).lib}/pkgconfig", ':'
-    ENV.append 'PKG_CONFIG_LIBDIR', "#{(Formula['rasqal']).lib}/pkgconfig", ':'
-
     args = %W[
-      --disable-debug
       --disable-dependency-tracking
       --with-php
       --with-php-linking=dylib
