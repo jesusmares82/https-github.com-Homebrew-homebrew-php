@@ -39,9 +39,6 @@ class Php55Http < AbstractPhp55Extension
     write_config_file if build.with? "config-file"
 
     # remove old configuration file
-    old_config_filepath = config_scandir_path / "ext-http.ini"
-    if File.exist?(old_config_filepath)
-      system "unlink " + old_config_filepath
-    end
+    rm_f config_scandir_path / "ext-http.ini"
   end
 end
