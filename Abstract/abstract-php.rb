@@ -464,17 +464,11 @@ INFO
         ✩✩✩✩ FPM ✩✩✩✩
 
         To launch php-fpm on startup:
-            * If this is your first install:
-                mkdir -p ~/Library/LaunchAgents
-                cp #{plist_path} ~/Library/LaunchAgents/
-                launchctl load -w ~/Library/LaunchAgents/#{plist_name}.plist
+            mkdir -p ~/Library/LaunchAgents
+            cp #{opt_prefix}/#{plist_name}.plist ~/Library/LaunchAgents/
+            launchctl load -w ~/Library/LaunchAgents/#{plist_name}.plist
 
-            * If this is an upgrade and you already have the #{plist_name}.plist loaded:
-                launchctl unload -w ~/Library/LaunchAgents/#{plist_name}.plist
-                cp #{plist_path} ~/Library/LaunchAgents/
-                launchctl load -w ~/Library/LaunchAgents/#{plist_name}.plist
-
-        The control script is located at #{sbin}/php#{php_version_path}-fpm
+        The control script is located at #{opt_sbin}/php#{php_version_path}-fpm
       EOS
 
       if MacOS.version >= :mountain_lion
@@ -513,7 +507,7 @@ INFO
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>#{sbin}/php-fpm</string>
+        <string>#{opt_sbin}/php-fpm</string>
         <string>--fpm-config</string>
         <string>#{config_path}/php-fpm.conf</string>
       </array>
@@ -526,7 +520,7 @@ INFO
       <key>WorkingDirectory</key>
       <string>#{var}</string>
       <key>StandardErrorPath</key>
-      <string>#{prefix}/var/log/php-fpm.log</string>
+      <string>#{opt_prefix}/var/log/php-fpm.log</string>
     </dict>
     </plist>
     EOPLIST
