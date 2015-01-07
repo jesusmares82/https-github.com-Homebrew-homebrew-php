@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php56Vld < AbstractPhp56Extension
   init
   homepage 'http://pecl.php.net/package/vld'
-  url 'http://pecl.php.net/get/vld-0.12.0.tgz'
-  sha1 'c4006aeed9fd8190501f6b5d6c20315259f2795a'
+  url 'http://pecl.php.net/get/vld-0.13.0.tgz'
+  sha1 '19936e64c29339d1a5cf48fc18ef762fbd8a8a1a'
   head 'https://github.com/derickr/vld.git'
 
   def install
