@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Box < Formula
   homepage 'http://box-project.org/'
-  url 'https://github.com/kherge/Box/releases/download/2.4.0/box-2.4.0.phar'
-  sha1 'd18596280a5b0fcd103b5ad4552b5ffc97816d61'
+  url 'https://github.com/box-project/box2/releases/download/2.5.0/box-2.5.0.phar'
+  sha1 '5664cb4603917a77ea71fb325845e33d886cccb1'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
