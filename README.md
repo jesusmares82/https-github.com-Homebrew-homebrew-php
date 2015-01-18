@@ -240,7 +240,7 @@ Before testing the extension, you will need run the command `brew tap --repair` 
 
 Before finalizing the extension, run the command `brew audit` to check that your formula respects Homebrew best practice and syntax.
 
-Defining extensions inheriting AbstractPhp5(3456). Extension will provide a `write_config_file` which add `ext-{extension}.ini` to `conf.d`, don’t forget to remove it manually upon extension removal. Please see [abstract-php-extension.rb](Formula/abstract-php-extension.rb) for more details.
+Defining extensions inheriting AbstractPhp5(3456). Extension will provide a `write_config_file` which add `ext-{extension}.ini` to `conf.d`, don’t forget to remove it manually upon extension removal. Please see [abstract-php-extension.rb](Abstract/abstract-php-extension.rb) for more details.
 
 Please note that your formula installation may deviate significantly from the above; caveats should more or less stay the same, as they give explicit instructions to users as to how to ensure the extension is properly installed.
 
