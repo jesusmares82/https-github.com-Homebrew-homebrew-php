@@ -22,41 +22,41 @@ class AbstractPhpVersion < Formula
   end
 
   module Php54Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.4.36.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.4.37.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.4.36'
+    PHP_VERSION     = '5.4.37'
     PHP_BRANCH      = 'PHP-5.4'
 
     PHP_CHECKSUM    = {
-                        :md5    => '70e223be4bb460e465b7a9d7cb5b9cac',
-                        :sha1   => '6d832bdf631ee4684910d5546734ff92a434f358',
-                        :sha256 => 'b0951608c3e8afb978a624c7f79a889980210f5258f666c1d997bd6491e13241',
+                        :md5    => '1962086593e8e39342674be0483db439',
+                        :sha1   => '608e00a730e9674e1a2e2627175e7a27f4add18f',
+                        :sha256 => '857bf6675eeb0ae9c3cd6f9ccdb2a9b7bf89dcfda7f0a80857638fe023f3a8ad',
                       }
   end
 
   module Php55Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.5.20.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.5.21.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.5.20'
+    PHP_VERSION     = '5.5.21'
     PHP_BRANCH      = 'PHP-5.5'
 
     PHP_CHECKSUM    = {
-                        :md5    => '9dfc1d4d2b44fb7e2b4ee9651d032203',
-                        :sha1   => '58acd296969f1b49643c3b70d5f244841fe59abf',
-                        :sha256 => 'f28a150d1cd8991bd1a41dce4fdff4e343d1dbe01a48b9b44bea74532ce0391a',
+                        :md5    => '8fe631ac52a3df9d6429faad81cf2562',
+                        :sha1   => 'a6251bb3565f144593df4329fd15bedd70ae13a8',
+                        :sha256 => '62e9429975c4ca5d7067a5052d5388fbf2ac8c51eeee581d59b04cc5a8da83fe',
                       }
   end
 
   module Php56Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.6.4.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.6.5.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.6.4'
+    PHP_VERSION     = '5.6.5'
     PHP_BRANCH      = 'PHP-5.6'
 
     PHP_CHECKSUM    = {
-                        :md5    => 'd31629e9c2fb5f438ab2dc0aa597cd82',
-                        :sha1   => '3ee5b504fd8dbbcacb80acc573f536851f83eead',
-                        :sha256 => '576f9001b612f5ddc22f447311bbec321e2c959b6a52259d664c4ba04ef044f1',
+                        :md5    => '64d0debf42bfff537d891e1fe1a4b65c',
+                        :sha1   => 'a523a13110a66f020c36f088089d2c5c7de9f6a9',
+                        :sha256 => 'adab4c0775512a5ca0ae74e08efdc941d92529b75283e0f44d3f53822cdfd06d',
                       }
   end
 end
