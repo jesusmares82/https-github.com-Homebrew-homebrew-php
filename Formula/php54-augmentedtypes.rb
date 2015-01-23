@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Augmentedtypes < AbstractPhp54Extension
   init
   homepage 'https://github.com/box/augmented_types'
-  url 'https://github.com/box/augmented_types/archive/v0.6.5.tar.gz'
-  sha1 '5f96071aa9c0736d6eebf9d217f1348281397a97'
+  url 'https://github.com/box/augmented_types/archive/v0.6.6.tar.gz'
+  sha1 '0d6ef730b18ffbe551cbfd1d7273de6e6db746d5'
   head 'https://github.com/box/augmented_types.git'
 
   option 'without-default-enforcement', "Turn off Augmented Types enforcement by default"
