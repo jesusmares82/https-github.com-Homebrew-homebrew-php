@@ -355,7 +355,7 @@ INFO
 
     chmod_R 0775, lib+"php"
 
-    system bin+"pear", "config-set", "php_ini", config_path+"php.ini" unless skip_pear_config_set?
+    system bin+"pear", "config-set", "php_ini", config_path+"php.ini", "system" unless skip_pear_config_set?
 
     # remove intl.ini, since it is now always compiled into php
     intl_config = config_path + "conf.d/ext-intl.ini"
@@ -423,7 +423,7 @@ INFO
 
         If PEAR complains about permissions, 'fix' the default PEAR permissions and config:
             chmod -R ug+w #{lib}/php
-            pear config-set php_ini #{etc}/php/#{php_version}/php.ini
+            pear config-set php_ini #{etc}/php/#{php_version}/php.ini system
       EOS
     end
 
