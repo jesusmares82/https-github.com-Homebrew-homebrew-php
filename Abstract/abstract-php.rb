@@ -360,9 +360,11 @@ INFO
       config_path.install default_config => "php.ini"
 
       unless build.with? 'disable-opcache'
-        inreplace config_path+"php.ini" do |s|
-          s.sub!(/^(\[opcache\].*)$/, "\\1\n; Load the opcache extension\nzend_extension=opcache.so\n")
-          s.gsub!(/^;?opcache\.enable\s*=.+$/,'opcache.enable=0')
+        unless php_version.start_with?("5.3", "5.4")
+          inreplace config_path+"php.ini" do |s|
+            s.sub!(/^(\[opcache\].*)$/, "\\1\n; Load the opcache extension\nzend_extension=opcache.so\n")
+            s.gsub!(/^;?opcache\.enable\s*=.+$/,'opcache.enable=0')
+          end
         end
       end
     end
