@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Swoole < AbstractPhp55Extension
   init
-  homepage 'https://github.com/matyhtf/swoole'
-  url 'http://pecl.php.net/get/swoole-1.7.8.tgz'
-  sha1 '4fc287eaccd00987262e99fa0c5855c3dd8ec428'
-  head 'https://github.com/matyhtf/swoole.git'
+  homepage 'https://github.com/swoole/swoole-src'
+  url 'http://pecl.php.net/get/swoole-1.7.9.tgz'
+  sha1 '51fe7228a2a450651798038aaa3cad65d08a23cb'
+  head 'https://github.com/swoole/swoole-src.git'
 
   def install
     Dir.chdir "swoole-#{version}" unless build.head?
