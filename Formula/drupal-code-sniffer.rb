@@ -1,15 +1,18 @@
 require 'formula'
+require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class DrupalCodeSniffer < Formula
   homepage 'https://drupal.org/project/coder'
-  version '7.x-2.2'
+  version '8.x-2.0'
   url "http://ftp.drupal.org/files/projects/coder-#{version}.tar.gz"
-  head 'http://git.drupal.org/project/coder.git', :branch => '7.x-2.x'
-  sha1 '9d3591f1035c9b0cd2d406d83a9071f94b826e09'
+  head 'http://git.drupal.org/project/coder.git', :branch => '8.x-2.x'
+  sha1 '73c753f81df8e6e981f0bffb5b166b6ce7ec9650'
 
   option 'without-drush-command', "Don't install drush command"
+  option 'without-drupalpractice-standard', "Don't install DrupalPractice standard"
 
   depends_on 'php-code-sniffer'
+  depends_on PhpMetaRequirement
 
   def phpcs_standards
     Formula['php-code-sniffer'].phpcs_standards
@@ -17,6 +20,10 @@ class DrupalCodeSniffer < Formula
 
   def drupal_standard_name
     'Drupal'
+  end
+
+  def drupalpractice_standard_name
+    'DrupalPractice'
   end
 
   def drush_commands
@@ -32,6 +39,15 @@ class DrupalCodeSniffer < Formula
       File.delete phpcs_standards+drupal_standard_name
     end
     phpcs_standards.install_symlink prefix+'coder_sniffer'+drupal_standard_name
+
+    # Link DrupalPractice Sniffer into PHPCS standards if not disabled.
+    if build.with? 'drupalpractice-standard'
+      phpcs_standards.mkpath
+      if File.symlink? phpcs_standards+drupalpractice_standard_name
+        File.delete phpcs_standards+drupalpractice_standard_name
+      end
+      phpcs_standards.install_symlink prefix+'coder_sniffer'+drupalpractice_standard_name
+    end
 
     # Link Drupal Coder Sniffer into /usr/local/share/drush/commands
     # for integration with Drush.
