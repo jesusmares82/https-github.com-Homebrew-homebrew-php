@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php56Solr < AbstractPhp56Extension
   init
   homepage 'http://pecl.php.net/package/solr'
-  url 'http://pecl.php.net/get/solr-2.0.0.tgz'
-  sha1 'e8181a0411aa30211fc99cc82ceb4eb9788530e6'
+  url 'http://pecl.php.net/get/solr-2.1.0.tgz'
+  sha1 'd7bb1ca0edc22bf83bf644bc5ab30d9d9fec59c7'
   head 'http://svn.apache.org/repos/asf/lucene/dev/trunk/'
 
   def install
