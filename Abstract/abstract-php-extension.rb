@@ -105,7 +105,7 @@ class AbstractPhpExtension < Formula
   end
 
   def module_path
-    prefix / "#{extension}.so"
+    opt_prefix / "#{extension}.so"
   end
 
   def config_file
