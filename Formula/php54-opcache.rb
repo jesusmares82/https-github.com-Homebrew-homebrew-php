@@ -3,16 +3,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Opcache < AbstractPhp54Extension
   init
   homepage 'https://github.com/zend-dev/ZendOptimizerPlus'
-  url 'https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.3.tar.gz'
-  sha1 'e03bd1e0286cef4fadf725d4ebf5cc69bbd07bc6'
+  url 'https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz'
+  sha1 'faefc5fcb5236edad3837dd496f97685ea5cd5da'
+  sha256 '3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c'
   head 'https://github.com/zendtech/ZendOptimizerPlus.git'
-
-  bottle do
-    root_url "https://downloads.sf.net/project/machomebrew/Bottles/php"
-    sha1 "f9f8451eeb11510015d943372b4a3613558d772c" => :yosemite
-    sha1 "bab9ff57106c0227aee91c0843a57a15398f4ae9" => :mavericks
-    sha1 "1da0ebbce4772cae18e4a632400ff17569484f87" => :mountain_lion
-  end
 
   depends_on 'pcre'
 
@@ -30,7 +24,7 @@ class Php54Opcache < AbstractPhp54Extension
   end
 
   def config_file
-    # Use upsteam defaults (https://github.com/zendtech/ZendOptimizerPlus/blob/v7.0.3/opcache.ini)
+    # Use upsteam defaults (https://github.com/zendtech/ZendOptimizerPlus/blob/v7.0.4/opcache.ini)
     # and ensure apc.cache_by_default is set to false
     super + <<-EOS.undent
 
