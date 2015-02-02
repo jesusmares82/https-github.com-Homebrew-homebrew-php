@@ -7,13 +7,6 @@ class Php54Xdebug < AbstractPhp54Extension
   sha1 '587d300b8df0d1213910c59dda0c4f5807233744'
   head 'https://github.com/xdebug/xdebug.git'
 
-  bottle do
-    root_url "https://downloads.sf.net/project/machomebrew/Bottles/php"
-    sha1 "16d2f4d852b96f100b8cb9c34ad9d1030e347096" => :yosemite
-    sha1 "05165b0d517806c790626325b0394e7d198bda21" => :mavericks
-    sha1 "069fa69c3e4c9e6fc788b701cb99f5a42cf1908d" => :mountain_lion
-  end
-
   def extension_type; "zend_extension"; end
 
   def install

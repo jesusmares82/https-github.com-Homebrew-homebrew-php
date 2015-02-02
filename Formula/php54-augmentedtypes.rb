@@ -7,13 +7,6 @@ class Php54Augmentedtypes < AbstractPhp54Extension
   sha1 '0d6ef730b18ffbe551cbfd1d7273de6e6db746d5'
   head 'https://github.com/box/augmented_types.git'
 
-  bottle do
-    root_url "https://downloads.sf.net/project/machomebrew/Bottles/php"
-    sha1 "87fb703fe127e722303568abe63d70dbd3b424d4" => :yosemite
-    sha1 "26259941998a20df57185a6f5052b8fd79e4f320" => :mavericks
-    sha1 "dde11e091380c7d28ad6ab6e4dc61b04100128a2" => :mountain_lion
-  end
-
   option 'without-default-enforcement', "Turn off Augmented Types enforcement by default"
 
   def extension_type; "zend_extension"; end
