@@ -10,8 +10,8 @@ class Php54Parsekit < AbstractPhp54Extension
   patch do
     # Fix incompatibility issues with parsekit 1.3.0
     # and php 5.4 (https://bugs.php.net/61187)
-    url "https://gist.githubusercontent.com/lucasmichot/76018aa35589ee90a483/raw/d967ae3aac6d254046cfa545894949dff39ada79/parsekit"
-    sha1 "4493fd29ff29dacd994fa5c1ec49ab50175902a5"
+    url "https://gist.githubusercontent.com/SteelPangolin/5252ea888d09c51b7d35/raw/298c52816c6d8794aecf14416db20c29fadbde0d/parsekit"
+    sha1 "385183756097af5e548f6115844bd54b5ae00946"
   end
 
   def install
