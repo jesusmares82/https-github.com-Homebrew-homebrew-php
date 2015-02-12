@@ -64,6 +64,7 @@ class AbstractPhp < Formula
     option 'without-snmp', 'Build without SNMP support'
     option 'without-pcntl', 'Build without Process Control support'
     option 'disable-opcache', 'Build without Opcache extension'
+    option 'without-ldap', 'Build without LDAP support'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
@@ -182,8 +183,6 @@ INFO
       "--enable-bcmath",
       "--enable-calendar",
       "--with-zlib=#{Formula['zlib'].opt_prefix}",
-      "--with-ldap",
-      "--with-ldap-sasl=/usr",
       "--with-xmlrpc",
       "--with-kerberos=/usr",
       "--with-gd",
@@ -332,6 +331,11 @@ INFO
 
     if build.with? 'phpdbg'
       args << "--enable-phpdbg"
+    end
+    
+    unless build.without? 'ldap'
+      args << "--with-ldap"
+      args << "--with-ldap-sasl=/usr"
     end
 
     return args
