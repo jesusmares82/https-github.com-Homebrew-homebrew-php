@@ -17,7 +17,7 @@ class Phplint < Formula
   patch :DATA
 
   def install
-    system "#{ENV.cc} -fnested-functions src/phplint.c -o src/phplint"
+    system "#{ENV.cc} src/phplint.c -o src/phplint"
     bin.install 'src/phplint'
     bin.install 'phpl'
     prefix.install 'modules'
