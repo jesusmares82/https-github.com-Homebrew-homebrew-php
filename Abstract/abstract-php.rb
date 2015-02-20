@@ -23,16 +23,16 @@ class AbstractPhp < Formula
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
+    depends_on 'homebrew/dupes/tidy' if build.include?('with-tidy')
+    depends_on 'homebrew/dupes/zlib'
     depends_on 'icu4c'
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
+    depends_on 'libtool' => :build if build.without? 'disable-opcache'
     depends_on 'libxml2' unless MacOS.version >= :lion
     depends_on 'openssl' if build.include?('with-homebrew-openssl')
-    depends_on 'homebrew/dupes/tidy' if build.include?('with-tidy')
     depends_on 'unixodbc'
-    depends_on 'homebrew/dupes/zlib'
-    depends_on 'libtool' => :build if build.without? 'disable-opcache'
 
     deprecated_option "with-pgsql" => "with-postgresql"
     depends_on :postgresql => :optional
@@ -43,28 +43,28 @@ class AbstractPhp < Formula
       raise "Cannot specify more than one executable to build."
     end
 
+    option 'disable-opcache', 'Build without Opcache extension'
     option 'homebrew-apxs', 'Build against apxs in Homebrew prefix'
-    option 'with-homebrew-curl', 'Include Curl support via Homebrew'
+    option 'with-apache', 'Enable building of shared Apache 2.0 Handler module, overriding any options which disable apache'
+    option 'with-cgi', 'Enable building of the CGI executable (implies --without-apache)'
     option 'with-debug', 'Compile with debugging symbols'
+    option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
+    option 'with-homebrew-curl', 'Include Curl support via Homebrew'
+    option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
+    option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
+    option 'with-imap', 'Include IMAP extension'
     option 'with-libmysql', 'Include (old-style) libmysql support instead of mysqlnd'
-    option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'with-mssql', 'Include MSSQL-DB support'
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
-    option 'with-cgi', 'Enable building of the CGI executable (implies --without-apache)'
-    option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
     option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
-    option 'with-apache', 'Enable building of shared Apache 2.0 Handler module, overriding any options which disable apache'
-    option 'with-imap', 'Include IMAP extension'
-    option 'without-pear', 'Build without PEAR'
-    option 'with-tidy', 'Include Tidy support'
     option 'with-thread-safety', 'Build with thread safety'
-    option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
-    option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
+    option 'with-tidy', 'Include Tidy support'
     option 'without-bz2', 'Build without bz2 support'
-    option 'without-snmp', 'Build without SNMP support'
-    option 'without-pcntl', 'Build without Process Control support'
-    option 'disable-opcache', 'Build without Opcache extension'
     option 'without-ldap', 'Build without LDAP support'
+    option 'without-mysql', 'Remove MySQL/MariaDB support'
+    option 'without-pcntl', 'Build without Process Control support'
+    option 'without-pear', 'Build without PEAR'
+    option 'without-snmp', 'Build without SNMP support'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
@@ -164,59 +164,49 @@ INFO
       "--sysconfdir=#{config_path}",
       "--with-config-file-path=#{config_path}",
       "--with-config-file-scan-dir=#{config_path}/conf.d",
-      "--with-iconv-dir=/usr",
-      "--enable-dba",
-      "--with-ndbm=/usr",
-      "--enable-exif",
-      "--enable-intl",
-      "--enable-soap",
-      "--enable-wddx",
-      "--enable-ftp",
-      "--enable-sockets",
-      "--enable-zip",
-      "--enable-shmop",
-      "--enable-sysvsem",
-      "--enable-sysvshm",
-      "--enable-sysvmsg",
-      "--enable-mbstring",
-      "--enable-mbregex",
+      "--mandir=#{man}",
       "--enable-bcmath",
       "--enable-calendar",
-      "--with-zlib=#{Formula['zlib'].opt_prefix}",
-      "--with-xmlrpc",
-      "--with-kerberos=/usr",
-      "--with-gd",
+      "--enable-dba",
+      "--enable-exif",
+      "--enable-ftp",
       "--enable-gd-native-ttf",
+      "--enable-intl",
+      "--enable-mbregex",
+      "--enable-mbstring",
+      "--enable-shmop",
+      "--enable-soap",
+      "--enable-sockets",
+      "--enable-sysvmsg",
+      "--enable-sysvsem",
+      "--enable-sysvshm",
+      "--enable-wddx",
+      "--enable-zip",
       "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
+      "--with-gd",
+      "--with-gettext=#{Formula['gettext'].opt_prefix}",
+      "--with-iconv-dir=/usr",
       "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
-      "--with-png-dir=#{Formula['libpng'].opt_prefix}",
-      "--with-gettext=#{Formula['gettext'].opt_prefix}",
+      "--with-kerberos=/usr",
       "--with-libedit",
-      "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
-      "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
-      "--mandir=#{man}",
       "--with-mhash",
+      "--with-ndbm=/usr",
+      "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
+      "--with-png-dir=#{Formula['libpng'].opt_prefix}",
+      "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
+      "--with-xmlrpc",
+      "--with-zlib=#{Formula['zlib'].opt_prefix}",
     ]
-
-    if build.include?('with-homebrew-curl') || MacOS.version < :lion
-      args << "--with-curl=#{Formula['curl'].opt_prefix}"
-    else
-      args << "--with-curl"
-    end
-
-    if build.with? 'snmp'
-      if MacOS.version >= :yosemite && (build.include?('with-thread-safety') || build.include?('with-homebrew-openssl'))
-        raise "Please add --without-snmp if you wish to use --with-thread-safety or --with-homebrew-openssl on >= Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
-      end
-
-      args << "--with-snmp=/usr"
-    else
-      args << "--without-snmp"
-    end
 
     unless MacOS.version >= :lion
       args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
+    end
+
+    # Build Apache module by default
+    if build_apache?
+      args << "--with-apxs2=#{apache_apxs}"
+      args << "--libexecdir=#{libexec}"
     end
 
     if build.with? 'bz2'
@@ -229,16 +219,8 @@ INFO
       args << "--disable-debug"
     end
 
-    if build.with? 'homebrew-openssl'
-      args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
-    else
-      args << "--with-openssl=/usr"
-    end
-
-    if build.with? 'homebrew-libxslt'
-      args << "--with-xsl=" + Formula['libxslt'].opt_prefix.to_s
-    else
-      args << "--with-xsl=/usr"
+    if build.with? 'enchant'
+      args << "--with-enchant=#{Formula['enchant'].opt_prefix}"
     end
 
     if build.with? 'fpm'
@@ -254,18 +236,26 @@ INFO
       args << "--enable-cgi"
     end
 
-    # Build Apache module by default
-    if build_apache?
-      args << "--with-apxs2=#{apache_apxs}"
-      args << "--libexecdir=#{libexec}"
-    end
-
-    if build.with? 'enchant'
-      args << "--with-enchant=#{Formula['enchant'].opt_prefix}"
-    end
-
     if build.with? 'gmp'
       args << "--with-gmp=#{Formula['gmp'].opt_prefix}"
+    end
+
+    if build.include?('with-homebrew-curl') || MacOS.version < :lion
+      args << "--with-curl=#{Formula['curl'].opt_prefix}"
+    else
+      args << "--with-curl"
+    end
+
+    if build.with? 'homebrew-openssl'
+      args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
+    else
+      args << "--with-openssl=/usr"
+    end
+
+    if build.with? 'homebrew-libxslt'
+      args << "--with-xsl=" + Formula['libxslt'].opt_prefix.to_s
+    else
+      args << "--with-xsl=/usr"
     end
 
     if build.with? 'imap'
@@ -278,9 +268,9 @@ INFO
       end
     end
 
-    if build.with? 'mssql'
-      args << "--with-mssql=#{Formula['freetds'].opt_prefix}"
-      args << "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}"
+    unless build.without? 'ldap'
+      args << "--with-ldap"
+      args << "--with-ldap-sasl=/usr"
     end
 
     if build.with? 'libmysql'
@@ -295,14 +285,13 @@ INFO
       args << "--with-pdo-mysql=mysqlnd"
     end
 
-    if build.with? 'postgresql'
-      if Formula['postgresql'].opt_prefix.directory?
-        args << "--with-pgsql=#{Formula['postgresql'].opt_prefix}"
-        args << "--with-pdo-pgsql=#{Formula['postgresql'].opt_prefix}"
-      else
-        args << "--with-pgsql=#{`pg_config --includedir`}"
-        args << "--with-pdo-pgsql=#{`which pg_config`}"
-      end
+    if build.with? 'mssql'
+      args << "--with-mssql=#{Formula['freetds'].opt_prefix}"
+      args << "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}"
+    end
+
+    if build.with? 'pcntl'
+      args << "--enable-pcntl"
     end
 
     if build.with? 'pdo-oci'
@@ -313,29 +302,40 @@ INFO
       end
     end
 
-    if build.with? 'tidy'
-      args << "--with-tidy=#{Formula['tidy'].opt_prefix}"
-    end
-
     if build.without? 'pear'
       args << "--without-pear"
     end
 
-    if build.with? 'thread-safety'
-      args << "--enable-maintainer-zts"
-    end
-
-    if build.with? 'pcntl'
-      args << "--enable-pcntl"
+    if build.with? 'postgresql'
+      if Formula['postgresql'].opt_prefix.directory?
+        args << "--with-pgsql=#{Formula['postgresql'].opt_prefix}"
+        args << "--with-pdo-pgsql=#{Formula['postgresql'].opt_prefix}"
+      else
+        args << "--with-pgsql=#{`pg_config --includedir`}"
+        args << "--with-pdo-pgsql=#{`which pg_config`}"
+      end
     end
 
     if build.with? 'phpdbg'
       args << "--enable-phpdbg"
     end
     
-    unless build.without? 'ldap'
-      args << "--with-ldap"
-      args << "--with-ldap-sasl=/usr"
+    if build.with? 'tidy'
+      args << "--with-tidy=#{Formula['tidy'].opt_prefix}"
+    end
+
+    if build.with? 'snmp'
+      if MacOS.version >= :yosemite && (build.include?('with-thread-safety') || build.include?('with-homebrew-openssl'))
+        raise "Please add --without-snmp if you wish to use --with-thread-safety or --with-homebrew-openssl on >= Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
+      end
+
+      args << "--with-snmp=/usr"
+    else
+      args << "--without-snmp"
+    end
+
+    if build.with? 'thread-safety'
+      args << "--enable-maintainer-zts"
     end
 
     return args
