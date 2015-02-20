@@ -224,7 +224,7 @@ INFO
     end
 
     if build.with? 'fpm'
-      args << "--enable-fastcgi"
+      args << "--enable-fastcgi" if php_version.start_with?('5.3')
       args << "--enable-fpm"
       args << "--with-fpm-user=_www"
       args << "--with-fpm-group=_www"
