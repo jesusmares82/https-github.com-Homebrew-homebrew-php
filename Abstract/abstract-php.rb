@@ -57,6 +57,7 @@ class AbstractPhp < Formula
     option 'with-mssql', 'Include MSSQL-DB support'
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
     option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
+    option 'with-snmp', 'Build with SNMP support'
     option 'with-thread-safety', 'Build with thread safety'
     option 'with-tidy', 'Include Tidy support'
     option 'without-bz2', 'Build without bz2 support'
@@ -64,7 +65,6 @@ class AbstractPhp < Formula
     option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'without-pcntl', 'Build without Process Control support'
     option 'without-pear', 'Build without PEAR'
-    option 'without-snmp', 'Build without SNMP support'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
@@ -326,12 +326,10 @@ INFO
 
     if build.with? 'snmp'
       if MacOS.version >= :yosemite && (build.include?('with-thread-safety') || build.include?('with-homebrew-openssl'))
-        raise "Please add --without-snmp if you wish to use --with-thread-safety or --with-homebrew-openssl on >= Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
+        raise "Please use \"--without-snmp\" if you wish to use \"--with-thread-safety\" or \"--with-homebrew-openssl\" on Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
       end
 
       args << "--with-snmp=/usr"
-    else
-      args << "--without-snmp"
     end
 
     if build.with? 'thread-safety'
