@@ -9,6 +9,13 @@ class Php54 < AbstractPhp
   sha256  PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "b886793496d92c42be0f886262aa0f2bd6e5d4eb" => :yosemite
+    sha1 "a2b39095ef3fd30bd0e7b1f83700e5b3e3736067" => :mavericks
+    sha1 "ba06abe96a97049123e8926c1f70b601af6e829b" => :mountain_lion
+  end
+
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   if build.with? 'phpdbg'
@@ -22,9 +29,6 @@ class Php54 < AbstractPhp
       sha256 PHPDBG_CHECKSUM[:sha256]
     end
   end
-
-  # Leopard requires Hombrew OpenSSL to build correctly
-  depends_on 'openssl' if MacOS.version == :leopard
 
   def install_args
     args = super

@@ -8,6 +8,13 @@ class Php53 < AbstractPhp
   sha256  PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "f2b078a07977e759f7de062b685842a9caca4520" => :yosemite
+    sha1 "02dcde88ae15a233dfaa89662b7cc9d492e251ae" => :mavericks
+    sha1 "a718966ded19b1548feaa5fe62fa2fe3f1a48aeb" => :mountain_lion
+  end
+
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   # build dependancy needed to fix issue #962
@@ -16,7 +23,7 @@ class Php53 < AbstractPhp
   depends_on 'flex' => :build
   depends_on 'homebrew/versions/bison27' => :build
 
-  depends_on 'libevent' if build.with? 'fpm'
+  depends_on 'libevent' unless build.without? 'fpm'
 
   if build.with? 'phpdbg'
     raise "phpdbg is not supported for this version of PHP"
@@ -26,7 +33,7 @@ class Php53 < AbstractPhp
 
   def install
     # files need to be regenerated to fix issue #962
-    system "rm Zend/zend_{language,ini}_parser.[ch]"
+    Dir.glob("Zend/zend_{language,ini}_parser.{c,h}").each { |file| rm file }
     super
   end
 
@@ -44,106 +51,9 @@ class Php53 < AbstractPhp
     "53"
   end
 
-  patch :DATA
+  # Previous Bison and 10.9+ patches, and multi-SAPIs patch (http://pecl.php.net/~jani/patches/multi-sapi.patch) applied
+  patch do
+    url "https://gist.githubusercontent.com/alanthing/9b786af22698eda39497/raw/0fcbbff7fe4b05ed7c011730cc80e50bd9123dec/multi-sapi-5.3.29-homebrew.patch"
+    sha256 "9d70a202321cd91acb31037dd0c5dcd5dc8fe32f325b8a291388f07e0bbdc533"
+  end
 end
-
-__END__
-diff --git a/configure b/configure
-index d506892..51617e8 100755
---- a/configure
-+++ b/configure
-@@ -38277,7 +38277,7 @@ fi
-   if test "$PHP_FREETYPE_DIR" != "no"; then
-
-     for i in $PHP_FREETYPE_DIR /usr/local /usr; do
--      if test -f "$i/include/freetype2/freetype/freetype.h"; then
-+      if test -f "$i/include/freetype2/freetype.h"; then
-         FREETYPE2_DIR=$i
-         FREETYPE2_INC_DIR=$i/include/freetype2
-         break
-@@ -107971,7 +107971,7 @@
- LDFLAGS="$LDFLAGS $PHP_AIX_LDFLAGS"
-
- case $host_alias in
--*darwin9*|*darwin10*|*darwin11*|*darwin12*)
-+*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*|*darwin14*)
-   ac_cv_exeext=
-   ;;
- esac
-diff --git a/configure.in b/configure.in
-index 4bf50ad..b0c9747 100644
---- a/configure.in
-+++ b/configure.in
-@@ -1338,7 +1338,7 @@ LDFLAGS="$LDFLAGS $PHP_AIX_LDFLAGS"
- dnl Autoconf 2.13's libtool checks go slightly nuts on Mac OS X 10.5, 10.6, 10.7 and 10.8.
- dnl This hack works around it. Ugly.
- case $host_alias in
--*darwin9*|*darwin10*|*darwin11*|*darwin12*)
-+*darwin9*|*darwin10*|*darwin11*|*darwin12*|*darwin13*|*darwin14*)
-   ac_cv_exeext=
-   ;;
- esac
-diff --git a/Zend/zend_language_parser.y b/Zend/zend_language_parser.y
-index d24fc9c..4314efb 100644
---- a/Zend/zend_language_parser.y
-+++ b/Zend/zend_language_parser.y
-@@ -38,10 +38,6 @@
-
- #define YYERROR_VERBOSE
- #define YYSTYPE znode
--#ifdef ZTS
--# define YYPARSE_PARAM tsrm_ls
--# define YYLEX_PARAM tsrm_ls
--#endif
-
-
- %}
-@@ -49,6 +45,13 @@
- %pure_parser
- %expect 2
-
-+%code requires {
-+#ifdef ZTS
-+# define YYPARSE_PARAM tsrm_ls
-+# define YYLEX_PARAM tsrm_ls
-+#endif
-+}
-+
- %left T_INCLUDE T_INCLUDE_ONCE T_EVAL T_REQUIRE T_REQUIRE_ONCE
- %left ','
- %left T_LOGICAL_OR
-diff --git a/configure b/configure
---- a/configure
-+++ b/configure
-@@ -3019,12 +3019,7 @@
-       if test -n "$bison_version_vars"; then
-         set $bison_version_vars
-         bison_version="${1}.${2}"
--        for bison_check_version in $bison_version_list; do
--          if test "$bison_version" = "$bison_check_version"; then
--            php_cv_bison_version="$bison_check_version (ok)"
--            break
--          fi
--        done
-+        php_cv_bison_version="$bison_version (ok)"
-       fi
-     
- fi
-diff --git a/Zend/acinclude.m4 b/Zend/acinclude.m4
-index 77430ab..5aeed94 100644
---- a/Zend/acinclude.m4
-+++ b/Zend/acinclude.m4
-@@ -17,12 +17,7 @@ AC_DEFUN([LIBZEND_BISON_CHECK],[
-       if test -n "$bison_version_vars"; then
-         set $bison_version_vars
-         bison_version="${1}.${2}"
--        for bison_check_version in $bison_version_list; do
--          if test "$bison_version" = "$bison_check_version"; then
--            php_cv_bison_version="$bison_check_version (ok)"
--            break
--          fi
--        done
-+        php_cv_bison_version="$bison_version (ok)"
-       fi
-     ])
-   fi

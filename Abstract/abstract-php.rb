@@ -31,7 +31,7 @@ class AbstractPhp < Formula
     depends_on 'libpng'
     depends_on 'libtool' => :build if build.without? 'disable-opcache'
     depends_on 'libxml2' unless MacOS.version >= :lion
-    depends_on 'openssl' if build.include?('with-homebrew-openssl')
+    depends_on 'openssl'
     depends_on 'unixodbc'
 
     deprecated_option "with-pgsql" => "with-postgresql"
@@ -40,18 +40,15 @@ class AbstractPhp < Formula
     # Sanity Checks
 
     if build.include?('with-cgi') && build.include?('with-fpm')
-      raise "Cannot specify more than one executable to build."
+      raise "Cannot specify more than one CGI executable to build."
     end
 
     option 'disable-opcache', 'Build without Opcache extension'
     option 'homebrew-apxs', 'Build against apxs in Homebrew prefix'
-    option 'with-apache', 'Enable building of shared Apache 2.0 Handler module, overriding any options which disable apache'
-    option 'with-cgi', 'Enable building of the CGI executable (implies --without-apache)'
+    option 'with-cgi', 'Enable building of the CGI executable (implies --without-fpm)'
     option 'with-debug', 'Compile with debugging symbols'
-    option 'with-fpm', 'Enable building of the fpm SAPI executable (implies --without-apache)'
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
     option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
-    option 'with-homebrew-openssl', 'Include OpenSSL support via Homebrew'
     option 'with-imap', 'Include IMAP extension'
     option 'with-libmysql', 'Include (old-style) libmysql support instead of mysqlnd'
     option 'with-mssql', 'Include MSSQL-DB support'
@@ -60,7 +57,9 @@ class AbstractPhp < Formula
     option 'with-snmp', 'Build with SNMP support'
     option 'with-thread-safety', 'Build with thread safety'
     option 'with-tidy', 'Include Tidy support'
+    option 'without-apache', 'Disable building of shared Apache 2.0 Handler module'
     option 'without-bz2', 'Build without bz2 support'
+    option 'without-fpm', 'Disable building of the fpm SAPI executable'
     option 'without-ldap', 'Build without LDAP support'
     option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'without-pcntl', 'Build without Process Control support'
@@ -79,8 +78,8 @@ class AbstractPhp < Formula
     File.expand_path("~")
   end
 
-  def build_apache?
-    build.with?('apache') || !(build.with?('cgi') || build.with?('fpm'))
+  def build_fpm?
+    true unless (build.without?('fpm') || build.with?('cgi'))
   end
 
   def php_version
@@ -192,6 +191,7 @@ INFO
       "--with-libedit",
       "--with-mhash",
       "--with-ndbm=/usr",
+      "--with-openssl=" + Formula['openssl'].opt_prefix.to_s,
       "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
@@ -204,7 +204,7 @@ INFO
     end
 
     # Build Apache module by default
-    if build_apache?
+    unless build.without? 'apache'
       args << "--with-apxs2=#{apache_apxs}"
       args << "--libexecdir=#{libexec}"
     end
@@ -223,8 +223,8 @@ INFO
       args << "--with-enchant=#{Formula['enchant'].opt_prefix}"
     end
 
-    if build.with? 'fpm'
-      args << "--enable-fastcgi" if php_version.start_with?('5.3')
+    # Build PHP-FPM by default
+    if build_fpm?
       args << "--enable-fpm"
       args << "--with-fpm-user=_www"
       args << "--with-fpm-group=_www"
@@ -246,12 +246,6 @@ INFO
       args << "--with-curl"
     end
 
-    if build.with? 'homebrew-openssl'
-      args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
-    else
-      args << "--with-openssl=/usr"
-    end
-
     if build.with? 'homebrew-libxslt'
       args << "--with-xsl=" + Formula['libxslt'].opt_prefix.to_s
     else
@@ -260,12 +254,7 @@ INFO
 
     if build.with? 'imap'
       args << "--with-imap=#{Formula['imap-uw'].opt_prefix}"
-      
-      if build.with? 'homebrew-openssl'
-        args << "--with-imap-ssl=" + Formula['openssl'].opt_prefix.to_s
-      else
-        args << "--with-imap-ssl=/usr"
-      end
+      args << "--with-imap-ssl=" + Formula['openssl'].opt_prefix.to_s
     end
 
     unless build.without? 'ldap'
@@ -325,8 +314,8 @@ INFO
     end
 
     if build.with? 'snmp'
-      if MacOS.version >= :yosemite && (build.include?('with-thread-safety') || build.include?('with-homebrew-openssl'))
-        raise "Please omit \"--with-snmp\" if you wish to use \"--with-thread-safety\" or \"--with-homebrew-openssl\" on Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
+      if MacOS.version >= :yosemite
+        raise "Please omit \"--with-snmp\" on Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
       end
 
       args << "--with-snmp=/usr"
@@ -343,7 +332,7 @@ INFO
     system "./buildconf" if build.head?
     system "./configure", *install_args()
 
-    if build_apache?
+    unless build.without? 'apache'
       # Use Homebrew prefix for the Apache libexec folder
       inreplace "Makefile",
         /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
@@ -357,6 +346,9 @@ INFO
     system "make"
     ENV.deparallelize # parallel install fails on some systems
     system "make install"
+
+    # Prefer relative symlink instead of absolute for relocatable bottles
+    ln_s "phar.phar", bin+"phar", :force => true if File.exist? bin+"phar.phar"
 
     unless File.exist? config_path+"php.ini"
       config_path.install default_config => "php.ini"
@@ -379,12 +371,14 @@ INFO
       File.delete intl_config
     end
 
-    if build.with? 'fpm'
+    if build_fpm?
       if File.exist?('sapi/fpm/init.d.php-fpm')
+        chmod 0755, 'sapi/fpm/init.d.php-fpm'
         sbin.install 'sapi/fpm/init.d.php-fpm' => "php#{php_version_path}-fpm"
       end
 
       if File.exist?('sapi/cgi/fpm/php-fpm')
+        chmod 0755, 'sapi/cgi/fpm/php-fpm'
         sbin.install 'sapi/cgi/fpm/php-fpm' => "php#{php_version_path}-fpm"
       end
 
@@ -413,7 +407,7 @@ INFO
   def caveats
     s = []
 
-    if build_apache?
+    unless build.without? 'apache'
       if MacOS.version <= :leopard
         s << <<-EOS.undent
           For 10.5 and Apache:
@@ -475,7 +469,7 @@ INFO
     end
 
 
-    if build.include?('with-fpm')
+    if build_fpm?
       s << <<-EOS.undent
         ✩✩✩✩ FPM ✩✩✩✩
 
@@ -489,7 +483,7 @@ INFO
 
       if MacOS.version >= :mountain_lion
         s << <<-EOS.undent
-          Mountain Lion comes with php-fpm pre-installed, to ensure you are using the brew version you need to make sure #{HOMEBREW_PREFIX}/sbin is before /usr/sbin in your PATH:
+          OS X 10.8 and newer come with php-fpm pre-installed, to ensure you are using the brew version you need to make sure #{HOMEBREW_PREFIX}/sbin is before /usr/sbin in your PATH:
 
             PATH="#{HOMEBREW_PREFIX}/sbin:$PATH"
         EOS
@@ -507,7 +501,9 @@ INFO
   end
 
   def test
-    if build.include?('with-fpm')
+    system "#{bin}/php -i"
+
+    if build_fpm?
       system "#{sbin}/php-fpm -y #{config_path}/php-fpm.conf -t"
     end
   end
