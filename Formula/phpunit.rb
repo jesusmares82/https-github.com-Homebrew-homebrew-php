@@ -7,6 +7,14 @@ class Phpunit < Formula
   url 'https://phar.phpunit.de/phpunit-4.5.0.phar'
   sha1 '314423c2dfd2f09bebf04886bc1e34e12c80d409'
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    cellar :any
+    sha1 "b679109c8569b13469f45ea022462b98d0576657" => :yosemite
+    sha1 "bdbf99ab174e1e0ecffcde91db8de1ea6f0acba9" => :mavericks
+    sha1 "f16bc737fb24a20bcffdf309b81105c430abaa8c" => :mountain_lion
+  end
+
   def install
     libexec.install "phpunit-#{version}.phar"
     sh = libexec + "phpunit"
