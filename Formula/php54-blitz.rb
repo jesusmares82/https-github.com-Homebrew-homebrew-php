@@ -6,6 +6,13 @@ class Php54Blitz < AbstractPhp54Extension
   url 'https://github.com/alexeyrybak/blitz/archive/v0.8.17.tar.gz'
   sha1 '9c47e7daf585493dcf5f5bad9e202228c28ed748'
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "71ff8f278c5579dfc283e59b8c8e6183edf67a4d" => :yosemite
+    sha1 "f6e5290f1c46ed4eb3d6af2673b2838ce4013e54" => :mavericks
+    sha1 "5b6ef0ea0786a99cfda0fcccacd7bea8409e663c" => :mountain_lion
+  end
+
   head 'https://github.com/alexeyrybak/blitz.git'
 
   def install
