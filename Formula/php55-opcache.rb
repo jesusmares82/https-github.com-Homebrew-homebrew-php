@@ -1,19 +1,12 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php54Opcache < AbstractPhp54Extension
+class Php55Opcache < AbstractPhp55Extension
   init
   homepage "https://github.com/zend-dev/ZendOptimizerPlus"
   url "https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz"
   sha1 "faefc5fcb5236edad3837dd496f97685ea5cd5da"
   sha256 "3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c"
   head "https://github.com/zendtech/ZendOptimizerPlus.git"
-
-  bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "1e98bd00fd80d3b3a45195cb58f64d1a34e9b11e" => :yosemite
-    sha1 "11f5dd70d930749ff26a4f7df8318d30123603c9" => :mavericks
-    sha1 "09a97ba8b3fa91ad4453aeadd105ab5598e2c7ca" => :mountain_lion
-  end
 
   depends_on "pcre"
 

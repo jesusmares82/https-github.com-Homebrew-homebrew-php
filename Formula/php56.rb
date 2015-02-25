@@ -30,11 +30,6 @@ class Php56 < AbstractPhp
         args << "--enable-phpdbg-debug"
       end
     end
-    if build.include? 'disable-opcache'
-      args << "--disable-opcache"
-    else
-      args << "--enable-opcache"
-    end
   end
 
   def php_version

@@ -2,11 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Opcache < AbstractPhp53Extension
   init
-  homepage 'https://github.com/zend-dev/ZendOptimizerPlus'
-  url 'https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz'
-  sha1 'faefc5fcb5236edad3837dd496f97685ea5cd5da'
-  sha256 '3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c'
-  head 'https://github.com/zendtech/ZendOptimizerPlus.git'
+  homepage "https://github.com/zend-dev/ZendOptimizerPlus"
+  url "https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz"
+  sha1 "faefc5fcb5236edad3837dd496f97685ea5cd5da"
+  sha256 "3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c"
+  head "https://github.com/zendtech/ZendOptimizerPlus.git"
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
@@ -15,9 +15,11 @@ class Php53Opcache < AbstractPhp53Extension
     sha1 "7601a4301dcd2c3db7c15b7a9911b294b63ab6bd" => :mountain_lion
   end
 
-  depends_on 'pcre'
+  depends_on "pcre"
 
-  def extension_type; "zend_extension"; end
+  def extension_type
+    "zend_extension"
+  end
 
   def install
     ENV.universal_binary if build.universal?

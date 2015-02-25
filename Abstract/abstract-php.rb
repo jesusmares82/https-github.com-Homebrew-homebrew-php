@@ -29,7 +29,6 @@ class AbstractPhp < Formula
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
-    depends_on 'libtool' => :build if build.without? 'disable-opcache'
     depends_on 'libxml2' unless MacOS.version >= :lion
     depends_on 'openssl'
     depends_on 'unixodbc'
@@ -43,7 +42,6 @@ class AbstractPhp < Formula
       raise "Cannot specify more than one CGI executable to build."
     end
 
-    option 'disable-opcache', 'Build without Opcache extension'
     option 'homebrew-apxs', 'Build against apxs in Homebrew prefix'
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-fpm)'
     option 'with-debug', 'Compile with debugging symbols'
@@ -279,6 +277,9 @@ INFO
       args << "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}"
     end
 
+    # Do not build opcache by default; use a "php5x-opcache" formula
+    args << "--disable-opcache" if php_version.start_with?('5.5', '5.6')
+
     if build.with? 'pcntl'
       args << "--enable-pcntl"
     end
@@ -350,16 +351,8 @@ INFO
     # Prefer relative symlink instead of absolute for relocatable bottles
     ln_s "phar.phar", bin+"phar", :force => true if File.exist? bin+"phar.phar"
 
-    unless File.exist? config_path+"php.ini"
-      config_path.install default_config => "php.ini"
-
-      if (!build.include? 'disable-opcache') && php_version.start_with?('5.5', '5.6')
-        inreplace config_path+"php.ini" do |s|
-          s.sub!(/^(\[opcache\].*)$/, "\\1\n; Load the opcache extension\nzend_extension=opcache.so\n")
-          s.gsub!(/^;?opcache\.enable\s*=.+$/,'opcache.enable=0')
-        end
-      end
-    end
+    # Install new php.ini unless one exists
+    config_path.install default_config => "php.ini" unless File.exist? config_path+"php.ini"
 
     chmod_R 0775, lib+"php"
 
@@ -465,6 +458,16 @@ INFO
       mcrypt is no longer included by default, install it as a separate extension:
 
           brew install php#{php_version_path}-mcrypt
+    EOS
+    end
+
+    if build.include?('enable-opcache')
+    s << <<-EOS.undent
+      ✩✩✩✩ Opcache ✩✩✩✩
+
+      opcache (PHP 5.5 and 5.6) is no longer included by default, install it as a separate extension:
+
+          brew install php#{php_version_path}-opcache
     EOS
     end
 
