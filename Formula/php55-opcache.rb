@@ -8,6 +8,13 @@ class Php55Opcache < AbstractPhp55Extension
   sha256 "3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c"
   head "https://github.com/zendtech/ZendOptimizerPlus.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "928288b38065dcb16324bd579ab41c16e9871fb1" => :yosemite
+    sha1 "6ce5267c676a39963b55616fae85fadb995df3f7" => :mavericks
+    sha1 "6a55f09b510556b01c586b2a1750100a3577a7d8" => :mountain_lion
+  end
+
   depends_on "pcre"
 
   def extension_type
