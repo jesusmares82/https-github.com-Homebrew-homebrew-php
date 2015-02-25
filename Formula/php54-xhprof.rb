@@ -8,6 +8,13 @@ class Php54Xhprof < AbstractPhp54Extension
   head 'https://github.com/facebook/xhprof.git'
   version '254eb24'
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "61d745f801e920032ddb60f6435930f3b98b00a4" => :yosemite
+    sha1 "95353e32a80594275f71bd952d633299cb893fc5" => :mavericks
+    sha1 "166aaa596955aac2396947942f4f1b3bd0857c0c" => :mountain_lion
+  end
+
   depends_on 'pcre'
 
   def install
