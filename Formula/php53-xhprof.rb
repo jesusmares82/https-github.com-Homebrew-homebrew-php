@@ -8,6 +8,13 @@ class Php53Xhprof < AbstractPhp53Extension
   head 'https://github.com/facebook/xhprof.git'
   version '254eb24'
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "47708a788ee2a9dd10eb9c8e835b65260013ad74" => :yosemite
+    sha1 "7d7431062b4e4e080cb6ef975036072ea253424a" => :mavericks
+    sha1 "cf22f7ab122ee83db2e8cc2752c71a09423c6858" => :mountain_lion
+  end
+
   depends_on 'pcre'
 
   def install
