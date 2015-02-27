@@ -2,11 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Opcache < AbstractPhp56Extension
   init
-  homepage "https://github.com/zend-dev/ZendOptimizerPlus"
-  url "https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz"
-  sha1 "faefc5fcb5236edad3837dd496f97685ea5cd5da"
-  sha256 "3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c"
-  head "https://github.com/zendtech/ZendOptimizerPlus.git"
+  homepage "http://php.net/manual/en/book.opcache.php"
+  url      PHP_SRC_TARBALL
+  sha256   PHP_CHECKSUM[:sha256]
+  version  PHP_VERSION
 
   depends_on "pcre"
 
@@ -15,6 +14,8 @@ class Php56Opcache < AbstractPhp56Extension
   end
 
   def install
+    Dir.chdir "ext/opcache"
+
     ENV.universal_binary if build.universal?
 
     safe_phpize
@@ -23,6 +24,10 @@ class Php56Opcache < AbstractPhp56Extension
     system "make"
     prefix.install "modules/opcache.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("Zend OPcache")
   end
 
   def config_file
