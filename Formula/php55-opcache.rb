@@ -2,18 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Opcache < AbstractPhp55Extension
   init
-  homepage "https://github.com/zend-dev/ZendOptimizerPlus"
-  url "https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz"
-  sha1 "faefc5fcb5236edad3837dd496f97685ea5cd5da"
-  sha256 "3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c"
-  head "https://github.com/zendtech/ZendOptimizerPlus.git"
-
-  bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "928288b38065dcb16324bd579ab41c16e9871fb1" => :yosemite
-    sha1 "6ce5267c676a39963b55616fae85fadb995df3f7" => :mavericks
-    sha1 "6a55f09b510556b01c586b2a1750100a3577a7d8" => :mountain_lion
-  end
+  homepage "http://php.net/manual/en/book.opcache.php"
+  url      PHP_SRC_TARBALL
+  sha256   PHP_CHECKSUM[:sha256]
+  version  PHP_VERSION
 
   depends_on "pcre"
 
@@ -22,6 +14,8 @@ class Php55Opcache < AbstractPhp55Extension
   end
 
   def install
+    Dir.chdir "ext/opcache"
+
     ENV.universal_binary if build.universal?
 
     safe_phpize
@@ -30,6 +24,10 @@ class Php55Opcache < AbstractPhp55Extension
     system "make"
     prefix.install "modules/opcache.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("Zend OPcache")
   end
 
   def config_file
