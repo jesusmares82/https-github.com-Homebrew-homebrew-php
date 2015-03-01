@@ -5,6 +5,13 @@ class Php53Ioncubeloader < AbstractPhp53Extension
   homepage "http://www.ioncube.com/loaders.php"
   if Hardware.is_64_bit?
     version "4.7.5"
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "0347a0ae2bb6b568bb168439fdfe32df42b730d0" => :yosemite
+    sha1 "71151bd7f43f846c08d096b46fdfd76f293a7426" => :mavericks
+    sha1 "48e37a66e69248948ddb032e8e507d5056088283" => :mountain_lion
+  end
+
     url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz"
   else
     version "4.7.5"
