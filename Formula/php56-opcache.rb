@@ -7,6 +7,13 @@ class Php56Opcache < AbstractPhp56Extension
   sha256   PHP_CHECKSUM[:sha256]
   version  PHP_VERSION
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha1 "583fcbbae273e9fce5ed167249a160cb4f670d2e" => :yosemite
+    sha1 "a435acc7430e46bc1e6bbfaad1e78bce619ae07d" => :mavericks
+    sha1 "8177b51b9eddc54a3175376bd83f2aca2c4c0815" => :mountain_lion
+  end
+
   depends_on "pcre"
 
   def extension_type
