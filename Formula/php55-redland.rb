@@ -4,8 +4,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Redland < AbstractPhp55Extension
   init
   homepage 'http://librdf.org'
-  url 'http://download.librdf.org/source/redland-bindings-1.0.16.1.tar.gz'
-  sha1 '98c20b64cf5e99cbf29fcb84490e73e2a828213a'
+  url 'http://download.librdf.org/source/redland-bindings-1.0.17.1.tar.gz'
+  sha256 'ff72b587ab55f09daf81799cb3f9d263708fad5df7a5458f0c28566a2563b7f5'
 
   depends_on 'pkg-config' => :build
   depends_on 'redland'

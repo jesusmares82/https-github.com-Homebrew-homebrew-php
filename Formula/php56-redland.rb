@@ -1,7 +1,7 @@
 require 'formula'
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php53Redland < AbstractPhp53Extension
+class Php56Redland < AbstractPhp56Extension
   init
   homepage 'http://librdf.org'
   url 'http://download.librdf.org/source/redland-bindings-1.0.17.1.tar.gz'
