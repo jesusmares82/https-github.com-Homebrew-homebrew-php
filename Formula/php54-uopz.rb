@@ -7,6 +7,13 @@ class Php54Uopz < AbstractPhp54Extension
   sha256 "aca7dac96c00e5bd628625ad7372d733c8a40a48d4b143d7f001feea1c5fb3b1"
   head "https://github.com/krakjoe/uopz.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "4ea1c82718843fb7838aff6dad115702a9db8b0b08b1de44222da6f3b79468e3" => :yosemite
+    sha256 "1ced161e6d53fc81fd94ca2ad1a5305e1b4171671125e51df186ca5bd329f991" => :mavericks
+    sha256 "e27cafc6080ddac8a01795841ee114fdf8f6d9198ddcc0d7653a17f372535a10" => :mountain_lion
+  end
+
   def install
     ENV.universal_binary if build.universal?
 
