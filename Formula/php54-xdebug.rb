@@ -7,6 +7,14 @@ class Php54Xdebug < AbstractPhp54Extension
   sha256 "4fce7fc794ccbb1dd0b961191cd0323516e216502fe7209b03711fc621642245"
   head "https://github.com/xdebug/xdebug.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    cellar :any
+    sha256 "e67ec936b6d5b494c21ebc9ccc40594ed2c58e0dec79a3fcc594a82d0b8fb8ff" => :yosemite
+    sha256 "d7a254d1ce4e315dedccc557befa5c11a3fdfc20283d3652be001bad15fcac34" => :mavericks
+    sha256 "87dc25f4838c74bc3341d57238deff419f5f255ef7d96a1f8a8bea0eb6567411" => :mountain_lion
+  end
+
   def extension_type
     "zend_extension"
   end
