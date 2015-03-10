@@ -7,6 +7,13 @@ class Php55Xdebug < AbstractPhp55Extension
   sha1 "587d300b8df0d1213910c59dda0c4f5807233744"
   head "https://github.com/xdebug/xdebug.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "45a50514875723d5d201cbb0dc33449334b85aa6a007cdcf387130903368c4c5" => :yosemite
+    sha256 "68d4bf3d86a0943e53cd40e2ab4738a18ea6be1b5274acf1fb66e97c93d088e2" => :mavericks
+    sha256 "08f3a36cd36ab5ceb64c9b2c4687f0e2de3bd2448d2a30afe6c3345b46c66589" => :mountain_lion
+  end
+
   def extension_type
     "zend_extension"
   end
