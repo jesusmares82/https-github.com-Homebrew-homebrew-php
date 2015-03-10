@@ -32,9 +32,11 @@ class Php55 < AbstractPhp
 
   def install_args
     args = super
-    args << "--enable-zend-signals"
+
     # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
     args << "--enable-dtrace" if build.without? 'phpdbg'
+
+    args << "--enable-zend-signals"
   end
 
   def _install
