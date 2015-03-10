@@ -4,7 +4,7 @@ class Php54Xdebug < AbstractPhp54Extension
   init
   homepage "http://xdebug.org"
   url "http://xdebug.org/files/xdebug-2.2.7.tgz"
-  sha1 "587d300b8df0d1213910c59dda0c4f5807233744"
+  sha256 "4fce7fc794ccbb1dd0b961191cd0323516e216502fe7209b03711fc621642245"
   head "https://github.com/xdebug/xdebug.git"
 
   def extension_type
@@ -25,5 +25,9 @@ class Php54Xdebug < AbstractPhp54Extension
     system "make"
     prefix.install "modules/xdebug.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("Xdebug")
   end
 end
