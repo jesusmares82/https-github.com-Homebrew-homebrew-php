@@ -7,6 +7,13 @@ class Php54Redis < AbstractPhp54Extension
   sha256 "a5882dd9b21908e123b3d5c5f72d6dc8cbbbb6a29996e568c4d18ed356c0362b"
   head "https://github.com/phpredis/phpredis.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "5977351adb25516589dfbdf41a56f6c3e370a68794d244cc670189e04c6f1654" => :yosemite
+    sha256 "2f46f0030d2f7a638b70dbddb13dc17d93fc20ef05a3b29090aa3cf6c4569886" => :mavericks
+    sha256 "7acdc7db3991953adf254ccc3d461bef56e2e3e13d9a253cc872894694ccbfd5" => :mountain_lion
+  end
+
   option "with-igbinary", "Build with igbinary support"
 
   depends_on "php54-igbinary" if build.with? "igbinary"
