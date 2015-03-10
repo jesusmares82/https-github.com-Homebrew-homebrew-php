@@ -7,6 +7,13 @@ class Php56Xdebug < AbstractPhp56Extension
   sha256 "4fce7fc794ccbb1dd0b961191cd0323516e216502fe7209b03711fc621642245"
   head "https://github.com/xdebug/xdebug.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "69e293502680af6281d918d2d96021216507912a34bc1c81ece129bb083bbd79" => :yosemite
+    sha256 "760ae90945ebd69046deb3c5b36cb9bfe6ade1d8f6743620c5082c87fc118a10" => :mavericks
+    sha256 "1fd7bbf3fccf197529c91bf72f1411707436b96eb5fd207b27827ff6d22fe405" => :mountain_lion
+  end
+
   def extension_type
     "zend_extension"
   end
