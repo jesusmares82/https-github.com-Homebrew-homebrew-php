@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Mongo < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/mongo'
-  url 'http://pecl.php.net/get/mongo-1.6.0.tgz'
-  sha1 '3c5e4f595793a11e1542266f8f71936563a13850'
-  head 'https://github.com/mongodb/mongo-php-driver.git'
+  homepage "http://pecl.php.net/package/mongo"
+  url "http://pecl.php.net/get/mongo-1.6.4.tgz"
+  sha256 "b6ab5f4ade26ea328081c70bba43f048da3d669e536eebb9eb380f9db90dda6d"
+  head "https://github.com/mongodb/mongo-php-driver.git"
 
   def install
     Dir.chdir "mongo-#{version}" unless build.head?
@@ -18,5 +18,9 @@ class Php54Mongo < AbstractPhp54Extension
     system "make"
     prefix.install "modules/mongo.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("mongo")
   end
 end
