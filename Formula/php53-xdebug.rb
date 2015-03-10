@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Xdebug < AbstractPhp53Extension
   init
-  homepage 'http://xdebug.org'
-  url 'http://xdebug.org/files/xdebug-2.2.7.tgz'
-  sha1 '587d300b8df0d1213910c59dda0c4f5807233744'
-  head 'https://github.com/xdebug/xdebug.git'
+  homepage "http://xdebug.org"
+  url "http://xdebug.org/files/xdebug-2.2.7.tgz"
+  sha256 "4fce7fc794ccbb1dd0b961191cd0323516e216502fe7209b03711fc621642245"
+  head "https://github.com/xdebug/xdebug.git"
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
@@ -14,7 +14,9 @@ class Php53Xdebug < AbstractPhp53Extension
     sha1 "37fb04e8256a25e022e1f418138872a32c9b54c7" => :mountain_lion
   end
 
-  def extension_type; "zend_extension"; end
+  def extension_type
+    "zend_extension"
+  end
 
   def install
     Dir.chdir "xdebug-#{version}" unless build.head?
@@ -30,5 +32,9 @@ class Php53Xdebug < AbstractPhp53Extension
     system "make"
     prefix.install "modules/xdebug.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("Xdebug")
   end
 end
