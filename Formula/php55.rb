@@ -11,9 +11,9 @@ class Php55 < AbstractPhp
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "b7c1d5f599b0b7733813bcd84c0d286b0fbe84f7" => :yosemite
-    sha1 "8c4d5acad807b5dce82308616524dc8ffe56e526" => :mavericks
-    sha1 "a48eabb39c05ea7a82997df781cf689aaa341151" => :mountain_lion
+    sha1 "f73a3c5619e86736ba2b740ca446a44344a71ecc" => :yosemite
+    sha1 "96d3b6c138ad2e1b697e177ba38a5b49068741b1" => :mavericks
+    sha1 "549221b13f6cff0ee0cb87366c90852387cd7ce1" => :mountain_lion
   end
 
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
