@@ -7,6 +7,13 @@ class Php53Igbinary < AbstractPhp53Extension
   sha256 "168e51d41a417bbbfe6da0e3cb9b71ef93594f4034f489a951f3b874d03dfdb8"
   head "https://github.com/igbinary/igbinary.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "673d6bd52a607b1003e27010cfdd31ed411ceddfe404af6af59487a57306f891" => :yosemite
+    sha256 "841457f0fe48f4ca419655b700f8b783504137c4bfa781e1ff46f566ad44c8b5" => :mavericks
+    sha256 "a792d897eaaeb16842d147889f45f64424feb10303084689085946e16f33ff93" => :mountain_lion
+  end
+
   def install
     Dir.chdir "igbinary-#{version}" unless build.head?
 
