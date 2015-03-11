@@ -7,6 +7,13 @@ class Php55Igbinary < AbstractPhp55Extension
   sha256 "168e51d41a417bbbfe6da0e3cb9b71ef93594f4034f489a951f3b874d03dfdb8"
   head "https://github.com/igbinary/igbinary.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "f068ef329ce88e3b31621155591d709ca690d6a2d11145be5f89605967cd41cc" => :yosemite
+    sha256 "78d7883a3ebc6fee1fe1edfd83766b49ae28ce709c4909f32f221157dc876410" => :mavericks
+    sha256 "8b16ecf378a0305fd9ec6a0729b0b329242560035497ae5135c81e8376c0f00a" => :mountain_lion
+  end
+
   def install
     Dir.chdir "igbinary-#{version}" unless build.head?
 
