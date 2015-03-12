@@ -7,6 +7,13 @@ class Php54Memcached < AbstractPhp54Extension
   sha256 "17b9600f6d4c807f23a3f5c45fcd8775ca2e61d6eda70370af2bef4c6e159f58"
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "6e43b574501cc4098131a16405ea917a8c6688f3b87be0c2abcae486bde026e7" => :yosemite
+    sha256 "768166d23e588ffefb39fc6af6efac130dc6cf2fce12c71e67034314d1b04e22" => :mavericks
+    sha256 "5c7cc14140461aefe90b67b78de87250ae96ac0af39f184e177e46b42bb24e66" => :mountain_lion
+  end
+
   option "with-sasl", "Build with sasl support"
 
   depends_on "pkg-config" => :build
