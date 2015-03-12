@@ -9,9 +9,9 @@ class Php55Redis < AbstractPhp55Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "b6569cd876902c6190e313394375457ef76ab8f649719061a3f71f94965dae00" => :yosemite
-    sha256 "9bd30eaafa6fb0e491c5ca3dde17e45386a71e765e70b45e80c3ac0b4f9d7444" => :mavericks
-    sha256 "1326ce0b03e32281ad414c647536af5e3677539cecc704f822edaf8b329015c6" => :mountain_lion
+    sha256 "deb162d5baf67daaf9536a04053056f1a11ccdaa20019b24789b1eccb4077455" => :yosemite
+    sha256 "6d8c2383b6a7b40ad36b6c2b89be398f82e2587af5b110fbca3da9bbf28b399d" => :mavericks
+    sha256 "a3b2bb4eb4457caac04867e1681d1cfcc53833068ace2fca5ed651543c4dd0a9" => :mountain_lion
   end
 
   depends_on "php55-igbinary"
