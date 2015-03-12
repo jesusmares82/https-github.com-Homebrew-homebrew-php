@@ -9,9 +9,9 @@ class Php56Redis < AbstractPhp56Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "fb7a6c68fa796d296a70429042c49b0bb23be210cebcca53f4251aedc3fe1d39" => :yosemite
-    sha256 "cdabbdfc81f769068f25e4843800a1c670f5a25db4ff424c4a407191767de018" => :mavericks
-    sha256 "27ed40fb435528fc05bc6a4fcc499a19e88c6d37da4ed2e6b5051c906e293cf5" => :mountain_lion
+    sha256 "d1b92869adea7213a52751138e18e7d5927ab555cd28603d8318b4ccccd3ff37" => :yosemite
+    sha256 "cee0cf87204613bf6f8bb1ea9c4eef5960949060714c6db25050c479d8467b9c" => :mavericks
+    sha256 "4fdbfa5fb64fe2f75a4a09aa588c7e20aa8b67fe562b4a276e2a8bb1f7b742ba" => :mountain_lion
   end
 
   depends_on "php56-igbinary"
