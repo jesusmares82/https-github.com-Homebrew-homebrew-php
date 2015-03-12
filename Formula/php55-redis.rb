@@ -14,22 +14,18 @@ class Php55Redis < AbstractPhp55Extension
     sha256 "1326ce0b03e32281ad414c647536af5e3677539cecc704f822edaf8b329015c6" => :mountain_lion
   end
 
-  option "with-igbinary", "Build with igbinary support"
-
-  depends_on "php55-igbinary" if build.with? "igbinary"
+  depends_on "php55-igbinary"
 
   def install
     ENV.universal_binary if build.universal?
 
     args = []
-    args << "--enable-redis-igbinary" if build.with? "igbinary"
+    args << "--enable-redis-igbinary"
 
     safe_phpize
 
-    if build.with? "igbinary"
-      mkdir_p "ext/igbinary"
-      cp "#{Formula['php55-igbinary'].include}/igbinary.h", "ext/igbinary/igbinary.h"
-    end
+    mkdir_p "ext/igbinary"
+    cp "#{Formula['php55-igbinary'].include}/igbinary.h", "ext/igbinary/igbinary.h"
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
@@ -37,6 +33,16 @@ class Php55Redis < AbstractPhp55Extension
     system "make"
     prefix.install "modules/redis.so"
     write_config_file if build.with? "config-file"
+  end
+
+  def config_file
+    super + <<-EOS.undent
+
+      ; phpredis can be used to store PHP sessions.
+      ; To do this, uncomment and configure below
+      ;session.save_handler = redis
+      ;session.save_path = "tcp://host1:6379?weight=1, tcp://host2:6379?weight=2&timeout=2.5, tcp://host3:6379?weight=2"
+    EOS
   end
 
   test do
