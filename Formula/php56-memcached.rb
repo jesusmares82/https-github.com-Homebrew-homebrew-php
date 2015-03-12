@@ -7,6 +7,13 @@ class Php56Memcached < AbstractPhp56Extension
   sha256 "17b9600f6d4c807f23a3f5c45fcd8775ca2e61d6eda70370af2bef4c6e159f58"
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "411f1f9f3b51a4ae7b69649ccba980198a8267189ae8b0d2ffa8bece59c57cb9" => :yosemite
+    sha256 "4b749d5517453361384e1ae4ed3858381cbe49e47a17648d9b1ae936afe11e3b" => :mavericks
+    sha256 "51f59a45d9dd7f3955a6542f299fd319a1d968c6c7b77e95f24c5b4e78313a49" => :mountain_lion
+  end
+
   option "with-sasl", "Build with sasl support"
 
   depends_on "pkg-config" => :build
