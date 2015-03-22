@@ -9,10 +9,9 @@ class Php54Xdebug < AbstractPhp54Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    cellar :any
-    sha256 "e67ec936b6d5b494c21ebc9ccc40594ed2c58e0dec79a3fcc594a82d0b8fb8ff" => :yosemite
-    sha256 "d7a254d1ce4e315dedccc557befa5c11a3fdfc20283d3652be001bad15fcac34" => :mavericks
-    sha256 "87dc25f4838c74bc3341d57238deff419f5f255ef7d96a1f8a8bea0eb6567411" => :mountain_lion
+    sha256 "e4ff7c329bebfa36b6b4928e921406bd52a409e305e3c16e4e274f7192183f29" => :yosemite
+    sha256 "67f008565112b1215215aee47e1f5075d4cf429e1a7368c4fa8a5e36954ecf74" => :mavericks
+    sha256 "2e82b63b25bc024e4b7555365f37501733a10e487d887855be22a107f33380ce" => :mountain_lion
   end
 
   def extension_type
