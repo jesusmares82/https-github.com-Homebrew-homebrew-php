@@ -9,9 +9,10 @@ class Php55Xdebug < AbstractPhp55Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "45a50514875723d5d201cbb0dc33449334b85aa6a007cdcf387130903368c4c5" => :yosemite
-    sha256 "68d4bf3d86a0943e53cd40e2ab4738a18ea6be1b5274acf1fb66e97c93d088e2" => :mavericks
-    sha256 "08f3a36cd36ab5ceb64c9b2c4687f0e2de3bd2448d2a30afe6c3345b46c66589" => :mountain_lion
+    cellar :any
+    sha256 "2ddbb8f446fac2d6a7f34b99985d4bf802fb70e5dcd631e6487c8f52fcfe2a27" => :yosemite
+    sha256 "e3203ffc3e7521f3f1ec08cbf61bcfc61d071233f3763491c62a4073e03f3aa0" => :mavericks
+    sha256 "739860a129b3181a3fe9ecca5de9faa75b78f7f3107f90388e6822a39046e04e" => :mountain_lion
   end
 
   def extension_type
