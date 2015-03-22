@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Xdebug < AbstractPhp55Extension
   init
   homepage "http://xdebug.org"
-  url "http://xdebug.org/files/xdebug-2.2.7.tgz"
-  sha1 "587d300b8df0d1213910c59dda0c4f5807233744"
+  url "http://xdebug.org/files/xdebug-2.3.2.tgz"
+  sha1 "2b32d15880d88a084d9d50929b9f6904bf091fc4"
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
