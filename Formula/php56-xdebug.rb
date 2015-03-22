@@ -9,9 +9,9 @@ class Php56Xdebug < AbstractPhp56Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "69e293502680af6281d918d2d96021216507912a34bc1c81ece129bb083bbd79" => :yosemite
-    sha256 "760ae90945ebd69046deb3c5b36cb9bfe6ade1d8f6743620c5082c87fc118a10" => :mavericks
-    sha256 "1fd7bbf3fccf197529c91bf72f1411707436b96eb5fd207b27827ff6d22fe405" => :mountain_lion
+    sha256 "071e106df20196516e33a3a42c9228c732d9120615743aa9f73530a08bedf7f8" => :yosemite
+    sha256 "a7e3f27a10844ad3dfeb59678730cb3b3e4bd8b58139d18a78756f9f4c933427" => :mavericks
+    sha256 "a055fc17be63e2712874b984c0b75c382496430b5ba5346ef4d626b447877fdf" => :mountain_lion
   end
 
   def extension_type
