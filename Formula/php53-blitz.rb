@@ -8,9 +8,9 @@ class Php53Blitz < AbstractPhp53Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "4d04794c8d1b20fadb8d6a029dc0e0462719277a" => :yosemite
-    sha1 "6a7148afc0c8c604ca582dff87b056a71765ff2c" => :mavericks
-    sha1 "0741534f10ce84a8396cf4e3068c5497c2b5ec44" => :mountain_lion
+    sha256 "ca6d6a9b4142810c9221121f8a0a0ff929f759f6b1677049632384e634b554e3" => :yosemite
+    sha256 "d92eb9e226ef6cd565585625caf90fd776613e78f87e2f32f872a8141499031e" => :mavericks
+    sha256 "a912987c39aec7b82bbd9fcdf86ae4636e44446a9287c585915b2600cf8374f2" => :mountain_lion
   end
 
   head 'https://github.com/alexeyrybak/blitz.git'
