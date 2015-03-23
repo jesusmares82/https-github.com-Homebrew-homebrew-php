@@ -7,6 +7,13 @@ class Php53Imagick < AbstractPhp53Extension
   sha1 '7cee88bc8f6f178165c9d43e302d99cedfbb3dff'
   head 'https://svn.php.net/repository/pecl/imagick/trunk/'
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "714da9657822c0a8df5c7cf8d2c1c14ca2c1be88d7cc642918b95dd9bc7e61ec" => :yosemite
+    sha256 "0f6adf22d66cd52ddca6a389673daec60f7f265bc2f7cd533930b520a2df2d7c" => :mavericks
+    sha256 "749ab9fd907d9067c66a3ce24a1d7b39aa34b835652ce567b2350d6867aac794" => :mountain_lion
+  end
+
   depends_on 'pkg-config' => :build
   depends_on 'imagemagick'
 
