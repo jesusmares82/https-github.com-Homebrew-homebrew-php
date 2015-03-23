@@ -9,13 +9,6 @@ class Php54 < AbstractPhp
   sha256  PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "25c75728623aadc7251a79ef31d6107ac85d3dff" => :yosemite
-    sha1 "4534b47efe1370f9929a1fe299bfc664dd4f060d" => :mavericks
-    sha1 "898440fc5f3ee6c6882337e7fad0b0ddb8c299eb" => :mountain_lion
-  end
-
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   if build.with? 'phpdbg'
