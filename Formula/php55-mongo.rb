@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Mongo < AbstractPhp55Extension
   init
   homepage "http://pecl.php.net/package/mongo"
-  url "http://pecl.php.net/get/mongo-1.6.4.tgz"
-  sha256 "b6ab5f4ade26ea328081c70bba43f048da3d669e536eebb9eb380f9db90dda6d"
+  url "http://pecl.php.net/get/mongo-1.6.6.tgz"
+  sha256 "8552b100231baf16e49c8d66a6ac064c36edc3172f6ab5a0ea924acc289eb0d8"
   head "https://github.com/mongodb/mongo-php-driver.git"
 
   bottle do
