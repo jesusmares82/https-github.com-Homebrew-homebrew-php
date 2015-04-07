@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpunit < Formula
   homepage 'http://phpunit.de/manual/current/en/'
-  url 'https://phar.phpunit.de/phpunit-4.5.0.phar'
-  sha1 '314423c2dfd2f09bebf04886bc1e34e12c80d409'
+  url 'https://phar.phpunit.de/phpunit-4.6.2.phar'
+  sha1 'afa1021ee52a0ddae7d648ebbcd248998e480bd8'
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
