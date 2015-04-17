@@ -1,34 +1,26 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Behat < Formula
-  homepage 'http://behat.org/'
-  url 'https://github.com/Behat/Behat/releases/download/v3.0.12/behat.phar'
-  sha1 'dea2f88668f64e300e2f5b0be6789a14af6092b7'
-  version '3.0.12'
+  homepage "http://behat.org/"
+  url "https://github.com/Behat/Behat/releases/download/v3.0.15/behat.phar"
+  version "3.0.15"
+  sha256 "9f29c36f2795255f67ae9423b0dc458b203b326953aa526404c82d836fa688ec"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
 
   def install
     libexec.install "behat.phar"
-    sh = libexec + "behat"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/behat.phar $*")
-    chmod 0755, sh
-    bin.install_symlink sh
+    (libexec/"behat").write <<-EOS.undent
+      #!/usr/bin/env bash
+      /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/behat.phar $*
+    EOS
+    chmod 0755, (libexec/"behat")
+    bin.install_symlink (libexec/"behat")
   end
 
   test do
-    system 'behat --version'
-  end
-
-  def caveats; <<-EOS.undent
-    Verify your installation by running:
-      "behat --version".
-
-    You can read more about behat by running:
-      "brew home behat".
-    EOS
+    system "behat", "--version"
   end
 end
