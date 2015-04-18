@@ -2,19 +2,23 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Xhgui < AbstractPhp56Extension
   init
-  homepage 'https://github.com/preinheimer/xhgui'
-  url 'https://github.com/preinheimer/xhgui/archive/ee00acb209d09d3ee0614117971fd3ac517e4097.tar.gz'
-  sha1 'c6a103de999e4df2976cfd3bfb1390726972529b'
-  head 'https://github.com/preinheimer/xhgui.git'
-  version 'ee00acb'
+  homepage "https://github.com/perftools/xhgui"
+  url "https://github.com/perftools/xhgui/archive/v0.4.0.tar.gz"
+  sha256 "356e6fc46158d827aa6168d55e7de55ea16f539dbabeab5eb5085a9d03f7bb07"
+  head "https://github.com/perftools/xhgui.git"
 
-  depends_on 'php56-xhprof'
-  depends_on 'php56-mongo'
-  depends_on 'mongodb'
+  depends_on "composer"
+  depends_on "mongodb"
+  depends_on "php56-mcrypt"
+  depends_on "php56-mongo"
+  depends_on "php56-xhprof"
 
   def install
-    prefix.install %w(external web)
-    (prefix + 'web/cache').chmod 0777
+    prefix.install %w(composer.json composer.lock install.php cache config src external webroot)
+    (prefix + 'cache').chmod 0777
+    Dir.chdir prefix
+    system "cp", "config/config.default.php", "config/config.php"
+    system "composer", "install"
   end
 
   def caveats
@@ -24,11 +28,11 @@ class Php56Xhgui < AbstractPhp56Extension
   ============
 
   * Restart your webserver to load the xhprof.so module dependency.
-  * Point your webserver to folder "web/webroot"
+  * Point your webserver to folder "#{opt_prefix}/webroot"
   * Update you mongodb configuration (username, password, host and/or port)
     if you're not using the default values:
 
-    #{prefix}/web/config/config.php
+    #{opt_prefix}/config/config.php
 
   * Add indexes to mongodb for increased for performance.
 
@@ -45,15 +49,15 @@ class Php56Xhgui < AbstractPhp56Extension
 
   * For system wide random profiling, you can add the following directive in php.ini:
 
-    auto_prepend_file=#{prefix}/external/header.php
+    auto_prepend_file=#{opt_prefix}/external/header.php
 
   * If you prefer to configure profiling per virtual host:
 
     Using Apache:
 
     <VirtualHost *:80>
-        php_admin_value auto_prepend_file "#{prefix}/external/header.php"
-        DocumentRoot "/Users/markstory/Sites/awesome-thing/app/webroot/"
+        php_admin_value auto_prepend_file "#{opt_prefix}/external/header.php"
+        DocumentRoot "#{opt_prefix}/webroot/"
         ServerName site.localhost
     </VirtualHost>
 
@@ -62,8 +66,8 @@ class Php56Xhgui < AbstractPhp56Extension
     server {
         listen 80;
         server_name site.localhost;
-        root /Users/markstory/Sites/awesome-thing/app/webroot/;
-        fastcgi_param PHP_VALUE "auto_prepend_file=#{prefix}/external/header.php";
+        root #{opt_prefix}/webroot/;
+        fastcgi_param PHP_VALUE "auto_prepend_file=#{opt_prefix}/external/header.php";
      }
 EOS
     caveats
