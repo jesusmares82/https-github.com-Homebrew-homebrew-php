@@ -1,13 +1,12 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/composer-requirement", __FILE__)
 
 class Composer < Formula
-  homepage 'http://getcomposer.org'
-  head 'https://getcomposer.org/composer.phar'
-  url 'http://getcomposer.org/download/1.0.0-alpha9/composer.phar'
-  sha1 'c0917158e84c867ce69753fcbc04eb7c45bb58bb'
-  version '1.0.0-alpha9'
+  homepage "http://getcomposer.org"
+  head "https://getcomposer.org/composer.phar"
+  url "http://getcomposer.org/download/1.0.0-alpha10/composer.phar"
+  sha256 "9f2c7d0364bc743bcde9cfe1fe84749e5ac38c46d47cf42966ce499135fd4628"
+  version "1.0.0-alpha10"
 
   depends_on PhpMetaRequirement
   depends_on ComposerRequirement
@@ -20,6 +19,10 @@ class Composer < Formula
     bin.install_symlink sh
   end
 
+  test do
+    system "composer", "--version"
+  end
+
   def caveats; <<-EOS.undent
     Verify your installation by running:
       "composer --version".
@@ -28,5 +31,4 @@ class Composer < Formula
       "brew home composer".
     EOS
   end
-
 end
