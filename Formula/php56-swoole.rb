@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Swoole < AbstractPhp56Extension
   init
-  homepage 'https://github.com/swoole/swoole-src'
-  url 'http://pecl.php.net/get/swoole-1.7.9.tgz'
-  sha1 '51fe7228a2a450651798038aaa3cad65d08a23cb'
-  head 'https://github.com/swoole/swoole-src.git'
+  homepage "http://pecl.php.net/package/swoole"
+  url "http://pecl.php.net/get/swoole-1.7.15.tgz"
+  sha256 "5328b1230e5ccdab519fdcbc315fef3d219ff813bff8daeb45a2f9f50316e409"
+  head "https://github.com/swoole/swoole-src.git"
 
   def install
     Dir.chdir "swoole-#{version}" unless build.head?
@@ -17,5 +17,9 @@ class Php56Swoole < AbstractPhp56Extension
     system "make"
     prefix.install "modules/swoole.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("swoole")
   end
 end
