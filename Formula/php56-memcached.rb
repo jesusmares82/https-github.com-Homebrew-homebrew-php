@@ -9,9 +9,9 @@ class Php56Memcached < AbstractPhp56Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "411f1f9f3b51a4ae7b69649ccba980198a8267189ae8b0d2ffa8bece59c57cb9" => :yosemite
-    sha256 "4b749d5517453361384e1ae4ed3858381cbe49e47a17648d9b1ae936afe11e3b" => :mavericks
-    sha256 "51f59a45d9dd7f3955a6542f299fd319a1d968c6c7b77e95f24c5b4e78313a49" => :mountain_lion
+    sha256 "e36a3d08e734b59954836df696a5d88bd3bcbaff21f6d56d4538b767080d8d71" => :yosemite
+    sha256 "4bd62dd2bb6ccd57a4b5d5a2e2a69393951e5af1638094521d08ae0e5225ff67" => :mavericks
+    sha256 "107379a852f2d0ab2fde40bca9899c982f1c5292bd4ff80e84c58ffd5de0be90" => :mountain_lion
   end
 
   option "with-sasl", "Build with sasl support"
