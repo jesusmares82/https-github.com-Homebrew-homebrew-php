@@ -9,9 +9,9 @@ class Php53Memcached < AbstractPhp53Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "626cda0bf50a004bbaf6d1f3ef1a82707b6714933e45ca621640c35f300872d8" => :yosemite
-    sha256 "43ea9aedad51536f605777e1ba34785b86f6ef30beeafdfbf9d5bd7ba24f500d" => :mavericks
-    sha256 "b507ff13bef547ca4b26968543a25957c8f8014e3d534b51fcfaad34dff0ba7f" => :mountain_lion
+    sha256 "15903744a6da4d824f2675c83bb0184f23776b4d76d06bb4614d592a587335cf" => :yosemite
+    sha256 "276608514fb3cc087a96c898a22e97e6483228f1ac3d13a1a3fd0c094e50aae1" => :mavericks
+    sha256 "651e2ec12ee52cd5acbf9af209ad88f700e7dfdf40cd855034a37287b3657a69" => :mountain_lion
   end
 
   option "with-sasl", "Build with sasl support"
