@@ -9,9 +9,9 @@ class Php54Redis < AbstractPhp54Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "25838098eeaada55d03798c71504835ac7bb8d2167a2a577612ca82690b3194d" => :yosemite
-    sha256 "ecf0d6dd90a1c2360be6d21338727e84cbce1fd90278e445acf60643e130f425" => :mavericks
-    sha256 "c6649a29207d1562374dfbf9ff7ab22dd1a2a38cccec9f731ec6286ee01b62ca" => :mountain_lion
+    sha256 "c9295478951623fda035f15317b9df9a47682597c09533c05985a59235fb83d4" => :yosemite
+    sha256 "1a1e377e5a19ffaa544862c8334abdc977d4880c532c7f8284aac4ce786addad" => :mavericks
+    sha256 "5720012b673bf9b5e55a1db9d058c557eb5c8374a0f34102509680efaa003bdf" => :mountain_lion
   end
 
   depends_on "php54-igbinary"
