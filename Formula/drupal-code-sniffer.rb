@@ -2,10 +2,10 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class DrupalCodeSniffer < Formula
   homepage "https://drupal.org/project/coder"
-  version "8.x-2.1"
+  version "8.x-2.2"
   url "http://ftp.drupal.org/files/projects/coder-#{version}.tar.gz"
   head "http://git.drupal.org/project/coder.git", :branch => "8.x-2.x"
-  sha256 "1feac54012b5af425c9ee17fcfd5f3aec3100db4bce606e7b52a0eaea651ac8d"
+  sha256 "0d109a157c9d04f2ea5fe74c41def03e0ae85ed28488c7690b8a66497ecb284e"
 
   option "without-drush-command", "Don't install drush command"
   option "without-drupalpractice-standard", "Don't install DrupalPractice standard"
