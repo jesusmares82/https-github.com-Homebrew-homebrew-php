@@ -7,13 +7,6 @@ class Php53Xdebug < AbstractPhp53Extension
   sha256 "4fce7fc794ccbb1dd0b961191cd0323516e216502fe7209b03711fc621642245"
   head "https://github.com/xdebug/xdebug.git"
 
-  bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "f1f25dcf4bd5a119d8a11eebd82122a47348c670" => :yosemite
-    sha1 "9a35843631103fc0d815a72e480fda7bb52d61b0" => :mavericks
-    sha1 "37fb04e8256a25e022e1f418138872a32c9b54c7" => :mountain_lion
-  end
-
   def extension_type
     "zend_extension"
   end
