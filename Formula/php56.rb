@@ -14,12 +14,12 @@ class Php56 < AbstractPhp
     args = super
 
     # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
-    if build.without? 'phpdbg'
+    if build.without? "phpdbg"
       args << "--enable-dtrace"
       args << "--disable-phpdbg"
     else
       args << "--enable-phpdbg"
-      if build.with? 'debug'
+      if build.with? "debug"
         args << "--enable-phpdbg-debug"
       end
     end
