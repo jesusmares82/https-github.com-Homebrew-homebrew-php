@@ -11,13 +11,13 @@ class Php55 < AbstractPhp
 
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
-  if build.with? 'phpdbg'
+  if build.with? "phpdbg"
     # needed to regenerate the configure script
-    depends_on 'autoconf' => :build
-    depends_on 're2c' => :build
-    depends_on 'flex' => :build
+    depends_on "autoconf" => :build
+    depends_on "re2c" => :build
+    depends_on "flex" => :build
 
-    resource 'phpdbg' do
+    resource "phpdbg" do
       url PHPDBG_SRC_TARBAL
       sha256 PHPDBG_CHECKSUM[:sha256]
     end
@@ -27,17 +27,17 @@ class Php55 < AbstractPhp
     args = super
 
     # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
-    args << "--enable-dtrace" if build.without? 'phpdbg'
+    args << "--enable-dtrace" if build.without? "phpdbg"
 
     args << "--enable-zend-signals"
   end
 
   def _install
-    if build.with? 'phpdbg'
-      resource('phpdbg').stage buildpath/'sapi/phpdbg'
+    if build.with? "phpdbg"
+      resource("phpdbg").stage buildpath/"sapi/phpdbg"
 
       # force the configure file to be rebuilt (needed to support phpdbg)
-      File.delete('configure')
+      File.delete("configure")
       system "./buildconf", "--force"
     end
 
