@@ -1,23 +1,22 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class PhpCodeSniffer < Formula
-  homepage 'http://pear.php.net/package/PHP_CodeSniffer'
-  url 'http://download.pear.php.net/package/PHP_CodeSniffer-2.3.0.tgz'
-  sha1 '4b6b4db6d71908ce8f324db6e896a91d491953fa'
+  homepage "http://pear.php.net/package/PHP_CodeSniffer"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.3.2.tgz"
+  sha256 "6ebf4ee75425f27995768ecca70c2846c7f450735f09c5f30013ebecf648ac4d"
 
   depends_on PhpMetaRequirement
 
   def phpcs_standards
-    etc+name+'Standards'
+    etc+name+"Standards"
   end
 
   def phpcs_script_name
-    'phpcs'
+    "phpcs"
   end
 
   def phpcbf_script_name
-    'phpcbf'
+    "phpcbf"
   end
 
   def install
@@ -25,27 +24,27 @@ class PhpCodeSniffer < Formula
     if File.symlink? libexec+phpcs_script_name
       File.delete libexec+phpcs_script_name
     end
-    libexec.install_symlink prefix+'scripts'+phpcs_script_name
+    libexec.install_symlink prefix+"scripts"+phpcs_script_name
 
     if File.symlink? bin+phpcs_script_name
       File.delete bin+phpcs_script_name
     end
-    bin.install_symlink prefix+'scripts'+phpcs_script_name
+    bin.install_symlink prefix+"scripts"+phpcs_script_name
 
     if File.symlink? libexec+phpcbf_script_name
       File.delete libexec+phpcbf_script_name
     end
-    libexec.install_symlink prefix+'scripts'+phpcbf_script_name
+    libexec.install_symlink prefix+"scripts"+phpcbf_script_name
 
     if File.symlink? bin+phpcbf_script_name
       File.delete bin+phpcbf_script_name
     end
-    bin.install_symlink prefix+'scripts'+phpcbf_script_name
+    bin.install_symlink prefix+"scripts"+phpcbf_script_name
 
     # Make sure the config file is preserved on upgrades. We do that
     # be substituting @data_dir@ with #{etc} and making sure the
     # folder #{etc}/PHP_CodeSniffer exists.
-    (etc+'PHP_CodeSniffer').mkpath
+    (etc+"PHP_CodeSniffer").mkpath
     inreplace "#{prefix}/CodeSniffer.php", /@data_dir@/, etc
 
     # Create a place for other formulas to link their standards.
@@ -55,7 +54,7 @@ class PhpCodeSniffer < Formula
     # (preserve config).
     `#{bin+phpcs_script_name} --config-show | grep -q installed_paths`
     unless $?.to_i == 0
-      system bin+phpcs_script_name, '--config-set', 'installed_paths', phpcs_standards
+      system bin+phpcs_script_name, "--config-set", "installed_paths", phpcs_standards
     end
 
     # Fix shebang line of phpcs-svn-pre-commit script.
@@ -75,5 +74,14 @@ class PhpCodeSniffer < Formula
       brew home #{name}
 
     EOS
+  end
+
+  test do
+    (testpath/"test.php").write <<-EOS.undent
+      <?php
+      echo "foo"."bar"
+    EOS
+    system bin+phpcs_script_name, "--standard=Zend", "test.php"
+    system "#{bin}/#{phpcs_script_name} --standard=PEAR --report=emacs test.php | grep -q 'error - Missing file doc comment'"
   end
 end
