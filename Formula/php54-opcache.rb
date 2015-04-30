@@ -4,15 +4,14 @@ class Php54Opcache < AbstractPhp54Extension
   init
   homepage "https://github.com/zend-dev/ZendOptimizerPlus"
   url "https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz"
-  sha1 "faefc5fcb5236edad3837dd496f97685ea5cd5da"
   sha256 "3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c"
   head "https://github.com/zendtech/ZendOptimizerPlus.git"
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "1e98bd00fd80d3b3a45195cb58f64d1a34e9b11e" => :yosemite
-    sha1 "11f5dd70d930749ff26a4f7df8318d30123603c9" => :mavericks
-    sha1 "09a97ba8b3fa91ad4453aeadd105ab5598e2c7ca" => :mountain_lion
+    sha256 "794510840b406ea2e064799700686926d8152749dbfc32e7b3e3947404af9cc8" => :yosemite
+    sha256 "127e1dcd220820bea47f884fa8c2bd8952a89ea84c4dcfc5e35ea72b06e1ecba" => :mavericks
+    sha256 "6b88011497051fa665d003ea0650586ade775335f0653ee41004ac68cc3149ee" => :mountain_lion
   end
 
   depends_on "pcre"
