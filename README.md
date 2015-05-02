@@ -107,19 +107,19 @@ The purpose of this repository is to allow PHP developers to quickly retrieve wo
 Setup the `homebrew/dupes` tap which has dependencies we need:
 
 ```sh
-brew tap homebrew/dupes
+$ brew tap homebrew/dupes
 ```
 
 Setup the `homebrew/versions` tap which has dependencies we need:
 
 ```sh
-brew tap homebrew/versions
+$ brew tap homebrew/versions
 ```
 
 Then, run the following in your command-line:
 
 ```sh
-brew tap homebrew/homebrew-php
+$ brew tap homebrew/homebrew-php
 ```
 
 ## Usage
@@ -127,13 +127,13 @@ brew tap homebrew/homebrew-php
 **Note:** For a list of available configuration options run:
 
 ```sh
-brew options php56
+$ brew options php56
 ```
 
 Once the tap is installed, you can install `php53`, `php54`, `php55`, `php56`, or any formulae you might need via:
 
 ```sh
-brew install php56
+$ brew install php56
 ```
 
 That's it!
@@ -146,7 +146,7 @@ Using multiple PHP versions from `homebrew-php` is pretty straightforward.
 
 If using Apache, you will need to update the `LoadModule` call. For convenience, simply comment out the old PHP version:
 
-```sh
+```
 # /etc/apache2/httpd.conf
 # Swapping from PHP 5.5 to PHP 5.6
 # $HOMEBREW_PREFIX is normally `/usr/local`
@@ -159,14 +159,14 @@ If using FPM, you will need to unload the `plist` controlling php, or manually s
 ```sh
 # Swapping from PHP 5.5 to PHP 5.6
 # $HOMEBREW_PREFIX is normally `/usr/local`
-cp $HOMEBREW_PREFIX/Cellar/php56/5.6.4/homebrew.mxcl.php56.plist ~/Library/LaunchAgents/
-launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist
-launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+$ cp $HOMEBREW_PREFIX/Cellar/php56/5.6.4/homebrew.mxcl.php56.plist ~/Library/LaunchAgents/
+$ launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php55.plist
+$ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
 ```
 
 If you would like to swap the PHP you use on the command line, you should update the `$PATH` variable in either your `.profile`, `.zshrc`, `.bashrc` or `.bash_profile`:
 
-```sh
+```
 # Swapping from PHP 5.5 to PHP 5.6
 # export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
@@ -179,7 +179,7 @@ Please be aware that you must make this type of change EACH time you swap betwee
 If installing `php53`, `php54`, `php55` or `php56`, please note that all extensions installed with the included `pear` will be installed to the respective php's bin path. For example, supposing you installed `PHP_CodeSniffer` as follows:
 
 ```sh
-pear install PHP_CodeSniffer
+$ pear install PHP_CodeSniffer
 ```
 
 It would be nice to be able to use the `phpcs` command via command-line, or other utilities. You will need to add the installed php's `bin` directory to your path. The following would be added to your `.bashrc` or `.bash_profile` when running the `php56` brew:
