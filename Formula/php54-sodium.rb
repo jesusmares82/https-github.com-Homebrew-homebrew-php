@@ -7,6 +7,13 @@ class Php54Sodium < AbstractPhp54Extension
   sha256 "07d06b486ab5b687e63109d64bf9fd21c846a315b8c71088639dfa0a7272339e"
   head "https://github.com/alethia7/php-sodium.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "cb1043f0568315793a58b2c017064b14bf4212b9698b3631ece95209131b6cc5" => :yosemite
+    sha256 "b964dcedbe1e2702acd744f73dbe2b6f819e8ed90ba76198090bb50c41b9c4be" => :mavericks
+    sha256 "4743c7ac3b504009fbd1dde6c783d43b0a2c6fb2a56a6c017eda7414d8198573" => :mountain_lion
+  end
+
   depends_on "libsodium"
 
   def install
