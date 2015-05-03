@@ -1,13 +1,12 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-building-requirement", __FILE__)
 
 class PhpCsFixer < Formula
-  homepage 'http://cs.sensiolabs.org'
-  url 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.7.tar.gz'
-  sha1 '6905738407ab01635826787fa927cbcb5accc748'
-  head 'https://github.com/FriendsOfPHP/PHP-CS-Fixer.git'
+  homepage "http://cs.sensiolabs.org"
+  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.7.tar.gz"
+  sha256 "702a52611733065f94860048f13925b8f4c0571fa6c2fe5e682e4d5377841a73"
+  head "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
@@ -19,7 +18,7 @@ class PhpCsFixer < Formula
   depends_on "php56" if Formula['php56'].linked_keg.exist?
 
   def install
-    File.open("genphar.php", 'w') {|f| f.write(phar_stub) }
+    File.open("genphar.php", "w") {|f| f.write(phar_stub) }
 
     [
       "mkdir -p src",
@@ -37,7 +36,7 @@ class PhpCsFixer < Formula
   end
 
   test do
-    system 'php-cs-fixer --version'
+    system "php-cs-fixer", "--version"
   end
 
   def phar_stub
