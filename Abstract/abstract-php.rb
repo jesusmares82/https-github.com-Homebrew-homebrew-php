@@ -23,7 +23,7 @@ class AbstractPhp < Formula
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
-    depends_on 'homebrew/dupes/tidy' if build.include?('with-tidy')
+    depends_on 'tidy-html5' if build.include?('with-tidy')
     depends_on 'homebrew/dupes/zlib'
     depends_on 'icu4c'
     depends_on 'imap-uw' if build.include?('with-imap')
@@ -311,7 +311,7 @@ INFO
     end
     
     if build.with? 'tidy'
-      args << "--with-tidy=#{Formula['tidy'].opt_prefix}"
+      args << "--with-tidy=#{Formula['tidy-html5'].opt_prefix}"
     end
 
     if build.with? 'snmp'
