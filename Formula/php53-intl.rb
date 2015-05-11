@@ -7,6 +7,13 @@ class Php53Intl < AbstractPhp53Extension
   sha256   PHP_CHECKSUM[:sha256]
   version  PHP_VERSION
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "5a43d89b97a857b24952df13d46993ac31ee87604929b5be0aa903c93dfec951" => :yosemite
+    sha256 "681db88b30d7b7855b08e65cadd0706e11a9ab0726225f883076a56c0fd006d7" => :mavericks
+    sha256 "cffc7daf403dfe512547cd79ef2749702ddcaca69e731da717144d69c15c12bc" => :mountain_lion
+  end
+
   depends_on "icu4c"
 
   def install
