@@ -18,7 +18,7 @@ class Php54 < AbstractPhp
     depends_on "flex" => :build
 
     resource "phpdbg" do
-      url PHPDBG_SRC_TARBAL
+      url    PHPDBG_SRC_TARBAL
       sha256 PHPDBG_CHECKSUM[:sha256]
     end
   end
