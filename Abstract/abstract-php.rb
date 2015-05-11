@@ -168,7 +168,6 @@ INFO
       "--enable-exif",
       "--enable-ftp",
       "--enable-gd-native-ttf",
-      "--enable-intl",
       "--enable-mbregex",
       "--enable-mbstring",
       "--enable-shmop",
@@ -357,12 +356,6 @@ INFO
     chmod_R 0775, lib+"php"
 
     system bin+"pear", "config-set", "php_ini", config_path+"php.ini", "system" unless skip_pear_config_set?
-
-    # remove intl.ini, since it is now always compiled into php
-    intl_config = config_path + "conf.d/ext-intl.ini"
-    if intl_config.file?
-      File.delete intl_config
-    end
 
     if build_fpm?
       if File.exist?('sapi/fpm/init.d.php-fpm')
