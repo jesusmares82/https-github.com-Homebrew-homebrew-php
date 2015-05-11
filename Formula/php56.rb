@@ -19,6 +19,7 @@ class Php56 < AbstractPhp
       args << "--disable-phpdbg"
     else
       args << "--enable-phpdbg"
+
       if build.with? "debug"
         args << "--enable-phpdbg-debug"
       end
