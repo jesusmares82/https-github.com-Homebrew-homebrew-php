@@ -10,6 +10,13 @@ class Php53 < AbstractPhp
 
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "11b113bda3131da95ae79e4eb109e708e421b59b4e431aa12bbb659c0dc81f9e" => :yosemite
+    sha256 "ba29274a773ae1ac7f9e0f7fe5689a8f9f37e4a3896407c8f3c9a281af16dfb2" => :mavericks
+    sha256 "5f4d2226bf008f7887723dd571fbf6a607f0ff8c0bf2afb411b5f6335fca219c" => :mountain_lion
+  end
+
   # build dependancy needed to fix issue #962
   depends_on "autoconf" => :build
   depends_on "re2c" => :build
