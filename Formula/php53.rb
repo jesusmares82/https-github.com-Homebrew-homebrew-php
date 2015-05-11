@@ -11,10 +11,10 @@ class Php53 < AbstractPhp
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   # build dependancy needed to fix issue #962
-  depends_on 'autoconf' => :build
-  depends_on 're2c' => :build
-  depends_on 'flex' => :build
-  depends_on 'homebrew/versions/bison27' => :build
+  depends_on "autoconf" => :build
+  depends_on "re2c" => :build
+  depends_on "flex" => :build
+  depends_on "homebrew/versions/bison27" => :build
 
   depends_on 'libevent' unless build.without? 'fpm'
 
