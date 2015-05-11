@@ -8,13 +8,6 @@ class Php53 < AbstractPhp
   sha256  PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha1 "3fc80d9b7b46f0fe41be9f4e4a9249fb598f7a21" => :yosemite
-    sha1 "2a1835b751d08473ef031a68e5e91ed098dee487" => :mavericks
-    sha1 "be55cfceb47c61cc6bd55e5c5b81a406b9ce47b7" => :mountain_lion
-  end
-
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   # build dependancy needed to fix issue #962
