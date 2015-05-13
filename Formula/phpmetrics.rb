@@ -1,12 +1,11 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpmetrics < Formula
-  homepage 'http://www.phpmetrics.org/'
-  url 'https://github.com/Halleck45/PhpMetrics/raw/v1.1.1/build/phpmetrics.phar'
-  sha256 'e55f6ea1fe8046f538432b946fca38794ab9e3a88c5251e70c3b08abb7e7cd03'
-  version '1.1.1'
+  homepage "http://www.phpmetrics.org/"
+  url "https://github.com/Halleck45/PhpMetrics/raw/34cf0888e7225d743fc01b467fbbd8a1d54226a6/build/phpmetrics.phar"
+  sha256 "77fd4f29f76bf3f8c623e415ee834692077e9b49bd340a0c896f58a9697fe9a3"
+  version "1.4.1"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
@@ -20,7 +19,7 @@ class Phpmetrics < Formula
   end
 
   test do
-    system 'phpmetrics --version'
+    system "phpmetrics", "--version"
   end
 
   def caveats; <<-EOS.undent
@@ -31,5 +30,4 @@ class Phpmetrics < Formula
       "brew home phpmetrics".
     EOS
   end
-
 end
