@@ -1,8 +1,8 @@
 class WpCli < Formula
   homepage "https://github.com/wp-cli/wp-cli"
   head "https://github.com/wp-cli/wp-cli.git"
-  url "https://github.com/wp-cli/wp-cli/archive/v0.19.0.tar.gz"
-  sha256 "74a0f04a653f183f542d5711333a860d8639fd925c966bb2f2bd235f3c768fce"
+  url "https://github.com/wp-cli/wp-cli/archive/v0.19.1.tar.gz"
+  sha256 "924bdc47011067be7979c3817ec40c44e8bd68faa44ddc838881d4a2cffd778a"
 
   option "without-bash-completion", "Don't install bash completion"
   option "without-package-index", "Don't add package index repository (http://wp-cli.org/package-index)"
