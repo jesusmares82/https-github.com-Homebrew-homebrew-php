@@ -7,6 +7,11 @@ class Php53Phalcon < AbstractPhp53Extension
   sha256 "f5bf0048c0096b447362d12f37a8d65feedbc35544b44bd97909e3f1d1d1a42a"
   head "https://github.com/phalcon/cphalcon.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "063c9be7fa41787d37b39f5a1726f9775acdf71d5d9fe4dd283bff8497c7e5f6" => :yosemite
+  end
+
   depends_on "pcre"
 
   def install
