@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Phalcon < AbstractPhp55Extension
   init
   homepage "http://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.0.tar.gz"
-  sha256 "148d10dc733ae0166e34dca44d036776c120e00b427b2333f639d1dd2d110a21"
+  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.1.tar.gz"
+  sha256 "f5bf0048c0096b447362d12f37a8d65feedbc35544b44bd97909e3f1d1d1a42a"
   head "https://github.com/phalcon/cphalcon.git"
 
   depends_on "pcre"
