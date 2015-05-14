@@ -7,6 +7,13 @@ class Php54Phalcon < AbstractPhp54Extension
   sha256 "f5bf0048c0096b447362d12f37a8d65feedbc35544b44bd97909e3f1d1d1a42a"
   head "https://github.com/phalcon/cphalcon.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "0b1bc9cc384a00cfaa6916fafdd2f14d1920907d93e088b019dca64442637a54" => :yosemite
+    sha256 "1ee09599a201ff49a96ebabaaf0a097a754fa8321bf6c639b96dcb52b116506f" => :mavericks
+    sha256 "57848e2b5bc83195a056492813b11fd271bf6bd0787d6d47071e8d8aa0a1c298" => :mountain_lion
+  end
+
   depends_on "pcre"
 
   def install
