@@ -2,10 +2,13 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Tidy < AbstractPhp55Extension
   init
-  homepage 'http://php.net/manual/en/book.tidy.php'
-  url PHP_SRC_TARBALL
-  sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
+  homepage "http://php.net/manual/en/book.tidy.php"
+  url      PHP_SRC_TARBALL
+  sha256   PHP_CHECKSUM[:sha256]
+  version  PHP_VERSION
+
+  bottle do
+  end
 
   def install
     Dir.chdir "ext/tidy"

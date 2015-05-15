@@ -2,12 +2,15 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55PdoDblib < AbstractPhp55Extension
   init
-  homepage 'https://github.com/php/php-src/tree/master/ext/pdo_dblib'
-  url PHP_SRC_TARBALL
-  sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
+  homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
+  url      PHP_SRC_TARBALL
+  sha256   PHP_CHECKSUM[:sha256]
+  version  PHP_VERSION
 
-  depends_on 'freetds'
+  bottle do
+  end
+
+  depends_on "freetds"
 
   def extension
     "pdo_dblib"
