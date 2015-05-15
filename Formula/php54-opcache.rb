@@ -9,6 +9,10 @@ class Php54Opcache < AbstractPhp54Extension
   head "https://github.com/zendtech/ZendOptimizerPlus.git"
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "5c9c610aa86e26f0524125148648a5fa567e30597a14582a552f698969b6023b" => :yosemite
+    sha256 "6afb1733127de95490ac467d015ba621286f1c604e0e824f2fa9478ddaa9f868" => :mavericks
+    sha256 "238b778d9e1446f105bdaeaf4e900030b2f536662131fd4c74b9b28b788b2347" => :mountain_lion
   end
 
   depends_on "pcre"
