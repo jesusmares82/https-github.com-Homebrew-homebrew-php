@@ -9,6 +9,10 @@ class Php56Propro < AbstractPhp56Extension
   head "https://git.php.net/repository/pecl/php/propro.git"
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "3ee68c6accdae0cd0407e287ce997325a44d87f4635181c6166ca3df69c9a53a" => :yosemite
+    sha256 "7eee6598c864ed7b7e0c0cd7f85290361f335e41ab367cf64bc367f7b64f2d99" => :mavericks
+    sha256 "7297a92caa8c6b0b9395f9d253ac079df0c7049554e31d93ea3bbbf3425848d3" => :mountain_lion
   end
 
   def install
