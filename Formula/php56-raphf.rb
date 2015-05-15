@@ -7,6 +7,10 @@ class Php56Raphf < AbstractPhp56Extension
   sha256 "461be283e89d94186a3ed4651b92c7c1a067bad7b6476d0ca7ac8863dc1ed8bf"
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "99977faae951ff350b5548de02898e68aa42f4e565cccfffff445491fce8953b" => :yosemite
+    sha256 "68ecac431c3ab1a297432256cc296f8b5dfddcd4f96af408f6706428da9d9c1b" => :mavericks
+    sha256 "f40e19b76251d553af0919dfe24a8c7e0fd992f7ead642ed05fb466c7dd03971" => :mountain_lion
   end
 
   def install
