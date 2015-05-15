@@ -11,13 +11,6 @@ class Php55 < AbstractPhp
 
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
-  bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "ddac817e716aaa0eb19c9ecda128f8de433b2485d8ce8c2ba114223490035a52" => :yosemite
-    sha256 "e9411cb1fd2045fa48cf6a28ab422558690a15db4af16393d2a97cb39fa348ea" => :mavericks
-    sha256 "cd11e7ec7d266f9f702abb671a8337e772c061f0846df9f80614f0e93aee9705" => :mountain_lion
-  end
-
   if build.with? "phpdbg"
     # needed to regenerate the configure script
     depends_on "autoconf" => :build
