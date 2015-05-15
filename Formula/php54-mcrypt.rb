@@ -2,12 +2,15 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Mcrypt < AbstractPhp54Extension
   init
-  homepage 'http://php.net/manual/en/book.mcrypt.php'
-  url PHP_SRC_TARBALL
-  sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
+  homepage "http://php.net/manual/en/book.mcrypt.php"
+  url      PHP_SRC_TARBALL
+  sha256   PHP_CHECKSUM[:sha256]
+  version  PHP_VERSION
 
-  depends_on 'mcrypt'
+  bottle do
+  end
+
+  depends_on "mcrypt"
 
   def install
     Dir.chdir "ext/mcrypt"
