@@ -8,6 +8,10 @@ class Php54Pspell < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "b57274f3d6d34a9ad46e19270cef269739572cc7640b2de08f11d6d6118f4054" => :yosemite
+    sha256 "fcf636c13ea245f789d12676955791a1f23b13cfbd8fba62c41956bfbe7d51bc" => :mavericks
+    sha256 "dac33e3af589dd90df82cd20fb9fd76b3a4a07c53abc8840b98aa153160ba3ac" => :mountain_lion
   end
 
   depends_on "aspell"
