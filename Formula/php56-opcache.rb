@@ -8,10 +8,6 @@ class Php56Opcache < AbstractPhp56Extension
   version  PHP_VERSION
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "448f06fc5cf00f98537dd6e03334f8827f892f9132dd1af7328e9d173520f60d" => :yosemite
-    sha256 "82835289c43799db4a18a76e07c3495e939c95efca705b97224d413960f1f5b8" => :mavericks
-    sha256 "0a9027372a9ec540f39548e698d97ad3c2ccfe95b2ed3d7b801a8aa3cd3905a6" => :mountain_lion
   end
 
   depends_on "pcre"
