@@ -3,15 +3,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Opcache < AbstractPhp54Extension
   init
   homepage "https://github.com/zend-dev/ZendOptimizerPlus"
-  url "https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.4.tar.gz"
-  sha256 "3f930ad426eb2140d64691677f6755046ac55aa0099da2023bf0251f7c85685c"
+  url "https://github.com/zendtech/ZendOptimizerPlus/archive/v7.0.5.tar.gz"
+  sha256 "2654d9611e386cc59887d4e8cfba2c010ed4480c7c9c5094ad99fdcf858d94ee"
+
   head "https://github.com/zendtech/ZendOptimizerPlus.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "794510840b406ea2e064799700686926d8152749dbfc32e7b3e3947404af9cc8" => :yosemite
-    sha256 "127e1dcd220820bea47f884fa8c2bd8952a89ea84c4dcfc5e35ea72b06e1ecba" => :mavericks
-    sha256 "6b88011497051fa665d003ea0650586ade775335f0653ee41004ac68cc3149ee" => :mountain_lion
   end
 
   depends_on "pcre"
@@ -207,5 +204,9 @@ class Php54Opcache < AbstractPhp54Extension
       ; Ensure conflicting APC is disabled
       apc.cache_by_default = false
     EOS
+  end
+
+  test do
+    shell_output("php -m").include?("OPcache")
   end
 end
