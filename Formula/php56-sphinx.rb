@@ -1,11 +1,10 @@
-require 'formula'
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Sphinx < AbstractPhp56Extension
   init
   homepage 'http://pecl.php.net/package/sphinx'
-  url 'http://pecl.php.net/get/sphinx-1.3.1.tgz'
-  sha1 '969ecd6dbff65e7af67b5c448af8a0015fd494d0'
+  url 'http://pecl.php.net/get/sphinx-1.3.2.tgz'
+  sha256 '0c3ada36833a44a8147d2dd1b907548010ae53de0a05041a77e68dee036130e6'
 
   depends_on 'libsphinxclient'
 
