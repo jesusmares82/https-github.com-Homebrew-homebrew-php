@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Suhosin < AbstractPhp54Extension
   init
   homepage 'http://suhosin.org/stories/index.html'
-  url 'https://github.com/stefanesser/suhosin/archive/suhosin-0.9.36.tar.gz'
-  sha1 '66801a40dc892542276320e30716aa2590912ae6'
+  url 'https://github.com/stefanesser/suhosin/archive/0.9.37.1.tar.gz'
+  sha256 '322ba104a17196bae63d39404da103fd011b09fde0f02484dc44366511c586ba'
   head 'https://github.com/stefanesser/suhosin.git'
 
   def install
