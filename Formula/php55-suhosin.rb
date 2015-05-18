@@ -7,6 +7,13 @@ class Php55Suhosin < AbstractPhp55Extension
   sha256 '322ba104a17196bae63d39404da103fd011b09fde0f02484dc44366511c586ba'
   head 'https://github.com/stefanesser/suhosin.git'
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "c9e52595bbeada891f9d66b75d1f900a7cbc87d6009d22c77d4257bf1006ad8a" => :yosemite
+    sha256 "a8b1b78b4893de51c1fd82f627e4bd9d9820602bcb7eac22dccaf5a7b8ab1175" => :mavericks
+    sha256 "ee9f1646f2edd9aa3dde0d029bd1e794c58749807cdb1ffc7bf520d390bb7fe8" => :mountain_lion
+  end
+
   def install
     ENV.universal_binary if build.universal?
 
