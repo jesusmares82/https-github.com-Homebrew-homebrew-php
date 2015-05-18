@@ -2,16 +2,17 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Parsekit < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/parsekit'
-  url 'http://pecl.php.net/get/parsekit-1.3.0.tgz'
-  sha1 '89d54548390e3136e7ea38914f716454c4f7a113'
-  head 'https://github.com/php/pecl-php-parsekit.git'
+  homepage "https://pecl.php.net/package/parsekit"
+  desc "PHP Opcode Analyser"
+  url "https://pecl.php.net/get/parsekit-1.3.0.tgz"
+  sha256 "447d5ec6412d6c8c6489b03e7333d3872944444610b74eafd608eddcb3bbaf08"
+  head "https://github.com/php/pecl-php-parsekit.git"
 
   patch do
     # Fix incompatibility issues with parsekit 1.3.0
-    # and php 5.4 (https://bugs.php.net/61187)
-    url "https://gist.githubusercontent.com/lucasmichot/76018aa35589ee90a483/raw/d967ae3aac6d254046cfa545894949dff39ada79/parsekit"
-    sha1 "4493fd29ff29dacd994fa5c1ec49ab50175902a5"
+    # and PHP 5.4 (https://bugs.php.net/61187)
+    url "https://gist.githubusercontent.com/SteelPangolin/5252ea888d09c51b7d35/raw/298c52816c6d8794aecf14416db20c29fadbde0d/parsekit"
+    sha256 "dab4d3918b3c64360773de724076d6def0a1a89abf36e019c27c81b850955712"
   end
 
   def install
@@ -24,6 +25,14 @@ class Php55Parsekit < AbstractPhp55Extension
                           phpconfig
     system "make"
     prefix.install "modules/parsekit.so"
+    prefix.install "examples"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    Dir.chdir prefix
+    shell_output("php -m").include?("parsekit")\
+      && shell_output("php examples/compile_file.php")\
+      && shell_output("php examples/compile_string.php")
   end
 end
