@@ -2,14 +2,15 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Couchbase < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/couchbase'
-  url 'http://pecl.php.net/get/couchbase-1.2.2.tgz'
-  sha1 '29cef6c0692a8e3fa3220d62fcf57b442499a2b0'
-  head 'https://github.com/couchbase/php-ext-couchbase.git'
+  homepage "http://pecl.php.net/package/couchbase"
+  desc "Provides fast access to documents stored in a Couchbase Server."
+  url "http://pecl.php.net/get/couchbase-2.0.7.tgz"
+  sha256 "0482757d6b29ec5b9c957b053203a75410ced519f2407e666f7ca5c180a66ff5"
+  head "https://github.com/couchbaselabs/php-couchbase.git"
 
-  option 'with-igbinary', "Build with igbinary support"
-  depends_on 'libcouchbase'
-  depends_on 'php55-igbinary' if build.with? "igbinary"
+  option "with-igbinary", "Build with igbinary support"
+
+  depends_on "libcouchbase"
 
   def install
     Dir.chdir "couchbase-#{version}" unless build.head?
@@ -19,19 +20,16 @@ class Php55Couchbase < AbstractPhp55Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-libcouchbase-dir=#{Formula['libcouchbase'].opt_prefix}"
-    args << "--enable-couchbase-igbinary" if build.with? 'igbinary'
 
     safe_phpize
-
-    if build.with? 'igbinary'
-      system "mkdir -p ext/igbinary"
-      cp "#{Formula['php55-igbinary'].opt_prefix}/include/igbinary.h", "ext/igbinary/igbinary.h"
-    end
 
     system "./configure", *args
     system "make"
     prefix.install "modules/couchbase.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("couchbase")
   end
 end
