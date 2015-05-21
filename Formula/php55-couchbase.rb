@@ -8,6 +8,13 @@ class Php55Couchbase < AbstractPhp55Extension
   sha256 "0482757d6b29ec5b9c957b053203a75410ced519f2407e666f7ca5c180a66ff5"
   head "https://github.com/couchbaselabs/php-couchbase.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "cf7dd3612e37ba67a2e00f6381052017548d4b2939784d1fd87f867e1321f388" => :yosemite
+    sha256 "f1385be6ab91caa356c3fcb3e58c60f4214da04242b053b9bc9ea63f1f01a5bf" => :mavericks
+    sha256 "4f136d35d416969c954fd31b998b8d0828684e8b2904deb2b8ee17b1db180a49" => :mountain_lion
+  end
+
   option "with-igbinary", "Build with igbinary support"
 
   depends_on "libcouchbase"
