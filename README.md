@@ -207,7 +207,7 @@ If you have any concerns as to whether your formula belongs in PHP, just open a 
 
 ### PHP Extension definitions
 
-PHP Extensions MUST be prefixed with `phpVERSION`. For example, instead of the `Solr` formula for PHP55 in `solr.rb`, we would have `Php55Solr` inside of `php56-solr.rb`. This is to remove any possible conflicts with mainline Homebrew formulae.
+PHP Extensions MUST be prefixed with `phpVERSION`. For example, instead of the `Solr` formula for PHP56 in `solr.rb`, we would have `Php56Solr` inside of `php56-solr.rb`. This is to remove any possible conflicts with mainline Homebrew formulae.
 
 The template for the `php56-example` pecl extension would be as follows. Please use it as an example for any new extension formulae:
 
