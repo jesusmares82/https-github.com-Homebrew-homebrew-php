@@ -4,9 +4,9 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Virtphp < Formula
   homepage 'http://virtphp.org'
-  url 'https://github.com/virtphp/virtphp/releases/download/v0.5.0-alpha/virtphp.phar'
-  sha1 '074b619f96b20d01503a07ebec7d167a9989602b'
-  version '0.5.0-alpha'
+  url 'https://github.com/virtphp/virtphp/releases/download/v0.5.2-alpha/virtphp.phar'
+  sha1 'ee5dc38d290d2f63400cb98b160e57be32bfc6bc'
+  version '0.5.2-alpha'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
