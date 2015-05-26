@@ -8,6 +8,14 @@ class Php55Parsekit < AbstractPhp55Extension
   sha256 "447d5ec6412d6c8c6489b03e7333d3872944444610b74eafd608eddcb3bbaf08"
   head "https://github.com/php/pecl-php-parsekit.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    cellar :any
+    sha256 "c5b8fde36728ffae5af884ebd0d3837d57e6578f168a5d93bbbd4f969f4bdda9" => :yosemite
+    sha256 "34080f494ccd497856252227a4dc5f51ce666910715a4526ab2d1b60604e7fca" => :mavericks
+    sha256 "12c3bada1be25dc8d5ae06d1a1b21c261dc76c1a4a5c070741ecb02fbf13b076" => :mountain_lion
+  end
+
   patch do
     # Fix incompatibility issues with parsekit 1.3.0
     # and PHP 5.4 (https://bugs.php.net/61187)
