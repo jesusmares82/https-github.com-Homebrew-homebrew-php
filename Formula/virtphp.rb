@@ -1,12 +1,11 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Virtphp < Formula
-  homepage 'http://virtphp.org'
-  url 'https://github.com/virtphp/virtphp/releases/download/v0.5.2-alpha/virtphp.phar'
-  sha1 'ee5dc38d290d2f63400cb98b160e57be32bfc6bc'
-  version '0.5.2-alpha'
+  homepage "http://virtphp.org"
+  url "https://github.com/virtphp/virtphp/releases/download/v0.5.2-alpha/virtphp.phar"
+  sha256 "776bce2f6dfd252ef9d886f14d8bbca7cb9e328e69ad900cdf14a552e7e59d30"
+  version "0.5.2-alpha"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
@@ -28,4 +27,7 @@ class Virtphp < Formula
     EOS
   end
 
+  test do
+    shell_output("virtphp --version").include?(version)
+  end
 end
