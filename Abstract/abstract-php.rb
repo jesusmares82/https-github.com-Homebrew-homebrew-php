@@ -29,7 +29,7 @@ class AbstractPhp < Formula
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
-    depends_on 'libxml2' unless MacOS.version >= :lion
+    depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
     depends_on 'openssl'
     depends_on 'unixodbc'
 
@@ -47,6 +47,7 @@ class AbstractPhp < Formula
     option 'with-debug', 'Compile with debugging symbols'
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
     option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
+    option 'with-homebrew-libxml2', 'Include Libxml2 support via Homebrew'
     option 'with-imap', 'Include IMAP extension'
     option 'with-libmysql', 'Include (old-style) libmysql support instead of mysqlnd'
     option 'with-mssql', 'Include MSSQL-DB support'
@@ -196,7 +197,7 @@ INFO
       "--with-zlib=#{Formula['zlib'].opt_prefix}",
     ]
 
-    unless MacOS.version >= :lion
+    if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
       args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
     end
 
@@ -308,7 +309,7 @@ INFO
     if build.with? 'phpdbg'
       args << "--enable-phpdbg"
     end
-    
+
     if build.with? 'tidy'
       args << "--with-tidy=#{Formula['tidy-html5'].opt_prefix}"
     end
