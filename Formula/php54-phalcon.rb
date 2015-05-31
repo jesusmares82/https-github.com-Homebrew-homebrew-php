@@ -9,9 +9,9 @@ class Php54Phalcon < AbstractPhp54Extension
 
   bottle do
     root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "0b1bc9cc384a00cfaa6916fafdd2f14d1920907d93e088b019dca64442637a54" => :yosemite
-    sha256 "1ee09599a201ff49a96ebabaaf0a097a754fa8321bf6c639b96dcb52b116506f" => :mavericks
-    sha256 "57848e2b5bc83195a056492813b11fd271bf6bd0787d6d47071e8d8aa0a1c298" => :mountain_lion
+    sha256 "f2733f4308693253e7b00db7cc426157006ac0e3be3633c2855d4010c5d8831c" => :yosemite
+    sha256 "bc7eeebe41fd08daddf5b8d654c5d40266880f9ee084f5d30d741f1bfb0cd7b0" => :mavericks
+    sha256 "5951e50ef301561d465533def53f8895610931eb2194b028a9a948dd6d61d962" => :mountain_lion
   end
 
   depends_on "pcre"
