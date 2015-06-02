@@ -7,6 +7,13 @@ class Php54Hprose < AbstractPhp54Extension
   sha256 "28733983073d5272b7096129dc23717c42485f905556082352bb0954b64bb996"
   head "https://github.com/hprose/hprose-pecl.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "5c68c512d6a3c3562ab9208d7c52d121e1e05f51c640e23d0e5e2e478ac00d14" => :yosemite
+    sha256 "bbc66e713fe54c643760192ddd5b0ee84dbb0a5790d588ae3dc6305067776933" => :mavericks
+    sha256 "b0c926da285b8e91b0f9aec59beb1274e14f352eacf0c5bd3119e1a8880fd7c0" => :mountain_lion
+  end
+
   def install
     Dir.chdir "hprose-#{version}" unless build.head?
 
