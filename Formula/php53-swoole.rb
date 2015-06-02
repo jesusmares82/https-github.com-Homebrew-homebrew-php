@@ -7,6 +7,13 @@ class Php53Swoole < AbstractPhp53Extension
   sha256 "e4d3c2466aa1e1c99750ec5497445bde8ef775fd0b304d11016e6df363cc7ec0"
   head "https://github.com/swoole/swoole-src.git"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "0cf9cc9752134024f561ab38345e2369f354a8bedba1f89cdd8a90ce293cb447" => :yosemite
+    sha256 "0811204648ede7c37b5077447b39dd9c01a08c0e63ec3ad0d185f0aa34fe7876" => :mavericks
+    sha256 "4e7157e540ad2fcdfde0318df026965743472c960d50152116f446988a23bb15" => :mountain_lion
+  end
+
   def install
     Dir.chdir "swoole-#{version}" unless build.head?
 
