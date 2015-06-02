@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Hprose < AbstractPhp55Extension
   init
   homepage "http://pecl.php.net/package/hprose"
-  url "http://pecl.php.net/get/hprose-1.5.2.tgz"
-  sha256 "9496d07d49dbae73677b076f6ff0ee4cf1bff861ac981eef76975b4aa9657623"
+  url "http://pecl.php.net/get/hprose-1.5.4.tgz"
+  sha256 "28733983073d5272b7096129dc23717c42485f905556082352bb0954b64bb996"
   head "https://github.com/hprose/hprose-pecl.git"
 
   def install
