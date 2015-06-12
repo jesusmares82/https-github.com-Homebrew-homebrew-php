@@ -35,28 +35,28 @@ class AbstractPhpVersion < Formula
   end
 
   module Php55Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.5.25.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.5.26.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.5.25'
+    PHP_VERSION     = '5.5.26'
     PHP_BRANCH      = 'PHP-5.5'
 
     PHP_CHECKSUM    = {
-                        :md5    => 'b3c38f0a12e27722585d962d86dfdd16',
-                        :sha1   => '89a7c0de86db9e06106f5bc091b13aa0c0e06952',
-                        :sha256 => '68df37e725ddd05675c0df906041038127938ecc52113a54d10e1e4029262c63',
+                        :md5    => '383a4b35327809afd2822e1e5efc8ee1',
+                        :sha1   => 'f2f80ef51d38b39c4ef060942e2ddcfffec9927a',
+                        :sha256 => '816afffdb03ff4c542bc172a2f77f9c69b817df82d60cce05c1b4f578c2c926e',
                       }
   end
 
   module Php56Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.6.9.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.6.10.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.6.9'
+    PHP_VERSION     = '5.6.10'
     PHP_BRANCH      = 'PHP-5.6'
 
     PHP_CHECKSUM    = {
-                        :md5    => '561f37377833772ace776143c5687884',
-                        :sha1   => 'a03f3a168a83a5e6fb983c44933f23fc44323a00',
-                        :sha256 => '19d3b87b7b8bba3be24cf6d757d16b723a98881c3af8d15469fd25501e9abcb9',
+                        :md5    => '83b17e0cdc72a3a486f5e6342e76c45e',
+                        :sha1   => '309255ff5ac3d789f0277354f0686404af646e09',
+                        :sha256 => '0a579c81c724ea41815eee0caa8ea7d8eeb302458519d8cc4fc5b055577c8c45',
                       }
   end
 end
