@@ -12,6 +12,10 @@ class Php54 < AbstractPhp
   head    PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "d863b58566089e24f9201a91ac1062facc24c4a281c6ff1fc2a5f58f7525c6e7" => :yosemite
+    sha256 "ec038bfb4219a9df8e79549acfbf89805870c4efbe993387c4caf3483fbc15a6" => :mavericks
+    sha256 "4312ef60566c1c97aa4faa0cffcf9a1d6e2996e908054e7a0c8c06994363cafd" => :mountain_lion
   end
 
   if build.with? "phpdbg"
