@@ -9,7 +9,7 @@ class AbstractPhpVersion < Formula
   end
 
   module Php53Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.3.29.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-5.3.29.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
     PHP_VERSION     = '5.3.29'
     PHP_BRANCH      = 'PHP-5.3'
@@ -22,7 +22,7 @@ class AbstractPhpVersion < Formula
   end
 
   module Php54Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.4.42.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-5.4.42.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
     PHP_VERSION     = '5.4.42'
     PHP_BRANCH      = 'PHP-5.4'
@@ -35,7 +35,7 @@ class AbstractPhpVersion < Formula
   end
 
   module Php55Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.5.26.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-5.5.26.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
     PHP_VERSION     = '5.5.26'
     PHP_BRANCH      = 'PHP-5.5'
@@ -48,7 +48,7 @@ class AbstractPhpVersion < Formula
   end
 
   module Php56Defs
-    PHP_SRC_TARBALL = 'https://www.php.net/get/php-5.6.10.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-5.6.10.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
     PHP_VERSION     = '5.6.10'
     PHP_BRANCH      = 'PHP-5.6'
