@@ -8,6 +8,10 @@ class Php54PdoDblib < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "f2ad0be1cb5d3c422d80a99b2535d36119ecdce434cfd0d4ebb208d06a0516cf" => :yosemite
+    sha256 "34eb5697dc634fd74353a77e20e2c44380fe12489636a3db54eccbb2669b918a" => :mavericks
+    sha256 "154bd1ab9790fb5c4eec9c30056feb26e64eb407a55ec7f94fc7dcbf28b9a230" => :mountain_lion
   end
 
   depends_on "freetds"
