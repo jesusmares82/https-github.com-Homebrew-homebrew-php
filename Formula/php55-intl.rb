@@ -8,6 +8,10 @@ class Php55Intl < AbstractPhp55Extension
   version  PHP_VERSION
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "bd3d2fdf9364b0dc39e1c817cf3b39d0196b30010825897b2225505c15d4b731" => :yosemite
+    sha256 "a345cd00db77fdb2cb569b28b63e7875ab60e8448174ab75c7a6ad5acbc74331" => :mavericks
+    sha256 "b7dc64f2523f5a4a1960c7e650daff505b5752a56db185ba8089a42dd5254c10" => :mountain_lion
   end
 
   depends_on "icu4c"
