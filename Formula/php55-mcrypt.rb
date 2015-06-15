@@ -8,6 +8,10 @@ class Php55Mcrypt < AbstractPhp55Extension
   version  PHP_VERSION
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    sha256 "7cc56512731a7b298cd66f2ef969c611d941b0d5aef07617d755ac0d0f0c23e6" => :yosemite
+    sha256 "96cef3f895704fe1a22c8f0cc9e6eed92bd5e627fe0043542bfa5f27232e24ea" => :mavericks
+    sha256 "63734eb57a1853ba5f677293e2ea67f15d52bd5cd9eda8854608d386996f3cee" => :mountain_lion
   end
 
   depends_on "mcrypt"
