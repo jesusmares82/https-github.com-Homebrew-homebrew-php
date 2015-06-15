@@ -2,17 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Phalcon < AbstractPhp56Extension
   init
+  desc "A full-stack PHP framework delivered as a C-extension"
   homepage "http://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.2.tar.gz"
-  sha256 "ed1d4cfa15c6bb2b0c80cbf63ad8e06fd8517e48413a7dc95c445409be350c84"
+  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.3.tar.gz"
+  sha256 "76e2c28bb86adf8ac165c5d43dfd428aa4b0b93bb92301dd83f96e5263cd5914"
   head "https://github.com/phalcon/cphalcon.git"
-
-  bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "05b6b8c373589de5e500ea35d9596abf11e672dad209ec024ae492eb5f551b3a" => :yosemite
-    sha256 "a542fc3ae3d02da7cd2bab059a4bb7e00b5dc712beec1e1280b6d7361846e7e9" => :mavericks
-    sha256 "dbb0e764336088f7f0e6a6268e5ffed100ab8d02071ac33132c98396b306f2f3" => :mountain_lion
-  end
 
   depends_on "pcre"
 
@@ -32,5 +26,9 @@ class Php56Phalcon < AbstractPhp56Extension
     system "make"
     prefix.install "modules/phalcon.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("phalcon")
   end
 end
