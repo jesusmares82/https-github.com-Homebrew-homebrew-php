@@ -5,6 +5,14 @@ class Phplint < Formula
   version "2.1-20150305"
   sha256 "cfa2c1b9ffcb0c60ec6fec164f249d5e608ebba1154ba6bd77ac331b03615e42"
 
+  bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
+    cellar :any
+    sha256 "67298e41214575875a831c95c7aab57037581b99801b86db67585615aecec9d5" => :yosemite
+    sha256 "f044f50fb5e910437633e75777e01b32cf8be88a9aa8e9513b58e92da9bad548" => :mavericks
+    sha256 "29803ebfec233cea8db230aad5478e8aa8116333c966ed0f271eeb8d9a0cb261" => :mountain_lion
+  end
+
   def install
     inreplace "php", "/opt/php/bin/php", "/usr/bin/env php"
     inreplace "phpl", "$__DIR__/", "$__DIR__/../"
