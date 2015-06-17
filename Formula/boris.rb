@@ -1,24 +1,23 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Boris < Formula
-  homepage 'https://github.com/d11wtq/boris/'
-  url      'https://github.com/d11wtq/boris/releases/download/v1.0.8/boris.phar'
-  sha1     '69aeccda5d8b8dcc666b9f472c7ae33173660d26'
-  version  '1.0.8'
-  head     'https://github.com/d11wtq/boris.git'
+  desc "A tiny REPL for PHP"
+  homepage "https://github.com/borisrepl/boris/"
+  url "https://github.com/borisrepl/boris/archive/v1.0.10.tar.gz"
+  sha256 "06eb9e8efe5ceac00f49ba32731c65047435ab09ff57bbbec56c8c728861a2ee"
+  head "https://github.com/borisrepl/boris.git"
+
+  depends_on PhpMetaRequirement
+  depends_on "composer" => :build
+  depends_on "php53" if Formula["php53"].linked_keg.exist?
+  depends_on "php54" if Formula["php54"].linked_keg.exist?
+  depends_on "php55" if Formula["php55"].linked_keg.exist?
+  depends_on "php56" if Formula["php56"].linked_keg.exist?
 
   def install
-    libexec.install "boris.phar"
-    sh = libexec + "boris"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/boris.phar \"$@\"")
-    chmod 0755, sh
-    bin.install_symlink sh
-  end
-
-  test do
-    system 'boris', '-h'
+    system "composer", "install"
+    libexec.install Dir["*"]
+    bin.install_symlink "#{libexec}/bin/boris"
   end
 
   def caveats
@@ -29,5 +28,9 @@ class Boris < Formula
       * The PCNTL functions
       * The POSIX functions
     EOS
+  end
+
+  test do
+    system "boris", "-h"
   end
 end
