@@ -2,9 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Xdebug < AbstractPhp55Extension
   init
+  desc "PHP extension which provides debugging and profiling capabilities."
   homepage "http://xdebug.org"
-  url "http://xdebug.org/files/xdebug-2.3.2.tgz"
-  sha1 "2b32d15880d88a084d9d50929b9f6904bf091fc4"
+  url "http://xdebug.org/files/xdebug-2.3.3.tgz"
+  sha256 "b27bd09b23136d242dbc94f4503c98f012a521d5597002c9d463a63c6b0cdfe3"
   head "https://github.com/xdebug/xdebug.git"
 
   def extension_type
@@ -25,5 +26,9 @@ class Php55Xdebug < AbstractPhp55Extension
     system "make"
     prefix.install "modules/xdebug.so"
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("Xdebug")
   end
 end
