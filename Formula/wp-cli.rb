@@ -1,8 +1,9 @@
 class WpCli < Formula
-  homepage "https://github.com/wp-cli/wp-cli"
+  desc "A set of command-line tools for managing WordPress installations."
+  homepage "http://wp-cli.org/"
+  url "https://github.com/wp-cli/wp-cli/archive/v0.19.2.tar.gz"
+  sha256 "08380d66c251ce17065fb8d082d004760746fefc751be74faea1ca61063b524b"
   head "https://github.com/wp-cli/wp-cli.git"
-  url "https://github.com/wp-cli/wp-cli/archive/v0.19.1.tar.gz"
-  sha256 "924bdc47011067be7979c3817ec40c44e8bd68faa44ddc838881d4a2cffd778a"
 
   option "without-bash-completion", "Don't install bash completion"
   option "without-package-index", "Don't add package index repository (http://wp-cli.org/package-index)"
@@ -20,7 +21,7 @@ class WpCli < Formula
     end
 
     if build.with? "package-index"
-      system "composer config --file=#{prefix}/composer.json repositories.wp-cli composer http://wp-cli.org/package-index/"
+      system "composer", "config", "--file=#{prefix}/composer.json", "repositories.wp-cli", "composer", "http://wp-cli.org/package-index/"
     end
   end
 
