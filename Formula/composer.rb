@@ -17,6 +17,7 @@ class Composer < Formula
     sh.write("#!/usr/bin/env bash\n\nexec /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/composer.phar \"$@\"")
     chmod 0755, sh
     bin.install_symlink sh
+    bin.install_symlink libexec + "composer.phar"
   end
 
   test do
