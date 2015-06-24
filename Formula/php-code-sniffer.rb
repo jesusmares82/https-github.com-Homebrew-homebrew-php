@@ -1,9 +1,10 @@
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class PhpCodeSniffer < Formula
+  desc "Check coding standards in PHP, JavaScript and CSS"
   homepage "http://pear.php.net/package/PHP_CodeSniffer"
-  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.3.2.tgz"
-  sha256 "6ebf4ee75425f27995768ecca70c2846c7f450735f09c5f30013ebecf648ac4d"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.3.3.tgz"
+  sha256 "2683687d746af15b90bb46ac6fdbde936ab2e5775f62f552cdcec1e530eb6e9d"
 
   depends_on PhpMetaRequirement
 
