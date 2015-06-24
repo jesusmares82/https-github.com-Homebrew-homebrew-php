@@ -47,9 +47,9 @@ class AbstractPhpExtension < Formula
 
   def php_branch
     class_name = self.class.name.split("::").last
-    matches = /^Php5([3-9]+)/.match(class_name)
+    matches = /^Php([5,7])([0-9]+)/.match(class_name)
     if matches
-      "5." + matches[1]
+      matches[1] + "." + matches[2]
     else
       raise "Unable to guess PHP branch for #{class_name}"
     end
@@ -91,7 +91,7 @@ class AbstractPhpExtension < Formula
 
   def extension
     class_name = self.class.name.split("::").last
-    matches = /^Php5[3-9](.+)/.match(class_name)
+    matches = /^Php[5,7][0-9](.+)/.match(class_name)
     if matches
       matches[1].downcase
     else
@@ -209,5 +209,14 @@ class AbstractPhp56Extension < AbstractPhpExtension
   def self.init opts=[]
     super()
     depends_on "php56" => opts if build.with?('homebrew-php')
+  end
+end
+
+class AbstractPhp70Extension < AbstractPhpExtension
+  include AbstractPhpVersion::Php70Defs
+
+  def self.init opts=[]
+    super()
+    depends_on "php70" => opts if build.with?('homebrew-php')
   end
 end

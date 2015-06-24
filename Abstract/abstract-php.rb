@@ -42,7 +42,8 @@ class AbstractPhp < Formula
       raise "Cannot specify more than one CGI executable to build."
     end
 
-    option 'homebrew-apxs', 'Build against apxs in Homebrew prefix'
+    deprecated_option "homebrew-apxs" => "with-homebrew-apxs"
+    option 'with-homebrew-apxs', 'Build against apxs in Homebrew prefix'
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-fpm)'
     option 'with-debug', 'Compile with debugging symbols'
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
@@ -129,7 +130,7 @@ INFO
   end
 
   def apache_apxs
-    if build.include? 'homebrew-apxs'
+    if build.with? 'homebrew-apxs'
       ['sbin', 'bin'].each do |dir|
         if File.exist?(location = "#{HOMEBREW_PREFIX}/#{dir}/apxs")
           return location
@@ -277,8 +278,8 @@ INFO
       args << "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}"
     end
 
-    # Do not build opcache by default; use a "php5x-opcache" formula
-    args << "--disable-opcache" if php_version.start_with?('5.5', '5.6')
+    # Do not build opcache by default; use a "phpxx-opcache" formula
+    args << "--disable-opcache" if php_version.start_with?('5.5', '5.6', '7.0')
 
     if build.with? 'pcntl'
       args << "--enable-pcntl"
@@ -369,6 +370,10 @@ INFO
         sbin.install 'sapi/cgi/fpm/php-fpm' => "php#{php_version_path}-fpm"
       end
 
+      if !File.exist?(config_path+"php-fpm.d/www.conf") && File.exist?(config_path+"php-fpm.d/www.conf.default")
+        mv(config_path+"php-fpm.d/www.conf.default", config_path+"php-fpm.d/www.conf")
+      end
+
       if !File.exist?(config_path+"php-fpm.conf")
         if File.exist?('sapi/fpm/php-fpm.conf')
           config_path.install 'sapi/fpm/php-fpm.conf'
@@ -380,12 +385,12 @@ INFO
 
         inreplace config_path+"php-fpm.conf" do |s|
           s.sub!(/^;?daemonize\s*=.+$/,'daemonize = no')
-          s.sub!(/^;include\s*=.+$/,";include=#{config_path}/fpm.d/*.conf")
-          s.sub!(/^;?listen\.mode\s*=.+$/,'listen.mode = 0666')
-          s.sub!(/^;?pm\.max_children\s*=.+$/,'pm.max_children = 10')
-          s.sub!(/^;?pm\.start_servers\s*=.+$/,'pm.start_servers = 3')
-          s.sub!(/^;?pm\.min_spare_servers\s*=.+$/,'pm.min_spare_servers = 2')
-          s.sub!(/^;?pm\.max_spare_servers\s*=.+$/,'pm.max_spare_servers = 5')
+          s.sub!(/^;include\s*=.+$/,";include=#{config_path}/fpm.d/*.conf") if php_version.start_with?('5')
+          s.sub!(/^;?listen\.mode\s*=.+$/,'listen.mode = 0666') if php_version.start_with?('5')
+          s.sub!(/^;?pm\.max_children\s*=.+$/,'pm.max_children = 10') if php_version.start_with?('5')
+          s.sub!(/^;?pm\.start_servers\s*=.+$/,'pm.start_servers = 3') if php_version.start_with?('5')
+          s.sub!(/^;?pm\.min_spare_servers\s*=.+$/,'pm.min_spare_servers = 2') if php_version.start_with?('5')
+          s.sub!(/^;?pm\.max_spare_servers\s*=.+$/,'pm.max_spare_servers = 5') if php_version.start_with?('5')
         end
       end
     end
