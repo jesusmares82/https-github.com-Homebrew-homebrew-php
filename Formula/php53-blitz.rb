@@ -2,18 +2,14 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Blitz < AbstractPhp53Extension
   init
-  homepage 'http://alexeyrybak.com/blitz/blitz_en.html'
-  url 'https://github.com/alexeyrybak/blitz/archive/v0.8.18.tar.gz'
-  sha1 'c51233a241943faf74c6d28622277ff26d299cb8'
+  desc "Blitz, the fasted template engine for PHP!"
+  homepage "http://alexeyrybak.com/blitz/blitz_en.html"
+  url "https://github.com/alexeyrybak/blitz/archive/0.9.1.tar.gz"
+  sha256 "f2f9364509bf078e322f1cd8d6d2eece4cb73416a8a987f583464757fce79317"
+  head "https://github.com/alexeyrybak/blitz.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "ca6d6a9b4142810c9221121f8a0a0ff929f759f6b1677049632384e634b554e3" => :yosemite
-    sha256 "d92eb9e226ef6cd565585625caf90fd776613e78f87e2f32f872a8141499031e" => :mavericks
-    sha256 "a912987c39aec7b82bbd9fcdf86ae4636e44446a9287c585915b2600cf8374f2" => :mountain_lion
   end
-
-  head 'https://github.com/alexeyrybak/blitz.git'
 
   def install
     safe_phpize
@@ -48,5 +44,9 @@ class Php53Blitz < AbstractPhp53Extension
       blitz.var_prefix="$"
       blitz.warn_context_duplicates=0
     EOS
+  end
+
+  test do
+    shell_output("php -m").include?("blitz")
   end
 end
