@@ -1,11 +1,12 @@
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class DrupalCodeSniffer < Formula
+  desc "Checks Drupal code against coding standards"
   homepage "https://drupal.org/project/coder"
-  version "8.x-2.2"
-  url "http://ftp.drupal.org/files/projects/coder-#{version}.tar.gz"
+  url "http://ftp.drupal.org/files/projects/coder-8.x-2.3.tar.gz"
+  version "8.x-2.3"
+  sha256 "a55300d1ec27f9be8cb6e97ec522be2442f7d26480921fa83e5ba083aca85a05"
   head "http://git.drupal.org/project/coder.git", :branch => "8.x-2.x"
-  sha256 "0d109a157c9d04f2ea5fe74c41def03e0ae85ed28488c7690b8a66497ecb284e"
 
   option "without-drush-command", "Don't install drush command"
   option "without-drupalpractice-standard", "Don't install DrupalPractice standard"
@@ -59,16 +60,6 @@ class DrupalCodeSniffer < Formula
     end
   end
 
-  test do
-    system "#{Formula["php-code-sniffer"].phpcs_script_name} -i | grep #{drupal_standard_name}"
-    if build.with? "drupalpractice-standard"
-      system "#{Formula["php-code-sniffer"].phpcs_script_name} -i | grep #{drupalpractice_standard_name}"
-    end
-    if build.with? "drush-command"
-      system "drush", "drupalcs", "--help"
-    end
-  end
-
   def caveats
     s = ""
     s += <<-EOS.undent
@@ -91,5 +82,15 @@ class DrupalCodeSniffer < Formula
     end
 
     s
+  end
+
+  test do
+    system "#{Formula["php-code-sniffer"].phpcs_script_name} -i | grep #{drupal_standard_name}"
+    if build.with? "drupalpractice-standard"
+      system "#{Formula["php-code-sniffer"].phpcs_script_name} -i | grep #{drupalpractice_standard_name}"
+    end
+    if build.with? "drush-command"
+      system "drush", "drupalcs", "--help"
+    end
   end
 end
