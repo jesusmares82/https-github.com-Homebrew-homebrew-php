@@ -4,14 +4,14 @@ A centralized repository for PHP-related brews.
 
 ## Bugs happen
 
-The more information you provide and the more detailed your report is, the easier for us to fix it.
-The best practice in filling a bug report can be seen for this issue https://github.com/Homebrew/homebrew-php/issues/1225.
+The more information you provide and the more detailed your report is, the easier it is for us to fix it.
+An example of the best practice(s) for filling out bug reports can be seen here: https://github.com/Homebrew/homebrew-php/issues/1225.
 
 Please refer to [this section](#filing-bug-reports) for more information.
 
 ## Common Issues
 
-Bugs inevitably happen - none of us is running EVERY conceivable setup - but hopefully the install process can be made smoother through the following tips:
+Bugs inevitably happen - none of us are running EVERY conceivable setup - but hopefully the install process can be made smoother through the following tips:
 
 - If you have recently upgraded your Mac OS version or Xcode, read [this section](#common-upgrade-issues).
 - Upgrade your OS X to the latest patch version. So if you are on `10.9.0`, upgrade to `10.9.2` etc.
@@ -50,7 +50,7 @@ If you have recently upgraded your Mac OS X version or Xcode, you may have some 
 
 ### Filing Bug Reports
 
-The best practice for filling bug reports can be found here : https://github.com/Homebrew/homebrew-php/issues/1225.
+An example of the best practice(s) for filling out bug reports can be seen here: https://github.com/Homebrew/homebrew-php/issues/1225.
 
 A blank bug report template can be found [here](https://gist.githubusercontent.com/lucasmichot/413c340c3fd97fef4cc0/raw/ce219a1cf2cd128764fce83628c47bf7e0d8adef/homebrew-php-bug-report-template).
 
@@ -73,19 +73,19 @@ Parameter | Value
 
 Please include the following information in your bug report:
 
-- OS X Version: ex. 10.7.3, 10.6.3
+- OS X Version: eg. 10.7.3, 10.6.3
 - Homebrew Version: `brew -v`
 - PHP Version in use: stock-apple, homebrew-php stable, homebrew-php devel, homebrew-php head, custom
 - Xcode Version: 4.4, 4.3, 4.0, 3 etc.
   - If you are on Mountain Lion `10.8.x`, please also upgrade to the latest Xcode, 4.4.
-  - If using 4.3, verify whether you have the `Command Line Tools` installed as well
-  - If on Snow Leopard, you may want to install the [`OS X GCC Installer`](https://github.com/kennethreitz/osx-gcc-installer/)
+  - If you are using 4.3, verify whether you have the `Command Line Tools` installed as well.
+  - If on Snow Leopard, you may want to install the [`OS X GCC Installer`](https://github.com/kennethreitz/osx-gcc-installer/).
 - Output of `gcc -v`
 - Output of `php -v`
 - Output of `brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here` within a [gist](http://gist.github.com). Please append any options you added to the `brew install` command.
 - Output of `brew doctor` within a [gist](http://gist.github.com)
 
-This will help us diagnose your issues much quicker, as well as find commonalities between different reported issues.
+This will help us diagnose your issues much quicker, as well as find similarities between different reported issues.
 
 ## Background
 
