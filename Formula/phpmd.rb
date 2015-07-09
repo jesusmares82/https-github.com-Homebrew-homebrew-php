@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpmd < Formula
   homepage "http://phpmd.org"
-  url "http://static.phpmd.org/php/2.2.2/phpmd.phar"
-  sha256 "381e35943052e6de7809c5cf6ffdd9f9f3289de9755c2e00f8e1c35d091e88fc"
+  url "http://static.phpmd.org/php/2.2.3/phpmd.phar"
+  sha256 "5cd9d4754a0d2c41a403afe6b7b75e6994d90f8e8df3600a200398dd4271a31b"
   head "https://github.com/phpmd/phpmd.git"
 
   depends_on PhpMetaRequirement
@@ -12,10 +12,10 @@ class Phpmd < Formula
 
   def install
     libexec.install "phpmd.phar"
-    sh = libexec + "phpmd"
-    sh.write("#!/bin/sh\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpmd.phar $*")
-    chmod 0755, sh
-    bin.install_symlink sh
+    (bin/"phpmd").write <<-EOS.undent
+      #!/bin/sh
+      /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/phpmd.phar $*
+    EOS
   end
 
   test do
