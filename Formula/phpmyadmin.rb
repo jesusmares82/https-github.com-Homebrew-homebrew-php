@@ -1,8 +1,8 @@
 class Phpmyadmin < Formula
   desc "Tool intended to handle the administration of MySQL over the Web"
   homepage "http://www.phpmyadmin.net"
-  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_4_10.tar.gz"
-  sha256 "2d2d98bde6bd7e2b564c67b62467560c888cf41ed1ee659ac6a58351f96f46d1"
+  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_4_11.tar.gz"
+  sha256 "0c273165bb067f2f6688e38d98b831ccca0eb9b9d662ee06bba2f4c3ec5cba19"
   head "https://github.com/phpmyadmin/phpmyadmin.git"
 
   if build.with? "mcrypt"
