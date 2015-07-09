@@ -9,10 +9,6 @@ class Php70PdoDblib < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "7bc9b33f1e0d47c052c70ca55a06a6b09242e4dc3ddc8b8e14cb77f14cc99a27" => :yosemite
-    sha256 "a535af9798b8861f3b1d3a3a23f742b24dddb0710883beb32600f4681fbbf7e2" => :mavericks
-    sha256 "c795bae56ab095d8b30889bcc30243769ca412a52a5b5d13f3121e06ef66f054" => :mountain_lion
   end
 
   depends_on "freetds"
