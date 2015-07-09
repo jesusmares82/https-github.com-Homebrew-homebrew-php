@@ -9,6 +9,7 @@ class Php70Intl < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "13d9ece939332e1384253b7c8e4af1b37f93153ce949017bf4daf0f8ffe44be2" => :yosemite
     sha256 "012fe9e1ad1844b6c727617474004cd249a7e14fc9ef724b4c1f74b7cfba0517" => :mavericks
     sha256 "5228905f104cf71d9fb6155590f1739483fb8f89ce44c7984293bd9d116fa9c7" => :mountain_lion
