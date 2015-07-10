@@ -8,10 +8,6 @@ class Php55PdoPgsql < AbstractPhp55Extension
   version  PHP_VERSION
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "9ccede6608a7fa5478c980d1c1219109e37d11898c539ea3bbd9f05a40d11b63" => :yosemite
-    sha256 "5aa4fc228e6bd42082771b128abf515502d140d2e4d6c30f00f8e725e2b32df0" => :mavericks
-    sha256 "5019c70c700160c72609c0c01dc82a2081b3f33c68ea4fb8f4303df37cd53283" => :mountain_lion
   end
 
   depends_on "postgresql"

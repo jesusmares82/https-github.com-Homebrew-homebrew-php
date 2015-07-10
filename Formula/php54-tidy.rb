@@ -8,10 +8,6 @@ class Php54Tidy < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "c9a0c045b80afb2f1ed3fdf7e6c78aeb17d8e587fc0319ea332179c113bffe10" => :yosemite
-    sha256 "9a078fff883d0398cffeca8d364a13f08984dd4e598ce89c5f17f2bb31a5efff" => :mavericks
-    sha256 "0011c27be85044a8e66ef1eb11161e93bc7b3230d1ccdf9ce1f09c156265cb56" => :mountain_lion
   end
 
   def install

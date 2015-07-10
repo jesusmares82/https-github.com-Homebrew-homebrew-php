@@ -8,10 +8,6 @@ class Php56Pcntl < AbstractPhp56Extension
   version  PHP_VERSION
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "1cbd4e8dd23222e174179e49897cfe3c6d5d1895feb79ddb6edee59ce6b1029b" => :yosemite
-    sha256 "191a63c01295b254d4510f39f3e65b6b34e07218e40eafa5d88dae62b83d8351" => :mavericks
-    sha256 "0fea8d101e079f69ef1443410487fd8aa77db9c6f4f4cdf4de6732587d892fe2" => :mountain_lion
   end
 
   def install
