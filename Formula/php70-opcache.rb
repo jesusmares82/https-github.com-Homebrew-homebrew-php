@@ -9,10 +9,6 @@ class Php70Opcache < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "22829e054dc6b31c57024f6f47e8992217f159a4009ab2e4dc04513579540c24" => :yosemite
-    sha256 "0f1314f1f0a93d38943490238899abe9e059bfc887f3c6b5b44a066e0eaf26b7" => :mavericks
-    sha256 "b45f4a7958cf4e600412ec7055949855fe3a1e85b352ab25e6f9a54660542e2d" => :mountain_lion
   end
 
   depends_on "pcre"

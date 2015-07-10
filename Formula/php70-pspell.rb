@@ -9,10 +9,6 @@ class Php70Pspell < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "e59823a2bc49db008172251fd7d0031d66b5c8082e6564e8a7609dd54129d93a" => :yosemite
-    sha256 "a49be7bf7854cd9ed417e4f9b1d63cb3958b39e7de7396009bb33044652dd3d4" => :mavericks
-    sha256 "5a12c9d347b9cb3f65f2a7957647a68756f3fd0f803c8d873db739f4ce401951" => :mountain_lion
   end
 
   depends_on "aspell"
