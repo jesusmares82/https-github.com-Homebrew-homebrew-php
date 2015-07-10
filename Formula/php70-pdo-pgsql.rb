@@ -9,9 +9,6 @@ class Php70PdoPgsql < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
-    sha256 "72c7b35f1ecc651d89b240f41ca5a8c88fee55a3bb098f07eb920be18e9a9844" => :yosemite
-    sha256 "83abd86de3c2815290b88d3852aba94c761b9fee5bc0dcf4a0543bfbd301d693" => :mavericks
-    sha256 "2c003069f7f7bc564ddda148589885dd48dab6505d1bad265c86fa9afad85b0f" => :mountain_lion
   end
 
   depends_on "postgresql"
