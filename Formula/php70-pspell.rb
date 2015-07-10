@@ -9,9 +9,6 @@ class Php70Pspell < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
-    sha256 "49822adb07682332ffbbfd70cfe7846a23706a425a93030ff2e96725732d1834" => :yosemite
-    sha256 "80fe3d74377ad0b64b43b99e75322aa3bb96a9cbb8fba96075f1c9eac7793846" => :mavericks
-    sha256 "160d8b0d89aa2325600cfafab87675409201f37746c6fc8b936cd98432a13d07" => :mountain_lion
   end
 
   depends_on "aspell"
