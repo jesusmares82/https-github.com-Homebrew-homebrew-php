@@ -17,6 +17,11 @@ class AbstractPhp < Formula
       depends_on 'homebrew/versions/bison27' => :build
     end
 
+    php_formulas = (Formula.names).grep(Regexp.new('php\d\d$')).sort
+    php_formulas.each do |php_formula_name|
+      conflicts_with php_formula_name, :because => "different php versions install the same binaries."
+    end
+
     depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
     depends_on 'enchant' => :optional
     depends_on 'freetds' if build.include?('with-mssql')
