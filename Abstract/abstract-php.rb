@@ -17,7 +17,13 @@ class AbstractPhp < Formula
       depends_on 'homebrew/versions/bison27' => :build
     end
 
+    # obtain list of php formulas
     php_formulas = (Formula.names).grep(Regexp.new('php\d\d$')).sort
+
+    # remove our self from the list
+    php_formulas.delete(self.name.split("::")[2].downcase)
+
+    # conflict with out php versions
     php_formulas.each do |php_formula_name|
       conflicts_with php_formula_name, :because => "different php versions install the same binaries."
     end
