@@ -7,11 +7,9 @@ class Php53Igbinary < AbstractPhp53Extension
   sha256 "168e51d41a417bbbfe6da0e3cb9b71ef93594f4034f489a951f3b874d03dfdb8"
   head "https://github.com/igbinary/igbinary.git"
 
+  depends_on 'igbinary' => :build
+
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "673d6bd52a607b1003e27010cfdd31ed411ceddfe404af6af59487a57306f891" => :yosemite
-    sha256 "841457f0fe48f4ca419655b700f8b783504137c4bfa781e1ff46f566ad44c8b5" => :mavericks
-    sha256 "a792d897eaaeb16842d147889f45f64424feb10303084689085946e16f33ff93" => :mountain_lion
   end
 
   def install
@@ -23,7 +21,6 @@ class Php53Igbinary < AbstractPhp53Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
     system "make"
-    include.install %w[apc_serializer.h hash.h igbinary.h php_igbinary.h]
     prefix.install "modules/igbinary.so"
     write_config_file if build.with? "config-file"
   end

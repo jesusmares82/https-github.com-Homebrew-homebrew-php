@@ -8,10 +8,6 @@ class Php53Memcached < AbstractPhp53Extension
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "15903744a6da4d824f2675c83bb0184f23776b4d76d06bb4614d592a587335cf" => :yosemite
-    sha256 "276608514fb3cc087a96c898a22e97e6483228f1ac3d13a1a3fd0c094e50aae1" => :mavericks
-    sha256 "651e2ec12ee52cd5acbf9af209ad88f700e7dfdf40cd855034a37287b3657a69" => :mountain_lion
   end
 
   option "with-sasl", "Build with sasl support"
@@ -37,7 +33,7 @@ class Php53Memcached < AbstractPhp53Extension
     safe_phpize
 
     mkdir_p "ext/igbinary"
-    cp "#{Formula["php53-igbinary"].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
+    cp "#{Formula["igbinary"].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
