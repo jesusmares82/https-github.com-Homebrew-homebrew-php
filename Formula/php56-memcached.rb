@@ -33,7 +33,7 @@ class Php56Memcached < AbstractPhp56Extension
     safe_phpize
 
     mkdir_p "ext/igbinary"
-    cp "#{Formula["php56-igbinary"].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
+    cp "#{Formula["igbinary"].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
