@@ -43,6 +43,7 @@ class AbstractPhp < Formula
     depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
     depends_on 'openssl'
     depends_on 'unixodbc'
+    depends_on 'readline'
 
     deprecated_option "with-pgsql" => "with-postgresql"
     depends_on :postgresql => :optional
@@ -207,6 +208,7 @@ INFO
       "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
       "--with-xmlrpc",
       "--with-zlib=#{Formula['zlib'].opt_prefix}",
+      "--with-readline=#{Formula['readline'].opt_prefix}",
     ]
 
     if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
