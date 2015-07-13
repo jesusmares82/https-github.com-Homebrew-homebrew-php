@@ -9,6 +9,9 @@ class Php70PdoDblib < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
+    sha256 "dffabf63aeadcbcf2235f52b89746da28f6863fe3686f286c6539d5dd8d6a23c" => :yosemite
+    sha256 "0baa0545978f4653f4a16f8203f11f1cb8aa6dde55995db840634968cdf58e90" => :mavericks
+    sha256 "ca5152c1e7a9a2e6255510daeaf29c61f43e881f810f8f298d216307deda8401" => :mountain_lion
   end
 
   depends_on "freetds"
