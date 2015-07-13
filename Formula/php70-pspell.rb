@@ -32,3 +32,4 @@ class Php70Pspell < AbstractPhp70Extension
     shell_output("php -m").include?("pspell")
   end
 end
+
