@@ -21,3 +21,4 @@ class Phpunit < Formula
     shell_output("phpunit --version").include?(version)
   end
 end
+
