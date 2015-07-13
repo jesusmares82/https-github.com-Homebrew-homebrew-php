@@ -30,3 +30,4 @@ class Php70Tidy < AbstractPhp70Extension
     shell_output("php -m").include?("tidy")
   end
 end
+
