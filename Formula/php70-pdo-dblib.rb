@@ -35,3 +35,4 @@ class Php70PdoDblib < AbstractPhp70Extension
     shell_output("php -m").include?("pdo_dblib")
   end
 end
+
