@@ -29,3 +29,4 @@ class Php70Pcntl < AbstractPhp70Extension
     shell_output("php -m").include?("pcntl")
   end
 end
+
