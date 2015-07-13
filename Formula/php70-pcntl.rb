@@ -9,6 +9,8 @@ class Php70Pcntl < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
+    sha256 "e0be401f4015d46a973e4a7459b32e08000b764fdab94587a483214e35b70f4f" => :mavericks
+    sha256 "6851b4a92cb741334c0055e3126e6e371e1476e9bf47135712bfda7a1a0edfc8" => :mountain_lion
   end
 
   def install
