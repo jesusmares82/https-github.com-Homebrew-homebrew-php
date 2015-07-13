@@ -425,6 +425,13 @@ INFO
         s << <<-EOS.undent
           To enable PHP in Apache add the following to httpd.conf and restart Apache:
               LoadModule php7_module    #{HOMEBREW_PREFIX}/opt/php#{php_version_path}/libexec/apache2/libphp7.so
+              
+              <FilesMatch \.php$>
+                  SetHandler application/x-httpd-php
+              </FilesMatch>
+
+          Finally, check DirectoryIndex includes index.php
+              DirectoryIndex index.php index.html
         EOS
       else
         s << <<-EOS.undent
