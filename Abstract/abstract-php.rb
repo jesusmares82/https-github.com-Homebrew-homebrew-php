@@ -28,20 +28,21 @@ class AbstractPhp < Formula
       conflicts_with php_formula_name, :because => "different php versions install the same binaries."
     end
 
-    depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
+    depends_on 'curl' if build.with?('homebrew-curl') || MacOS.version < :lion
     depends_on 'enchant' => :optional
-    depends_on 'freetds' if build.include?('with-mssql')
+    depends_on 'freetds' if build.with?('mssql')
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
-    depends_on 'tidy-html5' if build.include?('with-tidy')
+    depends_on 'tidy-html5' if build.with?('tidy')
     depends_on 'homebrew/dupes/zlib'
     depends_on 'icu4c'
-    depends_on 'imap-uw' if build.include?('with-imap')
+    depends_on 'imap-uw' if build.with?('imap')
     depends_on 'jpeg'
     depends_on 'libpng'
-    depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
-    depends_on 'openssl'
+    depends_on 'libxml2' if build.with?('homebrew-libxml2') || MacOS.version < :lion
+    depends_on 'openssl' if build.without?('homebrew-libressl')
+    depends_on 'libressl' if build.with?('homebrew-libressl')
     depends_on 'unixodbc'
     depends_on 'readline'
 
@@ -50,7 +51,7 @@ class AbstractPhp < Formula
 
     # Sanity Checks
 
-    if build.include?('with-cgi') && build.include?('with-fpm')
+    if build.with?('cgi') && build.with?('fpm')
       raise "Cannot specify more than one CGI executable to build."
     end
 
@@ -59,6 +60,7 @@ class AbstractPhp < Formula
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-fpm)'
     option 'with-debug', 'Compile with debugging symbols'
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
+    option 'with-homebrew-libressl', 'Include LibreSSL instead of OpenSSL via Homebrew'
     option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
     option 'with-homebrew-libxml2', 'Include Libxml2 support via Homebrew'
     option 'with-imap', 'Include IMAP extension'
@@ -202,7 +204,6 @@ INFO
       "--with-libedit",
       "--with-mhash",
       "--with-ndbm=/usr",
-      "--with-openssl=" + Formula['openssl'].opt_prefix.to_s,
       "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
@@ -211,7 +212,13 @@ INFO
       "--with-readline=#{Formula['readline'].opt_prefix}",
     ]
 
-    if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
+    if build.with?('homebrew-libressl')
+      args << "--with-openssl=" + Formula['libressl'].opt_prefix.to_s
+    else
+      args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
+    end
+
+    if build.with?('homebrew-libxml2') || MacOS.version < :lion
       args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
     end
 
@@ -252,7 +259,7 @@ INFO
       args << "--with-gmp=#{Formula['gmp'].opt_prefix}"
     end
 
-    if build.include?('with-homebrew-curl') || MacOS.version < :lion
+    if build.with?('homebrew-curl') || MacOS.version < :lion
       args << "--with-curl=#{Formula['curl'].opt_prefix}"
     else
       args << "--with-curl"
@@ -477,7 +484,7 @@ INFO
             export PATH="$(brew --prefix homebrew/php/php#{php_version.gsub('.','')})/bin:$PATH"
     EOS
 
-    if build.include?('with-mcrypt')
+    if build.with?('mcrypt')
     s << <<-EOS.undent
       ✩✩✩✩  Mcrypt ✩✩✩✩
 
