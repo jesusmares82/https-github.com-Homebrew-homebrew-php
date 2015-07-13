@@ -1,11 +1,9 @@
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Arcanist < Formula
-  version "master"
   desc "Phabricator Arcanist Tool"
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
-  url "https://github.com/phacility/arcanist/archive/master.tar.gz"
-  sha256 "b9cdacaf06c1a6f817e450a5d16e9b0a531f8d68cefa33c83c0a6646ae3e42a3"
+  head "https://github.com/phacility/arcanist.git"
 
   depends_on PhpMetaRequirement
 
