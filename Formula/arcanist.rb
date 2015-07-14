@@ -9,7 +9,6 @@ class Arcanist < Formula
 
   resource "libphutil" do
     url "https://github.com/phacility/libphutil/archive/master.tar.gz"
-    sha256 "fc01b48bc922a660e46b4fe1ae5f42862e02c5a0bf3ff51d76ab95a5cc45252c"
   end
 
   def install
