@@ -6,12 +6,9 @@ class Php56Imagick < AbstractPhp56Extension
   url 'http://pecl.php.net/get/imagick-3.1.2.tgz'
   sha1 '7cee88bc8f6f178165c9d43e302d99cedfbb3dff'
   head 'https://svn.php.net/repository/pecl/imagick/trunk/'
+  revision 1
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
-    sha256 "6b38f5a3151b2eb629b538760cbf6f28d5708c080cab225d0f27772f76c9efb8" => :yosemite
-    sha256 "9fdf5b27051a8b7044a61cfb4ad5a0b4a1d52e48a17179cfd4ae28e53dd1071c" => :mavericks
-    sha256 "edc00b10a168e66fc0e2fe99a75ffac9f072463d492de49fc36115a39c3d9681" => :mountain_lion
   end
 
   depends_on 'pkg-config' => :build
