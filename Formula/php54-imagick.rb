@@ -9,6 +9,9 @@ class Php54Imagick < AbstractPhp54Extension
   revision 1
 
   bottle do
+    sha256 "7098323019d86ef8d250ffb7a3d46db6c24e5d9305f287f09fccf23038a2e412" => :yosemite
+    sha256 "ce33ba00d36518ab2efcdcd9111b10eec85649d21e767eda6597fa3c8d55c4df" => :mavericks
+    sha256 "03153e7e4c8dd46d3ad38c567f188c509cbd678b87dd52ff9a73c5da62222a80" => :mountain_lion
   end
 
   depends_on 'pkg-config' => :build
