@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 class Codeception < Formula
   desc "PHP Testing Framework is designed to work just out of the box."
   homepage "http://codeception.com/quickstart"
-  url "http://codeception.com/releases/2.1.0/codecept.phar"
-  sha256 "640aa82348d84d41e2c5db31696c1b8ef4f622e1bb60ba1b1b393c64ffe3c7c9"
+  url "http://codeception.com/releases/2.1.1/codecept.phar"
+  sha256 "c7e8fcfd826be3c4a2b9231deb9fb3bbc570f3ef12376595cd3bb2fbd3932d3f"
 
   def install
     mv "codecept.phar", "codecept-#{version}.phar"
