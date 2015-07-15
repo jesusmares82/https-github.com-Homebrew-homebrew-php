@@ -328,6 +328,10 @@ INFO
     end
 
     if build.with? 'phpdbg'
+      if php_version.start_with?('5.3')
+        raise "phpdbg is not supported for this version of PHP"
+      end
+
       args << "--enable-phpdbg"
     end
 

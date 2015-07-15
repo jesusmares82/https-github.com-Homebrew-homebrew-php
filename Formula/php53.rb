@@ -25,10 +25,6 @@ class Php53 < AbstractPhp
 
   depends_on 'libevent' unless build.without? 'fpm'
 
-  if build.with? 'phpdbg'
-    raise "phpdbg is not supported for this version of PHP"
-  end
-
   option 'disable-zend-multibyte', 'Disable auto-detection of Unicode encoded scripts'
 
   def install
