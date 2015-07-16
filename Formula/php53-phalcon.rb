@@ -4,8 +4,8 @@ class Php53Phalcon < AbstractPhp53Extension
   init
   desc "A full-stack PHP framework delivered as a C-extension"
   homepage "http://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.3.tar.gz"
-  sha256 "76e2c28bb86adf8ac165c5d43dfd428aa4b0b93bb92301dd83f96e5263cd5914"
+  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.5.tar.gz"
+  sha256 "10bf284c31ab03d0bd40e1061015ed38ea3413f84243c29608cdb7718f382d79"
   head "https://github.com/phalcon/cphalcon.git"
 
   depends_on "pcre"
