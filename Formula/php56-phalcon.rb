@@ -2,11 +2,14 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Phalcon < AbstractPhp56Extension
   init
-  desc "A full-stack PHP framework delivered as a C-extension"
+  desc "A full-stack PHP framework"
   homepage "http://phalconphp.com/"
   url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.5.tar.gz"
-  sha256 "10bf284c31ab03d0bd40e1061015ed38ea3413f84243c29608cdb7718f382d79"
+  sha256 "7288dcaf55c11e345f2f15a609ff22029365d2597de321f74d7af25ab39128a4"
   head "https://github.com/phalcon/cphalcon.git"
+
+  bottle do
+  end
 
   depends_on "pcre"
 
