@@ -28,30 +28,36 @@ class AbstractPhp < Formula
       conflicts_with php_formula_name, :because => "different php versions install the same binaries."
     end
 
-    depends_on 'curl' if build.with?('homebrew-curl') || MacOS.version < :lion
+    depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
     depends_on 'enchant' => :optional
-    depends_on 'freetds' if build.with?('mssql')
+    depends_on 'freetds' if build.include?('with-mssql')
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
-    depends_on 'tidy-html5' if build.with?('tidy')
+    depends_on 'tidy-html5' if build.include?('with-tidy')
     depends_on 'homebrew/dupes/zlib'
     depends_on 'icu4c'
-    depends_on 'imap-uw' if build.with?('imap')
+    depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
-    depends_on 'libxml2' if build.with?('homebrew-libxml2') || MacOS.version < :lion
-    depends_on 'openssl' if build.without?('homebrew-libressl')
-    depends_on 'libressl' if build.with?('homebrew-libressl')
+    depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
     depends_on 'unixodbc'
     depends_on 'readline'
+    depends_on "net-snmp" if build.include?('with-snmp')
+
+    # ssl
+    if build.include?('with-homebrew-libressl')
+      depends_on 'libressl' 
+    else
+      depends_on 'openssl'
+    end
 
     deprecated_option "with-pgsql" => "with-postgresql"
     depends_on :postgresql => :optional
 
     # Sanity Checks
 
-    if build.with?('cgi') && build.with?('fpm')
+    if build.include?('with-cgi') && build.include?('with-fpm')
       raise "Cannot specify more than one CGI executable to build."
     end
 
@@ -212,13 +218,7 @@ INFO
       "--with-readline=#{Formula['readline'].opt_prefix}",
     ]
 
-    if build.with?('homebrew-libressl')
-      args << "--with-openssl=" + Formula['libressl'].opt_prefix.to_s
-    else
-      args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
-    end
-
-    if build.with?('homebrew-libxml2') || MacOS.version < :lion
+    if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
       args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
     end
 
@@ -242,6 +242,12 @@ INFO
       args << "--with-enchant=#{Formula['enchant'].opt_prefix}"
     end
 
+    if build.include?('with-homebrew-libressl')
+      args << "--with-openssl=" + Formula['libressl'].opt_prefix.to_s
+    else
+      args << "--with-openssl=" + Formula['openssl'].opt_prefix.to_s
+    end
+
     # Build PHP-FPM by default
     if build_fpm?
       args << "--enable-fpm"
@@ -259,7 +265,7 @@ INFO
       args << "--with-gmp=#{Formula['gmp'].opt_prefix}"
     end
 
-    if build.with?('homebrew-curl') || MacOS.version < :lion
+    if build.include?('with-homebrew-curl') || MacOS.version < :lion
       args << "--with-curl=#{Formula['curl'].opt_prefix}"
     else
       args << "--with-curl"
@@ -340,11 +346,7 @@ INFO
     end
 
     if build.with? 'snmp'
-      if MacOS.version >= :yosemite
-        raise "Please omit \"--with-snmp\" on Yosemite.  See issue #1311 (http://git.io/NBAOvA) for details."
-      end
-
-      args << "--with-snmp=/usr"
+      args << "--with-snmp=#{Formula["net-snmp"].opt_prefix}"
     end
 
     if build.with? 'thread-safety'
@@ -488,7 +490,7 @@ INFO
             export PATH="$(brew --prefix homebrew/php/php#{php_version.gsub('.','')})/bin:$PATH"
     EOS
 
-    if build.with?('mcrypt')
+    if build.include?('with-mcrypt')
     s << <<-EOS.undent
       ✩✩✩✩  Mcrypt ✩✩✩✩
 
