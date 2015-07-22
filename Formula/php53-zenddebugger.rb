@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php53Zenddebugger < AbstractPhp53Extension
   init
   homepage 'http://www.zend.com/community/pdt/downloads'
-  if Hardware.is_64_bit? and not build.build_32_bit?
+  if MacOS.prefer_64_bit?
     url 'http://downloads.zend.com/studio_debugger/20100729/ZendDebugger-20100729-darwin9.5-x86_64.tar.gz'
     sha1 'cbdf1c712457ef64920cf0a109cf7d8563ed44c6'
     version '20100729'
