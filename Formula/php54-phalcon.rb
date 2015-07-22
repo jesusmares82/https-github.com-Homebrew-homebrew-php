@@ -4,14 +4,11 @@ class Php54Phalcon < AbstractPhp54Extension
   init
   desc "A full-stack PHP framework"
   homepage "http://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.5.tar.gz"
-  sha256 "7288dcaf55c11e345f2f15a609ff22029365d2597de321f74d7af25ab39128a4"
+  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.6.tar.gz"
+  sha256 "5bab4f86a9a1fdbad3539da43771514a0a437d6fad6c42bc11f14d1f155b23ca"
   head "https://github.com/phalcon/cphalcon.git"
 
   bottle do
-    sha256 "bbf6d69de1628b523715f4af0088c49c3597713dfbfea4cc1746dd4d069c1218" => :yosemite
-    sha256 "9fbaec6df63438d8033997b48ed4694d32cecc0b44ab14ecbea34cdcba6f89cb" => :mavericks
-    sha256 "84726d2aa1759affbfd36ae732f84ec0b941bea7049c9980d359402eefced974" => :mountain_lion
   end
 
   depends_on "pcre"
