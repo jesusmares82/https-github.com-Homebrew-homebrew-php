@@ -8,12 +8,6 @@ class Php70Mcrypt < AbstractPhp70Extension
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    sha256 "a153452825d5a85f4a211fca9a02e233757278eaf135105fd6394825d3bd92f3" => :yosemite
-    sha256 "5f4064898ba7ca408051c8b054ed713075c9e6851a7abbca75d974831da5cb8b" => :mavericks
-    sha256 "5ab168f9aa75de38a35cb21fe36f1ecc028393357ec9bc9c30cd03976999ff08" => :mountain_lion
-  end
-
   depends_on "mcrypt"
 
   def install

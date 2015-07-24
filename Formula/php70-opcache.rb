@@ -8,12 +8,6 @@ class Php70Opcache < AbstractPhp70Extension
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    sha256 "75b5ba2319bf947879901134e6a9f5996d862988483169e6dc5645462d1baaef" => :yosemite
-    sha256 "44f2b366964a063ca4727b23bf55fb0aca58a2e63cf61aaef4ab6a4f6ffe17a8" => :mavericks
-    sha256 "500e8d6e952f9d13a57b970ecfc4d1d7f2a0e8e33ce6e71e8781794daf27631a" => :mountain_lion
-  end
-
   depends_on "pcre"
 
   def extension_type

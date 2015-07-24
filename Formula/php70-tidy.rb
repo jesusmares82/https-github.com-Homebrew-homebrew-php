@@ -8,12 +8,6 @@ class Php70Tidy < AbstractPhp70Extension
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    sha256 "6b6c80c3f9f0442549e05fbe561c212d94c425a0d59b6abfe046d84ca9b77c26" => :yosemite
-    sha256 "9f68be2cc49342c5b8cfc2e7c563d78a593809af8ca73c0e5f951f6475c6748f" => :mavericks
-    sha256 "418bf4f5820c10f4b7157e9fa39c7a43da3f951a3ecfdace00fbe898cb25beb8" => :mountain_lion
-  end
-
   def install
     Dir.chdir "ext/tidy"
 

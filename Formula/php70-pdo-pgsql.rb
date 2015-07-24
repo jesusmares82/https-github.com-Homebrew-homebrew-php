@@ -8,9 +8,6 @@ class Php70PdoPgsql < AbstractPhp70Extension
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-  end
-
   depends_on "postgresql"
 
   def extension
