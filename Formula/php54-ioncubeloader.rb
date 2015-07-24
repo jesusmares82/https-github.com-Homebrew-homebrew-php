@@ -11,7 +11,6 @@ class Php54Ioncubeloader < AbstractPhp54Extension
   version "4.7.5"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha1 "0b98bf9f06ed18ba2ed732ef6b5754c208dbe68a" => :yosemite
     sha1 "2ba11dbf011cba849cb1a502dcffc748f40ef396" => :mavericks
     sha1 "e1b6b6c88e40cb01dcec63fe8216183d8d1a401b" => :mountain_lion

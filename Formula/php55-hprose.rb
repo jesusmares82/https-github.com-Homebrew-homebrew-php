@@ -8,7 +8,6 @@ class Php55Hprose < AbstractPhp55Extension
   head "https://github.com/hprose/hprose-pecl.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "43de63e85884ba8bb82287301d781cce4f47c086f08fd62d08a6b1c48495ddda" => :yosemite
     sha256 "bf1f86ec382091a55e926df033bf321fbab6dd27ab14826b44914693855a677c" => :mavericks
     sha256 "de8fbd20f2ff2f9269e9db215ea795d0f9217d4e6285e9cf47bb88b92a18c3f2" => :mountain_lion

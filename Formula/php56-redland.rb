@@ -8,7 +8,6 @@ class Php56Redland < AbstractPhp56Extension
   sha256 'ff72b587ab55f09daf81799cb3f9d263708fad5df7a5458f0c28566a2563b7f5'
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha1 "bba95e7b4d42e55357b182a09b352f1a0500411e" => :yosemite
     sha1 "20f169fa3168073f453ae21297c10602a203a25f" => :mavericks
     sha1 "e3b11d3a77c138ecd278a3ba673fa7d3c5914ccd" => :mountain_lion

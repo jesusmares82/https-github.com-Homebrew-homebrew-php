@@ -8,7 +8,6 @@ class Php56Suhosin < AbstractPhp56Extension
   head 'https://github.com/stefanesser/suhosin.git'
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "61f11b90b3325bc3ba945e632191aedd539f87c5233c3ab49e6569f5561d26a8" => :yosemite
     sha256 "15d7cdd36e5a50d57951f873a4bc77ee14feeed6f1ffdf3f0cdb972a7335b1f3" => :mavericks
     sha256 "34c0f66f20f4d5e4f12fa1a05adfad1dc253bc9bbc328011afb72ef3f21eb7e4" => :mountain_lion

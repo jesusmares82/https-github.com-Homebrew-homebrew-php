@@ -9,7 +9,6 @@ class Php54Yaml < AbstractPhp54Extension
   head "https://github.com/php/pecl-file_formats-yaml.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "65af5592ca00ecf843a8852f244a21a40ba6491dd42a6f1a660a251d5187eb81" => :yosemite
     sha256 "89116612d39540d4d750c214155e287b14e45dae386d5f840df1f4bba0e9bc74" => :mavericks
     sha256 "cb5f43d4c12d80ffdb663b7af36324a5bdb4840ed263b36052c93b2bae6b24dd" => :mountain_lion

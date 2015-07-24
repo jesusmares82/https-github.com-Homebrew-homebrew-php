@@ -6,7 +6,6 @@ class Phplint < Formula
   sha256 "cfa2c1b9ffcb0c60ec6fec164f249d5e608ebba1154ba6bd77ac331b03615e42"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     cellar :any
     sha256 "67298e41214575875a831c95c7aab57037581b99801b86db67585615aecec9d5" => :yosemite
     sha256 "f044f50fb5e910437633e75777e01b32cf8be88a9aa8e9513b58e92da9bad548" => :mavericks

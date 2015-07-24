@@ -8,7 +8,6 @@ class Php55Redis < AbstractPhp55Extension
   head "https://github.com/phpredis/phpredis.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "a6ddf0b311e6f1330b929d956495696525974b766e84bee0af85123f1140dcb5" => :yosemite
     sha256 "fb5811f0a56f96ed8a8d3ff75d5b50681088c7fc173e78b0999dd1ef527e3cb9" => :mavericks
     sha256 "83a89faf5958e8652e0a1fe320a927b20f2944808450ad4ee6aee65de08d3d77" => :mountain_lion

@@ -8,7 +8,6 @@ class Php56Uopz < AbstractPhp56Extension
   head "https://github.com/krakjoe/uopz.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "8387f9c399c26e0645f4963db430d89964840d0884b43715597cda0db9f36f7e" => :yosemite
     sha256 "4cd784d6c827374ba0d05a9aa3e1eeab55f18639f5b90fb6277ce1c0b398c43a" => :mavericks
     sha256 "cc75ad526c6512433001094bf48c403f4045734153f4e772f15b8de1060569cf" => :mountain_lion

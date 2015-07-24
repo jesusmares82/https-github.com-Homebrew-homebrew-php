@@ -9,7 +9,6 @@ class Php56Couchbase < AbstractPhp56Extension
   head "https://github.com/couchbaselabs/php-couchbase.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "173447213519b7b9ee5971ae21f9181e31ccd56f9af891bf8bee5c2f269c9b3e" => :yosemite
     sha256 "55822d6b1a62c803a5030fdcc15819e8b82946417bf634f27be65adf13797994" => :mavericks
     sha256 "171eb56d2e459d03508d2205780a0b49c5ad2845be68ab8207bc3e3208590b5e" => :mountain_lion

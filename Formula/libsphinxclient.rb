@@ -6,7 +6,6 @@ class Libsphinxclient < Formula
   head 'http://sphinxsearch.googlecode.com/svn/trunk/'
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     cellar :any
     sha256 "e505e2c85186e9b8fc3a137f169fe6e49f05b4907dbc0c34b9a2928aebc8f6f1" => :yosemite
     sha256 "202c7f72f6c1034eee2b581b007973d122da21499866fda2d383808408974e71" => :mavericks

@@ -9,7 +9,6 @@ class Php56Xhprof < AbstractPhp56Extension
   version '254eb24'
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha1 "c480499dd18cf90a7a7202ec3f9039b6b0cf88d8" => :yosemite
     sha1 "73abb71178efc8a9489ccd97628e34142bf882c9" => :mavericks
     sha1 "451676821cd45ddeaa92fd5dba3da178dd69bdfe" => :mountain_lion

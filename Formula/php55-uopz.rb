@@ -8,7 +8,6 @@ class Php55Uopz < AbstractPhp55Extension
   head "https://github.com/krakjoe/uopz.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "c4bf55e189c45a6face4303cef82d701cfc61cdebf3427a6539ad264761a06b8" => :yosemite
     sha256 "a10d58aea5d5e74684da1130d324e4c3b3aec40340b3be6c92b461d9ab7851b1" => :mavericks
     sha256 "1c7fe3a31da675efc3436d1ee5f01fdcf36f4df3e77e7c7c02c37c844eeef853" => :mountain_lion

@@ -8,7 +8,6 @@ class Php55Jsmin < AbstractPhp55Extension
   head 'https://github.com/sqmk/pecl-jsmin.git'
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha1 "d2c959b9c9fe65cdcc01cf5d060fab52a1f99a32" => :yosemite
     sha1 "d0afb389706e8feab282d50cdb8b248e10e385ff" => :mavericks
     sha1 "0d75ff0fd9e378b1e74909db53752fcffedbe7df" => :mountain_lion

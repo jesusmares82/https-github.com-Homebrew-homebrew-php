@@ -7,7 +7,6 @@ class Php55Sphinx < AbstractPhp55Extension
   sha256 '0c3ada36833a44a8147d2dd1b907548010ae53de0a05041a77e68dee036130e6'
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "e3af0b0c0ecce4be872737a08a438f9ccbf14f01e18b7b394dcde6da9e9ac8ac" => :yosemite
     sha256 "74ff310c977b7003fb4e5501c86102d028d01c9b37b077904cfccc985a946757" => :mavericks
     sha256 "cb9f328fca993808ca8c9eab2d3c208d368357bdeb3e21615b01b7235defb787" => :mountain_lion

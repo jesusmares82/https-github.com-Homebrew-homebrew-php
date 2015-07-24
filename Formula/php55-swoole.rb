@@ -8,7 +8,6 @@ class Php55Swoole < AbstractPhp55Extension
   head "https://github.com/swoole/swoole-src.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "8685225437127b23af00ea30a52cd02ccecab5fad26010520695bd71242157c7" => :yosemite
     sha256 "a8c1c83b59512df7c1e09a90bc7e14121b40e63427187d50b7525e2b2b3b8e5d" => :mavericks
     sha256 "00ba5025dfc0a3c6ceeb04f738f66a8cb83d3e9975272fa6e5840add078d3ce2" => :mountain_lion

@@ -8,7 +8,6 @@ class Php53Suhosin < AbstractPhp53Extension
   head 'https://github.com/stefanesser/suhosin.git'
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "44be63a8d2a39d138ed9092f9c1786db231a2d7ab41f4afbef0f2ca5dd259327" => :yosemite
     sha256 "e48ef4ad395a637c8ebf257e6f2eb21e81919e58ad62a40feaecfeda8586a4fc" => :mavericks
     sha256 "a4d580bc06edf867108898783303cba04e8eb22ddde920e1bec05f94b4369f22" => :mountain_lion

@@ -9,7 +9,6 @@ class Php53Couchbase < AbstractPhp53Extension
   head "https://github.com/couchbaselabs/php-couchbase.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "717f813cd708ffef314a577c9d480cd200dc262ca522afc2af50f270940070bc" => :yosemite
     sha256 "2eeb9527a8858b689b49c674e8dcd61e96fa0d281b81a9dfe72e22c399bef39c" => :mavericks
     sha256 "2472d7847a65e8a269e66b707939a066da12b3522b0b6aa3fca4a1da284107a9" => :mountain_lion

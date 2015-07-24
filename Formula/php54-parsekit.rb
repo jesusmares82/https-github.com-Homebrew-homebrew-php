@@ -9,7 +9,6 @@ class Php54Parsekit < AbstractPhp54Extension
   head "https://github.com/php/pecl-php-parsekit.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     cellar :any
     sha256 "ae19e135eae58ecf94522e5e711c98f534ecfb531da8371ce7f53f48455c50e8" => :yosemite
     sha256 "a366b68500abd2dd552a10967bd46f67a0fb65b8b62559d3a3038b9736f32cf6" => :mavericks

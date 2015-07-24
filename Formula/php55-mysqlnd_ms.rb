@@ -8,7 +8,6 @@ class Php55MysqlndMs < AbstractPhp55Extension
   head "https://svn.php.net/repository/pecl/mysqlnd_ms/trunk/"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "9588bf7a71ef1769001a5d649d99ac017eeedff4f4e43f85f41cae480622d85a" => :yosemite
     sha256 "73653dada3bfca5d04673499c3447830a4277cd472409a752a8860b2432b497d" => :mavericks
     sha256 "4077d0f58ccfa498c3335f76264b677a2aad90173c4d4c41c8dbbdcdc206bd8b" => :mountain_lion

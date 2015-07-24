@@ -9,7 +9,6 @@ class Php55Propro < AbstractPhp55Extension
   head "https://git.php.net/repository/pecl/php/propro.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "64e5657af7aef4b229bba1e1be545d43c9cd6c4b9fe9a73ed4298ced332b49f0" => :yosemite
     sha256 "d440aadd47ba90ae7f4657fc1fd28c8ac4e2635b734a749ce34adb7140cf358f" => :mavericks
     sha256 "fb1591287c760a949d8aa68a0d8a192b33afff41f90b8a4952d6a769b9b5739e" => :mountain_lion

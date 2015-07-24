@@ -9,7 +9,6 @@ class Php55Http < AbstractPhp55Extension
   head "https://git.php.net/repository/pecl/http/pecl_http.git"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles-php"
     sha256 "ca7a3adc8d60f0fc62245db7dfd21f11558a02265032571d7ad701046dd2c226" => :yosemite
     sha256 "64fc3f716294891bef099c9b4fe30ef7bbc248e2826a4334dad71af5e6f538db" => :mavericks
     sha256 "6a5a22f3d172182668008cb7dd1c78a1f618841e29caaa4d560a148675cb998f" => :mountain_lion
