@@ -35,7 +35,6 @@ class AbstractPhp < Formula
     depends_on 'gettext'
     depends_on 'gmp' => :optional
     depends_on 'tidy-html5' if build.include?('with-tidy')
-    depends_on 'homebrew/dupes/zlib'
     depends_on 'icu4c'
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
@@ -214,7 +213,7 @@ INFO
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
       "--with-xmlrpc",
-      "--with-zlib=#{Formula['zlib'].opt_prefix}",
+      "--with-zlib=/usr",
       "--with-readline=#{Formula['readline'].opt_prefix}",
     ]
 
