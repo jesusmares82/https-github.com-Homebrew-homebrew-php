@@ -4,8 +4,8 @@ require File.expand_path("../../Requirements/phar-building-requirement", __FILE_
 
 class PhpCsFixer < Formula
   homepage "http://cs.sensiolabs.org"
-  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.8.1.tar.gz"
-  sha256 "08670ef4fcef2c321fae5143d206009e96f6ab46aa90d7faa2b9dfcbb7b6ffed"
+  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.10.tar.gz"
+  sha256 "344a50a46563350916ed2ec037f8f4d56eb8f4fbf8fc2299c9020875846ded01"
   head "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git"
 
   depends_on PhpMetaRequirement
