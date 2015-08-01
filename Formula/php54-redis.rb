@@ -9,6 +9,10 @@ class Php54Redis < AbstractPhp54Extension
   revision 1
 
   bottle do
+    cellar :any
+    sha256 "f3523733cc0f411d7ef5dc3641106f72f8be42044fcd3ff744b68498c627710b" => :yosemite
+    sha256 "54385dc0271bdecc92aac02a380f95412141e97a93d42b3c98622dde00fcf760" => :mavericks
+    sha256 "608670c3652b1591ca6b050b148dca6a98e3da0418c6f6fd081f220fb2351ba8" => :mountain_lion
   end
 
   depends_on "php54-igbinary"
