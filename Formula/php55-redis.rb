@@ -6,11 +6,9 @@ class Php55Redis < AbstractPhp55Extension
   url "https://github.com/phpredis/phpredis/archive/2.2.7.tar.gz"
   sha256 "a5882dd9b21908e123b3d5c5f72d6dc8cbbbb6a29996e568c4d18ed356c0362b"
   head "https://github.com/phpredis/phpredis.git"
+  revision 1
 
   bottle do
-    sha256 "a6ddf0b311e6f1330b929d956495696525974b766e84bee0af85123f1140dcb5" => :yosemite
-    sha256 "fb5811f0a56f96ed8a8d3ff75d5b50681088c7fc173e78b0999dd1ef527e3cb9" => :mavericks
-    sha256 "83a89faf5958e8652e0a1fe320a927b20f2944808450ad4ee6aee65de08d3d77" => :mountain_lion
   end
 
   depends_on "php55-igbinary"
@@ -24,7 +22,7 @@ class Php55Redis < AbstractPhp55Extension
     safe_phpize
 
     mkdir_p "ext/igbinary"
-    cp "#{Formula['php55-igbinary'].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
+    cp "#{Formula['igbinary'].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
