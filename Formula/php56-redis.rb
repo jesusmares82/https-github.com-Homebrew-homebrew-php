@@ -9,6 +9,10 @@ class Php56Redis < AbstractPhp56Extension
   revision 1
 
   bottle do
+    cellar :any
+    sha256 "391f4e2a02e0db2d4008cfcf44442626bc09b8e29001504015776ad50da740a4" => :yosemite
+    sha256 "78fa9cc87bd1170aeec34cef48cd6e2a562aec0ca69121a9db3bc7aa48eff31a" => :mavericks
+    sha256 "bc6d90c725df953b53c3398347a3dfb9f08d46a978c4d1fc63088ffd0e0a3487" => :mountain_lion
   end
 
   depends_on "php56-igbinary"
