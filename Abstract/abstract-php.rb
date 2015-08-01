@@ -42,7 +42,6 @@ class AbstractPhp < Formula
     depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
     depends_on 'unixodbc'
     depends_on 'readline'
-    depends_on "net-snmp" if build.include?('with-snmp')
 
     # ssl
     if build.include?('with-homebrew-libressl')
@@ -73,7 +72,6 @@ class AbstractPhp < Formula
     option 'with-mssql', 'Include MSSQL-DB support'
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
     option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
-    option 'with-snmp', 'Build with SNMP support'
     option 'with-thread-safety', 'Build with thread safety'
     option 'with-tidy', 'Include Tidy support'
     option 'without-apache', 'Disable building of shared Apache 2.0 Handler module'
@@ -215,6 +213,8 @@ INFO
       "--with-xmlrpc",
       "--with-zlib=/usr",
       "--with-readline=#{Formula['readline'].opt_prefix}",
+      "--without-gmp",
+      "--without-snmp",
     ]
 
     if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
@@ -258,10 +258,6 @@ INFO
       plist_path.chmod 0644
     elsif build.with? 'cgi'
       args << "--enable-cgi"
-    end
-
-    if build.with? 'gmp'
-      args << "--with-gmp=#{Formula['gmp'].opt_prefix}"
     end
 
     if build.include?('with-homebrew-curl') || MacOS.version < :lion
@@ -342,10 +338,6 @@ INFO
 
     if build.with? 'tidy'
       args << "--with-tidy=#{Formula['tidy-html5'].opt_prefix}"
-    end
-
-    if build.with? 'snmp'
-      args << "--with-snmp=#{Formula["net-snmp"].opt_prefix}"
     end
 
     if build.with? 'thread-safety'
@@ -509,6 +501,17 @@ INFO
     EOS
     end
 
+    if build.include?('with-gmp')
+      s << <<-EOS.undent
+        GMP has moved to its own formula, please install it by running: brew install php#{php_version_path}-gmp
+      EOS
+    end
+
+    if build.include?('with-snmp')
+      s << <<-EOS.undent
+        SNMP has moved to its own formula, please install it by running: brew install php#{php_version_path}-snmp
+      EOS
+    end
 
     if build_fpm?
       s << <<-EOS.undent
