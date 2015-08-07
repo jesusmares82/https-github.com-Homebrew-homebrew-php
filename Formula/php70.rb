@@ -12,6 +12,9 @@ class Php70 < AbstractPhp
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
+    sha256 "30b17cd93cc48ea47b17ef1392821d30fee65960ab148f0eaee9d5586dab97e8" => :yosemite
+    sha256 "bd84bc2116db4a478a42f5f6ad4065ff289d7ffccc7c1d5a78e69db5d3aa0946" => :mavericks
+    sha256 "8567301188a4ec80b020088e90817a806b9ad28c2bdc990f5c06c30836b947e9" => :mountain_lion
   end
 
   def install_args
