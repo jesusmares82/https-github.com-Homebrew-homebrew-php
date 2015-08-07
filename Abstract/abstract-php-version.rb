@@ -22,15 +22,13 @@ class AbstractPhpVersion < Formula
   end
 
   module Php54Defs
-    PHP_SRC_TARBALL = 'https://php.net/get/php-5.4.43.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-5.4.44.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.4.43'
+    PHP_VERSION     = '5.4.44'
     PHP_BRANCH      = 'PHP-5.4'
 
     PHP_CHECKSUM    = {
-                        :md5    => 'eedfa86393db2ae49a163d1f80aa2c19',
-                        :sha1   => '2370ff60be9e058c94665e1b04ead80d23c37f1e',
-                        :sha256 => '25d7724fb00ad1b520f5bad2173717031153d0a8e3de2c75e7a084c76f8ecd6b',
+                        :sha256 => '8dd59e5ce9248cf36ac3de5412a518b8b24c01ace6c46ce3d12e4ce981a3856d',
                       }
   end
 
