@@ -13,3 +13,4 @@ class Igbinary < Formula
     include.install %w[apc_serializer.h hash.h igbinary.h php_igbinary.h]
   end
 end
+
