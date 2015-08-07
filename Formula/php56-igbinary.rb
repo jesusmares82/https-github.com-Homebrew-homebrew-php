@@ -44,3 +44,4 @@ class Php56Igbinary < AbstractPhp56Extension
     shell_output("php -m").include?("igbinary")
   end
 end
+
