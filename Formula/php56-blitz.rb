@@ -9,6 +9,10 @@ class Php56Blitz < AbstractPhp56Extension
   head "https://github.com/alexeyrybak/blitz.git"
 
   bottle do
+    cellar :any
+    sha256 "e3dbbace1f27a6c2090927ee471b3de61cfb04eb9f3a7a208d45da9f4b800ecb" => :yosemite
+    sha256 "4e051c398724a0a8e47fd24a6208f080cf967285fd83875e15fd392a6d636869" => :mavericks
+    sha256 "b43bf96c5ca1b84338af3f9fc01eccce5a1b2c8626d94b8bb16fba01d45cb93a" => :mountain_lion
   end
 
   def install
