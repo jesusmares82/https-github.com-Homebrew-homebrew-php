@@ -8,6 +8,10 @@ class Php56Tidy < AbstractPhp56Extension
   version  PHP_VERSION
 
   bottle do
+    cellar :any
+    sha256 "6cc8bf593f24b24fb3057fef2fc03f6444a6d187455617ff685b2feac2a8ee8d" => :yosemite
+    sha256 "5f580bac96dbf97b1114fcb980682ce50f9f0900979483000d388374e0a9611d" => :mavericks
+    sha256 "92458e056fae25914aad4cb9f51250f68cf14abd63efc20d7e28fbc6fc9a9bc5" => :mountain_lion
   end
 
   def install
