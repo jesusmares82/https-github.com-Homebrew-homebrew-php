@@ -50,3 +50,4 @@ class Php53Blitz < AbstractPhp53Extension
     shell_output("php -m").include?("blitz")
   end
 end
+
