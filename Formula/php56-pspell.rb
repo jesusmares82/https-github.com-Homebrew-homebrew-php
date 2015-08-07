@@ -27,3 +27,4 @@ class Php56Pspell < AbstractPhp56Extension
     write_config_file if build.with? "config-file"
   end
 end
+
