@@ -51,3 +51,4 @@ index 6caa29a..1c6cdfb 100644
      else
        AC_MSG_ERROR(Cannot locate header file MagickWand.h)
      fi
+
