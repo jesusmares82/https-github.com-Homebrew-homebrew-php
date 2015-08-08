@@ -31,3 +31,4 @@ class Php54PdoDblib < AbstractPhp54Extension
     write_config_file if build.with? "config-file"
   end
 end
+
