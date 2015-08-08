@@ -8,6 +8,9 @@ class Php53Memcached < AbstractPhp53Extension
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
   bottle do
+    sha256 "7aee805b1e7efb1cabfcc001a9de7b67e6ec6cdf5b183a9be36672dea55bcc0a" => :yosemite
+    sha256 "5e1f4a6af6c16d9f4be2821c3e2ac7f6f919dffe94c8373366d9cfaa1ad67349" => :mavericks
+    sha256 "0bd1e3817c80baeb7fc70d30d40f47b15aac6347309b78d80805832d1e00a859" => :mountain_lion
   end
 
   option "with-sasl", "Build with sasl support"
