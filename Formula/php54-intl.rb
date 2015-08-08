@@ -43,3 +43,4 @@ class Php54Intl < AbstractPhp54Extension
     shell_output("php -m").include?("intl")
   end
 end
+
