@@ -25,3 +25,4 @@ class Php54Tidy < AbstractPhp54Extension
     write_config_file if build.with? "config-file"
   end
 end
+
