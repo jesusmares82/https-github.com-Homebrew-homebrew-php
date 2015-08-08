@@ -8,6 +8,9 @@ class Php56PdoPgsql < AbstractPhp56Extension
   version  PHP_VERSION
 
   bottle do
+    sha256 "dfa7ccacf98fc621d8f5eb38e3e35bdc03b80403cfc29063a970f5d2324d148d" => :yosemite
+    sha256 "f6cfbf4f3491000245196b5108d7b93720667fa2d06fcfc6eda4768dc363b530" => :mavericks
+    sha256 "0c2506258e58b6f29b77ec9a370df7727c9e8669800e62abca6a178f67087f51" => :mountain_lion
   end
 
   depends_on "postgresql"
