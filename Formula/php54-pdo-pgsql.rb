@@ -28,3 +28,4 @@ class Php54PdoPgsql < AbstractPhp54Extension
     write_config_file if build.with? "config-file"
   end
 end
+
