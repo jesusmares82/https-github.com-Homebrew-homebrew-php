@@ -8,6 +8,10 @@ class Php55Opcache < AbstractPhp55Extension
   version  PHP_VERSION
 
   bottle do
+    cellar :any
+    sha256 "5555786a9fd2fc4211488fbefbb7a10f2bd1e896456be431f8116a579eb72ead" => :yosemite
+    sha256 "e62a8d522a17fff5195ab3c3001980461793fc19cf63c087d80c7f90b21f868f" => :mavericks
+    sha256 "e9a450f2423a333047585841dc91f38d4e80fe391f93c515d644af05e70745c2" => :mountain_lion
   end
 
   depends_on "pcre"
