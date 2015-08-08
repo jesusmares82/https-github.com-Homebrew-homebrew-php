@@ -211,3 +211,4 @@ class Php55Opcache < AbstractPhp55Extension
     EOS
   end
 end
+
