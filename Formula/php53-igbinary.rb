@@ -43,3 +43,4 @@ class Php53Igbinary < AbstractPhp53Extension
     shell_output("php -m").include?("igbinary")
   end
 end
+
