@@ -10,6 +10,10 @@ class Php53Igbinary < AbstractPhp53Extension
   depends_on 'igbinary' => :build
 
   bottle do
+    cellar :any
+    sha256 "371c4419efb28a57278acc08922ad380adf21d1b4a4faa646750427a08fdb1a1" => :yosemite
+    sha256 "a3c01b3454675bdd419b437ac8e5821b626713ba4fc8c4b9d7bbaede5f2ad074" => :mavericks
+    sha256 "8f16e032a7e9287b76818fee9c319ca4fc792c2ff624115e37d2c26f7de12552" => :mountain_lion
   end
 
   def install
