@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Geoip < AbstractPhp54Extension
   init
   homepage 'http://pecl.php.net/package/geoip'
-  url 'http://pecl.php.net/get/geoip-1.0.8.tgz'
-  sha1 'f8d17da3e192002332ab54b9b4ab0f5deeaf9f15'
+  url 'http://pecl.php.net/get/geoip-1.1.0.tgz'
+  sha1 '72475f10cb3549eac7d790ab6ae1869f89c6dae0'
   head 'https://svn.php.net/repository/pecl/geoip/trunk/'
 
   depends_on 'geoip'
