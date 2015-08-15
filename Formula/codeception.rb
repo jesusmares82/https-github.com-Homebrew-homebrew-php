@@ -9,9 +9,9 @@ class Codeception < Formula
 
   bottle do
     cellar :any
-    sha256 "c20db42c395ef970d01fdf9c7116677836eed8b3574c90c36548a25713da1420" => :yosemite
-    sha256 "0e00ff7d04cb70a82d605b170467a99d034b057f9f6be9a390b9eca16f7513cc" => :mavericks
-    sha256 "23d73fca1b4c506da568d8342a9c593922d4118f76a20b04695e74cab353a705" => :mountain_lion
+    sha256 "d92fa3ed6cd96904ae352d23a8c5026a06f41ce7c265f864f8f8963eca252e5c" => :yosemite
+    sha256 "f3f481e26a2a392932812cfeeb57c507c7655d1a98f90d4b474b757ee0f94b62" => :mavericks
+    sha256 "7a10d2f42850f7d7733d17806feaf0b0bc4fd212dc6556e61291cd8ea7a276e3" => :mountain_lion
   end
 
   def install
