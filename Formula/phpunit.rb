@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpunit < Formula
   homepage "http://phpunit.de"
-  url "https://phar.phpunit.de/phpunit-4.7.6.phar"
-  sha256 "f97a77f09773dd963e8eb5d36ef541f62039b603cfcb452691d27c423499569d"
+  url "https://phar.phpunit.de/phpunit-4.8.5.phar"
+  sha256 "ce39f98b1b5c17a7e19bb89d61f33bd72baa53406e97342acb2a7b2c340dbdb0"
 
   bottle do
     cellar :any
@@ -24,4 +24,3 @@ class Phpunit < Formula
     shell_output("phpunit --version").include?(version)
   end
 end
-
