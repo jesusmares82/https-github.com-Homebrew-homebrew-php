@@ -32,3 +32,4 @@ class Php70Gmp < AbstractPhp70Extension
     shell_output("php -m").include?("gmp")
   end
 end
+
