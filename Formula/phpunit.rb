@@ -6,12 +6,6 @@ class Phpunit < Formula
   url "https://phar.phpunit.de/phpunit-4.8.5.phar"
   sha256 "ce39f98b1b5c17a7e19bb89d61f33bd72baa53406e97342acb2a7b2c340dbdb0"
 
-  bottle do
-    cellar :any
-    sha256 "9c040894f1116e3edc29e279a6040c16d1c6fbd35527e0a88b22d6cfe3f8855a" => :yosemite
-    sha256 "a0115e84ac47de8f70cfe87be14461fd7bbba514800b9139757f98b4f487053f" => :mavericks
-  end
-
   def install
     libexec.install "phpunit-#{version}.phar"
     sh = libexec + "phpunit"
