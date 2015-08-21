@@ -33,3 +33,4 @@ class Php70PdoPgsql < AbstractPhp70Extension
     shell_output("php -m").include?("pdo_pgsql")
   end
 end
+
