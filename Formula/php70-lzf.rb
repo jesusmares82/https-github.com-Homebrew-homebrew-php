@@ -28,3 +28,4 @@ class Php70Lzf < AbstractPhp70Extension
     shell_output("php -m").include?("lzf")
   end
 end
+
