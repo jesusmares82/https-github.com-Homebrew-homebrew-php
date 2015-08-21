@@ -32,3 +32,4 @@ class Php70Snmp < AbstractPhp70Extension
     shell_output("php -m").include?("snmp")
   end
 end
+
