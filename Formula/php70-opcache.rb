@@ -4,17 +4,12 @@ class Php70Opcache < AbstractPhp70Extension
   init
   desc "OPcache improves PHP performance"
   homepage "http://php.net/manual/en/book.opcache.php"
-
-  bottle do
-    cellar :any
-    sha256 "9b7a70874ede95b7d3301784ca44314cc3b135967f70609149958f906c1bb6ad" => :yosemite
-    sha256 "08d6c18c3d3eb1abb70f85e6f24b50cd1f18861f98de16c6fa98091dd18e74ef" => :mavericks
-    sha256 "00d83239307b0029c7beb7a4f0a24827e2dff5f88228c3116d59d324552aecc5" => :mountain_lion
-  end
-
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
+
+  bottle do
+  end
 
   depends_on "pcre"
 

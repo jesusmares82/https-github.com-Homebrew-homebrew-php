@@ -8,6 +8,9 @@ class Php70Lzf < AbstractPhp70Extension
   sha256 "42ec458ea10128a801e8d39736b519ba81fa75d2a617d2777b7d6b3276601a5d"
   head "http://svn.php.net/repository/pecl/lzf/trunk/"
 
+  bottle do
+  end
+
   def install
     Dir.chdir "LZF-#{version}" unless build.head?
 
