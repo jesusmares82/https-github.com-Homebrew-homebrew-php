@@ -70,6 +70,7 @@ class AbstractPhp < Formula
     option 'with-imap', 'Include IMAP extension'
     option 'with-libmysql', 'Include (old-style) libmysql support instead of mysqlnd'
     option 'with-mssql', 'Include MSSQL-DB support'
+    option 'with-pear', 'Build with PEAR'
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
     option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
     option 'with-thread-safety', 'Build with thread safety'
@@ -80,7 +81,6 @@ class AbstractPhp < Formula
     option 'without-ldap', 'Build without LDAP support'
     option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'without-pcntl', 'Build without Process Control support'
-    option 'without-pear', 'Build without PEAR'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
