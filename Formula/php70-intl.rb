@@ -9,6 +9,9 @@ class Php70Intl < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
+    sha256 "aeda478f9801928cd038102e400b24ff7198e31c32a0fcfaf4612f353bcaaf5d" => :yosemite
+    sha256 "271733e86c31235b2c1075979a7fd3d2bb85d52cc22941c776d2ad96a09e7207" => :mavericks
+    sha256 "3a02e48b4057596dd4ffc7e172765365ea57e4df2cbe64084ae2ad2a4789f2dc" => :mountain_lion
   end
 
   depends_on "icu4c"
