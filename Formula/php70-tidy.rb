@@ -9,6 +9,10 @@ class Php70Tidy < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
+    cellar :any
+    sha256 "7f3f3fbdbefcb188ce764e0aef7ee945f26c91a8ab8b5eadf7b1d132b324d44b" => :yosemite
+    sha256 "656879f9773d9ae80332a6d0dbb1014ed073751a9632e2cb103071954b0b3bd0" => :mavericks
+    sha256 "9424fa5a374829541f431e078a98fa0981e5da4c3f81424bbb10586176e0ffb3" => :mountain_lion
   end
 
   def install
