@@ -98,7 +98,7 @@ The purpose of this repository is to allow PHP developers to quickly retrieve wo
 ## Requirements
 
 * [Homebrew](https://github.com/Homebrew/homebrew)
-* Snow Leopard, Lion, Mountain Lion, Mavericks. Untested everywhere else.
+* Snow Leopard, Lion, Mountain Lion, Mavericks, or Yosemite. Untested everywhere else.
 * The Homebrew `dupes` tap - `brew tap homebrew/dupes`
 * The Homebrew `versions` tap - `brew tap homebrew/versions`
 
@@ -130,7 +130,7 @@ $ brew tap homebrew/homebrew-php
 $ brew options php56
 ```
 
-Once the tap is installed, you can install `php53`, `php54`, `php55`, `php56`, or any formulae you might need via:
+Once the tap is installed, you can install `php53`, `php54`, `php55`, `php56`, `php70`, or any formulae you might need via:
 
 ```sh
 $ brew install php56
@@ -176,7 +176,9 @@ Please be aware that you must make this type of change EACH time you swap betwee
 
 ### PEAR Extensions
 
-If installing `php53`, `php54`, `php55` or `php56`, please note that all extensions installed with the included `pear` will be installed to the respective php's bin path. For example, supposing you installed `PHP_CodeSniffer` as follows:
+Pear is no longer compiled by default, instead you need to install php with the `--with-pear` option, such as: `brew install php56 --with-pear`.
+
+Please note that all extensions installed with the included `pear` will be installed to the respective php's bin path. For example, supposing you installed `PHP_CodeSniffer` as follows:
 
 ```sh
 $ pear install PHP_CodeSniffer
