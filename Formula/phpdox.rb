@@ -2,10 +2,11 @@ require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
+
 class Phpdox < Formula
   homepage 'https://github.com/theseer/phpdox'
-  url 'http://phpdox.de/releases/phpdox-0.7.0.phar'
-  sha1 'e8b3f31de7cde804c6f5eede69b0d210eafc7aac'
+  url 'https://github.com/theseer/phpdox/releases/download/0.8.1.1/phpdox-0.8.1.1.phar'
+  sha256 '1424d4603e0fdb0c80e39266fb832060bffbcc665a8c8d29b411e88d096d5da2'
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
