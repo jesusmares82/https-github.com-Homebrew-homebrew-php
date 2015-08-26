@@ -2,7 +2,7 @@ class WpCli < Formula
   desc "A set of command-line tools for managing WordPress installations."
   homepage "http://wp-cli.org/"
   url "https://github.com/wp-cli/wp-cli/archive/v0.19.2.tar.gz"
-  sha256 "08380d66c251ce17065fb8d082d004760746fefc751be74faea1ca61063b524b"
+  sha256 "24372cb868f240ad188e1b63fa915017ba32d2da492ea24ec60d3f126c1d3168"
   head "https://github.com/wp-cli/wp-cli.git"
 
   option "without-bash-completion", "Don't install bash completion"
