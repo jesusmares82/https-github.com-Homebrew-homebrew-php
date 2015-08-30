@@ -200,13 +200,13 @@ INFO
       "--with-freetype-dir=#{Formula['freetype'].opt_prefix}",
       "--with-gd",
       "--with-gettext=#{Formula['gettext'].opt_prefix}",
-      "--with-iconv-dir=/usr",
+      ("--with-iconv-dir=/usr" if OS.mac?),
       "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
-      "--with-kerberos=/usr",
+      ("--with-kerberos=/usr" if OS.Mac?),
       "--with-libedit",
       "--with-mhash",
-      "--with-ndbm=/usr",
+      ("--with-ndbm=/usr" if Os.Mac?),
       "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
       "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
@@ -228,7 +228,7 @@ INFO
     end
 
     if build.with? 'bz2'
-      args << '--with-bz2=/usr'
+      args << '--with-bz2=/usr' if OS.mac?
     end
 
     if build.with? 'debug'
@@ -269,7 +269,7 @@ INFO
     if build.with? 'homebrew-libxslt'
       args << "--with-xsl=" + Formula['libxslt'].opt_prefix.to_s
     else
-      args << "--with-xsl=/usr"
+      args << "--with-xsl=/usr" if OS.mac?
     end
 
     if build.with? 'imap'
