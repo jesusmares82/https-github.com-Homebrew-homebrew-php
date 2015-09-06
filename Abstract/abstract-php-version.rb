@@ -15,20 +15,18 @@ class AbstractPhpVersion < Formula
     PHP_BRANCH      = 'PHP-5.3'
 
     PHP_CHECKSUM    = {
-                        :md5    => '9469e240cbe6ac865aeaec89b253dd30',
-                        :sha1   => '6e9e492c6d5853d063ddb9a4dbef60b8e5d87444',
                         :sha256 => 'c4e1cf6972b2a9c7f2777a18497d83bf713cdbecabb65d3ff62ba441aebb0091',
                       }
   end
 
   module Php54Defs
-    PHP_SRC_TARBALL = 'https://php.net/get/php-5.4.44.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-5.4.45.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.4.44'
+    PHP_VERSION     = '5.4.45'
     PHP_BRANCH      = 'PHP-5.4'
 
     PHP_CHECKSUM    = {
-                        :sha256 => '8dd59e5ce9248cf36ac3de5412a518b8b24c01ace6c46ce3d12e4ce981a3856d',
+                        :sha256 => '4e0d28b1554c95cfaea6fa2b64aac85433f158ce72bb571bcd5574f98f4c6582',
                       }
   end
 
