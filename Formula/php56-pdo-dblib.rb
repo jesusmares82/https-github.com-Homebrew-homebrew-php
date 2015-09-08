@@ -8,9 +8,6 @@ class Php56PdoDblib < AbstractPhp56Extension
   version  PHP_VERSION
 
   bottle do
-    sha256 "e3f97e5f3d2cc1aa3253850e8efa1af4530cef4b31c5fa50dc8cad297fe170d5" => :yosemite
-    sha256 "9d1799b0905d723549f35aea00e88d647459d5cd0261d0595102e9035449a358" => :mavericks
-    sha256 "195b95091af5493c2085d7b6ab15017b10ec987d327e5488b7b94f345ab15f4d" => :mountain_lion
   end
 
   depends_on "freetds"
