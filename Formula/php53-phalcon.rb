@@ -9,6 +9,10 @@ class Php53Phalcon < AbstractPhp53Extension
   head "https://github.com/phalcon/cphalcon.git"
 
   bottle do
+    cellar :any
+    sha256 "39cdd42ab84331c7fb17a8fa159feef1b3f181bdc50d5b8e6b746518a9faa1ed" => :yosemite
+    sha256 "c8d8c7537ea6832cf518dfaeeeced59f277faaf09ff3f3e11b1479cb296b9689" => :mavericks
+    sha256 "f778fe3777ce0d42d0574f241e1a386ae849097f9b4f5e9cfc7e4190081cce07" => :mountain_lion
   end
 
   depends_on "pcre"
