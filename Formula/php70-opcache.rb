@@ -9,10 +9,6 @@ class Php70Opcache < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
-    cellar :any
-    sha256 "dcc71e5a657d5b95f66374833d73500efd9e6ff806892c3a328f562292cb16dd" => :yosemite
-    sha256 "9c639f069b2914d65f1b0c70f5432cc310869be8420e4959ad2c96ac5372d2ad" => :mavericks
-    sha256 "6278270636f285446dcc40c4153511496e56674c5e76d8941ea7d53c185abbd5" => :mountain_lion
   end
 
   depends_on "pcre"
