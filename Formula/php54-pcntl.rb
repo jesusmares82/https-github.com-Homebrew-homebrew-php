@@ -8,10 +8,6 @@ class Php54Pcntl < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
-    cellar :any
-    sha256 "778f3cdeb7be631f15086e4ddca20d69e938993ac4aea7f2c6e12ecb83930dff" => :yosemite
-    sha256 "a974e032c620446cbe6d90131407b541710849b93de18a5bebe669428171354d" => :mavericks
-    sha256 "008756ff30e4eed035f31941ad6b23fdb5c1b9c33a32954e56676515318c9c1e" => :mountain_lion
   end
 
   def install
