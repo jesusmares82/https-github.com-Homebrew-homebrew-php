@@ -8,6 +8,11 @@ class Php54Tidy < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
+    cellar :any
+    revision 1
+    sha256 "a537a440867caf099927f80bee762678e8aa9bbfccfdb6825def1fff47421d9f" => :yosemite
+    sha256 "077363edd8fbef83810de1e43a4899c0d6c5b27409426820f209f6fe09568f83" => :mavericks
+    sha256 "8a408ef0044cf6068f89df0fbf56a3221bdb4772a3e6131369c7a2413098e23a" => :mountain_lion
   end
 
   def install
