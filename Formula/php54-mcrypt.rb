@@ -8,6 +8,10 @@ class Php54Mcrypt < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
+    revision 1
+    sha256 "dcd85a6fe280457019fe303201865bf1df155e7dbc5bf6310f60fa91f3bbb163" => :yosemite
+    sha256 "8e0d7c87a502399483bf00f3e3f009c7beb624ecc17dfcf3e7003adc4c033f25" => :mavericks
+    sha256 "40c807532946df0da650d9e4d6e34af48abd573047350b0f522d6fa31c2603b6" => :mountain_lion
   end
 
   depends_on "mcrypt"
