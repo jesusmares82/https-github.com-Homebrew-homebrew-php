@@ -119,6 +119,10 @@ class AbstractPhpExtension < Formula
     end
   end
 
+  test do
+    shell_output("php -m").include?(extension)
+  end
+
   def caveats
     caveats = [ "To finish installing #{extension} for PHP #{php_branch}:" ]
 

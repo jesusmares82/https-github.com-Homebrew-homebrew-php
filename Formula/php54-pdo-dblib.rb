@@ -17,9 +17,6 @@ class Php54PdoDblib < AbstractPhp54Extension
   end
 
   def install
-
-    touch "#{Formula['freetds'].opt_prefix}/include/tds.h"
-    touch "#{Formula['freetds'].opt_prefix}/lib/libtds.a"
     Dir.chdir "ext/pdo_dblib" unless build.head?
 
     ENV.universal_binary if build.universal?
@@ -31,4 +28,3 @@ class Php54PdoDblib < AbstractPhp54Extension
     write_config_file if build.with? "config-file"
   end
 end
-
