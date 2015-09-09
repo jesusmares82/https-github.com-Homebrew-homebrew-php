@@ -8,6 +8,10 @@ class Php54PdoDblib < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
+    revision 1
+    sha256 "f11bba0a536476a06b805da414e2e99928b0f9295c3d73cf95ec718efd54fdf2" => :yosemite
+    sha256 "4219b7dc94781536227b93b71eb808f6462a6c30f62ac9b8b7c45eacb0162f5a" => :mavericks
+    sha256 "cc0b5e8678451f4f3e5d5fefa89d74113fe4c2af1c61406fb69c0f39f6ccd719" => :mountain_lion
   end
 
   depends_on "freetds"
