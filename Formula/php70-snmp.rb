@@ -9,6 +9,10 @@ class Php70Snmp < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
+    revision 1
+    sha256 "3bf1870afc8b21dfa938533b6483a643f6fbc7ffa0036fdbbcc4f63173dbd67a" => :yosemite
+    sha256 "2d92c71d4b05d323227bf76fc41548460b8a457320aa5d6e8837910687466892" => :mavericks
+    sha256 "4ce924890e73be502161fc9d7b951711b720609d80d5e9e7707cbba4e75a450d" => :mountain_lion
   end
 
   depends_on "net-snmp"
