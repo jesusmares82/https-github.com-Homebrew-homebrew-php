@@ -8,6 +8,11 @@ class Php56Pcntl < AbstractPhp56Extension
   version  PHP_VERSION
 
   bottle do
+    cellar :any
+    revision 1
+    sha256 "e9382ae08490a727d411fa4aace7cd1e1f5b9dc7f160602bc5577922dd08ba33" => :yosemite
+    sha256 "8f9ecd77f3108e900aaf6a6d1bfbbce61ae8bd16bb06f9ca53916e5c6a28e4e5" => :mavericks
+    sha256 "8448559d1901574d3af120c5f29e119727a5bc05cbd918760941d597cd7a5377" => :mountain_lion
   end
 
   def install
