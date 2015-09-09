@@ -9,6 +9,10 @@ class Php54Gmp < AbstractPhp54Extension
   version PHP_VERSION
 
   bottle do
+    revision 1
+    sha256 "90199e5572b886317f364967450fcb8ed19f0e2310788a4be1b2a256726c65da" => :yosemite
+    sha256 "9a324b857787ccfd223baca04ae1312f970f5f39a3ad877729201c1871ad8c2c" => :mavericks
+    sha256 "af48fc125deade231b26734f97c01db12fa0f051de08713de389d21d80fdc575" => :mountain_lion
   end
 
   depends_on "gmp"
