@@ -9,6 +9,10 @@ class Php70Gmp < AbstractPhp70Extension
   version PHP_VERSION
 
   bottle do
+    revision 1
+    sha256 "c57555ad6fdeca534f6a96f8e39ed8e89e6bd327f7099d021bd66aa7dfa4c5d2" => :yosemite
+    sha256 "d5021fa9642fd6784dc94bcd007879d303514f59d46ba17178e4c99664af37d9" => :mavericks
+    sha256 "f64434f826e389500f0cf6fd42d6b571d5bc596357ec2eee1d02590df5cb574a" => :mountain_lion
   end
 
   depends_on "gmp"
