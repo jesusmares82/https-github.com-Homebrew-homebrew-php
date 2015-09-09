@@ -18,8 +18,6 @@ class Php70PdoDblib < AbstractPhp70Extension
   end
 
   def install
-    touch "#{Formula["freetds"].opt_prefix}/include/tds.h"
-    touch "#{Formula["freetds"].opt_prefix}/lib/libtds.a"
     Dir.chdir "ext/pdo_dblib" unless build.head?
 
     ENV.universal_binary if build.universal?
@@ -29,9 +27,5 @@ class Php70PdoDblib < AbstractPhp70Extension
     system "make"
     prefix.install "modules/pdo_dblib.so"
     write_config_file if build.with? "config-file"
-  end
-
-  test do
-    shell_output("php -m").include?("pdo_dblib")
   end
 end
