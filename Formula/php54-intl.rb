@@ -8,6 +8,10 @@ class Php54Intl < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
+    revision 1
+    sha256 "48976c4c5b4e3b4185fa164323763bbbf381319edf8ff3c40dbb11ec04ba96cd" => :yosemite
+    sha256 "0541cea5f982fa4c47ce9d2c41a68d92d82709b2d4d8f825b59e560d77782b22" => :mavericks
+    sha256 "d5c5994b446174cd29c54a3e689bd96ce18098df97f321130b558acd1b6f047e" => :mountain_lion
   end
 
   depends_on "icu4c"
