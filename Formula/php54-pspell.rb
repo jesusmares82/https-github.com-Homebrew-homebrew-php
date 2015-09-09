@@ -8,6 +8,10 @@ class Php54Pspell < AbstractPhp54Extension
   version  PHP_VERSION
 
   bottle do
+    revision 1
+    sha256 "3da924dd0d56a3dffbd79ac003e6440e9544e9f7062a8855a9bd84478353115b" => :yosemite
+    sha256 "2d3518fb2f0f8bad93f7999294420f184358047785dbae56d44a5e0f23173f71" => :mavericks
+    sha256 "6a03eb8222fc8d2670f9e678fa5c69d4c1877b7454d4ad165ea09ff5b9aa636d" => :mountain_lion
   end
 
   depends_on "aspell"
