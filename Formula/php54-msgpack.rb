@@ -9,6 +9,10 @@ class Php54Msgpack < AbstractPhp54Extension
   head "https://github.com/msgpack/msgpack-php.git"
 
   bottle do
+    cellar :any
+    sha256 "bf732a3f5cf5859844d195d86655213554b1bf95cfd58ce3a0b21e241f463603" => :yosemite
+    sha256 "43692d6f1847233c12d3976b78b9e98fbe9761adaa66a606ff21504a61233c0e" => :mavericks
+    sha256 "8e41d425ed831ba7cd54f2aa3073674b9bfb750451b7443b39f8972b8fc7cf60" => :mountain_lion
   end
 
   def install
