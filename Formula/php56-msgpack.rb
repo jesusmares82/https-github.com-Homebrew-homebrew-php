@@ -2,10 +2,14 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Msgpack < AbstractPhp56Extension
   init
-  homepage 'http://pecl.php.net/package/msgpack'
-  url 'http://pecl.php.net/get/msgpack-0.5.7.tgz'
-  sha1 '584b772b5e90e957e14a73ab107e69bafaa2021a'
-  head 'https://github.com/msgpack/msgpack-php.git'
+  desc "MessagePack serialization"
+  homepage "http://pecl.php.net/package/msgpack"
+  url "http://pecl.php.net/get/msgpack-0.5.7.tgz"
+  sha256 "b8ee20cd0a79426c1abd55d5bbae85e5dcfbe0238abf9ce300685fbe76d94cdf"
+  head "https://github.com/msgpack/msgpack-php.git"
+
+  bottle do
+  end
 
   def install
     Dir.chdir "msgpack-#{version}" unless build.head?
