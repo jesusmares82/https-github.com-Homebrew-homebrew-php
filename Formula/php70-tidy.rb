@@ -7,17 +7,18 @@ class Php70Tidy < AbstractPhp70Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
+  revision 2
 
   bottle do
-    cellar :any
-    revision 1
-    sha256 "3bfa9f3e6cf1b50bbde7eea47c2deeb97b550bd159029ffb7f5baf569c95d179" => :yosemite
-    sha256 "da246315a867db62ecb89968d23feb8d31ccbb77731c925bde6b6a37f9b50c30" => :mavericks
-    sha256 "d08c427ad9b4b5c81a1e0f063069ee7bb9456190fb0524f5449964f6ba426b9e" => :mountain_lion
   end
+
+  depends_on "tidy-html5"
 
   def install
     Dir.chdir "ext/tidy"
+
+    # API compatibility with tidy-html5 v5.0.0 - https://github.com/htacg/tidy-html5/issues/224
+    inreplace "tidy.c", "buffio.h", "tidybuffio.h"
 
     ENV.universal_binary if build.universal?
 
@@ -25,13 +26,9 @@ class Php70Tidy < AbstractPhp70Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--disable-dependency-tracking",
-                          "--with-tidy"
+                          "--with-tidy=#{Formula["tidy-html5"].opt_prefix}"
     system "make"
     prefix.install "modules/tidy.so"
     write_config_file if build.with? "config-file"
-  end
-
-  test do
-    shell_output("php -m").include?("tidy")
   end
 end

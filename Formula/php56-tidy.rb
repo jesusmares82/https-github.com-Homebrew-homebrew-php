@@ -2,21 +2,23 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Tidy < AbstractPhp56Extension
   init
+  desc "Tidy HTML clean and repair utility"
   homepage "http://php.net/manual/en/book.tidy.php"
-  url      PHP_SRC_TARBALL
-  sha256   PHP_CHECKSUM[:sha256]
-  version  PHP_VERSION
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
+  revision 2
 
   bottle do
-    cellar :any
-    revision 1
-    sha256 "29e3e8b1649f78c2ca26dad5d9b3a649d6eba2f84ba5dd1e1696a184fd967872" => :yosemite
-    sha256 "fc59ad45faa65ef4186b6ca0e83ff69b67ea99b1a1d618e5608d25d963230f31" => :mavericks
-    sha256 "dcce1bc99316e6237ee4519def4cc2244500f25875572506a0104c773169478e" => :mountain_lion
   end
+
+  depends_on "tidy-html5"
 
   def install
     Dir.chdir "ext/tidy"
+
+    # API compatibility with tidy-html5 v5.0.0 - https://github.com/htacg/tidy-html5/issues/224
+    inreplace "tidy.c", "buffio.h", "tidybuffio.h"
 
     ENV.universal_binary if build.universal?
 
@@ -24,11 +26,9 @@ class Php56Tidy < AbstractPhp56Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--disable-dependency-tracking",
-                          "--with-tidy"
+                          "--with-tidy=#{Formula["tidy-html5"].opt_prefix}"
     system "make"
     prefix.install "modules/tidy.so"
     write_config_file if build.with? "config-file"
   end
 end
-
-

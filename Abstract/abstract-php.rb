@@ -362,6 +362,11 @@ INFO
       s.change_make_var! "EXTRA_LIBS", "\\1 -lstdc++"
     end
 
+    if build.with? 'tidy'
+      # API compatibility with tidy-html5 v5.0.0 - https://github.com/htacg/tidy-html5/issues/224
+      inreplace 'ext/tidy/tidy.c', 'buffio.h', 'tidybuffio.h'
+    end
+
     system "make"
     ENV.deparallelize # parallel install fails on some systems
     system "make install"
