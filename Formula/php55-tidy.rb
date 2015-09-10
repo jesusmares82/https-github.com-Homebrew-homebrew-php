@@ -10,6 +10,9 @@ class Php55Tidy < AbstractPhp55Extension
   revision 2
 
   bottle do
+    sha256 "bd3093cbf043012a46cca8ba871751d749c7f2529a9ce74f3fefe8562b13a799" => :yosemite
+    sha256 "2a53d587e7e37e1eae13f028a55207d75d34c35034cc810f01b5c95743e49f58" => :mavericks
+    sha256 "fc627efc83dd41cf4dd4ee2f76dc5a86b85a2590e8c915833ed8f4f252dd223e" => :mountain_lion
   end
 
   depends_on "tidy-html5"
