@@ -1,7 +1,7 @@
 class BrewPhpSwitcher < Formula
-  url "https://github.com/philcook/brew-php-switcher/archive/v1.4.tar.gz"
+  url "https://github.com/philcook/brew-php-switcher/archive/v1.5.tar.gz"
   homepage "https://github.com/philcook/php-switcher"
-  sha256 "299950a2d3cfa70468aa9569f10c8d50eff68ec069c7a884898677e6799932bb"
+  sha256 "e5ead8b188a54d270b3a12bdcbae4a97c808e9d2ee72708597abffb8b4e8b591"
   head "https://github.com/philcook/brew-php-switcher.git"
 
   def install
@@ -20,7 +20,7 @@ class BrewPhpSwitcher < Formula
     To run brew php switcher do the following:
       "brew-php-switcher 53".
 
-    You can select php version 53, 54, 55, or 56.
+    You can select php version 53, 54, 55, 56 or 70.
     EOS
   end
 end
