@@ -8,6 +8,10 @@ class Php55Maxminddb < AbstractPhp55Extension
   sha256 "c027479441b17ed5928640d27c42bccbb35ca07ac6401423c5bbb7220f720638"
 
   bottle do
+    cellar :any
+    sha256 "32a36bdf0267d953c8c49deecb17edae58827454fb17e62590009a9dee3c7aa4" => :yosemite
+    sha256 "82902e414598365a430b54f0f32e9a471723a6a452c0a46b848a85b4f4a68239" => :mavericks
+    sha256 "10165c6c182c02c4bbdfc1ca28252d7426067806b52fc4825e1e1a40898a5e28" => :mountain_lion
   end
 
   depends_on "libmaxminddb"
