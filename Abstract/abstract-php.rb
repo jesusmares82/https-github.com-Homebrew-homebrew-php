@@ -39,7 +39,7 @@ class AbstractPhp < Formula
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
-    depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
+    depends_on 'libxml2'
     depends_on 'unixodbc'
     depends_on 'readline'
 
@@ -66,7 +66,6 @@ class AbstractPhp < Formula
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
     option 'with-homebrew-libressl', 'Include LibreSSL instead of OpenSSL via Homebrew'
     option 'with-homebrew-libxslt', 'Include LibXSLT support via Homebrew'
-    option 'with-homebrew-libxml2', 'Include Libxml2 support via Homebrew'
     option 'with-imap', 'Include IMAP extension'
     option 'with-libmysql', 'Include (old-style) libmysql support instead of mysqlnd'
     option 'with-mssql', 'Include MSSQL-DB support'
@@ -204,6 +203,7 @@ INFO
       "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
       ("--with-kerberos=/usr" if OS.mac?),
+      "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}",
       "--with-libedit",
       "--with-mhash",
       ("--with-ndbm=/usr" if OS.mac?),
@@ -216,10 +216,6 @@ INFO
       "--without-gmp",
       "--without-snmp",
     ]
-
-    if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
-      args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
-    end
 
     # Build Apache module by default
     unless build.without? 'apache'
