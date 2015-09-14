@@ -1,8 +1,9 @@
 class Adminer < Formula
   desc "Adminer is a full-featured database management tool written in PHP."
   homepage "http://www.adminer.org/"
-  url "https://downloads.sourceforge.net/project/adminer/Adminer/Adminer%204.2.1/adminer-4.2.1.php"
-  sha256 "f7471d6f006b3db84a4919a216436b3be5c1468053497161696ecfddbb538ed1"
+  version '4.2.2'
+  url "https://downloads.sourceforge.net/project/adminer/Adminer/Adminer%20" + version + "/adminer-" + version + ".php"
+  sha256 "4dced0c64dbeb0f6e9a27c4ec5838bbf5f33b82c368a8965b47ae3da6c9bcb2c"
 
   def install
     (share+"adminer").install "adminer-"+version+".php" => "index.php"
