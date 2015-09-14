@@ -2,10 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Pinba < AbstractPhp54Extension
   init
-  homepage 'http://pinba.org/'
-  url 'https://github.com/tony2001/pinba_extension/archive/6869f30e8c264e7a5742ab55f4f6bd5ee29e6080.tar.gz'
-  sha1 '15d1fb5e339d1dec6bfe80e94414de6299d4df86'
-  head 'https://github.com/tony2001/pinba_extension.git'
+  desc "PHP extension for Pinba - realtime monitoring/statistics server"
+  homepage "http://pinba.org/"
+  url "https://github.com/tony2001/pinba_extension/archive/6869f30e8c264e7a5742ab55f4f6bd5ee29e6080.tar.gz"
+  sha256 "46e3640a47cd9b1951e6edbe637ba44ec5c858688883003c74ebe27a61e14fc5"
+  head "https://github.com/tony2001/pinba_extension.git"
 
   def install
     ENV.universal_binary if build.universal?
@@ -14,8 +15,12 @@ class Php54Pinba < AbstractPhp54Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
     system "make"
-    prefix.install %w(modules/pinba.so)
+    prefix.install "modules/pinba.so"
 
     write_config_file if build.with? "config-file"
+  end
+
+  test do
+    shell_output("php -m").include?("pinba")
   end
 end
