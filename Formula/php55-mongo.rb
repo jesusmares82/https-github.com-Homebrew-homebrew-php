@@ -7,6 +7,13 @@ class Php55Mongo < AbstractPhp55Extension
   sha256 "cd180ae35f537a199d374a3105106ee5a2b0cab618b12f6221e4c985c28955ac"
   head "https://github.com/mongodb/mongo-php-driver.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "798d4bc81abcd7dd542af61f33c7c2c95e0155c41dce0b934ccca8244c077ed7" => :el_capitan
+    sha256 "3576bc7d85d9dcf819cad6853dd1a85abf99884484f960fd09a833649220a949" => :yosemite
+    sha256 "2ba12276066a32e66db84e67a0bd7f10165f7cc8215e703bded4a81f9fbb056a" => :mavericks
+  end
+
   def install
     Dir.chdir "mongo-#{version}" unless build.head?
 
