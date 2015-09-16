@@ -8,6 +8,12 @@ class Php54Httpparser < AbstractPhp54Extension
   sha256 "9ba699a116696bb3695b7bff7b5ffd2be4b5cbe6746d1814c628c141eb1ff381"
   head "https://github.com/dhotson/httpparser-php.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "20ce5ef613535a5cd3bf3891ffd29c4e61125945ac5dd2476f1330f67eaeab7a" => :yosemite
+    sha256 "438050df4124f7dadb56d860639cd6402e9c6fc6aa5159bf4e4628877d038261" => :mavericks
+  end
+
   def extension
     "httpparser"
   end
