@@ -34,7 +34,6 @@ class AbstractPhp < Formula
     depends_on 'freetype'
     depends_on 'gettext'
     depends_on 'gmp' => :optional
-    depends_on 'tidy-html5' if build.include?('with-tidy')
     depends_on 'icu4c'
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
@@ -73,7 +72,6 @@ class AbstractPhp < Formula
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
     option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
     option 'with-thread-safety', 'Build with thread safety'
-    option 'with-tidy', 'Include Tidy support'
     option 'without-apache', 'Disable building of shared Apache 2.0 Handler module'
     option 'without-bz2', 'Build without bz2 support'
     option 'without-fpm', 'Disable building of the fpm SAPI executable'
@@ -332,10 +330,6 @@ INFO
       args << "--enable-phpdbg"
     end
 
-    if build.with? 'tidy'
-      args << "--with-tidy=#{Formula['tidy-html5'].opt_prefix}"
-    end
-
     if build.with? 'thread-safety'
       args << "--enable-maintainer-zts"
     end
@@ -356,11 +350,6 @@ INFO
 
     inreplace 'Makefile' do |s|
       s.change_make_var! "EXTRA_LIBS", "\\1 -lstdc++"
-    end
-
-    if build.with? 'tidy'
-      # API compatibility with tidy-html5 v5.0.0 - https://github.com/htacg/tidy-html5/issues/224
-      inreplace 'ext/tidy/tidy.c', 'buffio.h', 'tidybuffio.h'
     end
 
     system "make"
@@ -511,6 +500,12 @@ INFO
     if build.include?('with-snmp')
       s << <<-EOS.undent
         SNMP has moved to its own formula, please install it by running: brew install php#{php_version_path}-snmp
+      EOS
+    end
+
+    if build.include?('with-tidy')
+      s << <<-EOS.undent
+        Tidy has moved to its own formula, please install it by running: brew install php#{php_version_path}-tidy
       EOS
     end
 
