@@ -7,6 +7,13 @@ class Chphp < Formula
 
   head 'https://github.com/marcosdsanchez/chphp.git'
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "68f364c4504e18aa0c1518a9e2ea50466727c72cd46d82a5533569e4c00629c6" => :el_capitan
+    sha256 "a9aec36aec4b8ed1bf58c4cb8c7800ceaf8c4a7249c2d5bb27cc038db479d07b" => :yosemite
+    sha256 "4b9858eb02d78c6cc4ad9e5d59a251a63cebfe39756d7f5ed46a2cb1a79b6989" => :mavericks
+  end
+
   def install
     system 'make', 'install', "PREFIX=#{prefix}"
   end
