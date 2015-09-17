@@ -3,7 +3,7 @@ require 'formula'
 class PhpBuild < Formula
   homepage 'http://chh.github.com/php-build/'
   url 'https://github.com/CHH/php-build/archive/v0.10.0.tar.gz'
-  sha1 '22d2c97c4fba1f260b148ade17543a703ae95589'
+  sha256 '9f3f842608ee7cb3a6a9fcf592a469151fc1e73068d1c2bd6dbd15cac379857c'
   head 'https://github.com/CHH/php-build.git'
 
   depends_on 'wget'
