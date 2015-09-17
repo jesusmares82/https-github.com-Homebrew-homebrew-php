@@ -19,6 +19,13 @@ class Php53Apc < AbstractPhp53Extension
     # https://bugs.php.net/bug.php?id=61695
     patch :DATA
   end
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "b25e9b35ca1a500531eb04a3264bcfc4c365f41128a427b9a9fd3213e8faa61b" => :el_capitan
+    sha256 "990c66e204dd8ba22cb09ab318397554b4e2407044af5cfc071f4bef52af5c44" => :yosemite
+    sha256 "2e24df0758c1c47881d308dd58b4c930bc492b53be8b49677fc6fb2ba413ee47" => :mavericks
+  end
+
 
   def install
     Dir.chdir "APC-#{version}" unless build.head?
