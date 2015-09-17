@@ -4,7 +4,7 @@ class Php53Htscanner < AbstractPhp53Extension
   init
   homepage 'https://github.com/piannelli/htscanner-enhanced'
   url 'https://github.com/piannelli/htscanner-enhanced/archive/b62ad43105758fe9f513a0730c3bbef0dfd2ee37.tar.gz'
-  sha1 'bd1716f6d8d9571855fd73ad52778d57eec7be77'
+  sha256 'b014dafb36313c67f88b961799b9841e816de1fd3dc66bbf2ce5964c40f4e221'
   version 'b62ad431'
   head 'https://github.com/piannelli/htscanner-enhanced.git'
 
