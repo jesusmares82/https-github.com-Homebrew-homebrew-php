@@ -5,7 +5,7 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 class Envoy < Formula
   homepage 'https://github.com/laravel/envoy'
   url 'https://github.com/laravel/envoy/raw/v1.0.11/envoy.phar'
-  sha1 '00401ec8014a1744bebae14f8411fde6f2db551b'
+  sha256 'e24746bd5f35d60ff1d3af1bbdb676a9a1fb64706bc7f60fa4c07e048ca169c1'
   version '1.0.11'
 
   depends_on PhpMetaRequirement
