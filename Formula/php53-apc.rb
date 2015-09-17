@@ -4,7 +4,7 @@ class Php53Apc < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/apc'
   url 'http://pecl.php.net/get/APC-3.1.10.tgz'
-  sha1 '02c8a2f60c5b1789e7cccd9c1b421d822ca77734'
+  sha256 '99f260b32592f1b50da9c7a83fad3c5cbdb2484fa01aee6cc04caadd8cd4fc44'
   head 'https://svn.php.net/repository/pecl/apc/trunk/'
 
   devel do
