@@ -4,7 +4,7 @@ class Php53Boxwood < AbstractPhp53Extension
   init
   homepage 'https://github.com/ning/boxwood'
   url 'https://github.com/ning/boxwood/archive/888ba12635d7c50cb1bbf1cbef513b0ef9238af3.tar.gz'
-  sha1 'ee9c9ee53b5a4df29f5b805231f8f624f4705f51'
+  sha256 '7e5142706023c4acc1db433998d2350458b00c7bc79eba0cc886683bba6b5343'
   version '888ba12'
 
   def install
