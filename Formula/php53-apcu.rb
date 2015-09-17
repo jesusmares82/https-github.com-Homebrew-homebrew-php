@@ -4,7 +4,7 @@ class Php53Apcu < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/apcu'
   url 'http://pecl.php.net/get/apcu-4.0.7.tgz'
-  sha1 '84d68cbafea61df1ff864c7a3e8d2302a2879347'
+  sha256 '178a731ee3435b451f1144bc4a63c9d70d4909a2c434e17c6e07db554df90bd6'
   head 'https://github.com/krakjoe/apcu.git'
 
   option 'with-apc-bc', "Whether APCu should provide APC full compatibility support"
