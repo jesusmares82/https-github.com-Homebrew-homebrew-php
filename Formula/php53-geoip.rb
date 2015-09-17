@@ -4,7 +4,7 @@ class Php53Geoip < AbstractPhp53Extension
   init
   homepage 'http://pecl.php.net/package/geoip'
   url 'http://pecl.php.net/get/geoip-1.1.0.tgz'
-  sha1 '72475f10cb3549eac7d790ab6ae1869f89c6dae0'
+  sha256 '82c6deb7264d2ff7c4d6c45a7d27cff7ab097be965795e317e04a9c5b7be98b9'
   head 'https://svn.php.net/repository/pecl/geoip/trunk/'
 
   bottle do
