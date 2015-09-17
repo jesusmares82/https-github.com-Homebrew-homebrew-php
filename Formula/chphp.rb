@@ -3,7 +3,7 @@ require 'formula'
 class Chphp < Formula
   homepage 'https://github.com/marcosdsanchez/chphp'
   url 'https://github.com/marcosdsanchez/chphp/archive/v0.0.1.tar.gz'
-  sha1 '56c19d339cec860c8adc908e50c3e5da89143007'
+  sha256 '27b170b5d59a1e5c62682a08621bf8c42aa44a4f7c2b3517fab0620d78a4e6f7'
 
   head 'https://github.com/marcosdsanchez/chphp.git'
 
