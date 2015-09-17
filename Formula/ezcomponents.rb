@@ -3,7 +3,7 @@ require 'formula'
 class Ezcomponents < Formula
   url 'http://ezcomponents.org/files/downloads/ezcomponents-2009.2.1-lite.tar.bz2'
   homepage 'http://ezcomponents.org'
-  sha1 '2b04826602ded803b2d0a2ce929402c9ece9506c'
+  sha256 'c7a4933dc8b100711c99cc2cc842da6448da35a4a95e8874342a92c79b8f8721'
 
   def install
     (lib+'ezc').install Dir['*']
