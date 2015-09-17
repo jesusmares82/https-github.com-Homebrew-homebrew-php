@@ -5,7 +5,7 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 class Pharcc < Formula
   homepage 'https://github.com/cbednarski/pharcc'
   url 'https://github.com/cbednarski/pharcc/releases/download/v0.2.3/pharcc.phar'
-  sha1 'e57fb6cf2f2e630a64ab6fdb6c1ab0e9198a6aa1'
+  sha256 '9dee4f814aa04bd92a03b5f1aadbef80a567836d310319f4b2775673522fb959'
   version '0.2.3'
 
   depends_on PhpMetaRequirement
