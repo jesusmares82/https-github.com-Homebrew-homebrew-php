@@ -5,7 +5,7 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 class Foreman < Formula
   homepage 'https://github.com/Indatus/foreman'
   url 'https://github.com/Indatus/foreman/raw/v1.0.0/foreman.phar'
-  sha1 '787d7674f47faad1df9484bd106673c23827cf16'
+  sha256 'ec805e9b39dd520f6b4a368abe9ae9ad505f857617a2a1d72750e00b71d48bdd'
   version '1.0.0'
 
   depends_on PhpMetaRequirement
