@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Mosquitto < AbstractPhp54Extension
   init
   homepage 'https://github.com/mgdm/Mosquitto-PHP/'
-  url 'http://pecl.php.net/get/Mosquitto-0.2.2.tgz'
+  url 'https://pecl.php.net/get/Mosquitto-0.2.2.tgz'
   sha1 'b63a5816c89b617d95c0620743edb082a5b0382b'
   head 'https://github.com/mgdm/Mosquitto-PHP.git'
 

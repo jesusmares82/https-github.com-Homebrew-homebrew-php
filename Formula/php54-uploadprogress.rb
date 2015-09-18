@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Uploadprogress < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/uploadprogress'
-  url 'http://pecl.php.net/get/uploadprogress-1.0.3.1.tgz'
+  homepage 'https://pecl.php.net/package/uploadprogress'
+  url 'https://pecl.php.net/get/uploadprogress-1.0.3.1.tgz'
   sha1 '5fd50a1d5d3ee485e31e16d76b686873125e8dec'
   head 'https://svn.php.net/repository/pecl/uploadprogress/trunk/'
 

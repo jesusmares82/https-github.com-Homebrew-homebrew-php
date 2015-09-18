@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Sundown < AbstractPhp53Extension
   init
-  homepage 'http://pecl.php.net/package/sundown'
-  url 'http://pecl.php.net/get/sundown-0.3.11.tgz'
+  homepage 'https://pecl.php.net/package/sundown'
+  url 'https://pecl.php.net/get/sundown-0.3.11.tgz'
   sha1 'e905cf2cd3540480af598e971a3c37c769775351'
 
   def install

@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Binpack < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/binpack'
-  url 'http://pecl.php.net/get/binpack-1.0.1.tgz'
+  homepage 'https://pecl.php.net/package/binpack'
+  url 'https://pecl.php.net/get/binpack-1.0.1.tgz'
   sha1 '0b7c83681fe3ed9f8a3259e07f0904ba566d0c19'
   head 'http://binpack.liaohuqiu.net'
 

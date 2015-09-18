@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Wbxml < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/wbxml'
-  url 'http://pecl.php.net/get/wbxml-1.0.3.tgz'
+  homepage 'https://pecl.php.net/package/wbxml'
+  url 'https://pecl.php.net/get/wbxml-1.0.3.tgz'
   sha1 '2cf4705ad135a9695b3fc8e5e7135f6ad89623e6'
   head 'https://svn.php.net/repository/pecl/wbxml/trunk/'
 

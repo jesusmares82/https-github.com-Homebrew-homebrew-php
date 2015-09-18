@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Amqp < AbstractPhp53Extension
   init
-  homepage "http://pecl.php.net/package/amqp"
-  url "http://pecl.php.net/get/amqp-1.6.0beta3.tgz"
+  homepage "https://pecl.php.net/package/amqp"
+  url "https://pecl.php.net/get/amqp-1.6.0beta3.tgz"
   sha256 "4209dbd96355a0610b42a636621b0b2b34169ef64f8067197a1a5a78a5784ac7"
   version "1.6.0beta3"
   head "https://github.com/pdezwart/php-amqp.git"

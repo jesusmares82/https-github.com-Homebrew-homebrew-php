@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Mailparse < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/mailparse'
-  url 'http://pecl.php.net/get/mailparse-2.1.6.tgz'
+  homepage 'https://pecl.php.net/package/mailparse'
+  url 'https://pecl.php.net/get/mailparse-2.1.6.tgz'
   sha1 'f0deaa433a1f7833e80f80dabc1bbbdbe0071b3c'
   head 'https://svn.php.net/repository/pecl/mailparse/trunk'
 

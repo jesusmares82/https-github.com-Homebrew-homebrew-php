@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Dbus < AbstractPhp53Extension
   init
-  homepage 'http://pecl.php.net/package/dbus'
-  url 'http://pecl.php.net/get/dbus-0.1.1.tgz'
+  homepage 'https://pecl.php.net/package/dbus'
+  url 'https://pecl.php.net/get/dbus-0.1.1.tgz'
   sha256 '018ce17ceb18bd7085f7151596835b09603140865a49c76130b77e00bc7fcdd7'
   head 'http://svn.php.net/repository/pecl/dbus/trunk/'
 

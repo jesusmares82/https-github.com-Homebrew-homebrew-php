@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Uuid < AbstractPhp56Extension
   init
-  homepage 'http://pecl.php.net/package/uuid'
-  url 'http://pecl.php.net/get/uuid-1.0.3.tgz'
+  homepage 'https://pecl.php.net/package/uuid'
+  url 'https://pecl.php.net/get/uuid-1.0.3.tgz'
   sha1 'f51820a310ade0eb7200375486bf88d721d89f17'
   head 'https://svn.php.net/repository/pecl/uuid/trunk'
 

@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Swoole < AbstractPhp55Extension
   init
-  homepage "http://pecl.php.net/package/swoole"
-  url "http://pecl.php.net/get/swoole-1.7.17.tgz"
+  homepage "https://pecl.php.net/package/swoole"
+  url "https://pecl.php.net/get/swoole-1.7.17.tgz"
   sha256 "e4d3c2466aa1e1c99750ec5497445bde8ef775fd0b304d11016e6df363cc7ec0"
   head "https://github.com/swoole/swoole-src.git"
 

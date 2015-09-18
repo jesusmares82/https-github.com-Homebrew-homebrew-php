@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Zookeeper < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/zookeeper'
-  url 'http://pecl.php.net/get/zookeeper-0.2.2.tgz'
+  homepage 'https://pecl.php.net/package/zookeeper'
+  url 'https://pecl.php.net/get/zookeeper-0.2.2.tgz'
   sha1 '029c0d9c989c56c5afead8bb4621b7f2236a7b6f'
   head 'https://github.com/andreiz/php-zookeeper.git'
 

@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56SplTypes < AbstractPhp56Extension
   init
-  homepage 'http://pecl.php.net/package/SPL_Types'
-  url 'http://pecl.php.net/get/SPL_Types-0.4.0.tgz'
+  homepage 'https://pecl.php.net/package/SPL_Types'
+  url 'https://pecl.php.net/get/SPL_Types-0.4.0.tgz'
   sha1 '14c2ccd34c5f4fc98b5af4a62267bc7fd71c9546'
 
   def install

@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Varnish < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/varnish'
-  url 'http://pecl.php.net/get/varnish-1.1.1.tgz'
+  homepage 'https://pecl.php.net/package/varnish'
+  url 'https://pecl.php.net/get/varnish-1.1.1.tgz'
   sha1 'f05a556102a4e3e14e7714b86a1b69e7e5d5ffc2'
 
   def install

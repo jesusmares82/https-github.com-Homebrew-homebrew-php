@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Imagick < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/imagick'
-  url 'http://pecl.php.net/get/imagick-3.1.2.tgz'
+  homepage 'https://pecl.php.net/package/imagick'
+  url 'https://pecl.php.net/get/imagick-3.1.2.tgz'
   sha1 '7cee88bc8f6f178165c9d43e302d99cedfbb3dff'
   head 'https://svn.php.net/repository/pecl/imagick/trunk/'
   revision 1

@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Chdb < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/chdb'
-  url 'http://pecl.php.net/get/chdb-1.0.2.tgz'
+  homepage 'https://pecl.php.net/package/chdb'
+  url 'https://pecl.php.net/get/chdb-1.0.2.tgz'
   sha1 '476a6e84dd97c1ec24538edef9e3ba145256346e'
   head 'https://github.com/lcastelli/chdb', :using => :git
 

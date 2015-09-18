@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Apcu < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/apcu'
-  url 'http://pecl.php.net/get/apcu-4.0.7.tgz'
+  homepage 'https://pecl.php.net/package/apcu'
+  url 'https://pecl.php.net/get/apcu-4.0.7.tgz'
   sha1 '84d68cbafea61df1ff864c7a3e8d2302a2879347'
   head 'https://github.com/krakjoe/apcu.git'
 

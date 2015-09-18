@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Http < AbstractPhp54Extension
   init
-  homepage "http://pecl.php.net/package/pecl_http"
-  url "http://pecl.php.net/get/pecl_http-2.4.3.tgz"
+  homepage "https://pecl.php.net/package/pecl_http"
+  url "https://pecl.php.net/get/pecl_http-2.4.3.tgz"
   sha256 "2d9f3713331cf35b4a0162bd8b294683a67fecb5223e50978661acccd30c6c39"
 
   head "https://git.php.net/repository/pecl/http/pecl_http.git"

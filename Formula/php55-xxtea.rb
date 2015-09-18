@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Xxtea < AbstractPhp55Extension
   init
-  homepage "http://pecl.php.net/package/xxtea"
-  url "http://pecl.php.net/get/xxtea-1.0.10.tgz"
+  homepage "https://pecl.php.net/package/xxtea"
+  url "https://pecl.php.net/get/xxtea-1.0.10.tgz"
   sha256 "2735d2bc28c3ecdaa12491252f71c357c25c461d0a5802377218489807a801d8"
   head "https://github.com/xxtea/xxtea-pecl.git"
 

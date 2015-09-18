@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php53Riak < AbstractPhp53Extension
   init
   homepage 'http://phpriak.bachpedersen.dk/'
-  url 'http://pecl.php.net/get/riak-1.2.0.tgz'
+  url 'https://pecl.php.net/get/riak-1.2.0.tgz'
   sha1 'c48afd6482df5bd3520505edead26104e65955d1'
   head 'https://github.com/TriKaspar/php_riak.git'
 

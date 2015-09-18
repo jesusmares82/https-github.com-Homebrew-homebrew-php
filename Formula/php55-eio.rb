@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Eio < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/eio'
-  url 'http://pecl.php.net/get/eio-1.2.5.tgz'
+  homepage 'https://pecl.php.net/package/eio'
+  url 'https://pecl.php.net/get/eio-1.2.5.tgz'
   sha1 'a362e72fd7c7fb3317761c6c0920c438127fdfbf'
   head 'https://bitbucket.org/osmanov/pecl-eio.git'
 

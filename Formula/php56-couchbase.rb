@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Couchbase < AbstractPhp56Extension
   init
-  homepage "http://pecl.php.net/package/couchbase"
+  homepage "https://pecl.php.net/package/couchbase"
   desc "Provides fast access to documents stored in a Couchbase Server."
-  url "http://pecl.php.net/get/couchbase-2.0.7.tgz"
+  url "https://pecl.php.net/get/couchbase-2.0.7.tgz"
   sha256 "0482757d6b29ec5b9c957b053203a75410ced519f2407e666f7ca5c180a66ff5"
   head "https://github.com/couchbaselabs/php-couchbase.git"
 

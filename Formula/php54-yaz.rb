@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Yaz < AbstractPhp54Extension
   init
   homepage 'http://www.indexdata.com/phpyaz'
-  url 'http://pecl.php.net/get/yaz-1.1.6.tgz'
+  url 'https://pecl.php.net/get/yaz-1.1.6.tgz'
   sha1 '6add3d6dda5a676cdf74378ab968fd64e348c91f'
 
   depends_on "yaz"

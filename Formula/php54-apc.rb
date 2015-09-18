@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Apc < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/apc'
-  url 'http://pecl.php.net/get/APC-3.1.13.tgz'
+  homepage 'https://pecl.php.net/package/apc'
+  url 'https://pecl.php.net/get/APC-3.1.13.tgz'
   sha1 'cafd6ba92ac1c9f500a6c1e300bbe8819daddfae'
   head 'https://svn.php.net/repository/pecl/apc/trunk/'
 

@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Leveldb < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/leveldb'
-  url 'http://pecl.php.net/get/leveldb-0.1.4.tgz'
+  homepage 'https://pecl.php.net/package/leveldb'
+  url 'https://pecl.php.net/get/leveldb-0.1.4.tgz'
   sha1 '9a15fb0105516533c38de32dc2a1164f9620e046'
   head 'https://github.com/reeze/php-leveldb.git'
 

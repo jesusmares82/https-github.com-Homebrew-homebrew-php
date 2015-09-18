@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Event < AbstractPhp55Extension
   init
-  homepage 'http://pecl.php.net/package/event'
-  url 'http://pecl.php.net/get/event-1.10.3.tgz'
+  homepage 'https://pecl.php.net/package/event'
+  url 'https://pecl.php.net/get/event-1.10.3.tgz'
   sha1 '0d8881b0b157493d399fed9211bc242f1b416245'
   head 'https://bitbucket.org/osmanov/pecl-event.git'
 

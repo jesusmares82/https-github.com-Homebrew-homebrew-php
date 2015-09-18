@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Stats < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/stats'
-  url 'http://pecl.php.net/get/stats-1.0.3.tgz'
+  homepage 'https://pecl.php.net/package/stats'
+  url 'https://pecl.php.net/get/stats-1.0.3.tgz'
   sha1 'eb0c805ee51bf363d4376ed5281bbefeea408574'
   head 'https://svn.php.net/repository/pecl/stats/trunk/'
 

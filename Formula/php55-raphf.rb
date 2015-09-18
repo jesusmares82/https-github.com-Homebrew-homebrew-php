@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Raphf < AbstractPhp55Extension
   init
-  homepage "http://pecl.php.net/package/raphf"
-  url "http://pecl.php.net/get/raphf-1.0.4.tgz"
+  homepage "https://pecl.php.net/package/raphf"
+  url "https://pecl.php.net/get/raphf-1.0.4.tgz"
   sha256 "461be283e89d94186a3ed4651b92c7c1a067bad7b6476d0ca7ac8863dc1ed8bf"
 
   bottle do

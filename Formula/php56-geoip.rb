@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Geoip < AbstractPhp56Extension
   init
-  homepage 'http://pecl.php.net/package/geoip'
-  url 'http://pecl.php.net/get/geoip-1.1.0.tgz'
+  homepage 'https://pecl.php.net/package/geoip'
+  url 'https://pecl.php.net/get/geoip-1.1.0.tgz'
   sha1 '72475f10cb3549eac7d790ab6ae1869f89c6dae0'
   head 'https://svn.php.net/repository/pecl/geoip/trunk/'
 

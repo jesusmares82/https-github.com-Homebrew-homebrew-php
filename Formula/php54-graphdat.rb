@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Graphdat < AbstractPhp54Extension
   init
   homepage 'http://www.graphdat.com/'
-  url 'http://pecl.php.net/get/graphdat-1.0.3.tgz'
+  url 'https://pecl.php.net/get/graphdat-1.0.3.tgz'
   sha1 'b49779825c37ccedeefbd7085aa5a8d7c89c6d52'
   head 'https://github.com/alphashack/graphdat-sdk-php.git'
 

@@ -2,8 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Ev < AbstractPhp54Extension
   init
-  homepage 'http://pecl.php.net/package/ev'
-  url 'http://pecl.php.net/get/ev-0.2.10.tgz'
+  homepage 'https://pecl.php.net/package/ev'
+  url 'https://pecl.php.net/get/ev-0.2.10.tgz'
   sha1 'c096e13752cd919a5af8d300f71134492eae8e01'
   head 'https://bitbucket.org/osmanov/pecl-ev.git'
 
