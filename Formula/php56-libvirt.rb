@@ -4,7 +4,7 @@ class Php56Libvirt < AbstractPhp56Extension
   init
   homepage 'http://libvirt.org/php'
   url 'http://libvirt.org/sources/php/libvirt-php-0.4.8.tar.gz'
-  sha1 '933c20e70f83107d056528b8c665a024da9bc7a4'
+  sha256 '75508ab420c45fface8cdd8328053eee2207f8ff2aab572627ba8f30aacaef35'
 
   depends_on 'pkg-config' => :build
   depends_on 'libvirt'
