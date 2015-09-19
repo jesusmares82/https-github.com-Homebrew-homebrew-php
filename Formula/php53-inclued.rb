@@ -4,7 +4,7 @@ class Php53Inclued < AbstractPhp53Extension
   init
   homepage 'https://pecl.php.net/package/inclued'
   url 'https://pecl.php.net/get/inclued-0.1.3.tgz'
-  sha1 '3967cfa654a9bd7f0a793700030c5d28b744d48d'
+  sha256 '89d7324b164b739b53d5290c7ec99d8e05522e76db0885bda4b4a693113b4a28'
   head 'https://svn.php.net/repository/pecl/inclued/trunk'
 
   def install
