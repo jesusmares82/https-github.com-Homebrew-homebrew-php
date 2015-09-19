@@ -7,6 +7,11 @@ class Php56Gearman < AbstractPhp56Extension
   sha256 'c30a68145b4e33f4da929267f7b5296376ca81d76dd801fc77a261696a8a5965'
   head 'https://svn.php.net/repository/pecl/gearman/trunk/'
 
+  bottle do
+    sha256 "9e349af83966feff2015b7e792f0a09370cf92955f4af78fb3aaa952c2dbd6fd" => :yosemite
+    sha256 "e32196a1e2b0e147e6b5d368c86ba6622b1444b9acd043a2eb5c0f300f7a370f" => :mavericks
+  end
+
   depends_on 'gearman'
 
   def install
