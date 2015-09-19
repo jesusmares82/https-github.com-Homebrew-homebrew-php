@@ -2,9 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Varnish < AbstractPhp53Extension
   init
-  homepage 'https://pecl.php.net/package/varnish'
-  url 'https://pecl.php.net/get/varnish-1.1.1.tgz'
-  sha1 'f05a556102a4e3e14e7714b86a1b69e7e5d5ffc2'
+  desc "Varnish Cache bindings"
+  homepage "https://pecl.php.net/package/varnish"
+  url "https://pecl.php.net/get/varnish-1.2.1.tgz"
+  sha256 "13d2a4b63197d66854850c5aef50353d87ce3ed95798ba179fb59e289030183a"
+
+  depends_on "varnish"
 
   def install
     Dir.chdir "varnish-#{version}"
@@ -12,8 +15,13 @@ class Php53Varnish < AbstractPhp53Extension
     ENV.universal_binary if build.universal?
 
     safe_phpize
-    system "./configure", "--prefix=#{prefix}",
-                          phpconfig
+
+    args = []
+    args << "--with-varnish=#{Formula["varnish"].opt_prefix}"
+    args << "--prefix=#{prefix}"
+    args << phpconfig
+
+    system "./configure", *args
     system "make"
     prefix.install "modules/varnish.so"
     write_config_file if build.with? "config-file"
