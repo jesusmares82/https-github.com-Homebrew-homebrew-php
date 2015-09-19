@@ -7,6 +7,11 @@ class Php56Ev < AbstractPhp56Extension
   sha256 'a71757b452fdf66bbb50ac8c5e28c55ab1412f6436958e77888269552d2fd6a3'
   head 'https://bitbucket.org/osmanov/pecl-ev.git'
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "4ffac8ecfeae66dddd9a8405bcaeffa050bad7df1a49c362c219b30a15a8dc19" => :mavericks
+  end
+
   depends_on 'libev'
 
   def install
