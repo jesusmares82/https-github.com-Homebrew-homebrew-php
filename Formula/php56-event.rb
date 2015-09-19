@@ -4,7 +4,7 @@ class Php56Event < AbstractPhp56Extension
   init
   homepage 'https://pecl.php.net/package/event'
   url 'https://pecl.php.net/get/event-1.10.3.tgz'
-  sha1 '0d8881b0b157493d399fed9211bc242f1b416245'
+  sha256 'f1955c7f470829024e2f816a2a4c5201bbef3c673e49e7d25a24e248011225be'
   head 'https://bitbucket.org/osmanov/pecl-event.git'
 
   depends_on 'libevent' => :build
