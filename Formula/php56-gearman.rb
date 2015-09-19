@@ -4,7 +4,7 @@ class Php56Gearman < AbstractPhp56Extension
   init
   homepage 'https://pecl.php.net/package/gearman'
   url 'https://pecl.php.net/get/gearman-1.1.2.tgz'
-  sha1 '4b4d92b0dec9aabf8cd1ed6eba1f0cf8414117c9'
+  sha256 'c30a68145b4e33f4da929267f7b5296376ca81d76dd801fc77a261696a8a5965'
   head 'https://svn.php.net/repository/pecl/gearman/trunk/'
 
   depends_on 'gearman'
