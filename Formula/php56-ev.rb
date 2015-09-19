@@ -4,7 +4,7 @@ class Php56Ev < AbstractPhp56Extension
   init
   homepage 'https://pecl.php.net/package/ev'
   url 'https://pecl.php.net/get/ev-0.2.10.tgz'
-  sha1 'c096e13752cd919a5af8d300f71134492eae8e01'
+  sha256 'a71757b452fdf66bbb50ac8c5e28c55ab1412f6436958e77888269552d2fd6a3'
   head 'https://bitbucket.org/osmanov/pecl-ev.git'
 
   depends_on 'libev'
