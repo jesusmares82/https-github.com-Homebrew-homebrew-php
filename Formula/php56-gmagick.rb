@@ -4,7 +4,7 @@ class Php56Gmagick < AbstractPhp56Extension
   init
   homepage 'https://pecl.php.net/package/gmagick'
   url 'https://pecl.php.net/get/gmagick-1.1.7RC2.tgz'
-  sha1 'c8eaf11c9e963854b1690d70971670dece6eec42'
+  sha256 '8e51c8343d6e6d556d7b17417ce338c6ed2b0893869f1494410dfe6ba5105475'
 
   depends_on "graphicsmagick"
 
