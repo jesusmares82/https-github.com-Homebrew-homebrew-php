@@ -5,7 +5,7 @@ class Php56Protobuf < AbstractPhp56Extension
   homepage 'https://github.com/allegro/php-protobuf'
   head 'https://github.com/allegro/php-protobuf.git'
   url 'https://github.com/allegro/php-protobuf/archive/5839c25f1472736637e8c0484e542135f5636146.tar.gz'
-  sha1 'dd3285c539391334b8d9fa7cc28d580aac6bf242'
+  sha256 'df0ab827f6a522f0a09c6fbde6bae1d9c210ba82af4295f19f43c4ca096c1ca0'
   version '5839c25'
 
   def install
