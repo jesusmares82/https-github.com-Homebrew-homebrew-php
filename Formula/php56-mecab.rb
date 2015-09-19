@@ -4,7 +4,7 @@ class Php56Mecab < AbstractPhp56Extension
   init
   homepage 'https://github.com/rsky/php-mecab'
   url 'https://github.com/downloads/rsky/php-mecab/php-mecab-0.5.0.tgz'
-  sha1 '3f451e67f736b8d4a8b494cb0333cfbb5fa4a274'
+  sha256 'e5c84a8ffa39a8a0dd60424b879806382ec0f66d50007f6bfad6831074b3bcc5'
   head 'https://github.com/rsky/php-mecab.git'
 
   depends_on "mecab"
