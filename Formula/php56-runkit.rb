@@ -8,6 +8,13 @@ class Php56Runkit < AbstractPhp56Extension
   head 'https://github.com/zenovich/runkit.git'
   version '5e179e9'
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c0d7a13f1360dad822c5d5aa35dcc2bd384276e1781052a01561a47b5a8f22f7" => :el_capitan
+    sha256 "db3102c6fff1cf573e36ee4fb8f4a384262f8f5da2a414a927b89a0446fb9be6" => :yosemite
+    sha256 "ef74b266d44436d66f0d064eb06be8f74c34176c7244c205301d4722a027a290" => :mavericks
+  end
+
   patch do
     url "https://github.com/zenovich/runkit/pull/71.diff"
     sha1 "c5ede24d0200d728e73ba19d3d22df1b496d0fc7"
