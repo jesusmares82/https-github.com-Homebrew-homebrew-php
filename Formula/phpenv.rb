@@ -6,6 +6,13 @@ class Phpenv < Formula
   sha256 "0e0c89fc1f42fe27848446f974348f2a0f6eda7d93f8ea72cc17920fa26f4b92"
   head "https://github.com/CHH/phpenv.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6b0bc1a2165e61f7a61a67288317e289cd71e317771770a77cd0552c9c1dc063" => :el_capitan
+    sha256 "e4725e2f6e9523250de63e018a57abcffb6ec3abcd429b91fbc4f8eec33ae0d8" => :yosemite
+    sha256 "0520ecbd7e356ae3c3c2337501a02b8d685656906588971ee4c66a05a7a44798" => :mavericks
+  end
+
   option "without-install", "Do not run phpenv-install.sh"
 
   def install
