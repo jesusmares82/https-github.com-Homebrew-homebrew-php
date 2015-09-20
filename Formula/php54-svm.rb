@@ -8,6 +8,13 @@ class Php54Svm < AbstractPhp54Extension
   sha256 "c3dabf7220766193fcb87514559e89c1a9ec0017f510fc58cb98b3ac52819734"
   head "https://github.com/ianbarber/php-svm.git"
 
+  bottle do
+    cellar :any
+    sha256 "c079d2787028aa4b469d1bbf9b3bef7e9394c64406cb052a0db1d53ab1828f01" => :el_capitan
+    sha256 "6579c189db2865acfca64186e9d8401e690ea886593155d7079515446692eb18" => :yosemite
+    sha256 "8dd2d44c60e733b7bdda485f7810c577f9560d68d5097fb20a3af183fc07eef3" => :mavericks
+  end
+
   depends_on "libsvm"
 
   def install
