@@ -9,6 +9,9 @@ class Php54Event < AbstractPhp54Extension
   head "https://bitbucket.org/osmanov/pecl-event.git"
 
   bottle do
+    sha256 "f23e58094a8466d7ca281d5c5412a4d41ddc9b92c782eb036b8568ba51bd8e82" => :el_capitan
+    sha256 "08b571408fedc69ae4b1725fe05f4c9f4799b7ec734e8666bd3979f86d1b4b5b" => :yosemite
+    sha256 "8517406a6307040ac9f4a1d99b09abba327bb0478d5625b25bf0c24a06da9422" => :mavericks
   end
 
   depends_on "libevent"
