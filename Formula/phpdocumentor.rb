@@ -1,12 +1,12 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpdocumentor < Formula
-  homepage 'http://www.phpdoc.org'
-  url 'https://github.com/phpDocumentor/phpDocumentor2/releases/download/v2.8.5/phpDocumentor.phar'
-  sha1 'ffc6815c17bfb8b091b0cf5b1093a4d4c9e96f61'
-  version '2.8.5'
+  desc "Documentation Generator for PHP"
+  homepage "http://www.phpdoc.org"
+  url "https://github.com/phpDocumentor/phpDocumentor2/releases/download/v2.8.5/phpDocumentor.phar"
+  version "2.8.5"
+  sha256 "7613a3d6ffc182595b7423bc2373cd215cac269135f4b0f973e5c1b617b565b7"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
@@ -28,4 +28,7 @@ class Phpdocumentor < Formula
     EOS
   end
 
+  test do
+    system "phpdoc", "--version"
+  end
 end

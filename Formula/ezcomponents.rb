@@ -1,9 +1,8 @@
-require 'formula'
-
 class Ezcomponents < Formula
-  url 'http://ezcomponents.org/files/downloads/ezcomponents-2009.2.1-lite.tar.bz2'
-  homepage 'http://ezcomponents.org'
-  sha256 'c7a4933dc8b100711c99cc2cc842da6448da35a4a95e8874342a92c79b8f8721'
+  desc "general purpose PHP components library"
+  homepage "http://ezcomponents.org"
+  url "http://ezcomponents.org/files/downloads/ezcomponents-2009.2.1-lite.tar.bz2"
+  sha256 "c7a4933dc8b100711c99cc2cc842da6448da35a4a95e8874342a92c79b8f8721"
 
   bottle do
     cellar :any_skip_relocation
@@ -13,7 +12,7 @@ class Ezcomponents < Formula
   end
 
   def install
-    (lib+'ezc').install Dir['*']
+    (lib+"ezc").install Dir["*"]
   end
 
   def caveats; <<-EOS.undent
@@ -22,4 +21,7 @@ class Ezcomponents < Formula
     EOS
   end
 
+  test do
+    assert File.exist?("#{lib}/ezc/LICENSE")
+  end
 end

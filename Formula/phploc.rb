@@ -1,11 +1,11 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phploc < Formula
-  homepage 'https://github.com/sebastianbergmann/phploc'
-  url 'https://phar.phpunit.de/phploc-2.0.2.phar'
-  sha1 'e05183e34512dc62d3d79f1760d1927beeab1167'
+  desc "Tool for quickly measuring the size of a PHP project"
+  homepage "https://github.com/sebastianbergmann/phploc"
+  url "https://phar.phpunit.de/phploc-2.0.2.phar"
+  sha256 "0ce805f48d778c49ae78af0b08a16efd2eba01ff31aa59e5374fad27e93c5558"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
@@ -18,10 +18,6 @@ class Phploc < Formula
     bin.install_symlink sh
   end
 
-  test do
-    system 'phploc --version'
-  end
-
   def caveats; <<-EOS.undent
     Verify your installation by running:
       "phploc --version".
@@ -29,5 +25,9 @@ class Phploc < Formula
     You can read more about phploc by running:
       "brew home phploc".
     EOS
+  end
+
+  test do
+    system "phploc", "--version"
   end
 end

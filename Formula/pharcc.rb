@@ -1,12 +1,12 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Pharcc < Formula
-  homepage 'https://github.com/cbednarski/pharcc'
-  url 'https://github.com/cbednarski/pharcc/releases/download/v0.2.3/pharcc.phar'
-  sha256 '9dee4f814aa04bd92a03b5f1aadbef80a567836d310319f4b2775673522fb959'
-  version '0.2.3'
+  desc "tool that converts your php project into a .phar file"
+  homepage "https://github.com/cbednarski/pharcc"
+  url "https://github.com/cbednarski/pharcc/releases/download/v0.2.3/pharcc.phar"
+  version "0.2.3"
+  sha256 "9dee4f814aa04bd92a03b5f1aadbef80a567836d310319f4b2775673522fb959"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement
@@ -20,6 +20,6 @@ class Pharcc < Formula
   end
 
   test do
-    system 'pharcc --version'
+    system "pharcc", "--version"
   end
 end

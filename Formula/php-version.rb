@@ -1,16 +1,15 @@
-require 'formula'
-
 class PhpVersion < Formula
-  homepage  'https://github.com/wilmoore/php-version#simple-php-version-switching'
-  url       'https://github.com/wilmoore/php-version/archive/0.12.0.tar.gz'
-  sha1      '5398407b97fff2fb898fa66a197de2fe3383ca9a'
-  head      'https://github.com/wilmoore/php-version.git'
+  desc "stupid simple PHP version management"
+  homepage "https://github.com/wilmoore/php-version#simple-php-version-switching"
+  url "https://github.com/wilmoore/php-version/archive/0.12.0.tar.gz"
+  sha256 "6f432d836394fecfedcf1db926fa540a4be542feea1ddf56e78d38b1a8ab8798"
+  head "https://github.com/wilmoore/php-version.git"
 
   def install
-    prefix.install Dir['*']
+    prefix.install Dir["*"]
   end
 
-  def caveats;
+  def caveats
     <<-EOS.undent
       Add the following to $HOME/.bashrc, $HOME/.zshrc, or your shell's equivalent configuration file:
 
@@ -23,5 +22,9 @@ class PhpVersion < Formula
 
       Type `php-version --help` for more configuration options.
     EOS
+  end
+
+  test do
+    assert File.exist?("#{prefix}/php-version.sh")
   end
 end

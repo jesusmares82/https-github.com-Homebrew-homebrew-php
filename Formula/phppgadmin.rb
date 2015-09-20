@@ -1,15 +1,15 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Phppgadmin < Formula
-  homepage 'http://phppgadmin.sourceforge.net/'
-  url 'https://downloads.sourceforge.net/project/phppgadmin/phpPgAdmin%20%5Bstable%5D/phpPgAdmin-5.1/phpPgAdmin-5.1.tar.gz'
-  sha1 'ef90fc9942c67ab95f063cacc43911a40d34fbc1'
+  desc "Web-based administration tool for PostgreSQL"
+  homepage "http://phppgadmin.sourceforge.net/"
+  url "https://downloads.sourceforge.net/project/phppgadmin/phpPgAdmin%20%5Bstable%5D/phpPgAdmin-5.1/phpPgAdmin-5.1.tar.gz"
+  sha256 "42294e7b19d3b4003912eaad9a34df4096c0380871aedce152aa13d4955878a5"
 
   depends_on PhpMetaRequirement
 
   def install
-    (share+'phppgadmin').install Dir['*']
+    (share+"phppgadmin").install Dir["*"]
   end
 
   def caveats; <<-EOS.undent
@@ -32,5 +32,9 @@ class Phppgadmin < Formula
 
     More documentation : http://phppgadmin.sourceforge.net/doku.php?id=faq_docs
     EOS
+  end
+
+  test do
+    assert File.exist?("#{HOMEBREW_PREFIX}/share/phppgadmin/conf/config.inc.php")
   end
 end

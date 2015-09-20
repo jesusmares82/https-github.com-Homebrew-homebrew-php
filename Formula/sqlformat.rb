@@ -1,12 +1,12 @@
-require 'formula'
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Sqlformat < Formula
-  homepage 'https://github.com/MattKetmo/sqlformat'
-  url 'https://github.com/MattKetmo/sqlformat/releases/download/v1.0.0/sqlformat.phar'
-  sha1 'a296e56160b23a48962cdb97a498c7f9574a23f7'
-  version '1.0.0'
+  desc "CLI adaptation of the SqlFormatter library"
+  homepage "https://github.com/MattKetmo/sqlformat"
+  url "https://github.com/MattKetmo/sqlformat/releases/download/v1.0.0/sqlformat.phar"
+  version "1.0.0"
+  sha256 "57eecf761142091424a96a651d537229edee686741f412c6b19201e3f3792914"
 
   depends_on PhpMetaRequirement
   depends_on PharRequirement

@@ -1,11 +1,10 @@
-require 'formula'
-
 class Phpsh < Formula
-  homepage 'http://www.phpsh.org/'
-  url 'https://github.com/facebook/phpsh/archive/1.3.tar.gz'
-  sha1 'cc5b28667514047b286b587f8f054495eef2c654'
+  desc "read-eval-print-loop for php"
+  homepage "http://www.phpsh.org/"
+  url "https://github.com/facebook/phpsh/archive/1.3.tar.gz"
+  sha256 "d3a24f3ebca0028d4ba226c3567407f7abc81d315577b0e0a4b67060630f129b"
 
-  depends_on 'pcre'
+  depends_on "pcre"
   depends_on :python
 
   # fixes https://github.com/facebook/phpsh/pull/46 and https://github.com/josegonzalez/homebrew-php/issues/966
@@ -14,9 +13,13 @@ class Phpsh < Formula
   def install
     system "python", "setup.py", "install", "--prefix=#{prefix}"
 
-    man1.install ['src/doc/phpsh.1']
+    man1.install ["src/doc/phpsh.1"]
     rm_rf("#{prefix}/man")
-    bin.install ['src/phpsh']
+    bin.install ["src/phpsh"]
+  end
+
+  test do
+    system "phpsh"
   end
 end
 
