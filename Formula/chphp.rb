@@ -7,9 +7,10 @@ class Chphp < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "68f364c4504e18aa0c1518a9e2ea50466727c72cd46d82a5533569e4c00629c6" => :el_capitan
-    sha256 "a9aec36aec4b8ed1bf58c4cb8c7800ceaf8c4a7249c2d5bb27cc038db479d07b" => :yosemite
-    sha256 "4b9858eb02d78c6cc4ad9e5d59a251a63cebfe39756d7f5ed46a2cb1a79b6989" => :mavericks
+    revision 1
+    sha256 "3d945c5a0fefa360dee8b1f0ea1cee95a4567b6c907f09c2cb0c77ab2e32c44c" => :el_capitan
+    sha256 "f5f5200009b9f4a6fa7ed20dfce3a232c98f0d8a338dc493cef6e047c1342c10" => :yosemite
+    sha256 "b25f0ab4c5ffb07b15c8bff165a2e6ad8869854b1e65a2d05e87aa8df2f1fffe" => :mavericks
   end
 
   def install
