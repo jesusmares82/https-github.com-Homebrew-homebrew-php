@@ -7,9 +7,10 @@ class PhpBuild < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5080f0dd4caac6cfd31ddc2264d9e3769d611c34d26866ec86023ddca7f34769" => :el_capitan
-    sha256 "71a56c627cf57bdd36f77645f2f3e50ff1460de1c079c131e746e39b83a56308" => :yosemite
-    sha256 "3f246c48f9163194997128d370ece7a25009da1eb345d2e8a80dc06397ee07d9" => :mavericks
+    revision 1
+    sha256 "4dfd489892f5e846fcaae4995396e19990f2d950afbc6552d432cbe56a590e42" => :el_capitan
+    sha256 "b250b4adcd147317bbfce32b0660cf9b64a35cac42a5df859b94f0dd8f322186" => :yosemite
+    sha256 "8fb4b8ad763a6292d934a02c35bda05737ed30df5dc1feebc4375f90c75dc2af" => :mavericks
   end
 
   depends_on "wget"
