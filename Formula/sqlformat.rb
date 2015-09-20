@@ -20,6 +20,6 @@ class Sqlformat < Formula
   end
 
   test do
-    system "sqlformat"
+    system "sqlformat", "--version"
   end
 end
