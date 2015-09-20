@@ -7,6 +7,11 @@ class Libsphinxclient < Formula
   head "http://sphinxsearch.googlecode.com/svn/trunk/"
 
   bottle do
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "a3f3c02f42e61e59267a347f428ca16da4fbcff71ee6103d4c6d14ae4212d945" => :el_capitan
+    sha256 "d8b289ba7618135d6ecf837134cbf42ca5d733fb9c3b1b4ad0e222327d1526c7" => :yosemite
+    sha256 "6a8d4c603d302b80ce36065c82b89d0600e5eb1751fbf2016ebf1c4828631683" => :mavericks
   end
 
   devel do
