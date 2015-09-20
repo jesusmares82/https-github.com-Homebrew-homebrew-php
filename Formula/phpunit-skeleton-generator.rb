@@ -16,6 +16,6 @@ class PhpunitSkeletonGenerator < Formula
   end
 
   test do
-    system "phpunit-skelgen"
+    system "phpunit-skelgen", "--version"
   end
 end
