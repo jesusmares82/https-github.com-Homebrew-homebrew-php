@@ -4,7 +4,7 @@ class Php56Scrypt < AbstractPhp56Extension
   init
   homepage 'https://github.com/DomBlack/php-scrypt'
   url 'https://github.com/DomBlack/php-scrypt/archive/v1.2.tar.gz'
-  sha1 '56d1d987b06cc54c2a360ca5a93b84e9f3f0c5c9'
+  sha256 '80de804217c5ed5dff189c82771d055a13e6abc64db35cbe6e29878cbc0eb827'
   head 'https://github.com/DomBlack/php-scrypt.git'
 
   def install
