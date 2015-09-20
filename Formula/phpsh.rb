@@ -4,6 +4,13 @@ class Phpsh < Formula
   url "https://github.com/facebook/phpsh/archive/1.3.tar.gz"
   sha256 "d3a24f3ebca0028d4ba226c3567407f7abc81d315577b0e0a4b67060630f129b"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c9cabc4cb82bfe70edd3e91cae62cc14fab70bb6edfe97f029af8cc2dcf2adb8" => :el_capitan
+    sha256 "6edb1396460e4077709213b32bb64ab7101f65461e367ad104bb1d246a2db8a2" => :yosemite
+    sha256 "c30f89f2fccb8b659f1448fb7078f1a3bdd8718bf62c854e809461c2abe26f74" => :mavericks
+  end
+
   depends_on "pcre"
   depends_on :python
 
