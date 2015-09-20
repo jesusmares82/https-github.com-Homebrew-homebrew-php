@@ -7,6 +7,13 @@ class Php56Timezonedb < AbstractPhp56Extension
   sha256 '76e1fba9ea263621810a220ffe280c8ca227a12fd497c9ce430537fbd13357a7'
   head 'https://svn.php.net/repository/pecl/timezonedb/trunk/'
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "abb8092823e98ee9753fbcd0c19d65fb1679683635c0b7b4ee14ba526d054750" => :el_capitan
+    sha256 "03a09630e3c5617fb9c59f20762f06efeec4564a72d3a1530ecafdcd351e3cf8" => :yosemite
+    sha256 "5646b920eb8f8b379b012fbf81711fbb95be69c654e5f9bbc63704896aff461b" => :mavericks
+  end
+
   def install
     Dir.chdir "timezonedb-#{version}" unless build.head?
 
