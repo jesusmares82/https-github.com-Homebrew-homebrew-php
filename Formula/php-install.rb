@@ -7,9 +7,10 @@ class PhpInstall < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "dd34d219e395f8b5915f9a576fdc2047faf4905ef75edc42976cf34d801c5d33" => :el_capitan
-    sha256 "f8b4eba89817efeb6a0f8d2392b92900fb383972911ce618a49565cd898d9ab8" => :yosemite
-    sha256 "2607de6bd672f4f264fa74d68ec65b2416c29f6e739664548ed049389783f207" => :mavericks
+    revision 1
+    sha256 "cec4ce33c201cca12f65b5ba80e5dbd0e83579124229d022966f6fa46a50e798" => :el_capitan
+    sha256 "5c6cc927d691a707d1d5810a3962a55eb3b581df41e314d6766b0a1d02e31570" => :yosemite
+    sha256 "c7b8fd35a0867175e1090a2690ca9ff613acc11665cb748d18bfa6940df4f0d7" => :mavericks
   end
 
   def install
