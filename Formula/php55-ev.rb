@@ -9,6 +9,10 @@ class Php55Ev < AbstractPhp55Extension
   head "https://bitbucket.org/osmanov/pecl-ev.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "3ca928c2fb301466a8d556883b0d3e7b180a437cd4da83263bc175514ea93c2e" => :el_capitan
+    sha256 "ca94e65f28b7aeb4778226ec6873b5566fe95784611c744b71d6e7352ac92fdb" => :yosemite
+    sha256 "7ff0b1e3e649e16173f25770bc77e31873261339a0043037b9f4efc545e8c41a" => :mavericks
   end
 
   depends_on "libev"
