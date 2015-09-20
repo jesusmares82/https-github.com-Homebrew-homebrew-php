@@ -7,6 +7,13 @@ class Php56Riak < AbstractPhp56Extension
   sha256 '696c1999bc08a054b81de3737a130db96abef9f9333b59d55c1bdbb2d50e0593'
   head 'https://github.com/TriKaspar/php_riak.git'
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "cec87a5f311acbffb661f5ba4606467f09a9af26bbfc8b3752f23da37482d463" => :el_capitan
+    sha256 "b1d7030b5ba9abefb022672f5e563f05c65a696e498dff87d8a40d15c9d4aa0b" => :yosemite
+    sha256 "504d20917a421824950138193c5447741976d82ff3c009da6c92c80c47a74d2f" => :mavericks
+  end
+
   option 'with-riak', 'Also install Riak locally'
 
   depends_on 'riak' => :optional
