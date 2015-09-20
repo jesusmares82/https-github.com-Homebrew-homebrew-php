@@ -9,6 +9,11 @@ class Php53Eio < AbstractPhp53Extension
   head "https://bitbucket.org/osmanov/pecl-eio.git"
 
   bottle do
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "f634abc8aebf160657c21d5c05b6b7bedb0af42b7ba71631f1fb8ed1a6b6265d" => :el_capitan
+    sha256 "6cc5cc71b2938851107c97d1cfc32722e1278a4fae2acfc569570419eebc9610" => :yosemite
+    sha256 "fd1c368b5908b75c63db4cc9dbff70ec52fbc0ec84576a895db53f307f07c667" => :mavericks
   end
 
   depends_on "libevent" => :build
