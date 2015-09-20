@@ -4,7 +4,7 @@ class Php56Tokyotyrant < AbstractPhp56Extension
   init
   homepage 'https://pecl.php.net/package/tokyo_tyrant'
   url 'https://pecl.php.net/get/tokyo_tyrant-0.7.0.tgz'
-  sha1 'a3ad6dd4aa59cc99a0da05563e7c5f94020975cc'
+  sha256 '38559ac381670b61600d4736803a016f9e75aee9ae608d3f6b46e79103022d28'
   head 'https://github.com/mkoppanen/php-tokyo_tyrant.git'
 
   depends_on 'pkg-config' => :build
