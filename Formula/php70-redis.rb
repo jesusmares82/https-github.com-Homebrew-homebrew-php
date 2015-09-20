@@ -11,9 +11,9 @@ class Php70Redis < AbstractPhp70Extension
 
     system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
-    
+
     prefix.install "modules/redis.so"
-    
+
     write_config_file if build.with? "config-file"
   end
 
