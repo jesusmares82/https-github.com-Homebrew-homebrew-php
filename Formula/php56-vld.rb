@@ -4,7 +4,7 @@ class Php56Vld < AbstractPhp56Extension
   init
   homepage 'https://pecl.php.net/package/vld'
   url 'https://pecl.php.net/get/vld-0.13.0.tgz'
-  sha1 '19936e64c29339d1a5cf48fc18ef762fbd8a8a1a'
+  sha256 'f61fe6501b6f30cf5628b7fd0e2c41185bb9bfac96b765c8b967a8ba01f7bf8b'
   head 'https://github.com/derickr/vld.git'
 
   def install
