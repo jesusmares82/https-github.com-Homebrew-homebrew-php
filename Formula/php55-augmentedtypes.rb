@@ -7,6 +7,14 @@ class Php55Augmentedtypes < AbstractPhp55Extension
   sha256 "54b295f902e56daf1347b1e1f7d633a84c3e03aacac78424e6314adfd922e4db"
   head "https://github.com/box/augmented_types.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "1cedb1a0155aaf9fd6f3008cf919c5b3e7a514d6ca02a4a961ff1be70204c270" => :el_capitan
+    sha256 "c4f67acb354a9604270477317f6b21145c374352f9236181c51c17577597347f" => :yosemite
+    sha256 "f5ccc28075406266644f4aad3c0e9f594f00a8ac1e6825ef9f7dbae6ab0d5f94" => :mavericks
+  end
+
   option "without-default-enforcement", "Turn off Augmented Types enforcement by default"
 
   def extension_type
