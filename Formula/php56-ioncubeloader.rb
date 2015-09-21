@@ -14,6 +14,10 @@ class Php56Ioncubeloader < AbstractPhp56Extension
   version "5.0.17"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "6ece524308f733d7192a0bbe2882300bceaef8a86c87b0ebac8092ab3f95eefc" => :el_capitan
+    sha256 "b78c50912308ede83ce9a7bfe0365792279603aa0b93fc371079d7f36c6485f3" => :yosemite
+    sha256 "aa4f9810644c7c252a6b5ecceaa8f758fcf220fc6d6785b1118d79e95f7505de" => :mavericks
   end
 
   def extension_type
