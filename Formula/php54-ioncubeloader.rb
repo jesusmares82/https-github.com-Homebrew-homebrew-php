@@ -2,18 +2,18 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Ioncubeloader < AbstractPhp54Extension
   init
+  desc "Loader for ionCube Secured Files"
   homepage "http://www.ioncube.com/loaders.php"
   if MacOS.prefer_64_bit?
     url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz"
+    sha256 "fca36c0c00d640d3fa45d3862c68dcc5b3d33afffbc5c902bdc9725df2d1e035"
   else
     url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz"
+    sha256 "9a3cd4ddad2dad23aa87e49a28ea1fa98878d11a5e7bbfa04fc4d1da6874b4c1"
   end
-  version "4.7.5"
+  version "5.0.17"
 
   bottle do
-    sha1 "0b98bf9f06ed18ba2ed732ef6b5754c208dbe68a" => :yosemite
-    sha1 "2ba11dbf011cba849cb1a502dcffc748f40ef396" => :mavericks
-    sha1 "e1b6b6c88e40cb01dcec63fe8216183d8d1a401b" => :mountain_lion
   end
 
   def extension_type
