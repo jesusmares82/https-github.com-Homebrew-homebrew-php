@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Pspell < AbstractPhp53Extension
   init
-  homepage 'http://php.net/manual/en/book.pspell.php'
+  homepage "http://php.net/manual/en/book.pspell.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  depends_on 'aspell'
+  depends_on "aspell"
 
   def install
     Dir.chdir "ext/pspell"
@@ -18,7 +18,7 @@ class Php53Pspell < AbstractPhp53Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--disable-debug",
-                          "--with-pspell=#{Formula['aspell'].opt_prefix}"
+                          "--with-pspell=#{Formula["aspell"].opt_prefix}"
     system "make"
     prefix.install "modules/pspell.so"
     write_config_file if build.with? "config-file"

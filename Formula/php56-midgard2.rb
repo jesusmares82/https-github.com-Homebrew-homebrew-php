@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Midgard2 < AbstractPhp56Extension
   init
-  homepage 'http://www.midgard-project.org'
-  url 'https://github.com/midgardproject/midgard-php5/archive/12.09.1.tar.gz'
-  sha256 '633ed2dce0c43222c13b2be1d2d044343f37e69cbdf727abc78ac53b6d871fe3'
-  head 'https://github.com/midgardproject/midgard-php5.git', :branch => 'ratatoskr'
+  homepage "http://www.midgard-project.org"
+  url "https://github.com/midgardproject/midgard-php5/archive/12.09.1.tar.gz"
+  sha256 "633ed2dce0c43222c13b2be1d2d044343f37e69cbdf727abc78ac53b6d871fe3"
+  head "https://github.com/midgardproject/midgard-php5.git", :branch => "ratatoskr"
 
   bottle do
     sha256 "b5fdfda206abcddce54e2d719c980d875b7ce049d89f11514d4f2fa3b1901c39" => :el_capitan
@@ -13,8 +13,8 @@ class Php56Midgard2 < AbstractPhp56Extension
     sha256 "0b9c1c7850806c8bf437bc8e5f5ca390395c0eba4e753331929c52441a321c06" => :mavericks
   end
 
-  depends_on 'pkg-config' => :build
-  depends_on 'midgard2'
+  depends_on "pkg-config" => :build
+  depends_on "midgard2"
 
   def install
     ENV.universal_binary if build.universal?

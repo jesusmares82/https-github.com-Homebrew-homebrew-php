@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Opcache < AbstractPhp55Extension
   init
   homepage "http://php.net/manual/en/book.opcache.php"
-  url      PHP_SRC_TARBALL
-  sha256   PHP_CHECKSUM[:sha256]
-  version  PHP_VERSION
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
 
   bottle do
     cellar :any
@@ -216,4 +216,3 @@ class Php55Opcache < AbstractPhp55Extension
     EOS
   end
 end
-

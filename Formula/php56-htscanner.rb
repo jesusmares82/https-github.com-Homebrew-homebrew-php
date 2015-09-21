@@ -2,11 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Htscanner < AbstractPhp56Extension
   init
-  homepage 'https://github.com/piannelli/htscanner-enhanced'
-  url 'https://github.com/piannelli/htscanner-enhanced/archive/b62ad43105758fe9f513a0730c3bbef0dfd2ee37.tar.gz'
-  sha256 'b014dafb36313c67f88b961799b9841e816de1fd3dc66bbf2ce5964c40f4e221'
-  version 'b62ad431'
-  head 'https://github.com/piannelli/htscanner-enhanced.git'
+  homepage "https://github.com/piannelli/htscanner-enhanced"
+  url "https://github.com/piannelli/htscanner-enhanced/archive/b62ad43105758fe9f513a0730c3bbef0dfd2ee37.tar.gz"
+  sha256 "b014dafb36313c67f88b961799b9841e816de1fd3dc66bbf2ce5964c40f4e221"
+  version "b62ad431"
+  head "https://github.com/piannelli/htscanner-enhanced.git"
 
   bottle do
     cellar :any_skip_relocation

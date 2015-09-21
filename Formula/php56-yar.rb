@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Yar < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/yar'
-  url 'https://pecl.php.net/get/yar-1.2.3.tgz'
-  sha256 '8f39e6174476e2eae6021f83b69bcf77ee22949654a43c9985dde1a3c7bcf66e'
+  homepage "https://pecl.php.net/package/yar"
+  url "https://pecl.php.net/get/yar-1.2.3.tgz"
+  sha256 "8f39e6174476e2eae6021f83b69bcf77ee22949654a43c9985dde1a3c7bcf66e"
 
   bottle do
     cellar :any_skip_relocation

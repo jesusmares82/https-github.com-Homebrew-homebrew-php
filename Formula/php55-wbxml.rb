@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Wbxml < AbstractPhp55Extension
   init
-  homepage 'https://pecl.php.net/package/wbxml'
-  url 'https://pecl.php.net/get/wbxml-1.0.3.tgz'
-  sha1 '2cf4705ad135a9695b3fc8e5e7135f6ad89623e6'
-  head 'https://svn.php.net/repository/pecl/wbxml/trunk/'
+  homepage "https://pecl.php.net/package/wbxml"
+  url "https://pecl.php.net/get/wbxml-1.0.3.tgz"
+  sha1 "2cf4705ad135a9695b3fc8e5e7135f6ad89623e6"
+  head "https://svn.php.net/repository/pecl/wbxml/trunk/"
 
-  depends_on 'libwbxml'
+  depends_on "libwbxml"
 
   # php-wbxml looks for the libwbxml headers in the wrong location
   patch :DATA
@@ -20,7 +20,7 @@ class Php55Wbxml < AbstractPhp55Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-wbxml=#{Formula['libwbxml'].opt_prefix}"
+                          "--with-wbxml=#{Formula["libwbxml"].opt_prefix}"
     system "make"
     prefix.install "modules/wbxml.so"
     write_config_file if build.with? "config-file"

@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Crypto < AbstractPhp55Extension
   init
-  homepage 'https://pecl.php.net/package/crypto'
-  url 'https://pecl.php.net/get/crypto-0.1.1.tgz'
-  sha1 '518454c7898d5ba33713a7a8cf2cb2f6acf68824'
-  head 'https://github.com/bukka/php-crypto.git'
+  homepage "https://pecl.php.net/package/crypto"
+  url "https://pecl.php.net/get/crypto-0.1.1.tgz"
+  sha1 "518454c7898d5ba33713a7a8cf2cb2f6acf68824"
+  head "https://github.com/bukka/php-crypto.git"
 
   def install
     Dir.chdir "crypto-#{version}" unless build.head?

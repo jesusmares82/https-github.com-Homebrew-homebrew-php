@@ -12,19 +12,19 @@ class PhpCsFixer < Formula
   depends_on PharRequirement
   depends_on PharBuildingRequirement
   depends_on "composer"
-  depends_on "php53" if Formula['php53'].linked_keg.exist?
-  depends_on "php54" if Formula['php54'].linked_keg.exist?
-  depends_on "php55" if Formula['php55'].linked_keg.exist?
-  depends_on "php56" if Formula['php56'].linked_keg.exist?
-  depends_on "php70" if Formula['php70'].linked_keg.exist?
+  depends_on "php53" if Formula["php53"].linked_keg.exist?
+  depends_on "php54" if Formula["php54"].linked_keg.exist?
+  depends_on "php55" if Formula["php55"].linked_keg.exist?
+  depends_on "php56" if Formula["php56"].linked_keg.exist?
+  depends_on "php70" if Formula["php70"].linked_keg.exist?
 
   def install
-    File.open("genphar.php", "w") {|f| f.write(phar_stub) }
+    File.open("genphar.php", "w") { |f| f.write(phar_stub) }
 
     [
       "mkdir -p src",
       "rsync -a --exclude 'src' . src/",
-      "cd src && /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off  #{Formula['composer'].libexec}/composer.phar install",
+      "cd src && /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off  #{Formula["composer"].libexec}/composer.phar install",
       "cd src && sed -i '' '1d' php-cs-fixer",
       "php -f genphar.php",
     ].each { |c| `#{c}` }

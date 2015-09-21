@@ -4,12 +4,12 @@ class Php53 < AbstractPhp
   init
   include AbstractPhpVersion::Php53Defs
 
-  url     PHP_SRC_TARBALL
-  sha256  PHP_CHECKSUM[:sha256]
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
   revision 3
 
-  head    PHP_GITHUB_URL, :branch => PHP_BRANCH
+  head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
     sha256 "146e013439c6e831cbe749501b5c05e15ecd6f6c283b1240e1e37ffe7304b264" => :el_capitan
@@ -23,9 +23,9 @@ class Php53 < AbstractPhp
   depends_on "flex" => :build
   depends_on "homebrew/versions/bison27" => :build
 
-  depends_on 'libevent' unless build.without? 'fpm'
+  depends_on "libevent" unless build.without? "fpm"
 
-  option 'disable-zend-multibyte', 'Disable auto-detection of Unicode encoded scripts'
+  option "disable-zend-multibyte", "Disable auto-detection of Unicode encoded scripts"
 
   def install
     # files need to be regenerated to fix issue #962
@@ -35,7 +35,7 @@ class Php53 < AbstractPhp
 
   def install_args
     args = super
-    args << "--enable-zend-multibyte" unless build.include? 'disable-zend-multibyte'
+    args << "--enable-zend-multibyte" unless build.include? "disable-zend-multibyte"
     args << "--enable-sqlite-utf8"
   end
 

@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Gearman < AbstractPhp54Extension
   init
-  homepage 'https://pecl.php.net/package/gearman'
-  url 'https://pecl.php.net/get/gearman-1.1.2.tgz'
-  sha1 '4b4d92b0dec9aabf8cd1ed6eba1f0cf8414117c9'
-  head 'https://svn.php.net/repository/pecl/gearman/trunk/'
+  homepage "https://pecl.php.net/package/gearman"
+  url "https://pecl.php.net/get/gearman-1.1.2.tgz"
+  sha1 "4b4d92b0dec9aabf8cd1ed6eba1f0cf8414117c9"
+  head "https://svn.php.net/repository/pecl/gearman/trunk/"
 
-  depends_on 'gearman'
+  depends_on "gearman"
 
   def install
     Dir.chdir "gearman-#{version}" unless build.head?
@@ -17,7 +17,7 @@ class Php54Gearman < AbstractPhp54Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-gearman=#{Formula['gearman'].opt_prefix}"
+                          "--with-gearman=#{Formula["gearman"].opt_prefix}"
     system "make"
     prefix.install "modules/gearman.so"
     write_config_file if build.with? "config-file"

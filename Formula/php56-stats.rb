@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Stats < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/stats'
-  url 'https://pecl.php.net/get/stats-1.0.3.tgz'
-  sha256 'e032e02052acf2013f0578da823d60b0b2a89eb5e1dd1379cf0a65c090dffdfc'
-  head 'https://svn.php.net/repository/pecl/stats/trunk/'
+  homepage "https://pecl.php.net/package/stats"
+  url "https://pecl.php.net/get/stats-1.0.3.tgz"
+  sha256 "e032e02052acf2013f0578da823d60b0b2a89eb5e1dd1379cf0a65c090dffdfc"
+  head "https://svn.php.net/repository/pecl/stats/trunk/"
 
   bottle do
     cellar :any_skip_relocation

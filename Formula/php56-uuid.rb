@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Uuid < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/uuid'
-  url 'https://pecl.php.net/get/uuid-1.0.3.tgz'
-  sha256 '6832c6453efec9800d2dc0bb9786cea02888378e88c15851f79210ef78369ef1'
-  head 'https://svn.php.net/repository/pecl/uuid/trunk'
+  homepage "https://pecl.php.net/package/uuid"
+  url "https://pecl.php.net/get/uuid-1.0.3.tgz"
+  sha256 "6832c6453efec9800d2dc0bb9786cea02888378e88c15851f79210ef78369ef1"
+  head "https://svn.php.net/repository/pecl/uuid/trunk"
 
   stable do
     patch do
@@ -19,7 +19,6 @@ class Php56Uuid < AbstractPhp56Extension
     sha256 "3ce6819f1bc245e25d7a2cbf04bf2f92183f509a3edf57df985268091fa12532" => :yosemite
     sha256 "ad05ab099106a89314f9674f2d8bee62f9b3820ad739d60b624f090369c58740" => :mavericks
   end
-
 
   head do
     patch do

@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Yaf < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/yaf'
-  url 'https://pecl.php.net/get/yaf-2.3.3.tgz'
-  sha256 'fb59db901008b157d11c255f1a1492ccd02df2e2ab9869aa4f9fa9fc73272298'
-  head 'https://svn.php.net/repository/pecl/yaf/trunk/'
+  homepage "https://pecl.php.net/package/yaf"
+  url "https://pecl.php.net/get/yaf-2.3.3.tgz"
+  sha256 "fb59db901008b157d11c255f1a1492ccd02df2e2ab9869aa4f9fa9fc73272298"
+  head "https://svn.php.net/repository/pecl/yaf/trunk/"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +14,7 @@ class Php56Yaf < AbstractPhp56Extension
     sha256 "6f53e8a1bcfe463635f99356b25efa6f9951b413abc3e6eb5b6f6390a2e2eb55" => :mavericks
   end
 
-  depends_on 'pcre'
+  depends_on "pcre"
 
   def install
     Dir.chdir "yaf-#{version}" unless build.head?

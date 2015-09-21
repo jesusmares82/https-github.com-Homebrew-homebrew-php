@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Solr < AbstractPhp53Extension
   init
-  homepage 'https://pecl.php.net/package/solr'
-  url 'https://pecl.php.net/get/solr-2.1.0.tgz'
-  sha1 'd7bb1ca0edc22bf83bf644bc5ab30d9d9fec59c7'
-  head 'http://svn.apache.org/repos/asf/lucene/dev/trunk/'
+  homepage "https://pecl.php.net/package/solr"
+  url "https://pecl.php.net/get/solr-2.1.0.tgz"
+  sha1 "d7bb1ca0edc22bf83bf644bc5ab30d9d9fec59c7"
+  head "http://svn.apache.org/repos/asf/lucene/dev/trunk/"
 
   def install
     Dir.chdir "solr-#{version}" unless build.head?

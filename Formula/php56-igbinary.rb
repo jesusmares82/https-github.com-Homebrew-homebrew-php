@@ -7,7 +7,7 @@ class Php56Igbinary < AbstractPhp56Extension
   sha256 "168e51d41a417bbbfe6da0e3cb9b71ef93594f4034f489a951f3b874d03dfdb8"
   head "https://github.com/igbinary/igbinary.git"
 
-  depends_on 'igbinary' => :build
+  depends_on "igbinary" => :build
 
   bottle do
     cellar :any
@@ -48,4 +48,3 @@ class Php56Igbinary < AbstractPhp56Extension
     shell_output("php -m").include?("igbinary")
   end
 end
-

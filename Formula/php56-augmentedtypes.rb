@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Augmentedtypes < AbstractPhp56Extension
   init
-  homepage 'https://github.com/box/augmented_types'
-  url 'https://github.com/box/augmented_types/archive/v0.6.6.tar.gz'
-  sha256 '54b295f902e56daf1347b1e1f7d633a84c3e03aacac78424e6314adfd922e4db'
-  head 'https://github.com/box/augmented_types.git'
+  homepage "https://github.com/box/augmented_types"
+  url "https://github.com/box/augmented_types/archive/v0.6.6.tar.gz"
+  sha256 "54b295f902e56daf1347b1e1f7d633a84c3e03aacac78424e6314adfd922e4db"
+  head "https://github.com/box/augmented_types.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -15,9 +15,11 @@ class Php56Augmentedtypes < AbstractPhp56Extension
     sha256 "d08293b8aabf4bb3a44bdd2718f35c5e2e6d4fd84107e4f779565807ed5f21f1" => :mavericks
   end
 
-  option 'without-default-enforcement', "Turn off Augmented Types enforcement by default"
+  option "without-default-enforcement", "Turn off Augmented Types enforcement by default"
 
-  def extension_type; "zend_extension"; end
+  def extension_type
+    "zend_extension"
+  end
 
   def extension
     "augmented_types"
@@ -34,7 +36,7 @@ class Php56Augmentedtypes < AbstractPhp56Extension
   end
 
   def config_file
-    if active_spec.build.with? 'default-enforcement'
+    if active_spec.build.with? "default-enforcement"
       super + <<-EOS.undent
         augmented_types.enforce_by_default = 1
       EOS

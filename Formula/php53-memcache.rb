@@ -2,14 +2,14 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Memcache < AbstractPhp53Extension
   init
-  homepage 'https://pecl.php.net/package/memcache'
-  url 'https://pecl.php.net/get/memcache-2.2.7.tgz'
-  sha1 '15235e0f85b54c429bdbf8f6b529243580e504a7'
-  head 'https://svn.php.net/repository/pecl/memcache/trunk/'
+  homepage "https://pecl.php.net/package/memcache"
+  url "https://pecl.php.net/get/memcache-2.2.7.tgz"
+  sha1 "15235e0f85b54c429bdbf8f6b529243580e504a7"
+  head "https://svn.php.net/repository/pecl/memcache/trunk/"
 
   devel do
-    url 'https://pecl.php.net/get/memcache-3.0.8.tgz'
-    sha1 '681ece0258958d60902d6bbf0cf1f2171a0cc47c'
+    url "https://pecl.php.net/get/memcache-3.0.8.tgz"
+    sha1 "681ece0258958d60902d6bbf0cf1f2171a0cc47c"
   end
 
   def install

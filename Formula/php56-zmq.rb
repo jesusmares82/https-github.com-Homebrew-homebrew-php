@@ -2,13 +2,13 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Zmq < AbstractPhp56Extension
   init
-  homepage 'http://php.zero.mq/'
-  url 'https://github.com/mkoppanen/php-zmq/archive/1.1.2.tar.gz'
-  sha1 '735d8c826edffcc96aa75b33d9aa13dbe57f2059'
-  head 'https://github.com/mkoppanen/php-zmq.git'
+  homepage "http://php.zero.mq/"
+  url "https://github.com/mkoppanen/php-zmq/archive/1.1.2.tar.gz"
+  sha1 "735d8c826edffcc96aa75b33d9aa13dbe57f2059"
+  head "https://github.com/mkoppanen/php-zmq.git"
 
-  depends_on 'pkg-config' => :build
-  depends_on 'zeromq'
+  depends_on "pkg-config" => :build
+  depends_on "zeromq"
 
   def install
     ENV.universal_binary if build.universal?

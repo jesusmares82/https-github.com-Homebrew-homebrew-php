@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Uuid < AbstractPhp55Extension
   init
-  homepage 'https://pecl.php.net/package/uuid'
-  url 'https://pecl.php.net/get/uuid-1.0.3.tgz'
-  sha1 'f51820a310ade0eb7200375486bf88d721d89f17'
-  head 'https://svn.php.net/repository/pecl/uuid/trunk'
+  homepage "https://pecl.php.net/package/uuid"
+  url "https://pecl.php.net/get/uuid-1.0.3.tgz"
+  sha1 "f51820a310ade0eb7200375486bf88d721d89f17"
+  head "https://svn.php.net/repository/pecl/uuid/trunk"
 
   stable do
     patch do

@@ -1,7 +1,7 @@
 class Adminer < Formula
   desc "Adminer is a full-featured database management tool written in PHP."
   homepage "http://www.adminer.org/"
-  version '4.2.2'
+  version "4.2.2"
   url "https://downloads.sourceforge.net/project/adminer/Adminer/Adminer%20" + version + "/adminer-" + version + ".php"
   sha256 "4dced0c64dbeb0f6e9a27c4ec5838bbf5f33b82c368a8965b47ae3da6c9bcb2c"
 

@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Qr < AbstractPhp55Extension
   init
-  homepage 'http://pecl.opendogs.org/'
-  url 'http://pecl.opendogs.org/get/qr-0.4.0.tgz'
-  sha1 '08caebd0c78e78f64782ef9ff064cbf1ece967c8'
+  homepage "http://pecl.opendogs.org/"
+  url "http://pecl.opendogs.org/get/qr-0.4.0.tgz"
+  sha1 "08caebd0c78e78f64782ef9ff064cbf1ece967c8"
 
   depends_on "zlib"
 
@@ -18,7 +18,7 @@ class Php55Qr < AbstractPhp55Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           "--enable-qr", "--enable-qr-gd", "--with-qr-tiff=#{HOMEBREW_PREFIX}/opt/zlib"
-                          phpconfig
+    phpconfig
     system "make"
     prefix.install "modules/qr.so"
     write_config_file if build.with? "config-file"

@@ -14,8 +14,8 @@ class Php55Xhgui < AbstractPhp55Extension
   depends_on "php55-xhprof"
 
   def install
-    prefix.install %w(composer.json composer.lock install.php cache config src external webroot)
-    (prefix + 'cache').chmod 0777
+    prefix.install %w[composer.json composer.lock install.php cache config src external webroot]
+    (prefix + "cache").chmod 0777
     Dir.chdir prefix
     system "cp", "config/config.default.php", "config/config.php"
     system "composer", "install"

@@ -18,9 +18,9 @@ class Boris < Formula
   def install
     # ensure the required php modules are installed
     php_modules = Utils.popen_read("php -m")
-    raise "php must be re-compiled, in order to have readline support" if !php_modules.include?("readline")
-    raise "php must be re-compiled with pcntl support" if !php_modules.include?("pcntl")
-    raise "php must be re-compiled with posix support" if !php_modules.include?("posix")
+    raise "php must be re-compiled, in order to have readline support" unless php_modules.include?("readline")
+    raise "php must be re-compiled with pcntl support" unless php_modules.include?("pcntl")
+    raise "php must be re-compiled with posix support" unless php_modules.include?("posix")
 
     system "composer", "install"
     libexec.install Dir["*"]

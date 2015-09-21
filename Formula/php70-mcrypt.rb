@@ -36,5 +36,3 @@ class Php70Mcrypt < AbstractPhp70Extension
     shell_output("php -m").include?("mcrypt")
   end
 end
-
-

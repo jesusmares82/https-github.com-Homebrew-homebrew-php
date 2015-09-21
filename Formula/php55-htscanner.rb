@@ -2,11 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Htscanner < AbstractPhp55Extension
   init
-  homepage 'https://github.com/piannelli/htscanner-enhanced'
-  url 'https://github.com/piannelli/htscanner-enhanced/archive/b62ad43105758fe9f513a0730c3bbef0dfd2ee37.tar.gz'
-  sha1 'bd1716f6d8d9571855fd73ad52778d57eec7be77'
-  version 'b62ad431'
-  head 'https://github.com/piannelli/htscanner-enhanced.git'
+  homepage "https://github.com/piannelli/htscanner-enhanced"
+  url "https://github.com/piannelli/htscanner-enhanced/archive/b62ad43105758fe9f513a0730c3bbef0dfd2ee37.tar.gz"
+  sha1 "bd1716f6d8d9571855fd73ad52778d57eec7be77"
+  version "b62ad431"
+  head "https://github.com/piannelli/htscanner-enhanced.git"
 
   def install
     ENV.universal_binary if build.universal?

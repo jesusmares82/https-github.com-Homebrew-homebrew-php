@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Vld < AbstractPhp55Extension
   init
-  homepage 'https://pecl.php.net/package/vld'
-  url 'https://pecl.php.net/get/vld-0.13.0.tgz'
-  sha1 '19936e64c29339d1a5cf48fc18ef762fbd8a8a1a'
-  head 'https://github.com/derickr/vld.git'
+  homepage "https://pecl.php.net/package/vld"
+  url "https://pecl.php.net/get/vld-0.13.0.tgz"
+  sha1 "19936e64c29339d1a5cf48fc18ef762fbd8a8a1a"
+  head "https://github.com/derickr/vld.git"
 
   def install
     Dir.chdir "vld-#{version}" unless build.head?

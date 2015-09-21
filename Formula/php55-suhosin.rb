@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Suhosin < AbstractPhp55Extension
   init
-  homepage 'http://suhosin.org/stories/index.html'
-  url 'https://github.com/stefanesser/suhosin/archive/0.9.37.1.tar.gz'
-  sha256 '322ba104a17196bae63d39404da103fd011b09fde0f02484dc44366511c586ba'
-  head 'https://github.com/stefanesser/suhosin.git'
+  homepage "http://suhosin.org/stories/index.html"
+  url "https://github.com/stefanesser/suhosin/archive/0.9.37.1.tar.gz"
+  sha256 "322ba104a17196bae63d39404da103fd011b09fde0f02484dc44366511c586ba"
+  head "https://github.com/stefanesser/suhosin.git"
 
   bottle do
     sha256 "c9e52595bbeada891f9d66b75d1f900a7cbc87d6009d22c77d4257bf1006ad8a" => :yosemite

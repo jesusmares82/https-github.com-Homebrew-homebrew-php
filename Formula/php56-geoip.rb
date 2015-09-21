@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Geoip < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/geoip'
-  url 'https://pecl.php.net/get/geoip-1.1.0.tgz'
-  sha256 '82c6deb7264d2ff7c4d6c45a7d27cff7ab097be965795e317e04a9c5b7be98b9'
-  head 'https://svn.php.net/repository/pecl/geoip/trunk/'
+  homepage "https://pecl.php.net/package/geoip"
+  url "https://pecl.php.net/get/geoip-1.1.0.tgz"
+  sha256 "82c6deb7264d2ff7c4d6c45a7d27cff7ab097be965795e317e04a9c5b7be98b9"
+  head "https://svn.php.net/repository/pecl/geoip/trunk/"
 
   bottle do
     revision 1
@@ -14,7 +14,7 @@ class Php56Geoip < AbstractPhp56Extension
     sha256 "838f7ef86e987f79d0a16c2b1b851e8bab567310263669723ba2dcc5c86ec131" => :mavericks
   end
 
-  depends_on 'geoip'
+  depends_on "geoip"
 
   def install
     Dir.chdir "geoip-#{version}" unless build.head?
@@ -24,7 +24,7 @@ class Php56Geoip < AbstractPhp56Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-geoip=#{Formula['geoip'].opt_prefix}"
+                          "--with-geoip=#{Formula["geoip"].opt_prefix}"
     system "make"
     prefix.install "modules/geoip.so"
     write_config_file if build.with? "config-file"

@@ -5,12 +5,12 @@ class Php54 < AbstractPhp
   include AbstractPhpVersion::Php54Defs
   include AbstractPhpVersion::PhpdbgDefs
 
-  url     PHP_SRC_TARBALL
-  sha256  PHP_CHECKSUM[:sha256]
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
   revision 2
 
-  head    PHP_GITHUB_URL, :branch => PHP_BRANCH
+  head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
     revision 1
@@ -26,7 +26,7 @@ class Php54 < AbstractPhp
     depends_on "flex" => :build
 
     resource "phpdbg" do
-      url    PHPDBG_SRC_TARBAL
+      url PHPDBG_SRC_TARBAL
       sha256 PHPDBG_CHECKSUM[:sha256]
     end
   end

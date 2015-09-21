@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Graphdat < AbstractPhp53Extension
   init
-  homepage 'http://www.graphdat.com/'
-  url 'https://pecl.php.net/get/graphdat-1.0.3.tgz'
-  sha256 '6b436c1f3f37d4d701f970a5d868e91711406b4b55bd78f79de916d21f8fb799'
-  head 'https://github.com/alphashack/graphdat-sdk-php.git'
+  homepage "http://www.graphdat.com/"
+  url "https://pecl.php.net/get/graphdat-1.0.3.tgz"
+  sha256 "6b436c1f3f37d4d701f970a5d868e91711406b4b55bd78f79de916d21f8fb799"
+  head "https://github.com/alphashack/graphdat-sdk-php.git"
 
   bottle do
     cellar :any_skip_relocation

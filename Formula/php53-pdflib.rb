@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Pdflib < AbstractPhp53Extension
   init
-  homepage 'http://www.pdflib.com'
-  url 'https://pecl.php.net/get/pdflib-3.0.4.tgz'
-  sha1 'a6efda4b2532d979c508a23be845720663433c58'
+  homepage "http://www.pdflib.com"
+  url "https://pecl.php.net/get/pdflib-3.0.4.tgz"
+  sha1 "a6efda4b2532d979c508a23be845720663433c58"
 
   depends_on "pdflib-lite"
 

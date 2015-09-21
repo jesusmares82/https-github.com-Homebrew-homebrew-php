@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Ssh2 < AbstractPhp54Extension
   init
-  homepage 'https://pecl.php.net/package/ssh2'
-  url 'https://pecl.php.net/get/ssh2-0.12.tgz'
-  sha1 'b86a25bdd3f3558bbcaaa6d876309fbbb5ae134d'
-  head 'https://svn.php.net/repository/pecl/ssh2/trunk/'
+  homepage "https://pecl.php.net/package/ssh2"
+  url "https://pecl.php.net/get/ssh2-0.12.tgz"
+  sha1 "b86a25bdd3f3558bbcaaa6d876309fbbb5ae134d"
+  head "https://svn.php.net/repository/pecl/ssh2/trunk/"
 
-  depends_on 'libssh2'
+  depends_on "libssh2"
 
   def install
     Dir.chdir "ssh2-#{version}" unless build.head?

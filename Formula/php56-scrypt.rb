@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Scrypt < AbstractPhp56Extension
   init
-  homepage 'https://github.com/DomBlack/php-scrypt'
-  url 'https://github.com/DomBlack/php-scrypt/archive/v1.2.tar.gz'
-  sha256 '80de804217c5ed5dff189c82771d055a13e6abc64db35cbe6e29878cbc0eb827'
-  head 'https://github.com/DomBlack/php-scrypt.git'
+  homepage "https://github.com/DomBlack/php-scrypt"
+  url "https://github.com/DomBlack/php-scrypt/archive/v1.2.tar.gz"
+  sha256 "80de804217c5ed5dff189c82771d055a13e6abc64db35cbe6e29878cbc0eb827"
+  head "https://github.com/DomBlack/php-scrypt.git"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,7 +16,7 @@ class Php56Scrypt < AbstractPhp56Extension
 
   def install
     ENV.universal_binary if build.universal?
-    ENV['CFLAGS'] = '-arch i386 -arch x86_64'
+    ENV["CFLAGS"] = "-arch i386 -arch x86_64"
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",

@@ -2,17 +2,17 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Apc < AbstractPhp53Extension
   init
-  homepage 'https://pecl.php.net/package/apc'
-  url 'https://pecl.php.net/get/APC-3.1.10.tgz'
-  sha256 '99f260b32592f1b50da9c7a83fad3c5cbdb2484fa01aee6cc04caadd8cd4fc44'
-  head 'https://svn.php.net/repository/pecl/apc/trunk/'
+  homepage "https://pecl.php.net/package/apc"
+  url "https://pecl.php.net/get/APC-3.1.10.tgz"
+  sha256 "99f260b32592f1b50da9c7a83fad3c5cbdb2484fa01aee6cc04caadd8cd4fc44"
+  head "https://svn.php.net/repository/pecl/apc/trunk/"
 
   devel do
-    url 'https://pecl.php.net/get/APC-3.1.13.tgz'
-    sha1 'cafd6ba92ac1c9f500a6c1e300bbe8819daddfae'
+    url "https://pecl.php.net/get/APC-3.1.13.tgz"
+    sha1 "cafd6ba92ac1c9f500a6c1e300bbe8819daddfae"
   end
 
-  depends_on 'pcre'
+  depends_on "pcre"
 
   stable do
     # fixes "Incorrect version tag: APC 3.1.10 shows 3.1.9"
@@ -26,7 +26,6 @@ class Php53Apc < AbstractPhp53Extension
     sha256 "2e24df0758c1c47881d308dd58b4c930bc492b53be8b49677fc6fb2ba413ee47" => :mavericks
   end
 
-
   def install
     Dir.chdir "APC-#{version}" unless build.head?
 
@@ -37,7 +36,7 @@ class Php53Apc < AbstractPhp53Extension
                           phpconfig,
                           "--enable-apc-pthreadmutex"
     system "make"
-    prefix.install %w(modules/apc.so apc.php)
+    prefix.install %w[modules/apc.so apc.php]
     write_config_file if build.with? "config-file"
   end
 

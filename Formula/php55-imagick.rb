@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Imagick < AbstractPhp55Extension
   init
-  homepage 'https://pecl.php.net/package/imagick'
-  url 'https://pecl.php.net/get/imagick-3.1.2.tgz'
-  sha1 '7cee88bc8f6f178165c9d43e302d99cedfbb3dff'
-  head 'https://svn.php.net/repository/pecl/imagick/trunk/'
+  homepage "https://pecl.php.net/package/imagick"
+  url "https://pecl.php.net/get/imagick-3.1.2.tgz"
+  sha1 "7cee88bc8f6f178165c9d43e302d99cedfbb3dff"
+  head "https://svn.php.net/repository/pecl/imagick/trunk/"
   revision 1
 
   bottle do
@@ -14,8 +14,8 @@ class Php55Imagick < AbstractPhp55Extension
     sha256 "4e6337ebde5f72eed45f21f3d6f0a7a6af1d83f81ff23e6d4b8a7c694c616e1f" => :mountain_lion
   end
 
-  depends_on 'pkg-config' => :build
-  depends_on 'imagemagick'
+  depends_on "pkg-config" => :build
+  depends_on "imagemagick"
 
   # Rationale: Fix for the header file MagickWand.h
   #     could not be located error during ./configure
@@ -33,7 +33,7 @@ class Php55Imagick < AbstractPhp55Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-imagick=#{Formula['imagemagick'].opt_prefix}"
+                          "--with-imagick=#{Formula["imagemagick"].opt_prefix}"
     system "make"
     prefix.install "modules/imagick.so"
     write_config_file if build.with? "config-file"

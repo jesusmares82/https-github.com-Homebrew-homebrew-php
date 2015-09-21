@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Mosquitto < AbstractPhp55Extension
   init
-  homepage 'https://github.com/mgdm/Mosquitto-PHP/'
-  url 'https://pecl.php.net/get/Mosquitto-0.2.2.tgz'
-  sha1 'b63a5816c89b617d95c0620743edb082a5b0382b'
-  head 'https://github.com/mgdm/Mosquitto-PHP.git'
+  homepage "https://github.com/mgdm/Mosquitto-PHP/"
+  url "https://pecl.php.net/get/Mosquitto-0.2.2.tgz"
+  sha1 "b63a5816c89b617d95c0620743edb082a5b0382b"
+  head "https://github.com/mgdm/Mosquitto-PHP.git"
 
-  depends_on 'mosquitto'
+  depends_on "mosquitto"
 
   def install
     Dir.chdir "mosquitto-#{version}" unless build.head?

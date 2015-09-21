@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Yaz < AbstractPhp56Extension
   init
-  homepage 'http://www.indexdata.com/phpyaz'
-  url 'https://pecl.php.net/get/yaz-1.1.6.tgz'
-  sha256 'dd9b919ba3b2a09a9c77c847407f106512fe75979cc0689ebccef08c80719eee'
+  homepage "http://www.indexdata.com/phpyaz"
+  url "https://pecl.php.net/get/yaz-1.1.6.tgz"
+  sha256 "dd9b919ba3b2a09a9c77c847407f106512fe75979cc0689ebccef08c80719eee"
 
   bottle do
     sha256 "7b6cb327d11486cffe95f390decfec202909be4908406c569e1efc92cfdd5762" => :el_capitan

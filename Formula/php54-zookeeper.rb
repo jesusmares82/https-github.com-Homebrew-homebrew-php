@@ -2,13 +2,13 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Zookeeper < AbstractPhp54Extension
   init
-  homepage 'https://pecl.php.net/package/zookeeper'
-  url 'https://pecl.php.net/get/zookeeper-0.2.2.tgz'
-  sha1 '029c0d9c989c56c5afead8bb4621b7f2236a7b6f'
-  head 'https://github.com/andreiz/php-zookeeper.git'
+  homepage "https://pecl.php.net/package/zookeeper"
+  url "https://pecl.php.net/get/zookeeper-0.2.2.tgz"
+  sha1 "029c0d9c989c56c5afead8bb4621b7f2236a7b6f"
+  head "https://github.com/andreiz/php-zookeeper.git"
 
-  option 'disable-session', 'Disable zookeeper session handler support'
-  depends_on 'zookeeper'
+  option "disable-session", "Disable zookeeper session handler support"
+  depends_on "zookeeper"
 
   def install
     Dir.chdir "zookeeper-#{version}" unless build.head?
@@ -18,8 +18,8 @@ class Php54Zookeeper < AbstractPhp54Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-libzookeeper-dir=#{Formula['zookeeper'].opt_prefix}"
-    args << "--disable-zookeeper-session" if build.include? 'disable-session'
+    args << "--with-libzookeeper-dir=#{Formula["zookeeper"].opt_prefix}"
+    args << "--disable-zookeeper-session" if build.include? "disable-session"
 
     safe_phpize
 

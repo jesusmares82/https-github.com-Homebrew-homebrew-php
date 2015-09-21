@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Sundown < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/sundown'
-  url 'https://pecl.php.net/get/sundown-0.3.11.tgz'
-  sha256 '0a143a268f43f5f2a07988116acfa62671fad4636b84c0750327042f9cb8004f'
+  homepage "https://pecl.php.net/package/sundown"
+  url "https://pecl.php.net/get/sundown-0.3.11.tgz"
+  sha256 "0a143a268f43f5f2a07988116acfa62671fad4636b84c0750327042f9cb8004f"
 
   bottle do
     cellar :any_skip_relocation

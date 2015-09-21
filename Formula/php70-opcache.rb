@@ -217,5 +217,3 @@ class Php70Opcache < AbstractPhp70Extension
     shell_output("php -m").include?("Zend OPcache")
   end
 end
-
-

@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Yp < AbstractPhp54Extension
   init
-  homepage 'https://pecl.php.net/package/yp'
-  url 'https://pecl.php.net/get/yp-1.0.1.tgz'
-  sha1 'b678ae5b89b8d5d5e78c8474cbb24c7e3fe3e83a'
-  head 'https://git.php.net:/repository/pecl/networking/yp.git'
+  homepage "https://pecl.php.net/package/yp"
+  url "https://pecl.php.net/get/yp-1.0.1.tgz"
+  sha1 "b678ae5b89b8d5d5e78c8474cbb24c7e3fe3e83a"
+  head "https://git.php.net:/repository/pecl/networking/yp.git"
 
   def install
     Dir.chdir "yp-#{version}" unless build.head?

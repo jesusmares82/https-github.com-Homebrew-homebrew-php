@@ -175,4 +175,3 @@ class Php56Memcached < AbstractPhp56Extension
     shell_output("php -m").include?("memcached")
   end
 end
-

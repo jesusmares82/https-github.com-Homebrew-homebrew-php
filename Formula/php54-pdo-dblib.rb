@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54PdoDblib < AbstractPhp54Extension
   init
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
-  url      PHP_SRC_TARBALL
-  sha256   PHP_CHECKSUM[:sha256]
-  version  PHP_VERSION
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
 
   bottle do
     revision 1
@@ -26,7 +26,7 @@ class Php54PdoDblib < AbstractPhp54Extension
     ENV.universal_binary if build.universal?
 
     safe_phpize
-    system "./configure", "--prefix=#{prefix}", "--with-pdo-dblib=#{Formula['freetds'].opt_prefix}", phpconfig
+    system "./configure", "--prefix=#{prefix}", "--with-pdo-dblib=#{Formula["freetds"].opt_prefix}", phpconfig
     system "make"
     prefix.install "modules/pdo_dblib.so"
     write_config_file if build.with? "config-file"

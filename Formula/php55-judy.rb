@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Judy < AbstractPhp55Extension
   init
-  homepage 'https://github.com/orieg/php-judy'
-  url 'https://pecl.php.net/get/Judy-1.0.2.tgz'
-  sha1 '3051e72a3ef5d05cbe5ba938841dd2bdef36e9b8'
-  head 'https://github.com/orieg/php-judy.git'
+  homepage "https://github.com/orieg/php-judy"
+  url "https://pecl.php.net/get/Judy-1.0.2.tgz"
+  sha1 "3051e72a3ef5d05cbe5ba938841dd2bdef36e9b8"
+  head "https://github.com/orieg/php-judy.git"
 
   depends_on "judy"
 

@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php54Pcntl < AbstractPhp54Extension
   init
   homepage "http://php.net/manual/en/book.pcntl.php"
-  url      PHP_SRC_TARBALL
-  sha256   PHP_CHECKSUM[:sha256]
-  version  PHP_VERSION
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
 
   bottle do
     cellar :any
@@ -29,4 +29,3 @@ class Php54Pcntl < AbstractPhp54Extension
     write_config_file if build.with? "config-file"
   end
 end
-

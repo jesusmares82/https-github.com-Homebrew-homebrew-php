@@ -1,11 +1,11 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Pthreads < AbstractPhp55Extension
-  init ['with-thread-safety']
-  homepage 'https://pecl.php.net/package/pthreads'
-  url 'https://pecl.php.net/get/pthreads-2.0.10.tgz'
-  sha1 'be2745b65ecf09190fb323ccbf168288c70cfd6c'
-  head 'https://github.com/krakjoe/pthreads.git'
+  init ["with-thread-safety"]
+  homepage "https://pecl.php.net/package/pthreads"
+  url "https://pecl.php.net/get/pthreads-2.0.10.tgz"
+  sha1 "be2745b65ecf09190fb323ccbf168288c70cfd6c"
+  head "https://github.com/krakjoe/pthreads.git"
 
   def install
     Dir.chdir "pthreads-#{version}" unless build.head?

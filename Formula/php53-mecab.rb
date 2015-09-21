@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Mecab < AbstractPhp53Extension
   init
-  homepage 'https://github.com/rsky/php-mecab'
-  url 'https://github.com/downloads/rsky/php-mecab/php-mecab-0.5.0.tgz'
-  sha1 '3f451e67f736b8d4a8b494cb0333cfbb5fa4a274'
-  head 'https://github.com/rsky/php-mecab.git'
+  homepage "https://github.com/rsky/php-mecab"
+  url "https://github.com/downloads/rsky/php-mecab/php-mecab-0.5.0.tgz"
+  sha1 "3f451e67f736b8d4a8b494cb0333cfbb5fa4a274"
+  head "https://github.com/rsky/php-mecab.git"
 
   depends_on "mecab"
 

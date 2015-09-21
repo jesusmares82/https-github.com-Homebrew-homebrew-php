@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Xmldiff < AbstractPhp55Extension
   init
-  homepage 'https://pecl.php.net/package/xmldiff'
-  url 'https://pecl.php.net/get/xmldiff-0.9.2.tgz'
-  sha1 '7cc2b31a34ea9bbce23d163154f4a86bb819bc17'
+  homepage "https://pecl.php.net/package/xmldiff"
+  url "https://pecl.php.net/get/xmldiff-0.9.2.tgz"
+  sha1 "7cc2b31a34ea9bbce23d163154f4a86bb819bc17"
 
   def install
     Dir.chdir "xmldiff-#{version}"

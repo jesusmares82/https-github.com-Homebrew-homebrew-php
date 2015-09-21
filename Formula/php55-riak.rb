@@ -2,14 +2,14 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Riak < AbstractPhp55Extension
   init
-  homepage 'http://phpriak.bachpedersen.dk/'
-  url 'https://pecl.php.net/get/riak-1.2.0.tgz'
-  sha1 'c48afd6482df5bd3520505edead26104e65955d1'
-  head 'https://github.com/TriKaspar/php_riak.git'
+  homepage "http://phpriak.bachpedersen.dk/"
+  url "https://pecl.php.net/get/riak-1.2.0.tgz"
+  sha1 "c48afd6482df5bd3520505edead26104e65955d1"
+  head "https://github.com/TriKaspar/php_riak.git"
 
-  option 'with-riak', 'Also install Riak locally'
+  option "with-riak", "Also install Riak locally"
 
-  depends_on 'riak' => :optional
+  depends_on "riak" => :optional
 
   def install
     Dir.chdir "riak-#{version}" unless build.head?

@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Gmagick < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/gmagick'
-  url 'https://pecl.php.net/get/gmagick-1.1.7RC2.tgz'
-  sha256 '8e51c8343d6e6d556d7b17417ce338c6ed2b0893869f1494410dfe6ba5105475'
+  homepage "https://pecl.php.net/package/gmagick"
+  url "https://pecl.php.net/get/gmagick-1.1.7RC2.tgz"
+  sha256 "8e51c8343d6e6d556d7b17417ce338c6ed2b0893869f1494410dfe6ba5105475"
 
   bottle do
     sha256 "61e11d790f4137c4c26ddb048417696fd81973e4eefe9bc4c86dd8fe6353cfbd" => :el_capitan
@@ -22,7 +22,7 @@ class Php56Gmagick < AbstractPhp56Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-gmagick=#{Formula['graphicsmagick'].opt_prefix}"
+    args << "--with-gmagick=#{Formula["graphicsmagick"].opt_prefix}"
 
     safe_phpize
     system "./configure", *args

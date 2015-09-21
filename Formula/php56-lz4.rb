@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Lz4 < AbstractPhp56Extension
   init
-  homepage 'https://code.google.com/p/lz4/'
-  url 'https://github.com/kjdev/php-ext-lz4/archive/0.2.2.tar.gz'
-  sha256 '9e37b1ca39013dacd392e31a0f037f9adf2b6f710a733166b0d0168f23f99c3a'
+  homepage "https://code.google.com/p/lz4/"
+  url "https://github.com/kjdev/php-ext-lz4/archive/0.2.2.tar.gz"
+  sha256 "9e37b1ca39013dacd392e31a0f037f9adf2b6f710a733166b0d0168f23f99c3a"
 
   bottle do
     sha256 "69e0e294dab7b530acad06b13f73f5d1367779c20e7996f4d2601abbc9d9b9f1" => :yosemite

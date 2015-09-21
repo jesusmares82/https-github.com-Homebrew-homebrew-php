@@ -27,4 +27,3 @@ class Arcanist < Formula
     system "arc", "version"
   end
 end
-

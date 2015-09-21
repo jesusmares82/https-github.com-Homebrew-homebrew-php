@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Pspell < AbstractPhp55Extension
   init
   homepage "http://php.net/manual/en/book.pspell.php"
-  url      PHP_SRC_TARBALL
-  sha256   PHP_CHECKSUM[:sha256]
-  version  PHP_VERSION
+  url PHP_SRC_TARBALL
+  sha256 PHP_CHECKSUM[:sha256]
+  version PHP_VERSION
 
   bottle do
     revision 1
@@ -25,10 +25,9 @@ class Php55Pspell < AbstractPhp55Extension
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--disable-debug",
-                          "--with-pspell=#{Formula['aspell'].opt_prefix}"
+                          "--with-pspell=#{Formula["aspell"].opt_prefix}"
     system "make"
     prefix.install "modules/pspell.so"
     write_config_file if build.with? "config-file"
   end
 end
-

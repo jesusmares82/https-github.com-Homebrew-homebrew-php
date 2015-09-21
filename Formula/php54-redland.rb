@@ -1,11 +1,11 @@
-require 'formula'
+require "formula"
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Redland < AbstractPhp54Extension
   init
-  homepage 'http://librdf.org'
-  url 'http://download.librdf.org/source/redland-bindings-1.0.17.1.tar.gz'
-  sha256 'ff72b587ab55f09daf81799cb3f9d263708fad5df7a5458f0c28566a2563b7f5'
+  homepage "http://librdf.org"
+  url "http://download.librdf.org/source/redland-bindings-1.0.17.1.tar.gz"
+  sha256 "ff72b587ab55f09daf81799cb3f9d263708fad5df7a5458f0c28566a2563b7f5"
 
   bottle do
     sha1 "57460fc83e909321d29fe8c8b85a984ca1cba652" => :yosemite
@@ -13,10 +13,10 @@ class Php54Redland < AbstractPhp54Extension
     sha1 "cf1c432191f17477265d5b1b33afa0d57da95610" => :mountain_lion
   end
 
-  depends_on 'pkg-config' => :build
-  depends_on 'redland'
-  depends_on 'raptor'
-  depends_on 'rasqal'
+  depends_on "pkg-config" => :build
+  depends_on "redland"
+  depends_on "raptor"
+  depends_on "rasqal"
 
   fails_with :llvm do
     build 2334

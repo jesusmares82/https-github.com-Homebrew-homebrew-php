@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Boxwood < AbstractPhp53Extension
   init
-  homepage 'https://github.com/ning/boxwood'
-  url 'https://github.com/ning/boxwood/archive/888ba12635d7c50cb1bbf1cbef513b0ef9238af3.tar.gz'
-  sha256 '7e5142706023c4acc1db433998d2350458b00c7bc79eba0cc886683bba6b5343'
-  version '888ba12'
+  homepage "https://github.com/ning/boxwood"
+  url "https://github.com/ning/boxwood/archive/888ba12635d7c50cb1bbf1cbef513b0ef9238af3.tar.gz"
+  sha256 "7e5142706023c4acc1db433998d2350458b00c7bc79eba0cc886683bba6b5343"
+  version "888ba12"
 
   bottle do
     cellar :any_skip_relocation

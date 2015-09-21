@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Mosquitto < AbstractPhp56Extension
   init
-  homepage 'https://github.com/mgdm/Mosquitto-PHP/'
-  url 'https://pecl.php.net/get/Mosquitto-0.2.2.tgz'
-  sha256 'e9baa3af1d9a62f8fa1b76ffffbd13fffe7b65e0122130fb389915269543915e'
-  head 'https://github.com/mgdm/Mosquitto-PHP.git'
+  homepage "https://github.com/mgdm/Mosquitto-PHP/"
+  url "https://pecl.php.net/get/Mosquitto-0.2.2.tgz"
+  sha256 "e9baa3af1d9a62f8fa1b76ffffbd13fffe7b65e0122130fb389915269543915e"
+  head "https://github.com/mgdm/Mosquitto-PHP.git"
 
   bottle do
     cellar :any
@@ -14,7 +14,7 @@ class Php56Mosquitto < AbstractPhp56Extension
     sha256 "64b31e0c7b62a8ac5ddba8bb0128837000ed9631acd95074a3823a5c34143f54" => :mavericks
   end
 
-  depends_on 'mosquitto'
+  depends_on "mosquitto"
 
   def install
     Dir.chdir "mosquitto-#{version}" unless build.head?

@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Jsmin < AbstractPhp54Extension
   init
-  homepage 'https://pecl.php.net/package/jsmin'
-  url 'https://pecl.php.net/get/jsmin-1.1.0.tgz'
-  sha1 'e081d7c66a9401b9cd8b0ad585f357a4d7e335ef'
-  head 'https://github.com/sqmk/pecl-jsmin.git'
+  homepage "https://pecl.php.net/package/jsmin"
+  url "https://pecl.php.net/get/jsmin-1.1.0.tgz"
+  sha1 "e081d7c66a9401b9cd8b0ad585f357a4d7e335ef"
+  head "https://github.com/sqmk/pecl-jsmin.git"
 
   bottle do
     sha1 "6b2c63b73c486b9e1d3f2165498a0e897da9fd4a" => :yosemite

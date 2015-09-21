@@ -48,5 +48,3 @@ class Php70Intl < AbstractPhp70Extension
     shell_output("php -m").include?("intl")
   end
 end
-
-

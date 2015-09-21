@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Uploadprogress < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/uploadprogress'
-  url 'https://pecl.php.net/get/uploadprogress-1.0.3.1.tgz'
-  sha256 '30588b4589543bcf6371532546b1a8cee9da1086c206aca9f96ea1bd486bbab2'
-  head 'https://svn.php.net/repository/pecl/uploadprogress/trunk/'
+  homepage "https://pecl.php.net/package/uploadprogress"
+  url "https://pecl.php.net/get/uploadprogress-1.0.3.1.tgz"
+  sha256 "30588b4589543bcf6371532546b1a8cee9da1086c206aca9f96ea1bd486bbab2"
+  head "https://svn.php.net/repository/pecl/uploadprogress/trunk/"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +14,7 @@ class Php56Uploadprogress < AbstractPhp56Extension
     sha256 "3bd78efd9a7e512f7f3b0023087c3efca68aee89fd405639a54e63b26dcdeaed" => :mavericks
   end
 
-  depends_on 'pcre'
+  depends_on "pcre"
 
   def install
     Dir.chdir "uploadprogress-#{version}" unless build.head?

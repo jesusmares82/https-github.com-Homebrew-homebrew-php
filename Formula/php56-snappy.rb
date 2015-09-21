@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Snappy < AbstractPhp56Extension
   init
-  homepage 'https://github.com/kjdev/php-ext-snappy'
-  url 'https://github.com/kjdev/php-ext-snappy/archive/db3abe6ef6b0e74c8deed0f285cdc9d8cff094ef.tar.gz'
-  sha256 '4d1acaad08eacaa108618c6c765fe2d8da82c2f09f8996036e8bccb5438ebd61'
-  version '0.1.0'
+  homepage "https://github.com/kjdev/php-ext-snappy"
+  url "https://github.com/kjdev/php-ext-snappy/archive/db3abe6ef6b0e74c8deed0f285cdc9d8cff094ef.tar.gz"
+  sha256 "4d1acaad08eacaa108618c6c765fe2d8da82c2f09f8996036e8bccb5438ebd61"
+  version "0.1.0"
 
   bottle do
     cellar :any_skip_relocation
@@ -14,7 +14,7 @@ class Php56Snappy < AbstractPhp56Extension
     sha256 "b47fb6352f2206ed37f874e7bc9409d614092c5052b64e1809cc0a071c7ac9dd" => :mavericks
   end
 
-  depends_on 'snappy'
+  depends_on "snappy"
 
   def install
     ENV.universal_binary if build.universal?

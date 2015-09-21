@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Stats < AbstractPhp53Extension
   init
-  homepage 'https://pecl.php.net/package/stats'
-  url 'https://pecl.php.net/get/stats-1.0.3.tgz'
-  sha1 'eb0c805ee51bf363d4376ed5281bbefeea408574'
-  head 'https://svn.php.net/repository/pecl/stats/trunk/'
+  homepage "https://pecl.php.net/package/stats"
+  url "https://pecl.php.net/get/stats-1.0.3.tgz"
+  sha1 "eb0c805ee51bf363d4376ed5281bbefeea408574"
+  head "https://svn.php.net/repository/pecl/stats/trunk/"
 
   def install
     Dir.chdir "stats-#{version}" unless build.head?

@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Leveldb < AbstractPhp54Extension
   init
-  homepage 'https://pecl.php.net/package/leveldb'
-  url 'https://pecl.php.net/get/leveldb-0.1.4.tgz'
-  sha1 '9a15fb0105516533c38de32dc2a1164f9620e046'
-  head 'https://github.com/reeze/php-leveldb.git'
+  homepage "https://pecl.php.net/package/leveldb"
+  url "https://pecl.php.net/get/leveldb-0.1.4.tgz"
+  sha1 "9a15fb0105516533c38de32dc2a1164f9620e046"
+  head "https://github.com/reeze/php-leveldb.git"
 
-  depends_on 'leveldb'
+  depends_on "leveldb"
 
   def install
     Dir.chdir "leveldb-#{version}" unless build.head?
@@ -17,7 +17,7 @@ class Php54Leveldb < AbstractPhp54Extension
     args = []
     args << "--prefix=#{prefix}"
     args << phpconfig
-    args << "--with-leveldb=#{Formula['leveldb'].opt_prefix}"
+    args << "--with-leveldb=#{Formula["leveldb"].opt_prefix}"
 
     safe_phpize
     system "./configure", *args

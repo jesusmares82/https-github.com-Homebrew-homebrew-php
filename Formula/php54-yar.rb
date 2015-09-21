@@ -2,9 +2,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Yar < AbstractPhp54Extension
   init
-  homepage 'https://pecl.php.net/package/yar'
-  url 'https://pecl.php.net/get/yar-1.2.3.tgz'
-  sha1 '7593e07b8d881cdce56764545f21f7d405297107'
+  homepage "https://pecl.php.net/package/yar"
+  url "https://pecl.php.net/get/yar-1.2.3.tgz"
+  sha1 "7593e07b8d881cdce56764545f21f7d405297107"
 
   def install
     Dir.chdir "yar-#{version}"

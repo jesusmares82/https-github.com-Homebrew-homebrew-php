@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Yrmcds < AbstractPhp56Extension
   init
-  homepage 'https://github.com/cybozu/php-yrmcds'
-  url 'https://github.com/cybozu/php-yrmcds/archive/v1.0.2.tar.gz'
-  sha256 '5a77840db23d5b93b86c3ef9507e10894be85cd43e7283af80b6bbacd4b08b69'
-  head 'https://github.com/cybozu/php-yrmcds.git'
+  homepage "https://github.com/cybozu/php-yrmcds"
+  url "https://github.com/cybozu/php-yrmcds/archive/v1.0.2.tar.gz"
+  sha256 "5a77840db23d5b93b86c3ef9507e10894be85cd43e7283af80b6bbacd4b08b69"
+  head "https://github.com/cybozu/php-yrmcds.git"
 
   bottle do
     cellar :any_skip_relocation

@@ -14,7 +14,7 @@ class Php56Magickwand < AbstractPhp56Extension
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
-                          "--with-magickwand=#{Formula['imagemagick'].opt_prefix}",
+                          "--with-magickwand=#{Formula["imagemagick"].opt_prefix}",
                           phpconfig
     system "make"
     prefix.install "modules/magickwand.so"

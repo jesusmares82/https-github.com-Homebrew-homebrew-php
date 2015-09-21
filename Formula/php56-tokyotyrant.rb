@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Tokyotyrant < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/tokyo_tyrant'
-  url 'https://pecl.php.net/get/tokyo_tyrant-0.7.0.tgz'
-  sha256 '38559ac381670b61600d4736803a016f9e75aee9ae608d3f6b46e79103022d28'
-  head 'https://github.com/mkoppanen/php-tokyo_tyrant.git'
+  homepage "https://pecl.php.net/package/tokyo_tyrant"
+  url "https://pecl.php.net/get/tokyo_tyrant-0.7.0.tgz"
+  sha256 "38559ac381670b61600d4736803a016f9e75aee9ae608d3f6b46e79103022d28"
+  head "https://github.com/mkoppanen/php-tokyo_tyrant.git"
 
   bottle do
     sha256 "4c0e02dd15d25111b5a6704543f8512d8d2977f1ec3107555c159c481c6ca9e3" => :el_capitan
@@ -13,10 +13,12 @@ class Php56Tokyotyrant < AbstractPhp56Extension
     sha256 "e406c50b18a44eb3350a89592778129d7770455479903672f7854fa9b92d20de" => :mavericks
   end
 
-  depends_on 'pkg-config' => :build
-  depends_on 'tokyo-tyrant'
+  depends_on "pkg-config" => :build
+  depends_on "tokyo-tyrant"
 
-  def extension; "tokyo_tyrant"; end
+  def extension
+    "tokyo_tyrant"
+  end
 
   def install
     Dir.chdir "tokyo_tyrant-#{version}" unless build.head?

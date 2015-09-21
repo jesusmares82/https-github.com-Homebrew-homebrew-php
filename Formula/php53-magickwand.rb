@@ -14,7 +14,7 @@ class Php53Magickwand < AbstractPhp53Extension
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
-                          "--with-magickwand=#{Formula['imagemagick'].opt_prefix}",
+                          "--with-magickwand=#{Formula["imagemagick"].opt_prefix}",
                           phpconfig
     system "make"
     prefix.install "modules/magickwand.so"

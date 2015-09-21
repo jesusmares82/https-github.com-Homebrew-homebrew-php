@@ -2,13 +2,13 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Midgard2 < AbstractPhp54Extension
   init
-  homepage 'http://www.midgard-project.org'
-  url 'https://github.com/midgardproject/midgard-php5/archive/12.09.1.tar.gz'
-  sha1 'd83519a9d513a47e9e6a02e90f6fb957f036b082'
-  head 'https://github.com/midgardproject/midgard-php5.git', :branch => 'ratatoskr'
+  homepage "http://www.midgard-project.org"
+  url "https://github.com/midgardproject/midgard-php5/archive/12.09.1.tar.gz"
+  sha1 "d83519a9d513a47e9e6a02e90f6fb957f036b082"
+  head "https://github.com/midgardproject/midgard-php5.git", :branch => "ratatoskr"
 
-  depends_on 'pkg-config' => :build
-  depends_on 'midgard2'
+  depends_on "pkg-config" => :build
+  depends_on "midgard2"
 
   def install
     ENV.universal_binary if build.universal?

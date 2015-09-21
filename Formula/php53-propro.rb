@@ -22,7 +22,7 @@ class Php53Propro < AbstractPhp53Extension
     safe_phpize
     system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
-    include.install %w(php_propro.h)
+    include.install %w[php_propro.h]
     prefix.install "modules/propro.so"
     write_config_file if build.with? "config-file"
   end
