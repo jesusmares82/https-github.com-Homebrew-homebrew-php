@@ -120,7 +120,7 @@ class AbstractPhpExtension < Formula
   end
 
   test do
-    shell_output("php -m").include?(extension)
+    shell_output("php -m").downcase.include?(extension.downcase)
   end
 
   def caveats
