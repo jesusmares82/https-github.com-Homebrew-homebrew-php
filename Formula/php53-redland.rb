@@ -2,14 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Redland < AbstractPhp53Extension
   init
+  desc "Redland RDF Libraries for PHP"
   homepage "http://librdf.org"
   url "http://download.librdf.org/source/redland-bindings-1.0.17.1.tar.gz"
   sha256 "ff72b587ab55f09daf81799cb3f9d263708fad5df7a5458f0c28566a2563b7f5"
 
   bottle do
-    sha1 "bfd3b0035add6db855102234339b1dfd8f0dffa0" => :yosemite
-    sha1 "19f385bebe9d397b7d6816cbeee7300a1a3f6a41" => :mavericks
-    sha1 "20a279b9541218a18e208284c043d7ea05592732" => :mountain_lion
   end
 
   depends_on "pkg-config" => :build
