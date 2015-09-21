@@ -42,8 +42,4 @@ class Php54Igbinary < AbstractPhp54Extension
       ;apc.serializer=igbinary
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("igbinary")
-  end
 end

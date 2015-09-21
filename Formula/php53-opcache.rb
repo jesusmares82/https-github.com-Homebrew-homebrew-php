@@ -208,8 +208,4 @@ class Php53Opcache < AbstractPhp53Extension
       apc.cache_by_default = false
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("OPcache")
-  end
 end

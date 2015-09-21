@@ -49,8 +49,4 @@ class Php55Blitz < AbstractPhp55Extension
       blitz.warn_context_duplicates=0
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("blitz")
-  end
 end

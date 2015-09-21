@@ -22,8 +22,4 @@ class Php55Kafka < AbstractPhp55Extension
     prefix.install "modules/kafka.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("kafka")
-  end
 end

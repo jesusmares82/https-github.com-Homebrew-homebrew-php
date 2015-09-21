@@ -29,8 +29,4 @@ class Php70Pcntl < AbstractPhp70Extension
     prefix.install "modules/pcntl.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("pcntl")
-  end
 end

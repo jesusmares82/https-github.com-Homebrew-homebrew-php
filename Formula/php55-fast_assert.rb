@@ -28,8 +28,4 @@ class Php55FastAssert < AbstractPhp55Extension
     prefix.install ["modules/fast_assert.so"]
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("fast_assert")
-  end
 end

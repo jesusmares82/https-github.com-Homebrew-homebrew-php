@@ -18,8 +18,4 @@ class Php53Sodium < AbstractPhp53Extension
     prefix.install "modules/sodium.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").split("\n").include?("sodium")
-  end
 end

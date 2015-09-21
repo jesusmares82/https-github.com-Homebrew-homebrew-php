@@ -18,8 +18,4 @@ class Php55Grpc < AbstractPhp55Extension
     prefix.install "modules/grpc.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("grpc")
-  end
 end

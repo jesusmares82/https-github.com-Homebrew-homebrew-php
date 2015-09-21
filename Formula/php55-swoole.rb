@@ -24,8 +24,4 @@ class Php55Swoole < AbstractPhp55Extension
     prefix.install "modules/swoole.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("swoole")
-  end
 end

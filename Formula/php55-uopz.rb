@@ -37,8 +37,4 @@ class Php55Uopz < AbstractPhp55Extension
   def extension_type
     "zend_extension"
   end
-
-  test do
-    shell_output("php -m").include?("uopz")
-  end
 end

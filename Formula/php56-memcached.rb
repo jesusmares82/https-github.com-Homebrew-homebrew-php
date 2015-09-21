@@ -170,8 +170,4 @@ class Php56Memcached < AbstractPhp56Extension
       memcached.store_retry_count = 2
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("memcached")
-  end
 end

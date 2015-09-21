@@ -45,8 +45,4 @@ class Php56Redis < AbstractPhp56Extension
       ;session.save_path = "tcp://host1:6379?weight=1, tcp://host2:6379?weight=2&timeout=2.5, tcp://host3:6379?weight=2"
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("redis")
-  end
 end

@@ -37,8 +37,4 @@ class Php56Uopz < AbstractPhp56Extension
   def extension_type
     "zend_extension"
   end
-
-  test do
-    shell_output("php -m").include?("uopz")
-  end
 end

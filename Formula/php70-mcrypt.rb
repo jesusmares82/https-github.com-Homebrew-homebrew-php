@@ -31,8 +31,4 @@ class Php70Mcrypt < AbstractPhp70Extension
     prefix.install "modules/mcrypt.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("mcrypt")
-  end
 end

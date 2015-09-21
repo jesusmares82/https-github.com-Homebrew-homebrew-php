@@ -35,11 +35,4 @@ class Php54Parsekit < AbstractPhp54Extension
     prefix.install "examples"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    Dir.chdir prefix
-    shell_output("php -m").include?("parsekit")\
-      && shell_output("php examples/compile_file.php")\
-      && shell_output("php examples/compile_string.php")
-  end
 end

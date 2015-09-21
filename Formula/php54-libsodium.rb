@@ -27,8 +27,4 @@ class Php54Libsodium < AbstractPhp54Extension
     prefix.install "modules/libsodium.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("libsodium")
-  end
 end

@@ -31,8 +31,4 @@ class Php54Gmp < AbstractPhp54Extension
     prefix.install "modules/gmp.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("gmp")
-  end
 end

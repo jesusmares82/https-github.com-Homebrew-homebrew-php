@@ -50,8 +50,4 @@ class Php54Http < AbstractPhp54Extension
     # remove old configuration file
     rm_f config_scandir_path / "ext-http.ini"
   end
-
-  test do
-    shell_output("php -m").include?("http")
-  end
 end

@@ -213,7 +213,5 @@ class Php70Opcache < AbstractPhp70Extension
     EOS
   end
 
-  test do
-    shell_output("php -m").include?("Zend OPcache")
   end
 end

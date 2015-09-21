@@ -43,8 +43,4 @@ class Php55Igbinary < AbstractPhp55Extension
       ;apc.serializer=igbinary
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("igbinary")
-  end
 end

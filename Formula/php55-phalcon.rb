@@ -34,8 +34,4 @@ class Php55Phalcon < AbstractPhp55Extension
     prefix.install "modules/phalcon.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("phalcon")
-  end
 end

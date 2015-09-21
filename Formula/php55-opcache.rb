@@ -34,8 +34,6 @@ class Php55Opcache < AbstractPhp55Extension
     write_config_file if build.with? "config-file"
   end
 
-  test do
-    shell_output("php -m").include?("Zend OPcache")
   end
 
   def config_file

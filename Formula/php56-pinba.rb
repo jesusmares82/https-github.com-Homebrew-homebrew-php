@@ -26,8 +26,4 @@ class Php56Pinba < AbstractPhp56Extension
 
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("pinba")
-  end
 end

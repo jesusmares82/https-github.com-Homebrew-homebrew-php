@@ -26,8 +26,4 @@ class Php53Mongo < AbstractPhp53Extension
     prefix.install "modules/mongo.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("mongo")
-  end
 end

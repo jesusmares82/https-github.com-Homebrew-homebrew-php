@@ -31,8 +31,4 @@ class Php70Pspell < AbstractPhp70Extension
     prefix.install "modules/pspell.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("pspell")
-  end
 end

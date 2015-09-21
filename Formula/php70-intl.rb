@@ -43,8 +43,4 @@ class Php70Intl < AbstractPhp70Extension
       ;intl.error_level = E_WARNING
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("intl")
-  end
 end

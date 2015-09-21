@@ -25,8 +25,4 @@ class Php56Hprose < AbstractPhp56Extension
     prefix.install "modules/hprose.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("hprose")
-  end
 end

@@ -20,8 +20,4 @@ class Php56Lzf < AbstractPhp56Extension
     prefix.install "modules/lzf.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("lzf")
-  end
 end

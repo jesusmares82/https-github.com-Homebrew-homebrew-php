@@ -41,8 +41,4 @@ class Php53Intl < AbstractPhp53Extension
       ;intl.error_level = E_WARNING
     EOS
   end
-
-  test do
-    shell_output("php -m").include?("intl")
-  end
 end

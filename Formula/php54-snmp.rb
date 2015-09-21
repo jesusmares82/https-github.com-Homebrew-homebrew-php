@@ -31,8 +31,4 @@ class Php54Snmp < AbstractPhp54Extension
     prefix.install "modules/snmp.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("snmp")
-  end
 end

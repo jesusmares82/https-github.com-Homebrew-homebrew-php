@@ -19,8 +19,4 @@ class Php55Pimple < AbstractPhp55Extension
     end
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("pimple")
-  end
 end

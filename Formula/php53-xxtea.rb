@@ -19,8 +19,4 @@ class Php53Xxtea < AbstractPhp53Extension
     prefix.install "modules/xxtea.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("xxtea")
-  end
 end

@@ -32,8 +32,4 @@ class Php70PdoPgsql < AbstractPhp70Extension
     prefix.install "modules/pdo_pgsql.so"
     write_config_file if build.with? "config-file"
   end
-
-  test do
-    shell_output("php -m").include?("pdo_pgsql")
-  end
 end

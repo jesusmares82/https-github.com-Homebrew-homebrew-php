@@ -120,7 +120,7 @@ class AbstractPhpExtension < Formula
   end
 
   test do
-    shell_output("php -m").downcase.include?(extension.downcase)
+    assert shell_output("#{Formula[php_formula].opt_bin}/php -m").downcase.include?(extension.downcase), "failed to find extension in php -m output"
   end
 
   def caveats
