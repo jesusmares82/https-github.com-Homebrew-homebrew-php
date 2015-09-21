@@ -4,7 +4,7 @@ class Php55Jsmin < AbstractPhp55Extension
   init
   homepage "https://pecl.php.net/package/jsmin"
   url "https://pecl.php.net/get/jsmin-1.1.0.tgz"
-  sha1 "e081d7c66a9401b9cd8b0ad585f357a4d7e335ef"
+  sha256 "9cf4180a816bac08300c45083410ca536200bd4940db0174026b9a825161f159"
   head "https://github.com/sqmk/pecl-jsmin.git"
 
   bottle do
