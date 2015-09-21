@@ -2,9 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Magickwand < AbstractPhp56Extension
   init
+  desc "ImageMagick MagickWand API"
   homepage "http://www.magickwand.org"
   url "http://www.magickwand.org/download/php/MagickWandForPHP-1.0.9-2.tar.bz2"
-  sha1 "b3c12b5a6f8fb28df7f8c480f2df0eb5baedff71"
+  sha256 "05e5fe5bc52ab9169228bbbde38b222208d1ae19db718b66d2c7ac4180847727"
 
   depends_on "pkg-config" => :build
   depends_on "imagemagick"
@@ -19,9 +20,5 @@ class Php56Magickwand < AbstractPhp56Extension
     system "make"
     prefix.install "modules/magickwand.so"
     write_config_file if build.with? "config-file"
-  end
-
-  test do
-    shell_output("php -m").include?("magickwand")
   end
 end
