@@ -540,7 +540,7 @@ INFO
     s.join "\n"
   end
 
-  def test
+  test do
     system "#{bin}/php -i"
 
     if build_fpm?

@@ -18,8 +18,4 @@ class Php55Mustache < AbstractPhp55Extension
     prefix.install "modules/mustache.so"
     write_config_file if build.with? "config-file"
   end
-
-  def test
-    system "php -m | grep mustache"
-  end
 end
