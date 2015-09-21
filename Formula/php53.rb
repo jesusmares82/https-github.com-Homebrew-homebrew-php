@@ -7,14 +7,11 @@ class Php53 < AbstractPhp
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 3
+  revision 4
 
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
-    sha256 "146e013439c6e831cbe749501b5c05e15ecd6f6c283b1240e1e37ffe7304b264" => :el_capitan
-    sha256 "27f30057e84ef8f1167b61d348be08b5734ddaa3725c633f332ab63a5c53b8e6" => :yosemite
-    sha256 "3df31e6e48d221897d8837c8bb327601037aa0b6567b970497acdc3c2552c484" => :mavericks
   end
 
   # build dependancy needed to fix issue #962
