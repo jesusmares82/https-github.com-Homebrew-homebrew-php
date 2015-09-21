@@ -7,6 +7,12 @@ class Php55Judy < AbstractPhp55Extension
   sha256 "6b913af2c44ac84a2224fecf8a81ddcb0c753252cafd153cb0e9d7c33a333118"
   head "https://github.com/orieg/php-judy.git"
 
+  bottle do
+    cellar :any
+    sha256 "84217a84d72d8d00036cb6a41e8c958b090c0c643d44aad90024d960a4ce2e57" => :yosemite
+    sha256 "82eb76ec5e48d27aec11b9ac5f4ed3b1b8888498e61e1e381313e8bddd97d076" => :mavericks
+  end
+
   depends_on "judy"
 
   def install
