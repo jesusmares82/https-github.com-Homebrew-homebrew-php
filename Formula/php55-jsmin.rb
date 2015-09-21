@@ -8,9 +8,11 @@ class Php55Jsmin < AbstractPhp55Extension
   head "https://github.com/sqmk/pecl-jsmin.git"
 
   bottle do
-    sha1 "d2c959b9c9fe65cdcc01cf5d060fab52a1f99a32" => :yosemite
-    sha1 "d0afb389706e8feab282d50cdb8b248e10e385ff" => :mavericks
-    sha1 "0d75ff0fd9e378b1e74909db53752fcffedbe7df" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "44ffc652615b0d5279a4a6b4a17c890efc41f2150b1d718b2dfac38c826ee417" => :el_capitan
+    sha256 "3d41384e4d5072f3dcc56127f298fff32b52f4167fd379d618003c5474e84634" => :yosemite
+    sha256 "a1e78657ee4a318092a8af298ef63ac511dc2db38a85b3e13ebfeffb5c968aac" => :mavericks
   end
 
   def install
