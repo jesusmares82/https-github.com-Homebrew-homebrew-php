@@ -7,6 +7,12 @@ class Php56Zmq < AbstractPhp56Extension
   sha256 "2ae77e90e0ed8112b11e838d6303940bbcae39e8d37683632a299db881bdb217"
   head "https://github.com/mkoppanen/php-zmq.git"
 
+  bottle do
+    sha256 "9e97aaaa41157170cb8fd2d93cf7aa764fec45e2b048f3bb93739263abe53370" => :el_capitan
+    sha256 "bdb34f6f8688c97009cbf0835268d579bba329d04a594610fdc9b6cec44b17e6" => :yosemite
+    sha256 "f2686fff07dca96bbb5ce698c9014f10bed84be265d871c35359fc593a3ef137" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "zeromq"
 
