@@ -2,7 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Thrift < AbstractPhp56Extension
   init
-  homepage "http://thrift.apache.org/"
+  homepage "https://thrift.apache.org/"
   url "https://github.com/apache/thrift/archive/0.9.2.tar.gz"
   sha256 "1eacc3d65b910fadf7969326285170d33cbe9fe30cc7bf421916f753edb3dabb"
 

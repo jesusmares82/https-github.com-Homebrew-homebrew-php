@@ -1,4 +1,3 @@
-require "formula"
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Redland < AbstractPhp55Extension

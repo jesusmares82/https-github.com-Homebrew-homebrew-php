@@ -1,10 +1,10 @@
-require "formula"
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Dmtx < AbstractPhp55Extension
   init
   homepage "http://www.libdmtx.org"
   url "https://github.com/maZahaca/php-dmtx/archive/0.0.3-dev.tar.gz"
+  version "0.0.3"
   sha1 "98a5712cdcfd4273fffb66f0372e3a0027d36d29"
   head "https://github.com/maZahaca/php-dmtx.git"
 
