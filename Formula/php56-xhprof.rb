@@ -9,9 +9,11 @@ class Php56Xhprof < AbstractPhp56Extension
   version '254eb24'
 
   bottle do
-    sha1 "c480499dd18cf90a7a7202ec3f9039b6b0cf88d8" => :yosemite
-    sha1 "73abb71178efc8a9489ccd97628e34142bf882c9" => :mavericks
-    sha1 "451676821cd45ddeaa92fd5dba3da178dd69bdfe" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "324b1a1dffac750172d3e0dbd1a1ba89117b54b9e1499fa61e6b68f66b328b75" => :el_capitan
+    sha256 "a34fee24d050b1cdb5096e592c3dcd7e9df52f43c2c38611d5dc5e3a90a62d7e" => :yosemite
+    sha256 "81104762bdf370b7f407ba6c73aa3852bc5694baf7990987f1c8b387c51e1f16" => :mavericks
   end
 
   depends_on 'pcre'
