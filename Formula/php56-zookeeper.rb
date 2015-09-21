@@ -4,7 +4,7 @@ class Php56Zookeeper < AbstractPhp56Extension
   init
   homepage "https://pecl.php.net/package/zookeeper"
   url "https://pecl.php.net/get/zookeeper-0.2.2.tgz"
-  sha1 "029c0d9c989c56c5afead8bb4621b7f2236a7b6f"
+  sha256 "ce657910472b0880e2f9dd0c73558a94a15c2cfc0208ba305dcc02e27cb34f78"
   head "https://github.com/andreiz/php-zookeeper.git"
 
   option "disable-session", "Disable zookeeper session handler support"
