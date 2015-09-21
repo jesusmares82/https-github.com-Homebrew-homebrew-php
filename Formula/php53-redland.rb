@@ -8,6 +8,11 @@ class Php53Redland < AbstractPhp53Extension
   sha256 "ff72b587ab55f09daf81799cb3f9d263708fad5df7a5458f0c28566a2563b7f5"
 
   bottle do
+    cellar :any
+    revision 1
+    sha256 "5a6db9f445e2303ad53734204dbcdd25136b0c3d1716295a4beb4325e6bb3a35" => :el_capitan
+    sha256 "29ef1ae3fb3ee9ec68d7bb584172b397f78b9c7f225b9daecf1dd6217d29e105" => :yosemite
+    sha256 "f253a2005e2154887b7d5604066739d5e29f141a1cc37cc58effaa506e4bcad3" => :mavericks
   end
 
   depends_on "pkg-config" => :build
