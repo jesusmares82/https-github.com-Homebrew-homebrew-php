@@ -34,8 +34,6 @@ class Php55Opcache < AbstractPhp55Extension
     write_config_file if build.with? "config-file"
   end
 
-  end
-
   def config_file
     # Use upsteam defaults (https://github.com/zendtech/ZendOptimizerPlus/blob/v7.0.4/opcache.ini)
     # and ensure apc.cache_by_default is set to false

@@ -212,6 +212,4 @@ class Php70Opcache < AbstractPhp70Extension
       apc.cache_by_default = false
     EOS
   end
-
-  end
 end
