@@ -38,7 +38,7 @@ class AbstractPhp < Formula
     depends_on 'imap-uw' if build.include?('with-imap')
     depends_on 'jpeg'
     depends_on 'libpng'
-    depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
+    depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion || MacOS.version >= :el_capitan
     depends_on 'unixodbc'
     depends_on 'readline'
 
@@ -215,7 +215,7 @@ INFO
       "--without-snmp",
     ]
 
-    if build.include?('with-homebrew-libxml2') || MacOS.version < :lion
+    if build.include?('with-homebrew-libxml2') || MacOS.version < :lion || MacOS.version >= :el_capitan
       args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
     end
 
