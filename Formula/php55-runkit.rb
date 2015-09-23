@@ -4,7 +4,7 @@ class Php55Runkit < AbstractPhp55Extension
   init
   homepage "http://php.net/manual/en/book.runkit.php"
   url "https://github.com/zenovich/runkit/archive/27f33f55eae4459448fc39fac49daba26bb6b575.tar.gz"
-  sha1 "16da4d06156061e65a637f766bfa5ea49455b9be"
+  sha256 "4b19ca9d4003eac6af51dd3b6b8e4365a74351a4fd248f2fe5c546b656a16a99"
   head "https://github.com/zenovich/runkit.git"
   version "5e179e9"
 
