@@ -4,7 +4,7 @@ class Php55Mosquitto < AbstractPhp55Extension
   init
   homepage "https://github.com/mgdm/Mosquitto-PHP/"
   url "https://pecl.php.net/get/Mosquitto-0.2.2.tgz"
-  sha1 "b63a5816c89b617d95c0620743edb082a5b0382b"
+  sha256 "e9baa3af1d9a62f8fa1b76ffffbd13fffe7b65e0122130fb389915269543915e"
   head "https://github.com/mgdm/Mosquitto-PHP.git"
 
   depends_on "mosquitto"
