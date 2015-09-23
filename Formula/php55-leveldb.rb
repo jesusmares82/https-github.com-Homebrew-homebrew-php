@@ -4,7 +4,7 @@ class Php55Leveldb < AbstractPhp55Extension
   init
   homepage "https://pecl.php.net/package/leveldb"
   url "https://pecl.php.net/get/leveldb-0.1.4.tgz"
-  sha1 "9a15fb0105516533c38de32dc2a1164f9620e046"
+  sha256 "b0d2485e7f1353a794cd58bbaf331154723cda98ae41757f1167e1661bd78eef"
   head "https://github.com/reeze/php-leveldb.git"
 
   depends_on "leveldb"
