@@ -4,7 +4,7 @@ class Php55Libevent < AbstractPhp55Extension
   init
   homepage "https://pecl.php.net/package/libevent"
   url "https://pecl.php.net/get/libevent-0.0.5.tgz"
-  sha1 "0817616ef02a5ab2bbc804dad121239391578956"
+  sha256 "04c6ebba72a70694a68141a897e347a7f23e57117bffb80ac21e524529b6af78"
   head "http://svn.php.net/repository/pecl/libevent/trunk/"
 
   depends_on "libevent"
