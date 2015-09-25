@@ -23,10 +23,17 @@ class AbstractPhpPhar < Formula
   end
 
   def install
-    libexec.install phar_file
+    if phar_file == phar_bin
+      real_phar_file = phar_file + ".phar"
+      File.rename(phar_file, real_phar_file)
+    else
+      real_phar_file = phar_file
+    end
+
+    libexec.install real_phar_file
     (libexec/phar_bin).write <<-EOS.undent
       #!/usr/bin/env bash
-      /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{phar_file} $*
+      /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{real_phar_file} $*
     EOS
     chmod 0755, (libexec/phar_bin)
     bin.install_symlink (libexec/phar_bin)
