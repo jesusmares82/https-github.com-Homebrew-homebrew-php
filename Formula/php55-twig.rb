@@ -4,7 +4,7 @@ class Php55Twig < AbstractPhp55Extension
   init
   homepage "http://twig.sensiolabs.org/"
   url "https://github.com/twigphp/Twig/archive/v1.16.2.tar.gz"
-  sha1 "926ff53dad6ccd2560a562942d1dfd1357460cc0"
+  sha256 "891e0e8f8eeee10f67c84556c28258dc5a96f8ef83e9fee1fefa64cf6aee27ef"
   head "https://github.com/twigphp/Twig.git"
 
   def install
