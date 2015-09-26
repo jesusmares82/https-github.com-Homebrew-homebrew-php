@@ -9,7 +9,7 @@ class Php53Memcache < AbstractPhp53Extension
 
   devel do
     url "https://pecl.php.net/get/memcache-3.0.8.tgz"
-    sha1 "681ece0258958d60902d6bbf0cf1f2171a0cc47c"
+    sha256 "2cae5b423ffbfd33a259829849f6000d4db018debe3e29ecf3056f06642e8311"
   end
 
   def install

@@ -16,7 +16,7 @@ class Php55Memcache < AbstractPhp55Extension
 
   devel do
     url "https://pecl.php.net/get/memcache-3.0.8.tgz"
-    sha1 "2cae5b423ffbfd33a259829849f6000d4db018debe3e29ecf3056f06642e8311"
+    sha256 "2cae5b423ffbfd33a259829849f6000d4db018debe3e29ecf3056f06642e8311"
   end
 
   def install
