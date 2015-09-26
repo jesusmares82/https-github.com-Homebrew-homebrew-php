@@ -4,7 +4,7 @@ class Php55Stemmer < AbstractPhp55Extension
   init
   homepage "https://github.com/hthetiot/php-stemmer"
   url "https://github.com/hthetiot/php-stemmer/archive/0f32673f89e72049a6c43a4d5966a88b81aff039.tar.gz"
-  sha1 "e26980062d5bc2e275eddaee46aef56ba25906c4"
+  sha256 "a3e2769afc0473d85f6d097596e3897a48ee294f071edc8d197fa04c6fc30b9f"
   version "0f32673"
 
   def install
