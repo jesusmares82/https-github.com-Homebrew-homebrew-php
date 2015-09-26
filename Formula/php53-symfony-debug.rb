@@ -2,9 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53SymfonyDebug < AbstractPhp53Extension
   init
-  homepage "http://symfony.com/"
-  url "https://github.com/symfony/Debug/archive/v2.6.0.tar.gz"
-  sha1 "ea9aa9791acb62dd2e87d90e1bf3499e70483b89"
+  desc "Symfony debug component"
+  homepage "http://symfony.com/doc/current/components/debug"
+  url "https://github.com/symfony/debug/archive/v2.7.5.tar.gz"
+  sha256 "60e9e5e84d01a80c3028bde183eeaf1adb85cdd0761a23076dc3852e84afa52e"
   head "https://github.com/symfony/Debug.git"
 
   def extension
