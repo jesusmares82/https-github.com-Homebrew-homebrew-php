@@ -8,6 +8,13 @@ class Php54SymfonyDebug < AbstractPhp54Extension
   sha256 "60e9e5e84d01a80c3028bde183eeaf1adb85cdd0761a23076dc3852e84afa52e"
   head "https://github.com/symfony/Debug.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "220421c12f979d2d88aac1373540b0c9471f91aa3478feebc6d1fb8f51b5a7fd" => :el_capitan
+    sha256 "bb85c90a13ee7cfd83f868de482927438308e7eb07740c065efaaec74182e07e" => :yosemite
+    sha256 "8f30a3c9e9bf547b7b8f500705e9f54338702c52c526923e6610fdf8e5336f5b" => :mavericks
+  end
+
   def extension
     "symfony_debug"
   end
