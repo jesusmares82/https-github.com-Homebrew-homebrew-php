@@ -4,7 +4,7 @@ class Php55Thrift < AbstractPhp55Extension
   init
   homepage "https://thrift.apache.org/"
   url "https://github.com/apache/thrift/archive/0.9.2.tar.gz"
-  sha1 "d775d8274635ccc0fc83804d53ed7c14f8608e23"
+  sha256 "1eacc3d65b910fadf7969326285170d33cbe9fe30cc7bf421916f753edb3dabb"
 
   def module_path
     prefix / "thrift_protocol.so"
