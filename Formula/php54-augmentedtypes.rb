@@ -4,7 +4,7 @@ class Php54Augmentedtypes < AbstractPhp54Extension
   init
   homepage "https://github.com/box/augmented_types"
   url "https://github.com/box/augmented_types/archive/v0.6.6.tar.gz"
-  sha1 "0d6ef730b18ffbe551cbfd1d7273de6e6db746d5"
+  sha256 "54b295f902e56daf1347b1e1f7d633a84c3e03aacac78424e6314adfd922e4db"
   head "https://github.com/box/augmented_types.git"
 
   option "without-default-enforcement", "Turn off Augmented Types enforcement by default"
