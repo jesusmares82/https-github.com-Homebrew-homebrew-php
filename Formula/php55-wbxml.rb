@@ -4,7 +4,7 @@ class Php55Wbxml < AbstractPhp55Extension
   init
   homepage "https://pecl.php.net/package/wbxml"
   url "https://pecl.php.net/get/wbxml-1.0.3.tgz"
-  sha1 "2cf4705ad135a9695b3fc8e5e7135f6ad89623e6"
+  sha256 "8a2e36aa1e59712614734a150d4bc2c09c1e7d1f9b90404beeb99d32d19d15ae"
   head "https://svn.php.net/repository/pecl/wbxml/trunk/"
 
   depends_on "libwbxml"
