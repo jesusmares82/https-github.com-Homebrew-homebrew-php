@@ -4,7 +4,7 @@ class Php55Xcache < AbstractPhp55Extension
   init
   homepage "http://xcache.lighttpd.net"
   url "http://xcache.lighttpd.net/pub/Releases/3.2.0/xcache-3.2.0.tar.bz2"
-  sha1 "711f56b66d8da884214fa311a28e1d299bb73e05"
+  sha256 "7d12a3cbd5f729b70f9226ac19406d11219f1c5f5e82b3bbb43ea9460cbf6cbd"
 
   def install
     ENV.universal_binary if build.universal?
