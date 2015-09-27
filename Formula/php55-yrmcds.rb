@@ -7,6 +7,13 @@ class Php55Yrmcds < AbstractPhp55Extension
   sha256 "5a77840db23d5b93b86c3ef9507e10894be85cd43e7283af80b6bbacd4b08b69"
   head "https://github.com/cybozu/php-yrmcds.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "87dd6b7c9721a303ed528c72e0ae2dac4627767f0d40e1d40a051c9e20c88a11" => :el_capitan
+    sha256 "bf719ca5b6ac08446e51d7bb1c7eaad1d1964198b1f0ad8183ed54f9027f7ef8" => :yosemite
+    sha256 "18a25840672b041d1909519baccb7d6ae65f0a323ebf5a9bb164603c896617ae" => :mavericks
+  end
+
   patch do
     url "https://gist.githubusercontent.com/KonstantinKuklin/4cebe58997e2152cdc35/raw/09a5c4cd1a2739d2d9e0e38338d4e9d01058f914/patch_php-yrmcds_mac.patch"
     sha1 "a566f5eb93db4b088481a731a831bbdb4f0f3b70"
