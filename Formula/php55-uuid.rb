@@ -10,7 +10,7 @@ class Php55Uuid < AbstractPhp55Extension
   stable do
     patch do
       url "https://gist.github.com/phoenixsong6/4958223/raw/4ad7ebf2bff53887f64ac5be802b85ea5856fa85/php-uuid.patch"
-      sha1 "274dfb222ee214a876b2e5bd070b711ce79fd859"
+      sha256 "3abf9dfc3cbf7c3db30d8b466a1f05d0a5c2221fdda251e8095ebfc99cd78989"
     end
   end
   bottle do
@@ -20,11 +20,10 @@ class Php55Uuid < AbstractPhp55Extension
     sha256 "63365e181be9e0912fd97660f303357a3e39a0fa637e58a66b0b8cca0dba15e5" => :mavericks
   end
 
-
   head do
     patch do
       url "https://gist.github.com/phoenixsong6/4958223/raw/e802b0e6daebb4403dc77c81e149c5f8c8f49b7e/php-uuid-trunk.patch"
-      sha1 "b5fbab7574cf035d318fd932ea5bd4bca0aa44e9"
+      sha256 "94c346df0587156ea8c7a99f091f456ae24018fc2bb4dd9e7d59390c1f6035f0"
     end
   end
 
