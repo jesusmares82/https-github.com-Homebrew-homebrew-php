@@ -9,9 +9,11 @@ class Php55Xhprof < AbstractPhp55Extension
   version "254eb24"
 
   bottle do
-    sha1 "2bdd02714f35b1a4ea1270ec17344245de5d9d56" => :yosemite
-    sha1 "343f6bd9c0514c4b190d132b7e70afc6de003059" => :mavericks
-    sha1 "682e3e600b6df4aa06c413a2b1c5e11282c0c657" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "b3f5f02743d50d4d899e26a96274ef6ddd34be783114e532096eb32e59e423c7" => :el_capitan
+    sha256 "621f6d2ea7ba319e59ce9e68debaafdec151e471ad0856ca5f72054c9e9b574d" => :yosemite
+    sha256 "0b403d85dd5fa38bebf24985fbafb11f9747cd7610eac3a5ae038a507257238e" => :mavericks
   end
 
   depends_on "pcre"
