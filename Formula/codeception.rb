@@ -1,8 +1,8 @@
-require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-requirement", __FILE__)
+require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 
-class Codeception < Formula
-  desc "PHP Testing Framework designed to work just out of the box."
+class Codeception < AbstractPhpPhar
+  init
+  desc "Testing Framework designed to work just out of the box"
   homepage "http://codeception.com/quickstart"
   url "http://codeception.com/releases/2.1.2/codecept.phar"
   sha256 "8a8fe5c4ba2582bcce3c4435f7d3e92eb08f51094f12a97017646d9c8ea3cdf4"
@@ -14,13 +14,12 @@ class Codeception < Formula
     sha256 "7a10d2f42850f7d7733d17806feaf0b0bc4fd212dc6556e61291cd8ea7a276e3" => :mountain_lion
   end
 
-  def install
-    mv "codecept.phar", "codecept-#{version}.phar"
-    libexec.install "codecept-#{version}.phar"
-    sh = libexec + "codecept"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/codecept-#{version}.phar $*")
-    chmod 0755, sh
-    bin.install_symlink sh
+  def phar_file
+    "codecept.phar"
+  end
+
+  def phar_bin
+    "codecept"
   end
 
   def caveats; <<-EOS.undent
