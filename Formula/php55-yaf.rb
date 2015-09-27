@@ -7,6 +7,13 @@ class Php55Yaf < AbstractPhp55Extension
   sha256 "fb59db901008b157d11c255f1a1492ccd02df2e2ab9869aa4f9fa9fc73272298"
   head "https://svn.php.net/repository/pecl/yaf/trunk/"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "905de50c6c680d37c07161ef7f3ce5a77b2225990e0eded39293f961ee124d4e" => :el_capitan
+    sha256 "e365cc360489370ca9c0715aa7d03792f826d76cdfcb8f3bf0445f5c66307198" => :yosemite
+    sha256 "7c5c9f18a189ab2ba844d15546d0205d918e53d20ebe25cc242ee97d7d25dda3" => :mavericks
+  end
+
   depends_on "pcre"
 
   def install
