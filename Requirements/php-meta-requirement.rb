@@ -1,14 +1,16 @@
 require File.join(File.dirname(__FILE__), 'homebrew-php-requirement')
 
 class PhpMetaRequirement < HomebrewPhpRequirement
+  default_formula "php56"
+
   def satisfied?
     %w{php53 php54 php55 php56 php70}.any? do |php|
         f = Formula[php]
-        f.rack.directory? && f.rack.children.length > 0
+        f.linked_keg.exist?
     end
   end
 
   def message
-    "Missing PHP53, PHP54, PHP55, PHP56, PHP70 from homebrew-php. Please install one of them before continuing"
+    "Missing a core php install from homebrew-php. Please run: brew install php56"
   end
 end
