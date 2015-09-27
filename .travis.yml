@@ -15,22 +15,19 @@ matrix:
       rvm: system
 
 before_install:
-  - brew update
+  - sudo rm -rf /usr/local/Library/Taps/homebrew/homebrew-php/
+  - sudo chown -R $USER /usr/local
   - brew tap homebrew/dupes
   - brew tap homebrew/versions
-  - sudo rm -rf /usr/local/Library/Taps/homebrew/homebrew-php/.git/refs /usr/local/Library/Taps/homebrew/homebrew-php/.git/packed-refs
-  - sudo rsync -az "$TRAVIS_BUILD_DIR/" /usr/local/Library/Taps/homebrew/homebrew-php/
-  - export TRAVIS_BUILD_DIR="/usr/local/Library/Taps/homebrew/homebrew-php"
-  - sudo chown -R $USER /usr/local
+  - brew update
+  - ln -s $PWD $(brew --prefix)/Library/Taps/homebrew/homebrew-php
   - cd /usr/local/Library/Taps/homebrew/homebrew-php
+  - export TRAVIS_BUILD_DIR="/usr/local/Library/Taps/homebrew/homebrew-php"
   - env | grep TRAVIS_
-  - if [ -f ".git/shallow" ]; then travis_retry git fetch --unshallow; fi
-  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then git reset --hard $TRAVIS_COMMIT || travis_retry git fetch origin +refs/pull/$TRAVIS_PULL_REQUEST/merge:; fi
-  - git reset --hard $TRAVIS_COMMIT
-  - git clean -qxdff
+  - if [ -f ".git/shallow" ]; then travis_retry git fetch --unshallow; fi # only needed for possible future bottling 
 
 script:
-  - brew test-bot
+  - brew test-bot --tap=homebrew/php
 
 notifications:
   email: false
