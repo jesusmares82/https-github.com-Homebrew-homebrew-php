@@ -7,6 +7,12 @@ class Php54Dbus < AbstractPhp54Extension
   sha256 "018ce17ceb18bd7085f7151596835b09603140865a49c76130b77e00bc7fcdd7"
   head "http://svn.php.net/repository/pecl/dbus/trunk/"
 
+  bottle do
+    sha256 "507a57fab7d712b44caf7ab8ee02c67d26b620dec561c8ba862f5197199e48de" => :el_capitan
+    sha256 "4b82eb999493c3d452b2c1b7bf3e232f4d60909f20463e2e06e964e03beafacd" => :yosemite
+    sha256 "5794acf4a9322d4bf8906bc21313691277ad035830cd9731f9656fb663918ecd" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "d-bus" => :build
 
