@@ -4,7 +4,7 @@ class Php54Mailparse < AbstractPhp54Extension
   init
   homepage "https://pecl.php.net/package/mailparse"
   url "https://pecl.php.net/get/mailparse-2.1.6.tgz"
-  sha1 "f0deaa433a1f7833e80f80dabc1bbbdbe0071b3c"
+  sha256 "73705197d2b2ee782efa5477eb2a21432f592c2cb05a72c3a037bbe39e02b5cc"
   head "https://svn.php.net/repository/pecl/mailparse/trunk"
 
   depends_on "pcre"
