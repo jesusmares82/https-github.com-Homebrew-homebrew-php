@@ -4,7 +4,7 @@ class Php54Ssh2 < AbstractPhp54Extension
   init
   homepage "https://pecl.php.net/package/ssh2"
   url "https://pecl.php.net/get/ssh2-0.12.tgz"
-  sha1 "b86a25bdd3f3558bbcaaa6d876309fbbb5ae134d"
+  sha256 "600c82d2393acf3642f19914f06a7afea57ee05cb8c10e8a5510b32188b97f99"
   head "https://svn.php.net/repository/pecl/ssh2/trunk/"
 
   depends_on "libssh2"
