@@ -8,9 +8,10 @@ class Php54Geoip < AbstractPhp54Extension
   head "https://svn.php.net/repository/pecl/geoip/trunk/"
 
   bottle do
-    sha256 "e33825c727f08f63324fc2357734ef65fb196131b8b61d09be2b04a432d6379c" => :yosemite
-    sha256 "3b4b1610e2a7645796883eaf92ddb7ee8c44866bb48f06a9ad4581a577e9be1d" => :mavericks
-    sha256 "048cac6ed770fdb0076d91af2302857aeceaea32ac6fb2f6f223bfe7eaf439d5" => :mountain_lion
+    revision 1
+    sha256 "7211d8412f93ff21690c8eb61b9f1b368cf46733be095196e5954ad004d0fb08" => :el_capitan
+    sha256 "7a9d2ca4d513b0cda4d0b95705eb7dad75314f7f01ea6339c6656e79485cf0d2" => :yosemite
+    sha256 "474bcf8be449dcef0cdf51952c5f9da2d14e6b33b089b5232dcad3bc09a5ec24" => :mavericks
   end
 
   depends_on "geoip"
