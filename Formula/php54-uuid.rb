@@ -13,6 +13,13 @@ class Php54Uuid < AbstractPhp54Extension
       sha1 "274dfb222ee214a876b2e5bd070b711ce79fd859"
     end
   end
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c28d4c9e6606f109090500c0aaa2ecdf17435d8b0d7ca604d1c6f7974017a75a" => :el_capitan
+    sha256 "222a3d78f2ede8bfe94cc5f7ed073671b7724d3f18384f3e8107fd2b1998da49" => :yosemite
+    sha256 "f0affb8053f969005fcb6f2b967a312d5a75ed6685c5f9e4be66002881509841" => :mavericks
+  end
+
 
   head do
     patch do
