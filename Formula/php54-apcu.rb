@@ -7,6 +7,13 @@ class Php54Apcu < AbstractPhp54Extension
   sha256 "178a731ee3435b451f1144bc4a63c9d70d4909a2c434e17c6e07db554df90bd6"
   head "https://github.com/krakjoe/apcu.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "71fd875398600818c8ba0438f582e60873f0f54eb609491c6158693414c1577c" => :el_capitan
+    sha256 "68b5f9dfbc037cae8e2d28a1b412c9222c56b1f3f27c3ac0a72abead8861a1d7" => :yosemite
+    sha256 "2899e25e3a9bce9175b1d1b016dd4c4d6ba76e05b4aac019383497bd840cfe0c" => :mavericks
+  end
+
   option "with-apc-bc", "Whether APCu should provide APC full compatibility support"
   depends_on "pcre"
 
