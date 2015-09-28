@@ -4,7 +4,7 @@ class Php54Apc < AbstractPhp54Extension
   init
   homepage "https://pecl.php.net/package/apc"
   url "https://pecl.php.net/get/APC-3.1.13.tgz"
-  sha1 "cafd6ba92ac1c9f500a6c1e300bbe8819daddfae"
+  sha256 "5ef8ba07729e72946e95951672a5378bed98cb5a294e79bf0f0a97ac62829abd"
   head "https://svn.php.net/repository/pecl/apc/trunk/"
 
   depends_on "pcre"
