@@ -4,7 +4,7 @@ class Php54Imagick < AbstractPhp54Extension
   init
   homepage "https://pecl.php.net/package/imagick"
   url "https://pecl.php.net/get/imagick-3.1.2.tgz"
-  sha1 "7cee88bc8f6f178165c9d43e302d99cedfbb3dff"
+  sha256 "528769ac304a0bbe9a248811325042188c9d16e06de16f111fee317c85a36c93"
   head "https://svn.php.net/repository/pecl/imagick/trunk/"
   revision 1
 
