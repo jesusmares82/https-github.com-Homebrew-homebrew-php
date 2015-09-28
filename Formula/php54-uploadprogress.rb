@@ -4,7 +4,7 @@ class Php54Uploadprogress < AbstractPhp54Extension
   init
   homepage "https://pecl.php.net/package/uploadprogress"
   url "https://pecl.php.net/get/uploadprogress-1.0.3.1.tgz"
-  sha1 "5fd50a1d5d3ee485e31e16d76b686873125e8dec"
+  sha256 "30588b4589543bcf6371532546b1a8cee9da1086c206aca9f96ea1bd486bbab2"
   head "https://svn.php.net/repository/pecl/uploadprogress/trunk/"
 
   depends_on "pcre"
