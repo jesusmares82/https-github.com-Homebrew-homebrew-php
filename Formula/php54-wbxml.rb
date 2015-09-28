@@ -7,6 +7,12 @@ class Php54Wbxml < AbstractPhp54Extension
   sha256 "8a2e36aa1e59712614734a150d4bc2c09c1e7d1f9b90404beeb99d32d19d15ae"
   head "https://svn.php.net/repository/pecl/wbxml/trunk/"
 
+  bottle do
+    cellar :any
+    sha256 "2da947b56981cfe9b7d215f849bc242bd4d88c0a02942ac88fe861c3b5d731e8" => :yosemite
+    sha256 "b131e8b351ee39d3037efee90378c53b289fcd9d37b80563d6a8680d4b76a273" => :mavericks
+  end
+
   depends_on "libwbxml"
 
   # php-wbxml looks for the libwbxml headers in the wrong location
