@@ -7,6 +7,13 @@ class Php54Stemmer < AbstractPhp54Extension
   sha256 "a3e2769afc0473d85f6d097596e3897a48ee294f071edc8d197fa04c6fc30b9f"
   version "0f32673"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a69fd011781b3171e7955dfa09a15c9f323736f8e1ed335f5c8b34bb3f084c95" => :el_capitan
+    sha256 "f9579a2eb7d55c5b68f8f73334e48c084e618a96c32305d7b5640d68df3f31dc" => :yosemite
+    sha256 "c16a5b46e778a934e8813c13213e4c0f333f7a554869c4d47519d0e4a03c493d" => :mavericks
+  end
+
   def install
     ENV.universal_binary if build.universal?
 
