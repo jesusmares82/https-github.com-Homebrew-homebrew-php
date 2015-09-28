@@ -4,7 +4,7 @@ class Php53Midgard2 < AbstractPhp53Extension
   init
   homepage "http://www.midgard-project.org"
   url "https://github.com/midgardproject/midgard-php5/archive/12.09.1.tar.gz"
-  sha1 "d83519a9d513a47e9e6a02e90f6fb957f036b082"
+  sha256 "633ed2dce0c43222c13b2be1d2d044343f37e69cbdf727abc78ac53b6d871fe3"
   head "https://github.com/midgardproject/midgard-php5.git", :branch => "ratatoskr"
 
   depends_on "pkg-config" => :build
