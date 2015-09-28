@@ -4,7 +4,7 @@ class Php54Pdflib < AbstractPhp54Extension
   init
   homepage "http://www.pdflib.com"
   url "https://pecl.php.net/get/pdflib-3.0.4.tgz"
-  sha1 "a6efda4b2532d979c508a23be845720663433c58"
+  sha256 "18de7bf00983a5b0fbbd4f7e993ecf948217072ae6ebff9fbb0eef88b8984b7e"
 
   depends_on "pdflib-lite"
 
