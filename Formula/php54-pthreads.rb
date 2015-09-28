@@ -4,7 +4,7 @@ class Php54Pthreads < AbstractPhp54Extension
   init ["with-thread-safety"]
   homepage "https://pecl.php.net/package/pthreads"
   url "https://pecl.php.net/get/pthreads-2.0.10.tgz"
-  sha1 "be2745b65ecf09190fb323ccbf168288c70cfd6c"
+  sha256 "8bdf8d8918680421ca0ced1e62292eeb626f800a808d0a3b6812841756588cf6"
   head "https://github.com/krakjoe/pthreads.git"
 
   def install
