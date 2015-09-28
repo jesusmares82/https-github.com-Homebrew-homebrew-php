@@ -4,7 +4,7 @@ class Php54Memcache < AbstractPhp54Extension
   init
   homepage "https://pecl.php.net/package/memcache"
   url "https://pecl.php.net/get/memcache-2.2.7.tgz"
-  sha1 "15235e0f85b54c429bdbf8f6b529243580e504a7"
+  sha256 "73006c02194a5a7c196c6488d449e5f8c75573a73568fe1a94b15157c147305d"
   head "https://svn.php.net/repository/pecl/memcache/trunk/"
 
   devel do
