@@ -7,6 +7,13 @@ class Php54Pimple < AbstractPhp54Extension
   sha256 "591e706f5cdce06bdd17d306db3fe9df521bee0ef4fcb0ee56524ff258ef66ba"
   head "https://github.com/silexphp/Pimple.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ae216da393758542d3ecd8090e006a5171265216b7770353becedc333af8efa4" => :el_capitan
+    sha256 "671529d07451c6a9863540486ffc846d163a9e3dfa2cfdac742716d61818e412" => :yosemite
+    sha256 "91b99830b74c4cd94df87b2f65b3271092bb46d165084ab5dc5724eda90839cc" => :mavericks
+  end
+
   def install
     ENV.universal_binary if build.universal?
 
