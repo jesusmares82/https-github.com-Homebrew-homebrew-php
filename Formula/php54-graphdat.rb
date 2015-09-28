@@ -4,7 +4,7 @@ class Php54Graphdat < AbstractPhp54Extension
   init
   homepage "http://www.graphdat.com/"
   url "https://pecl.php.net/get/graphdat-1.0.3.tgz"
-  sha1 "b49779825c37ccedeefbd7085aa5a8d7c89c6d52"
+  sha256 "6b436c1f3f37d4d701f970a5d868e91711406b4b55bd78f79de916d21f8fb799"
   head "https://github.com/alphashack/graphdat-sdk-php.git"
 
   def install
