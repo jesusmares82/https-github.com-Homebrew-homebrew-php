@@ -4,7 +4,7 @@ class Php54Zmq < AbstractPhp54Extension
   init
   homepage "http://php.zero.mq/"
   url "https://github.com/mkoppanen/php-zmq/archive/1.1.2.tar.gz"
-  sha1 "735d8c826edffcc96aa75b33d9aa13dbe57f2059"
+  sha256 "2ae77e90e0ed8112b11e838d6303940bbcae39e8d37683632a299db881bdb217"
   head "https://github.com/mkoppanen/php-zmq.git"
 
   depends_on "pkg-config" => :build
