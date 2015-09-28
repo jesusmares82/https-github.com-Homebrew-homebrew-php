@@ -4,7 +4,7 @@ class Php54Riak < AbstractPhp54Extension
   init
   homepage "http://phpriak.bachpedersen.dk/"
   url "https://pecl.php.net/get/riak-1.2.0.tgz"
-  sha1 "c48afd6482df5bd3520505edead26104e65955d1"
+  sha256 "696c1999bc08a054b81de3737a130db96abef9f9333b59d55c1bdbb2d50e0593"
   head "https://github.com/TriKaspar/php_riak.git"
 
   option "with-riak", "Also install Riak locally"
