@@ -8,10 +8,11 @@ class Codeception < AbstractPhpPhar
   sha256 "8a8fe5c4ba2582bcce3c4435f7d3e92eb08f51094f12a97017646d9c8ea3cdf4"
 
   bottle do
-    cellar :any
-    sha256 "d92fa3ed6cd96904ae352d23a8c5026a06f41ce7c265f864f8f8963eca252e5c" => :yosemite
-    sha256 "f3f481e26a2a392932812cfeeb57c507c7655d1a98f90d4b474b757ee0f94b62" => :mavericks
-    sha256 "7a10d2f42850f7d7733d17806feaf0b0bc4fd212dc6556e61291cd8ea7a276e3" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "ebe97f91b11423e8cb7267449b08807a9fa435a5c4cf1cf7146b3c2e9d83edfa" => :el_capitan
+    sha256 "e63b6fef18434fdbcc06d1b82cedce967ccb906f7fdde9634a7e3143d176c43a" => :yosemite
+    sha256 "7de37c178928d376e1ae7e0f575a125da94ac6c9820727e81b562e0f30f56bd9" => :mavericks
   end
 
   def phar_file
