@@ -8,6 +8,13 @@ class Php54Htscanner < AbstractPhp54Extension
   version "b62ad431"
   head "https://github.com/piannelli/htscanner-enhanced.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "287a1dc805e515ccb7469095242cffe577ea3d32ed68887086ef705611b1a44e" => :el_capitan
+    sha256 "01a7d482bfb5a3f7c3a3f2d03e641a961098bcde0b2559fbd255b0ff77ac2089" => :yosemite
+    sha256 "1e6ffb352516275e2bbdf44b2639816854bd39143e46db7a7ef76826e9bcd613" => :mavericks
+  end
+
   def install
     ENV.universal_binary if build.universal?
 
