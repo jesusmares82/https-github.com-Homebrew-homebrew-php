@@ -4,7 +4,7 @@ class Php54Qr < AbstractPhp54Extension
   init
   homepage "http://pecl.opendogs.org/"
   url "http://pecl.opendogs.org/get/qr-0.4.0.tgz"
-  sha1 "08caebd0c78e78f64782ef9ff064cbf1ece967c8"
+  sha256 "0d628741d77f34207a00cc0b84967ecf4ccb38f03e65105573ecfead8c76f114"
 
   depends_on "zlib"
 
