@@ -4,7 +4,7 @@ class Php53Yar < AbstractPhp53Extension
   init
   homepage "https://pecl.php.net/package/yar"
   url "https://pecl.php.net/get/yar-1.2.3.tgz"
-  sha1 "7593e07b8d881cdce56764545f21f7d405297107"
+  sha256 "8f39e6174476e2eae6021f83b69bcf77ee22949654a43c9985dde1a3c7bcf66e"
 
   def install
     Dir.chdir "yar-#{version}"
