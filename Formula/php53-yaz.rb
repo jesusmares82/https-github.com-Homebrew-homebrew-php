@@ -4,7 +4,7 @@ class Php53Yaz < AbstractPhp53Extension
   init
   homepage "http://www.indexdata.com/phpyaz"
   url "https://pecl.php.net/get/yaz-1.1.6.tgz"
-  sha1 "6add3d6dda5a676cdf74378ab968fd64e348c91f"
+  sha256 "dd9b919ba3b2a09a9c77c847407f106512fe75979cc0689ebccef08c80719eee"
 
   depends_on "yaz"
 
