@@ -7,6 +7,13 @@ class Php53Ssh2 < AbstractPhp53Extension
   sha256 "600c82d2393acf3642f19914f06a7afea57ee05cb8c10e8a5510b32188b97f99"
   head "https://svn.php.net/repository/pecl/ssh2/trunk/"
 
+  bottle do
+    cellar :any
+    sha256 "77fa972a8737eae7b5788ae7f763863dba6997ed7d0507707c81b949ce461023" => :el_capitan
+    sha256 "dab535c9987d78d4324b6f52fea394ed1e4f3d745863af55f9f36efe7fded262" => :yosemite
+    sha256 "3c72385f38a94bfce3f82d7382b388f55502595844e5e723b0b55823d00ac262" => :mavericks
+  end
+
   depends_on "libssh2"
 
   def install
