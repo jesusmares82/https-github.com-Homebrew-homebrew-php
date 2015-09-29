@@ -7,6 +7,11 @@ class Php53Stats < AbstractPhp53Extension
   sha1 "eb0c805ee51bf363d4376ed5281bbefeea408574"
   head "https://svn.php.net/repository/pecl/stats/trunk/"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "2f3885553e11684662a57dfa197f8dbdc8942ec2dbb5214fc2824c8fa16be158" => :mavericks
+  end
+
   def install
     Dir.chdir "stats-#{version}" unless build.head?
 
