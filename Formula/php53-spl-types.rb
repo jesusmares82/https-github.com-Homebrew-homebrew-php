@@ -4,7 +4,7 @@ class Php53SplTypes < AbstractPhp53Extension
   init
   homepage "https://pecl.php.net/package/SPL_Types"
   url "https://pecl.php.net/get/SPL_Types-0.4.0.tgz"
-  sha1 "14c2ccd34c5f4fc98b5af4a62267bc7fd71c9546"
+  sha256 "b44101401b2664822fd17e6f491d912203496108ff9d0b86b043bff67c5f724f"
 
   def install
     Dir.chdir "SPL_Types-#{version}"
