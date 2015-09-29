@@ -5,7 +5,7 @@ class Php53Zenddebugger < AbstractPhp53Extension
   homepage "http://www.zend.com/community/pdt/downloads"
   if MacOS.prefer_64_bit?
     url "http://downloads.zend.com/studio_debugger/20100729/ZendDebugger-20100729-darwin9.5-x86_64.tar.gz"
-    sha1 "cbdf1c712457ef64920cf0a109cf7d8563ed44c6"
+    sha256 "87a7526738e1de1b20e055f06b7cfc46292e96e79a063893911e3ec42efa6213"
     version "20100729"
   else
     url "http://downloads.zend.com/studio_debugger/2011_04_10/ZendDebugger-20110410-darwin-i386.tar.gz"
