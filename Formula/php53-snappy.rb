@@ -7,6 +7,13 @@ class Php53Snappy < AbstractPhp53Extension
   sha256 "4d1acaad08eacaa108618c6c765fe2d8da82c2f09f8996036e8bccb5438ebd61"
   version "0.1.0"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bc225ccd6ff9687c5204674282a62956ca1de1b977e2975914eb9de4b001eb92" => :el_capitan
+    sha256 "b5b5361fa34017d13dd35a5080027e36afa05fbd833645a978e46d501abd62f9" => :yosemite
+    sha256 "1ad43d691df79e94689fbe1acd1778517e7624648560ddd0404eb1e5f346dadb" => :mavericks
+  end
+
   depends_on "snappy"
 
   def install
