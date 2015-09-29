@@ -4,7 +4,7 @@ class Php53Uuid < AbstractPhp53Extension
   init
   homepage "https://pecl.php.net/package/uuid"
   url "https://pecl.php.net/get/uuid-1.0.3.tgz"
-  sha1 "f51820a310ade0eb7200375486bf88d721d89f17"
+  sha256 "6832c6453efec9800d2dc0bb9786cea02888378e88c15851f79210ef78369ef1"
   head "https://svn.php.net/repository/pecl/uuid/trunk"
 
   stable do
