@@ -4,7 +4,7 @@ class Php53Xmldiff < AbstractPhp53Extension
   init
   homepage "https://pecl.php.net/package/xmldiff"
   url "https://pecl.php.net/get/xmldiff-0.9.2.tgz"
-  sha1 "7cc2b31a34ea9bbce23d163154f4a86bb819bc17"
+  sha256 "60d7d7fde2ebb695ae2cb26803153ad07a6146e0d70c102b3403131c86177550"
 
   def install
     Dir.chdir "xmldiff-#{version}"
