@@ -8,10 +8,10 @@ class Php56Pdflib < AbstractPhp56Extension
   sha256 "18de7bf00983a5b0fbbd4f7e993ecf948217072ae6ebff9fbb0eef88b8984b7e"
 
   bottle do
-    cellar :any
-    sha256 "c9e05e92916409e8e95f56b367e6ca257336dd89dda1a5823b4484b057606207" => :el_capitan
-    sha256 "ed5d4c824aa2378344715d9b995cd1099a089569cf222a92a167e6ebb942b909" => :yosemite
-    sha256 "a53671e284be43cb602fb3c7dd3ab01a0f97e5214ea50c0008f040e4a375eb0f" => :mavericks
+    revision 1
+    sha256 "299f6c188ad38226ccc05b2e695870674ed78ef679e07ccec8869560246a6a00" => :el_capitan
+    sha256 "ed8b23039c3acf661f6982185faaad6d7e79069eb811cb65c5c6c719370b0e46" => :yosemite
+    sha256 "b0f3cb3e4cb8becbe213909ef964d9b763f4fb19a37ee98b970b253e10f12839" => :mavericks
   end
 
   depends_on "pdflib-lite"
