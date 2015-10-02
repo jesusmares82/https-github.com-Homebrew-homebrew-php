@@ -8,13 +8,6 @@ class Php70PdoPgsql < AbstractPhp70Extension
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    revision 2
-    sha256 "226121ad64c1c1c2bf442a461076e38de5c5cc84fed999a0b464914fa9e5f1cf" => :el_capitan
-    sha256 "a3466d54505e38bb88c73b764e98898192f71f925249974af5dfa69cb034948c" => :yosemite
-    sha256 "dee839bed492534bae1bd14763177dc518048fc30b77c19c986b80c9787a2788" => :mavericks
-  end
-
   depends_on "postgresql"
 
   def extension

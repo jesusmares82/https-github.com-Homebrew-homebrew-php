@@ -8,13 +8,6 @@ class Php70Intl < AbstractPhp70Extension
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    revision 2
-    sha256 "aab0ba6655464c462d20bce6d5f7a60ec280d6ac699abbec97bfa3de7d484ab3" => :el_capitan
-    sha256 "9139e4fc927dcca8906a9fe66f033d0e4d9b8612fb8f310b34ad277ac4c19c14" => :yosemite
-    sha256 "27671bbc753bd1fb64c5e1f44c0bfa681518b18f02c0e3bdbcbbe0a3d5efa163" => :mavericks
-  end
-
   depends_on "icu4c"
 
   def install

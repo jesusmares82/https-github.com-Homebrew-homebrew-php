@@ -8,13 +8,6 @@ class Php70Tidy < AbstractPhp70Extension
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
 
-  bottle do
-    revision 2
-    sha256 "06a036104303c280954cf38c813d36f220d03ea4114778a48046469dab450111" => :el_capitan
-    sha256 "20c38491da0d28544c537cc30729476b9f14d96b5893447f1e30f0dfd46642d2" => :yosemite
-    sha256 "6d519dc4469cbeb1474f433d11cca0dab19fdf9987c2d12f08fe98962286873c" => :mavericks
-  end
-
   depends_on "tidy-html5"
 
   def install
