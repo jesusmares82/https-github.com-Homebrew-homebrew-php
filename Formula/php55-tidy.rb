@@ -7,7 +7,6 @@ class Php55Tidy < AbstractPhp55Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
 
   bottle do
   end
