@@ -3,6 +3,13 @@ require File.expand_path("../../Abstract/abstract-php", __FILE__)
 class Php70 < AbstractPhp
   init
   desc "PHP Version 7.0"
+  bottle do
+    revision 3
+    sha256 "969ed56c95622e680af65dae0fd063bc5746fe6ca21037422344d9da8bd506b5" => :el_capitan
+    sha256 "c54b38f958cf531bd6b831653988be630cc1bd99de5cbc766b678458ae190c6e" => :yosemite
+    sha256 "ac40ff10b971ac01b2bc8133a1cc29e2f09e49c918bca0fb6e0631e6414cd635" => :mavericks
+  end
+
   include AbstractPhpVersion::Php70Defs
 
   url PHP_SRC_TARBALL
