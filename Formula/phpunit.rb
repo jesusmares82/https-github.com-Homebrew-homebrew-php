@@ -6,6 +6,11 @@ class Phpunit < Formula
   url "https://phar.phpunit.de/phpunit-5.0.0.phar"
   sha256 "f1d59163ceefd69f5969fb098d03c0adb07507a56f3bafd3cf4614bac93e457c"
 
+  devel do
+	url "https://phar.phpunit.de/phpunit-beta.phar"
+	sha256 "977b3790fe712db1eb7cc04c554edfe5b6a4dc162143cd616c196fbbf6f7caeb"
+  end
+
   bottle do
     cellar :any
     sha256 "9ba7d856c552c684681cee21410e8a08ee4798fc82ea9e99f00f54bbe6814fe8" => :yosemite
