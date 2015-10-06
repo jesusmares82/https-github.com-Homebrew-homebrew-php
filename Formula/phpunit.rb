@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpunit < Formula
   homepage "http://phpunit.de"
-  url "https://phar.phpunit.de/phpunit-4.8.5.phar"
-  sha256 "ce39f98b1b5c17a7e19bb89d61f33bd72baa53406e97342acb2a7b2c340dbdb0"
+  url "https://phar.phpunit.de/phpunit-5.0.0.phar"
+  sha256 "f1d59163ceefd69f5969fb098d03c0adb07507a56f3bafd3cf4614bac93e457c"
 
   bottle do
     cellar :any
