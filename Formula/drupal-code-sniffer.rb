@@ -3,9 +3,9 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class DrupalCodeSniffer < Formula
   desc "Checks Drupal code against coding standards"
   homepage "https://drupal.org/project/coder"
-  url "http://ftp.drupal.org/files/projects/coder-8.x-2.3.tar.gz"
-  version "8.x-2.3"
-  sha256 "a55300d1ec27f9be8cb6e97ec522be2442f7d26480921fa83e5ba083aca85a05"
+  url "http://ftp.drupal.org/files/projects/coder-8.x-2.4.tar.gz"
+  version "8.x-2.4"
+  sha256 "7c966d6bcc03ddbe133f2b7cc3cac7625d9bf529ad4ff97e36949d4252063af7"
   head "http://git.drupal.org/project/coder.git", :branch => "8.x-2.x"
 
   option "without-drush-command", "Don't install drush command"
