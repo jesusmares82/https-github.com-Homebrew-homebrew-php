@@ -15,16 +15,16 @@ matrix:
       rvm: system
 
 before_install:
-  - sudo rm -rf /usr/local/Library/Taps/homebrew/homebrew-php/
-  - sudo chown -R $USER /usr/local
+  - if [ -f ".git/shallow" ]; then travis_retry git fetch --unshallow; fi
+  - sudo rm -rf $(brew --repo)/Library/Taps/homebrew/homebrew-php/
+  - sudo chown -R $USER $(brew --repo)
   - brew tap homebrew/dupes
   - brew tap homebrew/versions
   - brew update
-  - ln -s $PWD $(brew --prefix)/Library/Taps/homebrew/homebrew-php
-  - cd /usr/local/Library/Taps/homebrew/homebrew-php
-  - export TRAVIS_BUILD_DIR="/usr/local/Library/Taps/homebrew/homebrew-php"
+  - ln -s $PWD $(brew --repo)/Library/Taps/homebrew/homebrew-php
+  - cd $(brew --repo)/Library/Taps/homebrew/homebrew-php
+  - export TRAVIS_BUILD_DIR="$(brew --repo)/Library/Taps/homebrew/homebrew-php"
   - env | grep TRAVIS_
-  - if [ -f ".git/shallow" ]; then travis_retry git fetch --unshallow; fi # only needed for possible future bottling 
 
 script:
   - brew test-bot --tap=homebrew/php
