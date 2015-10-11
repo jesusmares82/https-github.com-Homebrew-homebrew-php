@@ -207,6 +207,18 @@ The following kinds of brews are allowed:
 
 If you have any concerns as to whether your formula belongs in PHP, just open a pull request with the formula and we'll take it from there.
 
+### Writing formula
+
+See the main [Formula Cookbook](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Formula-Cookbook.md) for full details on writing formula. The details below are
+specific to writing PHP formula.
+
+Homebrew PHP formula are by default located under
+`/usr/local/Library/Taps/homebrew/homebrew-php`. If you fork this repository 
+you can work on your changes under that directory (or symlink it into your home
+directory, if that makes things easier) and create a pull request once you are
+ready.
+
+
 ### PHP Extension definitions
 
 PHP Extensions MUST be prefixed with `phpVERSION`. For example, instead of the `Solr` formula for PHP56 in `solr.rb`, we would have `Php56Solr` inside of `php56-solr.rb`. This is to remove any possible conflicts with mainline Homebrew formulae.
@@ -233,7 +245,7 @@ class Php56Example < AbstractPhp56Extension
     system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
     prefix.install "modules/example.so"
-    write_config_file unless build.include? "without-config-file"
+    write_config_file if build.with? "config-file"
   end
 end
 ```
