@@ -230,11 +230,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Example < AbstractPhp56Extension
   init
-  homepage 'https://pecl.php.net/package/example'
-  url 'https://pecl.php.net/get/example-1.0.tgz'
-  sha1 'SOMEHASHHERE'
-  version '1.0'
-  head 'https://svn.php.net/repository/pecl/example/trunk', :using => :svn
+  homepage "https://pecl.php.net/package/example"
+  url "https://pecl.php.net/get/example-1.0.tgz"
+  sha1 "SOMEHASHHERE"
+  version "1.0"
+  head "https://svn.php.net/repository/pecl/example/trunk", :using => :svn
 
   def install
     Dir.chdir "example-#{version}" unless build.head?
