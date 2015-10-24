@@ -1,7 +1,7 @@
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Psysh < Formula
-  desc "PsySH is a runtime developer console, interactive debugger & REPL for PHP"
+  desc "Runtime developer console, interactive debugger & REPL"
   homepage "https://github.com/bobthecow/psysh"
   url "https://github.com/bobthecow/psysh/archive/v0.5.2.tar.gz"
   sha256 "66cc4ccb4ae864fca6a7e6bb4be7da60bb9d9227da8c9770cd7b4137acc92822"
