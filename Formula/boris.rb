@@ -9,11 +9,6 @@ class Boris < Formula
 
   depends_on PhpMetaRequirement
   depends_on "composer" => :build
-  depends_on "php53" if Formula["php53"].linked_keg.exist?
-  depends_on "php54" if Formula["php54"].linked_keg.exist?
-  depends_on "php55" if Formula["php55"].linked_keg.exist?
-  depends_on "php56" if Formula["php56"].linked_keg.exist?
-  depends_on "php70" if Formula["php70"].linked_keg.exist?
 
   def install
     # ensure the required php modules are installed
