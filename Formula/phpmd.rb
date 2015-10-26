@@ -10,9 +10,9 @@ class Phpmd < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "35e7188f625ba25bdae97569bf89225146c142fb831838b45020b1b288400216" => :el_capitan
-    sha256 "8431a91345f2b4ee6b23235ddac64b9ee955737caf5dee7d796ff33093cba13f" => :yosemite
-    sha256 "8431a91345f2b4ee6b23235ddac64b9ee955737caf5dee7d796ff33093cba13f" => :mavericks
+    sha256 "c9126a56f86d4650246698f14e4c36217cab86d131fbd948dcee40c30d3cbb55" => :el_capitan
+    sha256 "96d453bb29f2256c7b79fded8f995be30379d188cae05bdf1c904cdac1b03df1" => :yosemite
+    sha256 "01d1670856b0d400e2fbce0374b3ce97cd39fe30cd6643b731beda4b522abc2c" => :mavericks
   end
 
   test do
