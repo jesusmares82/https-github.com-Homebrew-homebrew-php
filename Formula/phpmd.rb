@@ -4,8 +4,8 @@ class Phpmd < AbstractPhpPhar
   init
   desc "PHP Mess Detector"
   homepage "http://phpmd.org"
-  url "http://static.phpmd.org/php/2.2.3/phpmd.phar"
-  sha256 "5cd9d4754a0d2c41a403afe6b7b75e6994d90f8e8df3600a200398dd4271a31b"
+  url "http://static.phpmd.org/php/2.3.2/phpmd.phar"
+  sha256 "81b2c8cfc45c4190e504a25a5c207a5eb5c85e0f0809b2620e2440bfef3edd7c"
   head "https://github.com/phpmd/phpmd.git"
 
   bottle do
