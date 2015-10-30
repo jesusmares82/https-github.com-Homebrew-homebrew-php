@@ -7,13 +7,8 @@ class Php56Tidy < AbstractPhp56Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
 
   bottle do
-    revision 1
-    sha256 "570fee31da4583d296dc0a07bb896a8c60b80c6742decac0e5d519ede1538e34" => :el_capitan
-    sha256 "3cdc6bfa9a4066d93ecea35ceb955661425812148cf8d01a71cb6b1c38510d3f" => :yosemite
-    sha256 "72535cb02385fa9cdaaed009d2fa88abe24c3ca82591e1743912d82dd1ea9b9a" => :mavericks
   end
 
   depends_on "tidy-html5"
