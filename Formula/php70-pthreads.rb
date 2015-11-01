@@ -9,6 +9,10 @@ class Php70Pthreads < AbstractPhp70Extension
   head "https://github.com/krakjoe/pthreads.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "a62b454d50ec6ad2c4855f8ccfd66bbfafe9ed47a77ee8a2af043ae16f8beda2" => :el_capitan
+    sha256 "eee89b76ffe6d676f1b2eb92ca2a9664012f95edd9a0733ce85266de4c7fe59b" => :yosemite
+    sha256 "c97fdc01d0ec8f1782bd8787e99d14feafbc8c2bd9b3c885eb002fda33af20ba" => :mavericks
   end
 
   def install
