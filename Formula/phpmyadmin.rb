@@ -1,20 +1,18 @@
+require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
+
 class Phpmyadmin < Formula
-  desc "Tool intended to handle the administration of MySQL over the Web"
+  desc "Administration of MySQL over the Web"
   homepage "http://www.phpmyadmin.net"
-  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_5_0_2.zip"
-  sha256 "da5dd76e5cb25c56697b3abe687920d41879b74195e084be96c2a6e02e0b27f7"
+  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_5_1.tar.gz"
+  sha256 "c2adce9eb219f1f6e46eac8e703830d6b0b77ee55272ca3315a22c77c58d54d7"
   head "https://github.com/phpmyadmin/phpmyadmin.git"
 
-  if build.with? "mcrypt"
-    depends_on "php53-mcrypt" if Formula["php53"].linked_keg.exist?
-    depends_on "php54-mcrypt" if Formula["php54"].linked_keg.exist?
-    depends_on "php55-mcrypt" if Formula["php55"].linked_keg.exist?
-    depends_on "php56-mcrypt" if Formula["php56"].linked_keg.exist?
-  end
-
-  unless MacOS.prefer_64_bit?
-    option "without-mcrypt", "Exclude the php-mcrypt module"
-  end
+  depends_on PhpMetaRequirement
+  depends_on "php53-mcrypt" if Formula["php53"].linked_keg.exist?
+  depends_on "php54-mcrypt" if Formula["php54"].linked_keg.exist?
+  depends_on "php55-mcrypt" if Formula["php55"].linked_keg.exist?
+  depends_on "php56-mcrypt" if Formula["php56"].linked_keg.exist?
+  depends_on "php70-mcrypt" if Formula["php70"].linked_keg.exist?
 
   def install
     (share+"phpmyadmin").install Dir["*"]
@@ -23,10 +21,6 @@ class Phpmyadmin < Formula
       cp (share+"phpmyadmin/config.sample.inc.php"), (etc+"phpmyadmin.config.inc.php")
     end
     ln_s (etc+"phpmyadmin.config.inc.php"), (share+"phpmyadmin/config.inc.php")
-  end
-
-  test do
-    shell_output("phpunit --version").include?(version)
   end
 
   def caveats; <<-EOS.undent
@@ -58,5 +52,9 @@ class Phpmyadmin < Formula
       - uncomment the configuration lines (pma, pmapass ...)
 
     EOS
+  end
+
+  test do
+    assert File.exist?("#{etc}/phpmyadmin.config.inc.php")
   end
 end
