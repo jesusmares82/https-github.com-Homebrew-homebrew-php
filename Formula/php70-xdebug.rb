@@ -9,6 +9,13 @@ class Php70Xdebug < AbstractPhp70Extension
   sha256 "169ac5dc5fe8a06d75467c83a495940472b8d139b2d2204d8859127e6494f0d9"
   head "https://github.com/xdebug/xdebug.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "ddde738e3d62067285caf358ca499061f651962dc6359717cf33b388181c284a" => :el_capitan
+    sha256 "8b0cebdba8b9cde37701012fdc0ac7d1faea5e82a44ec5c223a870a29af12599" => :yosemite
+    sha256 "55ee1101863a8df95d07eb867838b2a2424c7f21dba39404a0c8bf5066926af6" => :mavericks
+  end
+
   def extension_type
     "zend_extension"
   end
