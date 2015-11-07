@@ -10,9 +10,9 @@ class Php56Yrmcds < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6258db92a70acda436caac960a5d7f735992d780fea83bc99de69d97bb4acd11" => :el_capitan
-    sha256 "b728f0ce6c42472b8af2ceb780a66355cb29ab9e15725f372bdef0972f509e6e" => :yosemite
-    sha256 "aa9777a9dca9954ce41184353ba416d0c0a5f99c06e3a9d95e33fae264fc6225" => :mavericks
+    sha256 "bcde26120936531102bddfb3ff4ff8ce4df858d3c356e8007490f15a0c391d52" => :el_capitan
+    sha256 "1e1c0185afac6502165e3816d4a607ed2477cc93ab49ee4a963981de8fd05a1d" => :yosemite
+    sha256 "c6fcf6d8068ac9152867181088dff36a7d7a35215b09313e21f37c07593bec9b" => :mavericks
   end
 
   def install
