@@ -16,7 +16,7 @@ class Php53Zenddebugger < AbstractPhp53Extension
     version "20100729"
   else
     url "http://downloads.zend.com/studio_debugger/2011_04_10/ZendDebugger-20110410-darwin-i386.tar.gz"
-    sha1 "89e22b0ac949fe88db014f485999e9a1af9a0810"
+    sha256 "23b6bee02df3de787d77f8f5e4b51f14a2d717ddea7d81b1f7e87815dd238e79"
     version "20110410"
   end
 
