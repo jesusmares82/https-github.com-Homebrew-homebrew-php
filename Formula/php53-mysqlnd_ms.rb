@@ -2,9 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53MysqlndMs < AbstractPhp53Extension
   init
+  desc "Replication and load balancing plugin for mysqlnd"
   homepage "https://pecl.php.net/package/mysqlnd_ms"
   url "https://pecl.php.net/get/mysqlnd_ms-1.5.2.tgz"
-  sha1 "b7b3ddd1f40ffec75a48456edf053c28fc5aad83"
+  sha256 "22b9ba1afb36b3df11c1051c813bc07889c815d1d9993bb07ffda182665b472f"
   head "https://svn.php.net/repository/pecl/mysqlnd_ms/trunk/"
 
   bottle do
