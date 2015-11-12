@@ -10,6 +10,11 @@ class Php70Xdebug < AbstractPhp70Extension
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "811641c2198f8a5fc98e5e4bdaf97b6185da928703b6c93d778115fdea321a61" => :el_capitan
+    sha256 "c5ec25cba65c58cf9d36a77af32ce46dc10dec95b0cef458673298f021b660ba" => :yosemite
+    sha256 "ef45e4ca3c7eda30096bcf54479d212f09c9fcd22242bb11d58442ef8d0f6a1e" => :mavericks
   end
 
   def extension_type
