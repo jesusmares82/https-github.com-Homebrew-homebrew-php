@@ -3,12 +3,16 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Arcanist < Formula
   desc "Phabricator Arcanist Tool"
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
+  url "https://github.com/phacility/arcanist/archive/conduit-5.tar.gz"
+  sha256 "81a9599f0799f4a2b77a01ddb35275894b82d8e51f437b51f9342affd029aa8b"
+
   head "https://github.com/phacility/arcanist.git"
 
   depends_on PhpMetaRequirement
 
   resource "libphutil" do
-    url "https://github.com/phacility/libphutil/archive/master.tar.gz"
+    url "https://github.com/phacility/libphutil/archive/conduit-5.tar.gz"
+    sha256 "a4bc5d2e80ca3c127d26d7dd74ad4b979841c7a648a2891ef2affd6876af8b2b"
   end
 
   def install
@@ -24,6 +28,6 @@ class Arcanist < Formula
   end
 
   test do
-    system "arc", "version"
+    system "#{bin}/arc", "help"
   end
 end
