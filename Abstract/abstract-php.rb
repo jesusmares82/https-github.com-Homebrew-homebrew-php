@@ -78,6 +78,7 @@ class AbstractPhp < Formula
     option 'without-fpm', 'Disable building of the fpm SAPI executable'
     option 'without-ldap', 'Build without LDAP support'
     option 'without-mysql', 'Remove MySQL/MariaDB support'
+    option 'without-legacy-mysql', 'Do not include the deprecated mysql_ functions'
     option 'without-pcntl', 'Build without Process Control support'
   end
 
@@ -283,12 +284,12 @@ INFO
     if build.with? 'libmysql'
       args << "--with-mysql-sock=/tmp/mysql.sock"
       args << "--with-mysqli=#{HOMEBREW_PREFIX}/bin/mysql_config"
-      args << "--with-mysql=#{HOMEBREW_PREFIX}"
+      args << "--with-mysql=#{HOMEBREW_PREFIX}" unless build.without? 'legacy-mysql' || php_version.start_with?('7')
       args << "--with-pdo-mysql=#{HOMEBREW_PREFIX}"
     elsif build.with? 'mysql'
       args << "--with-mysql-sock=/tmp/mysql.sock"
       args << "--with-mysqli=mysqlnd"
-      args << "--with-mysql=mysqlnd"
+      args << "--with-mysql=mysqlnd" unless build.without? 'legacy-mysql' || php_version.start_with?('7')
       args << "--with-pdo-mysql=mysqlnd"
     end
 
