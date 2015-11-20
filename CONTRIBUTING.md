@@ -66,6 +66,6 @@ Defining extensions inheriting AbstractPhp5(3456). Extension will provide a `wri
 
 Please note that your formula installation may deviate significantly from the above; caveats should more or less stay the same, as they give explicit instructions to users as to how to ensure the extension is properly installed.
 
-The ordering of formula attributes, such as the `desc`, `homepage`, `url`, `sha1`, etc. should follow the above order for consistency. The `version` is only included when the URL does not include a version in the filename. `head` installations are not required.
+The ordering of formula attributes, such as the `desc`, `homepage`, `url`, `sha256`, etc. should follow the above order for consistency. The `version` is only included when the URL does not include a version in the filename. `head` installations are not required.
 
 All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.29`, `5.4.45`, `5.5.30` and `5.6.15`.

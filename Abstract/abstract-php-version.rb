@@ -2,8 +2,6 @@ class AbstractPhpVersion < Formula
   module PhpdbgDefs
     PHPDBG_SRC_TARBAL = 'https://github.com/krakjoe/phpdbg/archive/v0.3.2.tar.gz'
     PHPDBG_CHECKSUM   = {
-                        :md5    => '84255abff00fb31e338d03564c3cc4e4',
-                        :sha1   => 'c57174ab235ec69997e1a37e6d2afe3e4edfb749',
                         :sha256 => 'feab6e29ef9a490aa53332fe014e8026d89d970acc5105f37330b2f31e711bbd',
                       }
   end
