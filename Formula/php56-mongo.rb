@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Mongo < AbstractPhp56Extension
   init
+  desc "Legacy MongoDB database driver."
   homepage "https://pecl.php.net/package/mongo"
   url "https://pecl.php.net/get/mongo-1.6.12.tgz"
   sha256 "3fec10526ed02ce0e54c4623839e35bfab17d16cb9e8a48c7fee126be351c990"
