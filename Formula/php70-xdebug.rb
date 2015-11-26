@@ -4,7 +4,7 @@ class Php70Xdebug < AbstractPhp70Extension
   init
   desc "Provides debugging and profiling capabilities."
   homepage "http://xdebug.org"
-  url "http://xdebug.org/files/xdebug-2.4.0RC1.tgz"
+  url "http://xdebug.org/files/xdebug-2.4.0rc1.tgz"
   version "2.4.0RC1"
   sha256 "4ac1ff5521c683d6a437f2d3d9a7a2d26b7eac8c473b52560a48404cf75a9805"
   head "https://github.com/xdebug/xdebug.git"
