@@ -9,11 +9,6 @@ class Php70Libsodium < AbstractPhp70Extension
   head "https://github.com/jedisct1/libsodium-php.git"
 
   bottle do
-    cellar :any
-    revision 1
-    sha256 "0f5e5cd5bc8c56a25856291de9dcb84a87f7cfbb32ecd54cf2f216a2c4c4020d" => :el_capitan
-    sha256 "f3f5cb9c349871211e7549fb98018e5fac191f622287e3e45f02713ea8c66738" => :yosemite
-    sha256 "3fb31bb0a7851af54c406f04b7587f957c6f8985a2a912de42d65e50dcc42084" => :mavericks
   end
 
   depends_on "libsodium"
