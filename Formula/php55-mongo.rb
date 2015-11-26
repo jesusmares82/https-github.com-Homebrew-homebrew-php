@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Mongo < AbstractPhp55Extension
   init
   homepage "https://pecl.php.net/package/mongo"
-  url "https://pecl.php.net/get/mongo-1.6.11.tgz"
-  sha256 "cd180ae35f537a199d374a3105106ee5a2b0cab618b12f6221e4c985c28955ac"
-  head "https://github.com/mongodb/mongo-php-driver.git"
+  url "https://pecl.php.net/get/mongo-1.6.12.tgz"
+  sha256 "3fec10526ed02ce0e54c4623839e35bfab17d16cb9e8a48c7fee126be351c990"
+  head "https://github.com/mongodb/mongo-php-driver-legacy.git"
 
   bottle do
     cellar :any_skip_relocation
