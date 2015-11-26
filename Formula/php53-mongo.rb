@@ -9,9 +9,9 @@ class Php53Mongo < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f86961685e39b5943a867f7212812afcf079086250b6340b88fd4baea1f5a70b" => :el_capitan
-    sha256 "796982addc04cc4f20869f81673bd09d50d3756dd806a5fb4ddc007178cce248" => :yosemite
-    sha256 "fea51e130b0aebc550c4a8e3f130bffe56983cd7683f0dd4d1ef856d59146045" => :mavericks
+    sha256 "9b69878604cef04a3197901143e4b9236b3013088543533a7a760f897e556e1c" => :el_capitan
+    sha256 "abf28abcd0e4b0c8cbc3664ea5a19119436dab1637c0a7759d52946e7c6ff0dc" => :yosemite
+    sha256 "c5a48400df12ab8cd2f06dcd5fc0a0be951d8fd9a8c4fa04e49fa0d866d7224c" => :mavericks
   end
 
   def install
