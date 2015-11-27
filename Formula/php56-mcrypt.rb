@@ -8,10 +8,6 @@ class Php56Mcrypt < AbstractPhp56Extension
   version PHP_VERSION
 
   bottle do
-    revision 3
-    sha256 "df3d050932a27c1a8a189a6d5cdfab7bb64a8313f33e6526aacefb84f58f7648" => :el_capitan
-    sha256 "19f12a83ebc4a3e774c032fc434b9f96f9714bb50ae2fb8cf173fa5387745bbd" => :yosemite
-    sha256 "8a5b196fec8ffb1a70cf9638ad3e08e733f29add71bbc7c5d5590e661dc50040" => :mavericks
   end
 
   depends_on "mcrypt"
