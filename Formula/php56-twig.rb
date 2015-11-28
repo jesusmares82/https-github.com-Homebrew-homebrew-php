@@ -9,6 +9,10 @@ class Php56Twig < AbstractPhp56Extension
   head "https://github.com/twigphp/Twig.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "5aaa4350110b50b63b8474fa4353ce382b441f9b2c3588f6da4bd8316fc3c161" => :el_capitan
+    sha256 "0567b65766478aebcfea3193adaa8bd95c568990d76bb07ce76a19c9ca812029" => :yosemite
+    sha256 "23d9df938d8eca69882bf1e685372472cdd45c7b58343dfcd9fa4aa8ff4cb707" => :mavericks
   end
 
   def install
