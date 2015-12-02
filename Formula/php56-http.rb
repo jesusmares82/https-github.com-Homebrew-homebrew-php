@@ -10,9 +10,11 @@ class Php56Http < AbstractPhp56Extension
   head "https://git.php.net/repository/pecl/http/pecl_http.git"
 
   bottle do
-    sha256 "fcae5e477d6ac79bffbfd3afc56578602563bab331520150beb17de0b12aa1f4" => :yosemite
-    sha256 "9172eafe53a7f71c5042765051150024b3482c0574404b14218c7277dbc87f8e" => :mavericks
-    sha256 "6a3148b42c3a338da7e7aa8149433b16f94d219b0fea7a75b034d333c9f45411" => :mountain_lion
+    cellar :any
+    revision 1
+    sha256 "ae7e1b7eb889ba530bd3c49b6449d0d6c7da69a6bf2b8e4d194b4f2821de2ed3" => :el_capitan
+    sha256 "43f77aca2e5d37519f747500f0d6b119777442b0a506294ff0724b3b2dd04b14" => :yosemite
+    sha256 "dabed79204a2c8a41c61a32f1587b094f58ec4fad481b6c08d6f97dfa7091773" => :mavericks
   end
 
   depends_on "curl"
