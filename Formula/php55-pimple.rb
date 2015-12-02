@@ -10,9 +10,10 @@ class Php55Pimple < AbstractPhp55Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f3866e8b146fd60504a5fae80b33b654d2e54d692421b19bd7e2bd8166f1eab4" => :el_capitan
-    sha256 "27d3658c91e7084488f173b52343172231270524a8c372d108d07ce134e8f5b1" => :yosemite
-    sha256 "be24f3297d12ac4f86355ea68996507716d18925958530b48f4b86ed56513214" => :mavericks
+    revision 1
+    sha256 "de11d652b7bcde594ee31d17533b9041036a3b34953c53431bf4e4f19c87c312" => :el_capitan
+    sha256 "d4707f649a53e1d19021de159ea8982ddbb0ad898abf4a3786bab09fdfada06c" => :yosemite
+    sha256 "126a013c27d96d8db1268d1f3d481e386534239ab6e1eb56b0bb75242db78dbb" => :mavericks
   end
 
   def install
