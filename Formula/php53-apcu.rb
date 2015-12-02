@@ -10,9 +10,10 @@ class Php53Apcu < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b504ec479b6cd2edddb6c46d907e149549b1d70a409aaddb40c0c3f02f7eab45" => :el_capitan
-    sha256 "1cba2e335581705bbd3fb3cef73a090062be14b5984a5cc9ea69e06517957d1d" => :yosemite
-    sha256 "8ab477eef124c67b89427697cd343dddfd836a0c6b3add5104ff0e79b1de0b7e" => :mavericks
+    revision 1
+    sha256 "4b01dcf6c27be251614812e37c58367c4ca0a33edcb59d532ec23b2c2cb99a0f" => :el_capitan
+    sha256 "4341db2b157581301fafeb9ddb19fdff24c834d5caf25fc7c284167d45637b9c" => :yosemite
+    sha256 "70006cb4b8e04830e04084709d7f40b5f12a6c2f6744f3a3c50529f8782a04df" => :mavericks
   end
 
   option "with-apc-bc", "Whether APCu should provide APC full compatibility support"
