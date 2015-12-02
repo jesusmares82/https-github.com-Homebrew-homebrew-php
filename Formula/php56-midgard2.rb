@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Midgard2 < AbstractPhp56Extension
   init
+  desc "PHP5 API for Midgard persistent storage framework"
   homepage "http://www.midgard-project.org"
   url "https://github.com/midgardproject/midgard-php5/archive/12.09.1.tar.gz"
   sha256 "633ed2dce0c43222c13b2be1d2d044343f37e69cbdf727abc78ac53b6d871fe3"
