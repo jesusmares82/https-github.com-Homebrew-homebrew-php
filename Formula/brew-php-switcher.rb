@@ -1,4 +1,5 @@
 class BrewPhpSwitcher < Formula
+  desc "Brew PHP switcher is a simple script to switch your Apache and CLI configs quickly between major versions of PHP."
   url "https://github.com/philcook/brew-php-switcher/archive/v1.5.tar.gz"
   homepage "https://github.com/philcook/php-switcher"
   sha256 "e5ead8b188a54d270b3a12bdcbae4a97c808e9d2ee72708597abffb8b4e8b591"
