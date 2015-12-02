@@ -8,9 +8,10 @@ class Php54Chdb < AbstractPhp54Extension
   sha256 "ac6360fd786fbbbe8b14c7e1943f2f64c1f9a86dd5a4c38ff4d5d65740e99e0b"
   bottle do
     cellar :any
-    sha256 "3eb62cf9d79087080998b62112d03ee315e0541b47b247aeb2679486f186509d" => :el_capitan
-    sha256 "f399ee2c505fcbf2e11fc8011f2944ff7e125f1d4f2f2890dcfb2fa0e4d26dce" => :yosemite
-    sha256 "ecfaa7c408ea9e2f67570afeca3701541635d18605e9ba343987e8dbc802b25c" => :mavericks
+    revision 1
+    sha256 "734e209e54c6f4fee86109620993d6789c2815b7334d7edd3c68d3ff35fcf103" => :el_capitan
+    sha256 "7eb8db24f686df50b623ae0b90ea9a3871c12e5be851f99e95d739f7c9463cf8" => :yosemite
+    sha256 "0411c23b7790d62c37a3fc1853831606dae12f9cbd5f7784d39da7af6a61bf0c" => :mavericks
   end
 
   head "https://github.com/lcastelli/chdb", :using => :git
