@@ -2,6 +2,7 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 
 class Phpunit < Formula
+  desc "PHPUnit is a programmer-oriented testing framework for PHP."
   homepage "http://phpunit.de"
   url "https://phar.phpunit.de/phpunit-5.0.0.phar"
   sha256 "f1d59163ceefd69f5969fb098d03c0adb07507a56f3bafd3cf4614bac93e457c"
