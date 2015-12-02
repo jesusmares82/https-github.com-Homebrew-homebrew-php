@@ -11,10 +11,11 @@ class Php56Igbinary < AbstractPhp56Extension
   depends_on "igbinary" => :build
 
   bottle do
-    cellar :any
-    sha256 "cc00d3435e67890633b8a4cd29d43a4e0eedfbb797ef198191a1087e22b5645e" => :yosemite
-    sha256 "79db736152cda26c53316d48aa1eadd302936dec017df9d9d9461a91daa7f6e9" => :mavericks
-    sha256 "9b65e668b1a2a33b50c0295e790b4f7a9fda35d9e3c5794313c7bd8412cf00e8" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "98f593c3306cc4eaed7e7ce9228cc436a215611dd928f10ec2060dfa940db184" => :el_capitan
+    sha256 "ab2840ec0a5215adddb082cf97f8a10768e9caae5be71e7701b6754eb94ee5fe" => :yosemite
+    sha256 "52643e8ca55a0c29acf1cf7471752b698dda82ec6ee751f386fe372910dc3c84" => :mavericks
   end
 
   def install
