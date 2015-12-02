@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Stats < AbstractPhp54Extension
   init
+  desc "Extension with routines for statistical computation."
   homepage "https://pecl.php.net/package/stats"
   url "https://pecl.php.net/get/stats-1.0.3.tgz"
   sha256 "e032e02052acf2013f0578da823d60b0b2a89eb5e1dd1379cf0a65c090dffdfc"
