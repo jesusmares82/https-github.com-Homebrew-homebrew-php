@@ -7,9 +7,10 @@ class BrewPhpSwitcher < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d1a75a5eb4fd0a1641b520620ad8cf9d661eacbdc780dea906e5a13aeb12e1ff" => :yosemite
-    sha256 "b3f761057a8d9b32530dcadac8c319e353c6d73b13a7a487f073ca629c41d7d4" => :mavericks
-    sha256 "b051cef58b060aa987b4a7f9b8d6f07e0e996aa7b2e3dc47ae7d80e62784c966" => :mountain_lion
+    revision 1
+    sha256 "9c0f9771601d2bc5cdab7d940f4834d0bfc96f73e83b9d4131d2af83b1bd5109" => :el_capitan
+    sha256 "4cde0032b3f45c120d972b21475f6ad80d6d2d2779c8a3bb50db4f1a83f062e2" => :yosemite
+    sha256 "62b0dde91201697e02d4baff60907c6b12d4c6b82793d731f54ec60bdae5df48" => :mavericks
   end
 
   def install
