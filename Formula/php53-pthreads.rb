@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Pthreads < AbstractPhp53Extension
   init ["with-thread-safety"]
+  desc "Threading API"
   homepage "https://pecl.php.net/package/pthreads"
   url "https://pecl.php.net/get/pthreads-2.0.10.tgz"
   sha256 "8bdf8d8918680421ca0ced1e62292eeb626f800a808d0a3b6812841756588cf6"
