@@ -9,9 +9,10 @@ class Php55Libevent < AbstractPhp55Extension
   head "http://svn.php.net/repository/pecl/libevent/trunk/"
 
   bottle do
-    sha256 "279cffd62048f3fce046c0cf82cb89cd29a0fbb0097921e0e5de1366f399bb33" => :el_capitan
-    sha256 "18cbc97270e8f9e5a1dd1c5c56fca9b308a433315d355ab8ae8b2d0fa6d21939" => :yosemite
-    sha256 "3764f607ddb45ea42e206f96cc82c881d0ffe9779aa0f45142fee285c25da6b3" => :mavericks
+    revision 1
+    sha256 "fe99f493d79f243a3ccad314e6342f0ee90ec5ef912dc068abf579009967ece3" => :el_capitan
+    sha256 "bb341e274cf91f892867ac6c5468cc29bae73ccf709fa1c95d06eb75fc5d221d" => :yosemite
+    sha256 "fad5ab08259e3e3af93a56dd7ac958a45b1cf3d7b0ed9199a45bf85df0b8a5ab" => :mavericks
   end
 
   depends_on "libevent"
