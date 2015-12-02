@@ -10,9 +10,10 @@ class Php54Protobuf < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "510e3e836a19bf1d558ace694c6078a06f0f6f4840283c0228c1069ae15e3ae3" => :el_capitan
-    sha256 "a2a9a9ca0f9a49c9dac25acc91d55eeacaf90d90abc11f1bbed05594afc1fe6a" => :yosemite
-    sha256 "1be2f4972441e0506bc5c429dc91f3c5cb412e567964e6c42f0830ca07d034d6" => :mavericks
+    revision 1
+    sha256 "3f828ff5b3e24bbe85b220b4ee731f965c911adcdff15ec3290aa3b49176aea8" => :el_capitan
+    sha256 "963330d7bed30528c015a207ae7978dbecadb2a9c34ea9b44160a80e41adc3ea" => :yosemite
+    sha256 "84a261c541f40c5ddb9225e52fd839247d5d2db983b1b5593e185e4372f09e06" => :mavericks
   end
 
   def install
