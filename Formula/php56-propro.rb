@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Propro < AbstractPhp56Extension
   init
+  desc "A reusable split-off of pecl_http's property proxy API."
   homepage "https://pecl.php.net/package/propro"
   url "https://pecl.php.net/get/propro-1.0.0.tgz"
   sha256 "9825d50ab4bb214428cd11c14c2f389c16aded09db16d266f27f147a7f2371f2"
