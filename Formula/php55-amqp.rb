@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Amqp < AbstractPhp55Extension
   init
+  desc "Communicates with any AMQP 0-9-1 compatible server."
   homepage "https://pecl.php.net/package/amqp"
   url "https://pecl.php.net/get/amqp-1.6.0beta3.tgz"
   sha256 "4209dbd96355a0610b42a636621b0b2b34169ef64f8067197a1a5a78a5784ac7"
