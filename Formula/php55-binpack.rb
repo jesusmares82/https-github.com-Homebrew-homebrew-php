@@ -10,9 +10,10 @@ class Php55Binpack < AbstractPhp55Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "001dc0cdd35321f3e068466480e74db02e13f26c8917ab65d4549facef4ef3f9" => :el_capitan
-    sha256 "20bf0560d5e4c40c72d9a3d31d1da9284062a6128479fdc9805960800c5ed0e0" => :yosemite
-    sha256 "b881cacb75fe25a4ff9a672d54d748db5dbc2477b179171674588097073ee67b" => :mavericks
+    revision 1
+    sha256 "40d884acca75ad6030ef77ccf799ec8027ad27804b44a27854edfdf3ddafdfc5" => :el_capitan
+    sha256 "ada6f1effe572f14441656e6da4f2aa2e5abc5a8f1ce97f4a5a5b3b2bce7657d" => :yosemite
+    sha256 "bd1b06aada86a7368938ae16954a0fb96340ee8cd96ef3b0b8879dbc6a2c7c20" => :mavericks
   end
 
   def install
