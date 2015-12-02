@@ -8,9 +8,11 @@ class Php55Lz4 < AbstractPhp55Extension
   sha256 "9e37b1ca39013dacd392e31a0f037f9adf2b6f710a733166b0d0168f23f99c3a"
 
   bottle do
-    sha256 "18021610987e22568c296c314bc2c36ac1e9b4bb4d7040071af0a868b7420609" => :yosemite
-    sha256 "8d7aea22f9f90221f8b305be1e2eecade83ca33cb5ab6b2fbc5e9f3428b7e5bb" => :mavericks
-    sha256 "425d690354de4a4cfdec279c31580a4415ce706981a648466c8a6366bb6c4174" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "b44bbb9a7654c1725bee495c0cb48205d1f48b82db2b982dde919034b922f05c" => :el_capitan
+    sha256 "c4d4fa6c690214565c79ab41289ee7059b93d13d69301cd45a44fb8a0ce37397" => :yosemite
+    sha256 "71975165c55e1b2257f811205d05228e056786c6e5e93911aa82933c74204fad" => :mavericks
   end
 
   def install
