@@ -10,10 +10,10 @@ class Php53Imagick < AbstractPhp53Extension
   revision 1
 
   bottle do
-    revision 1
-    sha256 "30d0c4b74f18b83c55114996e08dfc267d18f6169a8ebc352b036874c4be9aad" => :el_capitan
-    sha256 "0637d7b6f9d968fee6e78a3b26ea8cb0722dc370e32bb0084f2779815a6718f9" => :yosemite
-    sha256 "3ea3573c64ac0ae880f55d11d391be979fd3d29482774c4b04b5e6898049a1a5" => :mavericks
+    revision 2
+    sha256 "03f003ed9506efd749ef3b0b41f0374f5f63d989d93de8c1cb557b0b44ebd425" => :el_capitan
+    sha256 "595b71f135e0991a50be4217e3385c5d7ae445cc777b73e2d9904ad7a57f0404" => :yosemite
+    sha256 "f6e6e29c112dcd6d02d800fb53dcd6190dba2127ceb6e1bd4fc5a645b5de507d" => :mavericks
   end
 
   depends_on "pkg-config" => :build
