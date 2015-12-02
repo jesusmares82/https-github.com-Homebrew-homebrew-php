@@ -9,6 +9,13 @@ class Php54Amqp < AbstractPhp54Extension
   version "1.6.0beta3"
   head "https://github.com/pdezwart/php-amqp.git"
 
+  bottle do
+    cellar :any
+    sha256 "fa34965e91a13c84d0db491a1774c46ca8db46050bbe96fa77d591a71a04dd87" => :el_capitan
+    sha256 "f6bc1472078d1f5d22b99e283a869e0f6c962e3186f8a21c954c97093ce82f5d" => :yosemite
+    sha256 "a66ebec0b368b67baa811ffa5a9b843089ec2218c5bbe5fdd20781cabfc0e012" => :mavericks
+  end
+
   depends_on "rabbitmq-c"
 
   def install
