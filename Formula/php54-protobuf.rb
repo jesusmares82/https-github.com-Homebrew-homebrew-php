@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Protobuf < AbstractPhp54Extension
   init
+  desc "Fast PHP Protocol Buffers implementation"
   homepage "https://github.com/allegro/php-protobuf"
   head "https://github.com/allegro/php-protobuf.git"
   url "https://github.com/allegro/php-protobuf/archive/0.10.tar.gz"
