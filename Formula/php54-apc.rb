@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Apc < AbstractPhp54Extension
   init
+  desc "Alternative PHP cache"
   homepage "https://pecl.php.net/package/apc"
   url "https://pecl.php.net/get/APC-3.1.13.tgz"
   sha256 "5ef8ba07729e72946e95951672a5378bed98cb5a294e79bf0f0a97ac62829abd"
