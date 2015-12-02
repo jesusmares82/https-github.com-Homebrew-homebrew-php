@@ -6,10 +6,11 @@ class Igbinary < Formula
   head "https://github.com/igbinary/igbinary.git"
 
   bottle do
-    cellar :any
-    sha256 "879d7f52a38859cee9abce37e007d5df8e88aa66b5ae3c2bb896ab6a3004f4b6" => :yosemite
-    sha256 "8b43bc396c6223789ddb1f96f95ba2b121308683aab020a718be4342e43e9d6e" => :mavericks
-    sha256 "483d500cbf87ec7e1bd1fdc0be5995f586d1332a8ab38e559f99debe36c75675" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "634d3f7193996f225520d30366567680a50ac51a6ebbef923f194f8ce70a5955" => :el_capitan
+    sha256 "5a38a58cfb7ca2749a478c9efb329e55b5bd9e9157d0874d672eed5a4a369cc4" => :yosemite
+    sha256 "34d8a2aa98964de408be73d2a79eba66114dfe9fc04643e69d3c0cff372bfed3" => :mavericks
   end
 
   def install
