@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Riak < AbstractPhp54Extension
   init
+  desc "Riak client for PHP."
   homepage "http://phpriak.bachpedersen.dk/"
   url "https://pecl.php.net/get/riak-1.2.0.tgz"
   sha256 "696c1999bc08a054b81de3737a130db96abef9f9333b59d55c1bdbb2d50e0593"
