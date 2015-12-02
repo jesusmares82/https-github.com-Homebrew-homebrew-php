@@ -14,9 +14,10 @@ class Phpunit < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2b879fa474a2b7bab2ae4ec4fff2c4a346eb5735d46c6b11922772ec9ae5ad26" => :el_capitan
-    sha256 "e572f4871132979e977ab5789bda6942fee72def31ff0fd425d1c426a3795d1b" => :yosemite
-    sha256 "d08b2316a4b99bf510c8b2f9dbd60186b3ed435442c90ee5a51f4d7661afd85f" => :mavericks
+    revision 1
+    sha256 "fa791958acb2f38ed465ae16cbf740f94d0ce5ce4091bb7bf77891a4eb104a09" => :el_capitan
+    sha256 "3631cf2c006b26495d60d9d37128ae0b23b87da7fedc76a89f9702e3abe910e0" => :yosemite
+    sha256 "c424876511abc620c92d39195fe868ad4904f033705fd5519232e94be6001ee9" => :mavericks
   end
 
   def install
