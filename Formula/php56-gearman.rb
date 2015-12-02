@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Gearman < AbstractPhp56Extension
   init
+  desc "PHP wrapper to libgearman"
   homepage "https://pecl.php.net/package/gearman"
   url "https://pecl.php.net/get/gearman-1.1.2.tgz"
   sha256 "c30a68145b4e33f4da929267f7b5296376ca81d76dd801fc77a261696a8a5965"
