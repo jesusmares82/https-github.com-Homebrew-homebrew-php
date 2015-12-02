@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Chdb < AbstractPhp54Extension
   init
+  desc "A fast database for constant data with memory sharing across processes"
   homepage "https://pecl.php.net/package/chdb"
   url "https://pecl.php.net/get/chdb-1.0.2.tgz"
   sha256 "ac6360fd786fbbbe8b14c7e1943f2f64c1f9a86dd5a4c38ff4d5d65740e99e0b"
