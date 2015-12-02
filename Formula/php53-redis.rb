@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Redis < AbstractPhp53Extension
   init
+  desc "PHP extension for Redis"
   homepage "https://github.com/phpredis/phpredis"
   url "https://github.com/phpredis/phpredis/archive/2.2.7.tar.gz"
   sha256 "a5882dd9b21908e123b3d5c5f72d6dc8cbbbb6a29996e568c4d18ed356c0362b"
