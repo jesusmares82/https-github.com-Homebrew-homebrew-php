@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Crypto < AbstractPhp54Extension
   init
+  desc "Wrapper for OpenSSL Crypto Library"
   homepage "https://pecl.php.net/package/crypto"
   url "https://pecl.php.net/get/crypto-0.1.1.tgz"
   sha256 "9844e93078ac165255bdba6944abf6ec196be9964f9807df9f8f7d792a18807b"
