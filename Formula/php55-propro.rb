@@ -10,9 +10,11 @@ class Php55Propro < AbstractPhp55Extension
   head "https://git.php.net/repository/pecl/php/propro.git"
 
   bottle do
-    sha256 "64e5657af7aef4b229bba1e1be545d43c9cd6c4b9fe9a73ed4298ced332b49f0" => :yosemite
-    sha256 "d440aadd47ba90ae7f4657fc1fd28c8ac4e2635b734a749ce34adb7140cf358f" => :mavericks
-    sha256 "fb1591287c760a949d8aa68a0d8a192b33afff41f90b8a4952d6a769b9b5739e" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "3beededc34dc41516999f149ca84c364aabf87a66c388d1f234e451a7f5030ce" => :el_capitan
+    sha256 "d94d2fbf423971a62ee1d7b99a3a209926e089f6b6eca0296b4418679215df2a" => :yosemite
+    sha256 "d6f326aec4aff7a4856a89cbfe39c7b853721b2018eceddc46f162e4f3ba72ac" => :mavericks
   end
 
   def install
