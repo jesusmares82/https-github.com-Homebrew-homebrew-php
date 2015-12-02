@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Memcache < AbstractPhp53Extension
   init
+  desc "This extension allows you to work with memcached through handy OO and procedural interfaces."
   homepage "https://pecl.php.net/package/memcache"
   url "https://pecl.php.net/get/memcache-2.2.7.tgz"
   sha256 "73006c02194a5a7c196c6488d449e5f8c75573a73568fe1a94b15157c147305d"
