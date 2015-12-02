@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Opcache < AbstractPhp55Extension
   init
+  desc "OPcache improves PHP performance"
   homepage "http://php.net/manual/en/book.opcache.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
