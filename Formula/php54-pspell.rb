@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Pspell < AbstractPhp54Extension
   init
+  desc "Extension to check the spelling"
   homepage "http://php.net/manual/en/book.pspell.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
