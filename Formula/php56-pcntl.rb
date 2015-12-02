@@ -10,10 +10,10 @@ class Php56Pcntl < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 4
-    sha256 "cec71aedaa463c58986b1828f0987486448b017b79700ea9a5ebb3b5570900f4" => :el_capitan
-    sha256 "881112b647d1ef4b6c4d08e9b48871d0540e57473e270f6692e220dd7b1cf3e7" => :yosemite
-    sha256 "af78d4795cc867f501385ebed9d499f68e4c1c794e110416e7fd6921031a7e26" => :mavericks
+    revision 5
+    sha256 "247da1525752d7d326a3b50a908266919f1b0d289f3519cec60d04fa90d8ec56" => :el_capitan
+    sha256 "bfc7a9a1e19e1a50417f93e5bf00ac7b4bd6e303bd411a74e6762ebebb948af5" => :yosemite
+    sha256 "497386004d43c9e839981e49d4a156f94b4510de1175783b89834be2488c3bf1" => :mavericks
   end
 
   def install
