@@ -10,9 +10,10 @@ class Php54Judy < AbstractPhp54Extension
 
   bottle do
     cellar :any
-    sha256 "1009b0141d08111192c05cbb320b83bf56eaa966bfb5ea66fd14672b2fa714e7" => :el_capitan
-    sha256 "272a5710e98c357f696fe915bbc44e239099a33e284c9c62b95834f09b54c8a7" => :yosemite
-    sha256 "27620269eac936360a024ddc47e04c7ae143662c4aac2ddbb41870bd164ba172" => :mavericks
+    revision 1
+    sha256 "2bb10260ea4aeec0e43d9f1d2a68fdd0737fb0235d9e635085355f7984ec25c4" => :el_capitan
+    sha256 "7f883b680e51584e53a09d31e901cc9491adadba0fe6a2f258594afd9e512d92" => :yosemite
+    sha256 "4d0c7ec91ba71cf9cca1b7505bbeb7d8ef61beee34ac72d6fad9389e97c1a3d4" => :mavericks
   end
 
   depends_on "judy"
