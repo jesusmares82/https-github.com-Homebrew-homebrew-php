@@ -10,9 +10,10 @@ class Php54Graphdat < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "4de2de301456967dbcde16878df7a2d33bed4a7a156fe0728ecd248e003733d9" => :el_capitan
-    sha256 "33f2efdd0dec446e47fa72a7072ba0d963baefb47b1bfc7517735473efa8280f" => :yosemite
-    sha256 "057f425fc509144ba12cc69a9fde8ee399f36015abc5e360ad94574f021bb853" => :mavericks
+    revision 1
+    sha256 "33e68325d62204d4144ff5dfc12d5795e7d5b03a250e5aa699ef4c38f8538b4c" => :el_capitan
+    sha256 "64e8d95de6ab82ba976acccd53f9f57714ed49ec4ee25ddc38c9974d48ba9866" => :yosemite
+    sha256 "a83042353160ec04b0b28b6955dc4b53089cf98fb971293be8a1d810591f63a0" => :mavericks
   end
 
   def install
