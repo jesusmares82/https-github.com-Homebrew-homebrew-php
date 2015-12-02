@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Dmtx < AbstractPhp54Extension
   init
+  desc "PHP bindings for the dmtx library"
   homepage "http://www.libdmtx.org"
   url "https://github.com/maZahaca/php-dmtx/archive/0.0.3-dev.tar.gz"
   version "0.0.3"
