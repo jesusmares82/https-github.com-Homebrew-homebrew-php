@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Pimple < AbstractPhp55Extension
   init
+  desc "Pimple is a simple PHP Dependency Injection Container."
   homepage "http://pimple.sensiolabs.org/"
   url "https://github.com/silexphp/Pimple/archive/v3.0.0.tar.gz"
   sha256 "591e706f5cdce06bdd17d306db3fe9df521bee0ef4fcb0ee56524ff258ef66ba"
