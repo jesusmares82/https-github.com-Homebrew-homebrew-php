@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Judy < AbstractPhp53Extension
   init
+  desc "PHP Extension for libJudy."
   homepage "https://github.com/orieg/php-judy"
   url "https://pecl.php.net/get/Judy-1.0.2.tgz"
   sha256 "6b913af2c44ac84a2224fecf8a81ddcb0c753252cafd153cb0e9d7c33a333118"
