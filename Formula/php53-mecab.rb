@@ -9,9 +9,10 @@ class Php53Mecab < AbstractPhp53Extension
   head "https://github.com/rsky/php-mecab.git"
 
   bottle do
-    sha256 "cd1ce73cf46aff4ce04ed1b2271bb73c4246f000af526880dc66747e5cc21418" => :el_capitan
-    sha256 "b95f205c7df1b4b308dfde27527c36bff4e3cbc9f46cae2793b83c6e9789a5d4" => :yosemite
-    sha256 "7bcbfa357ab1c3969ba5e87a165f3ff23b0cc8f228b33ec6e0eac5cf218c32ed" => :mavericks
+    revision 1
+    sha256 "4c3dcda4684724f018210a990a379db84efeff4d6c0d8b3f766aacd3456d9adb" => :el_capitan
+    sha256 "bb5cff0cbca74abd83cc22b20ecd96ef8b0def8045075ffef8da0aaf882dce6c" => :yosemite
+    sha256 "8158d871d832acb0ec00752422a6b45f86eca242a3e89175ad15d20b54b3d62a" => :mavericks
   end
 
   depends_on "mecab"
