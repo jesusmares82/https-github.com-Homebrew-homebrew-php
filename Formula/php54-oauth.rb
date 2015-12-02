@@ -10,9 +10,10 @@ class Php54Oauth < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0d804974d78becfec24b58aa808d8cd8426427cc795060b531b49ad4d5d5a11f" => :el_capitan
-    sha256 "82607f6c2020b3324f8e3913ec8f464e833c8ab2bc4e9b6b87a11c868aa64ee6" => :yosemite
-    sha256 "fe822d2dbeb3f57e94c99bee7d514ee3f15b6be274b8af451d3c177d391a37b0" => :mavericks
+    revision 1
+    sha256 "483fe32a0f471f463795a777a11f3ac5e56c15fc5005a071295ef9c1fa344048" => :el_capitan
+    sha256 "f5579f00e39e98e17c09348be620ad4be855222a59d1f84c2089ffd2958b5ecd" => :yosemite
+    sha256 "a6c49635d75468847271d841e2d7ae4432a7771aa05b48a4d4fe456256e3a0c8" => :mavericks
   end
 
   def install
