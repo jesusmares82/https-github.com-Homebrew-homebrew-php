@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Graphdat < AbstractPhp56Extension
   init
+  desc "Troubleshoot application and server performance."
   homepage "http://www.graphdat.com/"
   url "https://pecl.php.net/get/graphdat-1.0.3.tgz"
   sha256 "6b436c1f3f37d4d701f970a5d868e91711406b4b55bd78f79de916d21f8fb799"
