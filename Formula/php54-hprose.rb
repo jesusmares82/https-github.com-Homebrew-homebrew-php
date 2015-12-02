@@ -9,9 +9,11 @@ class Php54Hprose < AbstractPhp54Extension
   head "https://github.com/hprose/hprose-pecl.git"
 
   bottle do
-    sha256 "5c68c512d6a3c3562ab9208d7c52d121e1e05f51c640e23d0e5e2e478ac00d14" => :yosemite
-    sha256 "bbc66e713fe54c643760192ddd5b0ee84dbb0a5790d588ae3dc6305067776933" => :mavericks
-    sha256 "b0c926da285b8e91b0f9aec59beb1274e14f352eacf0c5bd3119e1a8880fd7c0" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "48c1c44d03641b19e1f9671a07d7a39f7772b20109f9b6fb88e5e9f90c7e08ea" => :el_capitan
+    sha256 "35e5bd2c794d11fd89bb13920c9a3e3e9b5526d7a2eddcc3ca1f1d218aa0c725" => :yosemite
+    sha256 "1aebbd52100d96c0cc79006e36df71ad250846f4639441e4210e1141387c1b80" => :mavericks
   end
 
   def install
