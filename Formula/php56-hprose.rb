@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Hprose < AbstractPhp56Extension
   init
+  desc "Hprose for PHP."
   homepage "https://pecl.php.net/package/hprose"
   url "https://pecl.php.net/get/hprose-1.5.4.tgz"
   sha256 "28733983073d5272b7096129dc23717c42485f905556082352bb0954b64bb996"
