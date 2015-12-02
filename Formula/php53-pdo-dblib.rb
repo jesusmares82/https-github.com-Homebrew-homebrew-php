@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53PdoDblib < AbstractPhp53Extension
   init
+  desc "A unified Sybase-DB style driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
