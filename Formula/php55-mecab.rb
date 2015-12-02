@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Mecab < AbstractPhp55Extension
   init
+  desc "MeCab binding for PHP"
   homepage "https://github.com/rsky/php-mecab"
   url "https://github.com/downloads/rsky/php-mecab/php-mecab-0.5.0.tgz"
   sha256 "e5c84a8ffa39a8a0dd60424b879806382ec0f66d50007f6bfad6831074b3bcc5"
