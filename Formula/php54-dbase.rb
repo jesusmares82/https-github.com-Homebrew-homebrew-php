@@ -2,7 +2,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Dbase < AbstractPhp54Extension
   init
-  homepage "https://pecl.php.net/package/dbase/5.1.0"
+  desc "dBase database file access functions"
+  homepage "https://pecl.php.net/package/dbase"
   url "https://pecl.php.net/get/dbase-5.1.0.tgz"
   sha256 "20d6a40fb2efe4a06f503ec53512d02d71ceda87eac1f55208d7b5398f287a97"
   head "https://svn.php.net/repository/pecl/dbase/trunk/"
