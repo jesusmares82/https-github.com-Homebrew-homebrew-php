@@ -10,10 +10,10 @@ class Php54Augmentedtypes < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
-    sha256 "83f0e95c540388fab2548e18b8279565001d6109cf55f4eae6ebdf2be12be925" => :el_capitan
-    sha256 "6968a9ea8ce161bac1022102b563970e3d6d35b960a90d06cb0b844d926ee3c1" => :yosemite
-    sha256 "32a03fb59d2c79efc2fe9a290f6dddc9fc4bab85866377381e1cc1b88b811e7a" => :mavericks
+    revision 2
+    sha256 "2b3e32eddda4f5f7e353ea3b158967910bd516c1d494b40a9f714885134f9372" => :el_capitan
+    sha256 "32d98cbf66f51200ff31aec85ddb63285b2e1ec9b3d7a4a97e2692ca9dc109bf" => :yosemite
+    sha256 "8d9f3b24c7fbee4cced4d3ff22ce5f691dd5d06e23d1b82452d8f1bbd148c6ef" => :mavericks
   end
 
   option "without-default-enforcement", "Turn off Augmented Types enforcement by default"
