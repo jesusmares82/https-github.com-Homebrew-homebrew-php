@@ -10,10 +10,10 @@ class Php53Jsmin < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
-    sha256 "b3dc3422aff3cfd35ab6533f8ed582a5ef1d91021fdc69bd73759aa0b4b9ba03" => :el_capitan
-    sha256 "7a8ef3ccccd68ceef6d359bfcc8b3661fe49e3961720c6feb133d9721db15894" => :yosemite
-    sha256 "61fee60419a0fa91931eb23e0d539454ce6aa89dc46626b47d978043a5bc2fa2" => :mavericks
+    revision 2
+    sha256 "f75c4c277f2e2cb999242a5d92d4e6a21dcd283d7f6c89f56f05586dd339563e" => :el_capitan
+    sha256 "5f21aa64ad3368b38c3dc81aae139507602f70628de698176bb91f8fa86520ff" => :yosemite
+    sha256 "b80856ff6e451d1c2db37f07b511e7dfc8f582d61bdfcb527490179e95e808ad" => :mavericks
   end
 
   def install
