@@ -11,9 +11,10 @@ class Php54Htscanner < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "287a1dc805e515ccb7469095242cffe577ea3d32ed68887086ef705611b1a44e" => :el_capitan
-    sha256 "01a7d482bfb5a3f7c3a3f2d03e641a961098bcde0b2559fbd255b0ff77ac2089" => :yosemite
-    sha256 "1e6ffb352516275e2bbdf44b2639816854bd39143e46db7a7ef76826e9bcd613" => :mavericks
+    revision 1
+    sha256 "4959e686b3405e91783182dc4240ce48bc1cf0b5519e9062ccf7d159b0422ed8" => :el_capitan
+    sha256 "520181a4fbcf44d7d28c08522f60b12641e1784f616aafe3dd81168ea0405d79" => :yosemite
+    sha256 "8b13ba61684e8e790231ebb0a500b0c85f6cbee6a8c87ea14468b1a04afe6e58" => :mavericks
   end
 
   def install
