@@ -9,9 +9,10 @@ class Php54Midgard2 < AbstractPhp54Extension
   head "https://github.com/midgardproject/midgard-php5.git", :branch => "ratatoskr"
 
   bottle do
-    sha256 "db08a1aaf225c6280be6333a9c7c09b24f853e5198572ec63bbc875d06b61dc0" => :el_capitan
-    sha256 "1f6ad29dab58f63356624b90465e9a0ca5951735712e736619ecabbdbcc902a7" => :yosemite
-    sha256 "0c6bd4f32296bbcabe14eed380a990f709091361fa06ac32f82fae0e0e878cc3" => :mavericks
+    revision 1
+    sha256 "2132c200ff6de7f8b263fad70ecb68807223014663d6e13a95fb7081ce8e30c0" => :el_capitan
+    sha256 "c788505799a1bb585863a6b4ec78cc0feeeb2810a8eebe167bc000a30b343648" => :yosemite
+    sha256 "afbf1ac73eb3c6c4962c191d1717c2fc9b88569c95230d02a37e7387a891da23" => :mavericks
   end
 
   depends_on "pkg-config" => :build
