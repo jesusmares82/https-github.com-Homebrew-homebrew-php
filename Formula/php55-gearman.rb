@@ -9,9 +9,10 @@ class Php55Gearman < AbstractPhp55Extension
   head "https://svn.php.net/repository/pecl/gearman/trunk/"
 
   bottle do
-    sha256 "a75449715d8bd347092edf9b3d8544287b708a3c9c4826d6856a544803ed46f3" => :el_capitan
-    sha256 "736a0e422989c7922f26b3b6a245eabeaec0686c2018b8fbf9c3b41a9955f8a9" => :yosemite
-    sha256 "ebdec8c9087cce10dc11161dd3447b9c2a038f24e154d0af17646baa3edc4fbb" => :mavericks
+    revision 1
+    sha256 "7267a6aabf9f2d1531bb82d5ff8675b19f861f1f3d1a84777155fd4adf5a9fd8" => :el_capitan
+    sha256 "0a6f888d344f6593621dd23e83aa072d6b1bc990b98de8c62f99a6ab659a9260" => :yosemite
+    sha256 "3e6167d6481e14df7a77b13a6bf71068b0df9bc732a3326cbe607d72a4f9f00a" => :mavericks
   end
 
   depends_on "gearman"
