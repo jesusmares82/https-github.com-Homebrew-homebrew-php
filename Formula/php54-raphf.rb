@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Raphf < AbstractPhp54Extension
   init
+  desc "A reusable split-off of pecl_http's persistent handle and resource factory API."
   homepage "https://pecl.php.net/package/raphf"
   url "https://pecl.php.net/get/raphf-1.0.4.tgz"
   sha256 "461be283e89d94186a3ed4651b92c7c1a067bad7b6476d0ca7ac8863dc1ed8bf"
