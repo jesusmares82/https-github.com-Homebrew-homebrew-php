@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Apcu < AbstractPhp56Extension
   init
+  desc "APC User Cache"
   homepage "https://pecl.php.net/package/apcu"
   url "https://pecl.php.net/get/apcu-4.0.7.tgz"
   sha256 "178a731ee3435b451f1144bc4a63c9d70d4909a2c434e17c6e07db554df90bd6"
