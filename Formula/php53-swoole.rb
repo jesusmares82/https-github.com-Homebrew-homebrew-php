@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Swoole < AbstractPhp53Extension
   init
+  desc "Asynchronous and concurrent and distributed networking	framework for PHP."
   homepage "https://pecl.php.net/package/swoole"
   url "https://pecl.php.net/get/swoole-1.7.17.tgz"
   sha256 "e4d3c2466aa1e1c99750ec5497445bde8ef775fd0b304d11016e6df363cc7ec0"
