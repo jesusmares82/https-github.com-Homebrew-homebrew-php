@@ -9,7 +9,8 @@ class Php56Libvirt < AbstractPhp56Extension
 
   bottle do
     cellar :any
-    sha256 "f8375fbf252123dfbfc9c47589829c2c4aeae359426e7b26d6ea7fa4c17bdad8" => :mavericks
+    revision 1
+    sha256 "b0fdda922b7b79352a714bd92784caa045f805294c8cba7169726b0c93d25b68" => :mavericks
   end
 
   depends_on "pkg-config" => :build
