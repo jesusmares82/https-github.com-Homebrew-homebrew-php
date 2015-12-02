@@ -10,9 +10,10 @@ class Php54Mosquitto < AbstractPhp54Extension
 
   bottle do
     cellar :any
-    sha256 "34812952fb528a4dc9f839b0f1db491089d365a21f95efceb5a2c487984acb08" => :el_capitan
-    sha256 "61ba44381a33d099155332e10607dd4bf5bcc530dd4a881155480564541ad969" => :yosemite
-    sha256 "cec7ed24b23b82aced65038afc0d312ea24141b682ce14526799897098ca6054" => :mavericks
+    revision 1
+    sha256 "136f0279e39666e90111aaad7c12f54d0211cfa48af5b878b61f1febfd1c2352" => :el_capitan
+    sha256 "5f839c42fd7be9ec60b1e01ccf718e5c6f1ef975fb15aec4d0610150be7c53ce" => :yosemite
+    sha256 "ffcd74c3991b2bdc816e716ffdc9ba896c21e4cfbba1c7a212c55d847fd1b47a" => :mavericks
   end
 
   depends_on "mosquitto"
