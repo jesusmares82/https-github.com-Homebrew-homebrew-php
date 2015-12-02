@@ -10,9 +10,10 @@ class Php53Leveldb < AbstractPhp53Extension
 
   bottle do
     cellar :any
-    sha256 "0b0cb21a7b061bc35d6f9c259bc826e6224e5101d9a6016a64f88df576e35fae" => :el_capitan
-    sha256 "c6d61192bca3d2666350a0bcc4be409363e102cb5377c6e7569563cfd274a457" => :yosemite
-    sha256 "a4eff63a09ed9dc3a4960e78e7866a060ce5f7c85239b855971d84b197f79aa8" => :mavericks
+    revision 1
+    sha256 "46ae51ccfef9df87a6059fd95c2e0490f00e46840f9010d83fc32014c151ae2f" => :el_capitan
+    sha256 "242ab10a8766598aac9303065cd4307a882bee5e7f5d46476191ae0b4720eed2" => :yosemite
+    sha256 "e821470ac8c3ba01f5cfa972de4c5d1844c7a5323d5c70b1ca3546d689b64ca4" => :mavericks
   end
 
   depends_on "leveldb"
