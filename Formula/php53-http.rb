@@ -10,9 +10,11 @@ class Php53Http < AbstractPhp53Extension
   head "https://git.php.net/repository/pecl/http/pecl_http.git"
 
   bottle do
-    sha256 "464143f1f16fa53bdb07444a8a46d47953b8d1ce592801afc7b57ea357f21505" => :yosemite
-    sha256 "7832b9709ffc04f0fc5b0d823542c62105ce95c7b8b146ba01ab84a5666e9240" => :mavericks
-    sha256 "e66de4ef6e6e5c77f8657e27c3f6eb2c26d30b6b3e29ec5fdc52fc074357351d" => :mountain_lion
+    cellar :any
+    revision 1
+    sha256 "0f650832df2f4892e37e9505a98252ff3690b98e98bd9d6f5865b3fbe8815b2a" => :el_capitan
+    sha256 "e95b18af7b09a2ebaf780a8b6be62a3db58e5a2e35dc3dc9f9fb4f4de5b28ead" => :yosemite
+    sha256 "56df2f12ea40ce7d52987a6e0d4700cdf717fb6ba498357155b13e5c804afb59" => :mavericks
   end
 
   depends_on "curl"
