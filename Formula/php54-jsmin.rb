@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Jsmin < AbstractPhp54Extension
   init
+  desc "PHP extension for minifying JavaScript."
   homepage "https://pecl.php.net/package/jsmin"
   url "https://pecl.php.net/get/jsmin-1.1.0.tgz"
   sha256 "9cf4180a816bac08300c45083410ca536200bd4940db0174026b9a825161f159"
