@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Proctitle < AbstractPhp56Extension
   init
+  desc "Allows setting the current process name on Linux and BSD."
   homepage "https://pecl.php.net/package/proctitle"
   url "https://pecl.php.net/get/proctitle-0.1.2.tgz"
   sha256 "b9f84b1aebbee31cee627356438def1321d1f3bcd480341501315f35f0f9e272"
