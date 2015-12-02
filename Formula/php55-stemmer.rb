@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Stemmer < AbstractPhp55Extension
   init
+  desc "This stem extension for PHP provides stemming capability for a variety of languages."
   homepage "https://github.com/hthetiot/php-stemmer"
   url "https://github.com/hthetiot/php-stemmer/archive/0f32673f89e72049a6c43a4d5966a88b81aff039.tar.gz"
   sha256 "a3e2769afc0473d85f6d097596e3897a48ee294f071edc8d197fa04c6fc30b9f"
