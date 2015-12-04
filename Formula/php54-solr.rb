@@ -9,6 +9,10 @@ class Php54Solr < AbstractPhp54Extension
   head "https://svn.apache.org/repos/asf/lucene/dev/trunk/"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "c47e61bd9932fabc26ff765e541f291f332e9486daeb81f1aad974a766b3fe51" => :el_capitan
+    sha256 "7de0c5da36f0fbc140cb7ee698b8736aea2a7a46d55a55e9e3b02331d51a03ce" => :yosemite
+    sha256 "0646597120de5ffdd4e90b10f1b3bfe2887db13dd7235645352793824eec0a4b" => :mavericks
   end
 
   def install
