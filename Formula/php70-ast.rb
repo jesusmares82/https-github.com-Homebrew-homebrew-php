@@ -9,6 +9,10 @@ class Php70Ast < AbstractPhp70Extension
   head "https://github.com/nikic/php-ast.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "d5089ee03c435c89f72c21fcc2e9b44df4f293a0a86efac811a6872a88c72640" => :el_capitan
+    sha256 "5c629e0bb14b12bea539ae4df18b4de72f44caa84e5f44fabdf463c8d92e8fec" => :yosemite
+    sha256 "a703473ae1a241b7d65c8ba8202aa753549eee28cfef9c9389124023ee1fa861" => :mavericks
   end
 
   def install
