@@ -4,16 +4,11 @@ class Php55Apcu < AbstractPhp55Extension
   init
   desc "APC User Cache"
   homepage "https://pecl.php.net/package/apcu"
-  url "https://pecl.php.net/get/apcu-4.0.7.tgz"
-  sha256 "178a731ee3435b451f1144bc4a63c9d70d4909a2c434e17c6e07db554df90bd6"
+  url "https://pecl.php.net/get/apcu-4.0.8.tgz"
+  sha256 "bef4f5ae309526a332e0f6b98f0579a45d6000b928991babe684d4c22432d57d"
   head "https://github.com/krakjoe/apcu.git"
 
   bottle do
-    cellar :any_skip_relocation
-    revision 1
-    sha256 "982ce5b8b5168cb4b5df9227d2621d6ce7d4bce297541300fae6be31c90f9123" => :el_capitan
-    sha256 "9d97f0786619fe0fe1cb05335c3fe398dec2a8bb278945a07f19439ab44b2d0f" => :yosemite
-    sha256 "b19a9ff8e9bf307df07e9f71490e6b7f666ab4e907a6b15648da2f7a7e422ca2" => :mavericks
   end
 
   option "with-apc-bc", "Whether APCu should provide APC full compatibility support"
