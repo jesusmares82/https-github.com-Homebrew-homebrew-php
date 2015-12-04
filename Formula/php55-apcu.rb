@@ -9,6 +9,10 @@ class Php55Apcu < AbstractPhp55Extension
   head "https://github.com/krakjoe/apcu.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "75e8740ce93a36e7390ddd65d58d7dc8606f62b51b3410178bc6268004877ca3" => :el_capitan
+    sha256 "7ba7c05b697cb76c6dbdd982e7c008d2e3cd220ef06d16d174e7eebee9561098" => :yosemite
+    sha256 "2bf62225210fcf5e4f5489fbb024bb29863011c689f9957642d581f00bc11c26" => :mavericks
   end
 
   option "with-apc-bc", "Whether APCu should provide APC full compatibility support"
