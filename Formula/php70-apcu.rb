@@ -9,6 +9,10 @@ class Php70Apcu < AbstractPhp70Extension
   head "https://github.com/krakjoe/apcu.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "277d87ddaeba1f1ba96ab41f7c16995631afa1bb76b0b6b542d0039928c76db8" => :el_capitan
+    sha256 "196680f7c1f1971d77edf9a3e38c5c6d8296662cf20a1b2e644c4cd13f9bdfa7" => :yosemite
+    sha256 "7fd753b69b228d3b11b868cfdcf15931725e1f96ef42ed5bd9c5f1ad68132abb" => :mavericks
   end
 
   option "with-apc-bc", "Whether APCu should provide APC full compatibility support"
