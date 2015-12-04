@@ -4,13 +4,8 @@ require File.expand_path("../../Requirements/phar-requirement", __FILE__)
 class Phpunit < Formula
   desc "PHPUnit is a programmer-oriented testing framework for PHP."
   homepage "http://phpunit.de"
-  url "https://phar.phpunit.de/phpunit-5.0.0.phar"
-  sha256 "f1d59163ceefd69f5969fb098d03c0adb07507a56f3bafd3cf4614bac93e457c"
-
-  devel do
-	url "https://phar.phpunit.de/phpunit-beta.phar"
-	sha256 "977b3790fe712db1eb7cc04c554edfe5b6a4dc162143cd616c196fbbf6f7caeb"
-  end
+  url "https://phar.phpunit.de/phpunit-5.1.0.phar"
+  sha256 "83bf6154f7435f78495d6cbdce62db333dc86aa8032b3ed8370ed51fb351314d"
 
   bottle do
     cellar :any_skip_relocation
