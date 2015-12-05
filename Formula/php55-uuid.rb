@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Uuid < AbstractPhp55Extension
   init
+  desc "UUID extension"
   homepage "https://pecl.php.net/package/uuid"
   url "https://pecl.php.net/get/uuid-1.0.3.tgz"
   sha256 "6832c6453efec9800d2dc0bb9786cea02888378e88c15851f79210ef78369ef1"
