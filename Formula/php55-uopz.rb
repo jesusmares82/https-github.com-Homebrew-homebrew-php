@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Uopz < AbstractPhp55Extension
   init
+  desc "The uopz extension exposes Zend Engine functionality normally used at compilation and execution time."
   homepage "http://php.net/manual/en/book.uopz.php"
   url "https://github.com/krakjoe/uopz/archive/v2.0.7.tar.gz"
   sha256 "aca7dac96c00e5bd628625ad7372d733c8a40a48d4b143d7f001feea1c5fb3b1"
