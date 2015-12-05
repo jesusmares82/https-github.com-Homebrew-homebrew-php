@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Wbxml < AbstractPhp55Extension
   init
+  desc "WBXML to XML conversion"
   homepage "https://pecl.php.net/package/wbxml"
   url "https://pecl.php.net/get/wbxml-1.0.3.tgz"
   sha256 "8a2e36aa1e59712614734a150d4bc2c09c1e7d1f9b90404beeb99d32d19d15ae"
