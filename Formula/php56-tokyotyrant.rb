@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Tokyotyrant < AbstractPhp56Extension
   init
+  desc "Provides a wrapper to the Tokyo Tyrant client library."
   homepage "https://pecl.php.net/package/tokyo_tyrant"
   url "https://pecl.php.net/get/tokyo_tyrant-0.7.0.tgz"
   sha256 "38559ac381670b61600d4736803a016f9e75aee9ae608d3f6b46e79103022d28"
