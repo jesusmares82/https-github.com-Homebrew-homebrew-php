@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Vld < AbstractPhp54Extension
   init
+  desc "Provides functionality to dump the internal representation of PHP scripts"
   homepage "https://pecl.php.net/package/vld"
   url "https://pecl.php.net/get/vld-0.13.0.tgz"
   sha256 "f61fe6501b6f30cf5628b7fd0e2c41185bb9bfac96b765c8b967a8ba01f7bf8b"
