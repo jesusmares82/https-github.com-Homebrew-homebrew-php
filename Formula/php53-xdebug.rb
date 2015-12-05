@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Xdebug < AbstractPhp53Extension
   init
+  desc "PHP extension which provides debugging and profiling capabilities."
   homepage "http://xdebug.org"
   url "http://xdebug.org/files/xdebug-2.2.7.tgz"
   sha256 "4fce7fc794ccbb1dd0b961191cd0323516e216502fe7209b03711fc621642245"
