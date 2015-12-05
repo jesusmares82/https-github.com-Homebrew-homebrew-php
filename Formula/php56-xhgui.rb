@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Xhgui < AbstractPhp56Extension
   init
+  desc "A graphical interface for XHProf data built on MongoDB"
   homepage "https://github.com/perftools/xhgui"
   url "https://github.com/perftools/xhgui/archive/v0.4.0.tar.gz"
   sha256 "356e6fc46158d827aa6168d55e7de55ea16f539dbabeab5eb5085a9d03f7bb07"
