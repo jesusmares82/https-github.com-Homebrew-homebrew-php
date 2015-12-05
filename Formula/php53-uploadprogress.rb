@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Uploadprogress < AbstractPhp53Extension
   init
+  desc "An extension to track progress of a file upload."
   homepage "https://pecl.php.net/package/uploadprogress"
   url "https://pecl.php.net/get/uploadprogress-1.0.3.1.tgz"
   sha256 "30588b4589543bcf6371532546b1a8cee9da1086c206aca9f96ea1bd486bbab2"
