@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Zookeeper < AbstractPhp53Extension
   init
+  desc "PHP extension for interfacing with Apache ZooKeeper"
   homepage "https://pecl.php.net/package/zookeeper"
   url "https://pecl.php.net/get/zookeeper-0.2.2.tgz"
   sha256 "ce657910472b0880e2f9dd0c73558a94a15c2cfc0208ba305dcc02e27cb34f78"
