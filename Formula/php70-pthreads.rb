@@ -4,8 +4,8 @@ class Php70Pthreads < AbstractPhp70Extension
   init ["with-thread-safety"]
   desc "Threading API"
   homepage "https://pecl.php.net/package/pthreads"
-  url "https://pecl.php.net/get/pthreads-3.1.4.tgz"
-  sha256 "2d13304bad6829a5e43d91bad8d234b03cd5f9acbbc1134c5a4c04e827b5076c"
+  url "https://pecl.php.net/get/pthreads-3.1.5.tgz"
+  sha256 "e59a4e02b0eaff08d9522bf8b491f47187ce0dfe96709a243e2cffe12fb82afe"
   head "https://github.com/krakjoe/pthreads.git"
 
   bottle do
