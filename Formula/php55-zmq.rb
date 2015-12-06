@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php55Zmq < AbstractPhp55Extension
   init
+  desc "ZeroMQ for PHP"
   homepage "http://php.zero.mq/"
   url "https://github.com/mkoppanen/php-zmq/archive/1.1.2.tar.gz"
   sha256 "2ae77e90e0ed8112b11e838d6303940bbcae39e8d37683632a299db881bdb217"
