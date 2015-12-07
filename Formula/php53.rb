@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php", __FILE__)
 
 class Php53 < AbstractPhp
   init
+  desc "PHP Version 5.3"
   include AbstractPhpVersion::Php53Defs
 
   url PHP_SRC_TARBALL

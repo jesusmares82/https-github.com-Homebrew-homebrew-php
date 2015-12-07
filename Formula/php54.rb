@@ -2,6 +2,7 @@ require File.expand_path("../../Abstract/abstract-php", __FILE__)
 
 class Php54 < AbstractPhp
   init
+  desc "PHP Version 5.4"
   include AbstractPhpVersion::Php54Defs
   include AbstractPhpVersion::PhpdbgDefs
 
