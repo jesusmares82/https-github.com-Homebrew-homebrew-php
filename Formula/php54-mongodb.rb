@@ -9,9 +9,9 @@ class Php54Mongodb < AbstractPhp54Extension
   head "https://github.com/mongodb/mongo-php-driver.git"
 
   bottle do
-    sha256 "08598cb62515988e3a15e23d5f974438a9d370e98b8b294d6ac3ded9a5b4c5cd" => :el_capitan
-    sha256 "1678da5f18758274d5f33e3cee611713ff1323d364f57ff0eac34d8610ef4952" => :yosemite
-    sha256 "9cfd5a5ef6e6ea21ebb0feec06ddd0093b145302a312734501504294376f1500" => :mavericks
+    sha256 "72addaad53d071d27b06a71e21364b9fd105fd2535736bc4e689c5367587531c" => :el_capitan
+    sha256 "4762a9e9d95dc3edfa2ba13b1976524858507eb301f8181aa3a543d4eb78d0ba" => :yosemite
+    sha256 "94dd23a13cf27679304049ed4444a3a4f7b2fe9f81c8074f394f627477efabaa" => :mavericks
   end
 
   depends_on "openssl"
