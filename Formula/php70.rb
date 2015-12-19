@@ -40,3 +40,4 @@ class Php70 < AbstractPhp
     "70"
   end
 end
+
