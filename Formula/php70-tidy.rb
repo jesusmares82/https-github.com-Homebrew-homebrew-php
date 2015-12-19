@@ -31,3 +31,4 @@ class Php70Tidy < AbstractPhp70Extension
     write_config_file if build.with? "config-file"
   end
 end
+
