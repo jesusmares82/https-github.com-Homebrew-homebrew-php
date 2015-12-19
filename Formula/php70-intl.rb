@@ -40,3 +40,4 @@ class Php70Intl < AbstractPhp70Extension
     EOS
   end
 end
+
