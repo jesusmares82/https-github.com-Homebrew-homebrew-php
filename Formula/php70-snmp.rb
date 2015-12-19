@@ -28,3 +28,4 @@ class Php70Snmp < AbstractPhp70Extension
     write_config_file if build.with? "config-file"
   end
 end
+
