@@ -208,3 +208,4 @@ class Php70Opcache < AbstractPhp70Extension
     EOS
   end
 end
+
