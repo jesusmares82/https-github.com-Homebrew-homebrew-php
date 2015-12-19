@@ -28,3 +28,4 @@ class Php70Mcrypt < AbstractPhp70Extension
     write_config_file if build.with? "config-file"
   end
 end
+
