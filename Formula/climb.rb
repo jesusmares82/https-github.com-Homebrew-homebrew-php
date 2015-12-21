@@ -9,9 +9,9 @@ class Climb < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b63779bd7955e39cacbbf241505626cb715b20a2ae2714b442aabf37666863c3" => :el_capitan
-    sha256 "5e917f407c10d86e7952522ee89bf77837fb0bf3b6602ccb9177223b30675cb3" => :yosemite
-    sha256 "9299ac3cf99c2478d789673ac08262de95d280740ee402c7064f3551d6357dcd" => :mavericks
+    sha256 "e712bee279c51ebea7cac962e5a61bb3dc6986424a54ed528be694d325406eef" => :el_capitan
+    sha256 "cc6ded14b67effe3bd916b9037be10198fb30fb843076d6598b7d24cbc0765ef" => :yosemite
+    sha256 "a5646d7ae4751c0097162197901486c9ad6460f4054f5f29158c307e4713d13f" => :mavericks
   end
 
   test do
