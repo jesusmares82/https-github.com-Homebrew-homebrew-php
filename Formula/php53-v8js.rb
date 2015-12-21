@@ -8,9 +8,9 @@ class Php53V8js < AbstractPhp53Extension
   sha256 "0d52b999c12f9f74a0642f6c3f349002a39355295187e0b50344ea0ec64ae0bd"
   bottle do
     cellar :any
-    sha256 "27e2538c6136bef7a5f283794695e582a1054c9021c769367941ed5d4a0fe020" => :el_capitan
-    sha256 "3ec511352fac9d7125d8e1151c7f1520b89582953e985720151d0f76d211ecfa" => :yosemite
-    sha256 "7c80e9795dc13fa4457db75378c2a0d16d94a948fd850e4d80c113c98fda5d39" => :mavericks
+    sha256 "6fec66bacd3f8ca5a32b2c3938fe2bfcd2700ea27ae968dc649a4ab112831f29" => :el_capitan
+    sha256 "aa92850097bfa1bf06c6fa93360c4c9b86358988ecb3f20c92a77504c67b841e" => :yosemite
+    sha256 "4bbe4dc5248fee0536b9a60ed630b301887c6c2e118d336d0bf580dd8e22f51a" => :mavericks
   end
 
   depends_on "v8"
