@@ -9,6 +9,11 @@ class Php53Libsodium < AbstractPhp53Extension
   head "https://github.com/jedisct1/libsodium-php.git"
 
   bottle do
+    cellar :any
+    revision 2
+    sha256 "acc80bf6c325c5e993ab95f72121f7549fe94b8ae9d4d6243236255dafcbbd38" => :el_capitan
+    sha256 "97ab0dd42cf4500f45edc4360c5679c748bac58c99484a9908bab52bca33ec29" => :yosemite
+    sha256 "78f053bef9b54ade10aa180894e2b405af060ffbc5ac8390eed84356c128cd04" => :mavericks
   end
 
   depends_on "libsodium"
