@@ -1,9 +1,9 @@
 class Adminer < Formula
   desc "Adminer is a full-featured database management tool written in PHP."
   homepage "http://www.adminer.org/"
-  version "4.2.2"
-  url "https://downloads.sourceforge.net/project/adminer/Adminer/Adminer%20" + version + "/adminer-" + version + ".php"
-  sha256 "4dced0c64dbeb0f6e9a27c4ec5838bbf5f33b82c368a8965b47ae3da6c9bcb2c"
+  version "4.2.3"
+  url "https://www.adminer.org/static/download/" + version + "/adminer-" + version + ".php"
+  sha256 "40e72c917aa4f5f19d39b7322322989fd3b752131821b9f13459ca765796957c"
 
   bottle do
     cellar :any_skip_relocation
