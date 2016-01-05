@@ -8,7 +8,6 @@ class Php70Apcu < AbstractPhp70Extension
   sha256 "1582c323d31529c91edc11dcb956ee53660b37e49387d0d609d79d57224a7c30"
   head "https://github.com/krakjoe/apcu.git"
 
-  option "with-apc-bc", "Whether APCu should provide APC full compatibility support"
   depends_on "pcre"
 
   def install
@@ -18,7 +17,6 @@ class Php70Apcu < AbstractPhp70Extension
 
     args = []
     args << "--enable-apcu"
-    args << "--enable-apc-bc" if build.with? "apc-bc"
 
     safe_phpize
 
@@ -26,6 +24,21 @@ class Php70Apcu < AbstractPhp70Extension
                           phpconfig,
                           *args
     system "make"
+    # Keep all the headers that are needed to build php-apc-bc
+    include.install ["php_apc.h",
+      "apc.h",
+      "apc_globals.h",
+      "apc_cache.h",
+      "apc_stack.h",
+      "apc_lock.h",
+      "apc_pool.h",
+      "apc_cache_api.h",
+      "apc_lock_api.h",
+      "apc_sma.h",
+      "apc_pool_api.h",
+      "apc_sma_api.h",
+      "apc_arginfo.h",
+      "apc_iterator.h"]
     prefix.install "modules/apcu.so"
     write_config_file if build.with? "config-file"
   end
