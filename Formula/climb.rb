@@ -4,8 +4,8 @@ class Climb < AbstractPhpPhar
   init
   desc "Composer version manager tool"
   homepage "https://github.com/vinkla/climb"
-  url "https://github.com/vinkla/climb/releases/download/0.8.0/climb.phar"
-  sha256 "72c7dfa15d86b8c09bd0628bc11bed79ce00c9c03ce77fbbfed8f347cb6d96d9"
+  url "https://github.com/vinkla/climb/releases/download/0.8.1/climb.phar"
+  sha256 "0778330f793cc1cf0fc4e443c10f2d65c2160aa1e731102b5f07187d3373686e"
 
   bottle do
     cellar :any_skip_relocation
