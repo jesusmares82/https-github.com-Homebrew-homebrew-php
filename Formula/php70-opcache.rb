@@ -5,6 +5,11 @@ class Php70Opcache < AbstractPhp70Extension
   desc "OPcache improves PHP performance"
   homepage "http://php.net/manual/en/book.opcache.php"
   bottle do
+    cellar :any_skip_relocation
+    revision 10
+    sha256 "4c0fee9eab2c5e10cf49dcac61f101bc8ac0859f48e479de188f6f0a6b422a30" => :el_capitan
+    sha256 "100572e78072f9e1dc3ef9442a7d8a9784f92ed2b9c3ce56a6858225a20e577f" => :yosemite
+    sha256 "a8169307afe02d1a0e93a2c6297358b61c00cc43b30ea5ba28f43ff3a5215c33" => :mavericks
   end
 
   url PHP_SRC_TARBALL
