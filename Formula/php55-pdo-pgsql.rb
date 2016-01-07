@@ -9,11 +9,6 @@ class Php55PdoPgsql < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
-    cellar :any
-    revision 3
-    sha256 "7dbcdf518057e9205184a27752459967d3536c294e1fa7d8bc0759d29bfdf204" => :el_capitan
-    sha256 "fe4e30445d50ce06d24a1ad078b2fd54dba20db634008f7ae126460c271c2439" => :yosemite
-    sha256 "75b7b07e3b45d5f5a842a4a1b8c16051d1316d9f526284b2239b7109ca7ebfb9" => :mavericks
   end
 
   depends_on "postgresql"
