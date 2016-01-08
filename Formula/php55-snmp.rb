@@ -28,3 +28,4 @@ class Php55Snmp < AbstractPhp55Extension
     write_config_file if build.with? "config-file"
   end
 end
+
