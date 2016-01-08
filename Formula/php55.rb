@@ -56,3 +56,4 @@ class Php55 < AbstractPhp
     "55"
   end
 end
+
