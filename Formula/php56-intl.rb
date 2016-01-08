@@ -40,3 +40,4 @@ class Php56Intl < AbstractPhp56Extension
     EOS
   end
 end
+
