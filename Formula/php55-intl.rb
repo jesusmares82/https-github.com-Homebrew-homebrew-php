@@ -40,3 +40,4 @@ class Php55Intl < AbstractPhp55Extension
     EOS
   end
 end
+
