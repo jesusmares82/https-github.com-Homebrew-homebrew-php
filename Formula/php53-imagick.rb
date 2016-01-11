@@ -28,3 +28,4 @@ class Php53Imagick < AbstractPhp53Extension
     write_config_file if build.with? "config-file"
   end
 end
+
