@@ -29,3 +29,4 @@ class Php56Imagick < AbstractPhp56Extension
     write_config_file if build.with? "config-file"
   end
 end
+
