@@ -10,6 +10,9 @@ class Php56Imagick < AbstractPhp56Extension
   revision 1
 
   bottle do
+    sha256 "15862ffcc65fa4c2e92b132c847878993c906a1a7b15b76aedb97e2e932f8a4b" => :el_capitan
+    sha256 "2d0a4b6b82ba77daedd2b95d411cc5b0719f35b7ce169ec8de9053009945b44b" => :yosemite
+    sha256 "157c64129c3ef78e72f4a2de83ae1353b12008e5d6b8042cc90df332eb8a7a4c" => :mavericks
   end
 
   depends_on "pkg-config" => :build
