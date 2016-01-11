@@ -9,9 +9,6 @@ class Php55Imagick < AbstractPhp55Extension
   head "https://github.com/mkoppanen/imagick.git"
 
   bottle do
-    sha256 "0b0229a46c3fd2291a7c68575e72f63732144b074d579b7f901a7a932db559d9" => :el_capitan
-    sha256 "fd2fa56b64bac4a8473a083d6fa2d5adac77838c266e317147bc18f0f3002e6c" => :yosemite
-    sha256 "2421fe45e08683baf3c8a55fd04abd7e4c0d01fb7487690cf0668ffb5458a43e" => :mavericks
   end
 
   depends_on "pkg-config" => :build

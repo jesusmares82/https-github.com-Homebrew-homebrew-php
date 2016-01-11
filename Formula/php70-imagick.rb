@@ -9,9 +9,6 @@ class Php70Imagick < AbstractPhp70Extension
   head "https://github.com/mkoppanen/imagick.git"
 
   bottle do
-    sha256 "7943bfe40d4e09416873e22771e85ac1f7b3a5f3630aa03f8be4aec657a5e59c" => :el_capitan
-    sha256 "87d32c1c0c08100e2a71e59aab55d3891fb0bcda9655f065a1cd3b205928a945" => :yosemite
-    sha256 "f866bf5e05357783a7981ea9f0c73a096ad5d9080b10b6ce0f745d769baa07f0" => :mavericks
   end
 
   depends_on "pkg-config" => :build
