@@ -10,10 +10,9 @@ class Php55Libsodium < AbstractPhp55Extension
 
   bottle do
     cellar :any
-    revision 2
-    sha256 "e67e176388d5c4b0a1a45967cdbf5d870ca739d18bd881e5ae8df2b49082f9a0" => :el_capitan
-    sha256 "f0c92ee7a2be32958913b1ce2c330f378401095e56cf4bba2c3011721c10b064" => :yosemite
-    sha256 "238835a87685ade190cacbdac0e6d6b870dc066963598ff6e5c0d38ee09f9df3" => :mavericks
+    sha256 "aad7d4115656197b0bc7616c1ba9f1b2ce9b59dbb4174bbc4b404761ae4cd346" => :el_capitan
+    sha256 "84119439991188a0b07d06235c1525bc77b0cb6283f604d5031fc723ad1c8f2c" => :yosemite
+    sha256 "0f8767d5c07a0fb67723a470dc78e17ffda407a39a16a70e619395cdfc57bd39" => :mavericks
   end
 
   depends_on "libsodium"
