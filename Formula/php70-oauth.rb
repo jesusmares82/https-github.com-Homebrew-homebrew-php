@@ -9,9 +9,10 @@ class Php70Oauth < AbstractPhp70Extension
   head "https://svn.php.net/repository/pecl/oauth/trunk"
 
   bottle do
-    sha256 "c31c53874c50603c4a6476961e04bc40c425968fd26e56a02e511bc77983b05a" => :yosemite
-    sha256 "da5a3a51419d74ab4b4174eba540ff998e3c7836d2419cdfea06c003299d5978" => :mavericks
-    sha256 "d0099c429a9c5246784e9ed11951850b26fce5e60e28caf24aeb8c48614eb2b9" => :mountain_lion
+    cellar :any_skip_relocation
+    sha256 "d06dd29e0cf1091c399e61abe37f4ef390b9d1e26d2a9892d1a9c7b395c1bf8c" => :el_capitan
+    sha256 "325a10df83fa598c2618e372934d5f0e27897ed9602175fd208337d99fa18242" => :yosemite
+    sha256 "fccd5ece9e155fc4105d4b80fc1d63c991d5fd37e020b6a14bbd9b4e282c9e8d" => :mavericks
   end
 
   depends_on "pcre"
