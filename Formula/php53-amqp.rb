@@ -4,9 +4,8 @@ class Php53Amqp < AbstractPhp53Extension
   init
   desc "Communicates with any AMQP 0-9-1 compatible server."
   homepage "https://pecl.php.net/package/amqp"
-  url "https://pecl.php.net/get/amqp-1.6.0beta3.tgz"
-  sha256 "4209dbd96355a0610b42a636621b0b2b34169ef64f8067197a1a5a78a5784ac7"
-  version "1.6.0beta3"
+  url "https://pecl.php.net/get/amqp-1.6.1.tgz"
+  sha256 "cc24ddf7d4140fa68c127af98a59b72f8b51f73a663816e3e82d676566701d62"
   head "https://github.com/pdezwart/php-amqp.git"
 
   bottle do
