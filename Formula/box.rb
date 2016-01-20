@@ -18,6 +18,14 @@ class Box < AbstractPhpPhar
     "box-#{version}.phar"
   end
 
+  def phar_wrapper
+    <<-EOS.undent
+      #!/usr/bin/env bash
+      set -- $* && [ "${0##*/} $1" == "box build" ] && PHARRW="-d phar.readonly=Off"
+      /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off $PHARRW #{libexec}/#{@real_phar_file} $*
+    EOS
+  end
+
   test do
     system "box", "--version"
   end

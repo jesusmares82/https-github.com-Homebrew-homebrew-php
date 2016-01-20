@@ -22,19 +22,23 @@ class AbstractPhpPhar < Formula
     class_name.downcase
   end
 
+  def phar_wrapper
+    <<-EOS.undent
+      #!/usr/bin/env bash
+      /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{@real_phar_file} $*
+    EOS
+  end
+
   def install
     if phar_file == phar_bin
-      real_phar_file = phar_file + ".phar"
-      File.rename(phar_file, real_phar_file)
+      @real_phar_file = phar_file + ".phar"
+      File.rename(phar_file, @real_phar_file)
     else
-      real_phar_file = phar_file
+      @real_phar_file = phar_file
     end
 
-    libexec.install real_phar_file
-    (libexec/phar_bin).write <<-EOS.undent
-      #!/usr/bin/env bash
-      /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{real_phar_file} $*
-    EOS
+    libexec.install @real_phar_file
+    (libexec/phar_bin).write phar_wrapper
     chmod 0755, (libexec/phar_bin)
     bin.install_symlink (libexec/phar_bin)
   end
