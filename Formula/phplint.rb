@@ -1,9 +1,9 @@
 class Phplint < Formula
   desc "PHPLint is a validator and documentator for PHP 4 and PHP 5 programs"
   homepage "http://www.icosaedro.it/phplint/"
-  url "http://www.icosaedro.it/phplint/phplint-2.1_20150305.tar.gz"
-  version "2.1-20150305"
-  sha256 "cfa2c1b9ffcb0c60ec6fec164f249d5e608ebba1154ba6bd77ac331b03615e42"
+  url "http://www.icosaedro.it/phplint/phplint-2.1_20151116.tar.gz"
+  version "2.1-20151116"
+  sha256 "fa2483445b2c7eb693093c12436a49b668deeeea6d18bdb3450980eef5d1ea58"
 
   bottle do
     cellar :any
