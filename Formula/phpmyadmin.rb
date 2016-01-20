@@ -44,7 +44,7 @@ class Phpmyadmin < Formula
       </Directory>
     Then, open http://localhost/phpmyadmin
 
-    More documentation : file://#{share}/phpmyadmin/doc/
+    More documentation : file://#{pkgshare}/doc/
 
     Configuration has been copied to #{etc}/phpmyadmin.config.inc.php
     Don't forget to:
