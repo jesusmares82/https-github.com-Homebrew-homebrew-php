@@ -10,9 +10,8 @@ class Php56Amqp < AbstractPhp56Extension
 
   bottle do
     cellar :any
-    sha256 "7448af4c667c3f8c5a8cf06c047618158382dba7e9d7247ec065fc33fc7230dc" => :el_capitan
-    sha256 "058cfb0c8e156d9b3fa57226192d2a47784ebde641bdb7559e95cee673eff03e" => :yosemite
-    sha256 "4bc673ad818e510322270f6cb85f8880878634614c56f8da6e6428df48520750" => :mavericks
+    sha256 "7860b169f23515d4e2e0d21b1f4351f5f662b0eca65dba905535ef26dcaa38b9" => :el_capitan
+    sha256 "7c8d402e0100d56e8b61cb0491ded57890302312ba56b52a5b6a2625bb74f09c" => :yosemite
   end
 
   depends_on "rabbitmq-c"
