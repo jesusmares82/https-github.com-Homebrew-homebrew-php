@@ -16,6 +16,13 @@ class Php70Uuid < AbstractPhp70Extension
       sha256 "5f0664d5c4f55d4f6c037dab9f198e697afa3f9266854ed3945d7697fdb692b2"
     end
   end
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "02d37b20bd5ce57f33b69fbc77ae9a949d4431fe7206e0154f4af6ab8067e766" => :el_capitan
+    sha256 "852a89b651a1fc6a8b95ead691900954d1560d1a125850152ee696952fd6c1ab" => :yosemite
+    sha256 "d69cd48207e559fa2fbd2d63aab5d227325bae2d66563cb1fa359d32f974b02e" => :mavericks
+  end
+
 
   head do
     url "https://git.php.net/repository/pecl/networking/uuid.git"
