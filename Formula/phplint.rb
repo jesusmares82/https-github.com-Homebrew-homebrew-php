@@ -6,10 +6,10 @@ class Phplint < Formula
   sha256 "fa2483445b2c7eb693093c12436a49b668deeeea6d18bdb3450980eef5d1ea58"
 
   bottle do
-    cellar :any
-    sha256 "67298e41214575875a831c95c7aab57037581b99801b86db67585615aecec9d5" => :yosemite
-    sha256 "f044f50fb5e910437633e75777e01b32cf8be88a9aa8e9513b58e92da9bad548" => :mavericks
-    sha256 "29803ebfec233cea8db230aad5478e8aa8116333c966ed0f271eeb8d9a0cb261" => :mountain_lion
+    cellar :any_skip_relocation
+    sha256 "b91313dbf64da53faaf61067430ef41e7c0925d1ecdb7916ab9bc098138fa1f0" => :el_capitan
+    sha256 "a7a872b101783508783bed88a0ff042963d81819cf8ee48527e747f4f27d099c" => :yosemite
+    sha256 "369ba4b5e325c6ebbcbb8294984c1c680080272a384549fdf11e67d37d8875f5" => :mavericks
   end
 
   def install
