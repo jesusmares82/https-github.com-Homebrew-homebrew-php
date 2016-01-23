@@ -1,7 +1,7 @@
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Boris < Formula
-  desc "A tiny REPL for PHP"
+  desc "Tiny REPL for PHP"
   homepage "https://github.com/borisrepl/boris/"
   url "https://github.com/borisrepl/boris/archive/v1.0.10.tar.gz"
   sha256 "06eb9e8efe5ceac00f49ba32731c65047435ab09ff57bbbec56c8c728861a2ee"
