@@ -1,8 +1,7 @@
 class Adminer < Formula
-  desc "Adminer is a full-featured database management tool written in PHP."
+  desc "Full-featured database management tool written in PHP."
   homepage "http://www.adminer.org/"
-  version "4.2.3"
-  url "https://www.adminer.org/static/download/" + version + "/adminer-" + version + ".php"
+  url "https://www.adminer.org/static/download/4.2.3/adminer-4.2.3.php"
   sha256 "40e72c917aa4f5f19d39b7322322989fd3b752131821b9f13459ca765796957c"
 
   bottle do
@@ -13,7 +12,7 @@ class Adminer < Formula
   end
 
   def install
-    (share+"adminer").install "adminer-"+version+".php" => "index.php"
+    pkgshare.install "adminer-"+version+".php" => "index.php"
   end
 
   def caveats; <<-EOS.undent
@@ -40,4 +39,9 @@ class Adminer < Formula
     Then, open http://localhost/adminer
     EOS
   end
+
+  test do
+    system "php", "-l", "#{pkgshare}/index.php"
+  end
+
 end
