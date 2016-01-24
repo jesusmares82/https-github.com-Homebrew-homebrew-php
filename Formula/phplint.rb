@@ -1,5 +1,5 @@
 class Phplint < Formula
-  desc "PHPLint is a validator and documentator for PHP 4 and PHP 5 programs"
+  desc "Validator and documentator for PHP 4 and PHP 5 programs"
   homepage "http://www.icosaedro.it/phplint/"
   url "http://www.icosaedro.it/phplint/phplint-2.1_20151116.tar.gz"
   version "2.1-20151116"
