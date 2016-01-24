@@ -1,9 +1,9 @@
 class PhpBuild < Formula
-  desc "PHP so that multiple versions can be used in parallel"
-  homepage "http://chh.github.com/php-build/"
-  url "https://github.com/CHH/php-build/archive/v0.10.0.tar.gz"
+  desc "Enables multiple PHP versions to be used in parallel"
+  homepage "https://php-build.github.io/"
+  url "https://github.com/php-build/php-build/archive/v0.10.0.tar.gz"
   sha256 "9f3f842608ee7cb3a6a9fcf592a469151fc1e73068d1c2bd6dbd15cac379857c"
-  head "https://github.com/CHH/php-build.git"
+  head "https://github.com/php-build/php-build.git"
 
   bottle do
     cellar :any_skip_relocation
