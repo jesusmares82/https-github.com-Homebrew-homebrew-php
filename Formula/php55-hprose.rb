@@ -4,17 +4,9 @@ class Php55Hprose < AbstractPhp55Extension
   init
   desc "Hprose for PHP."
   homepage "https://pecl.php.net/package/hprose"
-  url "https://pecl.php.net/get/hprose-1.5.4.tgz"
-  sha256 "28733983073d5272b7096129dc23717c42485f905556082352bb0954b64bb996"
+  url "https://pecl.php.net/get/hprose-1.6.4.tgz"
+  sha256 "e3d96cc51cf442629e7298af153c55e4bd85d832de43f22eb5f0fabe49abacca"
   head "https://github.com/hprose/hprose-pecl.git"
-
-  bottle do
-    cellar :any_skip_relocation
-    revision 1
-    sha256 "eabe821027a52e91da7fd9d4c18c9c8f501756a0261f0b9c96e2f9dc99179048" => :el_capitan
-    sha256 "4f228ce36aad4271f786ca9bf95dedca156a220fa81730d3e9563af46e678616" => :yosemite
-    sha256 "1415554d74d4ebc58fc1386517187b61cc85909af045267510966640bff65e00" => :mavericks
-  end
 
   def install
     Dir.chdir "hprose-#{version}" unless build.head?

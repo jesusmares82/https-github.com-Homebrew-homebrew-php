@@ -1,6 +1,6 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php56Hprose < AbstractPhp56Extension
+class Php70Hprose < AbstractPhp70Extension
   init
   desc "Hprose for PHP."
   homepage "https://pecl.php.net/package/hprose"
