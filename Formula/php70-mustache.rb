@@ -9,6 +9,9 @@ class Php70Mustache < AbstractPhp70Extension
   head "https://github.com/jbboehr/php-mustache.git"
 
   bottle do
+    cellar :any
+    sha256 "8154f07c0aea19269075b504649a753f35e6ebda17585bad42e1dc73ee67872a" => :el_capitan
+    sha256 "64575366b6ff66745d8258169311f9ad57ba2d0f554d3836078186a9a0c47920" => :yosemite
   end
 
   depends_on "libmustache"
