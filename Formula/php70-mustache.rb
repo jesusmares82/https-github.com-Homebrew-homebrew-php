@@ -4,7 +4,12 @@ class Php70Mustache < AbstractPhp70Extension
   init
   desc "Mustache PHP Extension"
   homepage "https://github.com/jbboehr/php-mustache#mustache"
-  head "https://github.com/jbboehr/php-mustache.git", :branch => "php7"
+  url "https://github.com/jbboehr/php-mustache/archive/v0.7.0.tar.gz"
+  sha256 "d01f9969e890f1aa0033c62d06495fa3273c33b02d24794a3f51831200284674"
+  head "https://github.com/jbboehr/php-mustache.git"
+
+  bottle do
+  end
 
   depends_on "libmustache"
 
