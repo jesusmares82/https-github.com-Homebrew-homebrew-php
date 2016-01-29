@@ -53,3 +53,4 @@ class Php70Apcu < AbstractPhp70Extension
     EOS
   end
 end
+
