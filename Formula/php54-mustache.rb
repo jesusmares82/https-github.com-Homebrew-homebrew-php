@@ -9,6 +9,10 @@ class Php54Mustache < AbstractPhp54Extension
   head "https://github.com/jbboehr/php-mustache.git"
 
   bottle do
+    cellar :any
+    sha256 "ee010bcc1eac6e4d83d34ae86544caf20ecb52243b058437a195ef5d261f2e64" => :el_capitan
+    sha256 "1ab02f2b39e9b1e8af102dfabe5be645458736e912ecbd0e759370682ac2aaa8" => :yosemite
+    sha256 "f98b7312cda934eb99c467fb31af913b6ff7e2c5cfe8199d5ca0bf0c122b7d22" => :mavericks
   end
 
   depends_on "libmustache"
