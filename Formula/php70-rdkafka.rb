@@ -9,6 +9,12 @@ class Php70Rdkafka < AbstractPhp70Extension
   sha256 "174a68e1fc7afdc02baa20540933bb784ecf9dc4a5c111436007aa75ec11cbd6"
   head "https://github.com/arnaud-lb/php-rdkafka.git"
 
+  bottle do
+    cellar :any
+    sha256 "e2f981352d4a985e17a3932cfc671498e075b68792028fb6855be2539fa9a2e1" => :el_capitan
+    sha256 "3d0e050d91b577afcd11d5bf67e423585f583197de7910a7ce9ca3e71dd420d4" => :yosemite
+  end
+
   depends_on "librdkafka"
 
   def install
