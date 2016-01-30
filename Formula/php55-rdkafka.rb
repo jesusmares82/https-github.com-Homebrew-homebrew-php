@@ -8,6 +8,12 @@ class Php55Rdkafka < AbstractPhp55Extension
   sha256 "59e87fffe14c80d60d8adee12b2887ca3815efd5ae1885da274d8882b4f6404d"
   head "https://github.com/arnaud-lb/php-rdkafka.git"
 
+  bottle do
+    cellar :any
+    sha256 "6dc5cf3e3d0f2eb51900a32245eb4068eb50bd66466acfa433eb75bc732d7ab3" => :el_capitan
+    sha256 "7929180dd724ce7e2c7fae745f458470b120cc3dc60da46cb33a350f2c5641c1" => :yosemite
+  end
+
   depends_on "librdkafka"
 
   def install
