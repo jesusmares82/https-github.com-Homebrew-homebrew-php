@@ -9,9 +9,9 @@ class PhpunitSkeletonGenerator < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1ed95cb8a92f486f6dcaf6b5e2c81f23ab5c003823550831297cf62712f3969c" => :el_capitan
-    sha256 "3c3caa5b9d28b44188cdccad88cf722a97fdf84d657bd88b6c9c16ca79cfc480" => :yosemite
-    sha256 "2f70dcb0ea0d87b940b757a8b5488c2de2dea3dadae687dfbc92930972f4ab35" => :mavericks
+    sha256 "ff9fa95042970f93cffe003c61f8c56fc92a86d7f9d5f227f02a14521df3971f" => :el_capitan
+    sha256 "5981d865ba2158e2985854efe03f5fd94be7322c13c08e79f7f8336b592e8091" => :yosemite
+    sha256 "35546d26281be364ee8e04a13eceaaa3ffc201099f6e5273eb4cc0de5a0c8a52" => :mavericks
   end
 
   def phar_file
