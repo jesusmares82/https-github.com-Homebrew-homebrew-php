@@ -1,6 +1,6 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php54Swoole < AbstractPhp54Extension
+class Php70Swoole < AbstractPhp70Extension
   init
   desc "Asynchronous and concurrent and distributed networking	framework for PHP."
   homepage "https://pecl.php.net/package/swoole"
