@@ -9,10 +9,6 @@ class Php55PdoDblib < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
-    revision 3
-    sha256 "3e8b3805f8a3eaa0603ebe6182c1ce2a468a234568bba48faa382be1a29ccd2a" => :el_capitan
-    sha256 "c16032b57e727e3d779d6fd540dfcecba8508888b5de5edf7424a7cd0eee6da2" => :yosemite
-    sha256 "c39e1ee5ceeb510e1e76c6cf0d6e3183842f81c0ee26370ef51fcdeb84107add" => :mavericks
   end
 
   depends_on "freetds"
