@@ -32,3 +32,4 @@ class Php55Tidy < AbstractPhp55Extension
   end
 end
 
+
