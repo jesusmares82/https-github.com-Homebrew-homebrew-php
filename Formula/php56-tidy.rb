@@ -32,3 +32,4 @@ class Php56Tidy < AbstractPhp56Extension
   end
 end
 
+
