@@ -12,10 +12,6 @@ class Php56 < AbstractPhp
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
-    revision 5
-    sha256 "cd512479f765c3a1a28261b04ebd0c83addf49fa3f8f4eafabce4abb03a50ea5" => :el_capitan
-    sha256 "a9d42c171d6e823b71dab4ff70dc48562a4278b0df9dcf2023327d660987e856" => :yosemite
-    sha256 "9f9fc4ecc1fcd295c0d1d14f3617da212a707ae18c00c08cbe971323a4747fd7" => :mavericks
   end
 
   def install_args
