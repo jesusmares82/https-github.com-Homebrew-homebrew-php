@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Drush < Formula
   desc "A command-line shell and scripting interface for Drupal"
   homepage "https://github.com/drush-ops/drush"
-  url "https://github.com/drush-ops/drush/archive/8.0.2.tar.gz"
-  sha256 "ad796ad33189d897213c1d0a11b539f6a752f63a9c4f17e343af5fcc895f6bbd"
+  url "https://github.com/drush-ops/drush/archive/8.0.3.tar.gz"
+  sha256 "d089a5ea4d3aa56b2a8f62a201c1641143460236c1f1a57090236432bebcb64d"
 
   bottle do
     cellar :any_skip_relocation
