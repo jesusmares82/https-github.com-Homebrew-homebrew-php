@@ -9,6 +9,8 @@ class Php55Gmp < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
+    revision 4
+    sha256 "d57693d0cb9b959429daa19735d6c8b504dd15a1255d8ebc40c7fa53c743c957" => :yosemite
   end
 
   depends_on "gmp"
