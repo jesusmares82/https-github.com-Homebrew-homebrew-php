@@ -30,3 +30,4 @@ class Php56PdoPgsql < AbstractPhp56Extension
   end
 end
 
+
