@@ -4,8 +4,8 @@ class Php54Yaz < AbstractPhp54Extension
   init
   desc "This extension implements a Z39.50/SRU client for PHP using the YAZ toolkit and the ZOOM framework."
   homepage "http://www.indexdata.com/phpyaz"
-  url "https://pecl.php.net/get/yaz-1.1.6.tgz"
-  sha256 "dd9b919ba3b2a09a9c77c847407f106512fe75979cc0689ebccef08c80719eee"
+  url "https://pecl.php.net/get/yaz-1.1.9.tgz"
+  sha256 "9dd4da2fd6042b37a1811972134f852c94a6f6b85ca4ec5ed5d766eb27a6c401"
 
   bottle do
     sha256 "9f19cc8337e41dc45573608f9ccf6feab439f80ff7270877bcaaabe04f19db06" => :el_capitan
