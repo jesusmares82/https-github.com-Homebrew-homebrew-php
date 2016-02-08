@@ -8,9 +8,9 @@ class Php56Yaz < AbstractPhp56Extension
   sha256 "9dd4da2fd6042b37a1811972134f852c94a6f6b85ca4ec5ed5d766eb27a6c401"
 
   bottle do
-    sha256 "7b6cb327d11486cffe95f390decfec202909be4908406c569e1efc92cfdd5762" => :el_capitan
-    sha256 "d1083d2eb020dbba56ece25340bcb572633c0170314fad8796d0eb21b11ff13e" => :yosemite
-    sha256 "379cca773ee52205e5ecd31e312b2e9ad793a0d25ca7b5cebd042db5a20569a7" => :mavericks
+    sha256 "3d322874af51751f45a38dbdca50b1403fe290ef5b475a73e75abc2f7e831b06" => :el_capitan
+    sha256 "0d2527b509d0c12b33d6facd9e304780d93f0465d661725d99d9bb783ce04f6a" => :yosemite
+    sha256 "eba4f213ed6d85cf6d00c84bcb1012633fa578ea6f2c335df1e74772f2233409" => :mavericks
   end
 
   depends_on "yaz"
