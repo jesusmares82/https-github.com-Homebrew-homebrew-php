@@ -8,9 +8,9 @@ class Php53Yaz < AbstractPhp53Extension
   sha256 "9dd4da2fd6042b37a1811972134f852c94a6f6b85ca4ec5ed5d766eb27a6c401"
 
   bottle do
-    sha256 "37a96725df6f5c6aa24637876100b37687329e08b9e94200d0a2970e3116edaf" => :el_capitan
-    sha256 "fb98ff02e5f24b8180462492e93275c9df3cbff6ee3446f3da7745696e81a09b" => :yosemite
-    sha256 "43883dae77b7ecaaef72b7f09223b97a53e4a80508c945d284e88b4c182a4574" => :mavericks
+    sha256 "5d0e3691ff90cae813057cf7330bd68d9f8cd948b5df5c0e1a4ece15e42cdac8" => :el_capitan
+    sha256 "d660db18851a117b3db1c92698b29fe634eeb0e1bd6bcc4c9d62cc7d5f76b922" => :yosemite
+    sha256 "6a9f08dd45e007a015223cd7f47214e883917fe8d72ffd18a943608e86788968" => :mavericks
   end
 
   depends_on "yaz"
