@@ -20,6 +20,6 @@ class Terminus < Formula
   end
 
   test do
-    system "terminus", "cli version"
+    system "terminus", "cli", "version"
   end
 end
