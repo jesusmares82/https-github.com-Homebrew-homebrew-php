@@ -144,7 +144,7 @@ class AbstractPhpExtension < Formula
   * - If you see it, you have been successful!
   *
   * Using PHP from the command line:
-  * - Run "php -i" (command-line "phpinfo()")
+  * - Run `php -i "(command-line 'phpinfo()')"`
   * - Look for the info on the #{extension} module.
   * - If you see it, you have been successful!
 EOS
