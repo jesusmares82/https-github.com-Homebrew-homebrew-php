@@ -1,4 +1,8 @@
+require File.expand_path("../../language/php", __FILE__)
+
 class Phan < Formula
+  include Language::PHP::Composer
+
   desc "Static analyzer for PHP"
   homepage "https://github.com/etsy/phan"
   url "https://github.com/etsy/phan/archive/0.2.tar.gz"
@@ -8,12 +12,11 @@ class Phan < Formula
   bottle do
   end
 
-  depends_on "composer"
   depends_on "php70-ast"
   depends_on "php70"
 
   def install
-    system "composer", "install"
+    composer_install
     prefix.install Dir["*"]
     bin.install_symlink prefix/"phan"
   end

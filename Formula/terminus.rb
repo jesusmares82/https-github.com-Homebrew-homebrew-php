@@ -1,6 +1,9 @@
+require File.expand_path("../../language/php", __FILE__)
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Terminus < Formula
+  include Language::PHP::Composer
+
   desc "Command-line interface for the Pantheon Platform"
   homepage "https://github.com/pantheon-systems/cli"
   url "https://github.com/pantheon-systems/cli/archive/0.10.3.tar.gz"
@@ -15,10 +18,9 @@ class Terminus < Formula
   end
 
   depends_on PhpMetaRequirement
-  depends_on "composer" => :build
 
   def install
-    system "composer", "install"
+    composer_install
 
     rm "bin/terminus.bat"
     rm "bin/behat"

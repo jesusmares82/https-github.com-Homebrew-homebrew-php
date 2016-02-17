@@ -1,4 +1,8 @@
+require File.expand_path("../../language/php", __FILE__)
+
 class PhpPlantumlwriter < Formula
+  include Language::PHP::Composer
+
   desc "Create UML diagrams from your PHP source"
   homepage "https://github.com/davidfuhr/php-plantumlwriter"
   url "https://github.com/davidfuhr/php-plantumlwriter/archive/1.6.0.tar.gz"
@@ -12,10 +16,9 @@ class PhpPlantumlwriter < Formula
   end
 
   depends_on "plantuml"
-  depends_on "composer" => :build
 
   def install
-    system "composer", "update"
+    composer_install
 
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/php-plantumlwriter"

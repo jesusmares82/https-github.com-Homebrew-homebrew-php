@@ -1,6 +1,9 @@
+require File.expand_path("../../language/php", __FILE__)
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Psysh < Formula
+  include Language::PHP::Composer
+
   desc "Runtime developer console, interactive debugger & REPL"
   homepage "https://github.com/bobthecow/psysh"
   url "https://github.com/bobthecow/psysh/archive/v0.5.2.tar.gz"
@@ -15,10 +18,9 @@ class Psysh < Formula
   end
 
   depends_on PhpMetaRequirement
-  depends_on "composer" => :build
 
   def install
-    system "composer", "install", "--no-dev"
+    composer_install "--no-dev"
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/psysh"
   end

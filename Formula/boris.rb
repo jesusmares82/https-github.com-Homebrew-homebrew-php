@@ -1,6 +1,9 @@
+require File.expand_path("../../language/php", __FILE__)
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Boris < Formula
+  include Language::PHP::Composer
+
   desc "Tiny REPL for PHP"
   homepage "https://github.com/borisrepl/boris/"
   url "https://github.com/borisrepl/boris/archive/v1.0.10.tar.gz"
@@ -15,7 +18,6 @@ class Boris < Formula
   end
 
   depends_on PhpMetaRequirement
-  depends_on "composer" => :build
 
   def install
     # ensure the required php modules are installed
@@ -24,7 +26,7 @@ class Boris < Formula
     raise "php must be re-compiled with pcntl support" unless php_modules.include?("pcntl")
     raise "php must be re-compiled with posix support" unless php_modules.include?("posix")
 
-    system "composer", "install"
+    composer_install
     libexec.install Dir["*"]
     bin.install_symlink "#{libexec}/bin/boris"
   end

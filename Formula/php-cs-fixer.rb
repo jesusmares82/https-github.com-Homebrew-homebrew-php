@@ -1,6 +1,9 @@
+require File.expand_path("../../language/php", __FILE__)
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class PhpCsFixer < Formula
+  include Language::PHP::Composer
+
   desc "Tries to fix coding standards issues"
   homepage "http://cs.sensiolabs.org"
   url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.11.tar.gz"
@@ -15,10 +18,9 @@ class PhpCsFixer < Formula
   end
 
   depends_on PhpMetaRequirement
-  depends_on "composer"
 
   def install
-    system "composer", "install"
+    composer_install
     prefix.install Dir["*"]
     bin.install_symlink prefix/"php-cs-fixer"
   end

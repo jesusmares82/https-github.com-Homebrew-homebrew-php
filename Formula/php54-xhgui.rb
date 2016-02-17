@@ -1,14 +1,16 @@
+require File.expand_path("../../language/php", __FILE__)
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Xhgui < AbstractPhp54Extension
+  include Language::PHP::Composer
+
   init
-  desc "A graphical interface for XHProf data built on MongoDB"
+  desc "Graphical interface for XHProf data built on MongoDB"
   homepage "https://github.com/perftools/xhgui"
   url "https://github.com/perftools/xhgui/archive/v0.4.0.tar.gz"
   sha256 "356e6fc46158d827aa6168d55e7de55ea16f539dbabeab5eb5085a9d03f7bb07"
   head "https://github.com/perftools/xhgui.git"
 
-  depends_on "composer"
   depends_on "mongodb"
   depends_on "php54-mcrypt"
   depends_on "php54-mongo"
@@ -18,8 +20,8 @@ class Php54Xhgui < AbstractPhp54Extension
     prefix.install %w[composer.json composer.lock install.php cache config src external webroot]
     (prefix + "cache").chmod 0777
     Dir.chdir prefix
-    system "cp", "config/config.default.php", "config/config.php"
-    system "composer", "install"
+    cp "config/config.default.php", "config/config.php"
+    composer_install
   end
 
   def caveats
