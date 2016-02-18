@@ -17,6 +17,7 @@ class Php54Memcached < AbstractPhp54Extension
 
   depends_on "pkg-config" => :build
   depends_on "php54-igbinary"
+  depends_on "igbinary" => :build
   if build.with? "sasl"
     depends_on "libmemcached" => "with-sasl"
   else

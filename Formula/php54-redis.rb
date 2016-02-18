@@ -17,6 +17,7 @@ class Php54Redis < AbstractPhp54Extension
   end
 
   depends_on "php54-igbinary"
+  depends_on "igbinary" => :build
 
   def install
     ENV.universal_binary if build.universal?

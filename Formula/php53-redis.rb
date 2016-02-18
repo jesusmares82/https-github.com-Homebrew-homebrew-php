@@ -17,6 +17,7 @@ class Php53Redis < AbstractPhp53Extension
   end
 
   depends_on "php53-igbinary"
+  depends_on "igbinary" => :build
 
   def install
     ENV.universal_binary if build.universal?
