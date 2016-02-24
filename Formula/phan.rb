@@ -25,3 +25,4 @@ class Phan < Formula
     system "phan", "--version"
   end
 end
+
