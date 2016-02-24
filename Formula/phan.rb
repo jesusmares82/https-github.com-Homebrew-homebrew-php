@@ -10,6 +10,11 @@ class Phan < Formula
   head "https://github.com/etsy/phan.git"
 
   bottle do
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "e6403de5743128cc637fab1c97ed5b00943d4c2653e50c9c0bc4696a16af52a5" => :el_capitan
+    sha256 "5f6e4184cbb3881095d7e1cccf37927c7ee189eaf34ee2e61654a6c1d76ca332" => :yosemite
+    sha256 "2ba217c4d0f20ae3c3e9496623d4c80a33735723f0fcff27e3920422567ee59a" => :mavericks
   end
 
   depends_on "php70-ast"
