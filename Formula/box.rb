@@ -9,9 +9,9 @@ class Box < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "fe91af7752c0e69cce243f0e1ee7c552872e33f8efc3320750becd8974ee56e0" => :el_capitan
-    sha256 "16fe74c0b7d171434904aa3ce83fa0d6b7f2ce1d62482f71004452b432c07572" => :yosemite
-    sha256 "74f3c77e1e3dcd6644e7274d237f842c758950ece546366b0645c4de9d6539e7" => :mavericks
+    sha256 "d5ce90623297ea68f87a3fd14fccd38a0b09ebf0c27a12e6f9e8177ea6016429" => :el_capitan
+    sha256 "35a5452f6c4479e6a6369f1da78e7513180ea6a7362d8e06583fc3652d3842a9" => :yosemite
+    sha256 "055fdb534cb834dc46e9b8dc311c0e22068d7791a71102fd669e95f7b02e310e" => :mavericks
   end
 
   def phar_file
