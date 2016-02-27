@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Phpmyadmin < Formula
   desc "Administration of MySQL over the Web"
   homepage "http://www.phpmyadmin.net"
-  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_5_4_1.tar.gz"
-  sha256 "2dfadf618be9562f26b8ee034d4b95ef3145ec4410aa59d26df59792b3fe46a2"
+  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_5_5.tar.gz"
+  sha256 "c228bb6d6ea51295dacd59fcf9fa2c549946ded8d81fdddbdd83935c6215d58f"
   head "https://github.com/phpmyadmin/phpmyadmin.git"
 
   depends_on PhpMetaRequirement
