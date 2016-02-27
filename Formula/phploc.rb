@@ -9,9 +9,9 @@ class Phploc < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "3567a3c5842bf78cfca11806c615ac7e1bdaef9b345cc779642153f9bfb9f3e1" => :el_capitan
-    sha256 "6518adeb9b9c2464ea132d284aa08bc24d5a8ec983df727f823d01d48bd42309" => :yosemite
-    sha256 "6518adeb9b9c2464ea132d284aa08bc24d5a8ec983df727f823d01d48bd42309" => :mavericks
+    sha256 "31e704690f7f364e2db91e276dd163e906100721db7bff020a62903242e8394a" => :el_capitan
+    sha256 "31d7a0a48a7b38c9bae423371225127620a411657c2bfeca40e294f84a12ad9f" => :yosemite
+    sha256 "8cb7901655ec30a4de41fa95a9480194f59915eeef6eb935882003b9245047ca" => :mavericks
   end
 
   def phar_file
