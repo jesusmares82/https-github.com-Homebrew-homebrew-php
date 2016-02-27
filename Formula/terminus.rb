@@ -5,10 +5,10 @@ class Terminus < Formula
   include Language::PHP::Composer
 
   desc "Command-line interface for the Pantheon Platform"
-  homepage "https://github.com/pantheon-systems/cli"
-  url "https://github.com/pantheon-systems/cli/archive/0.10.3.tar.gz"
-  sha256 "e5ee5b3c1004c2f8dabf160c14f95d953602e23b0c55d13813d549b4e171f117"
-  head "https://github.com/pantheon-systems/cli.git"
+  homepage "https://github.com/pantheon-systems/terminus"
+  url "https://github.com/pantheon-systems/terminus/archive/0.10.5.tar.gz"
+  sha256 "dbc1a7ead80cde49803dfb77f9b402dda03c77db58fae9b1b70f6fe5c304a10f"
+  head "https://github.com/pantheon-systems/terminus.git"
 
   bottle do
     cellar :any_skip_relocation
