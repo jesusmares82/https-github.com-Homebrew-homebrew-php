@@ -4,8 +4,8 @@ class Phploc < AbstractPhpPhar
   init
   desc "Tool for quickly measuring the size of a PHP project"
   homepage "https://github.com/sebastianbergmann/phploc"
-  url "https://phar.phpunit.de/phploc-2.0.2.phar"
-  sha256 "0ce805f48d778c49ae78af0b08a16efd2eba01ff31aa59e5374fad27e93c5558"
+  url "https://phar.phpunit.de/phploc-3.0.0.phar"
+  sha256 "2d5ed6990f056c7cfbfadf03c926b39370ac9afde66747c30f50d2594bff6dca"
 
   bottle do
     cellar :any_skip_relocation
