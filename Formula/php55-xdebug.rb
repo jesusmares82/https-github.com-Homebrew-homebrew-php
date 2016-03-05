@@ -8,6 +8,13 @@ class Php55Xdebug < AbstractPhp55Extension
   sha256 "3c4dcb2709d1653534e7cfaa546307041afd298ac48a3670183a12cfdb5eee05"
   head "https://github.com/xdebug/xdebug.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "e67394a60091bac1ab7de5bc2371904cb59a12af93472fa4b9d2729eb3992c01" => :el_capitan
+    sha256 "d100df675ee8f3e562752719c15ee9dd13820812e7057a1660bb4e5871d997c0" => :yosemite
+    sha256 "b64fc8aa8c72c5dc45b398e879908bc5d28bbeba6c0727c9d1e39d0baba8bd0e" => :mavericks
+  end
+
   def extension_type
     "zend_extension"
   end
