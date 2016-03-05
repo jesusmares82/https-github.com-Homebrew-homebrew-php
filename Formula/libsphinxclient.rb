@@ -1,10 +1,11 @@
 class Libsphinxclient < Formula
   desc "Client for sphinx"
   homepage "http://www.sphinxsearch.com"
-  url "http://sphinxsearch.com/files/sphinx-2.2.9-release.tar.gz"
-  sha256 "79bcb9fca069ba630fd71fb40fba05bb16e19b475906fb6ae026334d50a6bf3a"
+  url "https://github.com/sphinxsearch/sphinx/archive/2.2.10-release.tar.gz"
+  version "2.2.10"
+  sha256 "982dc31ce7bd3a97174d8159d5ee4db9605500a9544b457b53d973ab2e300c1f"
 
-  head "http://sphinxsearch.googlecode.com/svn/trunk/"
+  head "https://github.com/sphinxsearch/sphinx.git"
 
   bottle do
     cellar :any_skip_relocation
