@@ -4,8 +4,8 @@ class Pdepend < AbstractPhpPhar
   init
   desc "performs static code analysis"
   homepage "http://pdepend.org/"
-  url "http://static.pdepend.org/php/2.0.6/pdepend.phar"
-  sha256 "71573a4b125a5e1ca42032af52095b2d96a39aafb26704529549c42d6833bf4f"
+  url "http://static.pdepend.org/php/2.2.3/pdepend.phar"
+  sha256 "44e33a0a604be33e6fe0016791bb842a83c02754c4067745d70b5195c14825ab"
 
   bottle do
     cellar :any_skip_relocation
