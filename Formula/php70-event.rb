@@ -5,7 +5,6 @@ class Php70Event < AbstractPhp70Extension
   desc "Provides interface to libevent library"
   homepage "https://pecl.php.net/package/event"
   url "https://pecl.php.net/get/event-2.0.0.tgz"
-  version "2.0.0"
   sha256 "3f785022b60d8e8687825c89a314ef94b1dbbbcb9438c3e5b3b9d840d5119a1b"
 
   depends_on "libevent"
