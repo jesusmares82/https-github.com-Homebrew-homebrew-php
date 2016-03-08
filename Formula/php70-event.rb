@@ -7,6 +7,12 @@ class Php70Event < AbstractPhp70Extension
   url "https://pecl.php.net/get/event-2.0.0.tgz"
   sha256 "3f785022b60d8e8687825c89a314ef94b1dbbbcb9438c3e5b3b9d840d5119a1b"
 
+  bottle do
+    sha256 "35ea012c45378097d492d2d50e48411c5e59f1a168fd3abe1dfad9a8aeb5968b" => :el_capitan
+    sha256 "96fbf07366548b69a06cf2fccb648a180092b635ddbebf385f00907e1045fe99" => :yosemite
+    sha256 "4e1c561edacdda0c2f72da047e02c8bf397a4ce1cbca61e727d63a42e75d076d" => :mavericks
+  end
+
   depends_on "libevent"
   depends_on "openssl"
 
