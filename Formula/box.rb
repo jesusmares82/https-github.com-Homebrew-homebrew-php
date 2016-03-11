@@ -4,8 +4,8 @@ class Box < AbstractPhpPhar
   init
   desc "application for building and managing Phars"
   homepage "https://box-project.github.io/box2/"
-  url "https://github.com/box-project/box2/releases/download/2.7.0/box-2.7.0.phar"
-  sha256 "f7bd7ac6c6cd6d3ba0d87dc81ac9d1b6e8c9aa8a2a87a026bd182ec18edafc7e"
+  url "https://github.com/box-project/box2/releases/download/2.7.1/box-2.7.1.phar"
+  sha256 "62d708f343e1a48cca8d373a4c3a7aa10379b19db19e8ba58a3125834c4d175b"
 
   bottle do
     cellar :any_skip_relocation
