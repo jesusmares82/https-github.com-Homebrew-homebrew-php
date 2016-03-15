@@ -9,6 +9,11 @@ class Php56Pcntl < AbstractPhp56Extension
   version PHP_VERSION
 
   bottle do
+    cellar :any_skip_relocation
+    revision 8
+    sha256 "1b2132b0fcd4dde0cb4c5fd8149a8aec09e437d3051a1287aabdf253ec84dc2c" => :el_capitan
+    sha256 "2dcd2a18b70d985c2c5dde9fd92a3604210cf4d109bbde010cbb512c1b7d3939" => :yosemite
+    sha256 "363a039d1a20560bfecf9f241e7678993676afacbcd374e74c9cb7b78fbcdefa" => :mavericks
   end
 
   def install
