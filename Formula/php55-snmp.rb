@@ -9,6 +9,10 @@ class Php55Snmp < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
+    revision 5
+    sha256 "e0480561c2408209f0b442ede6b1b83d079d0eef44ed1336dc9f927c51fb94c1" => :el_capitan
+    sha256 "db7a56b675b423e428bf7eb4a201c5b783a6b42b15db897c20976fbdb2cbcbb2" => :yosemite
+    sha256 "1fc37792a05cbdf5f738ec19eda0e1c57a8fd93d6b3fb034106d2d216b4d3946" => :mavericks
   end
 
   depends_on "net-snmp"
