@@ -6,9 +6,6 @@ class Php70Ssh2 < AbstractPhp70Extension
   homepage "https://pecl.php.net/package/ssh2"
   head "https://github.com/php/pecl-networking-ssh2.git"
 
-  bottle do
-  end
-
   depends_on "libssh2"
 
   def install
