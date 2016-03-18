@@ -4,8 +4,8 @@ class Php53Mongo < AbstractPhp53Extension
   init
   desc "Legacy MongoDB database driver."
   homepage "https://pecl.php.net/package/mongo"
-  url "https://pecl.php.net/get/mongo-1.6.12.tgz"
-  sha256 "3fec10526ed02ce0e54c4623839e35bfab17d16cb9e8a48c7fee126be351c990"
+  url "https://pecl.php.net/get/mongo-1.6.13.tgz"
+  sha256 "ed081b87e40b16b2878579ede456f34cda6575c31baded5e4af29ea14993d783"
   head "https://github.com/mongodb/mongo-php-driver-legacy.git"
 
   bottle do
