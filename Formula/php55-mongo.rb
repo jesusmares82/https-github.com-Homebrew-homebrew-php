@@ -10,10 +10,9 @@ class Php55Mongo < AbstractPhp55Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
-    sha256 "b852a69b5c6978c9af9de8630fe0a5dd7d29ec0c290a93f8ff7634251e7d690d" => :el_capitan
-    sha256 "83f23188971e8872913efacbeffeafb904bdde594e08d6f26f2c206c47ecddf6" => :yosemite
-    sha256 "a2976210ccf5e9c8a617916254a54ca80e43cd1fbe9ef4c608f49ae04777ee27" => :mavericks
+    sha256 "eebab2ac24d10d3df45acae5dfe473f0e3a5131f9b834a341ad19aa2a01319dd" => :el_capitan
+    sha256 "8054ca4431c21ac3e857038f21f0845c38a03ebe83e85e4d7b89bb76579c0184" => :yosemite
+    sha256 "e5f6334a9f6e2c1fda72d110b81e3073256445066823dda2fcf4c34a9d300bbb" => :mavericks
   end
 
   def install
