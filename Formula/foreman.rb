@@ -2,7 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 
 class Foreman < AbstractPhpPhar
   init
-  desc "Foreman is a Laravel scaffolding application"
+  desc "Laravel scaffolding application"
   homepage "https://github.com/Indatus/foreman"
   url "https://github.com/Indatus/foreman/raw/v1.0.0/foreman.phar"
   version "1.0.0"
