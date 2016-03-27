@@ -2,7 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php70Intl < AbstractPhp70Extension
   init
-  desc "A wrapper for the ICU library"
+  desc "Wrapper for the ICU library"
   homepage "http://php.net/manual/en/book.intl.php"
   bottle do
     revision 12
