@@ -2,7 +2,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php70Mcrypt < AbstractPhp70Extension
   init
-  desc "An interface to the mcrypt library"
+  desc "Interface to the mcrypt library"
   homepage "http://php.net/manual/en/book.mcrypt.php"
   bottle do
     revision 12
