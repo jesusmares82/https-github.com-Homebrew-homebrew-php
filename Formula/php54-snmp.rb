@@ -9,10 +9,6 @@ class Php54Snmp < AbstractPhp54Extension
   version PHP_VERSION
 
   bottle do
-    revision 1
-    sha256 "80d82caafda71a76a5f1193716c0dffd94b8c71ff00195fba0347762a7bfc447" => :yosemite
-    sha256 "096c6e357bff4c76c548eb2ecff41e4b08fbc144aa24f569bbeff79d1ff7af10" => :mavericks
-    sha256 "f74ca5d4b4e085c1f1e3fcad6cf15fa75de625cff9fb7eb81b9a734e6974d03c" => :mountain_lion
   end
 
   depends_on "net-snmp"
