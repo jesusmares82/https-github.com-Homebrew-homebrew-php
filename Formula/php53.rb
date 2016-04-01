@@ -13,10 +13,6 @@ class Php53 < AbstractPhp
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
-    revision 1
-    sha256 "11d8a78d7ea8d8f96844d16275e9d636c7a92e8500264e167350156f223bf209" => :el_capitan
-    sha256 "9eb440e414a3206d90f17455a1f41479b88187d2dce0b3515eac60b35b53c67c" => :yosemite
-    sha256 "ba891bb88f8edb2fa25b3921eeeec5429a1743259d7aa87b053c377dce49eb25" => :mavericks
   end
 
   # build dependancy needed to fix issue #962
@@ -51,7 +47,7 @@ class Php53 < AbstractPhp
 
   # Previous Bison and 10.9+ patches, and multi-SAPIs patch (https://pecl.php.net/~jani/patches/multi-sapi.patch) applied
   patch do
-    url "https://gist.githubusercontent.com/ablyler/c0264742cc1cca84b708/raw/a5c5c5c689acc003b5db6a9703b4f7d1d586a593/multi-sapi-5.3.29-homebrew.patch"
-    sha256 "e21f593ef290851d057ae07b0e513ef188304140912e18a0f28355b801dc2b40"
+    url "https://gist.githubusercontent.com/javian/bfcbd5bc5874ee9c539fb3d642cdce3e/raw/bf079cc68ec76290f02f57981ae85b20a06dd428/multi-sapi-5.3.29-homebrew.patch"
+    sha256 "3c3157bc5c4346108a398798b84dbbaa13409c43d3996bea2ddacb3277e0cee2"
   end
 end
