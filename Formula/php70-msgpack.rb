@@ -4,7 +4,7 @@ class Php70Msgpack < AbstractPhp70Extension
   init
   desc "MessagePack serialization"
   homepage "https://pecl.php.net/package/msgpack"
-  head "https://github.com/msgpack/msgpack-php.git", :branch => "php7"
+  head "https://github.com/msgpack/msgpack-php.git", :branch => "master"
 
   def install
     Dir.chdir "msgpack-#{version}" unless build.head?
