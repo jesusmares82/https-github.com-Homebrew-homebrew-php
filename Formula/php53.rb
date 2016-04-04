@@ -51,3 +51,4 @@ class Php53 < AbstractPhp
     sha256 "3c3157bc5c4346108a398798b84dbbaa13409c43d3996bea2ddacb3277e0cee2"
   end
 end
+
