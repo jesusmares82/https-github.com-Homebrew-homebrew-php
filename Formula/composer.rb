@@ -10,9 +10,9 @@ class Composer < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1e430acc2e93be0726cf3963e31e40e4e5b1b0946af12a759029160d7c2dbb38" => :el_capitan
-    sha256 "4c3c9767f10a1cf5fcc0c5948be2c02233f61d058286c637d2f31578c7a1d766" => :yosemite
-    sha256 "2cd105467d909d9ae17361c71647e1b2d5d336aac00179cc493fc7182b8ac740" => :mavericks
+    sha256 "45047cc42d33467e09a6ce22b128211da46ae44f4c91c6ca1af58863ee3cdfd0" => :el_capitan
+    sha256 "08f84829facc6b0a8609b7913fd1c409c6261601a696fa767974f590f36a6bd7" => :yosemite
+    sha256 "b8dbdd134e3311da1449e33a61220a136d18e8d2439f5a3baa498b967ba60651" => :mavericks
   end
 
   test do
