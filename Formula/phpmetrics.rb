@@ -10,9 +10,9 @@ class Phpmetrics < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7ade1c58664fb235c4e423e3bd25833ac3261246a69edb8dfaa04f60c2b2dc94" => :el_capitan
-    sha256 "aafe13315ef20ce708d62e53229fb948290279c5980cd2720f8bd8956fc23e33" => :yosemite
-    sha256 "23f3ac0d69614338f358c0ea8c9f3acd96ca2243b7a9322cb7a5b49fca6e032a" => :mavericks
+    sha256 "9e2cbaea4fbb60e35d623d89d1b9d0a0be0c08419445f20b249f513a792ead22" => :el_capitan
+    sha256 "2b9d46d652c62382aae6c54dbeb261a14cecdec837b68280f711e24e2b5f2661" => :yosemite
+    sha256 "d4759f68c16fc4767584040e35805c11a2acc2e1afb8c0fcd10d769e86c9672a" => :mavericks
   end
 
   test do
