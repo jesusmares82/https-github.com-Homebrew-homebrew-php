@@ -4,8 +4,8 @@ class Phpctags < AbstractPhpPhar
   init
   desc "Ctags compatible index generator written in pure PHP"
   homepage "https://github.com/vim-php/phpctags"
-  url "https://github.com/vim-php/phpctags/archive/v0.5.1.tar.gz"
-  sha256 "65e875c326876016fc1c63341348fab24f6a5b01ce1010f1357e3d87084f832b"
+  url "https://github.com/vim-php/phpctags/archive/0.6.0.tar.gz"
+  sha256 "ed9ddbb56f672673274de7ef066071e703b5090d47c9ccc31442dd43b5775190"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,7 +16,8 @@ class Phpctags < AbstractPhpPhar
 
   def install
     system "make"
-    bin.install "phpctags"
+    File.rename("build/phpctags.phar", "build/phpctags")
+    bin.install "build/phpctags"
   end
 
   test do
