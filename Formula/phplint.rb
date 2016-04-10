@@ -1,9 +1,9 @@
 class Phplint < Formula
-  desc "Validator and documentator for PHP 4 and PHP 5 programs"
+  desc "Validator and documentator for PHP 5 and 7 programs"
   homepage "http://www.icosaedro.it/phplint/"
-  url "http://www.icosaedro.it/phplint/phplint-2.1_20151116.tar.gz"
-  version "2.1-20151116"
-  sha256 "fa2483445b2c7eb693093c12436a49b668deeeea6d18bdb3450980eef5d1ea58"
+  url "http://www.icosaedro.it/phplint/phplint-3.0_20160307.tar.gz"
+  version "3.0-20160307"
+  sha256 "7a361166d1a6de707e6728828a6002a6de69be886501853344601ab1da922e7b"
 
   bottle do
     cellar :any_skip_relocation
