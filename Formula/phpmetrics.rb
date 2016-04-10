@@ -4,9 +4,9 @@ class Phpmetrics < AbstractPhpPhar
   init
   desc "Static analysis tool for PHP"
   homepage "http://www.phpmetrics.org"
-  url "https://github.com/Halleck45/PhpMetrics/raw/v1.8.3/build/phpmetrics.phar"
-  version "1.8.3"
-  sha256 "454a4d1806bb44cdb2e8535d1a1db051389fd7c140daebce5a8ab2cd78a5fa7f"
+  url "https://github.com/phpmetrics/PhpMetrics/raw/v1.10.0/build/phpmetrics.phar"
+  version "1.10.0"
+  sha256 "a7aac1115f6ad30365d89655744bb2a3bfed6e798ad30e37ddefd1fa0618da57"
 
   bottle do
     cellar :any_skip_relocation
