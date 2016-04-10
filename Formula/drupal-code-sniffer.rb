@@ -3,14 +3,15 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class DrupalCodeSniffer < Formula
   desc "Checks Drupal code against coding standards"
   homepage "https://drupal.org/project/coder"
-  url "http://ftp.drupal.org/files/projects/coder-8.x-2.6.tar.gz"
-  version "8.x-2.6"
-  sha256 "2743d57fe160a81be972641e6154824f803b347d011c04fae9b156883e21f925"
+  url "http://ftp.drupal.org/files/projects/coder-8.x-2.7.tar.gz"
+  version "8.x-2.7"
+  sha256 "849e297964b99980e12031ae7c55ddbef410cbe88c74a3e4e2e7b2c43b100a19"
   head "http://git.drupal.org/project/coder.git", :branch => "8.x-2.x"
 
   option "without-drush-command", "Don't install drush command"
   option "without-drupalpractice-standard", "Don't install DrupalPractice standard"
 
+  depends_on "drush" if build.with? "drush-command"
   depends_on "php-code-sniffer"
   depends_on PhpMetaRequirement
 
@@ -32,7 +33,9 @@ class DrupalCodeSniffer < Formula
 
   def install
     prefix.install "coder_sniffer"
+  end
 
+  def post_install
     # Link Drupal Coder Sniffer into PHPCS standards.
     phpcs_standards.mkpath
     if File.symlink? phpcs_standards+drupal_standard_name
