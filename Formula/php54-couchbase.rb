@@ -4,8 +4,8 @@ class Php54Couchbase < AbstractPhp54Extension
   init
   homepage "https://pecl.php.net/package/couchbase"
   desc "Provides fast access to documents stored in a Couchbase Server."
-  url "https://pecl.php.net/get/couchbase-2.0.7.tgz"
-  sha256 "0482757d6b29ec5b9c957b053203a75410ced519f2407e666f7ca5c180a66ff5"
+  url "https://pecl.php.net/get/couchbase-2.1.0.tgz"
+  sha256 "30eda3f5afd0d9f4c77b12650163c3490de111e57ad6b20092c95e44e3d60a8d"
   head "https://github.com/couchbaselabs/php-couchbase.git"
 
   bottle do
