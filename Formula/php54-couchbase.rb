@@ -9,9 +9,10 @@ class Php54Couchbase < AbstractPhp54Extension
   head "https://github.com/couchbaselabs/php-couchbase.git"
 
   bottle do
-    sha256 "8439385cb0de076008e37ea6dcea1d124e9f4c3917abe35cd519bdb4121c1a7d" => :yosemite
-    sha256 "ff47cad93935eb564e7157a850dc25b502f2e1057763a011f5b8f91d3be1d06b" => :mavericks
-    sha256 "6f4652f69cb4fc452f7e46d90b62a4678b19f225425a4b4ad3c3a6cdef907335" => :mountain_lion
+    cellar :any
+    sha256 "055eb358f820051b494de84560c23b2b70222cf1e568947042f5015b651091a7" => :el_capitan
+    sha256 "e32db0b783bda707f1f4afba403c7a827b3470c4c0fd722fa460794a78387cc5" => :yosemite
+    sha256 "b5c5b24b883d3143b37d25e33591a63e6c8fdb34623db5990f0742503077b414" => :mavericks
   end
 
   option "with-igbinary", "Build with igbinary support"
