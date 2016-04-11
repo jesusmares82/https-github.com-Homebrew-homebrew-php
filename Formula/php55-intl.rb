@@ -7,6 +7,7 @@ class Php55Intl < AbstractPhp55Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
+  revision 1
 
   bottle do
     sha256 "7a0d3ecedf27ab80fd5b5f62b7de6bb9b8397adb76f0ae173b7af3fe492759d9" => :el_capitan
