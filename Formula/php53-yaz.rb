@@ -6,6 +6,7 @@ class Php53Yaz < AbstractPhp53Extension
   homepage "http://www.indexdata.com/phpyaz"
   url "https://pecl.php.net/get/yaz-1.1.9.tgz"
   sha256 "9dd4da2fd6042b37a1811972134f852c94a6f6b85ca4ec5ed5d766eb27a6c401"
+  revision 1
 
   bottle do
     sha256 "5d0e3691ff90cae813057cf7330bd68d9f8cd948b5df5c0e1a4ece15e42cdac8" => :el_capitan
