@@ -52,25 +52,6 @@ If you have recently upgraded your Mac OS X version or Xcode, you may have some 
 
 An example of the best practice(s) for filling out bug reports can be seen here: https://github.com/Homebrew/homebrew-php/issues/1225.
 
-A blank bug report template can be found [here](https://gist.githubusercontent.com/lucasmichot/413c340c3fd97fef4cc0/raw/ce219a1cf2cd128764fce83628c47bf7e0d8adef/homebrew-php-bug-report-template).
-
-You can also copy/paste this markdown and add it in the description of your bug report:
-
-```
-<problem description>
-
-Parameter | Value
------------------- | ------------------
-**OS X Version:** | <your OSX version>
-**Homebrew Version:** | <your Homebrew version>
-**PHP Version in use:** | <your PHP version>
-**Xcode Version:** | <your Xcode version>
-**Output of gcc -v:** | <result of the CLI output>
-**Output of php -v:** | <result of the CLI output>
-**Output of brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here within a gist** | <result of the CLI output>
-**Output of brew doctor within a gist** | <the link to your public Gist>
-```
-
 Please include the following information in your bug report:
 
 - OS X Version: eg. 10.7.3, 10.6.3
@@ -82,8 +63,14 @@ Please include the following information in your bug report:
   - If on Snow Leopard, you may want to install the [`OS X GCC Installer`](https://github.com/kennethreitz/osx-gcc-installer/).
 - Output of `gcc -v`
 - Output of `php -v`
-- Output of `brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here` within a [gist](http://gist.github.com). Please append any options you added to the `brew install` command.
-- Output of `brew doctor` within a [gist](http://gist.github.com)
+- Installation logs for the formula in question
+  - A link to the gist created with `brew gist-logs <formula-you-are-using>` will contain these logs.
+  - Or, if `brew gist-logs` is not working:
+    - Output of `brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here` within a [gist](http://gist.github.com). Please append any options you added to the `brew install` command.
+    - Output of `brew doctor` within a [gist](http://gist.github.com)
+
+New bug reports will be created with a template of this information for you to fill in.
+
 
 This will help us diagnose your issues much quicker, as well as find similarities between different reported issues.
 
