@@ -89,7 +89,7 @@ This will help us diagnose your issues much quicker, as well as find similaritie
 
 ## Background
 
-This repository contains **PHP-related** formulae for [Homebrew](https://github.com/Homebrew/homebrew).
+This repository contains **PHP-related** formulae for [Homebrew](https://github.com/Homebrew/brew).
 
 (This replaces the PHP formulae that used to live under [adamv's homebrew-alt repository](https://github.com/adamv/homebrew-alt).)
 
@@ -97,7 +97,7 @@ The purpose of this repository is to allow PHP developers to quickly retrieve wo
 
 ## Requirements
 
-* [Homebrew](https://github.com/Homebrew/homebrew)
+* [Homebrew](https://github.com/Homebrew/brew)
 * Snow Leopard, Lion, Mountain Lion, Mavericks, or Yosemite. Untested everywhere else.
 * The Homebrew `dupes` tap - `brew tap homebrew/dupes`
 * The Homebrew `versions` tap - `brew tap homebrew/versions`
