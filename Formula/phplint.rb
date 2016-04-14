@@ -5,6 +5,16 @@ class Phplint < Formula
   version "3.0-20160307"
   sha256 "7a361166d1a6de707e6728828a6002a6de69be886501853344601ab1da922e7b"
 
+  if MacOS.version <= :mavericks
+    if Formula["php55"].linked_keg.exist?
+      depends_on "php55"
+    elsif Formula["php70"].linked_keg.exist?
+      depends_on "php70"
+    else
+      depends_on "php56"
+    end
+  end
+
   bottle do
     cellar :any_skip_relocation
     sha256 "b91313dbf64da53faaf61067430ef41e7c0925d1ecdb7916ab9bc098138fa1f0" => :el_capitan
