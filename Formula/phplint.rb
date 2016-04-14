@@ -17,9 +17,9 @@ class Phplint < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b91313dbf64da53faaf61067430ef41e7c0925d1ecdb7916ab9bc098138fa1f0" => :el_capitan
-    sha256 "a7a872b101783508783bed88a0ff042963d81819cf8ee48527e747f4f27d099c" => :yosemite
-    sha256 "369ba4b5e325c6ebbcbb8294984c1c680080272a384549fdf11e67d37d8875f5" => :mavericks
+    sha256 "a0bbcf5029964b90c8c0c92b60d8d38872ddc3eefaf277dbafad14b8fff60bdb" => :el_capitan
+    sha256 "caec309e27822f33611334495bc5eb6246ae7d40b2317dd88b79958478b5918e" => :yosemite
+    sha256 "73551ae1bd5d72be2d7b78e3edb8578eadcab799fc96a42c198c9eb456bba794" => :mavericks
   end
 
   def install
