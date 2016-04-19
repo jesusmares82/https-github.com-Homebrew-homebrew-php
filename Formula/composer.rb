@@ -4,8 +4,8 @@ class Composer < AbstractPhpPhar
   init
   desc "Dependency Manager for PHP"
   homepage "http://getcomposer.org"
-  url "https://getcomposer.org/download/1.0.0/composer.phar"
-  sha256 "1acc000cf23bd9d19e1590c2edeb44fb915f88d85f1798925ec989c601db0bd6"
+  url "https://getcomposer.org/download/1.0.1/composer.phar"
+  sha256 "de069dae8c7bf01adedc925d3ac2358e5318a1b05580b001aa04e585fa55d8c0"
   head "https://getcomposer.org/composer.phar"
 
   bottle do
