@@ -9,6 +9,10 @@ class Php55V8js < AbstractPhp55Extension
   revision 2
 
   bottle do
+    cellar :any
+    sha256 "44bcb17a9ae81fae5f9484b8b95011f305191556b7dd2239aa2bf21443b19155" => :el_capitan
+    sha256 "a26ddf30148d36293c4e82a8d45daa94b75795523481b443785280f8cf39d3d7" => :yosemite
+    sha256 "454b49355e63703d40b9c02d7217cb87fd348e3515a722681fe0eded18d6d015" => :mavericks
   end
 
   depends_on "v8"
