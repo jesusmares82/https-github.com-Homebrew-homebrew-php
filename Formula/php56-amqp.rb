@@ -4,8 +4,8 @@ class Php56Amqp < AbstractPhp56Extension
   init
   desc "Communicates with any AMQP 0-9-1 compatible server."
   homepage "https://pecl.php.net/package/amqp"
-  url "https://pecl.php.net/get/amqp-1.6.1.tgz"
-  sha256 "cc24ddf7d4140fa68c127af98a59b72f8b51f73a663816e3e82d676566701d62"
+  url "https://pecl.php.net/get/amqp-1.7.0.tgz"
+  sha256 "b9a642c0ae60cc5e049c169a017cc355bfc0f2478db588b20925eaa63d358e83"
   head "https://github.com/pdezwart/php-amqp.git"
 
   bottle do

@@ -4,9 +4,8 @@ class Php70Amqp < AbstractPhp70Extension
   init
   desc "Communicates with any AMQP 0-9-1 compatible server."
   homepage "https://pecl.php.net/package/amqp"
-  url "https://pecl.php.net/get/amqp-1.7.0alpha2.tgz"
-  version "1.7.0alpha2"
-  sha256 "ce61a679b2899aadfe2f57b7d03b8e8350d29071350df0b141ce85bf20f7c607"
+  url "https://pecl.php.net/get/amqp-1.7.0.tgz"
+  sha256 "b9a642c0ae60cc5e049c169a017cc355bfc0f2478db588b20925eaa63d358e83"
   head "https://github.com/pdezwart/php-amqp.git"
 
   depends_on "rabbitmq-c"
