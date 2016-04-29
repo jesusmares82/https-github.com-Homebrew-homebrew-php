@@ -51,9 +51,9 @@ class AbstractPhpVersion < Formula
   end
 
   module Php70Defs
-    PHP_SRC_TARBALL = 'https://php.net/get/php-7.0.5.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-7.0.6.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '7.0.5'
+    PHP_VERSION     = '7.0.6'
     PHP_BRANCH      = 'PHP-7.0'
 
     PHP_CHECKSUM    = {
