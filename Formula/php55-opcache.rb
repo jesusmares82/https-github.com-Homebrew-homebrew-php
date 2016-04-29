@@ -9,6 +9,11 @@ class Php55Opcache < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
+    cellar :any_skip_relocation
+    revision 7
+    sha256 "98fba0c7b5facb2cbb011db2c701c7bb0adfa738b314793690fd6ff292023000" => :el_capitan
+    sha256 "04a2557663356541dfbdfe67428d19ac8511749d3b7c1d6fd6ba831e46d8a53f" => :yosemite
+    sha256 "d93e8b01aaff7b548e94fb2ce3f7df2fd86e110b44a1b078b6becb9c1ee98b04" => :mavericks
   end
 
   depends_on "pcre"
