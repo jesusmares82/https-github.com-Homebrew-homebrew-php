@@ -5,6 +5,10 @@ class Php70Pspell < AbstractPhp70Extension
   desc "Extension to check the spelling"
   homepage "http://php.net/manual/en/book.pspell.php"
   bottle do
+    revision 13
+    sha256 "0858d101e97f11eb52e9eed1aea37491ee943724cbdaaad19712dac4f4deddf2" => :el_capitan
+    sha256 "d21f3d14030c39000dbf7362545ab40e109a9a324f7c3e7c1bba2f5434fbea52" => :yosemite
+    sha256 "c5e3af9ed716b89d7896329e96cc92e596f815c79408b453e6d16758cdb596c2" => :mavericks
   end
 
   url PHP_SRC_TARBALL
