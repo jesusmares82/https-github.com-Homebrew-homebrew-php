@@ -4,9 +4,10 @@ class Php53Pinba < AbstractPhp53Extension
   init
   desc "PHP extension for Pinba monitoring server"
   homepage "http://pinba.org/"
-  url "https://github.com/tony2001/pinba_extension/archive/6869f30e8c264e7a5742ab55f4f6bd5ee29e6080.tar.gz"
-  sha256 "46e3640a47cd9b1951e6edbe637ba44ec5c858688883003c74ebe27a61e14fc5"
+  url "https://github.com/tony2001/pinba_extension/archive/7e7cd25ebcd74234f058bfe350128238383c6b96.tar.gz"
+  sha256 "bed4ffc980f407a433e0fcf8f2309537f7914d6d33349a1ea1ce14ab37127462"
   head "https://github.com/tony2001/pinba_extension.git"
+  version "1.1.0-dev.7e7cd25"
 
   bottle do
     cellar :any_skip_relocation
