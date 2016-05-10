@@ -6,8 +6,8 @@ class Drush < Formula
 
   desc "Command-line shell and scripting interface for Drupal"
   homepage "https://github.com/drush-ops/drush"
-  url "https://github.com/drush-ops/drush/archive/8.0.5.tar.gz"
-  sha256 "ae470c593d646adbccd11278fcf3243e405c039c2f1152da0330bb82b312c506"
+  url "https://github.com/drush-ops/drush/archive/8.1.2.tar.gz"
+  sha256 "439548afa60a21513268f2cc56d7443691a12967593ef99366b9f5689b7f7835"
 
   bottle do
     cellar :any_skip_relocation
