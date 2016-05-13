@@ -6,7 +6,7 @@ class Php53Imagick < AbstractPhp53Extension
   homepage "https://pecl.php.net/package/imagick"
   url "https://pecl.php.net/get/imagick-3.3.0.tgz"
   sha256 "bd69ebadcedda1d87592325b893fa78a5710a0ca7307f8e18c5e593949b1db2d"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "0a00a1277485342b62a9da0dc67414bad91263948a407222a51de5a47e3836e0" => :el_capitan
@@ -31,4 +31,3 @@ class Php53Imagick < AbstractPhp53Extension
     write_config_file if build.with? "config-file"
   end
 end
-
