@@ -19,6 +19,12 @@ class Php55Couchbase < AbstractPhp55Extension
 
   depends_on "libcouchbase"
 
+  patch do
+    # backport https://github.com/couchbase/php-couchbase/commit/916d4b7f6c31f03662b43e9e8cd08500087aae1a
+    url "https://gist.github.com/avsej/4f0bc3d1fe5da95688ea6a5ae41764c5/raw/59b3b109dfb6e594334778789ae6b10824cc39c6/916d4b7f6c31f03662b43e9e8cd08500087aae1a.patch"
+    sha256 "1725b49b0737f2b65c1f30a5308be91cbb552e1d119b726ba7e130fe6c03ac97"
+  end
+
   def install
     Dir.chdir "couchbase-#{version}" unless build.head?
 
