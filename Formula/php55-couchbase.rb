@@ -10,9 +10,10 @@ class Php55Couchbase < AbstractPhp55Extension
 
   bottle do
     cellar :any
-    sha256 "cec6c09e3a3159d0acd2b05bfb42e735a53806f8e10d6638be000974da4200df" => :el_capitan
-    sha256 "3fbe0afa9feb00712a866c07bdeb9a8bab82343173ee6be27ac3c85722623f7e" => :yosemite
-    sha256 "c0414aa54f18fa2ae08d351dddd405a629f0ed9de96d069107da63be6a4b69ae" => :mavericks
+    revision 1
+    sha256 "460dae86b6889f191f6abe13254f1115948d016ea42ef0cd60b2ca9584cc9dd1" => :el_capitan
+    sha256 "97175f71df793580f18a15dc5d61aba4f6dbe8d7ed5e2c8890f588d59cb32128" => :yosemite
+    sha256 "0fe94b89dc8eaccdb7978a4ee4cafb51f351bc4a03f633795662af04dd44655a" => :mavericks
   end
 
   option "with-igbinary", "Build with igbinary support"
