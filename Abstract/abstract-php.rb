@@ -42,7 +42,7 @@ class AbstractPhp < Formula
     depends_on 'jpeg'
     depends_on 'libpng'
     depends_on 'libxml2' if build.include?('with-homebrew-libxml2') || MacOS.version < :lion || MacOS.version >= :el_capitan
-    depends_on 'unixodbc'
+    depends_on 'unixodbc' unless build.include?('without-unixodbc')
     depends_on 'readline'
 
     # ssl
@@ -83,6 +83,7 @@ class AbstractPhp < Formula
     option 'without-mysql', 'Remove MySQL/MariaDB support'
     option 'without-legacy-mysql', 'Do not include the deprecated mysql_ functions'
     option 'without-pcntl', 'Build without Process Control support'
+    option 'without-unixodbc', 'Build without unixODBC support'
   end
 
   # Fixes the pear .lock permissions issue that keeps it from operating correctly.
@@ -209,9 +210,7 @@ INFO
       "--with-libedit",
       "--with-mhash",
       ("--with-ndbm=/usr" if OS.mac?),
-      "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}",
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
-      "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}",
       "--with-xmlrpc",
       "--with-zlib=/usr",
       "--with-readline=#{Formula['readline'].opt_prefix}",
@@ -221,6 +220,12 @@ INFO
 
     if build.include?('with-homebrew-libxml2') || MacOS.version < :lion || MacOS.version >= :el_capitan
       args << "--with-libxml-dir=#{Formula['libxml2'].opt_prefix}"
+    end
+
+    # Build PDO ODBC with unixODBC by default
+    unless build.without? 'unixodbc'
+      args << "--with-pdo-odbc=unixODBC,#{Formula['unixodbc'].opt_prefix}"
+      args << "--with-unixODBC=#{Formula['unixodbc'].opt_prefix}"
     end
 
     # Build Apache module by default
