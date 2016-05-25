@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Phalcon < AbstractPhp56Extension
   init
-  desc "A full-stack PHP framework"
+  desc "Full-stack PHP framework"
   homepage "http://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.10.tar.gz"
-  sha256 "59fbe5bdee7a955ecb1f0cd8bb4c942e33105080302f239363aa3941e9e52172"
+  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.13.tar.gz"
+  sha256 "0a1bd6afe902c6f2f68cf5e2f2785503f5ad95d1d2cf1b66c77154c483a08a35"
   head "https://github.com/phalcon/cphalcon.git"
 
   bottle do
