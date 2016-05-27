@@ -9,6 +9,10 @@ class Php56Tidy < AbstractPhp56Extension
   version PHP_VERSION
 
   bottle do
+    revision 8
+    sha256 "2aa423953ccc5a1ddd459733ee6affe5754aa5b06175d8a7ecd938a280bdf6c5" => :el_capitan
+    sha256 "5690d13cf48b74ec5dfde06f0220c09615c996f0223745781884e4f1f3f638bc" => :yosemite
+    sha256 "ca72c4514a7d2013457f109cdad368dd341118920db6210e5b6e9b0465c3cc67" => :mavericks
   end
 
   depends_on "tidy-html5"
