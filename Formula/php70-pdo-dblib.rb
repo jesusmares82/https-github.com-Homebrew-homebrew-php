@@ -5,6 +5,10 @@ class Php70PdoDblib < AbstractPhp70Extension
   desc "A unified Sybase-DB style driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
   bottle do
+    revision 13
+    sha256 "58a71a01fd78568f15b2fee9cf395021426aa701f360ff85a40ae4313b757247" => :el_capitan
+    sha256 "cbe19cbd514c3637b0a9ae0b5139684f014f9197677401a54f7a1002ad9dd70e" => :yosemite
+    sha256 "8ea0972af179a7a86d797666a486502fceeca903f9b66a4e9bf5021053a7ff64" => :mavericks
   end
 
   url PHP_SRC_TARBALL
