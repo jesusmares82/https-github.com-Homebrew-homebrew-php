@@ -9,10 +9,6 @@ class Php55Intl < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
-    revision 7
-    sha256 "bf6362b811b94dc6bae9b939e4b944782e626db94883bb8a26682c728002294f" => :el_capitan
-    sha256 "f91a66f647a5aa2872708db2e62c8d09d3005e531602d72f56b863f172921de7" => :yosemite
-    sha256 "4d944af15609ad921a37995d6fc3e6080dac4fc229e92c1b33d323ea2e68ec16" => :mavericks
   end
 
   depends_on "icu4c"

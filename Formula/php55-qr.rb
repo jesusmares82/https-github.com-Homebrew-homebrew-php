@@ -8,9 +8,6 @@ class Php55Qr < AbstractPhp55Extension
   sha256 "0d628741d77f34207a00cc0b84967ecf4ccb38f03e65105573ecfead8c76f114"
 
   bottle do
-    sha256 "494152a5bc20ab4b7ede0c752e72921a62330f71eb809ad7ab2e1fde1d83e79c" => :el_capitan
-    sha256 "9dc5ecc6d4e133ea8e5762667b0cfdbd6b7d2a07a498dd504d28635152b2e0e4" => :yosemite
-    sha256 "2dbd8384568d0068a8597b98c0b7db754874a4988daa1ea3bb5dd4bc0705071a" => :mavericks
   end
 
   depends_on "zlib"

@@ -9,10 +9,6 @@ class Php55Tidy < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
-    revision 6
-    sha256 "37bf5c35469136b28cd5ae25878e7648773e11817df652d88852a19a8d338529" => :el_capitan
-    sha256 "e1141f5a3d3db41c72009c255a1885cc1e36b28fa9ba010544fca7c8955ccd02" => :yosemite
-    sha256 "132005748cc6e65b8a797af582d8f3ecde9cb36b6117193731760c5c50502215" => :mavericks
   end
 
   depends_on "tidy-html5"

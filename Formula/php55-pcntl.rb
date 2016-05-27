@@ -9,11 +9,6 @@ class Php55Pcntl < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
-    cellar :any_skip_relocation
-    revision 7
-    sha256 "918aa495849e1f2b1dfdabcacd5ba1888c9884a38335f7798ff322aa917cdd92" => :el_capitan
-    sha256 "d126a967731703008510dd372e2d88cdfbe148b6f22e9e0ea78e94a6c0728871" => :yosemite
-    sha256 "a63d94a227d161362ed6964ac187d0400a7f4d438381d057a69bc2503915e938" => :mavericks
   end
 
   def install
