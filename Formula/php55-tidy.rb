@@ -9,6 +9,8 @@ class Php55Tidy < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
+    revision 7
+    sha256 "cdd7bcc8925062123354ec2e932692cd4672c6aae7dbba28ba838122a78fb128" => :mavericks
   end
 
   depends_on "tidy-html5"
