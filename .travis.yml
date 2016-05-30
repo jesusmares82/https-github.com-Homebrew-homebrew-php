@@ -26,6 +26,7 @@ before_install:
   - ln -s $PWD $(brew --repo)/Library/Taps/homebrew/homebrew-php
   - cd $(brew --repo)/Library/Taps/homebrew/homebrew-php
   - export TRAVIS_BUILD_DIR="$(brew --repo)/Library/Taps/homebrew/homebrew-php"
+  - export HOMEBREW_DEVELOPER="1"
   - env | grep TRAVIS_
 
 script:
