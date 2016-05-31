@@ -4,9 +4,8 @@ class Php70V8js < AbstractPhp70Extension
   init
   desc "PHP extension for Google's V8 Javascript engine"
   homepage "https://pecl.php.net/package/v8js"
-  url "https://pecl.php.net/get/v8js-1.0.0.tgz"
-  sha256 "f44424e1bd9aaf11caee1ec1baf4bd46e71afd832a0b3411d2f3dfaf1bef5377"
-  revision 2
+  url "https://github.com/phpv8/v8js/archive/1.3.0.tar.gz"
+  sha256 "77df2ca77df53da911c36089185433c73429ef3baf376b6cd5d61bf88202e798"
 
   bottle do
     cellar :any
@@ -18,8 +17,6 @@ class Php70V8js < AbstractPhp70Extension
   depends_on "v8"
 
   def install
-    Dir.chdir "v8js-#{version}" unless build.head?
-
     ENV.universal_binary if build.universal?
 
     safe_phpize
