@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class PhpCodeSniffer < Formula
   desc "Check coding standards in PHP, JavaScript and CSS"
   homepage "http://pear.php.net/package/PHP_CodeSniffer"
-  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.6.0.tgz"
-  sha256 "d73eae1415dc09b6c666a990e08a17731db0fc5d013fb263277286997f5eb64c"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.6.1.tgz"
+  sha256 "49be3e6462d1a572afd4d941e0b75ff5ba66e1050ec0428f9c9f107a208506d6"
 
   bottle do
     cellar :any_skip_relocation
@@ -67,9 +67,7 @@ class PhpCodeSniffer < Formula
 
     # Fix shebang line of phpcs-svn-pre-commit script.
     # See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Using-the-SVN-pre-commit-Hook
-    inreplace "#{prefix}/scripts/phpcs-svn-pre-commit" do |s|
-      s.gsub! /^#!@php_bin@/, "#!#{HOMEBREW_PREFIX}/bin/php"
-    end
+    inreplace "#{prefix}/scripts/phpcs-svn-pre-commit", /^#!@php_bin@/, "#!#{HOMEBREW_PREFIX}/bin/php"
   end
 
   def caveats; <<-EOS.undent
