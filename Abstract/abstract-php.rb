@@ -18,7 +18,7 @@ class AbstractPhp < Formula
     end
 
     # obtain list of php formulas
-    php_formulas = (Formula.names).grep(Regexp.new('php\d\d$')).sort
+    php_formulas = (Formula.names).grep(Regexp.new('^php\d\d$')).sort
 
     # remove our self from the list
     php_formulas.delete(self.name.split("::")[2].downcase)
