@@ -9,9 +9,9 @@ class Codeception < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c565aece8b663c253d514928d18894ec3643164f31dd3c4e40d09993de1e5a04" => :el_capitan
-    sha256 "c2f0a5e052689f576f37b2e7052ad2742889a5637a1bf5f8e0b953d59d172277" => :yosemite
-    sha256 "85bfc0fedf72cc99725b7d264addd75404e39efcc3c8e24f0622ee7a96c43a8f" => :mavericks
+    sha256 "20762f7905b425ffef66d0dee8d68dad27947321ab42d5f9cf6dc555c3307591" => :el_capitan
+    sha256 "810f0459fda3769b75aafe840d7611e07f077e57def608d73716c14f032e6f67" => :yosemite
+    sha256 "c3cecf5236ae8d02c6fb63bdce662337536843136bdeaaf3b76051d706af8e30" => :mavericks
   end
 
   def phar_file
