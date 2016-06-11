@@ -4,8 +4,8 @@ class Php70Apcu < AbstractPhp70Extension
   init
   desc "APC User Cache"
   homepage "https://pecl.php.net/package/apcu"
-  url "https://pecl.php.net/get/apcu-5.1.3.tgz"
-  sha256 "1582c323d31529c91edc11dcb956ee53660b37e49387d0d609d79d57224a7c30"
+  url "https://github.com/krakjoe/apcu/archive/v5.1.5.tar.gz"
+  sha256 "52a3d5d9111f1417ebc8c386df6834aec62ee5ba0f7f460866cb9459e3d25579"
   head "https://github.com/krakjoe/apcu.git"
 
   bottle do
@@ -18,8 +18,6 @@ class Php70Apcu < AbstractPhp70Extension
   depends_on "pcre"
 
   def install
-    Dir.chdir "apcu-#{version}" unless build.head?
-
     ENV.universal_binary if build.universal?
 
     args = []
@@ -32,7 +30,8 @@ class Php70Apcu < AbstractPhp70Extension
                           *args
     system "make"
     # Keep all the headers that are needed to build php-apc-bc
-    include.install ["php_apc.h",
+    include.install [
+      "php_apc.h",
       "apc.h",
       "apc_globals.h",
       "apc_cache.h",
@@ -45,7 +44,8 @@ class Php70Apcu < AbstractPhp70Extension
       "apc_pool_api.h",
       "apc_sma_api.h",
       "apc_arginfo.h",
-      "apc_iterator.h"]
+      "apc_iterator.h",
+    ]
     prefix.install "modules/apcu.so"
     write_config_file if build.with? "config-file"
   end
@@ -60,4 +60,3 @@ class Php70Apcu < AbstractPhp70Extension
     EOS
   end
 end
-
