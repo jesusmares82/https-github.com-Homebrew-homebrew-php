@@ -8,9 +8,10 @@ class Php56Raphf < AbstractPhp56Extension
   sha256 "b5386eff888e2c06951b4fa65a3d0b536775e35a8afc2db323a3129685f7c2bf"
 
   bottle do
-    sha256 "99977faae951ff350b5548de02898e68aa42f4e565cccfffff445491fce8953b" => :yosemite
-    sha256 "68ecac431c3ab1a297432256cc296f8b5dfddcd4f96af408f6706428da9d9c1b" => :mavericks
-    sha256 "f40e19b76251d553af0919dfe24a8c7e0fd992f7ead642ed05fb466c7dd03971" => :mountain_lion
+    cellar :any_skip_relocation
+    sha256 "e44f6a1caa74c6b4379e4e226efb555abf5949025b131c2b814f3c5677537caf" => :el_capitan
+    sha256 "46cab1e94ee486fc1fc3d7fce7a50fb4eef800ac2626bbbd43f3a048c0853644" => :yosemite
+    sha256 "aea9c4419349302a15a307fb2cf0cbd93ff5bba535544bf9de2d36512f38e744" => :mavericks
   end
 
   def install
