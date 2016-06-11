@@ -2,12 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Propro < AbstractPhp56Extension
   init
-  desc "A reusable split-off of pecl_http's property proxy API."
+  desc "Reusable split-off of pecl_http's property proxy API."
   homepage "https://pecl.php.net/package/propro"
-  url "https://pecl.php.net/get/propro-1.0.0.tgz"
-  sha256 "9825d50ab4bb214428cd11c14c2f389c16aded09db16d266f27f147a7f2371f2"
-
-  head "https://git.php.net/repository/pecl/php/propro.git"
+  url "https://github.com/m6w6/ext-propro/archive/release-1.0.2.tar.gz"
+  sha256 "35b1d0881927049b3c7a14dc28306e2788f9b2bc937b1ef18e533a3bef8befce"
 
   bottle do
     cellar :any_skip_relocation
@@ -18,8 +16,6 @@ class Php56Propro < AbstractPhp56Extension
   end
 
   def install
-    Dir.chdir "propro-#{version}"
-
     ENV.universal_binary if build.universal?
 
     safe_phpize
