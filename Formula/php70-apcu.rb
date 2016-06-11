@@ -10,9 +10,9 @@ class Php70Apcu < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b45e0d5cf4a8e0ae7ef8c76e8a358f31bb3add64af0f2ab341d54e363372abba" => :el_capitan
-    sha256 "c8b37a2bb26baa8c650976cb5c221b45b2634d679487cf439c39206dd6303804" => :yosemite
-    sha256 "914f6e70c45545890d2904bad22b160287ceaf64ee85840c0aa04471524e84ab" => :mavericks
+    sha256 "ef4c81578ba91d26b749c22c3cbe8821daaf16fac54140f987664c71f5038fc0" => :el_capitan
+    sha256 "ab84678944c805a33273091218ea12a813b561d9c7a58a9f7a136ac5dcda933d" => :yosemite
+    sha256 "7c7168ccdbc1af276290f5106f335b8093a4040186370efddec8fd2855d2583e" => :mavericks
   end
 
   depends_on "pcre"
