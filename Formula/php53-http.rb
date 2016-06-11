@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Http < AbstractPhp53Extension
   init
-  desc "This HTTP extension aims to provide a convenient and powerful set of functionality for one of PHPs major applications."
+  desc "HTTP extension that provides a convenient set of functionality"
   homepage "https://pecl.php.net/package/pecl_http"
-  url "https://pecl.php.net/get/pecl_http-2.4.3.tgz"
-  sha256 "2d9f3713331cf35b4a0162bd8b294683a67fecb5223e50978661acccd30c6c39"
+  url "https://github.com/m6w6/ext-http/archive/RELEASE_2_5_6.tar.gz"
+  sha256 "83c15492ae7673404db462b642450f5bec81db72765d21fbb915ac39a42f0be4"
 
-  head "https://git.php.net/repository/pecl/http/pecl_http.git"
+  head "https://github.com/m6w6/ext-http.git"
 
   bottle do
     cellar :any
@@ -18,7 +18,7 @@ class Php53Http < AbstractPhp53Extension
   end
 
   depends_on "curl"
-  depends_on "libevent" => :build
+  depends_on "libevent"
   depends_on "php53-raphf"
   depends_on "php53-propro"
 
@@ -28,8 +28,6 @@ class Php53Http < AbstractPhp53Extension
   end
 
   def install
-    Dir.chdir "pecl_http-#{version}" unless build.head?
-
     ENV.universal_binary if build.universal?
 
     safe_phpize
