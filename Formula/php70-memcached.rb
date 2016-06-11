@@ -9,6 +9,8 @@ class Php70Memcached < AbstractPhp70Extension
   option "with-sasl", "Build with sasl support"
 
   depends_on "pkg-config" => :build
+  depends_on "php70-igbinary"
+  depends_on "igbinary" => :build
   if build.with? "sasl"
     depends_on "libmemcached" => "with-sasl"
   else
@@ -22,9 +24,13 @@ class Php70Memcached < AbstractPhp70Extension
 
     args = []
     args << "--with-libmemcached-dir=#{Formula["libmemcached"].opt_prefix}"
+    args << "--enable-memcached-igbinary"
     args << "--enable-memcached-sasl" if build.with? "sasl"
 
     safe_phpize
+
+    mkdir_p "ext/igbinary"
+    cp "#{Formula["igbinary"].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
