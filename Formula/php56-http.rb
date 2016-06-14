@@ -11,9 +11,9 @@ class Php56Http < AbstractPhp56Extension
 
   bottle do
     cellar :any
-    sha256 "f37b02e0eaf9353b692333f1d65cc0b2dc92a6865e16504b59905e299f826703" => :el_capitan
-    sha256 "063e7613a414860a5fa1cade6f33bd22b4de4e40d027f1f88e09bd45ecfe3d11" => :yosemite
-    sha256 "7237487f80a8bdfaf0375828704d244f9d6826edc2f0a0f6db9b42c6a2476b66" => :mavericks
+    sha256 "2d5af129bc7cb37df171376254f0cd267e5f11a9ed3b44689b170e46b814f920" => :el_capitan
+    sha256 "61a38ce10464a58d857bb9d449a19e22933dfae66ca12687a3c2d0e5321af5d0" => :yosemite
+    sha256 "b0a4c2947c7f91514c0b5fac71f315320a0c880cbff084a44030ddaaf63dbe1a" => :mavericks
   end
 
   depends_on "curl"
