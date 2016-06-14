@@ -6,7 +6,7 @@ class Php56Http < AbstractPhp56Extension
   homepage "https://pecl.php.net/package/pecl_http"
   url "https://github.com/m6w6/ext-http/archive/RELEASE_2_5_6.tar.gz"
   sha256 "83c15492ae7673404db462b642450f5bec81db72765d21fbb915ac39a42f0be4"
-  revision 2
+  revision 3
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
@@ -18,6 +18,7 @@ class Php56Http < AbstractPhp56Extension
 
   depends_on "curl"
   depends_on "libevent"
+  depends_on "php56-intl"
   depends_on "php56-raphf"
   depends_on "php56-propro"
 
