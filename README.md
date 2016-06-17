@@ -117,7 +117,7 @@ $ brew tap homebrew/homebrew-php
 $ brew options php56
 ```
 
-Once the tap is installed, you can install `php53`, `php54`, `php55`, `php56`, `php70`, or any formulae you might need via:
+Once the tap is installed, you can install `php53`, `php54`, `php55`, `php56`, `php70`, `php71`, or any formulae you might need via:
 
 ```sh
 $ brew install php56

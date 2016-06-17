@@ -307,7 +307,7 @@ INFO
     end
 
     # Do not build opcache by default; use a "phpxx-opcache" formula
-    args << "--disable-opcache" if php_version.start_with?('5.5', '5.6', '7.0')
+    args << "--disable-opcache" if php_version.start_with?('5.5', '5.6', '7.0', '7.1')
 
     if build.with? 'pcntl'
       args << "--enable-pcntl"
@@ -428,7 +428,7 @@ INFO
         EOS
       end
 
-      if php_version.start_with?('7.0')
+      if php_version.start_with?('7.')
         s << <<-EOS.undent
           To enable PHP in Apache add the following to httpd.conf and restart Apache:
               LoadModule php7_module    #{HOMEBREW_PREFIX}/opt/php#{php_version_path}/libexec/apache2/libphp7.so
