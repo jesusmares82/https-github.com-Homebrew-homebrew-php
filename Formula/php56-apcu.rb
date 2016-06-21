@@ -4,8 +4,8 @@ class Php56Apcu < AbstractPhp56Extension
   init
   desc "APC User Cache"
   homepage "https://pecl.php.net/package/apcu"
-  url "https://pecl.php.net/get/apcu-4.0.8.tgz"
-  sha256 "bef4f5ae309526a332e0f6b98f0579a45d6000b928991babe684d4c22432d57d"
+  url "https://pecl.php.net/get/apcu-4.0.11.tgz"
+  sha256 "454f302ec13a6047ca4c39e081217ce5a61bbea815aec9c1091fb849e70b4d00"
   head "https://github.com/krakjoe/apcu.git"
 
   bottle do
