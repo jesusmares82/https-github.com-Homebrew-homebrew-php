@@ -62,13 +62,13 @@ class AbstractPhpVersion < Formula
   end
 
   module Php71Defs
-    PHP_SRC_TARBALL = 'https://downloads.php.net/~krakjoe/php-7.1.0alpha1.tar.bz2'
+    PHP_SRC_TARBALL = 'https://downloads.php.net/~krakjoe/php-7.1.0alpha2.tar.bz2'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '7.1.0-alpha.1'
+    PHP_VERSION     = '7.1.0-alpha.2'
     PHP_BRANCH      = 'PHP-7.1.0'
 
     PHP_CHECKSUM    = {
-                        :sha256 => 'daaaa7ee8508d4699b6bc010200d91402249b808844cabe48c354ef870d3b485',
+                        :sha256 => 'e545c6bc229cf27d0540c8277da5b369c5de0e9c5c723d6b26902b3791d8795d',
                       }
   end
 end
