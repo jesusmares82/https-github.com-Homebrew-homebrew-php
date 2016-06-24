@@ -2,7 +2,7 @@ require File.join(File.dirname(__FILE__), 'homebrew-php-requirement')
 
 class PhpMetaRequirement < HomebrewPhpRequirement
   if $supported_php_versions.nil?
-    $supported_php_versions = %w{php53 php54 php55 php56 php70 php71}
+    $supported_php_versions = %w{php53 php54 php55 php56 php71 php70}
   end
 
   if Formula["php53"].linked_keg.exist? && $supported_php_versions.include?('php53')
