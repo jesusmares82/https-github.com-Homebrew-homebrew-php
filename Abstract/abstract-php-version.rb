@@ -29,13 +29,13 @@ class AbstractPhpVersion < Formula
   end
 
   module Php55Defs
-    PHP_SRC_TARBALL = 'https://php.net/get/php-5.5.36.tar.bz2/from/this/mirror'
+    PHP_SRC_TARBALL = 'https://php.net/get/php-5.5.37.tar.bz2/from/this/mirror'
     PHP_GITHUB_URL  = 'https://github.com/php/php-src.git'
-    PHP_VERSION     = '5.5.36'
+    PHP_VERSION     = '5.5.37'
     PHP_BRANCH      = 'PHP-5.5'
 
     PHP_CHECKSUM    = {
-                        :sha256 => '2484edfaa3de606d74f927b55c5206f51b1ae24ea8e428aa9fc15474c7bb71bb',
+                        :sha256 => 'd2380ebe46caf17f2c4cd055867d00a82e6702dc5f62dc29ce864a5742905d88',
                       }
   end
 
