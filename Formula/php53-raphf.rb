@@ -8,9 +8,10 @@ class Php53Raphf < AbstractPhp53Extension
   sha256 "b5386eff888e2c06951b4fa65a3d0b536775e35a8afc2db323a3129685f7c2bf"
 
   bottle do
-    sha256 "d85407c95983c971a3d739e723379ce76f15e1079ef29dae87154da025451284" => :yosemite
-    sha256 "6f5e4fac12bb82faa93896c815ceb14305d64096ef57229ec151eb71b2f019ed" => :mavericks
-    sha256 "083d883ccc79f29b185bb4e73f4560f8bde0fc20f0cfa9ad3479779f3db289c4" => :mountain_lion
+    cellar :any_skip_relocation
+    sha256 "e8f66aaae9dc9fd64a84b24833ff67e80d7ea301053562c42f2f2c344eab4a73" => :el_capitan
+    sha256 "f43a1ba3bc706caf1a7d83aa77c1ad07261d8704231303eefc7230cc730d3538" => :yosemite
+    sha256 "e361b1db1ed9e4c212323f44218227cb35586ff736b30544e3c77e602277a3a1" => :mavericks
   end
 
   def install
