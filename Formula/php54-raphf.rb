@@ -2,10 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php54Raphf < AbstractPhp54Extension
   init
-  desc "A reusable split-off of pecl_http's persistent handle and resource factory API."
+  desc "Split-off of pecl_http's persistent handle and resource factory API"
   homepage "https://pecl.php.net/package/raphf"
-  url "https://pecl.php.net/get/raphf-1.0.4.tgz"
-  sha256 "461be283e89d94186a3ed4651b92c7c1a067bad7b6476d0ca7ac8863dc1ed8bf"
+  url "https://github.com/m6w6/ext-raphf/archive/release-1.1.2.tar.gz"
+  sha256 "b5386eff888e2c06951b4fa65a3d0b536775e35a8afc2db323a3129685f7c2bf"
 
   bottle do
     sha256 "0444c011ea0056323df3c937696c83cea2a6389ebde81d8e63722f6ce16c973f" => :yosemite
@@ -14,15 +14,13 @@ class Php54Raphf < AbstractPhp54Extension
   end
 
   def install
-    Dir.chdir "raphf-#{version}"
-
     ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
     system "make"
-    include.install "php_raphf.h"
+    include.install %w[php_raphf.h src/php_raphf_api.h]
     prefix.install "modules/raphf.so"
     write_config_file if build.with? "config-file"
   end
