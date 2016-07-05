@@ -6,7 +6,7 @@ class Php70Yaf < AbstractPhp70Extension
   homepage "https://pecl.php.net/package/yaf"
   url "https://pecl.php.net/get/yaf-3.0.3.tgz"
   sha256 "431a7ad4d4cdd51877cc57b1382c4e27395628699fd065bd5140d2e6f70615e3"
-  head "https://svn.php.net/repository/pecl/yaf/trunk/"
+  head "https://github.com/laruence/yaf.git", :branch => "php7"
 
   depends_on "pcre"
 
