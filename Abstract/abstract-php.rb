@@ -351,7 +351,7 @@ INFO
   end
 
   def _install
-    system "./buildconf" if build.head?
+    system "./buildconf", "--force" if build.head?
     system "./configure", *install_args()
 
     unless build.without? 'apache'
