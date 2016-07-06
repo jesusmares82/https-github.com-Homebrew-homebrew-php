@@ -4,8 +4,8 @@ class Php55Mongodb < AbstractPhp55Extension
   init
   desc "MongoDB driver for PHP."
   homepage "https://pecl.php.net/package/mongodb"
-  url "https://pecl.php.net/get/mongodb-1.1.7.tgz"
-  sha256 "65bfb564d9a53a7642a02f07085bd9055b43522250649886ed65a37771cf9b49"
+  url "https://pecl.php.net/get/mongodb-1.1.8.tgz"
+  sha256 "b93ae7dc9bd270823965f8903c9acf47fe3a0ba7a630d08e8173ff091d593ae0"
   head "https://github.com/mongodb/mongo-php-driver.git"
 
   bottle do
