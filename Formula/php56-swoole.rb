@@ -4,15 +4,9 @@ class Php56Swoole < AbstractPhp56Extension
   init
   desc "Asynchronous and concurrent and distributed networking	framework for PHP."
   homepage "https://pecl.php.net/package/swoole"
-  url "https://pecl.php.net/get/swoole-1.8.1.tgz"
-  sha256 "d63c5b9339a86df43b0e3d82efd194ac6f7b25f601580a7abf9305e3a6afeb20"
+  url "http://pecl.php.net/get/swoole-1.8.7.tgz"
+  sha256 "c2b6fc556b1d4508aacd237f7843b17c3313b72202e3aba2f6ae57eb88061e9a"
   head "https://github.com/swoole/swoole-src.git"
-
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "4259801e506eea282778bb24d75b3478cdc184744501db4e0bd66ccc4388275b" => :el_capitan
-    sha256 "39b2c75f336c1479b884dbd025230cd8d45865ab482d0e843067b5d1244a1eff" => :yosemite
-  end
 
   def install
     Dir.chdir "swoole-#{version}" unless build.head?
