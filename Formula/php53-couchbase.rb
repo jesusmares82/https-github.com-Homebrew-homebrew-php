@@ -2,17 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Couchbase < AbstractPhp53Extension
   init
-  homepage "https://pecl.php.net/package/couchbase"
   desc "Provides fast access to documents stored in a Couchbase Server."
-  url "https://pecl.php.net/get/couchbase-2.0.7.tgz"
-  sha256 "0482757d6b29ec5b9c957b053203a75410ced519f2407e666f7ca5c180a66ff5"
+  homepage "https://pecl.php.net/package/couchbase"
+  url "https://pecl.php.net/get/couchbase-2.2.0.tgz"
+  sha256 "6ce11f344bd01df7e8b96894ea3db44e72a273633d67f80dbc130147cc161acc"
   head "https://github.com/couchbaselabs/php-couchbase.git"
-
-  bottle do
-    sha256 "717f813cd708ffef314a577c9d480cd200dc262ca522afc2af50f270940070bc" => :yosemite
-    sha256 "2eeb9527a8858b689b49c674e8dcd61e96fa0d281b81a9dfe72e22c399bef39c" => :mavericks
-    sha256 "2472d7847a65e8a269e66b707939a066da12b3522b0b6aa3fca4a1da284107a9" => :mountain_lion
-  end
 
   option "with-igbinary", "Build with igbinary support"
 
