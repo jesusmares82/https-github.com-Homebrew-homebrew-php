@@ -9,10 +9,6 @@ class Php55Pspell < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
-    revision 9
-    sha256 "ec253cd0f2e62650f1e5ae0f3480de6e6558cd94788aa25652c94b86f54cbfb9" => :el_capitan
-    sha256 "960fad5dd640e3a0f543399782815e8c6070acf14f79a500658325db5679536b" => :yosemite
-    sha256 "b6d4a5d0056b3ebc247b51172a4e68fda7a74e8a9b281e40c3ed74648b4290a2" => :mavericks
   end
 
   depends_on "aspell"
