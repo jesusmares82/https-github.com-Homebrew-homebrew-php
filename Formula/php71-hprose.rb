@@ -8,6 +8,13 @@ class Php71Hprose < AbstractPhp71Extension
   sha256 "a453053719dad6352d54543d708d8d09b62de28df7b29fd47b4b5a9fcf8025a7"
   head "https://github.com/hprose/hprose-pecl.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a3a158ba2b1652d2c1f3656b9a1e53f4aa8b2b4996adaa8c656a9cbfb0fa923d" => :el_capitan
+    sha256 "0083fc1df742ff7106e741c06cff6ec9fce8886e796447146d26e2c0f11b9039" => :yosemite
+    sha256 "bd32f4148024df3d09907855047032502fe2e76fb089ec5f67ade0bd327bebf6" => :mavericks
+  end
+
   def install
     Dir.chdir "hprose-#{version}" unless build.head?
 
