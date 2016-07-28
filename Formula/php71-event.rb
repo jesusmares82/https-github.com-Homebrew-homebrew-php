@@ -8,6 +8,9 @@ class Php71Event < AbstractPhp71Extension
   sha256 "26bfcf7e29679b8923430f1a8fc9e9b344d52415bc77601a97ea7b71fd24f2cf"
 
   bottle do
+    sha256 "433462a8be4065098d3c513fea33a4db08e39e8449b340a9649a637d87343619" => :el_capitan
+    sha256 "30da93e0498cdc4063d522e21bc74d387831435d0acbfa3c99e96cbbd61d8716" => :yosemite
+    sha256 "4d11a5c8173a0b0a42ada3081ec3183df0850b597bc7884096abb58dd34b352f" => :mavericks
   end
 
   depends_on "libevent"
