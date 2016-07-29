@@ -11,6 +11,7 @@ class Php71 < AbstractPhp
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
+  revision 2
 
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
