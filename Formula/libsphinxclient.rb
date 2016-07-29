@@ -1,9 +1,9 @@
 class Libsphinxclient < Formula
   desc "Client for sphinx"
   homepage "http://www.sphinxsearch.com"
-  url "https://github.com/sphinxsearch/sphinx/archive/2.2.10-release.tar.gz"
-  version "2.2.10"
-  sha256 "982dc31ce7bd3a97174d8159d5ee4db9605500a9544b457b53d973ab2e300c1f"
+  url "https://github.com/sphinxsearch/sphinx/archive/2.2.11-release.tar.gz"
+  version "2.2.11"
+  sha256 "c53cf3fe197f849d43810263dc02987503a02e0d9938881fc97d48b4f783a54d"
 
   head "https://github.com/sphinxsearch/sphinx.git"
 
