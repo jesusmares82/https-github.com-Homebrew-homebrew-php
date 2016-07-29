@@ -9,9 +9,9 @@ class Libsphinxclient < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "00039e35f77fa4ea271fb838f5aede3a7d2f65424762cf082d5cebf0e78ea6e0" => :el_capitan
-    sha256 "027ca884e72d2ad080ba9dd869d26aabe7cb712b2a170dc0283b99ec97d5884f" => :yosemite
-    sha256 "abee7ac618acd832be5127e09ca4f21baac3f0102c959d2ce88c8935849cffbb" => :mavericks
+    sha256 "c04bd488736399c9f45df2253a0cdfc19386005fd8ede000ee9eecd389d85357" => :el_capitan
+    sha256 "573122c95a3cab22ed70c13e1e397e7fc804493815bf8001a1edfd26dfe25918" => :yosemite
+    sha256 "6cd7901c9ee0ab4ce81224f7635c2d05b87521bd7b1ddd9475aeda53dbaa5d47" => :mavericks
   end
 
   devel do
