@@ -9,6 +9,9 @@ class Php71Imagick < AbstractPhp71Extension
   head "https://github.com/mkoppanen/imagick.git"
 
   bottle do
+    sha256 "47265b8692a377673a92682bbc228ba79293cc049f369e68b1648e4a189a911e" => :el_capitan
+    sha256 "5ad174739c85057db40ac4bc54f9d50fd76667b8f9254a468b635ce5ec62ec1c" => :yosemite
+    sha256 "8d97aea5508a6efc0b667a8ae374dbb1bdab9e1b200e114299d5c75250497939" => :mavericks
   end
 
   depends_on "pkg-config" => :build
