@@ -8,6 +8,13 @@ class Php70Phalcon < AbstractPhp70Extension
   sha256 "7303990809bcd1a716e886bcfacd0e7afc7ef1f1104df123e680c8d7cd088ce0"
   head "https://github.com/phalcon/cphalcon.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6e65296bf56895083040e7328e3c1220bd1e6bc7dfac794008dd9d1637d88618" => :el_capitan
+    sha256 "0003173ba852fa837b64ccdddfcd99411833ba2727e2f7fef772e845177fd128" => :yosemite
+    sha256 "514766a02552dd8bcefbc638216271674d6faf6b3c25453998fd657a50e81930" => :mavericks
+  end
+
   depends_on "pcre"
 
   def install
