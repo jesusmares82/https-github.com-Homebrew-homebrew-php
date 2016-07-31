@@ -9,6 +9,10 @@ class Php71Mailparse < AbstractPhp71Extension
   head "https://github.com/php/pecl-mail-mailparse.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "1a24edb8c93b8174c88a29fdce030df15b5a4305343b02dc458af98f5eae8402" => :el_capitan
+    sha256 "e547f42061c43173ee7a9f4232a24a558a8e8f38dbe1a4a7fe4c244865c2914b" => :yosemite
+    sha256 "dc3c7d29e32663e0b78c0c5e084cc562845d9d4b998520b09398e51fb45b49d7" => :mavericks
   end
 
   depends_on "pcre"
