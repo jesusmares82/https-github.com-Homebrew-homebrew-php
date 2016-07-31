@@ -8,6 +8,10 @@ class Php71Maxminddb < AbstractPhp71Extension
   sha256 "0c80f55bc56dd8f26b04358b5533f78adcb060f721b4347f510cbf43f32848b4"
 
   bottle do
+    cellar :any
+    sha256 "30941e28656748c87b9efa28f0772efbe9c18321644e9c00ad549f3bc9342164" => :el_capitan
+    sha256 "42d67b9e3153058bf029e6bec119a4e891cf0380170c9e6232e4c1b37e9fed15" => :yosemite
+    sha256 "e7ed3dd6e1ee72b32588f8fe3860c6880dc4c93feabb88e9de28c27115916ecc" => :mavericks
   end
 
   depends_on "libmaxminddb"
