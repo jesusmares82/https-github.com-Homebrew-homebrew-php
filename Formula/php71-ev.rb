@@ -10,9 +10,9 @@ class Php71Ev < AbstractPhp71Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "13bf162680736e0a350b704b2f72103c045d9b98331b1b42a726b641fd0b92da" => :el_capitan
-    sha256 "d4eebd7515d09b3cf3583f4d1e584c841526fb8e30f5a555aa8d6bccb05a3d85" => :yosemite
-    sha256 "b6cb605da3ea96f36354b96ad6439954da97e152762c021152075ae5d9d6a3b1" => :mavericks
+    sha256 "9dbcdcfc67dc031245a5c8b560e035d64e0a2b7d38c6f99827f74597245adcae" => :el_capitan
+    sha256 "374697cc68bae92d27061f04ac755e6816558d56b85e693daaff6cb9995cae72" => :yosemite
+    sha256 "68831fa0040e0ccecb4469636ac680c73d878045e5d13e0d158f7cf171c346a2" => :mavericks
   end
 
   depends_on "libev"
