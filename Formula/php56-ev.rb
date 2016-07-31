@@ -4,8 +4,8 @@ class Php56Ev < AbstractPhp56Extension
   init
   desc "interface to libev library"
   homepage "https://pecl.php.net/package/ev"
-  url "https://pecl.php.net/get/ev-0.2.15.tgz"
-  sha256 "801b2c39e081263f91d5a1d74e668e6c8ad199a34867c8e13e8fad3e83786fd5"
+  url "https://pecl.php.net/get/ev-1.0.3.tgz"
+  sha256 "3c03fde9e72745e6ce6c32d680218389e0f4310908187f1529b7f227b295aeee"
   head "https://bitbucket.org/osmanov/pecl-ev.git"
 
   bottle do
@@ -17,16 +17,12 @@ class Php56Ev < AbstractPhp56Extension
 
   depends_on "libev"
 
-  # https://bitbucket.org/osmanov/pecl-ev/pull-requests/4
-  patch :DATA
-
   def install
     Dir.chdir "ev-#{version}" unless build.head?
 
     ENV.universal_binary if build.universal?
 
     safe_phpize
-    ENV["CFLAGS"] = "-Wno-return-type"
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
                           "--with-libev=#{Formula["libev"].opt_prefix}"
@@ -35,18 +31,3 @@ class Php56Ev < AbstractPhp56Extension
     write_config_file if build.with? "config-file"
   end
 end
-
-__END__
-diff --git a/ev-0.2.15/libev/ev.c b/ev-0.2.15/libev/ev.c
-index 03b697a..7a53901 100644
---- a/ev-0.2.15/libev/ev.c
-+++ b/ev-0.2.15/libev/ev.c
-@@ -1010,7 +1010,7 @@ ecb_inline uint64_t ecb_rotr64 (uint64_t x, unsigned int count) { return (x << (
-   #define ecb_unreachable() __builtin_unreachable ()
- #else
-   /* this seems to work fine, but gcc always emits a warning for it :/ */
--  ecb_inline void ecb_unreachable (void) ecb_noreturn;
-+  ecb_noreturn ecb_inline void ecb_unreachable (void);
-   ecb_inline void ecb_unreachable (void) { }
- #endif
- 
