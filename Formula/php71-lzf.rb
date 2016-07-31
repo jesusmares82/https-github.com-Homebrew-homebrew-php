@@ -9,6 +9,10 @@ class Php71Lzf < AbstractPhp71Extension
   head "https://github.com/php/pecl-file_formats-lzf.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "0fd637508e3a7a7b5970ee41889a815d5310f5010eaebe9806e41e9ebbef5a96" => :el_capitan
+    sha256 "b257afac5bdd4a0053bffe4d0416fbd1e236fbf1dbaa3a9e653815d2e27ed00e" => :yosemite
+    sha256 "7a40953e91d9ee55a1a8f438474191589e2a76a5bb36b32efe0e8ca31e5174ca" => :mavericks
   end
 
   def install
