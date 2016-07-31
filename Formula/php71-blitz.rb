@@ -10,6 +10,10 @@ class Php71Blitz < AbstractPhp71Extension
   head "https://github.com/alexeyrybak/blitz.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "ed71b53cd35029e88c5d8b646d3453913475762e9ed62148c6a49394c582d3cd" => :el_capitan
+    sha256 "b169bc24b31d2a0f7c811ffce6e791bfce72735a523109bc1238f09c19971a44" => :yosemite
+    sha256 "d3396be46570c92033dcb960b807d538ab2baa7f8253f40d0fa6632c42c74e9d" => :mavericks
   end
 
   def install
