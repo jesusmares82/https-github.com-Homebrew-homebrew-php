@@ -10,9 +10,9 @@ class Php56Ev < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7cb4b47ec84d42d2fff31711cd4811f0f757ac5fb60d449c30915981855399b1" => :el_capitan
-    sha256 "3c3baf440535f5d510465aa44b38205103f3213a4e616db78f5f5c2a70b62d76" => :yosemite
-    sha256 "05286cf12889c5320fc7ce4e25a257872079f89518a189951da0fcafb115a5c0" => :mavericks
+    sha256 "cb3de2c2e8aed2e59c176066be7305aeeb53a3d5c7a26ce041d1a962fe0d8bb9" => :el_capitan
+    sha256 "30675f58906b43e28cb60c0a36ba5d9b203c8291d0002bbf1f4f03b62edcfc9b" => :yosemite
+    sha256 "55b8cff3ab9faff6cfc7d8ec675cbbc185d98b15acf3c0a9be99a35bd1c342a5" => :mavericks
   end
 
   depends_on "libev"
