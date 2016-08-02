@@ -58,9 +58,7 @@ class Php56Example < AbstractPhp56Extension
 end
 ```
 
-Before testing the extension, you will need run the command `brew tap --repair` to create a symlink in `$HOMEBREW_PREFIX/Library/Formula`.
-
-Before finalizing the extension, run the command `brew audit` to check that your formula respects Homebrew best practice and syntax.
+Before finalizing the extension, run the command `brew audit --strict --online ` to check that your formula respects Homebrew best practice and syntax.
 
 Defining extensions inheriting AbstractPhp5(3456). Extension will provide a `write_config_file` which add `ext-{extension}.ini` to `conf.d`, don’t forget to remove it manually upon extension removal. Please see [abstract-php-extension.rb](Abstract/abstract-php-extension.rb) for more details.
 
