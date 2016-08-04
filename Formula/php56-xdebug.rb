@@ -10,9 +10,9 @@ class Php56Xdebug < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8cda23facc8d761daa07f2807c621fe4ca41c1ab7e326898e0aa90e841e34bb9" => :el_capitan
-    sha256 "d0fc25aa293255425cdd5580d962907d78e9c7bc6c74dd57f40798199192ecc6" => :yosemite
-    sha256 "8c7f3d45b2416cc07fe3becc2a72499c369dc8cb0832b9440336ef456fb979f3" => :mavericks
+    sha256 "6ab9b43daaa91f68c76c04a558f8c5f924910c8c0b2a8bc6d3a60b31c736449f" => :el_capitan
+    sha256 "9822b1e5f0175613f8cc0fedc7573e299641f25424bc5986e844d56a53ccb137" => :yosemite
+    sha256 "664b1ba5fa8c37d5fda694f38d9d85130417581cc6eea45359fc9027b145c604" => :mavericks
   end
 
   def extension_type
