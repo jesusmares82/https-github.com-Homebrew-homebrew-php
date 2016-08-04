@@ -4,6 +4,8 @@ class Php70Redis < AbstractPhp70Extension
   init
   desc "PHP extension for Redis"
   homepage "https://github.com/phpredis/phpredis"
+  url "https://github.com/phpredis/phpredis/archive/3.0.0.tar.gz"
+  sha256 "030997370bb1906793989c89550d9cafd4fa35dccbad7040b2339301aa961dba"
   head "https://github.com/phpredis/phpredis.git", :branch => "php7"
 
   def install
