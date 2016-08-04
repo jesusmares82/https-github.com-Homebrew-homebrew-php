@@ -4,9 +4,9 @@ class Phpdocumentor < AbstractPhpPhar
   init
   desc "Documentation Generator for PHP"
   homepage "http://www.phpdoc.org"
-  url "https://github.com/phpDocumentor/phpDocumentor2/releases/download/v2.8.5/phpDocumentor.phar"
-  version "2.8.5"
-  sha256 "7613a3d6ffc182595b7423bc2373cd215cac269135f4b0f973e5c1b617b565b7"
+  url "https://github.com/phpDocumentor/phpDocumentor2/releases/download/v2.9.0/phpDocumentor.phar"
+  version "2.9.0"
+  sha256 "c7dadb6af3feefd4b000c19f96488d3c46c74187701d6577c1d89953cb479181"
 
   bottle do
     cellar :any_skip_relocation
