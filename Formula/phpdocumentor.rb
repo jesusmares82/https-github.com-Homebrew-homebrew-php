@@ -10,9 +10,9 @@ class Phpdocumentor < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0f24a1abe5c60136e48306d2c5f5eb4d15ad6a6bf0452b8700fa7721f2360ae7" => :el_capitan
-    sha256 "18b204214c4ede0c9168a34de3c0d4e027e973a55e2970dedc45f0221d12bd72" => :yosemite
-    sha256 "4088595dbb230758f752da3a455984eff08d1188c7b6e8f9ced372d43ed2b270" => :mavericks
+    sha256 "e9c30434edf6f8432a7afc0439c0584ecd0559c163dcd4f3d0466a0561fe8eef" => :el_capitan
+    sha256 "80c05a819a837da97b3e72c52859864cd637be7ea54610c2a315922bdde5ce50" => :yosemite
+    sha256 "7cd8bef75d61785af68117a53073d76d82cd6e4e0bc097ef54178e7b7493b012" => :mavericks
   end
 
   def phar_file
