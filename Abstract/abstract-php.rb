@@ -240,8 +240,6 @@ INFO
 
     if build.with? 'debug'
       args << "--enable-debug"
-    else
-      args << "--disable-debug"
     end
 
     if build.with? 'enchant'
