@@ -8,6 +8,13 @@ class Php70Redis < AbstractPhp70Extension
   sha256 "030997370bb1906793989c89550d9cafd4fa35dccbad7040b2339301aa961dba"
   head "https://github.com/phpredis/phpredis.git", :branch => "php7"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "da5969e22977bf776035124fa863e9e7e9e7aa31ceb44393795bcaa761be2806" => :el_capitan
+    sha256 "d589330b298a7cfee4bc3de0cc0a2ffb3b72ea0230e8ee2a094380db8588ed5f" => :yosemite
+    sha256 "630424900fe5f96805f1b2202002a4188a9a8ae430e54efefcb78902ca47f332" => :mavericks
+  end
+
   def install
     safe_phpize
 
