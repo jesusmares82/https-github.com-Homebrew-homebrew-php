@@ -10,9 +10,9 @@ class Php54Xdebug < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "235894f656b542cb956764c1ba820123297581b60a15b93e51ad031a51011513" => :el_capitan
-    sha256 "3b12e135437a7512f4f018e43f4527f9806d5a62afe120d0eb609853d679e980" => :yosemite
-    sha256 "7e2da33c2e05b17ddcc1ecfa3f57709d2af80c82c50276ae166b9e8e6f94b296" => :mavericks
+    sha256 "5d550e4b0133303aee9805982db0bd2a1e15d48145b7224bef739ccefbdab829" => :el_capitan
+    sha256 "d2e83080a252dc0e041a00047b0a8043289addf6db6f9b930eeb5d6386d37bc4" => :yosemite
+    sha256 "e43a1c9930107e909c813dbb6fd61ece52088b89a3e415fc26f8302c64c8d6d1" => :mavericks
   end
 
   def extension_type
