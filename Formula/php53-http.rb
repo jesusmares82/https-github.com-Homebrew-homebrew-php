@@ -11,10 +11,9 @@ class Php53Http < AbstractPhp53Extension
 
   bottle do
     cellar :any
-    revision 1
-    sha256 "0f650832df2f4892e37e9505a98252ff3690b98e98bd9d6f5865b3fbe8815b2a" => :el_capitan
-    sha256 "e95b18af7b09a2ebaf780a8b6be62a3db58e5a2e35dc3dc9f9fb4f4de5b28ead" => :yosemite
-    sha256 "56df2f12ea40ce7d52987a6e0d4700cdf717fb6ba498357155b13e5c804afb59" => :mavericks
+    sha256 "d90039784508c99caca68fc831982282a75a496d13f183a3f2e9a73f9c7797da" => :el_capitan
+    sha256 "d0d2bef52197f0443de598472bbbb9c435c1543b1b93a98d0d5b0f9c39a6e789" => :yosemite
+    sha256 "b37b2010d6939c6e3d4ee9297d644b7fff685f0ed25bdb59c83f1ab94e8b5138" => :mavericks
   end
 
   depends_on "curl"
