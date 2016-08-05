@@ -14,6 +14,12 @@ class Php70Mongodb < AbstractPhp70Extension
     sha256 "52db4f988f3625b7d3c6dd1184933bf57fcef86be2a4657e0b2fa73ee0bba426" => :mavericks
   end
 
+  devel do
+    url "https://pecl.php.net/get/mongodb-1.2.0alpha1.tgz"
+    sha256 "03ac8a762949699aef0467ccdfbb8dfe70b57b0b57b740fe5041a4aff28685d7"
+    version "1.2.0alpha1"
+  end
+
   depends_on "openssl"
 
   def install
