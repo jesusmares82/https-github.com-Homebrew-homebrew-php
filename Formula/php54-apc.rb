@@ -17,6 +17,7 @@ class Php54Apc < AbstractPhp54Extension
   end
 
   depends_on "pcre"
+  conflicts_with "php54-apcu", :because => "Provides conflicting functionality"
 
   def install
     Dir.chdir "APC-#{version}" unless build.head?

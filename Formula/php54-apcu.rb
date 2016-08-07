@@ -17,6 +17,7 @@ class Php54Apcu < AbstractPhp54Extension
 
   option "with-apc-bc", "Whether APCu should provide APC full compatibility support"
   depends_on "pcre"
+  conflicts_with "php54-apc", :because => "Provides conflicting functionality"
 
   def install
     Dir.chdir "apcu-#{version}" unless build.head?
