@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Phpmyadmin < Formula
   desc "Administration of MySQL over the Web"
   homepage "http://www.phpmyadmin.net"
-  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_6_2.tar.gz"
-  sha256 "1ca7e663ed371fc70c331b2b5e26cffa34ae15312685f9583f495edc6d763301"
+  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_6_3.tar.gz"
+  sha256 "f205884516aa54c8ecce23537d1d2da7ce8d1bce9bad8b2e75ed4485d00690aa"
   head "https://github.com/phpmyadmin/phpmyadmin.git"
 
   depends_on PhpMetaRequirement
@@ -13,6 +13,7 @@ class Phpmyadmin < Formula
   depends_on "php55-mcrypt" if Formula["php55"].linked_keg.exist?
   depends_on "php56-mcrypt" if Formula["php56"].linked_keg.exist?
   depends_on "php70-mcrypt" if Formula["php70"].linked_keg.exist?
+  depends_on "php71-mcrypt" if Formula["php71"].linked_keg.exist?
 
   def install
     (share+"phpmyadmin").install Dir["*"]
