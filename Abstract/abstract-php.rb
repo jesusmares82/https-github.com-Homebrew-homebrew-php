@@ -28,9 +28,6 @@ class AbstractPhp < Formula
       conflicts_with php_formula_name, :because => "different php versions install the same binaries."
     end
 
-    # Force all php meta requiprements to use this version
-    $supported_php_versions = [self.name.split("::")[2].downcase]
-
     depends_on 'curl' if build.include?('with-homebrew-curl') || MacOS.version < :lion
     depends_on 'enchant' => :optional
     depends_on 'freetds' if build.include?('with-mssql')
