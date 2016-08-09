@@ -16,7 +16,7 @@ class Php55Dbus < AbstractPhp55Extension
   end
 
   depends_on "pkg-config" => :build
-  depends_on "d-bus" => :build
+  depends_on "dbus"
 
   def install
     Dir.chdir "dbus-#{version}" unless build.head?
