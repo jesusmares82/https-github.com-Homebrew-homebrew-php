@@ -7,6 +7,7 @@ class Php56Hprose < AbstractPhp56Extension
   url "https://pecl.php.net/get/hprose-1.6.5.tgz"
   sha256 "a453053719dad6352d54543d708d8d09b62de28df7b29fd47b4b5a9fcf8025a7"
   head "https://github.com/hprose/hprose-pecl.git"
+  revision 2
 
   bottle do
     cellar :any_skip_relocation
