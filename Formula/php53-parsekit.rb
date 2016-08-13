@@ -7,6 +7,7 @@ class Php53Parsekit < AbstractPhp53Extension
   url "https://pecl.php.net/get/parsekit-1.3.0.tgz"
   sha256 "447d5ec6412d6c8c6489b03e7333d3872944444610b74eafd608eddcb3bbaf08"
   head "https://github.com/php/pecl-php-parsekit.git"
+  revision 2
 
   bottle do
     cellar :any
