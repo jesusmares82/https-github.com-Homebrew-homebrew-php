@@ -4,8 +4,8 @@ class Codeception < AbstractPhpPhar
   init
   desc "Testing Framework designed to work just out of the box"
   homepage "http://codeception.com/quickstart"
-  url "http://codeception.com/releases/2.2.3/codecept.phar"
-  sha256 "eca8f4085072986e5c73351ca739c54fb289b11acb7ca6319b2e3e9a8eee945d"
+  url "http://codeception.com/releases/2.2.4/codecept.phar"
+  sha256 "d81aa0d8754c5ed9fb71eda9827c1712c7368b9a95877284957d587e5f219645"
 
   bottle do
     cellar :any_skip_relocation
@@ -20,13 +20,6 @@ class Codeception < AbstractPhpPhar
 
   def phar_bin
     "codecept"
-  end
-
-  def caveats; <<-EOS.undent
-    To update your tests for 2.1.x check the "Upgrading" section:
-    http://codeception.com/06-30-2015/codeception-2.1-is-here.html
-
-    EOS
   end
 
   test do
