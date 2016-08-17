@@ -5,6 +5,10 @@ class Php71Pcntl < AbstractPhp71Extension
   desc "Process Control support"
   homepage "http://php.net/manual/en/book.pcntl.php"
   bottle do
+    cellar :any_skip_relocation
+    sha256 "e06500dd4fc72ba28b8bba6242f78d872b6098664a48d851953c8d306d9565f6" => :el_capitan
+    sha256 "39f36465468bdbc17979fe3dc88b9f21e928c7e7883062d02679da1fe27d07ed" => :yosemite
+    sha256 "88d02b1dda290e94196703f218c0bf407d991703b5177c18161e10cf881dfc70" => :mavericks
   end
 
   url PHP_SRC_TARBALL
