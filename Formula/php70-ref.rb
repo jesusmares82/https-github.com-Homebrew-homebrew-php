@@ -9,6 +9,10 @@ class Php70Ref < AbstractPhp70Extension
   head "https://github.com/pinepain/php-ref.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "dee468c8efd8461c829ca628e4d17b568cb5f9c8204e6af0628910b587a3caf8" => :el_capitan
+    sha256 "e6abfa32e8c22d8ae3e69218c40aa08919bce8b904f1f7ff10499313f5ebad0e" => :yosemite
+    sha256 "7ffa9b784ea865924cfe577133ad00a3dfaf0d40cdbae2e13ef68ca1f19b115a" => :mavericks
   end
 
   def install
