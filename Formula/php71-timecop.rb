@@ -9,6 +9,10 @@ class Php71Timecop < AbstractPhp71Extension
   head "https://github.com/hnw/php-timecop.git"
 
   bottle do
+    cellar :any_skip_relocation
+    sha256 "0c12c552994fdeb05958be1f998dc17a93115b083313d3b45e3e60fc027bb1b7" => :el_capitan
+    sha256 "05251322c44757940324136300da08ee550c3f2aff0116590b99b70c88cfb41f" => :yosemite
+    sha256 "c8fbc2caeb4274a8fd56d2b4e5d2f36d512381061bbc0d65b406c00db21794ac" => :mavericks
   end
 
   def install
