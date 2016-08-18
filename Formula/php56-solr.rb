@@ -2,11 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Solr < AbstractPhp56Extension
   init
-  desc "The Apache Solr PHP extension is an extremely fast, light-weight, feature-rich library that allows PHP applications to communicate easily and efficiently with Apache Solr server instances using an object-oriented API."
+  desc "Fast and lightweight library to communicate with Apache Solr servers"
   homepage "https://pecl.php.net/package/solr"
-  url "https://pecl.php.net/get/solr-2.3.0.tgz"
-  sha256 "d90db2ea0a32b8190d65d931e144c01f6238e95e1b91f9d38ddcb2bf68aad7a0"
-  head "https://svn.apache.org/repos/asf/lucene/dev/trunk/"
+  url "https://pecl.php.net/get/solr-2.4.0.tgz"
+  sha256 "22865dafb76fc5839e84a5bd423bb37d5062883e5dfc4d064b43129ac9f2752c"
+  head "https://git.php.net/repository/pecl/search_engine/solr.git"
 
   bottle do
     cellar :any_skip_relocation
