@@ -10,9 +10,9 @@ class Php53Solr < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "391ac946647d34b5837cb1ab8772394dd34d2e1d562e7e65bcef9cf68f342c1d" => :el_capitan
-    sha256 "21fe87bcf754be09f8aa8729159d8f61ec2d3b5c1be4f6fd9d37b7b0cbd70971" => :yosemite
-    sha256 "10d3b51043eeb221d420ef42048d924c8a6c672cd3c663317e1d651ec4ea0e0c" => :mavericks
+    sha256 "863bd1062d91ba7033cc7ee5fb8e97059e863f2e27b0f9da02b62db9e7ab22c1" => :el_capitan
+    sha256 "343cecdbfbf141d23e62b5f42c06f9fc737eccbd69d719a2e3ce28bcb33e1ad9" => :yosemite
+    sha256 "a83a955e72b07ceb1e5d48b302144e7846a29fc859e04a80ce3577252fee7fd5" => :mavericks
   end
 
   def install
