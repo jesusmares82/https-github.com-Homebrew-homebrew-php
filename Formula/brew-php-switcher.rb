@@ -1,8 +1,8 @@
 class BrewPhpSwitcher < Formula
   desc "Switch Apache & CLI configs between PHP versions"
   homepage "https://github.com/philcook/php-switcher"
-  url "https://github.com/philcook/brew-php-switcher/archive/v1.5.tar.gz"
-  sha256 "e5ead8b188a54d270b3a12bdcbae4a97c808e9d2ee72708597abffb8b4e8b591"
+  url "https://github.com/philcook/brew-php-switcher/archive/1.6.tar.gz"
+  sha256 "569b5ab5451bcfa784ff94141359fe4d80720c2fe4bf2d67f8fea33f5f05956e"
   head "https://github.com/philcook/brew-php-switcher.git"
 
   bottle do
@@ -25,7 +25,7 @@ class BrewPhpSwitcher < Formula
     To run brew php switcher do the following:
       "brew-php-switcher 53".
 
-    You can select php version 53, 54, 55, 56 or 70.
+    You can select php version 53, 54, 55, 56, 70 or 71.
     EOS
   end
 
