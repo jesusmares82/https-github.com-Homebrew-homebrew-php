@@ -5,9 +5,9 @@ class Php71Gmp < AbstractPhp71Extension
   desc "GMP core php extension"
   homepage "http://php.net/manual/en/book.gmp.php"
   bottle do
-    sha256 "8be2947c12f479880e8987d38bafb83a333c324908e6c96b4f38fd32baa6fd61" => :el_capitan
-    sha256 "20aa8e3fbc8123a36bff3f3d6863e583985d509f2bc2bedead60d8b4649ae204" => :yosemite
-    sha256 "aa2a4df543b40e38e462f628adb06dc10b8f1d6496f5dcfb30244c05766e249d" => :mavericks
+    sha256 "21943c90f94dc54d328abcda0bfa13d7055cca48a69f6a9e38868b7f5f58f5ce" => :el_capitan
+    sha256 "e30eb9a2eeb74284e1523aefc19cd5618c50b1f1adca46e4ca5809aa7a2d9dda" => :yosemite
+    sha256 "5a1b2c897914f696fc07b43f6e81946887472c14dc070be3acfd690ec48435fa" => :mavericks
   end
 
   url PHP_SRC_TARBALL
