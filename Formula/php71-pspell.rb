@@ -13,6 +13,7 @@ class Php71Pspell < AbstractPhp71Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
+  revision 1
 
   depends_on "aspell"
 
