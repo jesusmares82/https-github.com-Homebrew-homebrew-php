@@ -19,24 +19,6 @@ class Php56 < AbstractPhp
     sha256 "c3e5ae886d88ce5af7a2b88cdf701e078f7fbdc3c5b14c9e0bcf211087cd2217" => :mavericks
   end
 
-  def install_args
-    args = super
-
-    # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
-    if build.without? "phpdbg"
-      args << "--enable-dtrace"
-      args << "--disable-phpdbg"
-    else
-      args << "--enable-phpdbg"
-
-      if build.with? "debug"
-        args << "--enable-phpdbg-debug"
-      end
-    end
-
-    args << "--enable-zend-signals"
-  end
-
   def php_version
     "5.6"
   end
@@ -45,7 +27,3 @@ class Php56 < AbstractPhp
     "56"
   end
 end
-
-
-
-

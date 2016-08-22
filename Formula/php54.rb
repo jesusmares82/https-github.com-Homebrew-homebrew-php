@@ -31,15 +31,6 @@ class Php54 < AbstractPhp
     end
   end
 
-  def install_args
-    args = super
-
-    # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
-    args << "--enable-dtrace" if build.without? "phpdbg"
-
-    args << "--enable-zend-signals"
-  end
-
   def _install
     if build.with? "phpdbg"
       resource("phpdbg").stage buildpath/"sapi/phpdbg"

@@ -71,7 +71,9 @@ class AbstractPhp < Formula
     option 'with-mssql', 'Include MSSQL-DB support'
     option 'with-pear', 'Build with PEAR'
     option 'with-pdo-oci', 'Include Oracle databases (requries ORACLE_HOME be set)'
-    option 'with-phpdbg', 'Enable building of the phpdbg SAPI executable (PHP 5.4 and above)'
+    if 'php53' != self.name.split("::")[2].downcase
+        option "with-phpdbg", "Enable building of the phpdbg SAPI executable"
+    end
     option 'with-thread-safety', 'Build with thread safety'
     option 'without-apache', 'Disable building of shared Apache 2.0 Handler module'
     option 'without-bz2', 'Build without bz2 support'
@@ -330,12 +332,20 @@ INFO
       end
     end
 
-    if build.with? 'phpdbg'
-      if php_version.start_with?('5.3')
-        raise "phpdbg is not supported for this version of PHP"
+    if !php_version.start_with?('5.3')
+       # dtrace is not compatible with phpdbg: https://github.com/krakjoe/phpdbg/issues/38
+       if build.without? "phpdbg"
+         args << "--enable-dtrace"
+         args << "--disable-phpdbg"
+       else
+         args << "--enable-phpdbg"
+
+         if build.with? "debug"
+           args << "--enable-phpdbg-debug"
+         end
       end
 
-      args << "--enable-phpdbg"
+      args << "--enable-zend-signals"
     end
 
     if build.with? 'thread-safety'
