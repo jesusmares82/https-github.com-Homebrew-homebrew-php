@@ -10,10 +10,6 @@ class Php56Intl < AbstractPhp56Extension
   revision 1
 
   bottle do
-    revision 4
-    sha256 "2963039b28d63d61bfbfd21336929a4686f3461d0b7c116895ceb6a63d39e51a" => :el_capitan
-    sha256 "82f2fbcbacc4614930f735361e4dba4c90f60dd9bc43b177484375a8e7ec7840" => :yosemite
-    sha256 "5e36f282b87e6bfcf72b4bcdbda4783e7722a5554acbbdea228e47a26174245a" => :mavericks
   end
 
   depends_on "icu4c"

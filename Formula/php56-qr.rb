@@ -8,10 +8,6 @@ class Php56Qr < AbstractPhp56Extension
   sha256 "0d628741d77f34207a00cc0b84967ecf4ccb38f03e65105573ecfead8c76f114"
 
   bottle do
-    revision 3
-    sha256 "d9d4bf027dbe86e56132f057b31e3133ee604dc56fc403b3abc71830c9fc6229" => :el_capitan
-    sha256 "1ab97dd6d1a2ba0968516a0766465dd3f9a6d404fff3481c641d83e8c0949856" => :yosemite
-    sha256 "9f01c6c60ccfdc15b00e81aced5d3df6de89eaf22459bea6369305c9bbc8ae01" => :mavericks
   end
 
   depends_on "zlib"
