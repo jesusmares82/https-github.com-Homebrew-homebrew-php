@@ -9,6 +9,10 @@ class Php56Snmp < AbstractPhp56Extension
   version PHP_VERSION
 
   bottle do
+    rebuild 12
+    sha256 "b7e2663116c34df2a0e5a17554b53e08ac6135279ef355563bbb6eb9f00000de" => :el_capitan
+    sha256 "847467c14f5ff6649a2bad5e0a91f390d28a5dc8f4fe8d9e1875bd673179248a" => :yosemite
+    sha256 "50b271e03266fb3a7f7b32f453d6fc07ccd3a6f25bb7266d65b27d059714c296" => :mavericks
   end
 
   depends_on "net-snmp"
