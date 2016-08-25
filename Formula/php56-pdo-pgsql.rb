@@ -10,6 +10,7 @@ class Php56PdoPgsql < AbstractPhp56Extension
 
   bottle do
     cellar :any
+    rebuild 12
     sha256 "faebcef129d9ef2e690390da24111bbc90b8201b3e5e2dba666cc6e0ab49172c" => :el_capitan
     sha256 "2b890166564c108538cc41968bed08f8d59255f76beebe7b1ef7ed2d77198e5a" => :yosemite
     sha256 "59b9a3770ea30bbf627fe59c99a5cbae3918cef86c6a87f75af5b4e538be466f" => :mavericks

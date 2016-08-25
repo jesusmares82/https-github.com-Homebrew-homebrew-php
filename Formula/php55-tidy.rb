@@ -9,6 +9,7 @@ class Php55Tidy < AbstractPhp55Extension
   version PHP_VERSION
 
   bottle do
+    rebuild 9
     sha256 "aafdc9d6b61f3fe6b42f259e011ea0063f0f22dcd2e27c6bff4a0ae516d9087d" => :el_capitan
     sha256 "64a1b7788e6a9fd4e67940d6ed0e00d16ca58169100de294c04bc0d32a24710f" => :yosemite
     sha256 "b07b45cd8fde29d8b32b5285e177a12e4923c4dc8aff1bb8a31044be71704c50" => :mavericks

@@ -9,6 +9,7 @@ class Php56Gmp < AbstractPhp56Extension
   version PHP_VERSION
 
   bottle do
+    rebuild 12
     sha256 "a0171701fc4d7baa5fbdd7ffd2cd2558a7cdaa3559571513d9e1f675cfe5d34a" => :el_capitan
     sha256 "7000c7bec0215ab69ad54bc46f9c6d1542f28cc4c28fb251649e359cc7c6da49" => :yosemite
     sha256 "7a6896c0fb5ecf58877692a857b780ae2cea445a7be5d0482ed26aef3d816bd5" => :mavericks
