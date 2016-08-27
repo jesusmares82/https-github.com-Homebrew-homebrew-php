@@ -9,9 +9,9 @@ class Php54Maxminddb < AbstractPhp54Extension
 
   bottle do
     cellar :any
-    sha256 "67a1d8d2578cab9d3633066087d9e41ce8a8ce1f9877a78eb5ff2f5996e147c7" => :yosemite
-    sha256 "8213845a772d57699a382cc14b1a1a749031f68380ae324b728ef8f46cba0ffa" => :mavericks
-    sha256 "d261375d6a97a1de36480aece2dbdae06d6c9d599fad3c049a3d8454c56c96c7" => :mountain_lion
+    sha256 "84503c294d993a4fd9c72d9685bf40e6e45e7994f2ecf6c6649059bb0d9c6f7c" => :el_capitan
+    sha256 "adcca18df7fde6af5d0667ff55335932d038a3326700f183f26166cb4030413b" => :yosemite
+    sha256 "4818cb0d44b7768534b9c2ef09340c69b47d0c52306cc813aa4c555efab2a651" => :mavericks
   end
 
   depends_on "libmaxminddb"
