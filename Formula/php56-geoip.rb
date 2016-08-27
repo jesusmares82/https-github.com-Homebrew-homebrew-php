@@ -4,8 +4,8 @@ class Php56Geoip < AbstractPhp56Extension
   init
   desc "Map IP address to geographic places"
   homepage "https://pecl.php.net/package/geoip"
-  url "https://pecl.php.net/get/geoip-1.1.0.tgz"
-  sha256 "82c6deb7264d2ff7c4d6c45a7d27cff7ab097be965795e317e04a9c5b7be98b9"
+  url "https://pecl.php.net/get/geoip-1.1.1.tgz"
+  sha256 "b2d05c03019d46135c249b5a7fa0dbd43ca5ee98aea8ed807bc7aa90ac8c0f06"
   head "https://svn.php.net/repository/pecl/geoip/trunk/"
 
   bottle do
