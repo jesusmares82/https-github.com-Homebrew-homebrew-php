@@ -9,9 +9,9 @@ class Php56Maxminddb < AbstractPhp56Extension
 
   bottle do
     cellar :any
-    sha256 "f7b8fdeca44756fc0b6c2cce9068d6a5a8c576862e78dbec9ccb7fd13b087aae" => :yosemite
-    sha256 "9abd1be80a6799bd54459b60f9b0b13c9f7023614eea7464fc602d7df1018173" => :mavericks
-    sha256 "d6cc67a28d556572409f888d10fb99aec3e6eb76888a811d593de30f05547e61" => :mountain_lion
+    sha256 "15a07870b3ce1fdef6d40f4516792897be083e2501f18fd155427639d860f87d" => :el_capitan
+    sha256 "a9b9b323bd4054f09db3e375dd6523b352b99c614099ab25bf0e4250c96ef2a4" => :yosemite
+    sha256 "3e67ff01446dc990bbf64ab6f26afd3f8686f12a3d81e5213d39f4ad89978213" => :mavericks
   end
 
   depends_on "libmaxminddb"
