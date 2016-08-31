@@ -9,9 +9,9 @@ class XdebugOsx < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7f786f7d997e38d5a4bf17873838ff458f7d5a1cd6cd8a5b3a7388e727f0f5a2" => :el_capitan
-    sha256 "2a74adb2ebab0732e00c0835c9f853350ed0c765c9f202b4fa157b32d8f649c2" => :yosemite
-    sha256 "96425aa2f1762aedf10e9d8c0871fee89f9f66c604ab67c5dbdda7352bc0df60" => :mavericks
+    sha256 "42422258feae92eddbea91a1ad1a42654d73809b14ec554e25ca3ae40b157684" => :el_capitan
+    sha256 "61d365b291b159e8d7be21219be4e09e23f14382d2514743abefd43c05e72221" => :yosemite
+    sha256 "61d365b291b159e8d7be21219be4e09e23f14382d2514743abefd43c05e72221" => :mavericks
   end
 
   depends_on PhpMetaRequirement
