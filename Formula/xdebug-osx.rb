@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class XdebugOsx < Formula
   desc "Simple bash script to toggle xdebug on/off in OSX"
   homepage "https://github.com/w00fz/xdebug-osx"
-  url "https://github.com/w00fz/xdebug-osx/archive/1.0.tar.gz"
-  sha256 "42b4f06422838083efa9bfe1d545f369802ba62c224c4cb54694e40dc1966725"
+  url "https://github.com/w00fz/xdebug-osx/archive/1.1.tar.gz"
+  sha256 "fa2eabad41d7da5bde8eaefc3b260096c0b53dcdb4f0c7c7e5e132872a1eb541"
   head "https://github.com/w00fz/xdebug-osx.git"
 
   bottle do
@@ -23,18 +23,18 @@ class XdebugOsx < Formula
   depends_on "php71-xdebug" if Formula["php71"].linked_keg.exist?
 
   def install
-    bin.install "xdebug"
+    bin.install "xdebug-toggle"
   end
 
   def caveats; <<-EOS.undent
     Usage:
-      xdebug       # outputs the current status
-      xdebug on    # enables xdebug
-      xdebug off   # disables xdebug
+      xdebug-toggle       # outputs the current status
+      xdebug-toggle on    # enables xdebug
+      xdebug-toggle off   # disables xdebug
     EOS
   end
 
   test do
-    system "#{bin}/xdebug"
+    system "#{bin}/xdebug-toggle"
   end
 end
