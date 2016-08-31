@@ -9,6 +9,13 @@ class Php54Geos < AbstractPhp54Extension
   sha256 "63721d9dc2051aa03034b343c0b334e9cb11643e7009ea9be2e69f51f7b90f71"
   head "https://git.osgeo.org/gogs/geos/php-geos.git"
 
+  bottle do
+    cellar :any
+    sha256 "0f49e69e47e663395f4d489db053ec34ce81d26b073cb809c96fe648b533a543" => :el_capitan
+    sha256 "ab3729517fd9785a57bdee051fdc89729cbe4e04e47a033641fea131a6b4cba8" => :yosemite
+    sha256 "a7b3e2419af3d206befb82ae15194d670fd588599fd3f0e1540b7b71f9440660" => :mavericks
+  end
+
   depends_on "geos"
 
   def install
