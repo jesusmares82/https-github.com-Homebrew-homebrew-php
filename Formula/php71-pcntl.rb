@@ -14,7 +14,7 @@ class Php71Pcntl < AbstractPhp71Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 1
+  revision 2
 
   def install
     Dir.chdir "ext/pcntl"
