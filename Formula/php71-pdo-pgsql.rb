@@ -6,9 +6,9 @@ class Php71PdoPgsql < AbstractPhp71Extension
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_pgsql"
   bottle do
     cellar :any
-    sha256 "f2244817c5c48f329374abb4fb75f2ce18283de7f1e6611232d30edbb2a216b1" => :el_capitan
-    sha256 "695957226452c34d5ffb0806305bebc3267b97108e77f1a40f4ec3dfb80e8585" => :yosemite
-    sha256 "b71c02d3a5c403515be14858b0753d0171be288f2351b4a8e0446a091c3d4c4e" => :mavericks
+    sha256 "054522700d1e48806dc7717284843a8f32c8fa61d69c93db1596ba7a7cb0c1c5" => :el_capitan
+    sha256 "42421521933cbb1be15f3633256785d505671946606f0341879b5c5a305c90b3" => :yosemite
+    sha256 "c040fc8852087b4e279022d820ba2ef2241fbd2d53f7a1aea5326058a281ba53" => :mavericks
   end
 
   url PHP_SRC_TARBALL
