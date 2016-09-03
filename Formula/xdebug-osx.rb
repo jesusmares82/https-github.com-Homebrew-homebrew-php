@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class XdebugOsx < Formula
   desc "Simple bash script to toggle xdebug on/off in OSX"
   homepage "https://github.com/w00fz/xdebug-osx"
-  url "https://github.com/w00fz/xdebug-osx/archive/1.1.tar.gz"
-  sha256 "fa2eabad41d7da5bde8eaefc3b260096c0b53dcdb4f0c7c7e5e132872a1eb541"
+  url "https://github.com/w00fz/xdebug-osx/archive/1.2.tar.gz"
+  sha256 "b73f1fdc9cde042a2eac29425d6e917e100efc533a504aa71d0d8367a4b5c06f"
   head "https://github.com/w00fz/xdebug-osx.git"
 
   bottle do
@@ -27,10 +27,17 @@ class XdebugOsx < Formula
   end
 
   def caveats; <<-EOS.undent
+    Signature:
+      xdebug-toggle <on | off> [--no-server-restart]
+
     Usage:
-      xdebug-toggle       # outputs the current status
-      xdebug-toggle on    # enables xdebug
-      xdebug-toggle off   # disables xdebug
+      xdebug-toggle         # outputs the current status
+      xdebug-toggle on      # enables xdebug
+      xdebug-toggle off     # disables xdebug
+
+    Options:
+      --no-server-restart   # toggles xdebug without restarting apache or php-fpm
+
     EOS
   end
 
