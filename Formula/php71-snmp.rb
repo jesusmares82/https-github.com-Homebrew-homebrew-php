@@ -5,9 +5,9 @@ class Php71Snmp < AbstractPhp71Extension
   desc "SNMP core php extension"
   homepage "http://php.net/manual/en/book.snmp.php"
   bottle do
-    sha256 "548e0aaf130a1b22c2909c2ddf6f0f1dc54efe3634c17d46cf21cbf691b22af2" => :el_capitan
-    sha256 "8dcb630f9249e69af4f2e0dcb521c42658b86bc4be4d078622df64be41b0289d" => :yosemite
-    sha256 "f8c1e2151c42a81e85edfb932210a4d4f380241a4347cff9edbe6a4bac1cbda0" => :mavericks
+    sha256 "4d709ef8116aaee842dd4bd3479ff55b038a0804de52f52d047680f6fe659b22" => :el_capitan
+    sha256 "8bfb964a383a1efe47271a27ecbf34f17fc9257dfedd292677bff66d5a03ea9a" => :yosemite
+    sha256 "58a1f3949a42791cc808f968812e6c21b88deb4537af09ce533d37e169def769" => :mavericks
   end
 
   url PHP_SRC_TARBALL
