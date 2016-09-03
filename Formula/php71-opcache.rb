@@ -6,9 +6,9 @@ class Php71Opcache < AbstractPhp71Extension
   homepage "http://php.net/manual/en/book.opcache.php"
   bottle do
     cellar :any_skip_relocation
-    sha256 "1a572d8d51f8e27ad9dfdf70ef66b50dd1c3764cc4f34b6a7bf7dd33923756bf" => :el_capitan
-    sha256 "a4cdb36b2e6bb060643ab3a14606768475b7dfc1a7271240d65ffb8da966bd75" => :yosemite
-    sha256 "d104b50c8517168087bd00065f71b002daecad513bd852edb52624d6451d4fb8" => :mavericks
+    sha256 "4046dedda3af9bf54da5bd327917a3cf12e8c28646b1f9830c7b306454ee70a0" => :el_capitan
+    sha256 "b384abfc07f5518b23c18148572c1665e90c8adcd77b14c3de6b1551bce602e0" => :yosemite
+    sha256 "635114582ec5ae35f1f69d5fc73eab342f0951361bcb46ea3fed3dfa90b0a86e" => :mavericks
   end
 
   url PHP_SRC_TARBALL
