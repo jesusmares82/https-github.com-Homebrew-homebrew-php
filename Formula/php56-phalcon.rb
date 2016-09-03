@@ -4,8 +4,8 @@ class Php56Phalcon < AbstractPhp56Extension
   init
   desc "Full-stack PHP framework"
   homepage "http://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.13.tar.gz"
-  sha256 "0a1bd6afe902c6f2f68cf5e2f2785503f5ad95d1d2cf1b66c77154c483a08a35"
+  url "https://github.com/phalcon/cphalcon/archive/v3.0.1.tar.gz"
+  sha256 "18b24b99759523b8a6423dedb00fdbaad25fdd0fc3f76428987852afba081719"
   head "https://github.com/phalcon/cphalcon.git"
 
   bottle do
@@ -19,9 +19,9 @@ class Php56Phalcon < AbstractPhp56Extension
 
   def install
     if MacOS.prefer_64_bit?
-      Dir.chdir "build/64bits"
+      Dir.chdir "build/php5/64bits"
     else
-      Dir.chdir "build/32bits"
+      Dir.chdir "build/php5/32bits"
     end
 
     ENV.universal_binary if build.universal?
