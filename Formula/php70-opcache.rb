@@ -14,7 +14,7 @@ class Php70Opcache < AbstractPhp70Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 1
+  revision 2
 
   depends_on "pcre"
 
