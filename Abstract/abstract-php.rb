@@ -64,7 +64,8 @@ class AbstractPhp < Formula
     option 'with-apache', 'Enable building of shared Apache 2.4 Handler module'
     option 'with-apache22', 'Enable building of shared Apache 2.2 Handler module'
     deprecated_option "homebrew-apxs" => "with-homebrew-apxs"
-    option 'with-homebrew-apxs', 'Build against apxs in Homebrew prefix'
+    deprecated_option "with-homebrew-apxs" => "with-apache"
+
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-fpm)'
     option 'with-debug', 'Compile with debugging symbols'
     option 'with-homebrew-curl', 'Include Curl support via Homebrew'
@@ -153,7 +154,7 @@ INFO
   end
 
   def apache_apxs
-    if build.with?('homebrew-apxs') || MacOS.version == :sierra
+    if build.with?('httpd') || build.with?('httpd22')
       ['sbin', 'bin'].each do |dir|
         if File.exist?(location = "#{HOMEBREW_PREFIX}/#{dir}/apxs")
           return location
