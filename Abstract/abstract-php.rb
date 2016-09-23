@@ -42,8 +42,8 @@ class AbstractPhp < Formula
     depends_on 'unixodbc' unless build.include?('without-unixodbc')
     depends_on 'readline'
 
-    depends_on 'homebrew/apache/httpd24' if build.with?('apache')
-    depends_on 'homebrew/apache/httpd22' if build.with?('apache22')
+    depends_on 'homebrew/apache/httpd24' if build.include?('with-apache')
+    depends_on 'homebrew/apache/httpd22' if build.include?('with-apache22')
 
     # ssl
     if build.include?('with-homebrew-libressl')
