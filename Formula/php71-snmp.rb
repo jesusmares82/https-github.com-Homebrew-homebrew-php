@@ -13,7 +13,7 @@ class Php71Snmp < AbstractPhp71Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
+  revision 3
 
   depends_on "net-snmp"
 
