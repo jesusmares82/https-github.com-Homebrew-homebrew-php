@@ -5,9 +5,9 @@ class Php71PdoDblib < AbstractPhp71Extension
   desc "Unified Sybase-DB style driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
   bottle do
-    sha256 "97de93c20c41120aaadb98c9d6eff4ec33c845211cc7eeae724904c3294c13b3" => :el_capitan
-    sha256 "3273200ec3a4132daa1b857597f2d83b2bb9025fb063ce820350c9b7f6b19cef" => :yosemite
-    sha256 "e1071f17f23e103710c76319d90516ef89d5c350209ba337526bb48c7a1dccc4" => :mavericks
+    sha256 "c07c76e150929911a3345cdd98949106d640cb5f844ef272825e525dc7f4df96" => :sierra
+    sha256 "bb6f4ca88ff5802d712584a5e7f782ed9b0d7302057d413b7afa89141dbd9740" => :el_capitan
+    sha256 "950da3172a7b75280a98364b56242d3a5717317dde17499512dace737e278dc6" => :yosemite
   end
 
   url PHP_SRC_TARBALL
