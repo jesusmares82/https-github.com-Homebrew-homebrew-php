@@ -18,4 +18,19 @@ class Composer < AbstractPhpPhar
   test do
     system "composer", "--version"
   end
+
+  # The default behavior is to create a shell script that invokes the phar file.
+  # Other tools, at least Ansible, expect the composer executable to be a PHP
+  # script, so override this method. See
+  # https://github.com/Homebrew/homebrew-php/issues/3590
+  def phar_wrapper
+    <<-EOS.undent
+      #!/usr/bin/env php
+      <?php
+      array_shift($argv);
+      $arg_string = implode(' ', $argv);
+      passthru("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{@real_phar_file} $arg_string", $return_var);
+      return $return_var;
+    EOS
+  end
 end
