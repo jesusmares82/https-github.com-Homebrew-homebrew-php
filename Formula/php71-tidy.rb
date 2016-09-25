@@ -5,9 +5,9 @@ class Php71Tidy < AbstractPhp71Extension
   desc "Tidy HTML clean and repair utility"
   homepage "http://php.net/manual/en/book.tidy.php"
   bottle do
-    sha256 "d77a1a818f0e1a573079d79972dd05f4ebfa08441011555672fad48c156df607" => :el_capitan
-    sha256 "f2b0dcb6ca7761f11ccdbf8c6f0ad89d73fd2e0e43aabad4226d37c52d14db0f" => :yosemite
-    sha256 "d93b988da233012738f98ead9cdc46f4cfcb6e8ffd42671e434faeac212085ea" => :mavericks
+    sha256 "6923cd6acb17ffa2f36fac1f962a594dd0535d5efc46957887ffb8d5125dc181" => :sierra
+    sha256 "b91e3260533a207a95fa75e6929cd8661212f015c5e3d0c1cafdd451ff81cf24" => :el_capitan
+    sha256 "2d55e8075d7a7fecba7693b8f2f36b893fa2e8db514d7ed29e0c210d3d569110" => :yosemite
   end
 
   url PHP_SRC_TARBALL
