@@ -5,9 +5,9 @@ class Php71Pspell < AbstractPhp71Extension
   desc "Extension to check the spelling"
   homepage "http://php.net/manual/en/book.pspell.php"
   bottle do
-    sha256 "4a8b09b6d98aa8887b6dba74fa8491d1737743f23b30e412b3e941b36a96a98a" => :el_capitan
-    sha256 "422cf2bad48309714b54e2c89ae9753fa50e5ad70335a8d48dab36c4bd11cc22" => :yosemite
-    sha256 "acd56acf4bfea8a77be996f054f52b17788c91c12abd4888d141631b816cf7ec" => :mavericks
+    sha256 "dd4ca19d12754f50706740133e40017d1988a2c38d622331c87192eddfdfe739" => :sierra
+    sha256 "d4ed1a84613fa0268adb7c40558df7b2d4fdae89a9d5638959dd19841ee23420" => :el_capitan
+    sha256 "7aa5b93de49d9348679a1adeff010686ec64b61e18f53ad2db84b1677efb8aab" => :yosemite
   end
 
   url PHP_SRC_TARBALL
