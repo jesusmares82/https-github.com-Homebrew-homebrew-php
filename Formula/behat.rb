@@ -10,9 +10,9 @@ class Behat < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5ce4fa678695a86950658074af39b68e6808bcd85683081986d83aefc2e9430b" => :sierra
-    sha256 "5ce4fa678695a86950658074af39b68e6808bcd85683081986d83aefc2e9430b" => :el_capitan
-    sha256 "5ce4fa678695a86950658074af39b68e6808bcd85683081986d83aefc2e9430b" => :yosemite
+    sha256 "ff7a30ffd16033128d31712097200925c4391e6aebf86f5bf1c5deedc610f020" => :sierra
+    sha256 "ff7a30ffd16033128d31712097200925c4391e6aebf86f5bf1c5deedc610f020" => :el_capitan
+    sha256 "ff7a30ffd16033128d31712097200925c4391e6aebf86f5bf1c5deedc610f020" => :yosemite
   end
 
   test do
