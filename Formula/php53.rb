@@ -8,7 +8,7 @@ class Php53 < AbstractPhp
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 5
+  revision 6
 
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
@@ -24,7 +24,7 @@ class Php53 < AbstractPhp
   depends_on "flex" => :build
   depends_on "homebrew/versions/bison27" => :build
 
-  depends_on "libevent" unless build.without? "fpm"
+  depends_on "libevent" if build.with? "fpm"
 
   option "disable-zend-multibyte", "Disable auto-detection of Unicode encoded scripts"
 
@@ -50,8 +50,7 @@ class Php53 < AbstractPhp
 
   # Previous Bison and 10.9+ patches, and multi-SAPIs patch (https://pecl.php.net/~jani/patches/multi-sapi.patch) applied
   patch do
-    url "https://gist.githubusercontent.com/javian/bfcbd5bc5874ee9c539fb3d642cdce3e/raw/bf079cc68ec76290f02f57981ae85b20a06dd428/multi-sapi-5.3.29-homebrew.patch"
-    sha256 "3c3157bc5c4346108a398798b84dbbaa13409c43d3996bea2ddacb3277e0cee2"
+    url "https://gist.githubusercontent.com/javian/6d63097c8c175045aa75ca48a6b8826b/raw/ca7bad287e3af72b83fbb5f7d03186b5da2e65ae/multi-sapi-5.3.29-homebrew.patch"
+    sha256 "bdde5c0c1f9d2450d8d9d0a32882e1ee0008d8339eacf919e273e6f7937e7461"
   end
 end
-
