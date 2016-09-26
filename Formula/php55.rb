@@ -3,6 +3,12 @@ require File.expand_path("../../Abstract/abstract-php", __FILE__)
 class Php55 < AbstractPhp
   init
   desc "PHP Version 5.5"
+  bottle do
+    sha256 "525f48bf4f646e4d3dcaafde39244430535fbd25b8e1343cb2e1d56182fd9761" => :sierra
+    sha256 "e6d4f97dbcceadc77ac2db1d413f136c72ed3c990abc33e899a3e1bbc92d2f35" => :el_capitan
+    sha256 "038ffb53cc9a58b966f986a09103bf8a8b3343b73495b7ae9d3f21550edfc8e4" => :yosemite
+  end
+
   include AbstractPhpVersion::Php55Defs
   include AbstractPhpVersion::PhpdbgDefs
 
