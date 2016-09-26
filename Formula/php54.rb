@@ -14,9 +14,9 @@ class Php54 < AbstractPhp
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
-    sha256 "d44e621d0a674a129d2d25d614cde5579c9e7ef1c43e4c27f90627c63aeaaa93" => :el_capitan
-    sha256 "526693fc6302315aeb2f983126e6c2a71b3f10ef8dcb8d81c6782b0a2112eb2b" => :yosemite
-    sha256 "08f3bbff4806362f92709c2dee8eac0e7a2d3fed5e41191f339d9a683aad5c59" => :mavericks
+    sha256 "a1ed45d6504b75d1f824e94e325edd7f6621b5f1fe572672a1bf9618911f9c88" => :sierra
+    sha256 "40d3ed743be74448dd9f435d73e29c8059ccec267a66335392502e01aed5c487" => :el_capitan
+    sha256 "e02bade226764c0d3723258712a4c6ab5747e29813fcbfc9c3a56080201c38d6" => :yosemite
   end
 
   if build.with? "phpdbg"
