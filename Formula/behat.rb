@@ -4,9 +4,9 @@ class Behat < AbstractPhpPhar
   init
   desc "behavior-driven development framework"
   homepage "http://behat.org/"
-  url "https://github.com/Behat/Behat/releases/download/v3.2.0/behat.phar"
-  version "3.2.0"
-  sha256 "9057af29e6bfd0d858a6228b55701a032237f5739ba07bcdb1634f55555ed78b"
+  url "https://github.com/Behat/Behat/releases/download/v3.2.1/behat.phar"
+  version "3.2.1"
+  sha256 "cd0592bcfd6bee7a9c1d8e56eb7aad834c9ff0ebb32d2da82d4a0462ad16d04d"
 
   bottle do
     cellar :any_skip_relocation
