@@ -154,7 +154,7 @@ INFO
   end
 
   def apache_apxs
-    if build.with?('httpd') || build.with?('httpd22')
+    if build.with?('apache') || build.with?('apache22')
       ['sbin', 'bin'].each do |dir|
         if File.exist?(location = "#{HOMEBREW_PREFIX}/#{dir}/apxs")
           return location
