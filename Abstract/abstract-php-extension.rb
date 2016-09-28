@@ -25,7 +25,7 @@ class AbstractPhpExtension < Formula
       i = IO.popen("#{phpize} -v")
       out = i.readlines.join("")
       i.close
-      { 53 => 20090626, 54 => 20100412, 55 => 20121113 }.each do |v, api|
+      { 53 => 20090626, 54 => 20100412, 55 => 20121113, 56 => 20131106 }.each do |v, api|
         installed_php_version = v.to_s if out.match(/#{api}/)
       end
 
