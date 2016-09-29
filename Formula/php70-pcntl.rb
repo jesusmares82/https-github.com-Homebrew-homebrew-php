@@ -6,9 +6,9 @@ class Php70Pcntl < AbstractPhp70Extension
   homepage "http://php.net/manual/en/book.pcntl.php"
   bottle do
     cellar :any_skip_relocation
-    sha256 "92ead37d4c2a11c6924a43393a07cf1733c1075f740470cebafb245adfc96ec8" => :sierra
-    sha256 "9dcde846ccd04ea58050660cfd98c702c7ebfd21c4c34f1589fc96aa398c7b4e" => :el_capitan
-    sha256 "501707fe75f3816ef4fbf6bbda231b671404432af07b73f3e63723df6747517e" => :yosemite
+    sha256 "ca36eefba0dd032489ab105f2dfa58027a2fdd2bce661ce2bc11b3c021e1825f" => :sierra
+    sha256 "2539a1e461b765f38b56531960379b8b38b5624fc2d595f2041bdc98b59182b3" => :el_capitan
+    sha256 "e7af3a2a79b8331efd226517dba46d6fdfc50071c39c93dbe83c9cac34a37507" => :yosemite
   end
 
   url PHP_SRC_TARBALL
