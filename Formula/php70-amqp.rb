@@ -10,9 +10,9 @@ class Php70Amqp < AbstractPhp70Extension
 
   bottle do
     cellar :any
-    sha256 "f097b2a3eabccf8ef5e2e3ccdecf6c79d686b87e73815f8176a5f2bd79cf8b6f" => :el_capitan
-    sha256 "91fcc21b03ea53bc51c92adc3bec5837852c41ecd699465cb5a65be8a08e1884" => :yosemite
-    sha256 "6e95bb9b6c0e147ff6c3bf436190bc1d33fbd85cb820c78d0d3f086382a8dcfd" => :mavericks
+    sha256 "aa5500543d23a4df73fa0c057668711f5b58228523aefb5e644329fa2eefaaaf" => :sierra
+    sha256 "1cbe818471c317bc613c61a868e88ea3412413bdb7691983c2f8d3e736ab9934" => :el_capitan
+    sha256 "f22e54dd2b7b34e5fba9343f561a96413c94158c5b636d7c94ee70abd6d9c515" => :yosemite
   end
 
   depends_on "rabbitmq-c"
