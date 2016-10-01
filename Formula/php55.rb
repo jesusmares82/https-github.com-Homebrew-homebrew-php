@@ -4,9 +4,9 @@ class Php55 < AbstractPhp
   init
   desc "PHP Version 5.5"
   bottle do
-    sha256 "525f48bf4f646e4d3dcaafde39244430535fbd25b8e1343cb2e1d56182fd9761" => :sierra
-    sha256 "e6d4f97dbcceadc77ac2db1d413f136c72ed3c990abc33e899a3e1bbc92d2f35" => :el_capitan
-    sha256 "038ffb53cc9a58b966f986a09103bf8a8b3343b73495b7ae9d3f21550edfc8e4" => :yosemite
+    sha256 "30c9dfe8a469e66884d8ed869f437e414214f81f5c79502e82981fbd016c81cd" => :sierra
+    sha256 "2aa383f9e5f4b525a3755411918a84e8cee988460130787254a96cb3ada566c7" => :el_capitan
+    sha256 "81a057325f78004a2175202728a7444c5e4e9957365bae8da5c0e316d3087c10" => :yosemite
   end
 
   include AbstractPhpVersion::Php55Defs
