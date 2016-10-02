@@ -13,9 +13,9 @@ class Php53 < AbstractPhp
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
-    sha256 "35202430186a9a50f75b6c97547b0c6f68b741e975a29b5ad3e6c79a26399341" => :sierra
-    sha256 "2ddcb9181c767421f9ce268f5d9e4143f4239bccdc830f13f37004b7d917c555" => :el_capitan
-    sha256 "381c72630ff7b02b38fed7d489886f04936fe95a182408fda8d60e5e4a9c6bea" => :yosemite
+    sha256 "e18bc041ab51557fa00b6ea545ae8fe7d15a7ded0637af82b3a9d9684336e02b" => :sierra
+    sha256 "807a25ea1d29c9ef2c29ac057c8b4522c13ef93a844c6d8123ebcbc317b5404a" => :el_capitan
+    sha256 "6304160929975703d77e4c5a161cf55c24cd3c626c5a2445b4d98ce237994b4f" => :yosemite
   end
 
   # build dependancy needed to fix issue #962
