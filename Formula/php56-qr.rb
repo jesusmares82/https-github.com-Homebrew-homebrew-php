@@ -14,7 +14,7 @@ class Php56Qr < AbstractPhp56Extension
     sha256 "849c428e340e9053dd0aed14f193154369335710546910916181caf9aa336ff1" => :mavericks
   end
 
-  depends_on "zlib"
+  depends_on "homebrew/dupes/zlib"
 
   patch :DATA
 

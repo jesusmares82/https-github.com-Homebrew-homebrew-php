@@ -14,7 +14,7 @@ class Php55Qr < AbstractPhp55Extension
     sha256 "c7bf0171becc7baf04cd90d5e83722272c66b19a090501c5cc9c268f1ad18779" => :mavericks
   end
 
-  depends_on "zlib"
+  depends_on "homebrew/dupes/zlib"
 
   patch :DATA
 

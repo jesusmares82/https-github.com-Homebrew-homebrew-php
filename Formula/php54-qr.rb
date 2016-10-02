@@ -13,7 +13,7 @@ class Php54Qr < AbstractPhp54Extension
     sha256 "8d048bf0dd3968c3a37fed8ab26b19cc814a0a18e6becc4beeb476552e535e0c" => :mavericks
   end
 
-  depends_on "zlib"
+  depends_on "homebrew/dupes/zlib"
 
   patch :DATA
 
