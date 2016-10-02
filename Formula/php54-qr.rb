@@ -8,9 +8,10 @@ class Php54Qr < AbstractPhp54Extension
   sha256 "0d628741d77f34207a00cc0b84967ecf4ccb38f03e65105573ecfead8c76f114"
 
   bottle do
-    sha256 "68dc11a9c1b89755a569c89b6cb7cfceaadc650f8174d923ce95bd0fd4566bc8" => :el_capitan
-    sha256 "0cfe37479e01d7fcedd9de0ebbac0ba744b606cfc18d0cb6732ab558a677fc5e" => :yosemite
-    sha256 "8d048bf0dd3968c3a37fed8ab26b19cc814a0a18e6becc4beeb476552e535e0c" => :mavericks
+    rebuild 1
+    sha256 "93ba43d16bbf0bed1542af64c8f0c50d0c50e5f0608f87a44c35e6be9f6e22ea" => :sierra
+    sha256 "85a46a250ac9b32b0ab5f501b18c6c0a5f4ada77ba5557cbb5ff3a88b9d0174b" => :el_capitan
+    sha256 "6d27fa82f3126945c3f518561bf003f0b05f5e0fd27a4cfe9eada4e6c943e098" => :yosemite
   end
 
   depends_on "homebrew/dupes/zlib"
