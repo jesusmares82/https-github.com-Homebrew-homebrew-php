@@ -4,6 +4,8 @@ class Php70Ssh2 < AbstractPhp70Extension
   init
   desc "Provides bindings to the functions of libssh2"
   homepage "https://pecl.php.net/package/ssh2"
+  url "https://pecl.php.net/get/ssh2-1.0.tgz"
+  sha256 "6a93891878b23904a773eb814fec7aea4ea00b4a412ee779c8535ed9c5e46ced"
   head "https://github.com/php/pecl-networking-ssh2.git"
 
   depends_on "libssh2"
