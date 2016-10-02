@@ -8,10 +8,10 @@ class Php56Qr < AbstractPhp56Extension
   sha256 "0d628741d77f34207a00cc0b84967ecf4ccb38f03e65105573ecfead8c76f114"
 
   bottle do
-    rebuild 4
-    sha256 "1959a83d910fdc9e265d0da30f5ff8fe03d4ce9725fc0fdbf24967d854b0477a" => :el_capitan
-    sha256 "e35a67138b99145aca0e60826f99bdcda0da655cb32fd19350051791d07a632f" => :yosemite
-    sha256 "849c428e340e9053dd0aed14f193154369335710546910916181caf9aa336ff1" => :mavericks
+    rebuild 5
+    sha256 "0d558ba267cc159c43a32f3f9000a45f122d4d164641f332e122273aa28ecd78" => :sierra
+    sha256 "0ae8fd5f02d2293d8a5fdb92639a711f074b1cee53905407edd7ed57c89efaf9" => :el_capitan
+    sha256 "b6f3b47d1d63ac0f7fbe094def3ea70e1a8ae2b69aa4adbd2b50222727c22dac" => :yosemite
   end
 
   depends_on "homebrew/dupes/zlib"
