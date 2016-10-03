@@ -10,10 +10,9 @@ class Php56Mcrypt < AbstractPhp56Extension
   revision 1
 
   bottle do
-    rebuild 13
-    sha256 "4a96851b66b22c81beeae9bfa3a79d6e431e3949e153b39f954b66f379f8c361" => :el_capitan
-    sha256 "506d35bb65bd4610c99841b34f13c788f34076de1d8eb7354e2f0adc9db25453" => :yosemite
-    sha256 "76df11ceb1f22242bab6acb3e0a00d122ef225ae38298ed99a1ad9209de7f766" => :mavericks
+    sha256 "fc8bbf14f03b23bf3962d2c8cfdab625f6c6fdc51f9ddd14681b980a519f91ee" => :sierra
+    sha256 "db66e9104451f5dd90a0fe366d05d5b4ca57c40bf50e2b262b9227fe6255fbd3" => :el_capitan
+    sha256 "6fdda3896f73e1423b46b51f8f60bd746be647c3345a74508dd3acec5c4c780f" => :yosemite
   end
 
   depends_on "mcrypt"
