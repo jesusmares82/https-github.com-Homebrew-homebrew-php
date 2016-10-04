@@ -590,6 +590,7 @@ INFO
       <key>ProgramArguments</key>
       <array>
         <string>#{opt_sbin}/php-fpm</string>
+        <string>--nodaemonize</string>
         <string>--fpm-config</string>
         <string>#{config_path}/php-fpm.conf</string>
       </array>
