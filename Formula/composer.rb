@@ -30,6 +30,7 @@ class Composer < AbstractPhpPhar
       <?php
       array_shift($argv);
       $arg_string = implode(' ', $argv);
+      $arg_string .= preg_match('/--(no-)?ansi/', $arg_string) ? '' : ' --ansi';
       passthru("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{@real_phar_file} $arg_string", $return_var);
       return $return_var;
     EOS
