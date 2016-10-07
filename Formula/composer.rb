@@ -7,6 +7,7 @@ class Composer < AbstractPhpPhar
   url "https://getcomposer.org/download/1.2.1/composer.phar"
   sha256 "c2e04040b807a8530e5c83de56bdaaf63a0f183f8fd449bbe6e41f660e647427"
   head "https://getcomposer.org/composer.phar"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
