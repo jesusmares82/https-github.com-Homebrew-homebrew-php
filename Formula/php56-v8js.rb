@@ -4,9 +4,8 @@ class Php56V8js < AbstractPhp56Extension
   init
   desc "PHP extension for Google's V8 Javascript engine"
   homepage "http://pecl.php.net/package/v8js"
-  url "http://pecl.php.net/get/v8js-0.4.0.tgz"
-  sha256 "0d52b999c12f9f74a0642f6c3f349002a39355295187e0b50344ea0ec64ae0bd"
-  revision 2
+  url "https://pecl.php.net/get/v8js-0.6.4.tgz"
+  sha256 "88af2c98482374a36b24e317df4684b9eecc92d4883022fc8036a16f2641ca43"
 
   bottle do
     cellar :any
