@@ -4,9 +4,9 @@ class Phpbrew < AbstractPhpPhar
   init
   desc "installs multiple version php(s) in your $HOME directory"
   homepage "https://github.com/phpbrew/phpbrew"
-  url "https://github.com/phpbrew/phpbrew/raw/fb208f6570969e4ca050657a3322bccd65cca6fd/phpbrew"
-  version "1.21.1"
-  sha256 "bbad349681684a921a4a5b24c9bb361e19d1e0d30720955d945394ced57b3570"
+  url "https://github.com/phpbrew/phpbrew/raw/56300713fe9f99084a52987d624579d92c2b1844/phpbrew"
+  version "1.22.5"
+  sha256 "84301c766146bdc04f10e8cb0e8c2aefeaf943b0bea24ca42318a8f12c0aee1b"
 
   bottle do
     cellar :any_skip_relocation
