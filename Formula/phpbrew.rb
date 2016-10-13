@@ -10,9 +10,9 @@ class Phpbrew < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "53da318cf43c2b2765b69f43cd892bfc86380148ec7dacf1e97d58d5161e6256" => :el_capitan
-    sha256 "f720e053428bed9c6f063e7057df4579308e7200ee6c4142aa9fed40c11c4d67" => :yosemite
-    sha256 "234bbed134cd60fbbf50a6d7d8e7081560eac761b3bcb1aa95f729f80dca0781" => :mavericks
+    sha256 "0f7907c4a61d64c8857883201d8fceabedf479a8c80c3d835fcbdea2e1d139cf" => :sierra
+    sha256 "8fc74c72f3218a71955e2a6278eb65e192d48dff3ec6f4205b660cf69a118f03" => :el_capitan
+    sha256 "f910fd3fa490c55b11ad83e72f0334861fbe16439a58106b33301a405d3f7efe" => :yosemite
   end
 
   depends_on "curl"
