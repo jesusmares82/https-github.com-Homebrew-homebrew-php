@@ -6,9 +6,9 @@ class Php71Intl < AbstractPhp71Extension
   homepage "http://php.net/manual/en/book.intl.php"
 
   bottle do
-    sha256 "fb91e25032baa1c738fbf07077990e0ddb77cb37022a447fde365a770d2bb528" => :sierra
-    sha256 "a24bda59ff9d66bae0347d5588da238c6e86f447af66aaa5196547deaf1c2ff8" => :el_capitan
-    sha256 "0d7dc18bedc6a3a206bf218128f950bdb52c61f1b6694442f579f19e3154e672" => :yosemite
+    sha256 "ffaf480cf7ddbe8ea125ee184cc2396674cddf9dc9e44c2b99372b0e5974337b" => :sierra
+    sha256 "56e7e7d49c37c411fd1998c29a289e74c8c14ef1d25469fe370c60820e0799de" => :el_capitan
+    sha256 "e2e0cf585d839d6d5e5c2c3920b1bda623d1fad27ae4b876d0e7aa05fc221581" => :yosemite
   end
 
   url PHP_SRC_TARBALL
