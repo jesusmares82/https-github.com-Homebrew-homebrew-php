@@ -7,7 +7,7 @@ class Php56Imagick < AbstractPhp56Extension
   url "https://pecl.php.net/get/imagick-3.3.0.tgz"
   sha256 "bd69ebadcedda1d87592325b893fa78a5710a0ca7307f8e18c5e593949b1db2d"
   head "https://github.com/mkoppanen/imagick.git"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "05e96f89e2d6953d2fa9ae9615ee4c0866ac96997db139f8d9d080872bdad47d" => :el_capitan
