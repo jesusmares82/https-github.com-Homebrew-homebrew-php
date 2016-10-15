@@ -10,9 +10,9 @@ class Php56Intl < AbstractPhp56Extension
   revision 3
 
   bottle do
-    sha256 "86d39de1476dd0a38cd3ff85ec1e481343f7f3a9318ff15324136750a6d696d4" => :sierra
-    sha256 "cbc3c7ee7ef4cdf6abfddda49a13354c5b2e89b0b7d843ea2a035e3a1bb448c2" => :el_capitan
-    sha256 "ce357a2558190fa4faeccbd9bee376efe590b97b6e6be35a298338aaba46ff61" => :yosemite
+    sha256 "d5957f6de56eb246d0952c2c7c4540e888fa4f7848a510092c82e7edc23c0334" => :sierra
+    sha256 "161ab6b38e4128684f578609706bbddd839ff9803d1e99565fcde63d42071011" => :el_capitan
+    sha256 "4e312305166343d4cf3085b1c68ed3c98ffbba7e14cadfdc74c7886a7186641e" => :yosemite
   end
 
   depends_on "icu4c"
