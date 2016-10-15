@@ -2,12 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php56Intl < AbstractPhp56Extension
   init
-  desc "A wrapper for the ICU library"
+  desc "Wrapper for the ICU library"
   homepage "http://php.net/manual/en/book.intl.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
+  revision 3
 
   bottle do
     sha256 "86d39de1476dd0a38cd3ff85ec1e481343f7f3a9318ff15324136750a6d696d4" => :sierra
@@ -44,12 +44,3 @@ class Php56Intl < AbstractPhp56Extension
     EOS
   end
 end
-
-
-
-
-
-
-
-
-

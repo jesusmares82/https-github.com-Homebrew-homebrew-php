@@ -7,6 +7,7 @@ class Php56Pcntl < AbstractPhp56Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -30,12 +31,3 @@ class Php56Pcntl < AbstractPhp56Extension
     write_config_file if build.with? "config-file"
   end
 end
-
-
-
-
-
-
-
-
-
