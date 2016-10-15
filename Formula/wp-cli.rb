@@ -11,6 +11,7 @@ class WpCli < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "b6fa8b94406b72a79c980c8ff9606528d7ecf12fcb721ce78b5f2599402a7417" => :sierra
     sha256 "518178abc782ca4bf4509334fcc4f2305aef76027263b41b5a5c60fa238c6399" => :el_capitan
     sha256 "48728b492cbc54b363d5bb6287a967a43565810eea7c0cae1906206fa270d3ff" => :yosemite
     sha256 "a537a3d0ffef87552e1f9f980c852370479a65035a9e596000ea84b8dfda8eb3" => :mavericks
