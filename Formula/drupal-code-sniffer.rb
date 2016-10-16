@@ -10,6 +10,7 @@ class DrupalCodeSniffer < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "b46b43237469637f1bef1f9cf3684f49f77e228e603f2db2dfea5be98a410cb4" => :sierra
     sha256 "1d6f7adf6ebfc77f5cc38e5940e2891174378f462659a60ac1ed0d8954dd15b5" => :el_capitan
     sha256 "4de6582cb4a8834471292120a5482c7f44bbb838e46f104d6b5aa3abf596b0f0" => :yosemite
     sha256 "39d9d63bd3e3ac061f1435bf55763e686b9053da93ceeec5bca81a9a11775909" => :mavericks
