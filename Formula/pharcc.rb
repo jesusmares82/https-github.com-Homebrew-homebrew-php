@@ -10,6 +10,7 @@ class Pharcc < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "bba04231b9f82af7f5f308156bdb5ac3bdbc531c8869e909d103b6370c6cc2e6" => :sierra
     sha256 "fe6aa8c8df217518d509d2973c94ae9f79b01c84dd32385cccd9b4343e657a3e" => :el_capitan
     sha256 "bead6dcd4dd811e768a61f8a5b08e91c5bcfa2b15b1fce87085d63dc2d1b7719" => :yosemite
     sha256 "7b0dfbf05ebe66cc5be718c155c8eefe7bb79edebbf17539e20393f8974c46b7" => :mavericks
