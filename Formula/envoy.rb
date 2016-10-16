@@ -10,6 +10,7 @@ class Envoy < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "1baa0fec0e611579ffa57a29bcb7462be380bc5a396a76608625a19b8ebc70aa" => :sierra
     sha256 "030419f798ad575386c580ebf07d46a9cc7773f454a4a832285953bcb76b48a2" => :el_capitan
     sha256 "418181f9aa9a77e9bbe1c0dd67ea05fd2b5b4f9ca37e75ab39de39944212f6e3" => :yosemite
     sha256 "166165e4249cd06923433ed4018c31072073b359c4026de6ba3b90c04b667982" => :mavericks
