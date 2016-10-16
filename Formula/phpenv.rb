@@ -8,6 +8,7 @@ class Phpenv < Formula
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "5b43ed6fa0ae4212fd9977c6d3355d2d664250b0cc574b7bd4b1300a96d01b09" => :sierra
     sha256 "6b0bc1a2165e61f7a61a67288317e289cd71e317771770a77cd0552c9c1dc063" => :el_capitan
     sha256 "e4725e2f6e9523250de63e018a57abcffb6ec3abcd429b91fbc4f8eec33ae0d8" => :yosemite
     sha256 "0520ecbd7e356ae3c3c2337501a02b8d685656906588971ee4c66a05a7a44798" => :mavericks
