@@ -10,6 +10,7 @@ class Phpmd < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "bd9c1f160a6e88b129c4ba1b59421b42746aa41f9bfbb06507db4ed1563a3ec7" => :sierra
     sha256 "a8361d3d28fc1112a69a15ced34e84c9265d9c797f65aec1774c648ba1712138" => :el_capitan
     sha256 "ed0d335b5091175f9ac30b5abc4f4421d4c4e52ce1356a775c27df7968945d1b" => :yosemite
     sha256 "1cff56129e811173c2a502df3e638fb632bb3239c435306724f8763c597b4783" => :mavericks
