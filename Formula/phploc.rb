@@ -9,6 +9,7 @@ class Phploc < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "f367761574361c437d0d7ada5d9b0091d776143869816664846803a65a8e5466" => :sierra
     sha256 "5bed4234b52f850227466925c4a5152792c2ddec3d8b6cbf5378c10799aa8ff9" => :el_capitan
     sha256 "b770b3f23a8faee174aeb95af5d9df46b43bbddf9df2668603be6af947d9419a" => :yosemite
     sha256 "b770b3f23a8faee174aeb95af5d9df46b43bbddf9df2668603be6af947d9419a" => :mavericks
