@@ -9,6 +9,7 @@ class Box < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "cff16be7b1137d715438c4ba176fc1f3a58821c851f928fca0ae9e7ebedfa168" => :sierra
     sha256 "b1abc977036143d70f58a9fd1fc1bf603388b0ab74343dfdffe5053a980f8618" => :el_capitan
     sha256 "a2f2997cee7d4c9f84574bf1c9daa826d0b27f0f502530cf6c727b38824752da" => :yosemite
     sha256 "a56db539e2dc87a1c074d74a1fef44bf438838fdaf9e6016c13c004fd371ef7d" => :mavericks
