@@ -6,7 +6,8 @@ class Ezcomponents < Formula
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
+    sha256 "a8ff044c522d41be7e2fb0d2e84f8a33d86c7e054253b315dff3f70be239723f" => :sierra
     sha256 "b553dfc6b2b6b5098c648484cb4bc19e8ebd1c6787de92b85365990e25c65b79" => :el_capitan
     sha256 "4719c7c4fffbae46151abf469bc84f3f2eea30b70e7e099d3ddf6813cc411a85" => :yosemite
     sha256 "3020beecce6d6c96c638bebe46f9c9997b71caee6d2ebedb07fbff333fbe7f5f" => :mavericks
