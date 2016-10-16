@@ -10,6 +10,7 @@ class Sqlformat < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
+    sha256 "66fcfdfdbf3ab425cb0dbed9e181b9b529290e15cac0a25a6c691b757f1ef1d5" => :sierra
     sha256 "d4c1138ac159084d60b1f491420aa9a4f11cb32a1e19ae6afcf6496661c1bc4a" => :el_capitan
     sha256 "7f9819653a1f445dcfe437bf6896bc3c6672adb91e30863b80ff5768b4faad76" => :yosemite
     sha256 "7f9819653a1f445dcfe437bf6896bc3c6672adb91e30863b80ff5768b4faad76" => :mavericks
