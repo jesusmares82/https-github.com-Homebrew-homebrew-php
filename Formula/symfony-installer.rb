@@ -7,8 +7,8 @@ class SymfonyInstaller < Formula
   desc "Create Symfony framework projects."
   homepage "https://github.com/symfony/symfony-installer"
   url "https://github.com/symfony/symfony-installer.git",
-    :tag => "v1.5.8",
-    :revision => "70b921a47372a5734d09adbbeacc5d74d77cda3d"
+    :tag => "v1.5.9",
+    :revision => "e965861351b693b1459adb22049c4924cc825f4a"
   head "https://github.com/symfony/symfony-installer.git"
 
   bottle do
