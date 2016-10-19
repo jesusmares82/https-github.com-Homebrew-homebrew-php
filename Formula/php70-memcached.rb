@@ -25,7 +25,7 @@ class Php70Memcached < AbstractPhp70Extension
     args = []
     args << "--with-libmemcached-dir=#{Formula["libmemcached"].opt_prefix}"
     args << "--enable-memcached-igbinary"
-    args << "--enable-memcached-sasl" if build.with? "sasl"
+    args << "--disable-memcached-sasl" if build.without? "sasl"
 
     safe_phpize
 
