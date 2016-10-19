@@ -6,15 +6,11 @@ class PhpCsFixer < Formula
 
   desc "Tries to fix coding standards issues"
   homepage "http://cs.sensiolabs.org"
-  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.12.1.tar.gz"
-  sha256 "595d24bdd805b0cc1a43a7f2a5035117c72f8b3b6f8eb33011048943744e3c68"
+  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.12.2.tar.gz"
+  sha256 "9715863f2e3419715b4527e2452492c20e3e43384e2a665ecf27ddc6f5d448fb"
   head "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "9ae24af10acf13fe1bc9db51b8d1b2175dda9253ca58d97f0e9780f46bc53bf9" => :sierra
-    sha256 "6786e1099623b69cebcb5e4e280fb4e7c00986b95e6c6f1c698c4b47ec282787" => :el_capitan
-    sha256 "c8830caa28f98aaed09889b7bc5a45fd216107b15555324b52c11e250e3af222" => :yosemite
   end
 
   depends_on PhpMetaRequirement
