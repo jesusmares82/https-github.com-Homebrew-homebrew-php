@@ -1,8 +1,9 @@
 class Libmustache < Formula
   desc "C++ implementation of Mustache."
   homepage "https://github.com/jbboehr/libmustache"
-  url "https://github.com/jbboehr/libmustache/archive/v0.4.0.tar.gz"
-  sha256 "25d2bc59868a306df366bdf56b390f0243ad363165a0e3e0ea5b8af3641bc947"
+  url "https://github.com/jbboehr/libmustache.git",
+      :tag => "v0.4.2",
+      :revision => "13103f9ec494b1ff23bba02228bca229ecf42f6c"
 
   bottle do
     cellar :any
