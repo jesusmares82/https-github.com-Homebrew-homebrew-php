@@ -5,9 +5,9 @@ class Php71Mcrypt < AbstractPhp71Extension
   desc "Interface to the mcrypt library"
   homepage "http://php.net/manual/en/book.mcrypt.php"
   bottle do
-    sha256 "2f09cd8bf6ec6e8353ca37ebc1bbb94b6febc88e1bb388ee821d5f8de5e3eaf1" => :sierra
-    sha256 "4baf1e98609596eabe98fd67d650d83a8c511037aa0e4e8b930158cc656f0160" => :el_capitan
-    sha256 "06bdbca9dead57449d114e322e39ee220b521e943379bc138bcda4b2e4a277f8" => :yosemite
+    sha256 "0c857e42acca72954c7f0368db3ffd2a6aaaaf77e98b6e7fba25c01e1898547f" => :sierra
+    sha256 "115f948490a9563a0adc64352719c235f5007ad5417a6a0881ba65de860db44a" => :el_capitan
+    sha256 "0d6ddd10c42d91425b01e66461b60f93d07f07f22e82f07369f5c7ef7e34bc81" => :yosemite
   end
 
   url PHP_SRC_TARBALL
