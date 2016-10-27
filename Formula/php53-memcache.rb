@@ -10,10 +10,10 @@ class Php53Memcache < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
-    sha256 "ee0275709afede9ec43bdd7bb7940d7ee0895aeda56e09048d6c5b4332ff576d" => :el_capitan
-    sha256 "26ed890171b49b8eeb7f07762f423b7f37da73bdc025561574a00b1e68e05ee8" => :yosemite
-    sha256 "735c46df7104f9e7b0baebeba879092c0aa70e1829a8ad704400ba6da42ecf7e" => :mavericks
+    rebuild 2
+    sha256 "2451c565561eabca139907fb5d30a07e4e5f9375b02670faee09f0126db35b8c" => :sierra
+    sha256 "953ee4f685cfab9ed0c4d23b2233efa4de3caf123a4fcf44704d634b3bd81376" => :el_capitan
+    sha256 "c996dd0e881c32a322d5cec2369402a4ab619f4d85e2b2c720791a550b11f6ae" => :yosemite
   end
 
   devel do
