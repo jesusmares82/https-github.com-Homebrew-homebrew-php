@@ -26,6 +26,10 @@ class Php53Memcache < AbstractPhp53Extension
 
     ENV.universal_binary if build.universal?
 
+    ENV['CFLAGS'] = '-fgnu89-inline'
+    ENV['LDFLAGS'] = '-fgnu89-inline'
+    ENV['CXXFLAGS'] = '-fgnu89-inline'
+
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
