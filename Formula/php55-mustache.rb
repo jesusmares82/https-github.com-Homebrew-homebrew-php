@@ -4,8 +4,8 @@ class Php55Mustache < AbstractPhp55Extension
   init
   desc "Mustache PHP Extension"
   homepage "https://github.com/jbboehr/php-mustache#mustache"
-  url "https://github.com/jbboehr/php-mustache/archive/v0.7.0.tar.gz"
-  sha256 "d01f9969e890f1aa0033c62d06495fa3273c33b02d24794a3f51831200284674"
+  url "https://github.com/jbboehr/php-mustache/archive/v0.7.2.tar.gz"
+  sha256 "5eb0a25d42532db98e2e9087e49db060369651b16ac1accd61415424a47561f7"
   head "https://github.com/jbboehr/php-mustache.git"
 
   bottle do
