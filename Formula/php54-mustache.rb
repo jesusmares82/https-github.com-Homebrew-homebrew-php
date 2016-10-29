@@ -10,9 +10,9 @@ class Php54Mustache < AbstractPhp54Extension
 
   bottle do
     cellar :any
-    sha256 "ee010bcc1eac6e4d83d34ae86544caf20ecb52243b058437a195ef5d261f2e64" => :el_capitan
-    sha256 "1ab02f2b39e9b1e8af102dfabe5be645458736e912ecbd0e759370682ac2aaa8" => :yosemite
-    sha256 "f98b7312cda934eb99c467fb31af913b6ff7e2c5cfe8199d5ca0bf0c122b7d22" => :mavericks
+    sha256 "6013e704973cf3286d25282343382fa10ea9293a5e0968af69f1ccfe549045c7" => :sierra
+    sha256 "9ae29bc9a9325b24d1ecf753f089c7f1c93a447cc17ba0507728e988e307ff20" => :el_capitan
+    sha256 "82e03869b9d78e0e30bde3b0e2d8d326e8d8a40e090d09181205eb306b61a5ee" => :yosemite
   end
 
   depends_on "libmustache"
