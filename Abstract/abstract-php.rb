@@ -367,7 +367,7 @@ INFO
     system "./buildconf", "--force" if build.head?
     system "./configure", *install_args()
 
-    if build.with?('apache')
+    if build.with?('apache') || build.with?('apache22')
       # Use Homebrew prefix for the Apache libexec folder
       inreplace "Makefile",
         /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
