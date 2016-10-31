@@ -6,6 +6,7 @@ class Php56Redis < AbstractPhp56Extension
   homepage "https://github.com/phpredis/phpredis"
   url "https://github.com/phpredis/phpredis/archive/2.2.8.tar.gz"
   sha256 "a7c6e2eef70bd8449bab819c8f01d951fcd86ce0417e03675445040236ed4dda"
+  revision 1
   head "https://github.com/phpredis/phpredis.git"
 
   bottle do
@@ -24,10 +25,10 @@ class Php56Redis < AbstractPhp56Extension
     args = []
     args << "--enable-redis-igbinary"
 
-    safe_phpize
+    # Install symlink to igbinary headers inside memcached build directory
+    (Pathname.pwd/"ext").install_symlink Formula["igbinary"].opt_include/"php5" => "igbinary"
 
-    mkdir_p "ext/igbinary"
-    cp "#{Formula["igbinary"].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
+    safe_phpize
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,

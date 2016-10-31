@@ -29,8 +29,8 @@ class Php70Memcached < AbstractPhp70Extension
 
     safe_phpize
 
-    mkdir_p "ext/igbinary"
-    cp "#{Formula["igbinary"].opt_include}/igbinary.h", "ext/igbinary/igbinary.h"
+    # Install symlink to igbinary headers inside memcached build directory
+    (Pathname.pwd/"ext").install_symlink Formula["igbinary"].opt_include/"php7" => "igbinary"
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,

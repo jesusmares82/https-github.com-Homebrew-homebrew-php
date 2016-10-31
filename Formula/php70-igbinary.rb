@@ -4,13 +4,13 @@ class Php70Igbinary < AbstractPhp70Extension
   init
   desc "Igbinary is a drop in replacement for the standard php serializer."
   homepage "https://pecl.php.net/package/igbinary"
-  head "https://github.com/igbinary/igbinary7.git"
+  url "https://github.com/igbinary/igbinary/archive/2.0.1.tar.gz"
+  sha256 "9c66e6bb8225bf559148661d8ef81451e5f67f0a565d975dc0918abd8c35e0ed"
+  head "https://github.com/igbinary/igbinary.git"
 
   depends_on "igbinary" => :build
 
   def install
-    Dir.chdir "igbinary-#{version}" unless build.head?
-
     ENV.universal_binary if build.universal?
 
     safe_phpize

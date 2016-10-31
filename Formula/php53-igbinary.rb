@@ -2,13 +2,11 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php53Igbinary < AbstractPhp53Extension
   init
-  desc "Igbinary is a drop in replacement for the standard php serializer."
+  desc "Drop in replacement for the standard php serializer"
   homepage "https://pecl.php.net/package/igbinary"
-  url "https://pecl.php.net/get/igbinary-1.2.1.tgz"
-  sha256 "168e51d41a417bbbfe6da0e3cb9b71ef93594f4034f489a951f3b874d03dfdb8"
+  url "https://github.com/igbinary/igbinary/archive/2.0.1.tar.gz"
+  sha256 "9c66e6bb8225bf559148661d8ef81451e5f67f0a565d975dc0918abd8c35e0ed"
   head "https://github.com/igbinary/igbinary.git"
-
-  depends_on "igbinary" => :build
 
   bottle do
     cellar :any_skip_relocation
@@ -18,9 +16,9 @@ class Php53Igbinary < AbstractPhp53Extension
     sha256 "4fd6dd0798db0e384d35b1682a4283838310da2820975c37af956096650df0a9" => :mavericks
   end
 
-  def install
-    Dir.chdir "igbinary-#{version}" unless build.head?
+  depends_on "igbinary" => :build
 
+  def install
     ENV.universal_binary if build.universal?
 
     safe_phpize

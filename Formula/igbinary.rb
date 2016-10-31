@@ -1,8 +1,8 @@
 class Igbinary < Formula
   desc "Drop in replacement for the standard php serializer."
   homepage "https://pecl.php.net/package/igbinary"
-  url "https://pecl.php.net/get/igbinary-1.2.1.tgz"
-  sha256 "168e51d41a417bbbfe6da0e3cb9b71ef93594f4034f489a951f3b874d03dfdb8"
+  url "https://github.com/igbinary/igbinary/archive/2.0.1.tar.gz"
+  sha256 "9c66e6bb8225bf559148661d8ef81451e5f67f0a565d975dc0918abd8c35e0ed"
   head "https://github.com/igbinary/igbinary.git"
 
   bottle do
@@ -15,8 +15,6 @@ class Igbinary < Formula
   end
 
   def install
-    Dir.chdir "igbinary-#{version}" unless build.head?
-
-    include.install %w[apc_serializer.h hash.h igbinary.h php_igbinary.h]
+    include.install Dir["src/*"]
   end
 end
