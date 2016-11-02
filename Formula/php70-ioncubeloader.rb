@@ -15,9 +15,9 @@ class Php70Ioncubeloader < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e56e9dad7f164f520d038c42b2ac820a82ee405297b59b316a966bb4739e401d" => :sierra
-    sha256 "e56e9dad7f164f520d038c42b2ac820a82ee405297b59b316a966bb4739e401d" => :el_capitan
-    sha256 "530cafd2cf4b29f19e7de7cf7ab9d23ce0ae70e189293b704766da29947e74b1" => :yosemite
+    sha256 "f85714ecd0c1e3f0b4dec8847b526a15dd58259ad17393a3fa792c8722f202b4" => :sierra
+    sha256 "f85714ecd0c1e3f0b4dec8847b526a15dd58259ad17393a3fa792c8722f202b4" => :el_capitan
+    sha256 "6ad778b4ea3a4def049f1000ed612c9c01ab05b8505117b012f62725493997a2" => :yosemite
   end
 
   def extension_type
