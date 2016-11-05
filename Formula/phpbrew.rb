@@ -7,6 +7,7 @@ class Phpbrew < AbstractPhpPhar
   url "https://github.com/phpbrew/phpbrew/raw/56300713fe9f99084a52987d624579d92c2b1844/phpbrew"
   version "1.22.5"
   sha256 "84301c766146bdc04f10e8cb0e8c2aefeaf943b0bea24ca42318a8f12c0aee1b"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
