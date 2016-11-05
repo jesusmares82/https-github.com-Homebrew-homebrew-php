@@ -10,10 +10,10 @@ class Php55Intl < AbstractPhp55Extension
   revision 1
 
   bottle do
-    revision 10
-    sha256 "1fd42c16e9e0db17cb29f25fc3c9a58160a2592eb1230daeff5ffa88ce9877ab" => :el_capitan
-    sha256 "ec6f65f05d7e7d967c50f2eab3a5ba3d48dff8c778569cde680081c42d987c1d" => :yosemite
-    sha256 "598da040148990d5312b0888151218d0bcef45ac1a22499a2789a2f4604cbdc9" => :mavericks
+    rebuild 1
+    sha256 "655d56d0c8a909927fa119600740fc8b9421539387d25687a48a9edea8c01b74" => :sierra
+    sha256 "c92db1394f7483309b00fd349dbe66316a7507649170fbce3f8686855dd68d34" => :el_capitan
+    sha256 "65383a554c8780f6ac142e6302d970196e4b3ca30be0236c83ea804c454ef344" => :yosemite
   end
 
   depends_on "icu4c"
