@@ -4,26 +4,17 @@ class Php71Redis < AbstractPhp71Extension
   init
   desc "PHP extension for Redis"
   homepage "https://github.com/phpredis/phpredis"
-  url "https://pecl.php.net/get/redis-3.0.0.tgz"
-  sha256 "de0e349027ea0821fbfb7f1961226223f3179bb84c6dada515f0145227993f70"
+  url "https://github.com/phpredis/phpredis/archive/3.0.0.tar.gz"
+  sha256 "030997370bb1906793989c89550d9cafd4fa35dccbad7040b2339301aa961dba"
   head "https://github.com/phpredis/phpredis.git", :branch => "php7"
 
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "c597b1d3f5e5d7ccdc45699efaa29db0f32d2f543898c9b0275bbd22eabf7485" => :el_capitan
-    sha256 "a3094b858d8b7447257ef573e2d386d9f0c185bf360b119334ab2abf83d8ade8" => :yosemite
-    sha256 "fb59656e95a3a76cd63f86fcb26d5b7a60ce1bd9cfdd17abee2acc50b3069dbb" => :mavericks
-  end
-
   def install
-    cd "redis-3.0.0" do
-      safe_phpize
+    safe_phpize
 
-      system "./configure", "--prefix=#{prefix}", phpconfig
-      system "make"
+    system "./configure", "--prefix=#{prefix}", phpconfig
+    system "make"
 
-      prefix.install "modules/redis.so"
-    end
+    prefix.install "modules/redis.so"
 
     write_config_file if build.with? "config-file"
   end
