@@ -8,6 +8,13 @@ class Php53Redis < AbstractPhp53Extension
   sha256 "a7c6e2eef70bd8449bab819c8f01d951fcd86ce0417e03675445040236ed4dda"
   head "https://github.com/phpredis/phpredis.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "87b786f325c1b2e8e14c20664dbef79a7601464226cd651c80bd3ec3edb62191" => :sierra
+    sha256 "000e2c2ff23a17ac72f304f6bdc26fe059cd6b92525117f01d2493427b6fac49" => :el_capitan
+    sha256 "6cbc36cd676616431b37a676f92fe383979fcb628463afc3af808c462f51d923" => :yosemite
+  end
+
   depends_on "php53-igbinary"
   depends_on "igbinary" => :build
 
