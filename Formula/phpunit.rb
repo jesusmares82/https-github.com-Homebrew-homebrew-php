@@ -4,8 +4,8 @@ class Phpunit < AbstractPhpPhar
   init
   desc "Programmer-oriented testing framework for PHP"
   homepage "http://phpunit.de"
-  url "https://phar.phpunit.de/phpunit-5.6.1.phar"
-  sha256 "5af8532027552331036927cf2623e90bc0f9add98602553a297bcae9d70d59d4"
+  url "https://phar.phpunit.de/phpunit-5.6.2.phar"
+  sha256 "6de0442d0c731d7aba478f6fc3879c27b00f5b4c8ef7bcd812d8f7d442f9aa37"
 
   bottle do
     cellar :any_skip_relocation
@@ -19,6 +19,6 @@ class Phpunit < AbstractPhpPhar
   end
 
   test do
-    shell_output("phpunit --version").include?(version)
+    shell_output("#{bin}/phpunit --version").include?(version)
   end
 end
