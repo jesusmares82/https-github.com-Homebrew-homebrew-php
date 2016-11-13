@@ -4,6 +4,8 @@ class Php71Opcache < AbstractPhp71Extension
   init
   desc "OPcache improves PHP performance"
   homepage "http://php.net/manual/en/book.opcache.php"
+  revision 4
+
   bottle do
     cellar :any_skip_relocation
     sha256 "962bbe712800c815f7256ca96c47a55ead9d003d0eeba20225594b697d7e5034" => :sierra
@@ -12,7 +14,6 @@ class Php71Opcache < AbstractPhp71Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 3
 
   depends_on "pcre"
 

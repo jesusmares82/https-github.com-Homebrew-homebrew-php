@@ -4,6 +4,8 @@ class Php71Mcrypt < AbstractPhp71Extension
   init
   desc "Interface to the mcrypt library"
   homepage "http://php.net/manual/en/book.mcrypt.php"
+  revision 6
+
   bottle do
     rebuild 1
     sha256 "ef93951379265f385b83c0a8d75318a2504a28d66a71b008f419cb3405ef593d" => :sierra
@@ -14,10 +16,9 @@ class Php71Mcrypt < AbstractPhp71Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 5
 
   depends_on "mcrypt"
-  depends_on "libtool"
+  depends_on "libtool" => :run
 
   def install
     Dir.chdir "ext/mcrypt"

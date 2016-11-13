@@ -4,6 +4,8 @@ class Php71PdoDblib < AbstractPhp71Extension
   init
   desc "Unified Sybase-DB style driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
+  revision 6
+
   bottle do
     sha256 "05dec2892177fc0083a659dbc29e81c8791226d050a3e7f4ea782ce6246f803f" => :sierra
     sha256 "cf96a1081a946587ff4ad64721d6516bff6ab213306032cbc45e75284df324a0" => :el_capitan
@@ -13,7 +15,6 @@ class Php71PdoDblib < AbstractPhp71Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 5
 
   depends_on "freetds"
 
