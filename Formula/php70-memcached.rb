@@ -56,13 +56,13 @@ class Php70Memcached < AbstractPhp70Extension
       ; the default value. Negative values result in a reduces
       ; locking to a try lock.
       ; the default is 150000
-      memcached.sess_lock_wait = 150000
+      memcached.sess_lock_wait_min = 150000
 
       ; The maximum time, in seconds, to wait for a session lock
       ; before timing out.
       ; Setting to 0 results in default behavior, which is to
       ; use max_execution_time.
-      memcached.sess_lock_max_wait = 0;
+      memcached.sess_lock_max_wait_min = 0;
 
       ; The time, in seconds, before a lock should release itself.
       ; Setting to 0 results in the default behaviour, which is to
