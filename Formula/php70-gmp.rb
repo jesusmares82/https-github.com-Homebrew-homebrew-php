@@ -4,6 +4,8 @@ class Php70Gmp < AbstractPhp70Extension
   init
   desc "GMP core php extension"
   homepage "http://php.net/manual/en/book.gmp.php"
+  revision 5
+
   bottle do
     sha256 "f9b0d97a5c96c15750e2f24b64725f4c124da6ec3f4b493ea4c7cfffc9f07ae5" => :sierra
     sha256 "f3e2a7247f65ac9106cf10f290005f9fe2c84d248a7a9c5cc3dc7ed4bb1f4dea" => :el_capitan
@@ -13,7 +15,6 @@ class Php70Gmp < AbstractPhp70Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 4
 
   depends_on "gmp"
 

@@ -2,8 +2,10 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
 class Php70PdoDblib < AbstractPhp70Extension
   init
-  desc "A unified Sybase-DB style driver for PDO"
+  desc "Unified Sybase-DB style driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
+  revision 5
+
   bottle do
     sha256 "60e75e74f2fee6c7203f5470cc6a648a97362495e0b065e6202ee3022fcb8489" => :sierra
     sha256 "01ac290756227250f30c4b032ebc9404717120236ae110d01052e1d3ab0a4d7b" => :el_capitan
@@ -13,7 +15,6 @@ class Php70PdoDblib < AbstractPhp70Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 4
 
   depends_on "freetds"
 

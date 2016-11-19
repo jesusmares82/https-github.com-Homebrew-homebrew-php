@@ -4,6 +4,8 @@ class Php70Pspell < AbstractPhp70Extension
   init
   desc "Extension to check the spelling"
   homepage "http://php.net/manual/en/book.pspell.php"
+  revision 5
+
   bottle do
     sha256 "727614eeb8cd5f6a5a6703082f38aa493517db93df5d0203a147096031584d22" => :sierra
     sha256 "0e7e615c4e31e8274e9a02721e80e7dab4d8812f08b0bc9413376fd2ae6f43ad" => :el_capitan
@@ -13,7 +15,6 @@ class Php70Pspell < AbstractPhp70Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 4
 
   depends_on "aspell"
 
