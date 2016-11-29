@@ -4,8 +4,8 @@ class Php71Xdebug < AbstractPhp71Extension
   init
   desc "Provides debugging and profiling capabilities."
   homepage "http://xdebug.org"
-  url "https://pecl.php.net/get/xdebug-2.4.0.tgz"
-  sha256 "3c4dcb2709d1653534e7cfaa546307041afd298ac48a3670183a12cfdb5eee05"
+  url "https://pecl.php.net/get/xdebug-2.5.0RC1.tgz"
+  sha256 "4b67bde62a32068cb48eaa5c683a390721e919f6b762d7da7ba1d72cdd01721a"
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
