@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class PhpCodeSniffer < Formula
   desc "Check coding standards in PHP, JavaScript and CSS"
   homepage "http://pear.php.net/package/PHP_CodeSniffer"
-  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.7.0.tgz"
-  sha256 "2979b9448edee4dceaed96e80870326e4e9456dad521331632c33f91a08b6b31"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.7.1.tgz"
+  sha256 "60a649d9db28b5fc3e5fa4651644ce4e4b82b56ab9a4e4829c23ea68314434d6"
 
   bottle do
     cellar :any_skip_relocation
@@ -62,13 +62,9 @@ class PhpCodeSniffer < Formula
     # Configure installed_paths, but don't overwrite it if already set
     # (preserve config).
     `#{bin+phpcs_script_name} --config-show | grep -q installed_paths`
-    unless $?.to_i == 0
+    unless $?.to_i.zero?
       system bin+phpcs_script_name, "--config-set", "installed_paths", phpcs_standards
     end
-
-    # Fix shebang line of phpcs-svn-pre-commit script.
-    # See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Using-the-SVN-pre-commit-Hook
-    inreplace "#{prefix}/scripts/phpcs-svn-pre-commit", /^#!@php_bin@/, "#!#{HOMEBREW_PREFIX}/bin/php"
   end
 
   def caveats; <<-EOS.undent
