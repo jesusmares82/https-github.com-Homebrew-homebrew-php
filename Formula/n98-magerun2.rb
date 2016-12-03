@@ -4,8 +4,8 @@ class N98Magerun2 < AbstractPhpPhar
   init
   desc "Swiss army knife for Magento 2 developers, sysadmins and devops."
   homepage "http://magerun.net/"
-  url "https://files.magerun.net/n98-magerun2-1.2.2.phar"
-  sha256 "09bbf0bf7812b14e1a163ef08380b33b63204fcd82cf2144b39e1a5ce841e4e6"
+  url "https://files.magerun.net/n98-magerun2-1.3.0.phar"
+  sha256 "2787cac4c4a3a69166fb5ec0bd540ae8dd66170239dc083acae0fdb449678a0b"
 
   bottle :unneeded
 
