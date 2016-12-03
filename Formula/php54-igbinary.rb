@@ -10,10 +10,9 @@ class Php54Igbinary < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
-    sha256 "7f56a6653f954ba113c51b0466e2f5a5b8ed3ddb3596e6d09619d452ce756e4b" => :el_capitan
-    sha256 "b7307e03af29c4b15bd7c692b7ef10dda38d49bf3ecda80ae52c2f2eb0d2ff7c" => :yosemite
-    sha256 "3de701dc09441672dc82ea84ec9a713ef735e0cb2154592fb8c178d2e7abc132" => :mavericks
+    sha256 "9309877a05a53b487993a295b707468dd0263a902fc0a3a4b00bbc46de6b88f7" => :sierra
+    sha256 "01b26e9ddc5a7368bc04efaeb4659fe887e26370a7420911f7fb08a022db08a1" => :el_capitan
+    sha256 "55b5df5bc52e5a491b8dfe9f279066927bcaaf503d043326b0250c84a2cab9c8" => :yosemite
   end
 
   depends_on "igbinary" => :build
