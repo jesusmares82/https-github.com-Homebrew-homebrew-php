@@ -85,7 +85,7 @@ The purpose of this repository is to allow PHP developers to quickly retrieve wo
 ## Requirements
 
 * [Homebrew](https://github.com/Homebrew/brew)
-* Snow Leopard, Lion, Mountain Lion, Mavericks, or Yosemite. Untested everywhere else.
+* Yosemite, El Capitan, and Sierra. Untested everywhere else.
 * The Homebrew `dupes` tap - `brew tap homebrew/dupes`
 * The Homebrew `versions` tap - `brew tap homebrew/versions`
 
