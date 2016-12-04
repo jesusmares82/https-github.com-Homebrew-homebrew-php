@@ -10,8 +10,9 @@ class Php53Rdkafka < AbstractPhp53Extension
 
   bottle do
     cellar :any
-    sha256 "321c4e4048f7d6e8167f5f80e2465b3e15494d4e5702fcffc40939b672ec3b06" => :el_capitan
-    sha256 "eb95d3320882e47e4e395f59c3c914843816a1b4ade686587fde81e4fa53b9d1" => :yosemite
+    sha256 "b16032808bec797abefeb4f5ddb0759548af0ee0a85159dad9491404f3dabcb6" => :sierra
+    sha256 "28f8af5e63156cb3ffbb09dc09b291804c5572e3a7e6d8d401fa3b7cd96bd9f9" => :el_capitan
+    sha256 "7e07d82dae206fda3575d97dbfb4d19e71ade5ee485a7104afc249420b38183b" => :yosemite
   end
 
   depends_on "librdkafka"
