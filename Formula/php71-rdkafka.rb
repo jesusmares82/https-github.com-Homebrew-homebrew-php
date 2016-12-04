@@ -1,18 +1,12 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php54Rdkafka < AbstractPhp54Extension
+class Php71Rdkafka < AbstractPhp71Extension
   init
   desc "PHP extension for Apache Kafka (php-rdkafka)"
   homepage "https://github.com/arnaud-lb/php-rdkafka"
-  url "https://pecl.php.net/get/rdkafka-1.0.0.tgz"
-  sha256 "3a8957c618f9f4093c8258621841c543270f4c4cbfd8ee687ca1dc270b244f87"
+  url "https://pecl.php.net/get/rdkafka-2.0.1.tgz"
+  sha256 "43a3704198f7d8ae23f6ed06d2d28ae4d52bae0f93f484aa5d61d5d60f809eee"
   head "https://github.com/arnaud-lb/php-rdkafka.git"
-
-  bottle do
-    cellar :any
-    sha256 "dbf55feb06dd2ed26013f722a8bd9882b614dd400ff45cf340cf69b9d78b5667" => :el_capitan
-    sha256 "38058ff2469b9a3aaf9aee5352260509504c7cdc36e615db9916a027bbc358cd" => :yosemite
-  end
 
   depends_on "librdkafka"
 

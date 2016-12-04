@@ -4,8 +4,8 @@ class Php55Rdkafka < AbstractPhp55Extension
   init
   desc "PHP extension for Apache Kafka (php-rdkafka)"
   homepage "https://github.com/arnaud-lb/php-rdkafka"
-  url "https://pecl.php.net/get/rdkafka-0.9.1.tgz"
-  sha256 "59e87fffe14c80d60d8adee12b2887ca3815efd5ae1885da274d8882b4f6404d"
+  url "https://pecl.php.net/get/rdkafka-1.0.0.tgz"
+  sha256 "3a8957c618f9f4093c8258621841c543270f4c4cbfd8ee687ca1dc270b244f87"
   head "https://github.com/arnaud-lb/php-rdkafka.git"
 
   bottle do
