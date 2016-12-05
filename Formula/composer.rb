@@ -6,6 +6,7 @@ class Composer < AbstractPhpPhar
   homepage "http://getcomposer.org"
   url "https://getcomposer.org/download/1.2.3/composer.phar"
   sha256 "3378c1422bffa09c29714aefd3240b963ce7731e71ae8894d9c7991101325cb8"
+  revision 1
   head "https://getcomposer.org/composer.phar"
 
   bottle do
@@ -28,7 +29,7 @@ class Composer < AbstractPhpPhar
       #!/usr/bin/env php
       <?php
       array_shift($argv);
-      $arg_string = implode(' ', $argv);
+      $arg_string = implode(' ', array_map('escapeshellarg', $argv));
       $arg_string .= preg_match('/--(no-)?ansi/', $arg_string) ? '' : ' --ansi';
       passthru("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{@real_phar_file} $arg_string", $return_var);
       exit($return_var);
