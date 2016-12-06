@@ -1,3 +1,4 @@
 {
+  "phpenv": "homebrew/boneyard",
   "phpsh": "homebrew/boneyard"
 }
