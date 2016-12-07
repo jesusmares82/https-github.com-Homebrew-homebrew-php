@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 class Phpunit < AbstractPhpPhar
   init
   desc "Programmer-oriented testing framework for PHP"
-  homepage "http://phpunit.de"
-  url "https://phar.phpunit.de/phpunit-5.6.2.phar"
-  sha256 "6de0442d0c731d7aba478f6fc3879c27b00f5b4c8ef7bcd812d8f7d442f9aa37"
+  homepage "https://phpunit.de"
+  url "https://phar.phpunit.de/phpunit-5.7.2.phar"
+  sha256 "989137a019a5cbdf7aac0d80df4942d5308de91c46eab7c18ed01fc78465d027"
 
   bottle do
     cellar :any_skip_relocation
