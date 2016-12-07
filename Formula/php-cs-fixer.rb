@@ -4,10 +4,10 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class PhpCsFixer < Formula
   include Language::PHP::Composer
 
-  desc "Tries to fix coding standards issues"
+  desc "A tool to automatically fix PHP coding standards issues"
   homepage "http://cs.sensiolabs.org"
-  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v1.12.2.tar.gz"
-  sha256 "9715863f2e3419715b4527e2452492c20e3e43384e2a665ecf27ddc6f5d448fb"
+  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v2.0.0.tar.gz"
+  sha256 "16e40ef65438d5a4a903142be744b05430eea64bffd42519175cebffd6387888"
   head "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git"
 
   bottle do
@@ -26,6 +26,6 @@ class PhpCsFixer < Formula
   end
 
   test do
-    system "php-cs-fixer", "--version"
+    system "#{bin}/php-cs-fixer", "--version"
   end
 end
