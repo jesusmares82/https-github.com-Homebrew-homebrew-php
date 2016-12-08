@@ -4,7 +4,12 @@ class Php70Yaml < AbstractPhp70Extension
   init
   desc "YAML-1.1 parser and emitter"
   homepage "https://pecl.php.net/package/yaml"
+  url "https://pecl.php.net/get/yaml-2.0.0.tgz"
+  sha256 "ef13ff56c184290c025a522bf9ae2e1b3ecc8543c3a5161dd02adec90897a221"
   head "https://github.com/php/pecl-file_formats-yaml.git", :branch => "php7"
+
+  bottle do
+  end
 
   depends_on "libyaml"
 
