@@ -1,10 +1,10 @@
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
 class Phpmyadmin < Formula
-  desc "Administration of MySQL over the Web"
-  homepage "http://www.phpmyadmin.net"
-  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_6_5_1.tar.gz"
-  sha256 "0f16f21c7676df3d05f8e4f2f71106f8c1660a01c69f0806ed1cc9c5675365d1"
+  desc "A web interface for MySQL and MariaDB"
+  homepage "https://www.phpmyadmin.net"
+  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_6_5_2.tar.gz"
+  sha256 "433abc0d4b36b03afce3c7b383460b4e962e9df11b88fd2554d8e1735fe92c47"
   head "https://github.com/phpmyadmin/phpmyadmin.git"
 
   bottle do
