@@ -9,9 +9,9 @@ class Php54Yaml < AbstractPhp54Extension
   head "https://github.com/php/pecl-file_formats-yaml.git"
 
   bottle do
-    sha256 "65af5592ca00ecf843a8852f244a21a40ba6491dd42a6f1a660a251d5187eb81" => :yosemite
-    sha256 "89116612d39540d4d750c214155e287b14e45dae386d5f840df1f4bba0e9bc74" => :mavericks
-    sha256 "cb5f43d4c12d80ffdb663b7af36324a5bdb4840ed263b36052c93b2bae6b24dd" => :mountain_lion
+    sha256 "4a6adb310388f21372e4a7ca8248bc8cb4840ebb49c4c529a6a50b2a5b694a37" => :sierra
+    sha256 "011ff1f07dbf0ac00785481e42dbddc553b6c815a996e9809a3fffc5f1d7c97d" => :el_capitan
+    sha256 "b7c3cd6466927103cb8ef6c9c60d54aef978d08fb6caba953dccd8c2aec2672b" => :yosemite
   end
 
   depends_on "libyaml"
