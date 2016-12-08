@@ -4,8 +4,8 @@ class Php53Yaml < AbstractPhp53Extension
   init
   homepage "https://pecl.php.net/package/yaml"
   desc "YAML-1.1 parser and emitter"
-  url "https://pecl.php.net/get/yaml-1.2.0.tgz"
-  sha256 "fdf0eec6bf16b0c45e58076a2048f96140a778463724fb82ab49ab5fb4c7e19a"
+  url "https://pecl.php.net/get/yaml-1.3.0.tgz"
+  sha256 "bf4696386fbd4e8435628d84ccb8c261c9e481888c7e1ce537cccceadcb57500"
   head "https://github.com/php/pecl-file_formats-yaml.git"
 
   bottle do
