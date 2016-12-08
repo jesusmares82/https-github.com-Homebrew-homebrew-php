@@ -9,6 +9,9 @@ class Php70Yaml < AbstractPhp70Extension
   head "https://github.com/php/pecl-file_formats-yaml.git", :branch => "php7"
 
   bottle do
+    sha256 "fa457fa9ee16a2715f62c4d13d6f4dc90581bbdbbde4f17620046250a2e5331b" => :sierra
+    sha256 "be5654c6e7e572255ad770a23b98b8e82fbaa192ca813f9478c538f5be36e19a" => :el_capitan
+    sha256 "e076dcf6f5b3834a063787fa0ad280fb270d61ae1c88c77dbd34071ef6cffa45" => :yosemite
   end
 
   depends_on "libyaml"
