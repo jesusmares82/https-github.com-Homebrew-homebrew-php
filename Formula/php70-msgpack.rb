@@ -4,8 +4,8 @@ class Php70Msgpack < AbstractPhp70Extension
   init
   desc "MessagePack serialization"
   homepage "https://pecl.php.net/package/msgpack"
-  url "https://pecl.php.net/get/msgpack-2.0.1.tgz"
-  sha256 "d32aeef9af3be6135a06f29e28ec9f386cde9d90ad346a396d9ba8018a7044c6"
+  url "https://pecl.php.net/get/msgpack-2.0.2.tgz"
+  sha256 "b04980df250214419d9c3d9a5cb2761047ddf5effe5bc1481a19fee209041c01"
   head "https://github.com/msgpack/msgpack-php.git"
 
   bottle do
