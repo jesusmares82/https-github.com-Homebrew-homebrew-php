@@ -13,9 +13,9 @@ class Php56 < AbstractPhp
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
   bottle do
-    sha256 "b96df68df8f76031a30f0dd1c06d386c3b58b51d2dd1a0d2f8c8888b2df52035" => :sierra
-    sha256 "f5b0b5be3b2414268c3c5179ba03d343813b000b8046f6a852c8b79eeba37832" => :el_capitan
-    sha256 "d8a5ca885b9dca5119d1331c01da73c9294ea04d17efb9a6d56e5ffde0316912" => :yosemite
+    sha256 "b117b5c0e229eaba33657ecf83fcd4c587f564b30c1b06ed242cf2c24970f224" => :sierra
+    sha256 "c04b3da76f4d5588d1afdeae373e92268a836ade3e108aad31891c74389afc54" => :el_capitan
+    sha256 "1bd7d3ab6a1630e032cd3df121c417b1b2646f1afb3a501b7a71ff983b9bdf5d" => :yosemite
   end
 
   def php_version
