@@ -216,7 +216,6 @@ INFO
       "--with-icu-dir=#{Formula['icu4c'].opt_prefix}",
       "--with-jpeg-dir=#{Formula['jpeg'].opt_prefix}",
       ("--with-kerberos=/usr" if OS.mac?),
-      "--with-libedit",
       "--with-mhash",
       ("--with-ndbm=/usr" if OS.mac?),
       "--with-png-dir=#{Formula['libpng'].opt_prefix}",
