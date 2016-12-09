@@ -10,9 +10,9 @@ class Php70Msgpack < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b203da6797526dba510146eed907dd650d0d0846b30845f2283f9a884e8a2565" => :el_capitan
-    sha256 "97a0872b19badfaf85120de4e6a65737311a25822c9779bcd104a99f82e96c66" => :yosemite
-    sha256 "d31728038e6c07783926f34ebfe48640bf1dd9ffc9d848c741b614e796c706a4" => :mavericks
+    sha256 "3a92929d4b0b0edaf855be23be8ef3cb90b8484b04a330bf9ed52e8ccd0e9664" => :sierra
+    sha256 "c4d0b15cfba3d18c1f8901ff27c00a616703969b147321212f9acb0d69964ff3" => :el_capitan
+    sha256 "82452ff534006b66f77864f09135eace43d22fda4d994d6cfe3db54759577120" => :yosemite
   end
 
   def install
