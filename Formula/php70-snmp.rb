@@ -7,9 +7,9 @@ class Php70Snmp < AbstractPhp70Extension
   revision 6
 
   bottle do
-    sha256 "3b93a8a81125fa13cfd728ba4cf165e93ae392f8a08e5cca195550544e939b3e" => :sierra
-    sha256 "a622ed8b4442530077093aafbc443d7aca29876393df88824a49391dfdbf7f41" => :el_capitan
-    sha256 "49f901d62f48459a779c1c3986880b0eb9bcfbc64644eed6de5b85b330009e2c" => :yosemite
+    sha256 "1616359116e2d2e4b636a81740bb39b45d95c15eab3131d6a45c122cad1ef220" => :sierra
+    sha256 "78e1e993a0359f82b9159658ceb82fd7f25bbaa631b94a8772f1d5359c450566" => :el_capitan
+    sha256 "3793bf6a6e39c2eb3e098e8fe96402147e7ec0c916ecd9f5b6489af5bd288746" => :yosemite
   end
 
   url PHP_SRC_TARBALL
