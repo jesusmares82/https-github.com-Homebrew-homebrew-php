@@ -42,9 +42,6 @@ class AbstractPhp < Formula
     depends_on 'unixodbc' unless build.include?('without-unixodbc')
     depends_on 'readline'
 
-    depends_on 'homebrew/apache/httpd24' if build.include?('with-apache')
-    depends_on 'homebrew/apache/httpd22' if build.include?('with-apache22')
-
     # ssl
     if build.include?('with-homebrew-libressl')
       depends_on 'libressl' 
@@ -61,10 +58,15 @@ class AbstractPhp < Formula
       raise "Cannot specify more than one CGI executable to build."
     end
 
-    option 'with-apache', 'Enable building of shared Apache 2.4 Handler module'
-    option 'with-apache22', 'Enable building of shared Apache 2.2 Handler module'
+    option 'with-httpd24', 'Enable building of shared Apache 2.4 Handler module'
+    option 'with-httpd22', 'Enable building of shared Apache 2.2 Handler module'
     deprecated_option "homebrew-apxs" => "with-homebrew-apxs"
-    deprecated_option "with-homebrew-apxs" => "with-apache"
+    deprecated_option "with-homebrew-apxs" => "with-httpd24"
+    deprecated_option "with-apache" => "with-httpd24"
+    deprecated_option "with-apache22" => "with-httpd22"
+
+    depends_on "homebrew/apache/httpd24" => :optional
+    depends_on "homebrew/apache/httpd22" => :optional
 
     option 'with-cgi', 'Enable building of the CGI executable (implies --without-fpm)'
     option 'with-debug', 'Compile with debugging symbols'
@@ -154,7 +156,7 @@ INFO
   end
 
   def apache_apxs
-    if build.with?('apache') || build.with?('apache22')
+    if build.with?('httpd24') || build.with?('httpd22')
       ['sbin', 'bin'].each do |dir|
         if File.exist?(location = "#{HOMEBREW_PREFIX}/#{dir}/apxs")
           return location
@@ -236,7 +238,7 @@ INFO
     end
 
     # Build Apache module by default
-    if build.with?('apache') || build.with?('apache22')
+    if build.with?('httpd24') || build.with?('httpd22')
       args << "--with-apxs2=#{apache_apxs}"
       args << "--libexecdir=#{libexec}"
     end
@@ -367,7 +369,7 @@ INFO
     system "./buildconf", "--force" if build.head?
     system "./configure", *install_args()
 
-    if build.with?('apache') || build.with?('apache22')
+    if build.with?('httpd24') || build.with?('httpd22')
       # Use Homebrew prefix for the Apache libexec folder
       inreplace "Makefile",
         /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
@@ -432,7 +434,7 @@ INFO
   def caveats
     s = []
 
-    if build.with?('apache') || build.with?('apache22')
+    if build.with?('httpd24') || build.with?('httpd22')
       if MacOS.version <= :leopard
         s << <<-EOS.undent
           For 10.5 and Apache:
@@ -562,7 +564,7 @@ INFO
         of this formula.
 
         With the release of macOS Sierra the Apache module is now not built by default. If you want to build it on your system
-        you have to install php with the --with-apache option. See  brew options php#{php_version_path}  for more details.
+        you have to install php with the --with-httpd24 option. See  brew options php#{php_version_path}  for more details.
       EOS
     end
 
