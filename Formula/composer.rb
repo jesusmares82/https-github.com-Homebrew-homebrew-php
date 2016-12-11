@@ -15,6 +15,12 @@ class Composer < AbstractPhpPhar
     sha256 "f5b9d765b8241ac96a7ccb12cda8d81f71e1a9a258a36c54abbdf3192a847eeb" => :yosemite
   end
 
+  devel do
+    url "https://getcomposer.org/download/1.3.0-RC/composer.phar"
+    sha256 "e21e98f17932a49a00bfbb1397b62c79f4e22937b09ff4d2fec92fca82381011"
+    version "1.3.0-RC"
+  end
+
   test do
     system "#{bin}/composer", "--version"
   end
