@@ -12,9 +12,9 @@ class Envoy < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1baa0fec0e611579ffa57a29bcb7462be380bc5a396a76608625a19b8ebc70aa" => :sierra
-    sha256 "030419f798ad575386c580ebf07d46a9cc7773f454a4a832285953bcb76b48a2" => :el_capitan
-    sha256 "418181f9aa9a77e9bbe1c0dd67ea05fd2b5b4f9ca37e75ab39de39944212f6e3" => :yosemite
+    sha256 "b2b8fd34d74345001b523aca3708be3453733343316b2e74c518445278d39bb2" => :sierra
+    sha256 "0b0ac19e72331cc35bcb47379dbcde32e10ec36de3f77e820638b521cbcd44e3" => :el_capitan
+    sha256 "2bc496be1f1d578ea63f94d5eb6010ed8d43bc1f4ca1e5fab1b8f543c4c12a0d" => :yosemite
   end
 
   depends_on PhpMetaRequirement
