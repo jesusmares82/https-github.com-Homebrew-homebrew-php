@@ -9,6 +9,9 @@ class Php71Uv < AbstractPhp71Extension
   head "https://github.com/bwoebi/php-uv.git"
 
   bottle do
+    sha256 "3922148962f133176d463e2a1bf90fd1e57b90fb9e3585d9c17d2c504ab6ab0c" => :sierra
+    sha256 "89e7b323eb34291f828b4e2d2b13149ed9963d63c00301abe5d4e9fcff5aabf1" => :el_capitan
+    sha256 "d42eaabd27cd0527d307ffdcc3818ed86f91ed726b1288c17eaf9244ee38a370" => :yosemite
   end
 
   depends_on "libuv"
