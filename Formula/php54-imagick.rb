@@ -7,7 +7,7 @@ class Php54Imagick < AbstractPhp54Extension
   url "https://pecl.php.net/get/imagick-3.3.0.tgz"
   sha256 "bd69ebadcedda1d87592325b893fa78a5710a0ca7307f8e18c5e593949b1db2d"
   head "https://github.com/mkoppanen/imagick.git"
-  revision 5
+  revision 6
 
   bottle do
     sha256 "f5f7780c2d32bbf0b6ecebbab6b9b2f8388d548f62677954f3d39975f843e65d" => :sierra
