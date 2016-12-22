@@ -4,8 +4,8 @@ class Php70Phalcon < AbstractPhp70Extension
   init
   desc "Full-stack PHP framework"
   homepage "http://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/v3.0.1.tar.gz"
-  sha256 "18b24b99759523b8a6423dedb00fdbaad25fdd0fc3f76428987852afba081719"
+  url "https://github.com/phalcon/cphalcon/archive/v3.0.2.tar.gz"
+  sha256 "f0b09f96954506d070f8ce5fcb939da79392641230b31f8ff81c8ae9a520d200"
   head "https://github.com/phalcon/cphalcon.git"
 
   bottle do
