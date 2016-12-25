@@ -4,8 +4,8 @@ class Phing < AbstractPhpPhar
   init
   desc "Ant-like build tool for PHP"
   homepage "https://www.phing.info"
-  url "https://www.phing.info/get/phing-2.15.2.phar"
-  sha256 "842ad05e71597263f795239487e8ed3b3f170ed7b757cc442cec61d9d413f220"
+  url "https://www.phing.info/get/phing-2.16.0.phar"
+  sha256 "4700f89be74332b83d9a51f7d867b21530b1ef019258ae6a050a9f9b35db11d5"
 
   bottle do
     cellar :any_skip_relocation
