@@ -9,9 +9,9 @@ class Phing < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "0e3e0bd42733e37b15db41518788939a29783f527c24d96ea508b13aa08e8fc6" => :sierra
-    sha256 "0e3e0bd42733e37b15db41518788939a29783f527c24d96ea508b13aa08e8fc6" => :el_capitan
-    sha256 "0e3e0bd42733e37b15db41518788939a29783f527c24d96ea508b13aa08e8fc6" => :yosemite
+    sha256 "410978c2e6c43400fb820aad57f3e97551154cf43f3ebcd371713d42a60cff4f" => :sierra
+    sha256 "de4053d906040be1e78539ba54285238bd14d45208b4e5af9a4b411f782ce21f" => :el_capitan
+    sha256 "de4053d906040be1e78539ba54285238bd14d45208b4e5af9a4b411f782ce21f" => :yosemite
   end
 
   def phar_file
