@@ -4,8 +4,8 @@ class Phpab < AbstractPhpPhar
   init
   desc "Lightweight php namespace aware autoload generator"
   homepage "https://github.com/theseer/Autoload"
-  url "https://github.com/theseer/Autoload/releases/download/1.22.0/phpab-1.22.0.phar"
-  sha256 "829200ce8d507291964284b4bcd37d1e35c61790d0b399174a6574e411479cbf"
+  url "https://github.com/theseer/Autoload/releases/download/1.23.0/phpab-1.23.0.phar"
+  sha256 "c28962d642414f38051f40eac062edc8d7ae376ab95b6e01a71f7b4ddeef21c5"
 
   bottle :unneeded
 
@@ -14,6 +14,6 @@ class Phpab < AbstractPhpPhar
   end
 
   test do
-    system "phpab", "--version"
+    system "#{bin}/phpab", "--version"
   end
 end
