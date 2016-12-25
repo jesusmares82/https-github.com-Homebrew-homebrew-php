@@ -4,8 +4,8 @@ class Phpdox < AbstractPhpPhar
   init
   desc "Documentation generator for PHP"
   homepage "https://github.com/theseer/phpdox"
-  url "https://github.com/theseer/phpdox/releases/download/0.8.1.1/phpdox-0.8.1.1.phar"
-  sha256 "1424d4603e0fdb0c80e39266fb832060bffbcc665a8c8d29b411e88d096d5da2"
+  url "https://github.com/theseer/phpdox/releases/download/0.9.0/phpdox-0.9.0.phar"
+  sha256 "d51b294b4e6a0681ce6553199d27d85101df1426b176272ed5b2492c97e6c11f"
 
   bottle do
     cellar :any_skip_relocation
@@ -20,6 +20,6 @@ class Phpdox < AbstractPhpPhar
   end
 
   test do
-    system "phpdox", "--version"
+    system "#{bin}/phpdox", "--version"
   end
 end
