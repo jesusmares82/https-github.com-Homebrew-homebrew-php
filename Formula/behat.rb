@@ -2,11 +2,12 @@ require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 
 class Behat < AbstractPhpPhar
   init
-  desc "behavior-driven development framework"
+  desc "BDD framework for PHP to help you test business expectations"
   homepage "http://behat.org/"
-  url "https://github.com/Behat/Behat/releases/download/v3.2.2/behat.phar"
-  version "3.2.2"
-  sha256 "c350953b14e00f0db97e24e49e68ffbffab809ec19bdf40c398fe6645e2d6acd"
+  url "https://github.com/Behat/Behat/releases/download/v3.3.0/behat.phar"
+  version "3.3.0"
+  sha256 "d99fdf7e7d9459903ae2f9628e0459ab3357a1c93e0b55ad32f60e625c3cb9f7"
+  head "https://github.com/Behat/Behat.git"
 
   bottle do
     cellar :any_skip_relocation
