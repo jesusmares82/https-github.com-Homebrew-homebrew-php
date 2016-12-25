@@ -6,19 +6,15 @@ class Drush < Formula
 
   desc "Command-line shell and scripting interface for Drupal"
   homepage "https://github.com/drush-ops/drush"
-  url "https://github.com/drush-ops/drush/archive/8.1.3.tar.gz"
-  sha256 "cf0afca4d22998f83640a681f9b3159021f424e9363afadc1c4de04b60aab19a"
+  url "https://github.com/drush-ops/drush/archive/8.1.8.tar.gz"
+  sha256 "5fae91210f7ba1a86b28f2289014f82a76761bbd79a2333723839910e81e2154"
+  head "https://github.com/drush-ops/drush.git"
 
   bottle do
     cellar :any_skip_relocation
     sha256 "b0ab2bce2ca73b98731483547feb7c90bc843b9f38fc7ed9d455364a6f4361ed" => :sierra
     sha256 "0f46707595c05634597737791bc427a7f9a1b7450e5a462c13b32945a0ed91b9" => :el_capitan
     sha256 "231c8785154686ad61857409f7abf950f2705fe17228adbd70e19dd64b9fe67b" => :yosemite
-    sha256 "eb4aa294efb119d8b4e48edfaa1a263400cd68fd7c8a86185eb75f2aacf66b46" => :mavericks
-  end
-
-  head do
-    url "https://github.com/drush-ops/drush.git"
   end
 
   depends_on PhpMetaRequirement
@@ -29,7 +25,6 @@ class Drush < Formula
     composer_install
 
     prefix.install_metafiles
-    File.delete "drush.bat"
     libexec.install Dir["*"]
     (bin+"drush").write <<-EOS.undent
       #!/bin/sh
@@ -43,6 +38,6 @@ class Drush < Formula
   end
 
   test do
-    system "drush", "version"
+    system "#{bin}/drush", "version"
   end
 end
