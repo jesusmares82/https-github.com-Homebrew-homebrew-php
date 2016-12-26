@@ -3,9 +3,9 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class DrupalCodeSniffer < Formula
   desc "Checks Drupal code against coding standards"
   homepage "https://drupal.org/project/coder"
-  url "http://ftp.drupal.org/files/projects/coder-8.x-2.9.tar.gz"
-  version "8.x-2.9"
-  sha256 "c96a2bb24b1b6afa69ed51008b0c3c3aed8dd5148d2437ae963011791c161047"
+  url "http://ftp.drupal.org/files/projects/coder-8.x-2.10.tar.gz"
+  version "8.x-2.10"
+  sha256 "284fe865de904fdcbb512211ba8e18b78c79799868634cca8c7307c4f6902209"
   head "http://git.drupal.org/project/coder.git", :branch => "8.x-2.x"
 
   bottle do
@@ -16,10 +16,8 @@ class DrupalCodeSniffer < Formula
     sha256 "39d9d63bd3e3ac061f1435bf55763e686b9053da93ceeec5bca81a9a11775909" => :mavericks
   end
 
-  option "without-drush-command", "Don't install drush command"
   option "without-drupalpractice-standard", "Don't install DrupalPractice standard"
 
-  depends_on "drush" if build.with? "drush-command"
   depends_on "php-code-sniffer"
   depends_on PhpMetaRequirement
 
@@ -33,10 +31,6 @@ class DrupalCodeSniffer < Formula
 
   def drupalpractice_standard_name
     "DrupalPractice"
-  end
-
-  def drush_commands
-    HOMEBREW_PREFIX+"share"+"drush"+"commands"
   end
 
   def install
@@ -59,21 +53,10 @@ class DrupalCodeSniffer < Formula
       end
       phpcs_standards.install_symlink prefix+"coder_sniffer"+drupalpractice_standard_name
     end
-
-    # Link Drupal Coder Sniffer into /usr/local/share/drush/commands
-    # for integration with Drush.
-    if build.with? "drush-command"
-      drush_commands.mkpath
-      if File.symlink? drush_commands+name
-        File.delete drush_commands+name
-      end
-      drush_commands.install_symlink prefix+"coder_sniffer" => name
-    end
   end
 
   def caveats
-    s = ""
-    s += <<-EOS.undent
+    <<-EOS.undent
     Drupal Coder Sniffer is linked to "#{phpcs_standards+drupal_standard_name}".
 
     You can verify whether PHP Code Sniffer has detected the standard by running:
@@ -81,27 +64,12 @@ class DrupalCodeSniffer < Formula
       #{Formula["php-code-sniffer"].phpcs_script_name} -i
 
     EOS
-
-    if build.with? "drush-command"
-      s += <<-EOS.undent
-          Drupal Coder Sniffer is installed as a drush command in "#{drush_commands+name}".
-
-          You can verify whether Drush has discovered the standard by running:
-
-            drush drupalcs --help
-        EOS
-    end
-
-    s
   end
 
   test do
     system "#{Formula["php-code-sniffer"].phpcs_script_name} -i | grep #{drupal_standard_name}"
     if build.with? "drupalpractice-standard"
       system "#{Formula["php-code-sniffer"].phpcs_script_name} -i | grep #{drupalpractice_standard_name}"
-    end
-    if build.with? "drush-command"
-      system "drush", "drupalcs", "--help"
     end
   end
 end
