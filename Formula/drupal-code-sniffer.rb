@@ -10,10 +10,9 @@ class DrupalCodeSniffer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "b46b43237469637f1bef1f9cf3684f49f77e228e603f2db2dfea5be98a410cb4" => :sierra
-    sha256 "1d6f7adf6ebfc77f5cc38e5940e2891174378f462659a60ac1ed0d8954dd15b5" => :el_capitan
-    sha256 "4de6582cb4a8834471292120a5482c7f44bbb838e46f104d6b5aa3abf596b0f0" => :yosemite
-    sha256 "39d9d63bd3e3ac061f1435bf55763e686b9053da93ceeec5bca81a9a11775909" => :mavericks
+    sha256 "3f2a620adc9c77162feba9f78af6e9ee87c83c13eb0f2059a981c9c59f1fcfaa" => :sierra
+    sha256 "545a1172f8d92b53e9e6e61d9347996a7addf851b1ab91ae2d334d529ad200f8" => :el_capitan
+    sha256 "545a1172f8d92b53e9e6e61d9347996a7addf851b1ab91ae2d334d529ad200f8" => :yosemite
   end
 
   option "without-drupalpractice-standard", "Don't install DrupalPractice standard"
