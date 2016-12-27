@@ -4,7 +4,7 @@ class Php70Intl < AbstractPhp70Extension
   init
   desc "Wrapper for the ICU library"
   homepage "http://php.net/manual/en/book.intl.php"
-  revision 8
+  revision 9
 
   bottle do
     sha256 "fc977eef1db296978af6b5a66c7320a9412552ecf7a1368bea31fdbe7972331f" => :sierra

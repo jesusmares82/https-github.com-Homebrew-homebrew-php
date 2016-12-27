@@ -7,7 +7,7 @@ class Php53Intl < AbstractPhp53Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
+  revision 3
 
   bottle do
     sha256 "26683df2d453e0518b26fa5bae01a45c3ab7255dd45b910653ee1c0d6103383e" => :sierra
