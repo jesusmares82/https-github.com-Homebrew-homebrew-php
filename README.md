@@ -189,7 +189,7 @@ See [Contributing](CONTRIBUTING.md)
 
 ## Todo
 
-- [x] Proper PHP Versioning? See issue [#1](https://github.com/homebrew/homebrew-php/issues/8)
+- [x] Proper PHP Versioning? See issue [#8](https://github.com/homebrew/homebrew-php/issues/8)
 - [x] Pull out all PHP-related brews from Homebrew
 
 ## License
