@@ -9,8 +9,10 @@ class Drupalconsole < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 2
-    sha256 "34612d3375e5f8f58dfcfd6bbbde12615ff15271b632ec5de8b52e20ae9c8bde" => :yosemite
+    rebuild 3
+    sha256 "77491a2ecefb46d1d72f9f800a26952106c084a941bdc74ae916ed3b788422fe" => :sierra
+    sha256 "881f142885b120d4e112738a634b2cf30b6f81e1808bccbd08b8fc98e937a779" => :el_capitan
+    sha256 "881f142885b120d4e112738a634b2cf30b6f81e1808bccbd08b8fc98e937a779" => :yosemite
   end
 
   def install
