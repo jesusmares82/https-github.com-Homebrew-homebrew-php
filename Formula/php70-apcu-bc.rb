@@ -4,8 +4,8 @@ class Php70ApcuBc < AbstractPhp70Extension
   init
   desc "APC User Cache - BC"
   homepage "https://pecl.php.net/package/apcu_bc"
-  url "https://pecl.php.net/get/apcu_bc-1.0.1.tgz"
-  sha256 "512674d891104d6da91811dbb89d28ab3faa356ee0ab4cbeae9bba9cf3e971cb"
+  url "https://pecl.php.net/get/apcu_bc-1.0.3.tgz"
+  sha256 "40b63ada315ffce81e2e8d75162606090e1cc72fe94207bc7daa6dd260694919"
   head "https://github.com/krakjoe/apcu-bc.git"
 
   bottle do
