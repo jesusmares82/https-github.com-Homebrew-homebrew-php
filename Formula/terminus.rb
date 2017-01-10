@@ -17,18 +17,30 @@ class Terminus < Formula
     sha256 "d3e3af1fc6a4194b36878163df48a4d2d85501ce741044953ffbab7419b96dfd" => :yosemite
   end
 
+  devel do
+    url "https://github.com/pantheon-systems/terminus/archive/1.0.0-beta.2.tar.gz"
+    sha256 "37b3a3046ac19315013e13fa3db697da180b7d1c0b71e9960d78c9df1e861e02"
+    version "1.0.0-beta.2"
+  end
+
   depends_on PhpMetaRequirement
 
   def install
     composer_install
 
-    rm "bin/terminus.bat"
-    rm "bin/behat"
+    unless build.devel?
+      rm "bin/terminus.bat"
+      rm "bin/behat"
+    end
 
     prefix.install Dir["*"]
   end
 
   test do
-    system bin/"terminus", "cli", "version"
+    if build.devel?
+      system bin/"terminus", "self:info", "--field=terminus_version"
+    else
+      system bin/"terminus", "cli", "version"
+    end
   end
 end
