@@ -8,6 +8,13 @@ class Php71ApcuBc < AbstractPhp71Extension
   sha256 "40b63ada315ffce81e2e8d75162606090e1cc72fe94207bc7daa6dd260694919"
   head "https://github.com/krakjoe/apcu-bc.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "37513b1f0e27f109b2ac39d05c424e5460808934b863265cfaae3e915f01c45d" => :sierra
+    sha256 "65c4128fd59f141ea2ab48506c0b44b4a7e4d368ae9e46036ed44bca042b5325" => :el_capitan
+    sha256 "76cebfd3e6b5751882d0e9a8fb32f200ac0f5bdea0e010f2c89f9ca3bc4a0685" => :yosemite
+  end
+
   depends_on "php71-apcu"
 
   def install
