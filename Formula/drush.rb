@@ -12,9 +12,9 @@ class Drush < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c875a5b2bc5f3ebb4248e53d2af5def7c404414b3603a1cf72622b756d793f41" => :sierra
-    sha256 "7b8fda18daa875ed609916e4a38d0bc71bac15e500afda741e515a5f6af511a3" => :el_capitan
-    sha256 "58004d6b8858a0b41f82e438cecc26c97aee2578fde1c41ce358cdcf17ed8872" => :yosemite
+    sha256 "8e71ff5e482da51ec77350e6f5fd9b76dee0b62db68f8376f8a220a5558f0786" => :sierra
+    sha256 "c40cfd0e2cc01451b7490b647aa73c195c49982307a81bff249856951c4d5c85" => :el_capitan
+    sha256 "06618d4946b4e0add44b02d64dba2f82e7fe4d62ef8d2b2f43ceac9db77ea184" => :yosemite
   end
 
   depends_on PhpMetaRequirement
