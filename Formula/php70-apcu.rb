@@ -4,8 +4,8 @@ class Php70Apcu < AbstractPhp70Extension
   init
   desc "APC User Cache"
   homepage "https://pecl.php.net/package/apcu"
-  url "https://github.com/krakjoe/apcu/archive/v5.1.7.tar.gz"
-  sha256 "f94001a9da186c115d76f88de6f2504fcd84f83c234ee4f677bc4c7200206f46"
+  url "https://github.com/krakjoe/apcu/archive/v5.1.8.tar.gz"
+  sha256 "09848619674a0871053cabba3907d2aade395772d54464d3aee45f519e217128"
   head "https://github.com/krakjoe/apcu.git"
 
   bottle do
