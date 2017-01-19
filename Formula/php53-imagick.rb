@@ -6,7 +6,8 @@ class Php53Imagick < AbstractPhp53Extension
   homepage "https://pecl.php.net/package/imagick"
   url "https://pecl.php.net/get/imagick-3.3.0.tgz"
   sha256 "bd69ebadcedda1d87592325b893fa78a5710a0ca7307f8e18c5e593949b1db2d"
-  revision 6
+  head "https://github.com/mkoppanen/imagick.git"
+  revision 7
 
   bottle do
     sha256 "fe30a14a3c8d3582a8f192d3abb6af71abe434cad63dc7405926c61b88b2368a" => :sierra
@@ -15,7 +16,7 @@ class Php53Imagick < AbstractPhp53Extension
   end
 
   depends_on "pkg-config" => :build
-  depends_on "imagemagick"
+  depends_on "imagemagick@6"
 
   def install
     Dir.chdir "imagick-#{version}" unless build.head?
@@ -24,7 +25,7 @@ class Php53Imagick < AbstractPhp53Extension
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
-                          "--with-imagick=#{Formula["imagemagick"].opt_prefix}",
+                          "--with-imagick=#{Formula["imagemagick@6"].opt_prefix}",
                           phpconfig
     system "make"
     prefix.install "modules/imagick.so"

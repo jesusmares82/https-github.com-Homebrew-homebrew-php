@@ -4,10 +4,9 @@ class Php56Imagick < AbstractPhp56Extension
   init
   desc "Provides a wrapper to the ImageMagick library."
   homepage "https://pecl.php.net/package/imagick"
-  url "https://pecl.php.net/get/imagick-3.3.0.tgz"
-  sha256 "bd69ebadcedda1d87592325b893fa78a5710a0ca7307f8e18c5e593949b1db2d"
+  url "https://pecl.php.net/get/imagick-3.4.2.tgz"
+  sha256 "8e16b7bc6cf6567f4b4c4ac7294cbf650fe050a848c6a7ba6e2bee02097ab4a8"
   head "https://github.com/mkoppanen/imagick.git"
-  revision 6
 
   bottle do
     sha256 "8e3fdfe3c5be87c6eb970f6111249a13b6e62fd40b277a02fb4a49e3994ff456" => :sierra
