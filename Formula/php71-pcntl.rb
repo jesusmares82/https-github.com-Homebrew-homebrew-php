@@ -4,7 +4,7 @@ class Php71Pcntl < AbstractPhp71Extension
   init
   desc "Process Control support"
   homepage "http://php.net/manual/en/book.pcntl.php"
-  revision 7
+  revision 8
 
   bottle do
     cellar :any_skip_relocation
