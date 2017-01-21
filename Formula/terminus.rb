@@ -6,8 +6,8 @@ class Terminus < Formula
 
   desc "Command-line interface for the Pantheon Platform"
   homepage "https://github.com/pantheon-systems/terminus"
-  url "https://github.com/pantheon-systems/terminus/archive/0.13.6.tar.gz"
-  sha256 "c71a0983edf93879e14da00f08128a0a47d493d4aaf4ccf58a86c3f6b5e74c95"
+  url "https://github.com/pantheon-systems/terminus/archive/1.0.0.tar.gz"
+  sha256 "1c135cada11fa49ac58ebc1a64e4e7f2aff13d39f5fc1f8d1e1dd50498ca2fb6"
   head "https://github.com/pantheon-systems/terminus.git"
 
   bottle do
@@ -18,30 +18,15 @@ class Terminus < Formula
     sha256 "818d97f5301dd6bcc75e8c4c3d1567f5b2f41ae42e8411a9a683a2f039eab372" => :yosemite
   end
 
-  devel do
-    url "https://github.com/pantheon-systems/terminus/archive/1.0.0-beta.2.tar.gz"
-    sha256 "37b3a3046ac19315013e13fa3db697da180b7d1c0b71e9960d78c9df1e861e02"
-    version "1.0.0-beta.2"
-  end
-
   depends_on PhpMetaRequirement
 
   def install
     composer_install
 
-    unless build.devel?
-      rm "bin/terminus.bat"
-      rm "bin/behat"
-    end
-
     prefix.install Dir["*"]
   end
 
   test do
-    if build.devel?
-      system bin/"terminus", "self:info", "--field=terminus_version"
-    else
-      system bin/"terminus", "cli", "version"
-    end
+    system bin/"terminus", "self:info", "--field=terminus_version"
   end
 end
