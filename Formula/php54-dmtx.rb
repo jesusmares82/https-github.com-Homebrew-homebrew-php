@@ -8,7 +8,7 @@ class Php54Dmtx < AbstractPhp54Extension
   version "0.0.3"
   sha256 "864a2c9a39812e89d4aa3379cdf543a10a88b227cbe6d57ac94f2fd388b35e26"
   head "https://github.com/maZahaca/php-dmtx.git"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "6f78fd5c14baea6f20bf59d50639fccf89e8f39e2da04ce08a05b078158548ef" => :sierra

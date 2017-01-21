@@ -8,7 +8,7 @@ class Php56Dmtx < AbstractPhp56Extension
   version "0.0.3"
   sha256 "864a2c9a39812e89d4aa3379cdf543a10a88b227cbe6d57ac94f2fd388b35e26"
   head "https://github.com/maZahaca/php-dmtx.git"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "363c7ae1d60ea3e2905e087b7ef8a9e5d6a1490b9d2c46addffe1f96db835400" => :sierra

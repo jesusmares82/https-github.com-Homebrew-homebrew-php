@@ -8,7 +8,7 @@ class Php55Dmtx < AbstractPhp55Extension
   version "0.0.3"
   sha256 "864a2c9a39812e89d4aa3379cdf543a10a88b227cbe6d57ac94f2fd388b35e26"
   head "https://github.com/maZahaca/php-dmtx.git"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "35e32a0642544fda3a3ef5674b8a884cfc18a5aea45cbf7e8921879cbac95341" => :sierra
