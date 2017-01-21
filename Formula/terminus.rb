@@ -8,6 +8,7 @@ class Terminus < Formula
   homepage "https://github.com/pantheon-systems/terminus"
   url "https://github.com/pantheon-systems/terminus/archive/1.0.0.tar.gz"
   sha256 "1c135cada11fa49ac58ebc1a64e4e7f2aff13d39f5fc1f8d1e1dd50498ca2fb6"
+  revision 1
   head "https://github.com/pantheon-systems/terminus.git"
 
   bottle do
