@@ -11,9 +11,9 @@ class Php54Dmtx < AbstractPhp54Extension
   revision 2
 
   bottle do
-    sha256 "6f78fd5c14baea6f20bf59d50639fccf89e8f39e2da04ce08a05b078158548ef" => :sierra
-    sha256 "5ecb64b87917d018e3b21c796e569656ea5eec4d5065eb826add42180a73305c" => :el_capitan
-    sha256 "b81d46f8c90a1c6b8d5454cc7ecc2aec9e2eb5f47fe8a96322ea7ef2906ce6b4" => :yosemite
+    sha256 "f0340d31b1cfa28419b05c30ce749bd34df157a6f372a639973fba9e44ab3fac" => :sierra
+    sha256 "4c63bb38cc9f325d52d5c9e7c79d5303cc0b163055a6baf1db2aaadfc36b49d3" => :el_capitan
+    sha256 "ab20cc7550576d17080977e5f97efd1be17ec6bc6c1c37b434d2e06f77e78aa7" => :yosemite
   end
 
   depends_on "libdmtx"
