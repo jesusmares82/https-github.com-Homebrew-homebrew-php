@@ -8,9 +8,9 @@ class Php70Pcntl < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "6ada3164515b45803c6b8e3eeafbb614c1f53eed8a3a31625d973a046039d959" => :sierra
-    sha256 "649f3f6976b2c794208e501a247322e9da93afacdaedef5dcb11027246f45096" => :el_capitan
-    sha256 "92fc7f1a6c26cbf496bf6ffa70ec1c2157b80fb4169d22283098cc91decdc301" => :yosemite
+    sha256 "4fe86b4744a7917d7f9136962d6907bcc9251c5359ee9811ebe7a8ddc3107a4e" => :sierra
+    sha256 "e32af2db9d6bfc96264cedc8ca3a9b0b83a34627ee224f46e2f7924c84b1672d" => :el_capitan
+    sha256 "0d645181ebca73f3f18bc531b3692300a65408f22adf80c809c64942b8ea9cdd" => :yosemite
   end
 
   url PHP_SRC_TARBALL
