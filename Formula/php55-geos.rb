@@ -4,9 +4,8 @@ class Php55Geos < AbstractPhp55Extension
   init
   desc "PHP bindings for GEOS"
   homepage "https://git.osgeo.org/gogs/geos/php-geos"
-  url "https://git.osgeo.org/gogs/geos/php-geos/archive/1.0.0rc1.tar.gz"
-  version "1.0.0rc1"
-  sha256 "63721d9dc2051aa03034b343c0b334e9cb11643e7009ea9be2e69f51f7b90f71"
+  url "https://git.osgeo.org/gogs/geos/php-geos/archive/1.0.0.tar.gz"
+  sha256 "09cd4e7a3b026f65d86320b1250d6d6ceb8d78179cbfd480f622011d52f92035"
   head "https://git.osgeo.org/gogs/geos/php-geos.git"
 
   bottle do
