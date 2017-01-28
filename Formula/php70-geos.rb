@@ -10,9 +10,9 @@ class Php70Geos < AbstractPhp70Extension
 
   bottle do
     cellar :any
-    sha256 "0feff4d552072da0713bfd30f4d36be63e847bb80514b69cb1a5538c16b308c9" => :el_capitan
-    sha256 "c102797750a3b26ce7837d350a81268cc91b688acb783830bc5ad959e06fd6f1" => :yosemite
-    sha256 "44525fcde4aa664c7adce925c9816d42593fa81169bf5b43ff939a8c57d8c756" => :mavericks
+    sha256 "35a7c2599f5f502811271daff5d566978e4bffee30b74f5c35625d5a39ed187c" => :sierra
+    sha256 "9e1666c4b5bdbec1f69a8079aff7e3c3d45aaccf078893dd531c3ed430e86064" => :el_capitan
+    sha256 "3bebd634b7b3ab21dac50521f6bee339a64196c716ee23a249b4eb2d2bb0c67f" => :yosemite
   end
 
   depends_on "geos"
