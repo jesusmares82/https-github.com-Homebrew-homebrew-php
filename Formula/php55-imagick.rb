@@ -10,9 +10,8 @@ class Php55Imagick < AbstractPhp55Extension
   revision 1
 
   bottle do
-    sha256 "aacfdb022c9851be18809586444196e1a765261fabe636b35fbac234599280d8" => :sierra
-    sha256 "5dc76440d8a748154bc4411d16486a1f6633eb4d95a9a77cbf2d336204689bc8" => :el_capitan
-    sha256 "0a8f73f715fdb0591d4bfc7daf7af95c030b9909fb1fd9c374d848d4274a491d" => :yosemite
+    sha256 "796064558066b6cd4ef99a4ca9be572dfd321e78e7949c02f7cfbe4cca4c6aaf" => :sierra
+    sha256 "fb45332c88f54559d7ff05da19f1a62f6dc0cdefd502989ad148422ed2b5632a" => :yosemite
   end
 
   depends_on "pkg-config" => :build
