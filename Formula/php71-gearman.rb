@@ -4,8 +4,8 @@ class Php71Gearman < AbstractPhp71Extension
   init
   desc "PHP wrapper to libgearman"
   homepage "https://github.com/wcgallego/pecl-gearman"
-  url "https://github.com/wcgallego/pecl-gearman/archive/gearman-2.0.1.tar.gz"
-  sha256 "af5172d68fbf111e143d0f8e3a583532b236f1a7137696bc2117955034149adf"
+  url "https://github.com/wcgallego/pecl-gearman/archive/gearman-2.0.3.tar.gz"
+  sha256 "f71e8ff218f31e3b9a15534e18846b9f9526319daffcc12e76b545889e44e130"
   head "https://github.com/wcgallego/pecl-gearman.git"
 
   bottle do
