@@ -9,9 +9,9 @@ class Php71Gearman < AbstractPhp71Extension
   head "https://github.com/wcgallego/pecl-gearman.git"
 
   bottle do
-    sha256 "bdbce0c4aed0d961f89c11f59624b63de29b98cce60d909bae552343ac1554e2" => :sierra
-    sha256 "b90464188ae30f3c57ce5ed5b1f839dde54e5966dd8efc13b725688ce9c3f635" => :el_capitan
-    sha256 "20961e693a1a7207d51b449ccedd761e91ee2d4cb58a2a177a6ef6f814042162" => :yosemite
+    sha256 "348ef528d05befa4725cad9865d196441f6c09e8f55d468fdcd8fd17c9599715" => :sierra
+    sha256 "e58135821ab595f235a7221fd3bd3783a5009133836e6ee110ed6fc336d54464" => :el_capitan
+    sha256 "d24bf4bc04ba80be00690eef0612884788c82d59f58c1f30e545719d0ebc7400" => :yosemite
   end
 
   depends_on "gearman"
