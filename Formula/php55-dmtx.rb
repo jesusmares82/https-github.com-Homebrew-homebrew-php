@@ -11,9 +11,9 @@ class Php55Dmtx < AbstractPhp55Extension
   head "https://github.com/maZahaca/php-dmtx.git"
 
   bottle do
-    sha256 "da8eb7f213a81d14c51eda7dd8cfbf4f60ab0b3d5a874a0a171657059b0dd7a4" => :sierra
-    sha256 "c85a9b0c5d30e8fb9db1312228bd72a3366541d4bc63c530a3eeb7e726abff68" => :el_capitan
-    sha256 "ec7d38404fec249cb96bbb076daa2bd646fe0f3a080180d88d1415b300866f8e" => :yosemite
+    sha256 "3e60c832f3bde611744826f5ae0c08b84b574b478778eefee5a37615fb3b224a" => :sierra
+    sha256 "28fc88adb1a47a5ba536e0f943573833eb3ecbe74b70038c98ddc462411518f6" => :el_capitan
+    sha256 "99255d25235b27bf43349e18d89e77410fbcae89cdb23bb56f8805b8114ffd5b" => :yosemite
   end
 
   depends_on "libdmtx"
