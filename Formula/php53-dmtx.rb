@@ -11,9 +11,9 @@ class Php53Dmtx < AbstractPhp53Extension
   head "https://github.com/maZahaca/php-dmtx.git"
 
   bottle do
-    sha256 "0a9a25cbb40add346fd70dfe4f0b6f29f072df384a62ead49c6904b962367d52" => :sierra
-    sha256 "906a056a9a73ee43def3c023785553b2d91efc6c59ddf894bf77d5dd7afc1f47" => :el_capitan
-    sha256 "ffff8b063a840ce8c1d89f86bf17f38e1f33ebc4dfd6519a2fcd9e04f6751677" => :yosemite
+    sha256 "3a10df1e0eddb07df632cf7259a80e5cc7f6fef05b4f8e94838cdb3cbb631728" => :sierra
+    sha256 "0474d312007927a077f088b664186589e858cb95f6417647f8068ffa5232b08e" => :el_capitan
+    sha256 "e200055c1324b42e95a8176dfba00a65455b18b9b694b000348fcff1b5972a47" => :yosemite
   end
 
   depends_on "libdmtx"
