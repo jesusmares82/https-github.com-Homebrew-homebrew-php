@@ -4,9 +4,8 @@ class Php71Mongodb < AbstractPhp71Extension
   init
   desc "MongoDB driver for PHP."
   homepage "https://pecl.php.net/package/mongodb"
-  url "https://pecl.php.net/get/mongodb-1.2.2.tgz"
-  sha256 "cbe02827653c3c03949ce96885e6be27b014322f642c89788510cdf3b5dbe3d4"
-  revision 1
+  url "https://pecl.php.net/get/mongodb-1.2.5.tgz"
+  sha256 "1d43c5038cd8cb7e6db57620c40f2cc6385bd538db002c60f61f44376d829848"
   head "https://github.com/mongodb/mongo-php-driver.git"
 
   bottle do
