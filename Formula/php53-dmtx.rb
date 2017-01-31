@@ -7,8 +7,8 @@ class Php53Dmtx < AbstractPhp53Extension
   url "https://github.com/maZahaca/php-dmtx/archive/0.0.3-dev.tar.gz"
   version "0.0.3"
   sha256 "864a2c9a39812e89d4aa3379cdf543a10a88b227cbe6d57ac94f2fd388b35e26"
+  revision 3
   head "https://github.com/maZahaca/php-dmtx.git"
-  revision 2
 
   bottle do
     sha256 "0a9a25cbb40add346fd70dfe4f0b6f29f072df384a62ead49c6904b962367d52" => :sierra
