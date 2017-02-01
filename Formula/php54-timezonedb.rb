@@ -4,8 +4,8 @@ class Php54Timezonedb < AbstractPhp54Extension
   init
   desc "Timezone Database to be used with PHP's date and time functions"
   homepage "https://pecl.php.net/package/timezonedb"
-  url "https://pecl.php.net/get/timezonedb-2016.9.tgz"
-  sha256 "9207c0f6bff2dd8a1bb0d5b1b4ee644437d555538d02a1cc8c63ebbce6c893e8"
+  url "https://pecl.php.net/get/timezonedb-2016.10.tgz"
+  sha256 "dc0a01830de85aec481d96ec7ec03b36814d02d1bc417f52ce655b2cb1eb7ede"
   head "https://svn.php.net/repository/pecl/timezonedb/trunk/"
 
   bottle do
