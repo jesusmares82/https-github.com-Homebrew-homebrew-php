@@ -8,6 +8,12 @@ class Php70Memcached < AbstractPhp70Extension
   sha256 "15b8de6688a7a7c08c4893102918955a34f68edf7a64eed871f9f2b5e683d244"
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
+  bottle do
+    sha256 "815f110ce661201fb8b76fce62095ae873d76db5cf0676c7cf070c32ef95bea9" => :sierra
+    sha256 "75b69c90cde2f4d36046d1452775488f8f0f79dd233e82f33fb44a9411ef24c3" => :el_capitan
+    sha256 "cd0ddcfcdd3773df89d0e3210bee2f22d9d1a1562b1f90657bb042ed36d5f90e" => :yosemite
+  end
+
   option "with-sasl", "Build with sasl support"
 
   depends_on "pkg-config" => :build
