@@ -4,7 +4,9 @@ class Php70Memcached < AbstractPhp70Extension
   init
   desc "Memcached via libmemcached library"
   homepage "https://pecl.php.net/package/memcached"
-  head "https://github.com/php-memcached-dev/php-memcached.git", :branch => "php7"
+  url "https://github.com/php-memcached-dev/php-memcached/archive/v3.0.0.tar.gz"
+  sha256 "15b8de6688a7a7c08c4893102918955a34f68edf7a64eed871f9f2b5e683d244"
+  head "https://github.com/php-memcached-dev/php-memcached.git"
 
   option "with-sasl", "Build with sasl support"
 
@@ -18,8 +20,6 @@ class Php70Memcached < AbstractPhp70Extension
   end
 
   def install
-    Dir.chdir "memcached-#{version}" unless build.head?
-
     ENV.universal_binary if build.universal?
 
     args = []
