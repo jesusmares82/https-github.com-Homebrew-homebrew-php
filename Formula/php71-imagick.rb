@@ -4,8 +4,8 @@ class Php71Imagick < AbstractPhp71Extension
   init
   desc "Provides a wrapper to the ImageMagick library."
   homepage "https://pecl.php.net/package/imagick"
-  url "https://pecl.php.net/get/imagick-3.4.3RC4.tgz"
-  sha256 "ee50e0d7eb83eb73827f7c34bd3ab80ae167d51f828bc2692d379555b70f8edf"
+  url "https://github.com/mkoppanen/imagick/archive/3.4.3.tar.gz"
+  sha256 "15be7add24705e2541a07425a0806c1f32364399408f757964b5ddf0a0e9cc2d"
   head "https://github.com/mkoppanen/imagick.git"
 
   bottle do
@@ -18,8 +18,6 @@ class Php71Imagick < AbstractPhp71Extension
   depends_on "imagemagick"
 
   def install
-    Dir.chdir "imagick-#{version}" unless build.head?
-
     ENV.universal_binary if build.universal?
 
     safe_phpize
