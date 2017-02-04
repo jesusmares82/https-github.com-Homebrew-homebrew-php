@@ -9,8 +9,9 @@ class Php54Imagick < AbstractPhp54Extension
   head "https://github.com/mkoppanen/imagick.git"
 
   bottle do
-    sha256 "dccfceeb9ba1a6939b0c6beef64393d8fd1de5fc68475411ee875e1785a7d507" => :sierra
-    sha256 "4e14f519b2921471e0cf670e1a350bef02e09682c9965caac8114d8dc0bb9322" => :yosemite
+    sha256 "41a6a4dbf63bdcad53bf811d11b55598d78f78ac4f572bff8de331d6b63975cf" => :sierra
+    sha256 "2781ea89b2f7cd316ab59ea8bc2195cd046d01553b92fbd878761d10fb61ad34" => :el_capitan
+    sha256 "cf4e380471abd5268004ddb6229ad47e79120250210c549e8523541c90f96ee3" => :yosemite
   end
 
   depends_on "pkg-config" => :build
