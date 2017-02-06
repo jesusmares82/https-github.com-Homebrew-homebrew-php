@@ -10,9 +10,9 @@ class Php70Timezonedb < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "398c88713083bb12c7a01698a908ea11d235ff1eed5f6d6fd18dfe2a398cda34" => :sierra
-    sha256 "06b48e67dca8e620353f40c0c817d77fee1d9fc93ce099d473eadee08015dc61" => :el_capitan
-    sha256 "d140374ae71cefc612f59d4e10ac623556d871d0c05e0d83e40c3ef02ea722ff" => :yosemite
+    sha256 "90d9f1602e9ea85c6e542ed2e1a91247b216f8d4a916116c811a5a1c345cc4c4" => :sierra
+    sha256 "667f75beed54158cc947935dd877e5329e4e907aac4e1ed08c5343e7e84631bd" => :el_capitan
+    sha256 "66d55517ae20a1530b964b8f5da401e59b718f13430274257a2694aed7822647" => :yosemite
   end
 
   def install
