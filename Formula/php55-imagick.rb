@@ -4,9 +4,10 @@ class Php55Imagick < AbstractPhp55Extension
   init
   desc "Provides a wrapper to the ImageMagick library."
   homepage "https://pecl.php.net/package/imagick"
-  url "https://github.com/mkoppanen/imagick/archive/3.4.3.tar.gz"
-  sha256 "15be7add24705e2541a07425a0806c1f32364399408f757964b5ddf0a0e9cc2d"
+  url "https://pecl.php.net/get/imagick-3.4.3.tgz"
+  sha256 "1f3c5b5eeaa02800ad22f506cd100e8889a66b2ec937e192eaaa30d74562567c"
   head "https://github.com/mkoppanen/imagick.git"
+  revision 1
 
   bottle do
     sha256 "f7bceca3d3bdb3027e3f7480fee74e94d83fe04e7745fb30098e2bedd6604bc3" => :sierra
@@ -18,6 +19,8 @@ class Php55Imagick < AbstractPhp55Extension
   depends_on "imagemagick"
 
   def install
+    Dir.chdir "imagick-#{version}" unless build.head?
+
     ENV.universal_binary if build.universal?
 
     safe_phpize
