@@ -1,6 +1,6 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php56Grpc < AbstractPhp56Extension
+class Php71Grpc < AbstractPhp71Extension
   init
   desc "The PHP extension for the gRPC library"
   homepage "http://grpc.io"
