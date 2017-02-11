@@ -7,7 +7,7 @@ class Php56Mcrypt < AbstractPhp56Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 3
+  revision 4
 
   bottle do
     sha256 "c3efe44c21d9e608fb43473d805a0e40619f2265b148b9a4ee99e7279205810c" => :sierra

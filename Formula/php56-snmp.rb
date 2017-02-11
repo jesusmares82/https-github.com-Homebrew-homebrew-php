@@ -7,7 +7,7 @@ class Php56Snmp < AbstractPhp56Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
+  revision 3
 
   bottle do
     sha256 "b5443b00b0bccb1d998af962becd8c20953ec55bb0c355ed14d36b7d01eb69c7" => :sierra

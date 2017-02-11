@@ -7,7 +7,7 @@ class Php56PdoDblib < AbstractPhp56Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
+  revision 3
 
   bottle do
     sha256 "2fb7a6b4e2e0b0a3b5922408875231f0b24b959eec33488226653fe6fdb785c1" => :sierra
