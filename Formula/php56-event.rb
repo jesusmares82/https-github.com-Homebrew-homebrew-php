@@ -9,9 +9,9 @@ class Php56Event < AbstractPhp56Extension
   head "https://bitbucket.org/osmanov/pecl-event.git"
 
   bottle do
-    sha256 "75d366b27aa36124862f764bb58327bcafacfcf7ed28857b567f16ee180a0936" => :el_capitan
-    sha256 "d4a3762b030c4e83c42cf0370321d548769285dc4ee229593c6eda7f45b3ff5c" => :yosemite
-    sha256 "0a49e71277c1cff10edff17af5449927079f25c41b48ee3b60470e54a854845a" => :mavericks
+    sha256 "97ce61d59f5643e8cc12daa4323d5aac3fb2b89305f29e1d5dcc2d74bb535c6e" => :sierra
+    sha256 "f800eae362aba96f753e4c05819292566e4cf780dbbe4d11e8e82cc06c2eb0d2" => :el_capitan
+    sha256 "ed9675c29b6090f2938cfeacebb48c96f87f0213011c9ea09458a189f45f6ffd" => :yosemite
   end
 
   depends_on "libevent"
