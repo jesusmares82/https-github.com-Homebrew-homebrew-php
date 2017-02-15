@@ -4,8 +4,9 @@ class Php70Event < AbstractPhp70Extension
   init
   desc "Provides interface to libevent library"
   homepage "https://pecl.php.net/package/event"
-  url "https://pecl.php.net/get/event-2.0.0.tgz"
-  sha256 "3f785022b60d8e8687825c89a314ef94b1dbbbcb9438c3e5b3b9d840d5119a1b"
+  url "https://pecl.php.net/get/event-2.2.1.tgz"
+  sha256 "44756686df68d8ef4fcee31359c0c03802b1f55ad88db7ac142169777f3d17ef"
+  head "https://bitbucket.org/osmanov/pecl-event.git"
 
   bottle do
     sha256 "35ea012c45378097d492d2d50e48411c5e59f1a168fd3abe1dfad9a8aeb5968b" => :el_capitan

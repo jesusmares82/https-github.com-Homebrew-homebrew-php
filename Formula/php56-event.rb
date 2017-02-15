@@ -4,8 +4,8 @@ class Php56Event < AbstractPhp56Extension
   init
   desc "Provides interface to libevent library"
   homepage "https://pecl.php.net/package/event"
-  url "https://pecl.php.net/get/event-1.11.1.tgz"
-  sha256 "371e8d559461542058efd57be61fd8316121985dc455f2e7979722e37cedd526"
+  url "https://pecl.php.net/get/event-2.2.1.tgz"
+  sha256 "44756686df68d8ef4fcee31359c0c03802b1f55ad88db7ac142169777f3d17ef"
   head "https://bitbucket.org/osmanov/pecl-event.git"
 
   bottle do
@@ -23,8 +23,9 @@ class Php56Event < AbstractPhp56Extension
     ENV.universal_binary if build.universal?
 
     args = []
-    args << "--with-event"
+    args << "--with-event-core"
     args << "--with-event-extra"
+    args << "--enable-event-debug"
     args << "--with-event-libevent-dir=#{Formula["libevent"].opt_prefix}"
     args << "--with-event-openssl"
     args << "--with-openssl-dir=#{Formula["openssl"].opt_prefix}"
