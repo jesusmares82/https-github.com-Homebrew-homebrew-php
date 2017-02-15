@@ -9,9 +9,9 @@ class Php71Event < AbstractPhp71Extension
   head "https://bitbucket.org/osmanov/pecl-event.git"
 
   bottle do
-    sha256 "433462a8be4065098d3c513fea33a4db08e39e8449b340a9649a637d87343619" => :el_capitan
-    sha256 "30da93e0498cdc4063d522e21bc74d387831435d0acbfa3c99e96cbbd61d8716" => :yosemite
-    sha256 "4d11a5c8173a0b0a42ada3081ec3183df0850b597bc7884096abb58dd34b352f" => :mavericks
+    sha256 "27fdacc2f300d37bdaf688fea87412d051e3b850d8d24a209fda905221b6b47b" => :sierra
+    sha256 "6c339e77794fee27df64383751e244dac3146d40dc174317a70149d7a072d160" => :el_capitan
+    sha256 "83a6c7f99f0b5c9da915d27bc9c5680c6ed52efb8e35e4d4980c4216d592f6e4" => :yosemite
   end
 
   depends_on "libevent"
