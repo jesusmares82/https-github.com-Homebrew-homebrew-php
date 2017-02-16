@@ -14,8 +14,6 @@ class Php56Qr < AbstractPhp56Extension
     sha256 "b6f3b47d1d63ac0f7fbe094def3ea70e1a8ae2b69aa4adbd2b50222727c22dac" => :yosemite
   end
 
-  depends_on "homebrew/dupes/zlib"
-
   patch :DATA
 
   def install
@@ -25,7 +23,7 @@ class Php56Qr < AbstractPhp56Extension
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
-                          "--enable-qr", "--enable-qr-gd", "--with-qr-tiff=#{HOMEBREW_PREFIX}/opt/zlib"
+                          "--enable-qr", "--enable-qr-gd", "--with-qr-tiff=/usr"
     phpconfig
     system "make"
     prefix.install "modules/qr.so"
