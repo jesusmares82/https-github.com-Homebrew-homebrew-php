@@ -8,10 +8,11 @@ class Php56Qr < AbstractPhp56Extension
   sha256 "0d628741d77f34207a00cc0b84967ecf4ccb38f03e65105573ecfead8c76f114"
 
   bottle do
-    rebuild 5
-    sha256 "0d558ba267cc159c43a32f3f9000a45f122d4d164641f332e122273aa28ecd78" => :sierra
-    sha256 "0ae8fd5f02d2293d8a5fdb92639a711f074b1cee53905407edd7ed57c89efaf9" => :el_capitan
-    sha256 "b6f3b47d1d63ac0f7fbe094def3ea70e1a8ae2b69aa4adbd2b50222727c22dac" => :yosemite
+    cellar :any_skip_relocation
+    rebuild 6
+    sha256 "efded626bf5ff0ce0dea0b195ca81a1d5a4ff09730230e6c90f94afdd49b1cf7" => :sierra
+    sha256 "ca711769257e3a36cfbf235635ce9ee0c838d2dcc29bf3e558ebb8fe8037a0c6" => :el_capitan
+    sha256 "508b617a1fc9715fac342dcf46c9a2bea42c5be013eac47e4aa11f67e2e14f3a" => :yosemite
   end
 
   patch :DATA
