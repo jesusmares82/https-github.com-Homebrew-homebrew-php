@@ -7,9 +7,9 @@ class Php71Pspell < AbstractPhp71Extension
   revision 9
 
   bottle do
-    sha256 "55256f540aac246290a38a64256e96832c9e28a42cae657085da580e6edc8651" => :sierra
-    sha256 "3a3830227df388bce202278e6c40c6f8995b3ff1534160bcd57dcbfed8fa721e" => :el_capitan
-    sha256 "c0c325683ecd7506faf4c9a35112b8437dd874d12b877003739f2731193accca" => :yosemite
+    sha256 "5d7b4e323ee27a2a36881066ce708a24efc8e6ac81c719d313b4f0b2fde80f73" => :sierra
+    sha256 "c6ceb9b953b29e71e804e65dca6e6713add715bb48e82105dd8fcdace9c45eba" => :el_capitan
+    sha256 "e72da90a51fbeffab2584bb70744878f94ae2da7fb86a1baf1401be5211a8be4" => :yosemite
   end
 
   url PHP_SRC_TARBALL
