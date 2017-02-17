@@ -4,7 +4,7 @@ class Php71Mcrypt < AbstractPhp71Extension
   init
   desc "Interface to the mcrypt library"
   homepage "http://php.net/manual/en/book.mcrypt.php"
-  revision 8
+  revision 9
 
   bottle do
     sha256 "44857a80211e6be177a931d09c22b1432bee3120bafa9e554cebe3c8a08a1ac1" => :sierra
