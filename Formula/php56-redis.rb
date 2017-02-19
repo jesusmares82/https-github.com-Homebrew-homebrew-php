@@ -10,9 +10,9 @@ class Php56Redis < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "95a6eb1b647002274a9b95fe8483049332b95e8d4206b8cf84c76b90a4bb6545" => :sierra
-    sha256 "46d76cc292f196c81464bdc86238c2501748a6214ecb248a5152596b101d7e44" => :el_capitan
-    sha256 "f5dc47cbf65fed97c63a88a44b0806509a66c22e3fa1400fdd5d5c20d197592d" => :yosemite
+    sha256 "3d97b624bdb5cfe6b204b579cca2e14e6129b4ffd0151a4adef53ee699487777" => :sierra
+    sha256 "136a30af003cf855ffb9fcd1b9f234b72009933b7d00f1982ed5b17368ccae20" => :el_capitan
+    sha256 "8016c0fc7ed7332d33c71cbaf5d2c5a7c3a2f590e519b5d61a9874320a751db9" => :yosemite
   end
 
   depends_on "php56-igbinary"
