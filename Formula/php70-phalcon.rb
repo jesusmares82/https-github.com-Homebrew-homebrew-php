@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php70Phalcon < AbstractPhp70Extension
   init
   desc "Full-stack PHP framework"
-  homepage "http://phalconphp.com/"
+  homepage "https://phalconphp.com/"
   url "https://github.com/phalcon/cphalcon/archive/v3.0.4.tar.gz"
   sha256 "50834275cd964a5d1fdd7a588183ca4e038a46900045a6cf91f50b56664d15cd"
   head "https://github.com/phalcon/cphalcon.git"
