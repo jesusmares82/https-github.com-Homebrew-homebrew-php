@@ -14,14 +14,14 @@ class Php53Magickwand < AbstractPhp53Extension
   end
 
   depends_on "pkg-config" => :build
-  depends_on "imagemagick"
+  depends_on "imagemagick@6"
 
   def install
     ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
-                          "--with-magickwand=#{Formula["imagemagick"].opt_prefix}",
+                          "--with-magickwand=#{Formula["imagemagick@6"].opt_prefix}",
                           phpconfig
     system "make"
     prefix.install "modules/magickwand.so"
