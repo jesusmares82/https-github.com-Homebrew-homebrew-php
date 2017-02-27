@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php71Xdebug < AbstractPhp71Extension
   init
   desc "Provides debugging and profiling capabilities."
-  homepage "http://xdebug.org"
+  homepage "https://xdebug.org"
   url "https://pecl.php.net/get/xdebug-2.5.1.tgz"
   sha256 "7fda9020fd5a2c549ae5a692fcabbb00f74e39dda81d53d25e622bdab4880ec2"
   head "https://github.com/xdebug/xdebug.git"
