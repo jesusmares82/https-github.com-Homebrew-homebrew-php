@@ -2,6 +2,33 @@
 
 A centralized repository for PHP-related brews.
 
+## Requirements
+
+* [Homebrew](https://github.com/Homebrew/brew)
+* Yosemite, El Capitan, and Sierra. Untested everywhere else.
+* The Homebrew `dupes` tap - `brew tap homebrew/dupes`
+* The Homebrew `versions` tap - `brew tap homebrew/versions`
+
+## Installation
+
+Setup the `homebrew/dupes` tap which has dependencies we need:
+
+```sh
+$ brew tap homebrew/dupes
+```
+
+Setup the `homebrew/versions` tap which has dependencies we need:
+
+```sh
+$ brew tap homebrew/versions
+```
+
+Then, run the following in your command-line:
+
+```sh
+$ brew tap homebrew/homebrew-php
+```
+
 ## Bugs happen
 
 The more information you provide and the more detailed your report is, the easier it is for us to fix it.
@@ -81,33 +108,6 @@ This repository contains **PHP-related** formulae for [Homebrew](https://github.
 (This replaces the PHP formulae that used to live under [adamv's homebrew-alt repository](https://github.com/adamv/homebrew-alt).)
 
 The purpose of this repository is to allow PHP developers to quickly retrieve working, up-to-date formulae. The mainline Homebrew repositories are maintained by non-php developers, so testing/maintaining PHP-related brews has fallen by the wayside. If you are a PHP developer using Homebrew, please contribute to this repository.
-
-## Requirements
-
-* [Homebrew](https://github.com/Homebrew/brew)
-* Yosemite, El Capitan, and Sierra. Untested everywhere else.
-* The Homebrew `dupes` tap - `brew tap homebrew/dupes`
-* The Homebrew `versions` tap - `brew tap homebrew/versions`
-
-## Installation
-
-Setup the `homebrew/dupes` tap which has dependencies we need:
-
-```sh
-$ brew tap homebrew/dupes
-```
-
-Setup the `homebrew/versions` tap which has dependencies we need:
-
-```sh
-$ brew tap homebrew/versions
-```
-
-Then, run the following in your command-line:
-
-```sh
-$ brew tap homebrew/homebrew-php
-```
 
 ## Usage
 
