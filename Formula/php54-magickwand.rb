@@ -9,9 +9,9 @@ class Php54Magickwand < AbstractPhp54Extension
   revision 1
 
   bottle do
-    sha256 "ab207b394a1cc9359b5179de058412243a96f27c4f9d907d42e9050c50e46116" => :el_capitan
-    sha256 "f5a39de8c10d7ef8e323503d2caa422a4c72250aae0919e4a239ad9ceb5661ad" => :yosemite
-    sha256 "0a6695ba7eac55a90a50d0175309eaf5be996ad08c01e2e8210eafcdc85a97df" => :mavericks
+    sha256 "f8067cd262ea8f1207f74857db93d1e8ef4b89c261d182ccdea83ec4609d8028" => :sierra
+    sha256 "14458049361284a5fc71b1476664c1b5e812089edf932ac623155fa1ba1725aa" => :el_capitan
+    sha256 "920244d56899f9170e64a98406ec5cc8f670beeafb97f1e606b895745e0681a4" => :yosemite
   end
 
   depends_on "pkg-config" => :build
