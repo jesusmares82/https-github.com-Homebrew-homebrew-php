@@ -8,9 +8,10 @@ class Php53Magickwand < AbstractPhp53Extension
   sha256 "05e5fe5bc52ab9169228bbbde38b222208d1ae19db718b66d2c7ac4180847727"
 
   bottle do
-    sha256 "ae5c8a0f104157ea40a1de9273a82fcebda2a471a183be24f690faacc2512cdd" => :el_capitan
-    sha256 "e2c289ddfd96685f30668118cca8c347132e2fd518b04a95dc5cfd6c8d074650" => :yosemite
-    sha256 "48672a2827013b4ce009448a2dfe48ca02156dc4752debc8fc840b7022994d75" => :mavericks
+    rebuild 1
+    sha256 "93866fa193181ceb916a55297d11ee9e4a93ec34746eb4662687b1340b407145" => :sierra
+    sha256 "7bf6cd43c80b0c736b659ed824aec1fc9f5eacb4297ff76e31c7afbcff6b3afb" => :el_capitan
+    sha256 "93b3cdffa9d8bccdce95ea65ac900bb916c2d6ebcee84fada9b594d5f84cf849" => :yosemite
   end
 
   depends_on "pkg-config" => :build
