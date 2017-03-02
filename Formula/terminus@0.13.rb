@@ -11,6 +11,7 @@ class TerminusAT013 < Formula
   url "https://github.com/pantheon-systems/terminus/archive/0.13.6.tar.gz"
   sha256 "c71a0983edf93879e14da00f08128a0a47d493d4aaf4ccf58a86c3f6b5e74c95"
   head "https://github.com/pantheon-systems/terminus.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
@@ -18,6 +19,8 @@ class TerminusAT013 < Formula
     sha256 "a5fa9f12db583d3d2658cc8f48b4e34f4d9a2cbfc3ce9eaf2479eba70ba758a9" => :el_capitan
     sha256 "384663c71dfe8a1f5f6b10855d5b81740b92b91b0d79add013522c4f90800358" => :yosemite
   end
+
+  keg_only :versioned_formula
 
   depends_on PhpMetaRequirement
 
