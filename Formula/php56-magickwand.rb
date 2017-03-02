@@ -9,9 +9,9 @@ class Php56Magickwand < AbstractPhp56Extension
   revision 1
 
   bottle do
-    sha256 "608349a9ea9036d5b46f9306924a7b927f2809299a1d018d82cb5e6ed9d2de2a" => :el_capitan
-    sha256 "b0f366a401648c2dcb00c09f89a018ddaafb3297f252874124367a4ceee22e41" => :yosemite
-    sha256 "4db70bbaccb7b25645c00da0106114e3341d61c330015d4b81c0760303b2d520" => :mavericks
+    sha256 "8e2a7968720ba00376b1ef468be7b1fdeab8dd30a6cfd856203616d986ea5be0" => :sierra
+    sha256 "783c859b6ca3f07c74418d081bcecbe09915cc97ea048d8a8981ed6da150d0f3" => :el_capitan
+    sha256 "d29f81c8c8bf22f0cdf2d5c32cbda4873fa683d33df8e5677e5c892431482aef" => :yosemite
   end
 
   depends_on "pkg-config" => :build
