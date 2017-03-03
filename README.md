@@ -53,7 +53,7 @@ Bugs inevitably happen - none of us are running EVERY conceivable setup - but ho
 ![command line tool installation](http://f.cl.ly/items/411X3k0m2O1p1U2Y0I30/Image%202012.11.15%2011:32:41%20AM.png)
 - Delete your `~/.pearrc` file before attempting to install a `PHP` version, as the pear step will fail if an existing, incompatible version exists. We try to detect and remove them ourselves, but sometimes this fails.
 - Run `brew doctor` and fix any issues you can.
-- If you are using Mountain Lion `10.8.x`, please install [XQuartz](http://xquartz.macosforge.org/landing/) so that the `png.h` header exists for compilation of certain brews. Mountain Lion removes X11, which contained numerous headers. A permanent fix is forthcoming.
+- If you are using Mountain Lion `10.8.x`, please install [XQuartz](https://www.xquartz.org/) so that the `png.h` header exists for compilation of certain brews. Mountain Lion removes X11, which contained numerous headers. A permanent fix is forthcoming.
 - If you upgraded to Mountain Lion `10.8.x`, please also upgrade to the latest Xcode, 5.1.
 - File an awesome bug report, using the information in the next section.
 - If you have a failing install due to `GD build test failed`, try running the following before attempting to reinstall:
@@ -93,8 +93,8 @@ Please include the following information in your bug report:
 - Installation logs for the formula in question
   - A link to the gist created with `brew gist-logs <formula-you-are-using>` will contain these logs.
   - Or, if `brew gist-logs` is not working:
-    - Output of `brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here` within a [gist](http://gist.github.com). Please append any options you added to the `brew install` command.
-    - Output of `brew doctor` within a [gist](http://gist.github.com)
+    - Output of `brew install -v path/to/homebrew-php/the-formula-you-want-to-test.rb --with-your --opts-here` within a [gist](https://gist.github.com). Please append any options you added to the `brew install` command.
+    - Output of `brew doctor` within a [gist](https://gist.github.com)
 
 New bug reports will be created with a template of this information for you to fill in.
 
