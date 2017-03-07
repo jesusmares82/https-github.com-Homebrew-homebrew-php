@@ -1,6 +1,6 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php54Couchbase < AbstractPhp54Extension
+class Php71Couchbase < AbstractPhp71Extension
   init
   desc "Provides fast access to documents stored in a Couchbase Server."
   homepage "https://developer.couchbase.com/documentation/server/current/sdk/php/start-using-sdk.html"
@@ -8,7 +8,7 @@ class Php54Couchbase < AbstractPhp54Extension
   sha256 "1b7d7fe32c648bff20918ed437eca848c9dc2432198a77051b46a7373e8bbc8b"
   head "https://github.com/couchbase/php-couchbase.git"
 
-  depends_on "php54-igbinary"
+  depends_on "php71-igbinary"
   depends_on "igbinary" => :build
 
   depends_on "libcouchbase"
@@ -25,7 +25,7 @@ class Php54Couchbase < AbstractPhp54Extension
     safe_phpize
 
     # Install symlink to igbinary headers inside memcached build directory
-    (Pathname.pwd/"ext").install_symlink Formula["igbinary"].opt_include/"php5" => "igbinary"
+    (Pathname.pwd/"ext").install_symlink Formula["igbinary"].opt_include/"php7" => "igbinary"
 
     system "./configure", *args
     system "make"
