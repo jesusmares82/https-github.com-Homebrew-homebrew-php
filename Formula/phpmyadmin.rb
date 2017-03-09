@@ -14,6 +14,12 @@ class Phpmyadmin < Formula
     sha256 "0a38991210e3987367049aaee3afd43939c8db48f165f8eea1f9859880829ef6" => :yosemite
   end
 
+  devel do
+    url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_7_0RC1.tar.gz"
+    sha256 "18d694a7f8a8fa7bc909bead7a5981be945aefaa70b3cb27008a29679fdf4af7"
+    version "4.7.0-RC1"
+  end
+
   depends_on PhpMetaRequirement
   depends_on "php53-mcrypt" if Formula["php53"].linked_keg.exist?
   depends_on "php54-mcrypt" if Formula["php54"].linked_keg.exist?
