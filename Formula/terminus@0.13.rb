@@ -15,9 +15,9 @@ class TerminusAT013 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ef8006a14872a7770eee4571dd1164af994f5cfa3a2420e505c946124cac9b52" => :sierra
-    sha256 "a5fa9f12db583d3d2658cc8f48b4e34f4d9a2cbfc3ce9eaf2479eba70ba758a9" => :el_capitan
-    sha256 "384663c71dfe8a1f5f6b10855d5b81740b92b91b0d79add013522c4f90800358" => :yosemite
+    sha256 "9382caa68759f848ea15c35f49c592adc12add871a4a0b61d6d564301c825664" => :sierra
+    sha256 "13d19e24cf8d8546fa97ba0e46d7cbf6640e5e2f1901f4e691a7b037a81d0a16" => :el_capitan
+    sha256 "3817d9e7b5463a20d6dab9f1f3423aacef5aa54d3d2cf52c77710020c419647e" => :yosemite
   end
 
   keg_only :versioned_formula
