@@ -11,9 +11,9 @@ class Php56PdoPgsql < AbstractPhp56Extension
 
   bottle do
     cellar :any
-    sha256 "2180282541b28494eb05c67c466465d83d713c148615ee873a9a8abb6a9c460b" => :sierra
-    sha256 "c10483edc3c22ef00a42e67df9e4edd511490c344f3ac3acf99dc7c784712153" => :el_capitan
-    sha256 "9579228ee7cf96eec5866c250b0acfe12758e329d5822a7b4b8242a5a2801b77" => :yosemite
+    sha256 "6a872d62fcab9bdc86d53129f7a6e4966b7e3c3a823a9ef716361612e39da82c" => :sierra
+    sha256 "dc6c1f7309bb3a10504a7eff3d284f440b6b3beb274f06346cd06ab12bba53a5" => :el_capitan
+    sha256 "800cb01b670ce29e1eda2648a9fdb9f712ffabcf285d3dce066571087dc18f31" => :yosemite
   end
 
   depends_on "postgresql"
