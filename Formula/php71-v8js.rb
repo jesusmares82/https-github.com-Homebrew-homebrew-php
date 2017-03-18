@@ -9,9 +9,9 @@ class Php71V8js < AbstractPhp71Extension
 
   bottle do
     cellar :any
-    sha256 "09c722ff0822acd8c45000249e1d9aaa381b23e9f00fe769337825d3cb931e7d" => :sierra
-    sha256 "9ef25eff64edb1a4bcbd5d06e6db18fbf5edaefc7b2b7114fbf6b50e7b2fce53" => :el_capitan
-    sha256 "1a6db9ed43b7ba01a66feb8db7aedb1bb123c19e9ae399b214bbbd9a98002264" => :yosemite
+    sha256 "408e93666e97fa4415395259860d5a8fffaf9068469c16492010a965022c4668" => :sierra
+    sha256 "0ff19669648fd3ef451bca1e812b827fc87c7d35cd60b2574beca186dde1202d" => :el_capitan
+    sha256 "4eb4de747eea642aba4b7696d37101efefb16081134bf435f57100e007e45553" => :yosemite
   end
 
   depends_on "v8"
