@@ -7,9 +7,9 @@ class Php70Tidy < AbstractPhp70Extension
   revision 8
 
   bottle do
-    sha256 "9dabe14e41aec47bc84d46000c2a1b59df081f34ae9cdf7b8f267677ea96e11b" => :sierra
-    sha256 "cb4d45dde7c102573e7998a8b40151ec07fe80a3eabbb452973fbda1391edd34" => :el_capitan
-    sha256 "0fd4cefcd739418eeebcf4ebbb14edab509098d72b371555943b28dd7436c05f" => :yosemite
+    sha256 "4402f5bd105b3e969692be9c20899dc3018ef03c723ea1ea5cf91630f57017b9" => :sierra
+    sha256 "73ec510dd0ce2b5c114dfb08497ce3e229f21416c9137646952f930d48e0c78d" => :el_capitan
+    sha256 "22d061045eb4d031d172623a7263d83d2b441c9a3d7656398563379ad21071cb" => :yosemite
   end
 
   url PHP_SRC_TARBALL
