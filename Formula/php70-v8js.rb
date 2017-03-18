@@ -4,8 +4,8 @@ class Php70V8js < AbstractPhp70Extension
   init
   desc "PHP extension for Google's V8 Javascript engine"
   homepage "https://pecl.php.net/package/v8js"
-  url "https://pecl.php.net/get/v8js-1.3.3.tgz"
-  sha256 "049d04cbdcb901f358f04bfe0f89337c625b3fb0bbca335af2e2d0c4490412f2"
+  url "https://pecl.php.net/get/v8js-1.3.6.tgz"
+  sha256 "65b8234701e9c563ab4cb0eb2ab0b0ef696c3d40c3498fc4ba6069459fc0e974"
 
   bottle do
     cellar :any
