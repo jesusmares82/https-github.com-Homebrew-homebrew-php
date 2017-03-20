@@ -14,8 +14,6 @@ class Php53Qr < AbstractPhp53Extension
     sha256 "502ac1f012d7f5dd7913e66a02277a70e4ea92676894c27eb3a74338d47cae7f" => :yosemite
   end
 
-  depends_on "homebrew/dupes/zlib"
-
   patch :DATA
 
   def install
@@ -25,7 +23,7 @@ class Php53Qr < AbstractPhp53Extension
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
-                          "--enable-qr", "--enable-qr-gd", "--with-qr-tiff=#{HOMEBREW_PREFIX}/opt/zlib"
+                          "--enable-qr", "--enable-qr-gd", "--with-qr-tiff=/usr"
     phpconfig
     system "make"
     prefix.install "modules/qr.so"

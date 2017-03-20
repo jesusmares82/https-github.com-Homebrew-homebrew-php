@@ -6,24 +6,10 @@ A centralized repository for PHP-related brews.
 
 * [Homebrew](https://github.com/Homebrew/brew)
 * Yosemite, El Capitan, and Sierra. Untested everywhere else.
-* The Homebrew `dupes` tap - `brew tap homebrew/dupes`
-* The Homebrew `versions` tap - `brew tap homebrew/versions`
 
 ## Installation
 
-Setup the `homebrew/dupes` tap which has dependencies we need:
-
-```sh
-$ brew tap homebrew/dupes
-```
-
-Setup the `homebrew/versions` tap which has dependencies we need:
-
-```sh
-$ brew tap homebrew/versions
-```
-
-Then, run the following in your command-line:
+Run the following in your command-line:
 
 ```sh
 $ brew tap homebrew/homebrew-php

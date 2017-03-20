@@ -14,7 +14,7 @@ class AbstractPhp < Formula
       depends_on 'autoconf' => :build
       depends_on 're2c' => :build
       depends_on 'flex' => :build
-      depends_on 'homebrew/versions/bison27' => :build
+      depends_on 'bison@2.7' => :build
     end
 
     # obtain list of php formulas
