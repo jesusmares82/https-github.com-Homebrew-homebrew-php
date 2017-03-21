@@ -5,12 +5,14 @@ class Arcanist < Formula
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
 
   stable do
-    url "https://github.com/phacility/arcanist/archive/conduit-5.tar.gz"
-    sha256 "81a9599f0799f4a2b77a01ddb35275894b82d8e51f437b51f9342affd029aa8b"
+    url "https://github.com/wikimedia/arcanist/archive/release/2017-03-08/1.tar.gz"
+    sha256 "8edb125944f9aa3dc5ea082f2b080543ae324dba3cb055476f1db40219f222e6"
+    version "201703081"
 
     resource "libphutil" do
-      url "https://github.com/phacility/libphutil/archive/conduit-5.tar.gz"
-      sha256 "a4bc5d2e80ca3c127d26d7dd74ad4b979841c7a648a2891ef2affd6876af8b2b"
+      url "https://github.com/wikimedia/phabricator-libphutil/archive/release/2017-03-08/1.tar.gz"
+      sha256 "e15fe518cad38dea24bcf780b72089479dde1777f9ec23a9b0c9cd0edbd60f92"
+      version "201703081"
     end
   end
 
