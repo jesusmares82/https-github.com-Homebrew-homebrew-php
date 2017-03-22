@@ -7,6 +7,13 @@ class ComposerAT12 < AbstractPhpPhar
   url "https://getcomposer.org/download/1.2.4/composer.phar"
   sha256 "3c900579659b79a4e528722e35bd160c86090e370e9cb41cc07c7a22c674c657"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "802d1a7f54882a23efe2c60edce9d2ac45b73d7baf957781f0ab13c38963c3d4" => :sierra
+    sha256 "802d1a7f54882a23efe2c60edce9d2ac45b73d7baf957781f0ab13c38963c3d4" => :el_capitan
+    sha256 "802d1a7f54882a23efe2c60edce9d2ac45b73d7baf957781f0ab13c38963c3d4" => :yosemite
+  end
+
   def phar_file
     "composer.phar"
   end
