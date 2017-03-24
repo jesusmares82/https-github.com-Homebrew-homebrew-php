@@ -4,8 +4,8 @@ class Php71Ast < AbstractPhp71Extension
   init
   desc "Exposing PHP 7 abstract syntax tree"
   homepage "https://github.com/nikic/php-ast"
-  url "https://github.com/nikic/php-ast/archive/v0.1.2.tar.gz"
-  sha256 "3c22f06354e249324384497af56635d06666c9d2108f52ba79a86e5807246496"
+  url "https://github.com/nikic/php-ast/archive/v0.1.4.tar.gz"
+  sha256 "082380202aecca3709b6b67121024f46c06ed5e00ff966f11523ab853491ed54"
   head "https://github.com/nikic/php-ast.git"
 
   bottle do
