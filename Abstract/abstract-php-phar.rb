@@ -1,4 +1,4 @@
-require 'formula'
+require "formula"
 require File.join(File.dirname(__FILE__), "../Requirements/php-meta-requirement")
 require File.join(File.dirname(__FILE__), "../Requirements/phar-requirement")
 
