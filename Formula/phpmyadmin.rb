@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Phpmyadmin < Formula
   desc "A web interface for MySQL and MariaDB"
   homepage "https://www.phpmyadmin.net"
-  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_6_6.tar.gz"
-  sha256 "4de8e0924dd11dcf74781b3fd6457e6b87d633987c2d09e0df8993b40faf16d3"
+  url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_7_0.tar.gz"
+  sha256 "602c4795efaf738a2f365a6e5bd58338c183955ba1ed41fe018abc0cce531b7b"
   head "https://github.com/phpmyadmin/phpmyadmin.git"
 
   bottle do
@@ -13,12 +13,6 @@ class Phpmyadmin < Formula
     sha256 "a9ad4539ccd1e9c0cafb26c05b99ad64e1149c871c7e1d7464490087248077e4" => :sierra
     sha256 "a9ad4539ccd1e9c0cafb26c05b99ad64e1149c871c7e1d7464490087248077e4" => :el_capitan
     sha256 "f27a207fb48e8bfa9a6c145a746c758de88956970775633be1e76a454793c059" => :yosemite
-  end
-
-  devel do
-    url "https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_7_0RC1.tar.gz"
-    sha256 "18d694a7f8a8fa7bc909bead7a5981be945aefaa70b3cb27008a29679fdf4af7"
-    version "4.7.0-RC1"
   end
 
   depends_on PhpMetaRequirement
