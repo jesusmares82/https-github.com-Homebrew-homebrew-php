@@ -146,7 +146,7 @@ INFO
       rm_f("#{user_pear}-backup") if File.exist? "#{user_pear}-backup"
       rm_f("#{config_pearrc}-backup") if File.exist? "#{config_pearrc}-backup"
       rm_f("#{user_pearrc}-backup") if File.exist? "#{user_pearrc}-backup"
-    rescue Exception
+    rescue StandardError
       mv("#{config_pear}-backup", config_pear) if File.exist? "#{config_pear}-backup"
       mv("#{user_pear}-backup", user_pear) if File.exist? "#{user_pear}-backup"
       mv("#{config_pearrc}-backup", config_pearrc) if File.exist? "#{config_pearrc}-backup"
