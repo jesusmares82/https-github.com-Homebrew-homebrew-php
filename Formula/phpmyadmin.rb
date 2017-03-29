@@ -9,10 +9,9 @@ class Phpmyadmin < Formula
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "a9ad4539ccd1e9c0cafb26c05b99ad64e1149c871c7e1d7464490087248077e4" => :sierra
-    sha256 "a9ad4539ccd1e9c0cafb26c05b99ad64e1149c871c7e1d7464490087248077e4" => :el_capitan
-    sha256 "f27a207fb48e8bfa9a6c145a746c758de88956970775633be1e76a454793c059" => :yosemite
+    sha256 "6c7f4ea67ad24edb87907a31e1fe82755f8ddc5580964808b8777e2531c51c51" => :sierra
+    sha256 "6c7f4ea67ad24edb87907a31e1fe82755f8ddc5580964808b8777e2531c51c51" => :el_capitan
+    sha256 "e9e7d16b383a22aa12f0f139a4ce1cfb632c6794ffb86115a619833ea9b5a0c9" => :yosemite
   end
 
   depends_on PhpMetaRequirement
