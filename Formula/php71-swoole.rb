@@ -9,6 +9,13 @@ class Php71Swoole < AbstractPhp71Extension
   sha256 "d8370a5f959f2d4082f5b2cec2e3a5b294dd3d7f586a5c7a19e3d154b48c699b"
   head "https://github.com/swoole/swoole-src.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "a37008f95e363eee9027546199fed1e8c72a2ff7f5b6a9a1b5ba048aa6d91ab5" => :sierra
+    sha256 "f17facd20ff33f71cdcc46604c7e4287d4634d4bcb106b333e72143904409764" => :el_capitan
+    sha256 "8dbf96eea7e1fc6bfc3fc9431a700010651058e23db2f227010d251305f11e45" => :yosemite
+  end
+
   def install
     ENV.universal_binary if build.universal?
 
