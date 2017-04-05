@@ -1,8 +1,8 @@
 class Adminer < Formula
   desc "Full-featured database management tool written in PHP."
-  homepage "http://www.adminer.org/"
-  url "https://www.adminer.org/static/download/4.2.5/adminer-4.2.5.php"
-  sha256 "6fb52277b658ac00a812501a88cfe79e03750c5436dcd7427a707aa4459a8516"
+  homepage "https://www.adminer.org"
+  url "https://github.com/vrana/adminer/releases/download/v4.3.0/adminer-4.3.0.php"
+  sha256 "0f9179d87f7c9d7cb3ec3b1a4e19b2437e5c07616b3d17703d5a3b938556e731"
 
   bottle do
     cellar :any_skip_relocation
