@@ -9,10 +9,10 @@ class Php54Couchbase < AbstractPhp54Extension
   head "https://github.com/couchbase/php-couchbase.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "214c3ea38e8c496a4990ac6206cc1448517828a65fc179a89db7141ec1b7adc0" => :sierra
-    sha256 "6db6dd9dd8bae9c001043ffa4c8e732051d7ecb31b2a4bc347485b8406d882a3" => :el_capitan
-    sha256 "fc8c54b05b9f78e67c33aa06b8479158e47d64b0941e7ab1b560128148fc313f" => :yosemite
+    cellar :any
+    sha256 "041288be4ca13e9fb87099d80dd67bf0fc46167300839ef782bcde0762e66fa4" => :sierra
+    sha256 "5b5dcd7b0a8c6de94d08bd97d048e4d2cd0214fff5eaa4a0e1b97a6c41b0da6a" => :el_capitan
+    sha256 "8a012c298df42fb194f4d82ef0fa87e2c01a65cbc110671a65f70c633e76497f" => :yosemite
   end
 
   depends_on "php54-igbinary"
