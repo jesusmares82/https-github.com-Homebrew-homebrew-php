@@ -9,10 +9,10 @@ class Php70Couchbase < AbstractPhp70Extension
   head "https://github.com/couchbase/php-couchbase.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "2f4d8ba2eade582a93b6e6d9d84d2749a5cd5bb366b2fe6e1e3f83f58f0f4057" => :sierra
-    sha256 "cf13edb17b530daa06cfeba66dd0ed0e744fabf2d05da381cda31b1e3f11929c" => :el_capitan
-    sha256 "4e653550d231350eb97866db9d0b8974de6d7288893f9cf0746dc670f1fa3ab4" => :yosemite
+    cellar :any
+    sha256 "7ebac0dad18ed6eda217bcd1b7c0e9d262077d92b6ca0269ed7b9bf489328598" => :sierra
+    sha256 "b663c0e17eb7a295617f3d6f297f65e3357f96aee0c99eff5a82f77e73377c8b" => :el_capitan
+    sha256 "93f2f2a4cd7514c8fddf188a7e79de0ad76a098ccfca2f42a505ff82b2d3c9df" => :yosemite
   end
 
   depends_on "php70-igbinary"
