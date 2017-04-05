@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 class Pdepend < AbstractPhpPhar
   init
   desc "performs static code analysis"
-  homepage "http://pdepend.org/"
-  url "http://static.pdepend.org/php/2.2.3/pdepend.phar"
-  sha256 "44e33a0a604be33e6fe0016791bb842a83c02754c4067745d70b5195c14825ab"
+  homepage "https://pdepend.org"
+  url "https://static.pdepend.org/php/2.5.0/pdepend.phar"
+  sha256 "0f632ea6d7ab26deabcb9f6a95c337fdd5fbba2199e4aef93ff18a759dec4999"
 
   bottle do
     cellar :any_skip_relocation
@@ -16,6 +16,6 @@ class Pdepend < AbstractPhpPhar
   end
 
   test do
-    system "pdepend", "--version"
+    system "#{bin}/pdepend", "--version"
   end
 end
