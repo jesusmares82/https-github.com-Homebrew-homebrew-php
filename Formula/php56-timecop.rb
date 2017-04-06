@@ -10,9 +10,9 @@ class Php56Timecop < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1e705236cfee340e4e846a0369e633f14f5b8b4ca0ba0153326a0d3350f9e601" => :el_capitan
-    sha256 "7331e793943d9a8f4aff9d25e9cb521c8b62dd50fdda9a3f6984fdf58885f5ef" => :yosemite
-    sha256 "f33f65acce2682acae3930ce8acfb3046b0eb903998b1df028185155b36bebc9" => :mavericks
+    sha256 "d760a4200fd68198fd5ac12b9cf11bc49228347a9922372dc99e1ec59338562d" => :sierra
+    sha256 "0a9d5bc476d74e48fb244ad6e7616761add16ac1f959295ea086132419eb7e76" => :el_capitan
+    sha256 "ef6afb63c817919e7325e974497b67dcef3403111500987fc7b30a93a5cc8e51" => :yosemite
   end
 
   def install
