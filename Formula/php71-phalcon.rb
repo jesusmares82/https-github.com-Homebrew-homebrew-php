@@ -10,9 +10,9 @@ class Php71Phalcon < AbstractPhp71Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "882a89ec70addb2e450b3cab36c4b7af0e416c0a157538826580a6807da81bc8" => :sierra
-    sha256 "d4f252daf14a0b88497f6b6b0e80fdf2df0873dbb773d4d138ed13799208cc10" => :el_capitan
-    sha256 "0063758ab0936ecf8098cd37a37cf53ed10ed25b268db049c1385a9a28469511" => :yosemite
+    sha256 "25330d34b4c77d99d2ca76b2970cd5ac9c76d796dd249f4c2347fe4fa1655d36" => :sierra
+    sha256 "328a30e436e9098d0e022f3a658f2114ddeb1c0944afab54e51bedfbdc951c87" => :el_capitan
+    sha256 "b5e36539b99119013da093ba343b6c6657f9e501d6cc333ec9aa7721ce0d4f5c" => :yosemite
   end
 
   depends_on "pcre"
