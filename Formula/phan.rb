@@ -5,8 +5,8 @@ class Phan < Formula
 
   desc "Static analyzer for PHP"
   homepage "https://github.com/etsy/phan"
-  url "https://github.com/etsy/phan/archive/0.8.3.tar.gz"
-  sha256 "3fde034a755b37af3270a9f3d30e01ef29558cb622c028c7f8380d98d5e733ae"
+  url "https://github.com/etsy/phan/archive/0.9.1.tar.gz"
+  sha256 "080254e8eabdeb70ae951318ae1cef8db71a1e6b52848167bafacecff6f1e90a"
   head "https://github.com/etsy/phan.git"
 
   bottle do
@@ -16,8 +16,8 @@ class Phan < Formula
     sha256 "fbc456781a3e7004371b2d69fea184290c31a3866a98a376d5c8053eb0449c2e" => :yosemite
   end
 
-  depends_on "php70-ast"
-  depends_on "php70"
+  depends_on "php71-ast"
+  depends_on "php71"
 
   def install
     composer_install
@@ -26,6 +26,6 @@ class Phan < Formula
   end
 
   test do
-    system "#{bin}/phan", "-h"
+    system "#{bin}/phan", "--help"
   end
 end
