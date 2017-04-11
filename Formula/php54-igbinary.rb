@@ -4,8 +4,8 @@ class Php54Igbinary < AbstractPhp54Extension
   init
   desc "Drop in replacement for the standard php serializer"
   homepage "https://pecl.php.net/package/igbinary"
-  url "https://github.com/igbinary/igbinary/archive/2.0.1.tar.gz"
-  sha256 "9c66e6bb8225bf559148661d8ef81451e5f67f0a565d975dc0918abd8c35e0ed"
+  url "https://github.com/igbinary/igbinary/archive/2.0.3.tar.gz"
+  sha256 "af1f19dbf64e37311099e444f2121b917349cc104abc858e34b094d1a296e179"
   head "https://github.com/igbinary/igbinary.git"
 
   bottle do

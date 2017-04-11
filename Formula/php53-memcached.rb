@@ -6,7 +6,7 @@ class Php53Memcached < AbstractPhp53Extension
   homepage "https://pecl.php.net/package/memcached"
   url "https://pecl.php.net/get/memcached-2.2.0.tgz"
   sha256 "17b9600f6d4c807f23a3f5c45fcd8775ca2e61d6eda70370af2bef4c6e159f58"
-  revision 1
+  revision 2
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
   bottle do

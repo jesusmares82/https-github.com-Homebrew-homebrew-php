@@ -6,6 +6,7 @@ class Php70Redis < AbstractPhp70Extension
   homepage "https://github.com/phpredis/phpredis"
   url "https://github.com/phpredis/phpredis/archive/3.1.1.tar.gz"
   sha256 "78c577225daba3282c2968d7b29cb346b9626b2ed3dfddda02e26293e0931995"
+  revision 1
   head "https://github.com/phpredis/phpredis.git"
 
   bottle do
