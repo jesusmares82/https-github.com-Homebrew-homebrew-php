@@ -11,10 +11,9 @@ class Php70Redis < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "c1d42a966cdd65a7872022c4edaf1cbbcb44e8dc3e83f06fd34e41c02124370f" => :sierra
-    sha256 "055a158f9ebfe520fb55077cee88954bb49624699c0ed2027fa874134c13a4d8" => :el_capitan
-    sha256 "5d4659609c6f30928fd222ba822d84bd59f34d3d764de77104b2a9204ca7e4e5" => :yosemite
+    sha256 "26c167f8823dc896241252f9ca8f5b03a5a48151c3e1df83c162bbae4faa1a0b" => :sierra
+    sha256 "9578ceb9b94dc9912905b03b438273b2d4507233aa3a25695eecb638c0aaa67c" => :el_capitan
+    sha256 "d72168b2f1af934ab3e4bbfa51a2891bc1e984ea4f8c041d6e5f0ae5faefb1ae" => :yosemite
   end
 
   def install
