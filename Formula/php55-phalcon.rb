@@ -4,8 +4,8 @@ class Php55Phalcon < AbstractPhp55Extension
   init
   desc "Full-stack PHP framework"
   homepage "https://phalconphp.com/"
-  url "https://github.com/phalcon/cphalcon/archive/v3.1.1.tar.gz"
-  sha256 "430359e0103ac926861976815d5f1d1373c6b1d7317e128359409aafd4285f84"
+  url "https://github.com/phalcon/cphalcon/archive/v3.1.2.tar.gz"
+  sha256 "da619cab5979b3592b5e880a5e286e8d59841e911000be944fcddb030a7af587"
   head "https://github.com/phalcon/cphalcon.git"
 
   bottle do
