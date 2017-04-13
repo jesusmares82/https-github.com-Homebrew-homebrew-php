@@ -41,6 +41,7 @@ class AbstractPhp < Formula
     depends_on "libxml2" if build.include?("with-homebrew-libxml2") || MacOS.version < :lion || MacOS.version >= :el_capitan
     depends_on "unixodbc" unless build.include?("without-unixodbc")
     depends_on "readline"
+    depends_on "mysql" if build.include?("with-libmysql")
 
     # ssl
     if build.include?("with-homebrew-libressl")
