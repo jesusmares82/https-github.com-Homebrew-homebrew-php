@@ -6,9 +6,9 @@ class Adminer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e2960aab28a6e44c3ca73e3ff7217b0a73f47280f46adde0f554f14997491ef5" => :sierra
-    sha256 "bc5d0e0a140d9608238f4c4e3270aa555340b17689afec75bee5d4a5d30cba4d" => :el_capitan
-    sha256 "bc5d0e0a140d9608238f4c4e3270aa555340b17689afec75bee5d4a5d30cba4d" => :yosemite
+    sha256 "9d5bfabc11066ff53cb01e0cfa24e121572faf369c144408b00c1d4e8384093d" => :sierra
+    sha256 "2148b456ddc90dd098d918f598f8ad17eeccf1fdec5664198ff4866147205982" => :el_capitan
+    sha256 "2148b456ddc90dd098d918f598f8ad17eeccf1fdec5664198ff4866147205982" => :yosemite
   end
 
   def install
