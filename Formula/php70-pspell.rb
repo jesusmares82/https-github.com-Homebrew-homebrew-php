@@ -4,7 +4,7 @@ class Php70Pspell < AbstractPhp70Extension
   init
   desc "Extension to check the spelling"
   homepage "http://php.net/manual/en/book.pspell.php"
-  revision 8
+  revision 9
 
   bottle do
     sha256 "e6960326357f914d7e791e49f7b55d1e1a8f8b680099f80f33b6a680b01cad1d" => :sierra
