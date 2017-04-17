@@ -4,8 +4,8 @@ class Php55Xdebug < AbstractPhp55Extension
   init
   desc "Provides debugging and profiling capabilities for PHP"
   homepage "https://xdebug.org"
-  url "https://pecl.php.net/get/xdebug-2.5.1.tgz"
-  sha256 "7fda9020fd5a2c549ae5a692fcabbb00f74e39dda81d53d25e622bdab4880ec2"
+  url "https://pecl.php.net/get/xdebug-2.5.3.tgz"
+  sha256 "4cce3d495243e92cd2e1d764a33188d60c85f0d2087d94d4203c354ea03530f4"
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
@@ -21,8 +21,6 @@ class Php55Xdebug < AbstractPhp55Extension
 
   def install
     Dir.chdir "xdebug-#{version}" unless build.head?
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
