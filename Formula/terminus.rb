@@ -6,8 +6,8 @@ class Terminus < Formula
 
   desc "Command-line interface for the Pantheon Platform"
   homepage "https://github.com/pantheon-systems/terminus"
-  url "https://github.com/pantheon-systems/terminus/archive/1.2.1.tar.gz"
-  sha256 "6a3bc536d81ab2e0ef6ef9a1b621dde9046fbe51a01c5088dd7baa6e55bfb2cf"
+  url "https://github.com/pantheon-systems/terminus/archive/1.3.0.tar.gz"
+  sha256 "1d1c3657653676e0bb7fa4643fd80163383d9917d4c1af9a4bf7647d13970ab0"
   head "https://github.com/pantheon-systems/terminus.git"
 
   bottle do
