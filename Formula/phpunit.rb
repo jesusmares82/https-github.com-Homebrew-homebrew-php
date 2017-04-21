@@ -4,8 +4,8 @@ class Phpunit < AbstractPhpPhar
   init
   desc "Programmer-oriented testing framework for PHP"
   homepage "https://phpunit.de"
-  url "https://phar.phpunit.de/phpunit-6.1.0.phar"
-  sha256 "d3fec55272fbb35de6579abaa6292c02af57f04147011147e052ddd2223a8cea"
+  url "https://phar.phpunit.de/phpunit-6.1.1.phar"
+  sha256 "bf164063207f5fcc9fd5ea19539780c80f6aa94c2ea95061df33f854dd7888c5"
 
   bottle do
     cellar :any_skip_relocation
