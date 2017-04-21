@@ -1,7 +1,6 @@
 require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 
 class Composer < AbstractPhpPhar
-  init
   desc "Dependency Manager for PHP"
   homepage "https://getcomposer.org"
   url "https://getcomposer.org/download/1.4.1/composer.phar"
@@ -14,6 +13,8 @@ class Composer < AbstractPhpPhar
     sha256 "22f5ec8b978e9edf5ba70407b2757a9a4ceb1bd5db78a85aceb15bf66e78a888" => :el_capitan
     sha256 "22f5ec8b978e9edf5ba70407b2757a9a4ceb1bd5db78a85aceb15bf66e78a888" => :yosemite
   end
+
+  depends_on PharRequirement
 
   test do
     system "#{bin}/composer", "--version"
@@ -32,6 +33,15 @@ class Composer < AbstractPhpPhar
       $arg_string .= preg_match('/--(no-)?ansi/', $arg_string) ? '' : ' --ansi';
       passthru("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{@real_phar_file} $arg_string", $return_var);
       exit($return_var);
+    EOS
+  end
+
+  def caveats
+    caveats = <<-EOS
+    composer no longer depends on the homebrew php Formulas since the last couple of macOS releases
+    contains a php version compatible with composer. If this has been part of your workflow
+    previously then please make the appropriate changes and `brew install php71` or other appropriate
+    Homebrew PHP version.
     EOS
   end
 end
