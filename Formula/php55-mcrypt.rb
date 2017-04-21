@@ -16,11 +16,10 @@ class Php55Mcrypt < AbstractPhp55Extension
   end
 
   depends_on "mcrypt"
+  depends_on "libtool" => :run
 
   def install
     Dir.chdir "ext/mcrypt"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
@@ -32,11 +31,3 @@ class Php55Mcrypt < AbstractPhp55Extension
     write_config_file if build.with? "config-file"
   end
 end
-
-
-
-
-
-
-
-
