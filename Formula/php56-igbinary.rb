@@ -4,8 +4,8 @@ class Php56Igbinary < AbstractPhp56Extension
   init
   desc "Drop in replacement for the standard php serializer"
   homepage "https://pecl.php.net/package/igbinary"
-  url "https://github.com/igbinary/igbinary/archive/2.0.3.tar.gz"
-  sha256 "af1f19dbf64e37311099e444f2121b917349cc104abc858e34b094d1a296e179"
+  url "https://github.com/igbinary/igbinary/archive/2.0.4.tar.gz"
+  sha256 "7b71e60aeada2b9729f55f3552da28375e3c5c66194b2c905af15c3756cf34c8"
   head "https://github.com/igbinary/igbinary.git"
 
   bottle do
@@ -18,8 +18,6 @@ class Php56Igbinary < AbstractPhp56Extension
   depends_on "igbinary" => :build
 
   def install
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig

@@ -6,7 +6,7 @@ class Php54Memcached < AbstractPhp54Extension
   homepage "https://pecl.php.net/package/memcached"
   url "https://pecl.php.net/get/memcached-2.2.0.tgz"
   sha256 "17b9600f6d4c807f23a3f5c45fcd8775ca2e61d6eda70370af2bef4c6e159f58"
-  revision 2
+  revision 3
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
   bottle do
@@ -20,16 +20,10 @@ class Php54Memcached < AbstractPhp54Extension
   depends_on "pkg-config" => :build
   depends_on "php54-igbinary"
   depends_on "igbinary" => :build
-  if build.with? "sasl"
-    depends_on "libmemcached" => "with-sasl"
-  else
-    depends_on "libmemcached"
-  end
+  depends_on "libmemcached"
 
   def install
     Dir.chdir "memcached-#{version}" unless build.head?
-
-    ENV.universal_binary if build.universal?
 
     args = []
     args << "--with-libmemcached-dir=#{Formula["libmemcached"].opt_prefix}"

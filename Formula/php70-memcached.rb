@@ -6,7 +6,7 @@ class Php70Memcached < AbstractPhp70Extension
   homepage "https://pecl.php.net/package/memcached"
   url "https://github.com/php-memcached-dev/php-memcached/archive/v3.0.3.tar.gz"
   sha256 "9041ab502740678a2db158c152467b039e3e4d5c6b207939c2955c75fd345c96"
-  revision 1
+  revision 2
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
   bottle do
@@ -20,15 +20,9 @@ class Php70Memcached < AbstractPhp70Extension
   depends_on "pkg-config" => :build
   depends_on "php70-igbinary"
   depends_on "igbinary" => :build
-  if build.with? "sasl"
-    depends_on "libmemcached" => "with-sasl"
-  else
-    depends_on "libmemcached"
-  end
+  depends_on "libmemcached"
 
   def install
-    ENV.universal_binary if build.universal?
-
     args = []
     args << "--with-libmemcached-dir=#{Formula["libmemcached"].opt_prefix}"
     args << "--enable-memcached-igbinary"
