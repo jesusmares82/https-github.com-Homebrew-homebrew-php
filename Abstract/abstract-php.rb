@@ -299,7 +299,7 @@ INFO
     if build.with? "libmysql"
       args << "--with-mysql-sock=/tmp/mysql.sock"
       args << "--with-mysqli=#{HOMEBREW_PREFIX}/bin/mysql_config"
-      args << "--with-mysql=#{HOMEBREW_PREFIX}" unless (build.without? "legacy-mysql") || php_version.start_with?("5.5", "5.6", "7.")
+      args << "--with-mysql=#{HOMEBREW_PREFIX}" unless (build.without? "legacy-mysql") || php_version.start_with?("7.")
       args << "--with-pdo-mysql=#{HOMEBREW_PREFIX}"
     elsif build.with? "mysql"
       args << "--with-mysql-sock=/tmp/mysql.sock"
