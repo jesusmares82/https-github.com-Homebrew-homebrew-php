@@ -5,9 +5,10 @@ class Php53Mcrypt < AbstractPhp53Extension
   desc "An interface to the mcrypt library"
   homepage "http://php.net/manual/en/book.mcrypt.php"
   bottle do
-    sha256 "f9e5929632284e8e9111468c00420cce5dde3d087a06b436ac8fe399c00aca36" => :el_capitan
-    sha256 "0deb354896fc635a90f8291e6d8e975bfa25a2a5d67d74ba0e858d96067cacb4" => :yosemite
-    sha256 "a4d9eb7f48f167a388754f2cd38d18b497051017c098c85bfebdd7ac8ce53797" => :mavericks
+    rebuild 1
+    sha256 "c6f862cbbacc136ad2c396b8e0a683ab64f3dd79d077255ca7bb8733cb6c3308" => :sierra
+    sha256 "ec4211ec8b1a58277ee0e4ea1027b8c26e6cff8705b4d4388d4cd2201d3593f8" => :el_capitan
+    sha256 "433d37067dadee3f00b163d4d98fcf5d80861e8f10ce81784bbbd51a897aaa96" => :yosemite
   end
 
   url PHP_SRC_TARBALL
