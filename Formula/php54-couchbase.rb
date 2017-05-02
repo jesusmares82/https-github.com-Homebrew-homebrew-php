@@ -4,8 +4,8 @@ class Php54Couchbase < AbstractPhp54Extension
   init
   desc "Provides fast access to documents stored in a Couchbase Server."
   homepage "https://developer.couchbase.com/documentation/server/current/sdk/php/start-using-sdk.html"
-  url "https://pecl.php.net/get/couchbase-2.3.1.tgz"
-  sha256 "d9c70bcf6f65626dfe7e51a0527fea35cde28145f74a0ddbf41a64d395f7a493"
+  url "https://pecl.php.net/get/couchbase-2.3.2.tgz"
+  sha256 "e1c7fafb3d05904deb26613176eeaeb0bd8ed8a8d0f3f139c5ab40c6efa49897"
   head "https://github.com/couchbase/php-couchbase.git"
 
   bottle do
@@ -22,8 +22,6 @@ class Php54Couchbase < AbstractPhp54Extension
 
   def install
     Dir.chdir "couchbase-#{version}" unless build.head?
-
-    ENV.universal_binary if build.universal?
 
     args = []
     args << "--prefix=#{prefix}"
