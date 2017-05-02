@@ -10,9 +10,9 @@ class Php71Memcached < AbstractPhp71Extension
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
   bottle do
-    sha256 "99402bf49a97372173565cc88ab8c227aa20f32609952f7e28bf36c443c21489" => :sierra
-    sha256 "28f049a0ebde4f065d81322371f0a50c5b291dd97181980b6d7d4e15e1c03211" => :el_capitan
-    sha256 "b3d6cb852d6955dd66e6619016e22d29947b437e100336f75d5c398e4bbaedf1" => :yosemite
+    sha256 "ffcc34b28a09b17689c0ede9aaad41ab032a037c942493d926c9c15be31849d4" => :sierra
+    sha256 "c6f25f14630ea8edb6a1bd327f551d4d7dc6dbea7ec665cff12d9eb4aa921f72" => :el_capitan
+    sha256 "ed667969115de68e96fec78821021d230a710d848d7f0dd1548c94115ae8f0f6" => :yosemite
   end
 
   option "with-sasl", "Build with sasl support"
