@@ -10,9 +10,9 @@ class Php70Igbinary < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1c6f24492a7b4c515537cac5352f1de5f160f1b55dc36ce9beefff329e05d112" => :sierra
-    sha256 "79daed1d436e1dfb442fa628e7e2c064f40f8fc7effa64b313740afb43bc8819" => :el_capitan
-    sha256 "58c027255d32eb3a128343e245fd572d87e5176c0e0180afaeafc46bca98207e" => :yosemite
+    sha256 "2c312584419beda29386d19af26c1e9f427dd3972fde416815703bfa3da57aa2" => :sierra
+    sha256 "75066e2d07258321fc22be49f102d74b741f044abef65300e3e37a37caff2e02" => :el_capitan
+    sha256 "60c8a21dd555c4d1e5fbaed11b461d8b484f3b8fe55f1b1d9b1619f30e571729" => :yosemite
   end
 
   depends_on "igbinary" => :build
