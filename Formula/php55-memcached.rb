@@ -10,9 +10,9 @@ class Php55Memcached < AbstractPhp55Extension
   head "https://github.com/php-memcached-dev/php-memcached.git"
 
   bottle do
-    sha256 "dd8d159632983573331cf7f8442742e08b911fd7644a576804be4b2c8ed41e0a" => :sierra
-    sha256 "9156ca61e7d49dfee09c2d2f5d51bbf3ec52d1c2e8bb87ca15952e37906d4bb4" => :el_capitan
-    sha256 "bf788071352ba1b0db26b4ee53eee5a1a054164bb784944e0141d730aebc579f" => :yosemite
+    sha256 "5de6776e2c03f24d442bd256f80a491ab0daf8e035792ecd0aecd10c455714c5" => :sierra
+    sha256 "18ccdb8fa632655177c0c250ce559509410c86b76f0e52948c215b8af40289ee" => :el_capitan
+    sha256 "245e5dff40c5929d879ef0f76db642f0e81f07655de84955c70a1eaea112280b" => :yosemite
   end
 
   option "with-sasl", "Build with sasl support"
