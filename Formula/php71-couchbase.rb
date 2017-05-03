@@ -10,9 +10,9 @@ class Php71Couchbase < AbstractPhp71Extension
 
   bottle do
     cellar :any
-    sha256 "60993d36de9d3f52c12867892e93a1ea62ab1edbe1e85a1dae3eaaefac69b950" => :sierra
-    sha256 "fec261ab3e6fbc3385d4f1494492ef93ceccc1b86b5e23c540338d5b66f2c419" => :el_capitan
-    sha256 "13a8467f802e02466a1a15bb730c7fd5bd83986aeeefa0233943477916b6e993" => :yosemite
+    sha256 "2f6f4d70e11c80a92831b2836ad9a18b64434c79444e5ed0a8796ab2c3606f25" => :sierra
+    sha256 "b95e8fc998ba5fb11439ffb939b134b7350272507d483c83af54cbfad74e3ec9" => :el_capitan
+    sha256 "8412eee01bc59237450b4169d3e9a43c9b27116ec1aa8db6228da57a092d41c3" => :yosemite
   end
 
   depends_on "php71-igbinary"
