@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class PhpCodeSniffer < Formula
   desc "Check coding standards in PHP, JavaScript and CSS"
   homepage "https://pear.php.net/package/PHP_CodeSniffer"
-  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.8.1.tgz"
-  sha256 "1028c4fdd0b364886f870acf87fdc4042f77cbc38af6c51eca60c6c3f7e11a9b"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-3.0.0.tgz"
+  sha256 "f9a14d3a853fccca2ffcabd26f974d675638f5ed10934bcb5f041936b5acf785"
 
   bottle do
     cellar :any_skip_relocation
@@ -29,31 +29,28 @@ class PhpCodeSniffer < Formula
 
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
+
     if File.symlink? libexec+phpcs_script_name
       File.delete libexec+phpcs_script_name
     end
-    libexec.install_symlink prefix+"scripts"+phpcs_script_name
-
-    if File.symlink? bin+phpcs_script_name
-      File.delete bin+phpcs_script_name
-    end
-    bin.install_symlink prefix+"scripts"+phpcs_script_name
+    libexec.install_symlink prefix+"bin"+phpcs_script_name
 
     if File.symlink? libexec+phpcbf_script_name
       File.delete libexec+phpcbf_script_name
     end
-    libexec.install_symlink prefix+"scripts"+phpcbf_script_name
+    libexec.install_symlink prefix+"bin"+phpcbf_script_name
 
-    if File.symlink? bin+phpcbf_script_name
-      File.delete bin+phpcbf_script_name
-    end
-    bin.install_symlink prefix+"scripts"+phpcbf_script_name
+    # Remove Windows batch files
+    File.delete bin+"phpcbf.bat"
+    File.delete bin+"phpcs.bat"
 
     # Make sure the config file is preserved on upgrades. We do that
     # be substituting @data_dir@ with #{etc} and making sure the
     # folder #{etc}/PHP_CodeSniffer exists.
-    (etc+"PHP_CodeSniffer").mkpath
-    inreplace "#{prefix}/CodeSniffer.php", /@data_dir@/, etc
+    if File.exist?(prefix+"CodeSniffer.conf")
+      (etc+"PHP_CodeSniffer").mkpath
+      inreplace "#{prefix}/CodeSniffer.conf", /@data_dir@/, etc
+    end
 
     # Create a place for other formulas to link their standards.
     phpcs_standards.mkpath
