@@ -4,8 +4,8 @@ class Php70Mongodb < AbstractPhp70Extension
   init
   desc "MongoDB driver for PHP."
   homepage "https://pecl.php.net/package/mongodb"
-  url "https://pecl.php.net/get/mongodb-1.2.8.tgz"
-  sha256 "38090c38f0d52dd0a4c41c4f7f7e4e4a86a6375b6c5009e754b19451212d0bdd"
+  url "https://pecl.php.net/get/mongodb-1.2.9.tgz"
+  sha256 "dac7f755001e454f41bd1ebf54a47754c524062d41244a75ea7ee3a9825a9d2b"
   head "https://github.com/mongodb/mongo-php-driver.git"
 
   bottle do
@@ -18,8 +18,6 @@ class Php70Mongodb < AbstractPhp70Extension
 
   def install
     Dir.chdir "mongodb-#{version}" unless build.head?
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
