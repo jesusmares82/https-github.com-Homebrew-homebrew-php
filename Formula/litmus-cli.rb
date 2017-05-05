@@ -4,9 +4,9 @@ class LitmusCli < AbstractPhpPhar
   init
   desc "Command-line interface for Litmus email testing service"
   homepage "https://git.dev-digitalmobil.com/klaus/litmus-cli"
-  url "https://git.dev-digitalmobil.com/klaus/litmus-cli/builds/12618/artifacts/file/build/litmus-cli.phar"
-  version "0.2.0"
-  sha256 "c2864dfea9c4c9a8f8ea08dcb33bb3dff963a792abae47aad32e3ed763e00fae"
+  url "https://git.dev-digitalmobil.com/klaus/litmus-cli/builds/13076/artifacts/file/build/litmus-cli.phar"
+  version "0.3.2"
+  sha256 "d2bcfe00bf5adabfbaa9798f8accda0f8ced37c8cba282b1e588b75c9a656564"
 
   bottle :unneeded
 
