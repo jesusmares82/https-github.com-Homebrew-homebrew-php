@@ -26,8 +26,8 @@ Please refer to [this section](#filing-bug-reports) for more information.
 
 Bugs inevitably happen - none of us are running EVERY conceivable setup - but hopefully the install process can be made smoother through the following tips:
 
-- If you have recently upgraded your Mac OS version or Xcode, read [this section](#common-upgrade-issues).
-- Upgrade your OS X to the latest patch version. So if you are on `10.9.0`, upgrade to `10.9.2` etc.
+- If you have recently upgraded your macOS version or Xcode, read [this section](#common-upgrade-issues).
+- Upgrade your macOS to the latest patch version. So if you are on `10.9.0`, upgrade to `10.9.2` etc.
 - Ensure Xcode is installed and up to date.
 - Run `brew update`. If you tapped an old version of `homebrew-php` or have an old brew installation, this may cause some installation issues.
 - Run `brew upgrade`. This will upgrade all installed formulae. Sometimes an old version of a formula is installed and this breaks our dependency management. Unfortunately, there is currently no way to force Homebrew to upgrade only those we depend upon. This is a possible fix for those with `libxml` related compilation issues.
@@ -35,7 +35,7 @@ Bugs inevitably happen - none of us are running EVERY conceivable setup - but ho
 - If you upgraded to Mavericks 10.9.x, please also upgrade to the latest Xcode, 5.0.1 and make sure you re-install Command Line Tools: `xcode-select --install`
 - On Mavericks 10.9.x, if  `xcode-select --install` displays the error message `Can't install the software because it is not currently available from the Software Update server.`, download Command Line Tools from [Apple Developer]( https://developer.apple.com/downloads/index.action?name=Command%20Line%20Tools).
 ![Xcode 5 command line tool installation](http://i.imgur.com/BKde0XJ.jpg)
-- If you are using Xcode 4, install the `Command Line Tools`. If you think you have them installed, please ensure that an update of Xcode or OS X did not remove them. You can verify this by launching Xcode, opening preferences, going to the Downloads tab, and clicking the `Install` button:
+- If you are using Xcode 4, install the `Command Line Tools`. If you think you have them installed, please ensure that an update of Xcode or macOS did not remove them. You can verify this by launching Xcode, opening preferences, going to the Downloads tab, and clicking the `Install` button:
 ![command line tool installation](http://f.cl.ly/items/411X3k0m2O1p1U2Y0I30/Image%202012.11.15%2011:32:41%20AM.png)
 - Delete your `~/.pearrc` file before attempting to install a `PHP` version, as the pear step will fail if an existing, incompatible version exists. We try to detect and remove them ourselves, but sometimes this fails.
 - Run `brew doctor` and fix any issues you can.
@@ -53,7 +53,7 @@ Doing all of these might be a hassle, but will more than likely ensure you eithe
 
 ## Common upgrade issues
 
-If you have recently upgraded your Mac OS X version or Xcode, you may have some compilation or missing libraries issues. The following information may help you solve most of the problems:
+If you have recently upgraded your macOS version or Xcode, you may have some compilation or missing libraries issues. The following information may help you solve most of the problems:
 
 - Ensure you have properly upgraded CLT depending on your Xcode version.
 - Proceed step by step to isolate the responsible formula. If you need to install `php56` and `php56-imagick`, don't do `brew install php56 php56-imagick`. Just do `brew install php56`, ensure everything is working as expected, check the output of `phpinfo()`, restart your Apache server with `sudo apachectl restart`. Then you can install the next formula `brew install php56-imagick`.
@@ -67,7 +67,7 @@ An example of the best practice(s) for filling out bug reports can be seen here:
 
 Please include the following information in your bug report:
 
-- OS X Version: eg. 10.7.3, 10.6.3
+- macOS Version: eg. 10.7.3, 10.6.3
 - Homebrew Version: `brew -v`
 - PHP Version in use: stock-apple, homebrew-php stable, homebrew-php devel, homebrew-php head, custom
 - Xcode Version: 4.4, 4.3, 4.0, 3 etc.
@@ -111,7 +111,7 @@ $ brew install php56
 
 That's it!
 
-Please also follow the instructions from brew info at the end of the install to ensure you properly installed your PHP version.
+Please also follow the instructions from `brew info` at the end of the install to ensure you properly installed your PHP version.
 
 ### Installing Multiple Versions
 
