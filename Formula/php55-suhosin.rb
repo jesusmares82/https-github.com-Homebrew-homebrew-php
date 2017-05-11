@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php55Suhosin < AbstractPhp55Extension
   init
   desc "Suhosin is an advanced protection system for PHP installations."
-  homepage "http://suhosin.org/stories/index.html"
-  url "https://github.com/stefanesser/suhosin/archive/0.9.37.1.tar.gz"
-  sha256 "322ba104a17196bae63d39404da103fd011b09fde0f02484dc44366511c586ba"
+  homepage "https://suhosin.org/stories/index.html"
+  url "https://github.com/sektioneins/suhosin/archive/0.9.38.tar.gz"
+  sha256 "c02d76c4e7ce777910a37c18181cb67fd9e90efe0107feab3de3131b5f89bcea"
   head "https://github.com/stefanesser/suhosin.git"
 
   bottle do
@@ -15,8 +15,6 @@ class Php55Suhosin < AbstractPhp55Extension
   end
 
   def install
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
