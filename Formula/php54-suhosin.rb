@@ -9,9 +9,10 @@ class Php54Suhosin < AbstractPhp54Extension
   head "https://github.com/stefanesser/suhosin.git"
 
   bottle do
-    sha256 "264fc0dbd8dd7a5ea69a35a3b0e7861dc14ded0691f7a1d38821fb72c508b4ef" => :yosemite
-    sha256 "ee63d23d3ac6fca7d6a534923bf0ef08bcfdc73697ea06ef5baa7ba6f29b91da" => :mavericks
-    sha256 "315bbfa4ebcc130ebbc0be2556c5cb32a27340a50da0e53810eb983c10ae8030" => :mountain_lion
+    cellar :any_skip_relocation
+    sha256 "9bb8a882b45eda9d0511804f0b11499e96fe77b3ee4729295c8fcab2d6c18386" => :sierra
+    sha256 "0ba428c797f98c09afffc7e5dc2e1eed1d073848381721618a2c4db8bd1e2085" => :el_capitan
+    sha256 "8ad5fafb4407ac08e40a92076921fecd5a3a02c6e8deb6e6ec2def54ea88a28f" => :yosemite
   end
 
   def install
