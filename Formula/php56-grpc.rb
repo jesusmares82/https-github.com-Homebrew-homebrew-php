@@ -4,8 +4,8 @@ class Php56Grpc < AbstractPhp56Extension
   init
   desc "The PHP extension for the gRPC library"
   homepage "http://grpc.io"
-  url "https://pecl.php.net/get/grpc-1.2.0.tgz"
-  sha256 "df205473888ad711e6c49df51732afee3e4fbcdd8dd717497531b733b22dd4ac"
+  url "https://pecl.php.net/get/grpc-1.3.2.tgz"
+  sha256 "5ebb79868857155471b563751fb726b45da18e5a5708878253937bae0e629a84"
 
   bottle do
     cellar :any_skip_relocation

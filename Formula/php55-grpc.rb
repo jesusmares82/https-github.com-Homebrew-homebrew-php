@@ -4,8 +4,8 @@ class Php55Grpc < AbstractPhp55Extension
   init
   desc "The PHP extension for the gRPC library"
   homepage "http://grpc.io"
-  url "https://pecl.php.net/get/grpc-1.1.0.tgz"
-  sha256 "4d7ad5d1994599d098f072688eb143ba73be12c58cf2c7d154189e68427c79ee"
+  url "https://pecl.php.net/get/grpc-1.3.2.tgz"
+  sha256 "5ebb79868857155471b563751fb726b45da18e5a5708878253937bae0e629a84"
 
   bottle do
     cellar :any_skip_relocation
