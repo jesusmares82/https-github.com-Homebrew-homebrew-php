@@ -4,7 +4,7 @@ class Php71Gmp < AbstractPhp71Extension
   init
   desc "GMP core php extension"
   homepage "http://php.net/manual/en/book.gmp.php"
-  revision 10
+  revision 11
 
   bottle do
     sha256 "27f090f0abcbdb790f1545060226081206d08bd5c1db39ddb7899cb05da77b8a" => :sierra
@@ -20,8 +20,6 @@ class Php71Gmp < AbstractPhp71Extension
 
   def install
     Dir.chdir "ext/gmp"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",

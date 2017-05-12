@@ -4,7 +4,7 @@ class Php71Mcrypt < AbstractPhp71Extension
   init
   desc "Interface to the mcrypt library"
   homepage "http://php.net/manual/en/book.mcrypt.php"
-  revision 11
+  revision 12
 
   bottle do
     sha256 "6e4f01d3f4d1a43703f594a850ddd809e14058aa43ddf90f4cbaaca20212f151" => :sierra
@@ -21,8 +21,6 @@ class Php71Mcrypt < AbstractPhp71Extension
 
   def install
     Dir.chdir "ext/mcrypt"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",

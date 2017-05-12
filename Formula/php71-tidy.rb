@@ -4,7 +4,7 @@ class Php71Tidy < AbstractPhp71Extension
   init
   desc "Tidy HTML clean and repair utility"
   homepage "http://php.net/manual/en/book.tidy.php"
-  revision 10
+  revision 11
 
   bottle do
     sha256 "3f03f4598b124c443e95191c8731a5a75ca1bcbbbc9771d3fb9b9bbb1ad43b16" => :sierra
@@ -20,8 +20,6 @@ class Php71Tidy < AbstractPhp71Extension
 
   def install
     Dir.chdir "ext/tidy"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",

@@ -4,7 +4,7 @@ class Php71Pspell < AbstractPhp71Extension
   init
   desc "Extension to check the spelling"
   homepage "http://php.net/manual/en/book.pspell.php"
-  revision 11
+  revision 12
 
   bottle do
     sha256 "62f5b2079ec953eb85a37bf0b67646d475944b739764ae036df1574328c8b014" => :sierra
@@ -20,8 +20,6 @@ class Php71Pspell < AbstractPhp71Extension
 
   def install
     Dir.chdir "ext/pspell"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
