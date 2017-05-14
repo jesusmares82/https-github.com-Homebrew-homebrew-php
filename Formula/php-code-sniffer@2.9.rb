@@ -1,17 +1,19 @@
 require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 
-class PhpCodeSniffer < Formula
+class PhpCodeSnifferAT29 < Formula
   desc "Check coding standards in PHP, JavaScript and CSS"
   homepage "https://pear.php.net/package/PHP_CodeSniffer"
-  url "http://download.pear.php.net/package/PHP_CodeSniffer-3.0.0.tgz"
-  sha256 "f9a14d3a853fccca2ffcabd26f974d675638f5ed10934bcb5f041936b5acf785"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.9.0.tgz"
+  sha256 "c55cee0b7afe596c63a46116b263c2bad6507996d61062eae23be4712ec683cc"
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e043fd6315e14162cc171454b2d38aad1bb030a020f17a452bf467c9d0b81438" => :sierra
-    sha256 "74e7c4a9b273f9e1c0102648256ecc2d4ebcea2886203e0a77c25ff477441a60" => :el_capitan
-    sha256 "74e7c4a9b273f9e1c0102648256ecc2d4ebcea2886203e0a77c25ff477441a60" => :yosemite
+    sha256 "c94edeb750d58d0f1094a64bb3d2f319e670e623e0b4b978f2ed2626e1662130" => :sierra
+    sha256 "5fd49ae1ba8cbc66b9895de6a3abc3590852ce8c254c8221157a74857a3acfc7" => :el_capitan
+    sha256 "c94edeb750d58d0f1094a64bb3d2f319e670e623e0b4b978f2ed2626e1662130" => :yosemite
   end
+
+  keg_only :versioned_formula
 
   depends_on PhpMetaRequirement
 
@@ -29,28 +31,31 @@ class PhpCodeSniffer < Formula
 
   def install
     prefix.install Dir["PHP_CodeSniffer-#{version}/*"]
-
     if File.symlink? libexec+phpcs_script_name
       File.delete libexec+phpcs_script_name
     end
-    libexec.install_symlink prefix+"bin"+phpcs_script_name
+    libexec.install_symlink prefix+"scripts"+phpcs_script_name
+
+    if File.symlink? bin+phpcs_script_name
+      File.delete bin+phpcs_script_name
+    end
+    bin.install_symlink prefix+"scripts"+phpcs_script_name
 
     if File.symlink? libexec+phpcbf_script_name
       File.delete libexec+phpcbf_script_name
     end
-    libexec.install_symlink prefix+"bin"+phpcbf_script_name
+    libexec.install_symlink prefix+"scripts"+phpcbf_script_name
 
-    # Remove Windows batch files
-    File.delete bin+"phpcbf.bat"
-    File.delete bin+"phpcs.bat"
+    if File.symlink? bin+phpcbf_script_name
+      File.delete bin+phpcbf_script_name
+    end
+    bin.install_symlink prefix+"scripts"+phpcbf_script_name
 
     # Make sure the config file is preserved on upgrades. We do that
     # be substituting @data_dir@ with #{etc} and making sure the
     # folder #{etc}/PHP_CodeSniffer exists.
-    if File.exist?(prefix+"CodeSniffer.conf")
-      (etc+"PHP_CodeSniffer").mkpath
-      inreplace "#{prefix}/CodeSniffer.conf", /@data_dir@/, etc
-    end
+    (etc+"PHP_CodeSniffer").mkpath
+    inreplace "#{prefix}/CodeSniffer.php", /@data_dir@/, etc
 
     # Create a place for other formulas to link their standards.
     phpcs_standards.mkpath
@@ -71,10 +76,6 @@ class PhpCodeSniffer < Formula
     You can read more about phpcs by running:
 
       brew home #{name}
-
-    Sniffs must be upgraded to be compatible with version 3.0
-
-      https://github.com/squizlabs/PHP_CodeSniffer/wiki/Version-3.0-Upgrade-Guide
 
     EOS
   end
