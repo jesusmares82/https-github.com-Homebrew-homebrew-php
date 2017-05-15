@@ -4,14 +4,9 @@ class Php55Ioncubeloader < AbstractPhp55Extension
   init
   desc "Loader for ionCube Secured Files"
   homepage "http://www.ioncube.com/loaders.php"
-  if MacOS.prefer_64_bit?
-    url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz"
-    sha256 "e3649def6e14f8d6aad08326e6579a7b7e660e3eca65c240755f759b3920efa8"
-  else
-    url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz"
-    sha256 "96a0e211971352acb843718565c371938881da7d77dd8bca7519466f06dfdda2"
-  end
-  version "6.0.5"
+  url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz"
+  sha256 "1c9b17a4750578299277cc69631769ecc63708da0b12253cb333434add10332a"
+  version "6.0.9"
 
   bottle do
     cellar :any_skip_relocation

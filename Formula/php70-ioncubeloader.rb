@@ -4,14 +4,9 @@ class Php70Ioncubeloader < AbstractPhp70Extension
   init
   desc "Loader for ionCube Secured Files"
   homepage "http://www.ioncube.com/loaders.php"
-  if MacOS.prefer_64_bit?
-    url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz"
-    sha256 "267f9c4810eec91420f338e3206c1fce02e4ee85e1c491a7234707ab7fb200f5"
-  else
-    url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86.tar.gz"
-    sha256 "1413fd42c03eabfcae3b37ebbbf1fbe08d89b865c07dc166231ef1fda26fe2aa"
-  end
-  version "6.0.8"
+  url "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz"
+  sha256 "1c9b17a4750578299277cc69631769ecc63708da0b12253cb333434add10332a"
+  version "6.0.9"
 
   bottle do
     cellar :any_skip_relocation
