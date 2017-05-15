@@ -10,9 +10,9 @@ class Php53Ioncubeloader < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "997f966fa75264ba92dcca40b27ac14e3efba927b48fbc84a62e12f964f4315f" => :el_capitan
-    sha256 "b2976f047825b83eb2ff0c55849fb87c048f282f5d87f8358843c365d9c80ae3" => :yosemite
-    sha256 "55ebd896f52b6ea7ecb061984010851a41febd6bd694a9d4be4af391b2f4fd40" => :mavericks
+    sha256 "028383929a4d720b6fa7984900514bf5a23732c1cc540db9c75a1770a04a5877" => :sierra
+    sha256 "5ca1fb054e9f4d2c7a01a81398cdf8a0967394541d217e4b84cecc65f69857e0" => :el_capitan
+    sha256 "2f88d04d1dc2b03294b9f3f095471ab99937a0a391379764d5f87b1832cb08d7" => :yosemite
   end
 
   def extension_type
