@@ -4,8 +4,8 @@ class Php56Xdebug < AbstractPhp56Extension
   init
   desc "Provides debugging and profiling capabilities for PHP"
   homepage "https://xdebug.org"
-  url "https://pecl.php.net/get/xdebug-2.5.3.tgz"
-  sha256 "4cce3d495243e92cd2e1d764a33188d60c85f0d2087d94d4203c354ea03530f4"
+  url "https://pecl.php.net/get/xdebug-2.5.4.tgz"
+  sha256 "300ca6fc3d95025148b0b5d0c96e14e54299e536a93a5d68c67b2cf32c9432b8"
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
