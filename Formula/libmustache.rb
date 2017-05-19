@@ -7,9 +7,9 @@ class Libmustache < Formula
 
   bottle do
     cellar :any
-    sha256 "53bcf4c67512f00d27e4a16f55c4e8f496a195a0fcd7bffa544fa211eb3b6b41" => :sierra
-    sha256 "1752f44c30a728271c23cd3c52be8b60645aef932187ab3673c2b4a09dbe9af7" => :el_capitan
-    sha256 "937826c1b7b51d2d789669223d5aad4ee334abe5f989ac3d05e78702e7353f65" => :yosemite
+    sha256 "d682ca1be6e0528710a85ce581fd009f4e28a28fc29c2070a8d2e90273e5b92e" => :sierra
+    sha256 "20d0dd1ccd77e7d4da10386eb4e66ac41dac71911c77937da71852ae984a7397" => :el_capitan
+    sha256 "6e5796a42374e97fd7ecc05485001430f62127e510b449c6f7200d22c9f5cb8e" => :yosemite
   end
 
   depends_on "autoconf" => :build
