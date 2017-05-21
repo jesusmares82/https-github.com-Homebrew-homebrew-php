@@ -5,9 +5,9 @@ class Php70 < AbstractPhp
   desc "PHP Version 7.0"
   revision 11
   bottle do
-    sha256 "527ee71ab2782cdace2385dcb2fc4c579976971c8cbb76d087ef87d8b21b1924" => :sierra
-    sha256 "71c6890f6d1c51aa46df5632fc7c51c44e2cb32a242006cf7feddaeb9494bbd6" => :el_capitan
-    sha256 "ea5ff6d59b505143736d66c37b73002cf1fca8f8fffaebe95a75d568e18ea0db" => :yosemite
+    sha256 "c07204ffdbc09cbf01c8e045cf138b3966a13a3c3d7cab26f4367766fccb9c0d" => :sierra
+    sha256 "ccb19bf75c9e129c11868d66272af4668374369c1793a19b6a83d752fd2f7518" => :el_capitan
+    sha256 "e892c0c2720475e3ec98e07dd9ba140b841918b3f630cc0b6dea510f864d2842" => :yosemite
   end
 
   include AbstractPhpVersion::Php70Defs
