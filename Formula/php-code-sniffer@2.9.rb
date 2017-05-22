@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class PhpCodeSnifferAT29 < Formula
   desc "Check coding standards in PHP, JavaScript and CSS"
   homepage "https://pear.php.net/package/PHP_CodeSniffer"
-  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.9.0.tgz"
-  sha256 "c55cee0b7afe596c63a46116b263c2bad6507996d61062eae23be4712ec683cc"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-2.9.1.tgz"
+  sha256 "d8c67ddf2b303259e9b0f4294e3940dbc5316c0c2609b59acc95f6ec128b9241"
 
   bottle do
     cellar :any_skip_relocation
