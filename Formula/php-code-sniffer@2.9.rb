@@ -8,9 +8,9 @@ class PhpCodeSnifferAT29 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c94edeb750d58d0f1094a64bb3d2f319e670e623e0b4b978f2ed2626e1662130" => :sierra
-    sha256 "5fd49ae1ba8cbc66b9895de6a3abc3590852ce8c254c8221157a74857a3acfc7" => :el_capitan
-    sha256 "c94edeb750d58d0f1094a64bb3d2f319e670e623e0b4b978f2ed2626e1662130" => :yosemite
+    sha256 "c76387c507053760cf6fb117d7ec6356f44e4fb64726b9b4f817a909aef2a49c" => :sierra
+    sha256 "d4910f78136cc8c1fa217148bbd06db2f9249c6f9ef4577a64e954fafae0c21a" => :el_capitan
+    sha256 "d4910f78136cc8c1fa217148bbd06db2f9249c6f9ef4577a64e954fafae0c21a" => :yosemite
   end
 
   keg_only :versioned_formula
