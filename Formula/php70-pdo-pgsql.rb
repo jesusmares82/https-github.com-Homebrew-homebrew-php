@@ -4,7 +4,7 @@ class Php70PdoPgsql < AbstractPhp70Extension
   init
   desc "Unified PostgreSQL driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_pgsql"
-  revision 9
+  revision 10
 
   bottle do
     cellar :any
@@ -25,8 +25,6 @@ class Php70PdoPgsql < AbstractPhp70Extension
 
   def install
     Dir.chdir "ext/pdo_pgsql"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}", "--with-pdo-pgsql=#{Formula["postgresql"].prefix}", phpconfig
