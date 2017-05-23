@@ -4,7 +4,7 @@ class Php70PdoDblib < AbstractPhp70Extension
   init
   desc "Unified Sybase-DB style driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
-  revision 9
+  revision 10
 
   bottle do
     sha256 "dc9e832afdda37c20d81c9fa68e5dd2ba50a6fd72fb9a6ae7f7507bcbcfeaad2" => :sierra
@@ -24,8 +24,6 @@ class Php70PdoDblib < AbstractPhp70Extension
 
   def install
     Dir.chdir "ext/pdo_dblib" unless build.head?
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}", "--with-pdo-dblib=#{Formula["freetds"].opt_prefix}", phpconfig
