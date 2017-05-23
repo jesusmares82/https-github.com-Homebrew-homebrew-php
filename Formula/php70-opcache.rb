@@ -4,7 +4,7 @@ class Php70Opcache < AbstractPhp70Extension
   init
   desc "OPcache improves PHP performance"
   homepage "http://php.net/manual/en/book.opcache.php"
-  revision 9
+  revision 10
 
   bottle do
     cellar :any_skip_relocation
@@ -25,8 +25,6 @@ class Php70Opcache < AbstractPhp70Extension
 
   def install
     Dir.chdir "ext/opcache"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
