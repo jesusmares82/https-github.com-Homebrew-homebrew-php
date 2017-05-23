@@ -4,7 +4,7 @@ class Php70Intl < AbstractPhp70Extension
   init
   desc "Wrapper for the ICU library"
   homepage "http://php.net/manual/en/book.intl.php"
-  revision 12
+  revision 13
 
   bottle do
     sha256 "3dc17f4f6ce4596a1fe1f245c91326cb1be7c5d0431162df1c903f4e75db47f0" => :sierra
@@ -20,8 +20,6 @@ class Php70Intl < AbstractPhp70Extension
 
   def install
     Dir.chdir "ext/intl"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
