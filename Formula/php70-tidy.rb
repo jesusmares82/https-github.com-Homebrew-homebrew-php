@@ -4,7 +4,7 @@ class Php70Tidy < AbstractPhp70Extension
   init
   desc "Tidy HTML clean and repair utility"
   homepage "http://php.net/manual/en/book.tidy.php"
-  revision 9
+  revision 10
 
   bottle do
     sha256 "03fa669a6c9fbf6e7c8ed96e50b2e4d10dbaa6b2a6e1fa0fa153617dd3a2b4d4" => :sierra
@@ -23,8 +23,6 @@ class Php70Tidy < AbstractPhp70Extension
 
     # API compatibility with tidy-html5 v5.0.0 - https://github.com/htacg/tidy-html5/issues/224
     inreplace "tidy.c", "buffio.h", "tidybuffio.h"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
