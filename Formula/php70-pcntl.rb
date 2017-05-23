@@ -4,7 +4,7 @@ class Php70Pcntl < AbstractPhp70Extension
   init
   desc "Process Control support"
   homepage "http://php.net/manual/en/book.pcntl.php"
-  revision 9
+  revision 10
 
   bottle do
     cellar :any_skip_relocation
@@ -19,8 +19,6 @@ class Php70Pcntl < AbstractPhp70Extension
 
   def install
     Dir.chdir "ext/pcntl"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
