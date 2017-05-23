@@ -4,7 +4,7 @@ class Php70Snmp < AbstractPhp70Extension
   init
   desc "SNMP core php extension"
   homepage "http://php.net/manual/en/book.snmp.php"
-  revision 9
+  revision 10
 
   bottle do
     sha256 "1d6c2d046f126a587f5a83f625b29d55937b5d2e767afc563bfc1c643088f13c" => :sierra
@@ -20,8 +20,6 @@ class Php70Snmp < AbstractPhp70Extension
 
   def install
     Dir.chdir "ext/snmp"
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
