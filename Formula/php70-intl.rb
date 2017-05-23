@@ -7,9 +7,9 @@ class Php70Intl < AbstractPhp70Extension
   revision 13
 
   bottle do
-    sha256 "3dc17f4f6ce4596a1fe1f245c91326cb1be7c5d0431162df1c903f4e75db47f0" => :sierra
-    sha256 "30b2edb93ff2ff030974bc9d1816d3c258cda506c0d7de0f190a1ecdb0224549" => :el_capitan
-    sha256 "4984165d8d649646dbc0ab5fc80a10e0fb79d28438f998b31eff9aeb566e5294" => :yosemite
+    sha256 "8486c137dfe2ec122e110e5e56c07baef03021d5ab09e109c2f77532b8cc2969" => :sierra
+    sha256 "dba84ec8a32fac0a29dd91e08a23f33d6ac4ab17b99e0d89a1b5c47a9f89cbda" => :el_capitan
+    sha256 "7076d7d93bfab086b4703131cc110d3e04eca6962b1b34f4539826108e3ac7fc" => :yosemite
   end
 
   url PHP_SRC_TARBALL
