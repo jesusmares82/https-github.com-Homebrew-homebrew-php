@@ -8,17 +8,19 @@ class Php70Redis < AbstractPhp70Extension
   sha256 "a060fcb7784b9323905cf58557d924a394bb539350bea28d02f910df8ddea1f6"
   head "https://github.com/phpredis/phpredis.git"
 
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "fbe58c3647f0c2b04b5db2fb3242ff73bb2598bc449a3df5d499b426e886bdb9" => :sierra
-    sha256 "e628da9d97fde10782289fc255eee02f4026dae4e8439388a31d01bc7b61564f" => :el_capitan
-    sha256 "bcf300a15dce9abc1d8a44b8389466311585ac54010777e51ac3ef5c4b4d1ec9" => :yosemite
-  end
+  depends_on "php70-igbinary"
+  depends_on "igbinary" => :build
 
   def install
+    args = []
+    args << "--enable-redis-igbinary"
+
     safe_phpize
 
-    system "./configure", "--prefix=#{prefix}", phpconfig
+    # Install symlink to igbinary headers inside memcached build directory
+    (Pathname.pwd/"ext").install_symlink Formula["igbinary"].opt_include/"php5" => "igbinary"
+
+    system "./configure", "--prefix=#{prefix}", phpconfig, *args
     system "make"
 
     prefix.install "modules/redis.so"

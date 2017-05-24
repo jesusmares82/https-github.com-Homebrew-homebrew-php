@@ -22,10 +22,10 @@ class Php56Redis < AbstractPhp56Extension
     args = []
     args << "--enable-redis-igbinary"
 
+    safe_phpize
+
     # Install symlink to igbinary headers inside memcached build directory
     (Pathname.pwd/"ext").install_symlink Formula["igbinary"].opt_include/"php5" => "igbinary"
-
-    safe_phpize
 
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
