@@ -9,6 +9,13 @@ class Php70Redis < AbstractPhp70Extension
   revision 4
   head "https://github.com/phpredis/phpredis.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "53ed8fae7cb609d223dfa0bc3af030112f479d9d5c3ab87fcc686284c4ec1261" => :sierra
+    sha256 "ed501a733910da91c54e8b021ae8aec9b3e200b71b2f80248782905d144127e8" => :el_capitan
+    sha256 "10ea078e07b6f4db496af4b3d43fab13bab6b8398d07a47dee88dd5bfd85b0c5" => :yosemite
+  end
+
   depends_on "php70-igbinary"
   depends_on "igbinary" => :build
 
