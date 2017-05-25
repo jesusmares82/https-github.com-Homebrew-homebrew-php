@@ -6,6 +6,7 @@ class Php71Redis < AbstractPhp71Extension
   homepage "https://github.com/phpredis/phpredis"
   url "https://github.com/phpredis/phpredis/archive/3.1.2.tar.gz"
   sha256 "a060fcb7784b9323905cf58557d924a394bb539350bea28d02f910df8ddea1f6"
+  revision 4
   head "https://github.com/phpredis/phpredis.git"
 
   depends_on "php71-igbinary"
