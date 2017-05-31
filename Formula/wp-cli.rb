@@ -4,9 +4,9 @@ class WpCli < Formula
   include Language::PHP::Composer
 
   desc "Command-line tools for managing WordPress installations."
-  homepage "http://wp-cli.org/"
-  url "https://github.com/wp-cli/wp-cli/archive/v1.1.0.tar.gz"
-  sha256 "ff67e6fa74e42360b64baf09c559cfcfe55e743cd5f24e43f2b89e99098cb843"
+  homepage "https://wp-cli.org/"
+  url "https://github.com/wp-cli/wp-cli/archive/v1.2.0.tar.gz"
+  sha256 "0320f865a10ca412603abf7b502dfa7056a41f72f6319f3962663f1cf2d65392"
   head "https://github.com/wp-cli/wp-cli.git"
 
   bottle do
@@ -17,7 +17,7 @@ class WpCli < Formula
   end
 
   option "without-bash-completion", "Don't install bash completion"
-  option "without-package-index", "Don't add package index repository (http://wp-cli.org/package-index)"
+  option "without-package-index", "Don't add package index repository (https://wp-cli.org/package-index)"
 
   def install
     composer_install
@@ -30,7 +30,7 @@ class WpCli < Formula
     end
 
     if build.with? "package-index"
-      composer "config", "--file=#{prefix}/composer.json", "repositories.wp-cli", "composer", "http://wp-cli.org/package-index/"
+      composer "config", "--file=#{prefix}/composer.json", "repositories.wp-cli", "composer", "https://wp-cli.org/package-index/"
     end
   end
 
