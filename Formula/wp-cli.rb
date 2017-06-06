@@ -11,9 +11,9 @@ class WpCli < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f9d41f7b1bdb6d688fbe7ec9783ea8c084cfdb8be24a5690c6d71157c5e7099a" => :sierra
-    sha256 "56205bf15415228b4a7325e5fa4766eb3d6b1c16decc2a2e201543836ce1e310" => :el_capitan
-    sha256 "3b368aa04b2d8701adbaf9235ea6414e04ac16967c094f4e5f5d2333ee1a9c86" => :yosemite
+    sha256 "84cc1ba0087ebf1799716fcb612ad95b5d3ee9d1ed6b785218ad45d05f6b2f5b" => :sierra
+    sha256 "7d9d54521d32f92ad06bab84ded0182f3125a985da0ed04c20dd7f905f467b24" => :el_capitan
+    sha256 "fc2840f48f65de9207fe4a40f29e2e67e028adf77e10e16248346f5445ae15c3" => :yosemite
   end
 
   option "without-bash-completion", "Don't install bash completion"
