@@ -5,8 +5,8 @@ class WpCli < Formula
 
   desc "Command-line tools for managing WordPress installations."
   homepage "https://wp-cli.org/"
-  url "https://github.com/wp-cli/wp-cli/archive/v1.2.0.tar.gz"
-  sha256 "0320f865a10ca412603abf7b502dfa7056a41f72f6319f3962663f1cf2d65392"
+  url "https://github.com/wp-cli/wp-cli/archive/v1.2.1.tar.gz"
+  sha256 "7919d28dc3570696d2971ded5a14701da7cc10ffcc87935b781c28e1601bdffb"
   head "https://github.com/wp-cli/wp-cli.git"
 
   bottle do
