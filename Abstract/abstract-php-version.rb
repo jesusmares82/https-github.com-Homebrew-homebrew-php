@@ -71,4 +71,15 @@ class AbstractPhpVersion < Formula
       :sha256 => "28eaa4784f1bd8b7dc71206dc8c4375510199432dc17af6906b14d16b3058697",
     }.freeze
   end
+
+  module Php72Defs
+    PHP_SRC_TARBALL = "https://downloads.php.net/~pollita/php-7.2.0alpha1.tar.bz2".freeze
+    PHP_GITHUB_URL  = "https://github.com/php/php-src.git".freeze
+    PHP_VERSION     = "7.2.0alpha1".freeze
+    PHP_BRANCH      = "master".freeze
+
+    PHP_CHECKSUM    = {
+      :sha256 => "85b8e87982104659a99374af9932fc3f75ffa5dee244c7244837ab052674577e",
+    }.freeze
+  end
 end
