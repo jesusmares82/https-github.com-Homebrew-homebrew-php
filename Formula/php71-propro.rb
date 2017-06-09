@@ -10,9 +10,9 @@ class Php71Propro < AbstractPhp71Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "5ee7b33aea305cef8dc7abcf095b0bd14caa587c92d7010d6b8a54377f22f901" => :sierra
-    sha256 "9c89a5d5b1fbf1d44482c29b46f3a5e09d05289f9f38cd1753718d6d61d0363f" => :el_capitan
-    sha256 "28815dd57288f3aa81a0c8bb9fb011598632025aff444ee2864bf6c0c8e356eb" => :yosemite
+    sha256 "ee43f93e73451ac5c10fc1cbd1d045eeac9219a8fe585a0af95379c45c6bf0c1" => :sierra
+    sha256 "2df0a9f2cdc51295f65a5e805ce9cdd861035c6b848f5d8ab0d92bef7ac8f5bb" => :el_capitan
+    sha256 "2f083814ad44e24f8592f38b0a68321909dd28b0106c54b1ba323b9121c1c7cb" => :yosemite
   end
 
   def install
