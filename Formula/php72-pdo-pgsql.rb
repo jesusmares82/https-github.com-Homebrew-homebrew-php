@@ -5,6 +5,13 @@ class Php72PdoPgsql < AbstractPhp72Extension
   desc "Unified PostgreSQL driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_pgsql"
 
+  bottle do
+    cellar :any
+    sha256 "eac05a7fa94615bddea56f78488b25ad7c4fd1da0bcf080ce9a9cde2b6f53262" => :sierra
+    sha256 "569f44c1aa155efc5d85a540cd59b21faee90b0fed150022f9887027cb47e452" => :el_capitan
+    sha256 "a369be5ca485171536143c1aa4aa23afdd79133bc18451aaa4134cfe6f7a9d3d" => :yosemite
+  end
+
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
