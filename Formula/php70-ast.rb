@@ -4,8 +4,8 @@ class Php70Ast < AbstractPhp70Extension
   init
   desc "exposing PHP 7 abstract syntax tree"
   homepage "https://github.com/nikic/php-ast"
-  url "https://github.com/nikic/php-ast/archive/v0.1.1.tar.gz"
-  sha256 "85ecc69fa9ba777c1ee6218f5afcc78e13f9c0506b147a6c173a5976c9977967"
+  url "https://github.com/nikic/php-ast/archive/v0.1.4.tar.gz"
+  sha256 "082380202aecca3709b6b67121024f46c06ed5e00ff966f11523ab853491ed54"
   head "https://github.com/nikic/php-ast.git"
 
   bottle do
@@ -16,8 +16,6 @@ class Php70Ast < AbstractPhp70Extension
   end
 
   def install
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}", phpconfig
 
