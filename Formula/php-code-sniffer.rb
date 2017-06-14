@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class PhpCodeSniffer < Formula
   desc "Check coding standards in PHP, JavaScript and CSS"
   homepage "https://pear.php.net/package/PHP_CodeSniffer"
-  url "http://download.pear.php.net/package/PHP_CodeSniffer-3.0.0.tgz"
-  sha256 "f9a14d3a853fccca2ffcabd26f974d675638f5ed10934bcb5f041936b5acf785"
+  url "http://download.pear.php.net/package/PHP_CodeSniffer-3.0.1.tgz"
+  sha256 "46b2ab302832809801bd384c2da384db783367dad47fb11faf5ca7e733348380"
 
   bottle do
     cellar :any_skip_relocation
@@ -59,7 +59,7 @@ class PhpCodeSniffer < Formula
     # Configure installed_paths, but don't overwrite it if already set
     # (preserve config).
     `#{bin+phpcs_script_name} --config-show | grep -q installed_paths`
-    unless $?.to_i.zero?
+    unless $CHILD_STATUS.to_i.zero?
       system bin+phpcs_script_name, "--config-set", "installed_paths", phpcs_standards
     end
   end
