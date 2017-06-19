@@ -10,9 +10,9 @@ class Php70Ast < AbstractPhp70Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d5089ee03c435c89f72c21fcc2e9b44df4f293a0a86efac811a6872a88c72640" => :el_capitan
-    sha256 "5c629e0bb14b12bea539ae4df18b4de72f44caa84e5f44fabdf463c8d92e8fec" => :yosemite
-    sha256 "a703473ae1a241b7d65c8ba8202aa753549eee28cfef9c9389124023ee1fa861" => :mavericks
+    sha256 "df5b5723249fa0a9ec8df775836d22d14c79aaa7fcf4914d6c4f126ce4cf0451" => :sierra
+    sha256 "4390b2bda0321a5ae8564739ca0f8a3b167242904690d3add00a646dbcaf5af0" => :el_capitan
+    sha256 "01f16769082ba04368aea5b47d8779d1d3d068950d44b223ae0e0745596e0745" => :yosemite
   end
 
   def install
