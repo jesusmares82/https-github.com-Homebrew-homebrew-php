@@ -21,8 +21,6 @@ class Php55Imagick < AbstractPhp55Extension
   def install
     Dir.chdir "imagick-#{version}" unless build.head?
 
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
