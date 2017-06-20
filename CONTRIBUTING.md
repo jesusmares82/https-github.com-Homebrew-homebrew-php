@@ -47,8 +47,6 @@ class Php56Example < AbstractPhp56Extension
   def install
     Dir.chdir "example-#{version}" unless build.head?
 
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
