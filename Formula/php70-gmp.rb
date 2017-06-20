@@ -4,7 +4,7 @@ class Php70Gmp < AbstractPhp70Extension
   init
   desc "GMP core php extension"
   homepage "http://php.net/manual/en/book.gmp.php"
-  revision 10
+  revision 11
 
   bottle do
     sha256 "9296e895c357640488a4c1896296fc4bca48598ec153820418b645f8036a82d8" => :sierra
