@@ -8,6 +8,12 @@ class Php72Geoip < AbstractPhp72Extension
   sha256 "b2d05c03019d46135c249b5a7fa0dbd43ca5ee98aea8ed807bc7aa90ac8c0f06"
   head "https://svn.php.net/repository/pecl/geoip/trunk/"
 
+  bottle do
+    sha256 "6480d246dadf464d323968ce79d70048157a669f831bf4b3e4ffff6e2580bfc3" => :sierra
+    sha256 "318e7d1329730b38cd00452f557b141d0077ceda80a6e7bafe9e89c5f721f166" => :el_capitan
+    sha256 "dd08542cb8fff8704b013459e127eec4e22168d9dc59894554baa6a5abaeeaf4" => :yosemite
+  end
+
   depends_on "geoip"
 
   def install
