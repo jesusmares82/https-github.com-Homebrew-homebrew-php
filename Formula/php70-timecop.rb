@@ -4,8 +4,8 @@ class Php70Timecop < AbstractPhp70Extension
   init
   desc "timecop is providing \"time travel\" capabilities."
   homepage "https://github.com/hnw/php-timecop"
-  url "https://github.com/hnw/php-timecop/archive/v1.2.3.tar.gz"
-  sha256 "c77d6d1f4e67e7730e88556257ba16e25028b5c4a008a22ea670ec6d29d42fb4"
+  url "https://github.com/hnw/php-timecop/archive/v1.2.4.tar.gz"
+  sha256 "1e0bc0b47097500152aab0cd8fbc7f4b1323816cdbcd1b65df639d95356fbf85"
   head "https://github.com/hnw/php-timecop.git"
 
   bottle do
@@ -16,8 +16,6 @@ class Php70Timecop < AbstractPhp70Extension
   end
 
   def install
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
