@@ -4,8 +4,8 @@ class Php70Ds < AbstractPhp70Extension
   init
   desc "Data Structures for PHP"
   homepage "https://github.com/php-ds/extension"
-  url "https://github.com/php-ds/extension/archive/v1.1.5.tar.gz"
-  sha256 "0da5444d07cd283b369c98e177656a96508291b921c3e844b9be6c8269e08372"
+  url "https://github.com/php-ds/extension/archive/v1.1.10.tar.gz"
+  sha256 "9b2ec039dc7140ad7e2bce782b65e2cd04d2f44b10e307beef1465f20e9e6da6"
   head "https://github.com/php-ds/extension.git"
 
   bottle do
@@ -16,8 +16,6 @@ class Php70Ds < AbstractPhp70Extension
   end
 
   def install
-    ENV.universal_binary if build.universal?
-
     safe_phpize
 
     system "./configure", "--prefix=#{prefix}", phpconfig
