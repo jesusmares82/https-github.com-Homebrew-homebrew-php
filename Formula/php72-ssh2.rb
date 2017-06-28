@@ -8,6 +8,12 @@ class Php72Ssh2 < AbstractPhp72Extension
   sha256 "6a93891878b23904a773eb814fec7aea4ea00b4a412ee779c8535ed9c5e46ced"
   head "https://github.com/php/pecl-networking-ssh2.git"
 
+  bottle do
+    sha256 "8514e7509c3bcab7ac223df1f063cb4cdc2257b340aa10244075c8545b166cb0" => :sierra
+    sha256 "0a1604f3d71e49da3d15b83a13589231e15acf3c1deace262d770fb2b8132b4e" => :el_capitan
+    sha256 "6a2c4b1fcc65997e4a4aae406614d61abe582072483b328b942b5bfbd2c1c8af" => :yosemite
+  end
+
   depends_on "libssh2"
 
   def install
