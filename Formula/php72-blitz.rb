@@ -9,6 +9,13 @@ class Php72Blitz < AbstractPhp72Extension
   sha256 "202752e825ae035989cbcb0094ef7ec8e0791d0741d36c4b14077b155310597f"
   head "https://github.com/alexeyrybak/blitz.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c87d50a244067f8c0ea2f8d8608acd67cf534ab10bf12b5bbda1232aa3884b92" => :sierra
+    sha256 "a01659e51f3120a1788048cca666527c14472c0d339a9571670656c913161d70" => :el_capitan
+    sha256 "2612715ff600a42ae8e714212c3d0354fa61b298f6a0e93d7b37d73c0820691a" => :yosemite
+  end
+
   def install
     safe_phpize
 
