@@ -8,6 +8,13 @@ class Php72Libsodium < AbstractPhp72Extension
   sha256 "537944529e7c591e4bd6c73f37e926e538e8ff1f6384747c301436fb78269b9c"
   head "https://github.com/jedisct1/libsodium-php.git"
 
+  bottle do
+    cellar :any
+    sha256 "5384b1b00122cbd7733c877c116d611c33ef935a27341b9b977852e20b7f5413" => :sierra
+    sha256 "73f5097d3128f7160abbb9a3745801606b8f9003cf42d25b2a3037bcdcf2f0e7" => :el_capitan
+    sha256 "e84a650fdc7725f417ad6b053e4c1da2cecc8d5a409f2346f8bd7ec812adedeb" => :yosemite
+  end
+
   depends_on "libsodium"
 
   def install
