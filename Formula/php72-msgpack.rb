@@ -8,6 +8,13 @@ class Php72Msgpack < AbstractPhp72Extension
   sha256 "b04980df250214419d9c3d9a5cb2761047ddf5effe5bc1481a19fee209041c01"
   head "https://github.com/msgpack/msgpack-php.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "da463ce9047b2066ae1c7ff7a6ed0f68881353f1edecc6c2fc796e474ebeb36f" => :sierra
+    sha256 "10e8e2754ba9c3ec46ed9d49f2c82c4feab5485af7cdf147e1223ee064f73532" => :el_capitan
+    sha256 "954db40c159f554cdbb2cd1acb4d420cbd4e7e3c9df7be0518ac010bcc25037e" => :yosemite
+  end
+
   def install
     Dir.chdir "msgpack-#{version}" unless build.head?
 
