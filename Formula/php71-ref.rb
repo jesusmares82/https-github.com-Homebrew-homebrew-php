@@ -4,8 +4,8 @@ class Php71Ref < AbstractPhp71Extension
   init
   desc "Soft and Weak references support for PHP"
   homepage "https://github.com/pinepain/php-ref"
-  url "https://github.com/pinepain/php-ref/archive/v0.4.1.tar.gz"
-  sha256 "9110b3636d5bd82a48c9e622d1dd2e78f35abff907bcb0cfdfca97bf6d3e212b"
+  url "https://github.com/pinepain/php-ref/archive/v0.4.4.tar.gz"
+  sha256 "51da1e0625e2c89da05bdef5166e1046f5594870df4b0f6925eaa01b69925a9b"
   head "https://github.com/pinepain/php-ref.git"
 
   bottle do
@@ -16,8 +16,6 @@ class Php71Ref < AbstractPhp71Extension
   end
 
   def install
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}", phpconfig
 
