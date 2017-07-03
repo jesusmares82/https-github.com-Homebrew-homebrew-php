@@ -1,7 +1,7 @@
 class AbstractPhpVersion < Formula
   module PhpdbgDefs
-    PHPDBG_SRC_TARBAL = "https://github.com/krakjoe/phpdbg/archive/v0.3.2.tar.gz".freeze
-    PHPDBG_CHECKSUM   = {
+    PHPDBG_SRC_TARBALL = "https://github.com/krakjoe/phpdbg/archive/v0.3.2.tar.gz".freeze
+    PHPDBG_CHECKSUM    = {
       :sha256 => "feab6e29ef9a490aa53332fe014e8026d89d970acc5105f37330b2f31e711bbd",
     }.freeze
   end
