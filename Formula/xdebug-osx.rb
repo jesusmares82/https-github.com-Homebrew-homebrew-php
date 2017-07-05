@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class XdebugOsx < Formula
   desc "Simple bash script to toggle xdebug on/off in OSX"
   homepage "https://github.com/w00fz/xdebug-osx"
-  url "https://github.com/w00fz/xdebug-osx/archive/1.2.tar.gz"
-  sha256 "b73f1fdc9cde042a2eac29425d6e917e100efc533a504aa71d0d8367a4b5c06f"
+  url "https://github.com/w00fz/xdebug-osx/archive/1.3.tar.gz"
+  sha256 "db2c6c1835ff79fa05e655bf9425a011a743811d019a3fda894f085122f7eda4"
   head "https://github.com/w00fz/xdebug-osx.git"
 
   bottle do
