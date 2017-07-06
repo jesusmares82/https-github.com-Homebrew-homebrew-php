@@ -7,6 +7,7 @@ class Php72Apcu < AbstractPhp72Extension
   url "https://github.com/krakjoe/apcu/archive/v5.1.8.tar.gz"
   sha256 "09848619674a0871053cabba3907d2aade395772d54464d3aee45f519e217128"
   head "https://github.com/krakjoe/apcu.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
