@@ -7,7 +7,7 @@ class Php56Mcrypt < AbstractPhp56Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 4
+  revision 5
 
   bottle do
     rebuild 1
