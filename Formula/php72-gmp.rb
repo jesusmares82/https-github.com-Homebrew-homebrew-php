@@ -4,6 +4,7 @@ class Php72Gmp < AbstractPhp72Extension
   init
   desc "GMP core php extension"
   homepage "http://php.net/manual/en/book.gmp.php"
+  revision 1
 
   bottle do
     sha256 "e6a5739ecf8a8b2f8dbef098d17290ecc4a10a386811b882a108ff0872df1d86" => :sierra

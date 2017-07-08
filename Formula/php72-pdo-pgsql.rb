@@ -4,7 +4,7 @@ class Php72PdoPgsql < AbstractPhp72Extension
   init
   desc "Unified PostgreSQL driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_pgsql"
-  revision 1
+  revision 2
 
   bottle do
     cellar :any
