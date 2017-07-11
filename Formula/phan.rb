@@ -11,9 +11,9 @@ class Phan < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "1ba457f7d919655e75a29360137cd141e6b77daea78b3d2878861cce8b1fd635" => :sierra
-    sha256 "c8c273c604aaba8163d0599d6b191ff69917c0fd7f1f6683e9a6693bb3244b02" => :el_capitan
-    sha256 "b5cf6472fefe7d51e1dbcee912c6062925630d2042ab94e1e43d694e1686b4eb" => :yosemite
+    sha256 "aab5e0058a69e2c77b2b509dce89f6dc03b2f2b939504cee0657978f203a0a37" => :sierra
+    sha256 "701bd667502e3b3c896246dd5bc9fbe58528c0193ac1595df85ea5e290bd34bf" => :el_capitan
+    sha256 "f0f930a0eb1f48009ada35c1ca7118d41ba3c4358c7c2dbc0ddd57e1f1fa9e7f" => :yosemite
   end
 
   depends_on "php71-ast"
