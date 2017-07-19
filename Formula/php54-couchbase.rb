@@ -10,9 +10,9 @@ class Php54Couchbase < AbstractPhp54Extension
 
   bottle do
     cellar :any
-    sha256 "7dea67f51fb7937e855eba4501040c0a62ab257f497130bdbd00a29095c3f518" => :sierra
-    sha256 "bff77b0a4c299a0d8d8ed61154a71332deadd3f577e29997dd452101706b8f96" => :el_capitan
-    sha256 "7693ca1494b748ffc5a596529936cccb1c35843d5b688ec0eb918d1e4e1924c6" => :yosemite
+    sha256 "125f75ad82e41f0f476a14419872368e518f551cb15adf8c6ea0d0cf0a7b1149" => :sierra
+    sha256 "f438087ebea01b7ff6ecf2f19ae87cfa9de20eda683749d38a580a11b492c3f6" => :el_capitan
+    sha256 "97711ddbb824615d869377abdb9cf6a87f80ef49a00489efa0546ee733ede97d" => :yosemite
   end
 
   depends_on "php54-igbinary"
