@@ -8,9 +8,9 @@ class Php71PdoPgsql < AbstractPhp71Extension
 
   bottle do
     cellar :any
-    sha256 "ffadddfd27d65afffcb52e11fef8fd557e2738a840d15b90065d0b00f138fa8e" => :sierra
-    sha256 "d792cfb07b49d96fe25da4072861e46f455f8ed624e3a5a0fb1ca583021961c4" => :el_capitan
-    sha256 "3afa5e6d7ceac181c7061a699d3675081e99fc3f988b7e523e5bdc4c4eafce0e" => :yosemite
+    sha256 "c10ac7c5864cd503b658f499029307fc100cf873a210e4cf25f8df5d8b4465ee" => :sierra
+    sha256 "75d77236a419eba454929fd023eed724a271a1540e5a9ec51f7ffc7f49e8cae2" => :el_capitan
+    sha256 "6a35f872a42d94ff1cd98bf2b50aed765a6340fdff6b1ac4ff25e03c4ff253bc" => :yosemite
   end
 
   url PHP_SRC_TARBALL
