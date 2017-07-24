@@ -52,6 +52,11 @@ class AbstractPhp < Formula
       depends_on "openssl"
     end
 
+    #argon for 7.2
+    depends_on "argon2" => :optional if build.include?("with-argon2")
+
+
+
     deprecated_option "with-pgsql" => "with-postgresql"
     depends_on :postgresql => :optional
 
@@ -70,6 +75,11 @@ class AbstractPhp < Formula
 
     depends_on "homebrew/apache/httpd24" => :optional
     depends_on "homebrew/apache/httpd22" => :optional
+
+    # Argon2 option
+    if name.split("::")[2].downcase.start_with?("php72")
+      option "with-argon2", "Include libargon2 password hashing support"
+    end
 
     option "with-cgi", "Enable building of the CGI executable (implies --without-fpm)"
     option "with-debug", "Compile with debugging symbols"
@@ -237,6 +247,11 @@ INFO
     unless build.without? "unixodbc"
       args << "--with-pdo-odbc=unixODBC,#{Formula["unixodbc"].opt_prefix}"
       args << "--with-unixODBC=#{Formula["unixodbc"].opt_prefix}"
+    end
+
+    # Build with argon2 support (Password Hashing API)
+    if build.with?("argon2")
+      args << "--with-password-argon2=#{Formula["argon2"].opt_prefix}"
     end
 
     # Build Apache module by default
