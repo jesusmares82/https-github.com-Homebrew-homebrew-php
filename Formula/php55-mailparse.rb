@@ -10,7 +10,7 @@ class Php55Mailparse < AbstractPhp55Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "4fc0f6eaa4697c4bd824c4d2f8f27fd529894bfb7841c6a55905f177ffb0dd90" => :el_capitan
     sha256 "f6276307439884d2c24ed76aac530db8ef661f3c47efbdb0b6f564ea187b6e83" => :yosemite
     sha256 "f3ae4a293bfee6590fa59cbef714340d126ae4d218208e5eabf744f81a174e7f" => :mavericks
