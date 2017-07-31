@@ -9,7 +9,7 @@ class Php55Gearman < AbstractPhp55Extension
   head "https://svn.php.net/repository/pecl/gearman/trunk/"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "7267a6aabf9f2d1531bb82d5ff8675b19f861f1f3d1a84777155fd4adf5a9fd8" => :el_capitan
     sha256 "0a6f888d344f6593621dd23e83aa072d6b1bc990b98de8c62f99a6ab659a9260" => :yosemite
     sha256 "3e6167d6481e14df7a77b13a6bf71068b0df9bc732a3326cbe607d72a4f9f00a" => :mavericks
