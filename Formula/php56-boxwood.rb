@@ -10,7 +10,7 @@ class Php56Boxwood < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "996a8381bb7be03e9b2971c818d64d89fe21b43c05ae785c4a34eb67d83bbe0b" => :el_capitan
     sha256 "f65e6a006f1df5c54aeeebe268c1bee130ddf849da436e51cc6ab3292a4d8129" => :yosemite
     sha256 "233dc1c638d66551d6d2063a9ab30b564e1b87d91c1c2bcc977ec3884d86d89d" => :mavericks
