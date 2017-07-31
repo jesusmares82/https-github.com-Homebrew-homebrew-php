@@ -9,7 +9,7 @@ class Php54Redland < AbstractPhp54Extension
 
   bottle do
     cellar :any
-    revision 1
+    rebuild 1
     sha256 "29759e97fdd46293fad154446f6ff7a6826bdeabe3a7a77f8f4ea5dba22efcca" => :el_capitan
     sha256 "77be3535ae1ad95bf3576d1ea1b00a3839f1c3ce74aa975296b9f3834af83183" => :yosemite
     sha256 "79cbdb4584559df6dbc9e4c21be2e702ffe4349e774f8a6a5ff4cfcdad530b5f" => :mavericks
