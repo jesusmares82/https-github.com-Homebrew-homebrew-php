@@ -8,7 +8,7 @@ class Php53Gmagick < AbstractPhp53Extension
   sha256 "8e51c8343d6e6d556d7b17417ce338c6ed2b0893869f1494410dfe6ba5105475"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "9c759a4162288a21363f71ef729ae6ecca94ec809a3907dc7b92d0a1fa58ead3" => :el_capitan
     sha256 "dc2a71a36d0f02747c4084c888f299d9fb47bc1e5cc126c971c2f3ac08dac588" => :yosemite
     sha256 "e3146f900b55fcd28bbd9bb7485ed8f740760ab3d5cb13e40f0202836c762839" => :mavericks
