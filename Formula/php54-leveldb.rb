@@ -10,7 +10,7 @@ class Php54Leveldb < AbstractPhp54Extension
 
   bottle do
     cellar :any
-    revision 1
+    rebuild 1
     sha256 "dd70ac7e579f7248fab863f537064ffc3c87527c2d2e8d66c1ff1420cb16811b" => :el_capitan
     sha256 "7b44c1c98672fdac277e2620a11fac4d1349b71d3176b7600fa0c54e362a2d59" => :yosemite
     sha256 "4fe8eaec43f1071b4274cbf03917c02618d45595d36aeafc2b90d80175c13d16" => :mavericks
