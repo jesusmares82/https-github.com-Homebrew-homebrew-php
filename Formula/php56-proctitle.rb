@@ -10,7 +10,7 @@ class Php56Proctitle < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "93c104f85db2cce6c05962fd0de69404a09b6fe6a993275b90e4397fb1118ab4" => :el_capitan
     sha256 "d3b224c17f96178302461f745f49b1f8b67b13a41e03452b3ac3681fa028741b" => :yosemite
     sha256 "87c1eea11041e691cbc21876bd8676b9556437b006571c1f2c2cd66148965471" => :mavericks
