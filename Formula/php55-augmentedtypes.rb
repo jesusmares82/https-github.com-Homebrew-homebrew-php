@@ -10,7 +10,7 @@ class Php55Augmentedtypes < AbstractPhp55Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 2
+    rebuild 2
     sha256 "04d79c57961677753ca462fb4b29e7f81999d9d0370159faffd3c11ee6949aac" => :el_capitan
     sha256 "d4918039698baa527b5d221e2beb5a358faea88ff97d559fbc596fe6889c9b8a" => :yosemite
     sha256 "32b2caa811eafc42964d13a232b5b8a2b92f4830290d75a94e18de2ec4de72ab" => :mavericks
