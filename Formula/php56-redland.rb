@@ -20,10 +20,6 @@ class Php56Redland < AbstractPhp56Extension
   depends_on "raptor"
   depends_on "rasqal"
 
-  fails_with :llvm do
-    build 2334
-  end
-
   def install
     args = %W[
       --disable-dependency-tracking
