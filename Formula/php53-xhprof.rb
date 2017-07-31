@@ -11,7 +11,7 @@ class Php53Xhprof < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "7cf05be4a664db0cd65ea0a0eac37325faebc6d773129ddd62993f84975a266d" => :el_capitan
     sha256 "03b76a5568bf0dc2c02af53a31a3e2c6923d0fe2eb6fae6c72d633a96d06a10f" => :yosemite
     sha256 "32d159a06b2f89a6088249a59e28b4090a557f0456f6f832bb3e31d6e06078ae" => :mavericks
