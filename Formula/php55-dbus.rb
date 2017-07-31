@@ -9,7 +9,7 @@ class Php55Dbus < AbstractPhp55Extension
   head "http://svn.php.net/repository/pecl/dbus/trunk/"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "b54098db44cb323c78bc4e0b37b606e0d7f148bbed2b6d51907b1fe24059c036" => :el_capitan
     sha256 "03ff592c7a960b76986805ba7b4dbf44b99226162a5dfabb3d7aba57afaf755b" => :yosemite
     sha256 "c7063400541c4ba9ccedbe9c6063604d76c78164aa9d6bb1bb244269becf227c" => :mavericks
