@@ -9,7 +9,7 @@ class Php53Midgard2 < AbstractPhp53Extension
   head "https://github.com/midgardproject/midgard-php5.git", :branch => "ratatoskr"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "0aa14a61320b1a5f2b1aefb65375baf159cd245e08f4cefe67577e85fc8ddb35" => :el_capitan
     sha256 "88478c18023e421be218c277ba5e75de62a637d53a62b9c4349114c5212683f8" => :yosemite
     sha256 "9a19d07d3067f8557a66d7f14bef47b7f7e7220a8f5b6f64fd83562dbf746a7b" => :mavericks
