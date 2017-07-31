@@ -10,7 +10,7 @@ class Php53Oauth < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "7417fde959d04540a902b06be46a39c180e8aed87b400a20f1eae6a0dad1495b" => :el_capitan
     sha256 "00756eb2418bb99e2812eae70f4f3ffa985d8c3a37674ceea1a9ee0947f0ebcd" => :yosemite
     sha256 "e2d67cca3733ae0b36d4e5c37dae3a895b96f2bed65d1336d8a8552a558ef464" => :mavericks
