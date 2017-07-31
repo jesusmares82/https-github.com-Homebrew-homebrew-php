@@ -9,7 +9,7 @@ class Php54Dbus < AbstractPhp54Extension
   head "http://svn.php.net/repository/pecl/dbus/trunk/"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "e4aa9f4a62eafcbf114aeee725c215d3e74a2bade8bc604ccdc062b2b49815e6" => :el_capitan
     sha256 "39f1227587fd9d97cf961198cb21711a63510c0c77ad1c2ad536b547de45031b" => :yosemite
     sha256 "e45619b58f3e818c71051a396abbad26855f45c218c8bbba712bbf9e19734d75" => :mavericks
