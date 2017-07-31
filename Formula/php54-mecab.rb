@@ -9,7 +9,7 @@ class Php54Mecab < AbstractPhp54Extension
   head "https://github.com/rsky/php-mecab.git"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "d7610f4ddfbd90c7d85e65e3920153dfe9c007b8f8429ff11f8eabdaad09f2ad" => :el_capitan
     sha256 "71eed6e3c32bc55dbdc765ce68c641ed41622a047159e3620ee795a49abf685b" => :yosemite
     sha256 "49c3cebcc521a1574480f2c8f9286a369a2c1aad8559e96fe63c069b7df60bb8" => :mavericks
