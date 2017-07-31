@@ -10,7 +10,7 @@ class Php55Leveldb < AbstractPhp55Extension
 
   bottle do
     cellar :any
-    revision 1
+    rebuild 1
     sha256 "9a8d0287e70600fb5fb65080a3a4a7d0c3fc2e7139808e8b5f7c6a31317970d9" => :el_capitan
     sha256 "ec9aca57944c7671e83e5c8c1b1c0b27adff3ed59c2cf1f087f1fd670331158a" => :yosemite
     sha256 "ba2a9a1592bf5a5bff454f80e392e41f6c8f489bceb22191b7e0458dca275bfa" => :mavericks
