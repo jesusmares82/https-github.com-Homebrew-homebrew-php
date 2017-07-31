@@ -10,7 +10,7 @@ class Php54Jsmin < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 2
+    rebuild 2
     sha256 "c936358a2d26ee3b6be79109d89b7929a94997ada27992bb5d707e5ae0c03b1c" => :el_capitan
     sha256 "7187d78a3be670b9ed4296e30e257f9646fa38790a818a9bcea699faba19ceff" => :yosemite
     sha256 "85a86e2652342cf7b43cf942cd4806154dd61780ffe4a764c03ce239a76e9e50" => :mavericks
