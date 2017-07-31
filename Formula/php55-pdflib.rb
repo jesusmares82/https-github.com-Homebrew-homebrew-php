@@ -8,7 +8,7 @@ class Php55Pdflib < AbstractPhp55Extension
   sha256 "18de7bf00983a5b0fbbd4f7e993ecf948217072ae6ebff9fbb0eef88b8984b7e"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "322556685eb89498e98137cd6f6254d87861c6cffda34c05276ed85a316c5c0f" => :el_capitan
     sha256 "eb2814f7649f9d60cc1a06c06fe340468d45ca2f448c7c943405ed1fe2b31f57" => :yosemite
     sha256 "c55d2cbcf938c3d56b0ec5f54602dda5041017ff45c9d082758820a0263100a7" => :mavericks
