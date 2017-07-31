@@ -9,7 +9,7 @@ class Php53Libevent < AbstractPhp53Extension
   head "http://svn.php.net/repository/pecl/libevent/trunk/"
 
   bottle do
-    revision 1
+    rebuild 1
     sha256 "49ce22ff644b0199024af18291cfe60f7b4773f28ad6a0cf13418ecb9e325aab" => :el_capitan
     sha256 "02281279d8929af409e45420e016ac91697181b00be0f2cdf934367a00ae378a" => :yosemite
     sha256 "c81fd777b3dca2be61f531b146dd8265c1825b80104ad87f7c0e3f56a3fa8e7c" => :mavericks
