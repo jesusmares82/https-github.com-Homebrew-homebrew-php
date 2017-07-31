@@ -10,7 +10,7 @@ class Php55Graphdat < AbstractPhp55Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "bc2dfea65884a2bce68cf02c59a9355e68cad47a2c34c5d82efd6a64669d4c50" => :el_capitan
     sha256 "b693a4c7bf977769d615237cc501d0283f1023b7101383bf62e6f019ac2c0601" => :yosemite
     sha256 "5e895dfcffd019efb6c77b5e7b5352df92b9c1700eda1d0f7fb2fc8455b97c54" => :mavericks
