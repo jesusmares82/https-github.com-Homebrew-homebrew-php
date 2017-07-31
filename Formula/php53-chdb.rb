@@ -8,7 +8,7 @@ class Php53Chdb < AbstractPhp53Extension
   sha256 "ac6360fd786fbbbe8b14c7e1943f2f64c1f9a86dd5a4c38ff4d5d65740e99e0b"
   bottle do
     cellar :any
-    revision 1
+    rebuild 1
     sha256 "de4b513b84aa7c5793a6e167bcd01f535a57b8b506a115c6311e5cfd34bab921" => :el_capitan
     sha256 "9994cb01c84320bea24c1457ce8dd2b43093e134a41652af745e7d6d8486c5f4" => :yosemite
     sha256 "c751d99e81c8635dee9a77b60ac9f7d8cc4ee22136e9cf1b96ede2735e70988f" => :mavericks
