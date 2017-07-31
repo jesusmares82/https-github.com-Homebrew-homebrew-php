@@ -10,7 +10,7 @@ class Php53Pthreads < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "604e37fb076f39b042a3d1680b05192f591b127e41ddaf187c37c703908ce350" => :yosemite
     sha256 "5431e7c19859445bdd74b996212d710ff6423230bc73f69ac0340fe8bb474c1e" => :mavericks
   end
