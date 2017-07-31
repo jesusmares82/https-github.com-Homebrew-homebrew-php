@@ -10,7 +10,7 @@ class Php53Binpack < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "105464498adfc7b08c5d0f665584d0c9ef500cb0c7d0ac36c86983f87985a485" => :el_capitan
     sha256 "08bb26ec4c046fff95798dc6ae0c3ede7ef9be74010934820b45a4ccfdd6be39" => :yosemite
     sha256 "312cb0d6fa91c2306323ca63c7f7e12e8e8c2919fa05ed0fcf77debeba890efc" => :mavericks
