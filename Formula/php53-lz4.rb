@@ -9,7 +9,7 @@ class Php53Lz4 < AbstractPhp53Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "8081ee48b5845e9c25a82836d114bf2e8397a2ff651c6c989b5936b18373f222" => :el_capitan
     sha256 "c1435548b7459cbce12e1f7c1181612ab8467f7f95e69942ecf956ae4f1fc2d9" => :yosemite
     sha256 "d1e7ebbe5088a90cf3a307755a4d58b38670cfcf8526c8b2b59ff43d0b719736" => :mavericks
