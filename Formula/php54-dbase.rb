@@ -10,7 +10,7 @@ class Php54Dbase < AbstractPhp54Extension
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
+    rebuild 1
     sha256 "3540c76a36b798b0122661e471ab90d6d60f8776e67120e0ff74998711b3b7ec" => :el_capitan
     sha256 "88438eec84398c90ee856315a349b052c8ced1b482d628c5d67ebd797bcb7e35" => :yosemite
     sha256 "bfb116837554c42ab364ccaf31674f762859c9235aaf0088ae98408a82f62c96" => :mavericks
