@@ -4,7 +4,7 @@ class Php72Opcache < AbstractPhp72Extension
   init
   desc "OPcache improves PHP performance"
   homepage "http://php.net/manual/en/book.opcache.php"
-  revision 2
+  revision 3
 
   bottle do
     cellar :any_skip_relocation
