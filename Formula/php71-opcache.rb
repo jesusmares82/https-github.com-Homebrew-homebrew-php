@@ -8,9 +8,9 @@ class Php71Opcache < AbstractPhp71Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e3a80ef19e8fb6f37eab29ea73cf365a20a775b30f6638d602533af87810808b" => :sierra
-    sha256 "4b5d61d39dc13ece2ed629771f7e69934ec4e27b5bc1079e229f00412f4a197f" => :el_capitan
-    sha256 "e8c82710fd6619fdeff84521ab0d87b133071a06b97a59621a0463abc6f23693" => :yosemite
+    sha256 "af9d1b44750e459c27fe5a69dd46ab08b9ac0bc15c1e5d29f0e61d1df51c6779" => :sierra
+    sha256 "e4f3d8119e821c161ac92ed72c1723eefdf9fec25e7ec867fc0983b37c5c95ef" => :el_capitan
+    sha256 "9cc6b24c1d66488c81b6c02ce5fc0aaa5fca2328f5797d50be7a3a00829c9991" => :yosemite
   end
 
   url PHP_SRC_TARBALL
