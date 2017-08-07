@@ -4,8 +4,8 @@ class Php70Uopz < AbstractPhp70Extension
   init
   desc "Exposes Zend Engine functionality."
   homepage "http://php.net/manual/en/book.uopz.php"
-  url "https://github.com/krakjoe/uopz/archive/v5.0.1.tar.gz"
-  sha256 "d4dceb4705f8ea99e836864615bff2ca90da150cc95fb3bc68be8501f932d0bb"
+  url "https://github.com/krakjoe/uopz/archive/v5.0.2.tar.gz"
+  sha256 "919f6d7873db89a2032e0145a8e7a355d111f9ab2651aa3fa78b636277034dab"
   head "https://github.com/krakjoe/uopz.git"
 
   bottle do
@@ -16,8 +16,6 @@ class Php70Uopz < AbstractPhp70Extension
   end
 
   def install
-    ENV.universal_binary if build.universal?
-
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig
