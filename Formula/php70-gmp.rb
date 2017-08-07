@@ -7,9 +7,9 @@ class Php70Gmp < AbstractPhp70Extension
   revision 13
 
   bottle do
-    sha256 "4bd5425b55bcb6c3ab40562f8e69a53b36ddb124414755cf5e406dc524cf1bd4" => :sierra
-    sha256 "664ff48a011403ae9bda940922dfd2da018ab46122a481029714a078550962b6" => :el_capitan
-    sha256 "98b3780ff41f7db2900b5a37da670619a788aee66bf772f69bd73cd2f5231da2" => :yosemite
+    sha256 "8e257708d740cb3d60c83e4a4f613aa2a0544766dded83d80d184fae505c878e" => :sierra
+    sha256 "4cae6da43090b5124194a35e80b623101dcb262fc0115ff1d3c8feec0ccd747a" => :el_capitan
+    sha256 "e7f931eb5b14947564f45fd1dcb16bdec91bfa14cd66b31ffbf8bd12b20480e6" => :yosemite
   end
 
   url PHP_SRC_TARBALL
