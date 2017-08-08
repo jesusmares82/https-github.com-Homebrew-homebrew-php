@@ -32,7 +32,8 @@ class ComposerAT12 < AbstractPhpPhar
       <?php
       array_shift($argv);
       $arg_string = implode(' ', array_map('escapeshellarg', $argv));
-      $arg_string .= preg_match('/--(no-)?ansi/', $arg_string) ? '' : ' --ansi';
+      $arg_prefix = preg_match('/--(no-)?ansi/', $arg_string) ? '' : '--ansi ';
+      $arg_string = $arg_prefix . $arg_string;
       passthru("/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{@real_phar_file} $arg_string", $return_var);
       exit($return_var);
     EOS
