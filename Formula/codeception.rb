@@ -4,8 +4,8 @@ class Codeception < AbstractPhpPhar
   init
   desc "Testing Framework designed to work just out of the box"
   homepage "http://codeception.com/quickstart"
-  url "http://codeception.com/releases/2.3.4/codecept.phar"
-  sha256 "e1885096e7199fad77b64a95aab180254b8a5f9919a774e9816aefa708da611f"
+  url "http://codeception.com/releases/2.3.5/codecept.phar"
+  sha256 "a04b760ee731c78b8f389815eef7f3f0a7802af704e3e7eefffc61eefce6ef13"
 
   bottle do
     cellar :any_skip_relocation
