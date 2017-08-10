@@ -10,9 +10,9 @@ class Php56Snmp < AbstractPhp56Extension
   revision 4
 
   bottle do
-    sha256 "dc229a5addcd90d18f71c555c6fd7d1648fa204930fbdb98cbae884319a277cc" => :sierra
-    sha256 "44f8e860e86efd6e1d18f57f658e754b44e3ac14b9790e925cd309e11232a00c" => :el_capitan
-    sha256 "415b927aa3b3ceae7103de33a1093f5377742700b5df1413927e0e52769ee8b6" => :yosemite
+    sha256 "c94859f9412cc30add74f0296cde472f61925a09f7a468a08d9637ab49e607ae" => :sierra
+    sha256 "71b2639268068fabe0f79a4e0ddc2a7362180d70b3af8e0d43bc17763feb34e8" => :el_capitan
+    sha256 "d2d8c1c3e5fa9e03e111a9e8a3c44b0a927e7b84c7fe8f40be60f7c22456b4a2" => :yosemite
   end
 
   depends_on "net-snmp"
