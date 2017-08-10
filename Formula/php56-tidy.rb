@@ -10,9 +10,9 @@ class Php56Tidy < AbstractPhp56Extension
   revision 4
 
   bottle do
-    sha256 "c12b01c5301d77728f61c2369994803893163e4e1daf07ee260c5a3e10768aee" => :sierra
-    sha256 "a42404d8459627f563cab12badede3c286c6612833d3b7353182c1ce3ff6c859" => :el_capitan
-    sha256 "ab61dc87a00fde0b14e12a5f91110bd21e7644404aaad3d3fe0983f7abc77d7e" => :yosemite
+    sha256 "0e7530ccb66e08b94b450f88c580154541e6b76cdd9e9d11bcaca5ed72a64520" => :sierra
+    sha256 "5885da21fc7613075d676004b179eb9b051a6f9309872a28e189da16291fe90d" => :el_capitan
+    sha256 "9088458e3b6fcb3b0024421c19621c4d78666e8b8ee2b1d910ab5c9e3581455a" => :yosemite
   end
 
   depends_on "tidy-html5"
