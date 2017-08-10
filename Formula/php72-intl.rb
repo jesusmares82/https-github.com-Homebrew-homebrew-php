@@ -5,6 +5,12 @@ class Php72Intl < AbstractPhp72Extension
   desc "Wrapper for the ICU library"
   homepage "http://php.net/manual/en/book.intl.php"
 
+  bottle do
+    sha256 "88edb0c4d60e88d305c51ba80d5f4a14b5200a6ea43af660759565490e3bf0a3" => :sierra
+    sha256 "aa5747464b6dd45dbcebf757e90eba89d28af7af5ab52791521c12adc93639b5" => :el_capitan
+    sha256 "636080e8a8ee8c76d9ceca0db623023112ce5c73c93feec1c833e83b9b094525" => :yosemite
+  end
+
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
