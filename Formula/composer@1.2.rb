@@ -9,9 +9,10 @@ class ComposerAT12 < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "802d1a7f54882a23efe2c60edce9d2ac45b73d7baf957781f0ab13c38963c3d4" => :sierra
-    sha256 "802d1a7f54882a23efe2c60edce9d2ac45b73d7baf957781f0ab13c38963c3d4" => :el_capitan
-    sha256 "802d1a7f54882a23efe2c60edce9d2ac45b73d7baf957781f0ab13c38963c3d4" => :yosemite
+    rebuild 1
+    sha256 "5a1a7f7a7dab7f266b32fbae5a5919305da8a37d03d49c095346f0538d51ca90" => :sierra
+    sha256 "5a1a7f7a7dab7f266b32fbae5a5919305da8a37d03d49c095346f0538d51ca90" => :el_capitan
+    sha256 "5a1a7f7a7dab7f266b32fbae5a5919305da8a37d03d49c095346f0538d51ca90" => :yosemite
   end
 
   def phar_file
