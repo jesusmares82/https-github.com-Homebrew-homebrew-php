@@ -54,4 +54,10 @@ class Php53 < AbstractPhp
     url "https://gist.githubusercontent.com/javian/6d63097c8c175045aa75ca48a6b8826b/raw/ca7bad287e3af72b83fbb5f7d03186b5da2e65ae/multi-sapi-5.3.29-homebrew.patch"
     sha256 "bdde5c0c1f9d2450d8d9d0a32882e1ee0008d8339eacf919e273e6f7937e7461"
   end
+
+  # C++ 11 compatibility required for intl extension
+  patch do
+    url "https://gist.githubusercontent.com/ilovezfs/192a21d13ce0c40dcaa48617f1733097/raw/0856488df0e8190476d64ae68642670aebe8fbb3/gistfile1.txt"
+    sha256 "8ed93dee54d82a1c48703c7b1348bd4cd61ed80f377d0d6d419cf38ff1274f42"
+  end
 end
