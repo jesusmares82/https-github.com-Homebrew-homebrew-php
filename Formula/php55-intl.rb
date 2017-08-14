@@ -7,7 +7,7 @@ class Php55Intl < AbstractPhp55Extension
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
   version PHP_VERSION
-  revision 2
+  revision 3
 
   bottle do
     sha256 "c133173bd273d9141c2a1620905f2e889c6a31baa10fdb5ce4dc35ea4d01de66" => :sierra
@@ -17,10 +17,11 @@ class Php55Intl < AbstractPhp55Extension
 
   depends_on "icu4c"
 
-  def install
-    Dir.chdir "ext/intl"
+  needs :cxx11
 
-    ENV.universal_binary if build.universal?
+  def install
+    ENV.cxx11
+    Dir.chdir "ext/intl"
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
