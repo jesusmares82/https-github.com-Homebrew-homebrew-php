@@ -14,6 +14,11 @@ class Php56Mongodb < AbstractPhp56Extension
     sha256 "fbcb0842188f2a8aaac2614bfe7cd12dd96c0909136368baace5e82170118088" => :yosemite
   end
 
+  devel do
+    url "https://pecl.php.net/get/mongodb-1.3.0beta1.tgz"
+    sha256 "bd93a9cd6b5c10158bfced6b11366bf56e8f822bf39dbcf0b15603f2328479c5"
+  end
+
   depends_on "openssl"
 
   def install

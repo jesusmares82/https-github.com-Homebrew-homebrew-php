@@ -14,6 +14,11 @@ class Php72Mongodb < AbstractPhp72Extension
     sha256 "2bb0388a3a53205418f3bf9c7725c9d3f8a913b4c4df599cacbde7e241731c88" => :yosemite
   end
 
+  devel do
+    url "https://pecl.php.net/get/mongodb-1.3.0beta1.tgz"
+    sha256 "bd93a9cd6b5c10158bfced6b11366bf56e8f822bf39dbcf0b15603f2328479c5"
+  end
+
   depends_on "openssl"
 
   def install

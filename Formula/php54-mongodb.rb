@@ -14,6 +14,11 @@ class Php54Mongodb < AbstractPhp54Extension
     sha256 "1e851f189b88f76c911af5a1bb579ec9be225cb205e4c29eac518151cf7ff61e" => :yosemite
   end
 
+  devel do
+    url "https://pecl.php.net/get/mongodb-1.3.0beta1.tgz"
+    sha256 "bd93a9cd6b5c10158bfced6b11366bf56e8f822bf39dbcf0b15603f2328479c5"
+  end
+
   depends_on "openssl"
 
   def install
