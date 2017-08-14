@@ -11,9 +11,9 @@ class Php56Dmtx < AbstractPhp56Extension
   head "https://github.com/maZahaca/php-dmtx.git"
 
   bottle do
-    sha256 "11fff8682211aedf099fc0b783e9cfebedfd5d67b4a08e3e72559c2bda8b6c21" => :sierra
-    sha256 "c1be9b5596ba49c8a54f503c46c303ef39fd35b0b110eabb517bc7920d5690da" => :el_capitan
-    sha256 "eef24c05c7884205d10d00ecc93c241a669e6f9fdf1325c49b634c5715180220" => :yosemite
+    sha256 "96b3cf85f6196936fb36b63551aa3ade0cfb1897441fbbb017c710633e17a7eb" => :sierra
+    sha256 "33b1780fe459de6fecd766f7941f3222be95cdcc77530cf01372b236ced5238a" => :el_capitan
+    sha256 "576199a7dcc8020b93c83199160d0af0556888828761c21d7996487e447c8a41" => :yosemite
   end
 
   depends_on "libdmtx"
