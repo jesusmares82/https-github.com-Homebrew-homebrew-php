@@ -7,6 +7,7 @@ class Php72Propro < AbstractPhp72Extension
   url "https://github.com/m6w6/ext-propro/archive/release-2.0.1.tar.gz"
   sha256 "0f310cf0ea11950ff48073537b87b99826ad653c8405556fa42475504c263b64"
   head "https://github.com/m6w6/ext-propro.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
