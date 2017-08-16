@@ -7,6 +7,7 @@ class Php72Raphf < AbstractPhp72Extension
   url "https://github.com/m6w6/ext-raphf/archive/release-2.0.0.tar.gz"
   sha256 "eb4356e13769bf76efc27bce4ad54f508701bcdac3c255dd1c8eb1e87fccb9fa"
   head "https://github.com/m6w6/ext-raphf.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
