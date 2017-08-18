@@ -5,8 +5,8 @@ class Phan < Formula
 
   desc "Static analyzer for PHP"
   homepage "https://github.com/etsy/phan"
-  url "https://github.com/etsy/phan/archive/0.9.3.tar.gz"
-  sha256 "113b50fdd348d84743c1ec264167bcec5eb77d6a2cf9f07f15b7dab52f78ee55"
+  url "https://github.com/etsy/phan/archive/0.9.4.tar.gz"
+  sha256 "af2f405b428949c70b11a7351f890cb3d49fdda25e082fb7e314f4b5c2fe39ee"
   head "https://github.com/etsy/phan.git"
 
   bottle do
