@@ -7,6 +7,7 @@ class Php72ApcuBc < AbstractPhp72Extension
   url "https://pecl.php.net/get/apcu_bc-1.0.3.tgz"
   sha256 "40b63ada315ffce81e2e8d75162606090e1cc72fe94207bc7daa6dd260694919"
   head "https://github.com/krakjoe/apcu-bc.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
