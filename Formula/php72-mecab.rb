@@ -7,6 +7,7 @@ class Php72Mecab < AbstractPhp72Extension
   url "https://github.com/rsky/php-mecab/archive/v0.6.0.tar.gz"
   sha256 "8ec57164dd208f700ca16853f07fb62f111e16b025ca1ab5d4100aaaa9aa7c58"
   head "https://github.com/rsky/php-mecab.git"
+  revision 1
 
   bottle do
     sha256 "84d69df11d7a27aebf624e920a40bdcf950d956efaad244d6acf8b4c853ea65b" => :sierra
