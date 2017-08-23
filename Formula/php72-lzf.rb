@@ -7,6 +7,7 @@ class Php72Lzf < AbstractPhp72Extension
   url "https://pecl.php.net/get/LZF-1.6.5.tgz"
   sha256 "dd116d12a3be985f42256650ce9a033fd3c4e8da4f2280c79fb9fd6a73199a4c"
   head "https://github.com/php/pecl-file_formats-lzf.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
