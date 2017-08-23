@@ -7,6 +7,7 @@ class Php72Ast < AbstractPhp72Extension
   url "https://github.com/nikic/php-ast/archive/v0.1.4.tar.gz"
   sha256 "082380202aecca3709b6b67121024f46c06ed5e00ff966f11523ab853491ed54"
   head "https://github.com/nikic/php-ast.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
