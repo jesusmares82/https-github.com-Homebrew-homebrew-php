@@ -7,6 +7,7 @@ class Php72Event < AbstractPhp72Extension
   url "https://pecl.php.net/get/event-2.2.1.tgz"
   sha256 "44756686df68d8ef4fcee31359c0c03802b1f55ad88db7ac142169777f3d17ef"
   head "https://bitbucket.org/osmanov/pecl-event.git"
+  revision 1
 
   bottle do
     sha256 "11de92c1be6b7c655293d628f9bfbf911d277e794faee4ecbd85b31e67f274be" => :sierra
