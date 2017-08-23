@@ -7,6 +7,7 @@ class Php72Amqp < AbstractPhp72Extension
   url "https://pecl.php.net/get/amqp-1.7.1.tgz"
   sha256 "38a92eaef1aa863404170bcd15605f7f78140eeec1ff5be6af65c5b8081e2599"
   head "https://github.com/pdezwart/php-amqp.git"
+  revision 1
 
   bottle do
     cellar :any
