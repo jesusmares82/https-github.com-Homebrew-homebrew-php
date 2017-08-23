@@ -7,6 +7,7 @@ class Php72Lua < AbstractPhp72Extension
   url "https://pecl.php.net/get/lua-2.0.2.tgz"
   sha256 "eb11c68a8f2259ad02486f0a135785bd13c08166b6ec4a1301c862e72dc8a30d"
   head "https://github.com/laruence/php-lua.git"
+  revision 1
 
   bottle do
     sha256 "18c721a21be2766bfb52c51c6d09e4ade72df4eabcd7823a0dddbfc48b0e7fcf" => :sierra
