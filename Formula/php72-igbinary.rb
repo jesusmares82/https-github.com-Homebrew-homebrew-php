@@ -7,6 +7,7 @@ class Php72Igbinary < AbstractPhp72Extension
   url "https://github.com/igbinary/igbinary/archive/2.0.4.tar.gz"
   sha256 "7b71e60aeada2b9729f55f3552da28375e3c5c66194b2c905af15c3756cf34c8"
   head "https://github.com/igbinary/igbinary.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
