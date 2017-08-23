@@ -7,6 +7,7 @@ class Php72Lz4 < AbstractPhp72Extension
   url "https://github.com/kjdev/php-ext-lz4/archive/0.2.3.tar.gz"
   sha256 "f484c8229b3c5af1385ce11e4b37999702757bad9bdb2eab8bfe48fa3f159904"
   head "https://github.com/kjdev/php-ext-lz4.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
