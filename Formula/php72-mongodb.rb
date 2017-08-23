@@ -7,6 +7,7 @@ class Php72Mongodb < AbstractPhp72Extension
   url "https://pecl.php.net/get/mongodb-1.2.9.tgz"
   sha256 "dac7f755001e454f41bd1ebf54a47754c524062d41244a75ea7ee3a9825a9d2b"
   head "https://github.com/mongodb/mongo-php-driver.git"
+  revision 1
 
   bottle do
     rebuild 1
