@@ -7,6 +7,7 @@ class Php72Mailparse < AbstractPhp72Extension
   url "https://pecl.php.net/get/mailparse-3.0.1.tgz"
   sha256 "42ee10de881a3739acf73ddef8800d80c3c57f70072f41bdb22e6e87ebc9cc62"
   head "https://github.com/php/pecl-mail-mailparse.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
