@@ -10,9 +10,9 @@ class Php72Event < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "11de92c1be6b7c655293d628f9bfbf911d277e794faee4ecbd85b31e67f274be" => :sierra
-    sha256 "30dc893400f6d1055d894919c61a4ded59693f762012156ddbac226deec82001" => :el_capitan
-    sha256 "1d99173dd984c7687a15677ec928094e1ec86d6e62f56d6ba1f937a4f8d4936b" => :yosemite
+    sha256 "6375f97e1df7c9ee58079520d5361505eaac85f01da0611723378ada008f6849" => :sierra
+    sha256 "92cead5570cf16941a037cc8ed0d28d6cbff99bba5e40399485449b9e3b0d997" => :el_capitan
+    sha256 "0180e7d5596e4adbdb610f97536276498cb119e7fa08d7403c7fe56f6fdedc43" => :yosemite
   end
 
   depends_on "libevent"
