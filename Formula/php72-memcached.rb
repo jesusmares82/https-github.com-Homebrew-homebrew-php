@@ -10,9 +10,9 @@ class Php72Memcached < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "8a22c788b40cc1736d5f4fced34b784e08a99f45e2da679696b55f0bedf12e2f" => :sierra
-    sha256 "cacdac134327a1c59d8ff878a4a50da9a04006a9dd3f1f1425b6920f0278e3a4" => :el_capitan
-    sha256 "be3423bc08a7c6f90eda13885e7214d08ca601d8400aeafdf59007b7417d6783" => :yosemite
+    sha256 "8e49d5918b2821ceb6e4791ff236b04c3755fad6f8a501d31e05ab2c757ff478" => :sierra
+    sha256 "7ad4ee44647e304827063be22779b8ec13068017889fc55d653682dc47681afd" => :el_capitan
+    sha256 "4595348e7c5ce09f964affeda01f72a6ae870bd88f05a58bcd0267f25d182c36" => :yosemite
   end
 
   option "with-sasl", "Build with sasl support"
