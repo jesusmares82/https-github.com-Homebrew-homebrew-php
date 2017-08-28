@@ -10,9 +10,9 @@ class Php72Mecab < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "84d69df11d7a27aebf624e920a40bdcf950d956efaad244d6acf8b4c853ea65b" => :sierra
-    sha256 "2e0d1241babed6f7d2bb881036ceaf077cf26740c8f2c2e11b0e719deb812b57" => :el_capitan
-    sha256 "26f103497315ae6436be7dc7fd020633950bb3e378bca890b9bed00c0eeff357" => :yosemite
+    sha256 "ee586c623f42194be1e594ee3cdcda4f398a23e55d2ef53f1ab3fe7ed4b0beb3" => :sierra
+    sha256 "ff34cbcb408a88f17037a55bb098e5d8d437f33f25c5e3c8530312c8eb309507" => :el_capitan
+    sha256 "3f6ebbed273a35e602b1230dd59187800c3ad0adf4da98441eb1ed20dc6e4815" => :yosemite
   end
 
   depends_on "mecab"
