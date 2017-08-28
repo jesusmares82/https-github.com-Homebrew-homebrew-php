@@ -10,10 +10,9 @@ class Php72Mongodb < AbstractPhp72Extension
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 "ef317860ea451b280b16edc11686fa48253e7aca044100b128cb174102f3df77" => :sierra
-    sha256 "440a2871f63aa06b65fada85250256ad333032fd5c4caa56e26841f6a459e6d1" => :el_capitan
-    sha256 "dc29bc659ef9b11f12ffc348f4ccb8f4e7c2d94ab60cba64cf15cdce5d943d6e" => :yosemite
+    sha256 "776b3fb3a3585c64c77cea9706f27f4e12595c2b9e5a392ece583e13ae178346" => :sierra
+    sha256 "e4f92a034aad664771cd2df9c464b4556137f26097744da4e64e5cb51d715d5b" => :el_capitan
+    sha256 "9dbca091c2e1e07fbad52c4d28b6743b9afafeb0aaccd6902f4f6158327323c6" => :yosemite
   end
 
   devel do
