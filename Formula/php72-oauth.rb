@@ -11,9 +11,9 @@ class Php72Oauth < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "8e800a206c530343f1a380d241e01c4270c6909c8d2be79561ae6ba89e03a626" => :sierra
-    sha256 "550a7f3cc2145782d95a3404d6784bfb8d0cd724316ad0458886aff7b59849b2" => :el_capitan
-    sha256 "5acc56f5b50e75e1d497c19481f836c1994790c62bb2fdb057472272ecffb618" => :yosemite
+    sha256 "f0d34a2f2fd40489c73d18e0896f8296609f9b782ca112c9cac388ec3f9a7ad1" => :sierra
+    sha256 "643e3d4a8b7efa9bbd234261fe05e43e55e24f26e752ee7059bef74113241531" => :el_capitan
+    sha256 "8081f48fbc836b615bb2c18c3dc6681df119bb5dd391819898837c54ba638884" => :yosemite
   end
 
   depends_on "pcre"
