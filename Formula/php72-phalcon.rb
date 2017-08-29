@@ -7,6 +7,7 @@ class Php72Phalcon < AbstractPhp72Extension
   url "https://github.com/phalcon/cphalcon/archive/v3.2.0.tar.gz"
   sha256 "32f83fc7ab4eeee37a6577e5920ed5d94f455c723cf9499d195fad3be30c104e"
   head "https://github.com/phalcon/cphalcon.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
