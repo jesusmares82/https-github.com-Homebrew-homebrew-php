@@ -1,6 +1,6 @@
 require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 
-class Php71Libsodium < AbstractPhp71Extension
+class Php70LibsodiumAT10 < AbstractPhp70Extension
   init
   desc "Modern and easy-to-use crypto library"
   homepage "https://github.com/jedisct1/libsodium-php"
@@ -10,16 +10,18 @@ class Php71Libsodium < AbstractPhp71Extension
 
   bottle do
     cellar :any
-    sha256 "a29ed699108b4c2385a0503e04efccdf1dfab11d2b415a76744540f606e03c56" => :el_capitan
-    sha256 "4b352ca5a03e426612923b92cc906daf996a115c07453a7086788e309390873b" => :yosemite
-    sha256 "44dc6ea867f8cc7e77d390fae41fa9593cedca3e779792482bc5dd8d517846c7" => :mavericks
+    sha256 "3425f456238fa32050cbc15fa94d5ba6a1dbe9b9f310ca18639917867ad4c139" => :el_capitan
+    sha256 "b08c9abb4831c729e3cbaf8e25d3ce4afc5a13001e91050bfab044794d52c49e" => :yosemite
+    sha256 "21ce16f007bbf2554c6536aa5a704d319dcce40b644e88157c1698acdfe0e670" => :mavericks
   end
 
   depends_on "libsodium"
 
-  def install
-    ENV.universal_binary if build.universal?
+  def extension
+    "libsodium"
+  end
 
+  def install
     safe_phpize
     system "./configure", "--prefix=#{prefix}", phpconfig
     system "make"
