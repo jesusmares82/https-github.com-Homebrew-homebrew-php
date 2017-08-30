@@ -7,6 +7,7 @@ class Php72Yaml < AbstractPhp72Extension
   url "https://pecl.php.net/get/yaml-2.0.0.tgz"
   sha256 "ef13ff56c184290c025a522bf9ae2e1b3ecc8543c3a5161dd02adec90897a221"
   head "https://github.com/php/pecl-file_formats-yaml.git", :branch => "php7"
+  revision 1
 
   bottle do
     sha256 "d97c1d04d2b16457a479a712aa7d087e70e945c21611a25ef41e290c7de7efa6" => :sierra
