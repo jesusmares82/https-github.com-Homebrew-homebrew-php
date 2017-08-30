@@ -7,6 +7,7 @@ class Php72Timecop < AbstractPhp72Extension
   url "https://github.com/hnw/php-timecop/archive/v1.2.4.tar.gz"
   sha256 "1e0bc0b47097500152aab0cd8fbc7f4b1323816cdbcd1b65df639d95356fbf85"
   head "https://github.com/hnw/php-timecop.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
