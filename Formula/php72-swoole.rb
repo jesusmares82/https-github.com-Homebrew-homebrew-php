@@ -7,6 +7,7 @@ class Php72Swoole < AbstractPhp72Extension
   url "https://github.com/swoole/swoole-src/archive/v2.0.7.tar.gz"
   sha256 "d8370a5f959f2d4082f5b2cec2e3a5b294dd3d7f586a5c7a19e3d154b48c699b"
   head "https://github.com/swoole/swoole-src.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
