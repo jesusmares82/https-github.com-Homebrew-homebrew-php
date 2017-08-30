@@ -7,6 +7,7 @@ class Php72Ssh2 < AbstractPhp72Extension
   url "https://pecl.php.net/get/ssh2-1.0.tgz"
   sha256 "6a93891878b23904a773eb814fec7aea4ea00b4a412ee779c8535ed9c5e46ced"
   head "https://github.com/php/pecl-networking-ssh2.git"
+  revision 1
 
   bottle do
     sha256 "8514e7509c3bcab7ac223df1f063cb4cdc2257b340aa10244075c8545b166cb0" => :sierra
