@@ -7,6 +7,7 @@ class Php72Gearman < AbstractPhp72Extension
   url "https://github.com/wcgallego/pecl-gearman/archive/gearman-2.0.3.tar.gz"
   sha256 "f71e8ff218f31e3b9a15534e18846b9f9526319daffcc12e76b545889e44e130"
   head "https://github.com/wcgallego/pecl-gearman.git"
+  revision 1
 
   bottle do
     sha256 "6ba75c0f79091c89dcc08ced2f727683de005216fa84cd74c1faa055f34a4d5c" => :sierra
