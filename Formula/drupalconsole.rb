@@ -4,8 +4,8 @@ class Drupalconsole < AbstractPhpPhar
   init
   desc "CLI tool for Drupal 8"
   homepage "https://drupalconsole.com/"
-  url "https://github.com/hechoendrupal/drupal-console-launcher/releases/download/1.0.1/drupal.phar"
-  sha256 "d27c8c7283a237c2f610c5ec00b19a228fddaa02ae4dbf815d43490a0ce9e30e"
+  url "https://github.com/hechoendrupal/drupal-console-launcher/releases/download/1.0.2/drupal.phar"
+  sha256 "e3845ccb7eb014483a535eb4919de944aefb5b32a3c57cf89d2ed999f6b82e59"
 
   bottle do
     cellar :any_skip_relocation
