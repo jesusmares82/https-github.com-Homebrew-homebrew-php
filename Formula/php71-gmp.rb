@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php71Gmp < AbstractPhp71Extension
   init
   desc "GMP core php extension"
-  homepage "http://php.net/manual/en/book.gmp.php"
-  revision 14
+  homepage "https://php.net/manual/en/book.gmp.php"
+  revision 15
 
   bottle do
     sha256 "54c54a8a25dd7e3e28bbaeba7b104cebb1884ad55766c06eafdcee4728c04bea" => :sierra

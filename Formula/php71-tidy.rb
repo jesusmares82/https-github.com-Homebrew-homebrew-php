@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php71Tidy < AbstractPhp71Extension
   init
   desc "Tidy HTML clean and repair utility"
-  homepage "http://php.net/manual/en/book.tidy.php"
-  revision 14
+  homepage "https://php.net/manual/en/book.tidy.php"
+  revision 15
 
   bottle do
     sha256 "44afd52aeee4a58b52fc9a973633ce02afd00786fb7282f73a30340a5408f598" => :sierra

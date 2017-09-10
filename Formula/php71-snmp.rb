@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php71Snmp < AbstractPhp71Extension
   init
   desc "SNMP core php extension"
-  homepage "http://php.net/manual/en/book.snmp.php"
-  revision 14
+  homepage "https://php.net/manual/en/book.snmp.php"
+  revision 15
 
   bottle do
     sha256 "249330b698a1de765fd433927c663ffa36776211a45dc6e3b089af4d122c9083" => :sierra

@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php71Mcrypt < AbstractPhp71Extension
   init
   desc "Interface to the mcrypt library"
-  homepage "http://php.net/manual/en/book.mcrypt.php"
-  revision 15
+  homepage "https://php.net/manual/en/book.mcrypt.php"
+  revision 16
 
   bottle do
     sha256 "136c8b2c899e5e7a16d5060c7ed9fcfd4f0ef5c0fdff294ed86ca905012c4353" => :sierra
