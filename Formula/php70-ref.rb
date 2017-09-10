@@ -23,4 +23,11 @@ class Php70Ref < AbstractPhp70Extension
     prefix.install "modules/ref.so"
     write_config_file if build.with? "config-file"
   end
+
+  def caveats
+    <<-EOT.undent
+      This installs the older php-ref version #{version} which is no longer
+      supported because PHP 7.0 support in php-ref discontinued.
+    EOT
+  end
 end

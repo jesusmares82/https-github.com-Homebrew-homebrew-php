@@ -4,8 +4,8 @@ class Php72Ref < AbstractPhp72Extension
   init
   desc "Soft and Weak references support for PHP"
   homepage "https://github.com/pinepain/php-ref"
-  url "https://github.com/pinepain/php-ref/archive/v0.4.4.tar.gz"
-  sha256 "51da1e0625e2c89da05bdef5166e1046f5594870df4b0f6925eaa01b69925a9b"
+  url "https://github.com/pinepain/php-ref/archive/v0.5.0.tar.gz"
+  sha256 "0fd928fd8314f836a97e3833d6c5e15658202d05fe3a0725d793f6e06394cd97"
   head "https://github.com/pinepain/php-ref.git"
 
   bottle do
