@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 class Composer < AbstractPhpPhar
   desc "Dependency Manager for PHP"
   homepage "https://getcomposer.org"
-  url "https://getcomposer.org/download/1.5.1/composer.phar"
-  sha256 "2745e7b8cced2e97f84b9e9cb0f9c401702f47cecea5a67f095ac4fa1a44fb80"
+  url "https://getcomposer.org/download/1.5.2/composer.phar"
+  sha256 "c0a5519c768ef854913206d45bd360efc2eb4a3e6eb1e1c7d0a4b5e0d3bbb31f"
   head "https://getcomposer.org/composer.phar"
 
   bottle do
