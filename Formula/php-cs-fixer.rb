@@ -12,9 +12,8 @@ class PhpCsFixer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "44e68b713dfcf5495b931d52d48b6d3bb731bd5ca114893ecab417b7330ea895" => :sierra
-    sha256 "7531a9c14e669bf23966918ff8b31c7ed930dc6fa008a00b3c4883fe988bdbf1" => :el_capitan
-    sha256 "382d85b0e6b1a947b29cba671a8268f3521b37a8c2c3e286e667a5bd23c29e8c" => :yosemite
+    sha256 "671a9a2d36381f0067d25e23b5ef43f6c1c86e5a8f5dfba16ef286d732be0986" => :sierra
+    sha256 "b4323f6c000d31dc4fd74ce9965b3c84a276d640a430bbbd651666140f29aa06" => :el_capitan
   end
 
   depends_on PhpMetaRequirement
