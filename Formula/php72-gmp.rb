@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php72Gmp < AbstractPhp72Extension
   init
   desc "GMP core php extension"
-  homepage "http://php.net/manual/en/book.gmp.php"
-  revision 3
+  homepage "https://php.net/manual/en/book.gmp.php"
+  revision 4
 
   bottle do
     sha256 "a7fcf223501d625abada34f11ee4b3f66ff9e6f534472feff2f4ee877693f059" => :sierra
@@ -14,7 +14,6 @@ class Php72Gmp < AbstractPhp72Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   depends_on "gmp"
 

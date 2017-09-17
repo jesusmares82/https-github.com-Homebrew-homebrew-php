@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php72Pspell < AbstractPhp72Extension
   init
   desc "Extension to check the spelling"
-  homepage "http://php.net/manual/en/book.pspell.php"
-  revision 3
+  homepage "https://php.net/manual/en/book.pspell.php"
+  revision 4
 
   bottle do
     sha256 "deae766fe6b5d17fd57c4dc525719ffd3807fa51ee49206752e4fcfcfc9cce0f" => :sierra
@@ -14,7 +14,6 @@ class Php72Pspell < AbstractPhp72Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   depends_on "aspell"
 

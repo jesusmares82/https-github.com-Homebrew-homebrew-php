@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php72Intl < AbstractPhp72Extension
   init
   desc "Wrapper for the ICU library"
-  homepage "http://php.net/manual/en/book.intl.php"
+  homepage "https://php.net/manual/en/book.intl.php"
 
   bottle do
     sha256 "8792aebce790df5b41254460934bcd4fe5aef027ba55272209b1fa1b9de41527" => :sierra
@@ -13,8 +13,7 @@ class Php72Intl < AbstractPhp72Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
-  revision 2
+  revision 3
 
   depends_on "icu4c"
 

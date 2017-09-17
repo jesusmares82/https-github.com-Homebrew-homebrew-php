@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php72Tidy < AbstractPhp72Extension
   init
   desc "Tidy HTML clean and repair utility"
-  homepage "http://php.net/manual/en/book.tidy.php"
-  revision 3
+  homepage "https://php.net/manual/en/book.tidy.php"
+  revision 4
 
   bottle do
     sha256 "d895c531e3067e83f50666ee455f72d1f8be209b53963c4604192e51c9bc2a1e" => :sierra
@@ -14,7 +14,6 @@ class Php72Tidy < AbstractPhp72Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   depends_on "tidy-html5"
 

@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php72Pcntl < AbstractPhp72Extension
   init
   desc "Process Control support"
-  homepage "http://php.net/manual/en/book.pcntl.php"
-  revision 4
+  homepage "https://php.net/manual/en/book.pcntl.php"
+  revision 5
 
   bottle do
     cellar :any_skip_relocation
@@ -15,7 +15,6 @@ class Php72Pcntl < AbstractPhp72Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   def install
     Dir.chdir "ext/pcntl"

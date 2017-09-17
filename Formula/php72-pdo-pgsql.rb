@@ -4,7 +4,7 @@ class Php72PdoPgsql < AbstractPhp72Extension
   init
   desc "Unified PostgreSQL driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_pgsql"
-  revision 4
+  revision 5
 
   bottle do
     cellar :any
@@ -15,7 +15,6 @@ class Php72PdoPgsql < AbstractPhp72Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   depends_on "postgresql"
 

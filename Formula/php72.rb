@@ -3,7 +3,7 @@ require File.expand_path("../../Abstract/abstract-php", __FILE__)
 class Php72 < AbstractPhp
   init
   desc "PHP Version 7.2"
-  revision 5
+  revision 6
 
   bottle do
     sha256 "3460363fbff15acbcedbf4a16fee72eb90142578d92c095cba6968000735e590" => :sierra
@@ -15,7 +15,6 @@ class Php72 < AbstractPhp
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   head PHP_GITHUB_URL, :branch => PHP_BRANCH
 
