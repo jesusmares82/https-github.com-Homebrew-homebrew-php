@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php70Pspell < AbstractPhp70Extension
   init
   desc "Extension to check the spelling"
-  homepage "http://php.net/manual/en/book.pspell.php"
-  revision 13
+  homepage "https://php.net/manual/en/book.pspell.php"
+  revision 14
 
   bottle do
     sha256 "dda5d30c747faba03aaeaa2cbd579288ae7e4d276e7442e5d8b8bb71b77e3201" => :sierra

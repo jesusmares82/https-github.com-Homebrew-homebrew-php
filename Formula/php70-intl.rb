@@ -3,8 +3,8 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php70Intl < AbstractPhp70Extension
   init
   desc "Wrapper for the ICU library"
-  homepage "http://php.net/manual/en/book.intl.php"
-  revision 17
+  homepage "https://php.net/manual/en/book.intl.php"
+  revision 18
 
   bottle do
     sha256 "1458279632dc6987b58315780d0666e50cee0e997e459a96532eb82e9e3ddffd" => :sierra
