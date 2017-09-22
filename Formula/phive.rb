@@ -4,8 +4,8 @@ class Phive < AbstractPhpPhar
   init
   desc "Installation and verification of phar distributed PHP applications"
   homepage "https://phar.io"
-  url "https://github.com/phar-io/phive/releases/download/0.8.0/phive-0.8.0.phar"
-  sha256 "e2682d3089863ebad64df650b1e9a2b74d99433c6e7f37be6433d62584e2b77b"
+  url "https://github.com/phar-io/phive/releases/download/0.8.1/phive-0.8.1.phar"
+  sha256 "e73e00dee564fea017573821247e1edba95dbcaf10b58e3c9700ae8463db7011"
   head "https://phar.io/releases/phive.phar"
 
   bottle :unneeded
