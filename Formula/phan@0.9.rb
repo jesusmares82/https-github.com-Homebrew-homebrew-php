@@ -1,12 +1,12 @@
 require File.expand_path("../../language/php", __FILE__)
 
-class Phan < Formula
+class PhanAT09 < Formula
   include Language::PHP::Composer
 
   desc "Static analyzer for PHP"
   homepage "https://github.com/phan/phan"
-  url "https://github.com/phan/phan/archive/0.10.0.tar.gz"
-  sha256 "6a61c64ce8b6d8cf49eea4bd4408c9ef8b784b96e6830ee2b6718062b3ee4e9d"
+  url "https://github.com/phan/phan/archive/0.9.6.tar.gz"
+  sha256 "e327fd246c545fdebe5e93d0db40c8b127a29bd941be04572ee36e4f51d2763e"
   head "https://github.com/phan/phan.git"
 
   bottle do

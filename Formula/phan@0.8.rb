@@ -4,10 +4,10 @@ class PhanAT08 < Formula
   include Language::PHP::Composer
 
   desc "Static analyzer for PHP"
-  homepage "https://github.com/etsy/phan"
-  url "https://github.com/etsy/phan/archive/0.8.6.tar.gz"
-  sha256 "23d11bab5a9000bc0df67bf5b8cbee3ffb71198dc55ca5b746bee7c0fb338875"
-  head "https://github.com/etsy/phan.git"
+  homepage "https://github.com/phan/phan"
+  url "https://github.com/phan/phan/archive/0.8.8.tar.gz"
+  sha256 "44504aac5e98431dd7beceec9f96f9d601d7c3f15cf1c579f7203a36cb607235"
+  head "https://github.com/phan/phan.git"
 
   bottle do
     cellar :any_skip_relocation
