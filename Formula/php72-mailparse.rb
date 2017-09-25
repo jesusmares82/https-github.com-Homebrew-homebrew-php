@@ -11,9 +11,9 @@ class Php72Mailparse < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ac32fa52ab657b1c9846b05c3c1530f440f2373bf63e66e95bde2a6fd8ff7c34" => :sierra
-    sha256 "d2a97c5c73e8302a3bc3bd852a05a81b64b68967a855f14755c79f31b4735108" => :el_capitan
-    sha256 "b7a983aea9c8e189b31316b31e18486135d712419a66bd28696a162ddc34c14f" => :yosemite
+    sha256 "37a0e6e11d25e3c28b8a04ab63b041e9926686dc9a970cbe6d5d58fc6e112ac6" => :high_sierra
+    sha256 "bbe8b518017c4864a059b57031b6746495f3e19f057b89dbed466b4d30fcf871" => :sierra
+    sha256 "0a8ab1dd08e705b857d36179a38dd93574d0d43ff4e03bdabd3a572d11923bbf" => :el_capitan
   end
 
   depends_on "pcre"
