@@ -11,9 +11,9 @@ class Php72ApcuBc < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f33101833fd39e3a9f055414beb499788ce908b0822069a61ba0b76200b7065a" => :sierra
-    sha256 "6f6ff8cf47c2750421fdc4edad161f15382d6ac0da209130339afac00167ac70" => :el_capitan
-    sha256 "1dd022759bd54a931e21b1c5c901ea357dad5568c9b51ffa37ebb75c2329b00d" => :yosemite
+    sha256 "29036fe68b6eb06c43036618f04acfbc1968ef0cbdd84bc97977f975a2c78c65" => :high_sierra
+    sha256 "8bea9ebfd8e60e4d225df409d5ecd0fc894b8195f0b3fccda496106b76141ae5" => :sierra
+    sha256 "dd02cf01ff9db6d2ab6448c4be5bbffe19b514d9eddc570eb101dd0a04f6adab" => :el_capitan
   end
 
   depends_on "php72-apcu"
