@@ -11,9 +11,9 @@ class Php72Swoole < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "abc58bc95bef5544be86910c48d0116daef2e63695b8750ba4ec918d5b41a4c8" => :sierra
-    sha256 "fb4593162589db1c33544c6c6e738b3537eb1addd46673fce12272c83f39c3ad" => :el_capitan
-    sha256 "020a3e91940346a82c1c6f2898245788c15e2311e920e10999cb24a3369ddef7" => :yosemite
+    sha256 "eb3a57d8a322d2865376d95b9118ec5d095cba53599f65dc74205ee8adc53391" => :high_sierra
+    sha256 "bfbc73391c6aa1224509efcb562d368083ac7174611209f05a5fd006e93ed122" => :sierra
+    sha256 "517abae2f9eae2a0e40da456b50a689fea4a9321f3b1189500c53499b0a45426" => :el_capitan
   end
 
   def install
