@@ -10,9 +10,9 @@ class Php72Ref < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "cfd6b74a7530c8ec9ef31e781f2ee5c48870a8c0529f1c5b0d2d11c6a4a626b7" => :sierra
-    sha256 "2a960f30cd3ce608d122cd0260ec522c06828dbc45d7a207d609c848bf866f75" => :el_capitan
-    sha256 "661f28161adbe8c2c694b6cd8b7ad64093603690483220884370f23369b8ad02" => :yosemite
+    sha256 "32c786c1f4e4410a031c875f25aa78e5ebb013fa15c705c6d62bcc782f81b121" => :high_sierra
+    sha256 "4486f1171fc14f4f1e64b96305a74372ffb2c00f1d3da9733a1c00f3602249a6" => :sierra
+    sha256 "5b789bbb7bccd0bd8a6553185d18742d75c03d6aea704e221c394687d8ae5b0f" => :el_capitan
   end
 
   def install
