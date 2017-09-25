@@ -10,9 +10,9 @@ class Php72Uv < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "0c0ed5f12874ffe089e7d1feaad070bb011fe584959ec599347824f7699ba837" => :sierra
-    sha256 "71cf0d69386e6bd0eb203db38e5d4a2002cf2ae919ea89cd0f6f2f303fe3b663" => :el_capitan
-    sha256 "c6b30bd22b009a150a481e0d224422151cf84c6de2b63bd701257988047db20f" => :yosemite
+    sha256 "5c64d7d091d48e744437cbf22112e117dd5a9c43f748b890db5de28ba1e22c1a" => :high_sierra
+    sha256 "33171601b5c3e40e51e1ed3b48ed18a825cbe269b25a4dbe56ad2dc14b282c52" => :sierra
+    sha256 "8ff30422847e7fa583bc2fab21a31ac28763af12d14973a67b5cb73fe0d52669" => :el_capitan
   end
 
   depends_on "libuv"
