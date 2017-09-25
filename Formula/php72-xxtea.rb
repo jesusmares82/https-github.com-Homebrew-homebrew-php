@@ -11,9 +11,9 @@ class Php72Xxtea < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "71ad800c7029ed84ea262876e736b36a148b14cf073e6a3a08c717a0455863c4" => :sierra
-    sha256 "496be215a4caf1f76d6557684d41e99a88a10704a93c81beaf519ff58db4e93c" => :el_capitan
-    sha256 "da0699b31a7af9afaba454d3ea94a362e1b9b5c8e8fa17a4b268779b17ba4ba9" => :yosemite
+    sha256 "cf5ac3083d4ed37052190bf55d8ef5d7293dc79dca27e982f6de8659e6e1af35" => :high_sierra
+    sha256 "5fe41c8cd4e5e53c0e1d14b58b45a34bc16f2d1e1d078b143318199b9d83a1d0" => :sierra
+    sha256 "373b21da39672da0604b7c88e34d5828736ef6beb30cc0fd18562e529ab4b2a4" => :el_capitan
   end
 
   def install
