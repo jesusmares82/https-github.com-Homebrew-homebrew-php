@@ -4,10 +4,9 @@ class Php72Ssh2 < AbstractPhp72Extension
   init
   desc "Provides bindings to the functions of libssh2"
   homepage "https://pecl.php.net/package/ssh2"
-  url "https://pecl.php.net/get/ssh2-1.0.tgz"
-  sha256 "6a93891878b23904a773eb814fec7aea4ea00b4a412ee779c8535ed9c5e46ced"
+  url "https://pecl.php.net/get/ssh2-1.1.2.tgz"
+  sha256 "87618d6a0981afe8c24b36d6b38c21a0aa0237b62e60347d0170bd86b51f79fb"
   head "https://github.com/php/pecl-networking-ssh2.git"
-  revision 1
 
   bottle do
     sha256 "7e9924b10c4712501678ceba05d093fa7a23dedd925d879dcb4d2106ca02cc30" => :high_sierra
