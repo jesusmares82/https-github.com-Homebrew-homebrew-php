@@ -9,9 +9,9 @@ class Php71Protobuf < AbstractPhp71Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "c609ce590a954b233ea45be4888aa4d544bf01a2cd3409bc6ec7376bbeef4ebc" => :sierra
-    sha256 "ef906debd654600db9051979e7a15d7e316d88e6379c23f081a00dc91b6df5ba" => :el_capitan
-    sha256 "b2acb0eeabcf02672e2a06951d79e0349cca184d72013c405b631943b0cbda5a" => :yosemite
+    sha256 "39007b7fd9bb8befd81271a8e169541badda12ee983d2c5ea101a4faa78e4f2e" => :high_sierra
+    sha256 "681bb2c96fce7bf665a8ab88d87744e6a9153b7906d5c197b7a2d2b1b51ca21a" => :sierra
+    sha256 "b767ead990d6ad139acb2b28d25bf4466b08c3639bb0db95b04c79946c2df57f" => :el_capitan
   end
 
   depends_on "protobuf"
