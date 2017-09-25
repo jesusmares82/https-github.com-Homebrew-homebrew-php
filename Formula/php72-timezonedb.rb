@@ -11,9 +11,9 @@ class Php72Timezonedb < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "89234bda9ef1ee4c4e6ab359673412b2ad5611bfba12d8f8baeedbac9ad1ec66" => :sierra
-    sha256 "443f65a5eb19c6f910925a792c17d5ddd2f17c36c5a7d285d66abd9a7f0fb9b3" => :el_capitan
-    sha256 "6551365157449433dfd630996879d4fd98b2cdfffb958896441a70cb4622dcd2" => :yosemite
+    sha256 "8eb6b90a23a3f1284eae4422a234c76f860f716c8f66cca8547cb93ddb8534a8" => :high_sierra
+    sha256 "96e0907f0db603696c91fb7cb2aeb6d5622ae4a236f34f6318481d595e51709f" => :sierra
+    sha256 "8a1794048d5e0817758b689f0b8cb40c2b266963e337303f54f9daf85ae07173" => :el_capitan
   end
 
   def install
