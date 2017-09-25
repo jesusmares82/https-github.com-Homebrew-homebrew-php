@@ -9,9 +9,9 @@ class Php71Ssh2 < AbstractPhp71Extension
   head "https://github.com/php/pecl-networking-ssh2.git"
 
   bottle do
-    sha256 "7bdb69915afa6f87c2b6f3d754936e20c3f1f6c48185fec02dd752841409ec5b" => :sierra
-    sha256 "08407a7adb4e8bb7b13bd4992ddc18dbb0e8777128d13be09fcd2bf13ef19f01" => :el_capitan
-    sha256 "9375514009a258db3f5de3e4001ff6806e2de8acb016363fc685aecc513ac45a" => :yosemite
+    sha256 "c592b8a2490be389e88dd08692d25846c279b769e4e528831fbaf50e37ddee45" => :high_sierra
+    sha256 "5c41c3926caee738d06534834c879a8d7105ac2245021241ece8a542d57f3394" => :sierra
+    sha256 "9845acbc5f17eda952182149ca99d06942a9ad7b25681d0f948a72dad2456f8d" => :el_capitan
   end
 
   depends_on "libssh2"
