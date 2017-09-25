@@ -10,9 +10,9 @@ class Php72Ssh2 < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "8514e7509c3bcab7ac223df1f063cb4cdc2257b340aa10244075c8545b166cb0" => :sierra
-    sha256 "0a1604f3d71e49da3d15b83a13589231e15acf3c1deace262d770fb2b8132b4e" => :el_capitan
-    sha256 "6a2c4b1fcc65997e4a4aae406614d61abe582072483b328b942b5bfbd2c1c8af" => :yosemite
+    sha256 "7e9924b10c4712501678ceba05d093fa7a23dedd925d879dcb4d2106ca02cc30" => :high_sierra
+    sha256 "95db505e5b866df37bd2611a2bf6ce2c4317e92a0b185001ef41c2ebc936a255" => :sierra
+    sha256 "12c179c32dd4182ac584b5cd3798a75fbd28c96f9756667afd30f1f2e7057c6d" => :el_capitan
   end
 
   depends_on "libssh2"
