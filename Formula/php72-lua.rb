@@ -10,9 +10,9 @@ class Php72Lua < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "18c721a21be2766bfb52c51c6d09e4ade72df4eabcd7823a0dddbfc48b0e7fcf" => :sierra
-    sha256 "359d91e676b9bd6a7b560acc762f7c96f828474b7b356d0abc6b2a9af00b4605" => :el_capitan
-    sha256 "be8455460ea88dba34b04c067500acfcb04ea7ac3b02c982b6346ff0f4e2d7c7" => :yosemite
+    sha256 "0cb6c0d17da01a4d88dddc02a607c98ca1aff139813aed338e995fd45e2aaa6b" => :high_sierra
+    sha256 "4c13f0967f688d658563767568723e1b68a60bfaa0ada28e821401108a0b193a" => :sierra
+    sha256 "884016008cd30a683d185aa43e193a3fd2534c8e414a2b69ad0300770a36f224" => :el_capitan
   end
 
   depends_on "lua"
