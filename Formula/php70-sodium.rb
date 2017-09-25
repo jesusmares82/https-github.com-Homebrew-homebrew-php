@@ -10,9 +10,9 @@ class Php70Sodium < AbstractPhp70Extension
 
   bottle do
     cellar :any
-    sha256 "3425f456238fa32050cbc15fa94d5ba6a1dbe9b9f310ca18639917867ad4c139" => :el_capitan
-    sha256 "b08c9abb4831c729e3cbaf8e25d3ce4afc5a13001e91050bfab044794d52c49e" => :yosemite
-    sha256 "21ce16f007bbf2554c6536aa5a704d319dcce40b644e88157c1698acdfe0e670" => :mavericks
+    sha256 "950f8daa78127312e947db074792848039850b8b866dac6902d099554e9055ad" => :high_sierra
+    sha256 "51f993defcb4d95b4ffa3c4845a330dd05e1a2a4fb2116af8a22b3f6b3f0c1ae" => :sierra
+    sha256 "ca9e88149b120088a2092d9563e56f530e1308480af95d9d235c7ac6d2da2d38" => :el_capitan
   end
 
   depends_on "libsodium"
