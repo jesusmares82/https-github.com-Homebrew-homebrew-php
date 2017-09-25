@@ -11,9 +11,9 @@ class Php72Redis < AbstractPhp72Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "7967df9fa3d6facf48e9e83457e7c97c8ae34c027bd0300b44db8a39c5daf363" => :sierra
-    sha256 "2b435f62a79639820f5f5605187444e978137dbeda649a4b96bf7ce164f5bfc0" => :el_capitan
-    sha256 "75882c609f0a464526eb68010a975ad03df0a600988113fa1692c6569e42350d" => :yosemite
+    sha256 "c5d23dd449c059effcd7427bad28b137da8240a68778418ca81da63a9c4f85af" => :high_sierra
+    sha256 "8036c01b6fe839f6fd03ce1002d9475d9d4c408a4dbf9168a7877bf84ba399bc" => :sierra
+    sha256 "24d93d8726948422fb71ebcf98508f7764605849e63e5541a0bd88a371c43076" => :el_capitan
   end
 
   depends_on "php72-igbinary"
