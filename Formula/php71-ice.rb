@@ -7,6 +7,12 @@ class Php71Ice < AbstractPhp71Extension
   url "https://github.com/zeroc-ice/ice/archive/v3.7.0.tar.gz"
   sha256 "809fff14a88a7de1364c846cec771d0d12c72572914e6cc4fb0b2c1861c4a1ee"
 
+  bottle do
+    sha256 "87ea1eff668a98dd5eb21da510cd6c52c7ff5abf6ceda9f7e3ae409864cf0957" => :high_sierra
+    sha256 "87ea1eff668a98dd5eb21da510cd6c52c7ff5abf6ceda9f7e3ae409864cf0957" => :sierra
+    sha256 "49d2c14c94a9264d890b56d4e92002aee90e1d1ddd32422df39813b7ce46299c" => :el_capitan
+  end
+
   depends_on "ice"
 
   def config_file
