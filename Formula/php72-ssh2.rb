@@ -9,9 +9,9 @@ class Php72Ssh2 < AbstractPhp72Extension
   head "https://github.com/php/pecl-networking-ssh2.git"
 
   bottle do
-    sha256 "7e9924b10c4712501678ceba05d093fa7a23dedd925d879dcb4d2106ca02cc30" => :high_sierra
-    sha256 "95db505e5b866df37bd2611a2bf6ce2c4317e92a0b185001ef41c2ebc936a255" => :sierra
-    sha256 "12c179c32dd4182ac584b5cd3798a75fbd28c96f9756667afd30f1f2e7057c6d" => :el_capitan
+    sha256 "e4101b961d115589f08423c683320bc9fec217a1e8dce07f64ecd678243d8b9d" => :high_sierra
+    sha256 "7f6017e222d38cdb8e420a471bf0cd76cee729781e7c4c57bda6cb4f9402ec8c" => :sierra
+    sha256 "46a8603589eeae00992327794e21653747eeb71f1d451b348ede3b8fbbd41c24" => :el_capitan
   end
 
   depends_on "libssh2"
