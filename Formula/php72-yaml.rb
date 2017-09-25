@@ -10,9 +10,9 @@ class Php72Yaml < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "d97c1d04d2b16457a479a712aa7d087e70e945c21611a25ef41e290c7de7efa6" => :sierra
-    sha256 "94035370d61343048445a6470dcc4667a1d86a2d154357d0c6960c29143c434b" => :el_capitan
-    sha256 "9cbc0f5b9b84e787f75efabc5a96bba991f4e2da9d29ab2185cd7d9a27230ff6" => :yosemite
+    sha256 "75bd9238267a0b1f173e08aa6464aa9d237eaff7dd373165efbe7e4e63ad4c6a" => :high_sierra
+    sha256 "22a40f5c39736c6a91c34ce4ddc3019cefba394da794dc77ad294d2d773bd8c7" => :sierra
+    sha256 "a6027cba46870bc7d51de83e30568a6aad8eb6b898d2ef2f63bb00803fb8b9dd" => :el_capitan
   end
 
   depends_on "libyaml"
