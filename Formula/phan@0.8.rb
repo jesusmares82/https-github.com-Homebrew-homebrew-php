@@ -11,9 +11,9 @@ class PhanAT08 < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "18825c0adc215e31adb78ad4913077498e09bfcd0dff1e8df34d49733c03ee99" => :sierra
-    sha256 "ce78c87943311aa2d067fe88c1bff4724dbd38f023a3e5e0c82173c7c22d5183" => :el_capitan
-    sha256 "6bd6bdce03d37db0ae61b8002c69bc9a089ee54cfbcd23bb9165b6841fd937a8" => :yosemite
+    sha256 "da22f5f1ddbc1aea2ecfad337e6935751fa16cd2c31f8f5bf0b37532e81edcc7" => :high_sierra
+    sha256 "3a0b9e3f1f877aa9f0dfff86873391d7af92a25f362bdb55b7b40c610d9e67d8" => :sierra
+    sha256 "33351a23e9a464bc521fec2fcce86fb77c0c3643f2bb1369dbb88a10822e59d5" => :el_capitan
   end
 
   depends_on "php70-ast"
