@@ -9,10 +9,10 @@ class Php71Ast < AbstractPhp71Extension
   head "https://github.com/nikic/php-ast.git"
 
   bottle do
-    cellar :any_skip_relocation
-    sha256 "41a608abc2054eb4f216214c48bd41b8c0a5fb9620cc59c35cc2d05ac0ca5b0d" => :sierra
-    sha256 "c0d310f3cbd12565564ecee5cf0e59e9f9dff6290bbfed7adcfdce6ce4bc1951" => :el_capitan
-    sha256 "3af4bfac32cb6a97b31b8b641de05d88bfa1d8dac7910db0d0629b87de262d2c" => :yosemite
+    cellar :any
+    sha256 "a079843102f81c79b24d627baa679bdfc6e822e3d54ebc2fc08252b4b0b88784" => :high_sierra
+    sha256 "ccf13e838f6cf0e7443d39bccab3d17354a153753e665f29b7080fcea4b325d2" => :sierra
+    sha256 "7a8621366cf388b0158a67d2106eea5ca2918683f1d85e854d864cc134afb309" => :el_capitan
   end
 
   def install
