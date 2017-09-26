@@ -9,9 +9,9 @@ class Php55Mongodb < AbstractPhp55Extension
   head "https://github.com/mongodb/mongo-php-driver.git"
 
   bottle do
-    sha256 "dcfcee9cd122710cc41adf4996bb493b16ecb4399eb585d16807d05ff5431962" => :sierra
-    sha256 "c9ed09ca7f021743cf8b22f545129c4d4a8d8f774524937a3f58167c69d84a04" => :el_capitan
-    sha256 "9d4d4628378eb79910699cf83cc966dcef09396859ab7c119d0096e5b8a93a24" => :yosemite
+    sha256 "e524a081d4106226edf16e6f088bf0fc0044f9b9b7fdcc9fa1c12321950841e0" => :high_sierra
+    sha256 "35007b555f14bd996c93f4d907dff36e149188e1f034670fea996fa79302a10d" => :sierra
+    sha256 "f6b05c1169a26ebede3f8528e0685826a1cc60b8bd180addb76bb67eda5995fe" => :el_capitan
   end
 
   depends_on "openssl"
