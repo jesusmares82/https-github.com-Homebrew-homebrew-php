@@ -9,9 +9,9 @@ class Php55Grpc < AbstractPhp55Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "97ea6c17a404e4cbbef5dc672f812b2ab23d6597d7988d9b2bb36dd943aea986" => :sierra
-    sha256 "a989ad06bea88cc5a40804e3bb27a617cf8d213163d7259a7c7e94f79053510c" => :el_capitan
-    sha256 "a5e34bbffa6752677fd80012c3cd640c9ce30d56d77c9805c07c1cd86bb94c8f" => :yosemite
+    sha256 "736cf18fb002640ea2776833cbf37449ec4e7deca54a774069d098f056f9b095" => :high_sierra
+    sha256 "6a376c140551de5a606ec908ecbba58935df04cbcaef258a56c7305d58158432" => :sierra
+    sha256 "6579f1f77baaa642e347cf858a4e14a010064b7e46f0731954cb928f6c44b715" => :el_capitan
   end
 
   def install
