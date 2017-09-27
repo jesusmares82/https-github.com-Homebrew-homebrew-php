@@ -3,9 +3,9 @@ require File.expand_path("../../Abstract/abstract-php-extension", __FILE__)
 class Php71Grpc < AbstractPhp71Extension
   init
   desc "The PHP extension for the gRPC library"
-  homepage "http://grpc.io"
-  url "https://pecl.php.net/get/grpc-1.3.2.tgz"
-  sha256 "5ebb79868857155471b563751fb726b45da18e5a5708878253937bae0e629a84"
+  homepage "https://grpc.io"
+  url "https://pecl.php.net/get/grpc-1.6.0.tgz"
+  sha256 "ded14216247457c04a5e5baf9d3cd44984f4f8042ea4677adfe432ae75c19f09"
 
   bottle do
     cellar :any_skip_relocation
