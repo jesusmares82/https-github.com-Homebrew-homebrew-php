@@ -10,11 +10,11 @@ class Php72Blitz < AbstractPhp72Extension
   head "https://github.com/alexeyrybak/blitz.git"
 
   bottle do
-    rebuild 1
     cellar :any_skip_relocation
-    sha256 "c87d50a244067f8c0ea2f8d8608acd67cf534ab10bf12b5bbda1232aa3884b92" => :sierra
-    sha256 "a01659e51f3120a1788048cca666527c14472c0d339a9571670656c913161d70" => :el_capitan
-    sha256 "2612715ff600a42ae8e714212c3d0354fa61b298f6a0e93d7b37d73c0820691a" => :yosemite
+    rebuild 1
+    sha256 "50f8f59cf0c7d347bb8a9ce8c8b2b53a57948af9d1c526be68559cb771bba09f" => :high_sierra
+    sha256 "80350cd4d4615c61dbe4a0737d9418a72b60bacc858e44a51eff90478d3f4d85" => :sierra
+    sha256 "788fde917414c82cf22ad9240a4ad67667e0b84f4d7e13faf18d74923fcd67b4" => :el_capitan
   end
 
   def install
