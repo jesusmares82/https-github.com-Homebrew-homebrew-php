@@ -10,9 +10,9 @@ class Php72Geoip < AbstractPhp72Extension
 
   bottle do
     rebuild 1
-    sha256 "6480d246dadf464d323968ce79d70048157a669f831bf4b3e4ffff6e2580bfc3" => :sierra
-    sha256 "318e7d1329730b38cd00452f557b141d0077ceda80a6e7bafe9e89c5f721f166" => :el_capitan
-    sha256 "dd08542cb8fff8704b013459e127eec4e22168d9dc59894554baa6a5abaeeaf4" => :yosemite
+    sha256 "89b204722563b08a8d5dc3411552667de3d70fdbc69ece525263891668a4b0d0" => :high_sierra
+    sha256 "bdc03ebb7cb3dfb395e0592acf77a9f563cf06d5b5105556ae5863e7a0c87caa" => :sierra
+    sha256 "5071abaa1cd4dd0921601f0a54a0bf7c194e513d564dfb6178629b15ecdd688d" => :el_capitan
   end
 
   depends_on "geoip"
