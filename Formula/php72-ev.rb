@@ -9,11 +9,11 @@ class Php72Ev < AbstractPhp72Extension
   head "https://bitbucket.org/osmanov/pecl-ev.git"
 
   bottle do
-    rebuild 1
     cellar :any_skip_relocation
-    sha256 "b768a74a3453762dc12d3fb0b0526cab0b70f7cd1dd5f30cc5929046337d3b65" => :sierra
-    sha256 "8a376ccfc0f594950bbcf6e67675d0b47c58bf7b5ef9e25e2a6c59bf20820c74" => :el_capitan
-    sha256 "95a28a5507ceb0692a8d224c14e422afe33d636a6d670d4a001c703e3412c802" => :yosemite
+    rebuild 1
+    sha256 "bda067671ba9a207123c30e2983ac89f6b6fc582427ef90738a964ef3c3ae386" => :high_sierra
+    sha256 "4febf514476a0d8073beb18c0d2ada2f8fb404b806603e2e16101758a1848f66" => :sierra
+    sha256 "1367ee27660a7c29e3fbc1862f82a10d91590aa375a1947d1aa93ac7256955ec" => :el_capitan
   end
 
   depends_on "libev"
