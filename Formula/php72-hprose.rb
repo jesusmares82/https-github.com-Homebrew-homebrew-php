@@ -9,6 +9,7 @@ class Php72Hprose < AbstractPhp72Extension
   head "https://github.com/hprose/hprose-pecl.git"
 
   bottle do
+    rebuild 1
     cellar :any_skip_relocation
     sha256 "2af042593ef131cf9fa97315bc05603022d467e1d9aebfefc55445a256fe3b71" => :sierra
     sha256 "64977ace22be2783a8f784edaa2579cfaed7da5aa3f3b9fa986a0f6c33124ff6" => :el_capitan
