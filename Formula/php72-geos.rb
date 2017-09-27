@@ -9,6 +9,7 @@ class Php72Geos < AbstractPhp72Extension
   head "https://git.osgeo.org/gogs/geos/php-geos.git"
 
   bottle do
+    rebuild 1
     cellar :any
     sha256 "962b1dea01fb4c1cbb651435052b718fb62dbed9094050857578faaf64940442" => :sierra
     sha256 "a2f71edf53a510007e272f1ed1a86624e13c1763c385e75442ebd1cd9687f8ec" => :el_capitan
