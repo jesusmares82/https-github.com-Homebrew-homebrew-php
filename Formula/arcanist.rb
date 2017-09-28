@@ -5,14 +5,14 @@ class Arcanist < Formula
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
 
   stable do
-    url "https://github.com/wikimedia/arcanist/archive/release/2017-03-08/1.tar.gz"
-    sha256 "8edb125944f9aa3dc5ea082f2b080543ae324dba3cb055476f1db40219f222e6"
-    version "201703081"
+    url "https://github.com/wikimedia/arcanist/archive/release/2017-09-27/1.tar.gz"
+    sha256 "f3b5df137c2a5c14df957f9f0d267d17208143e0952948132deebaf2aad0566c"
+    version "201709271"
 
     resource "libphutil" do
-      url "https://github.com/wikimedia/phabricator-libphutil/archive/release/2017-03-08/1.tar.gz"
-      sha256 "e15fe518cad38dea24bcf780b72089479dde1777f9ec23a9b0c9cd0edbd60f92"
-      version "201703081"
+      url "https://github.com/wikimedia/phabricator-libphutil/archive/release/2017-09-27/1.tar.gz"
+      sha256 "2a3ba7410c9ee15a2022da1fa1c51c680d0a880d52a5da21f3f81c22ce9c0d2c"
+      version "201709271"
     end
   end
   bottle do
