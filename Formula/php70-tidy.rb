@@ -4,7 +4,7 @@ class Php70Tidy < AbstractPhp70Extension
   init
   desc "Tidy HTML clean and repair utility"
   homepage "https://php.net/manual/en/book.tidy.php"
-  revision 14
+  revision 15
 
   bottle do
     sha256 "9dde71a3e2ae5498c4fe2e9fee1fa9eee46690b9983a14a4928969c68fda2076" => :high_sierra
