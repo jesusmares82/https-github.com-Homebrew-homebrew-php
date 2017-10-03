@@ -4,10 +4,8 @@ class Php55Http < AbstractPhp55Extension
   init
   desc "This HTTP extension aims to provide a convenient and powerful set of functionality for one of PHPs major applications."
   homepage "https://pecl.php.net/package/pecl_http"
-  url "https://github.com/m6w6/ext-http/archive/RELEASE_2_5_6.tar.gz"
-  sha256 "83c15492ae7673404db462b642450f5bec81db72765d21fbb915ac39a42f0be4"
-  revision 1
-
+  url "https://github.com/m6w6/ext-http/archive/RELEASE_2_6_0.tar.gz"
+  sha256 "1ff7c8d9cbeae67837033ddff7032f4acdd0c7bda3e3f12a1ca80620d949a775"
   head "https://github.com/m6w6/ext-http.git"
 
   bottle do
