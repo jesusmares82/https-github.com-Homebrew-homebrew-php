@@ -66,15 +66,15 @@ class AbstractPhp < Formula
       raise "Cannot specify more than one CGI executable to build."
     end
 
-    option "with-httpd24", "Enable building of shared Apache 2.4 Handler module"
-    option "with-httpd22", "Enable building of shared Apache 2.2 Handler module"
+    option "with-httpd", "Enable building of shared Apache Handler module"
     deprecated_option "homebrew-apxs" => "with-homebrew-apxs"
-    deprecated_option "with-homebrew-apxs" => "with-httpd24"
-    deprecated_option "with-apache" => "with-httpd24"
-    deprecated_option "with-apache22" => "with-httpd22"
+    deprecated_option "with-homebrew-apxs" => "with-httpd"
+    deprecated_option "with-apache" => "with-httpd"
+    deprecated_option "with-apache22" => "with-httpd"
+    deprecated_option "with-httpd22" => "with-httpd"
+    deprecated_option "with-httpd24" => "with-httpd"
 
-    depends_on "homebrew/apache/httpd24" => :optional
-    depends_on "homebrew/apache/httpd22" => :optional
+    depends_on "httpd" => :optional
 
     # Argon2 option
     if name.split("::")[2].downcase.start_with?("php72")
@@ -169,7 +169,7 @@ INFO
   end
 
   def apache_apxs
-    if build.with?("httpd24") || build.with?("httpd22")
+    if build.with?("httpd")
       ["sbin", "bin"].each do |dir|
         if File.exist?(location = "#{HOMEBREW_PREFIX}/#{dir}/apxs")
           return location
@@ -255,7 +255,7 @@ INFO
     end
 
     # Build Apache module by default
-    if build.with?("httpd24") || build.with?("httpd22")
+    if build.with?("httpd")
       args << "--with-apxs2=#{apache_apxs}"
       args << "--libexecdir=#{libexec}"
     end
@@ -394,7 +394,7 @@ INFO
     system "./buildconf", "--force" if build.head?
     system "./configure", *install_args
 
-    if build.with?("httpd24") || build.with?("httpd22")
+    if build.with?("httpd")
       # Use Homebrew prefix for the Apache libexec folder
       inreplace "Makefile",
         /^INSTALL_IT = \$\(mkinstalldirs\) '([^']+)' (.+) LIBEXECDIR=([^\s]+) (.+)$/,
@@ -459,7 +459,7 @@ INFO
   def caveats
     s = []
 
-    if build.with?("httpd24") || build.with?("httpd22")
+    if build.with?("httpd")
       if MacOS.version <= :leopard
         s << <<-EOS.undent
           For 10.5 and Apache:
@@ -583,7 +583,7 @@ INFO
 
         Please note that the plist was called 'homebrew-php.josegonzalez.php#{php_version.delete(".")}.plist' in old versions of this formula.
 
-        With the release of macOS Sierra the Apache module is now not built by default. If you want to build it on your system you have to install php with the --with-httpd24 option. See  brew options php#{php_version_path} for more details.
+        With the release of macOS Sierra the Apache module is now not built by default. If you want to build it on your system you have to install php with the --with-httpd option. See  brew options php#{php_version_path} for more details.
       EOS
     end
 
