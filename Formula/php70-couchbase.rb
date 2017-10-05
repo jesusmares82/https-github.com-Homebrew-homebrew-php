@@ -10,9 +10,9 @@ class Php70Couchbase < AbstractPhp70Extension
 
   bottle do
     cellar :any
-    sha256 "85192e5e943c39646bdade15ddf5ef6108055b2fbb30aef250df0663e57933d9" => :high_sierra
-    sha256 "4c3efbe97f33b90f9a0dc9a4bd32fe50f2c12fce0c03b0ed516db2189f275333" => :sierra
-    sha256 "6eb5d2d9d29787c7e02cd9625a4b200a4df33e29bc467dfe1d5ecc964b25f2fc" => :el_capitan
+    sha256 "de05d82f99fbba0d48b39a839dabeb9b7b615cd742b5f292138615b931eae5b3" => :high_sierra
+    sha256 "bccffe6802167dc778c8f5628ccc5ac6938622bdb4a20f6d2385eb1d803a3efe" => :sierra
+    sha256 "0bb7751e59679ccdf6c6e22d9fb2cdc605abb89edd476f7bc688aa926dd5117e" => :el_capitan
   end
 
   depends_on "php70-igbinary"
