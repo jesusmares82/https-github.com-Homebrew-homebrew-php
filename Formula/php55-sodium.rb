@@ -4,8 +4,8 @@ class Php55Sodium < AbstractPhp55Extension
   init
   desc "Modern and easy-to-use crypto library using libsodium."
   homepage "https://github.com/alethia7/php-sodium"
-  url "https://github.com/aletheia7/php-sodium/archive/1.0.7.tar.gz"
-  sha256 "07d06b486ab5b687e63109d64bf9fd21c846a315b8c71088639dfa0a7272339e"
+  url "https://github.com/aletheia7/php-sodium/archive/1.2.0.tar.gz"
+  sha256 "cf8365e5d4862bfbd61783e0e8cdf4ddbf0124a1d93492c33a8a05919af08893"
   head "https://github.com/alethia7/php-sodium.git"
 
   depends_on "libsodium"
