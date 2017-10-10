@@ -17,9 +17,9 @@ class Arcanist < Formula
   end
   bottle do
     cellar :any_skip_relocation
-    sha256 "1e1bbd69be7dafbba74f408c19253dd7da9f0a59a2b99dd8881a36ca51329f4d" => :sierra
-    sha256 "1e1bbd69be7dafbba74f408c19253dd7da9f0a59a2b99dd8881a36ca51329f4d" => :el_capitan
-    sha256 "1e1bbd69be7dafbba74f408c19253dd7da9f0a59a2b99dd8881a36ca51329f4d" => :yosemite
+    sha256 "e8f9a27988c21df0ae8001403efef22822ba7fc95f26d8e178560ff684395799" => :high_sierra
+    sha256 "e8f9a27988c21df0ae8001403efef22822ba7fc95f26d8e178560ff684395799" => :sierra
+    sha256 "e8f9a27988c21df0ae8001403efef22822ba7fc95f26d8e178560ff684395799" => :el_capitan
   end
 
 
