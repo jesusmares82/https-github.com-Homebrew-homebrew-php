@@ -4,10 +4,9 @@ class Php72Rdkafka < AbstractPhp72Extension
   init
   desc "PHP extension for Apache Kafka (php-rdkafka)"
   homepage "https://github.com/arnaud-lb/php-rdkafka"
-  url "https://pecl.php.net/get/rdkafka-2.0.1.tgz"
-  sha256 "43a3704198f7d8ae23f6ed06d2d28ae4d52bae0f93f484aa5d61d5d60f809eee"
+  url "https://pecl.php.net/get/rdkafka-3.0.4.tgz"
+  sha256 "4cb0a37664810d2a338cf5351e357be7294d99458f76435801e0ed5e328dc5ee"
   head "https://github.com/arnaud-lb/php-rdkafka.git"
-  revision 1
 
   bottle do
     cellar :any
