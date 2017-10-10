@@ -10,9 +10,9 @@ class Php72Gearman < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "6ba75c0f79091c89dcc08ced2f727683de005216fa84cd74c1faa055f34a4d5c" => :sierra
-    sha256 "9569b4894b3d00f163d81a0579b6e728c67686c107efb090af145869f8898901" => :el_capitan
-    sha256 "d3bd19442e0cdc220199e36a2c38cc38e5fbde86c055cdca8c650ca6e3f48f28" => :yosemite
+    sha256 "d39b030371eb5a130bafb1d7ea66d2160a13cde955e950a8d921a27657f30b04" => :high_sierra
+    sha256 "a90da773687b46f15460707733004cf798f56b0664fcc47badda84bbdd1ac6fb" => :sierra
+    sha256 "91cbb60d3b1a865f65b3253bc9d8b000273a57422534a8558175e7e5d0764a67" => :el_capitan
   end
 
   depends_on "gearman"
