@@ -8,6 +8,13 @@ class Php56Sodium < AbstractPhp56Extension
   sha256 "cf8365e5d4862bfbd61783e0e8cdf4ddbf0124a1d93492c33a8a05919af08893"
   head "https://github.com/alethia7/php-sodium.git"
 
+  bottle do
+    cellar :any
+    sha256 "d22d22acb631dbf47e22d1eef16c3043865740e7a7d3ac0bc3ec793f60cad75f" => :high_sierra
+    sha256 "07402ea4817c66f814ed53f0e8dc8bd4f5077b99fe23e640e1f0d8542fcfa347" => :sierra
+    sha256 "b45319467694165a1451614af6407add84ccd525e040e26014dfabf89c94e83a" => :el_capitan
+  end
+
   depends_on "libsodium"
 
   def install
