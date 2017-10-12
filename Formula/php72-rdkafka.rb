@@ -10,9 +10,9 @@ class Php72Rdkafka < AbstractPhp72Extension
 
   bottle do
     cellar :any
-    sha256 "45c2b570174f731951fec27871f9b704b9cc233eb3bc31514549fcd7d65834b0" => :high_sierra
-    sha256 "6697bc95e6201d25e14445266bbce7086db52d274c120ac844a1a137dcae45c6" => :sierra
-    sha256 "55c72d6eb640d84069e38de978dd186f664fb6373a329241dfc8b37588b43ca4" => :el_capitan
+    sha256 "026fdec5aee6b451685b6ebfd61fab3a330dd9e5421b391a71737a74d3d1f3b6" => :high_sierra
+    sha256 "9a7fdd56d9f3d1a055143667f7c9b88e10de4d009f55b24fb3bea5fb3333feb5" => :sierra
+    sha256 "44e1d1fca9500c76f1a950b34a84b543796585db0c499ae5e5044a1e5a924556" => :el_capitan
   end
 
   depends_on "librdkafka"
