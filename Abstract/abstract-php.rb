@@ -258,6 +258,12 @@ INFO
     if build.with?("httpd")
       args << "--with-apxs2=#{apache_apxs}"
       args << "--libexecdir=#{libexec}"
+
+      unless build.with?("thread-safety")
+        inreplace "configure",
+          "APACHE_THREADED_MPM=`$APXS_HTTPD -V | grep 'threaded:.*yes'`",
+          "APACHE_THREADED_MPM="
+      end
     end
 
     if build.with? "bz2"
