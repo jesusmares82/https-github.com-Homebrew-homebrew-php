@@ -5,8 +5,10 @@ class Php70Ioncubeloader < AbstractPhp70Extension
   desc "Loader for ionCube Secured Files"
   homepage "https://www.ioncube.com/loaders.php"
   url "https://downloads.ioncube.com/loader_downloads/ioncube_loaders_dar_x86-64.tar.gz"
-  sha256 "af0b548d0e27e6fea9f0b5ee73b2c2099e1cd67f6dd9fd74d2e718ff151d994f"
-  version "10.0.3"
+  sha256 "cf7a5a1855427c6219645bdc3edef71ab6dc2641cec1d73fb6ca2101f54a7fcc"
+  version "10.0.4"
+
+  option "with-thread-safe", "Enable the thread-safe extenstion"
 
   bottle do
     cellar :any_skip_relocation
@@ -20,7 +22,8 @@ class Php70Ioncubeloader < AbstractPhp70Extension
   end
 
   def install
-    prefix.install "ioncube_loader_dar_7.0.so" => "ioncubeloader.so"
+    prefix.install "ioncube_loader_dar_7.0.so" => "ioncubeloader.so" if build.without? "thread-safe"
+    prefix.install "ioncube_loader_dar_7.0_ts.so" => "ioncubeloader_ts.so" if build.with? "thread-safe"
     write_config_file if build.with? "config-file"
   end
 
