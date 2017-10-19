@@ -1,5 +1,7 @@
 # Contributing
 
+First time contributing to Homebrew? Read the main Contribution Guide: [Contribution](https://github.com/Homebrew/homebrew-core/blob/master/CONTRIBUTING.md#contributing-to-homebrew)
+
 The following kinds of brews are allowed:
 
 - PHP Extensions: they may be built with PECL, but installation via Homebrew is sometimes much easier.
@@ -23,7 +25,7 @@ You don't need to add a `bottle` section, as the brew bot will generate the bott
 
 ## File structure
 
-Please look at existing formulas for examples of how to structure yours. 
+Please look at existing formulas for examples of how to structure yours.
 There are abstract classes such as `AbstractPhpPhar` you should extend which will help take care of a lot of boilerplate stuff for you.
 
 ## PHP Extension definitions
@@ -58,10 +60,10 @@ end
 
 Before finalizing the extension, run the command `brew audit --strict --online ` to check that your formula respects Homebrew best practice and syntax.
 
-Defining extensions inheriting AbstractPhp5(3456). Extension will provide a `write_config_file` which add `ext-{extension}.ini` to `conf.d`, don’t forget to remove it manually upon extension removal. Please see [abstract-php-extension.rb](Abstract/abstract-php-extension.rb) for more details.
+Defining extensions inheriting AbstractPhp(54,55,56,70,71). Extension will provide a `write_config_file` which add `ext-{extension}.ini` to `conf.d`, don’t forget to remove it manually upon extension removal. Please see [abstract-php-extension.rb](Abstract/abstract-php-extension.rb) for more details.
 
 Please note that your formula installation may deviate significantly from the above; caveats should more or less stay the same, as they give explicit instructions to users as to how to ensure the extension is properly installed.
 
 The ordering of formula attributes, such as the `desc`, `homepage`, `url`, `sha256`, etc. should follow the above order for consistency. The `version` is only included when the URL does not include a version in the filename. `head` installations are not required.
 
-All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.3.29`, `5.4.45`, `5.5.38`, `5.6.27`, and `7.0.12`.
+All official PHP extensions should be built for all stable versions of PHP included in `homebrew-php`. These versions are `5.5`, `5.6`, `7.0`, and `7.1`.
