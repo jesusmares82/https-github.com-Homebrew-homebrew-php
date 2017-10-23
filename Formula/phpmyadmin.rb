@@ -3,8 +3,8 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Phpmyadmin < Formula
   desc "A web interface for MySQL and MariaDB"
   homepage "https://www.phpmyadmin.net"
-  url "https://files.phpmyadmin.net/phpMyAdmin/4.7.4/phpMyAdmin-4.7.4-all-languages.tar.gz"
-  sha256 "fd1a92959553f5d87b3a2163a26b62d6314309096e1ee5e89646050457430fd2"
+  url "https://files.phpmyadmin.net/phpMyAdmin/4.7.5/phpMyAdmin-4.7.5-all-languages.tar.gz"
+  sha256 "c62b4072b9dc2a858f51ddd95e731c4717eb2fba85e1e108564736b8c8de1a2b"
   head "https://github.com/phpmyadmin/phpmyadmin.git"
 
   bottle do
@@ -57,6 +57,6 @@ class Phpmyadmin < Formula
   end
 
   test do
-    assert File.exist?("#{etc}/phpmyadmin.config.inc.php")
+    assert_predicate etc/"phpmyadmin.config.inc.php", :exist?
   end
 end
