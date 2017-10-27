@@ -4,7 +4,7 @@ class Php71Pcntl < AbstractPhp71Extension
   init
   desc "Process Control support"
   homepage "https://php.net/manual/en/book.pcntl.php"
-  revision 16
+  revision 17
 
   bottle do
     cellar :any_skip_relocation
@@ -15,7 +15,6 @@ class Php71Pcntl < AbstractPhp71Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   def install
     Dir.chdir "ext/pcntl"
