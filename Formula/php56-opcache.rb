@@ -6,8 +6,7 @@ class Php56Opcache < AbstractPhp56Extension
   homepage "https://php.net/manual/en/book.opcache.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
-  revision 5
+  revision 6
 
   bottle do
     cellar :any_skip_relocation

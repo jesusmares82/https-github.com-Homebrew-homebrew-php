@@ -6,8 +6,7 @@ class Php56PdoDblib < AbstractPhp56Extension
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_dblib"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
-  revision 4
+  revision 5
 
   bottle do
     sha256 "ddf5950b011c9e6a0a7a6a7896e3e57e8667067c1f4e3c5aac0312e8a3714a35" => :sierra

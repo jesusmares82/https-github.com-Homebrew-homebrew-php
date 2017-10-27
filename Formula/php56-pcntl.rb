@@ -6,8 +6,7 @@ class Php56Pcntl < AbstractPhp56Extension
   homepage "http://php.net/manual/en/book.pcntl.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
-  revision 4
+  revision 5
 
   bottle do
     cellar :any_skip_relocation

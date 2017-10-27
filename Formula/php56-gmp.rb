@@ -6,8 +6,7 @@ class Php56Gmp < AbstractPhp56Extension
   homepage "http://php.net/manual/en/book.gmp.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
-  revision 4
+  revision 5
 
   bottle do
     sha256 "d5ae26608b02861f947b5d479accfd0f07f39ef71abc3c95739a1493960212c0" => :sierra
