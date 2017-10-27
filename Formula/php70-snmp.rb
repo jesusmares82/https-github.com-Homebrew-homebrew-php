@@ -4,7 +4,7 @@ class Php70Snmp < AbstractPhp70Extension
   init
   desc "SNMP core php extension"
   homepage "https://php.net/manual/en/book.snmp.php"
-  revision 15
+  revision 16
 
   bottle do
     sha256 "b3ed315111528c5fc757ef91cbe6986f09faa29dccf4ffdd1a21fa18ec2c59ea" => :high_sierra
@@ -14,7 +14,6 @@ class Php70Snmp < AbstractPhp70Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   depends_on "net-snmp"
 

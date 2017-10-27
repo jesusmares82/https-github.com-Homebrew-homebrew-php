@@ -4,7 +4,7 @@ class Php70Mcrypt < AbstractPhp70Extension
   init
   desc "Interface to the mcrypt library"
   homepage "https://php.net/manual/en/book.mcrypt.php"
-  revision 16
+  revision 17
 
   bottle do
     sha256 "7c6ebf4b7aad8d6afa49847ec05b1ea8b3b58815b85fac3dcbef38e1c4d6ab3c" => :high_sierra
@@ -14,7 +14,6 @@ class Php70Mcrypt < AbstractPhp70Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  version PHP_VERSION
 
   depends_on "mcrypt"
   depends_on "libtool" => :run

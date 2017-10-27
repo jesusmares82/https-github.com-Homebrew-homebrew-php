@@ -51,13 +51,13 @@ class AbstractPhpVersion < Formula
   end
 
   module Php70Defs
-    PHP_SRC_TARBALL = "https://php.net/get/php-7.0.24.tar.bz2/from/this/mirror".freeze
+    PHP_SRC_TARBALL = "https://php.net/get/php-7.0.25.tar.bz2/from/this/mirror".freeze
     PHP_GITHUB_URL  = "https://github.com/php/php-src.git".freeze
-    PHP_VERSION     = "7.0.24".freeze
+    PHP_VERSION     = "7.0.25".freeze
     PHP_BRANCH      = "PHP-7.0".freeze
 
     PHP_CHECKSUM    = {
-      :sha256 => "9bf91982694f178821c0aaf03563a20494873ece6933e2eeecfd76f325bdcf19",
+      :sha256 => "95a24d96d126a196e1550e394182b43a6460cdd2026f1a77bef01e422415cc25",
     }.freeze
   end
 
