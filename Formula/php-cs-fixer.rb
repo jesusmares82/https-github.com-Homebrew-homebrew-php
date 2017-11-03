@@ -6,8 +6,8 @@ class PhpCsFixer < Formula
 
   desc "A tool to automatically fix PHP coding standards issues"
   homepage "http://cs.sensiolabs.org"
-  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v2.7.2.tar.gz"
-  sha256 "a623c9863ba5e7e39efff6abaadbb643f916ce90f44c6107f91896905db9d596"
+  url "https://github.com/FriendsOfPHP/PHP-CS-Fixer/archive/v2.8.0.tar.gz"
+  sha256 "3713b784143200e26a7b5717b6675e1c200da9e09ad9aa8aa7f6f1bc278b9b33"
   head "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git"
 
   bottle do
