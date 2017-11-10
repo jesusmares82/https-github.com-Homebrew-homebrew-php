@@ -7,6 +7,13 @@ class Infection < AbstractPhpPhar
   url "https://github.com/infection/infection/releases/download/0.6.0/infection.phar"
   sha256 "1b8a1c617dddf5b61018356a111baabdf5c02439ff841cea57960472f3794136"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "81e68685615b760a66ca55241fb2f62c9b23b82ef7569ed7d64ab36fde1f268a" => :high_sierra
+    sha256 "03c67bfa16bbc2424b917e415e9adb0a8cfa4f88f2f5d955b34bd700642bdc28" => :sierra
+    sha256 "03c67bfa16bbc2424b917e415e9adb0a8cfa4f88f2f5d955b34bd700642bdc28" => :el_capitan
+  end
+
   depends_on PhpMetaRequirement
   depends_on "php70-xdebug" if Formula["php70"].linked_keg.exist?
   depends_on "php71-xdebug" if Formula["php71"].linked_keg.exist?
