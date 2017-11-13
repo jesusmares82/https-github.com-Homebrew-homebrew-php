@@ -1,12 +1,10 @@
-require File.expand_path("../../language/php", __FILE__)
+require File.expand_path("../../Abstract/abstract-php-phar", __FILE__)
 
-class WpCli < Formula
-  include Language::PHP::Composer
-
+class WpCli < AbstractPhpPhar
   desc "Command-line tools for managing WordPress installations."
-  homepage "https://wp-cli.org/"
-  url "https://github.com/wp-cli/wp-cli/archive/v1.4.0.tar.gz"
-  sha256 "fa7a349db23969709b50f389b18efbde48fc7903939acb99452508f4b5221bbd"
+  homepage "https://wp-cli.org"
+  url "https://github.com/wp-cli/wp-cli/releases/download/v1.4.1/wp-cli-1.4.1.phar"
+  sha256 "325924cf161856f9478f2a154572698ecb5d1054e620843b9c43a7baf4e5ce3b"
   head "https://github.com/wp-cli/wp-cli.git"
 
   bottle do
@@ -16,22 +14,12 @@ class WpCli < Formula
     sha256 "6e674330f25ac5b8951d1ce36359ebdd9d080448538be46b73bcec0b37d480af" => :el_capitan
   end
 
-  option "without-bash-completion", "Don't install bash completion"
-  option "without-package-index", "Don't add package index repository (https://wp-cli.org/package-index)"
+  def phar_file
+    "wp-cli-#{version}.phar"
+  end
 
-  def install
-    composer_install
-
-    rm "bin/wp.bat"
-    prefix.install Dir["*"]
-
-    if build.with? "bash-completion"
-      (prefix + "etc/bash_completion.d").install "#{prefix}/utils/wp-completion.bash"
-    end
-
-    if build.with? "package-index"
-      composer "config", "--file=#{prefix}/composer.json", "repositories.wp-cli", "composer", "https://wp-cli.org/package-index/"
-    end
+  def phar_bin
+    "wp"
   end
 
   test do
