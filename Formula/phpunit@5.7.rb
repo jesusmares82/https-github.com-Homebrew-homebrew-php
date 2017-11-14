@@ -9,9 +9,9 @@ class PhpunitAT57 < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "82d8c7efe6020cf766f28f5697dcf05af88f36b10a0967088988ef7fa462ac84" => :high_sierra
-    sha256 "82d8c7efe6020cf766f28f5697dcf05af88f36b10a0967088988ef7fa462ac84" => :sierra
-    sha256 "82d8c7efe6020cf766f28f5697dcf05af88f36b10a0967088988ef7fa462ac84" => :el_capitan
+    sha256 "d116777bb56efbc47f789db6b265ba05959473215bfd48b1bf8f3e0d6345205d" => :high_sierra
+    sha256 "d116777bb56efbc47f789db6b265ba05959473215bfd48b1bf8f3e0d6345205d" => :sierra
+    sha256 "d116777bb56efbc47f789db6b265ba05959473215bfd48b1bf8f3e0d6345205d" => :el_capitan
   end
 
   def phar_file
