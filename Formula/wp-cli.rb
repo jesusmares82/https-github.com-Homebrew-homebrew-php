@@ -9,9 +9,9 @@ class WpCli < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "da7f89e16bd7edee1bcda991d9a7bb3994944b4d44b2a482a0ccfc7699ee8701" => :high_sierra
-    sha256 "5e656b889cf9e1515c503267934230042fc8ac97dcdd4840c26f10f286c95f14" => :sierra
-    sha256 "6e674330f25ac5b8951d1ce36359ebdd9d080448538be46b73bcec0b37d480af" => :el_capitan
+    sha256 "70954b082e4b806ba0ca0f78e19bcad2d4ee641d28f13ab6a0e5df82db135b4a" => :high_sierra
+    sha256 "70954b082e4b806ba0ca0f78e19bcad2d4ee641d28f13ab6a0e5df82db135b4a" => :sierra
+    sha256 "70954b082e4b806ba0ca0f78e19bcad2d4ee641d28f13ab6a0e5df82db135b4a" => :el_capitan
   end
 
   def phar_file
