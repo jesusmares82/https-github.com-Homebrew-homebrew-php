@@ -12,9 +12,9 @@ class Psysh < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "99cf663c1a776c3510f8d14b717178af6dce982fefbb7f04a8898f655107171f" => :high_sierra
-    sha256 "39e2b71345aa5184dbbbe1033bd2b8b7f8c3c4d0295d4bef7dee7623107b0b10" => :sierra
-    sha256 "9eaadcd7dee5b712040aeb56e33a2914ce26dc986cc37603eedf403c3bbbe2ef" => :el_capitan
+    sha256 "1833174a7fed24f7917886288fd5957b34124dca30fd76823c41d5de964d5103" => :high_sierra
+    sha256 "d38324667bd06c03849936c0b141b6880af9f5560107141816459817f288dee3" => :sierra
+    sha256 "6d114ac924e5a3237b75a3b952a449702c375f07dd63ae729bf7590b1e2b87d0" => :el_capitan
   end
 
   depends_on PhpMetaRequirement
