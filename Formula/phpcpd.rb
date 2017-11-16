@@ -4,8 +4,8 @@ class Phpcpd < AbstractPhpPhar
   init
   desc "Copy/Paste Detector (CPD) for PHP code"
   homepage "https://github.com/sebastianbergmann/phpcpd"
-  url "https://phar.phpunit.de/phpcpd-3.0.0.phar"
-  sha256 "bc03385966b4bd1e62d717cb746c347401b995a23f0f2c0c72bf78016bb039d3"
+  url "https://phar.phpunit.de/phpcpd-3.0.1.phar"
+  sha256 "47ff2771b952578c4664dec631dc8720bb3f51f707e13ec9a9d52857b7b63c37"
 
   bottle do
     cellar :any_skip_relocation
