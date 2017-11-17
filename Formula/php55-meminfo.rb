@@ -5,8 +5,8 @@ class Php55Meminfo < AbstractPhp55Extension
   desc "PHP extension to get insight about memory usage"
   homepage "https://github.com/BitOne/php-meminfo"
   url "https://github.com/BitOne/php-meminfo.git",
-    :tag => "v0.3.0",
-    :revision => "a9e0eefe0b9c88abd7215f688ec0b04d0d20f386"
+    :tag => "v1.0.0",
+    :revision => "0e4f884d02b9af4321d9b5121b017194047fb10e"
   head "https://github.com/BitOne/php-meminfo.git"
 
   bottle do
@@ -17,6 +17,8 @@ class Php55Meminfo < AbstractPhp55Extension
   end
 
   def install
+    Dir.chdir "extension/php5" unless build.head?
+
     ENV.universal_binary if build.universal?
 
     safe_phpize
