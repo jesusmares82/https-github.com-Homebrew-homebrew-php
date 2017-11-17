@@ -9,6 +9,13 @@ class Php70Meminfo < AbstractPhp70Extension
     :revision => "0e4f884d02b9af4321d9b5121b017194047fb10e"
   head "https://github.com/BitOne/php-meminfo.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c3e159120f9ab0dc93588d22c6dd36d204f8ccaf1512c0ab51c4a0c74d976032" => :high_sierra
+    sha256 "bd3ca428c5bc7d3a649e677702a82613a02968f387c3c92e044ec8f2352eeb60" => :sierra
+    sha256 "ee9f935636cc5947360c83d13c1a530aa6f54c3ef5a41837dab1a48950171c36" => :el_capitan
+  end
+
   def install
     Dir.chdir "extension/php7" unless build.head?
 
