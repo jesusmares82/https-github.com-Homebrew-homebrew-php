@@ -4,8 +4,8 @@ class Php56Mongodb < AbstractPhp56Extension
   init
   desc "MongoDB driver for PHP."
   homepage "https://pecl.php.net/package/mongodb"
-  url "https://pecl.php.net/get/mongodb-1.3.2.tgz"
-  sha256 "3a24f60c1bfd68736977e53f40cd5b50eccf42472277ce8101ca7eea0fe82788"
+  url "https://pecl.php.net/get/mongodb-1.3.3.tgz"
+  sha256 "6c8f6b28ae69223df8f6c43ceef5776e60306910332c8f0c68d4096680a96a62"
   head "https://github.com/mongodb/mongo-php-driver.git"
 
   bottle do
