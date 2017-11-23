@@ -3,6 +3,7 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Arcanist < Formula
   desc "Phabricator Arcanist Tool"
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
+  revision 1
 
   stable do
     url "https://github.com/wikimedia/arcanist/archive/release/2017-11-29/1.tar.gz"
@@ -21,7 +22,6 @@ class Arcanist < Formula
     sha256 "f116aa1157017811cdfac041e4d9213d9f9d6c86207007bc3c8843db5838f66e" => :sierra
     sha256 "f116aa1157017811cdfac041e4d9213d9f9d6c86207007bc3c8843db5838f66e" => :el_capitan
   end
-
 
   head do
     url "https://github.com/phacility/arcanist.git"
@@ -43,6 +43,10 @@ class Arcanist < Formula
     prefix.install Dir["*"]
 
     bin.install_symlink libexec/"bin/arc" => "arc"
+
+    cp libexec/"resources/shell/bash-completion", libexec/"resources/shell/arc-completion.zsh"
+    bash_completion.install libexec/"resources/shell/bash-completion" => "arc"
+    zsh_completion.install libexec/"resources/shell/arc-completion.zsh" => "_arc"
   end
 
   test do
