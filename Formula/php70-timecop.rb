@@ -4,8 +4,8 @@ class Php70Timecop < AbstractPhp70Extension
   init
   desc "timecop is providing \"time travel\" capabilities."
   homepage "https://github.com/hnw/php-timecop"
-  url "https://github.com/hnw/php-timecop/archive/v1.2.4.tar.gz"
-  sha256 "1e0bc0b47097500152aab0cd8fbc7f4b1323816cdbcd1b65df639d95356fbf85"
+  url "https://github.com/hnw/php-timecop/archive/v1.2.10.tar.gz"
+  sha256 "43318cca7022783b1f815466e8e447cbcf0afa9f3bef008caee8446fad7f34c4"
   head "https://github.com/hnw/php-timecop.git"
 
   bottle do
