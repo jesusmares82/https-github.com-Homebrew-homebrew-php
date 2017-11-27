@@ -1,8 +1,8 @@
 class BrewPhpSwitcher < Formula
   desc "Switch Apache & CLI configs between PHP versions"
   homepage "https://github.com/philcook/php-switcher"
-  url "https://github.com/philcook/brew-php-switcher/archive/1.6.tar.gz"
-  sha256 "569b5ab5451bcfa784ff94141359fe4d80720c2fe4bf2d67f8fea33f5f05956e"
+  url "https://github.com/philcook/brew-php-switcher/archive/v1.7.tar.gz"
+  sha256 "06d91314e6694a5406fe3e70ccd0a606fb53cabf8bff09f8983b0036444f0285"
   head "https://github.com/philcook/brew-php-switcher.git"
 
   bottle do
@@ -30,6 +30,6 @@ class BrewPhpSwitcher < Formula
   end
 
   test do
-    system "brew-php-switcher"
+    system "#{bin}/brew-php-switcher"
   end
 end
