@@ -10,9 +10,9 @@ class Php70Imagick < AbstractPhp70Extension
   revision 5
 
   bottle do
-    sha256 "b0f41043357d6d920989ed94f2dc520b4d67a9eefa9daed74724c9dfdbfb6297" => :sierra
-    sha256 "984dcda8a52a46bb1e62cbdffc94c8134f36d66bb49e49d99c08ffe1c6027d9d" => :el_capitan
-    sha256 "df4f3a043cefc682b680ee85fbbd51fd6a3568752269bab28278248c24169b58" => :yosemite
+    sha256 "7e8ed5a3ad186b7945c60b70c7deddbed2b4a3f7a405114ceb61f7ed56f116ca" => :high_sierra
+    sha256 "dc24350925ae7cdac7d4ee9c53c117f6d656095069eda33ed27ee1c44dbaecff" => :sierra
+    sha256 "3330f25d32c5786dbbd72d520637119e76660a3611b239d2f2f1e7bce18bfca2" => :el_capitan
   end
 
   depends_on "pkg-config" => :build
