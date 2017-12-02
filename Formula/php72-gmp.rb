@@ -7,9 +7,9 @@ class Php72Gmp < AbstractPhp72Extension
   revision 8
 
   bottle do
-    sha256 "5ba27db9ab760efb9305ff83b76ec23b137282abbc80df2bda94cb81146555a3" => :high_sierra
-    sha256 "7996a1fc6241b007f9c09300fd35146f0883a5d2aa59962479a034ba52f6b751" => :sierra
-    sha256 "e8a97765959ff586958c2504f8ee5698ee221661fc37b9a60c1a680b3675bb6c" => :el_capitan
+    sha256 "1af931feab00683a5d6634a0e50b150284c3763386ff1b3aa29d9a21e0f7c2f8" => :high_sierra
+    sha256 "356251dd8de45f6ac981f2ce4b7365e8370200927bd7ee25d69221ddface16da" => :sierra
+    sha256 "e821d45e19c2dcca3bb8cdc6344f843b9c768c8daf7bd1e596d7ee768eb344f6" => :el_capitan
   end
 
   url PHP_SRC_TARBALL
