@@ -19,6 +19,9 @@ class Phan < Formula
   depends_on "php71-ast"
   depends_on "php71"
 
+  conflicts_with "phan@0.9", :because => "it provivides a phan binary"
+  conflicts_with "phan@0.8", :because => "it provivides a phan binary"
+
   def install
     composer_install
     prefix.install Dir["*"]

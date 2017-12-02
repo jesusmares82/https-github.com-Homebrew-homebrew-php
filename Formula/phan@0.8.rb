@@ -19,6 +19,8 @@ class PhanAT08 < Formula
   depends_on "php70-ast"
   depends_on "php70"
 
+  keg_only :versioned_formula
+
   def install
     composer_install
     prefix.install Dir["*"]
