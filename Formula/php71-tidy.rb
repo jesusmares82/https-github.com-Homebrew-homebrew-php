@@ -7,9 +7,9 @@ class Php71Tidy < AbstractPhp71Extension
   revision 17
 
   bottle do
-    sha256 "87892732130defffcbb762fc98db82c481c0e365a28cb43f64c6a24c14b547c2" => :high_sierra
-    sha256 "08537e5823d247f0b519690e1f36990bd81d9b0a36dcf5125094d5212605dc27" => :sierra
-    sha256 "4a1bcf5d760bdc6606cc65e7325d5ba3b1c4e96cb41e3dbc44be659b491e433a" => :el_capitan
+    sha256 "2247aec1bd4d58d21e5445182653178422753f2b6cb3a352741cdcde038b588f" => :high_sierra
+    sha256 "ecac5b82d99fb6543e5a9622db2f9978a79cfe17a5b72805d7cd7597cfe50e1d" => :sierra
+    sha256 "bc2da64c1e683464d89efb77b32e8829b21697e52aae17cc0124cf388f3ec5cc" => :el_capitan
   end
 
   url PHP_SRC_TARBALL
