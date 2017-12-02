@@ -6,7 +6,7 @@ class Php56Magickwand < AbstractPhp56Extension
   homepage "http://www.magickwand.org"
   url "http://www.magickwand.org/download/php/MagickWandForPHP-1.0.9-2.tar.bz2"
   sha256 "05e5fe5bc52ab9169228bbbde38b222208d1ae19db718b66d2c7ac4180847727"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "8e2a7968720ba00376b1ef468be7b1fdeab8dd30a6cfd856203616d986ea5be0" => :sierra
