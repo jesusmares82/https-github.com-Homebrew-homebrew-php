@@ -200,6 +200,9 @@ INFO
     # Prevent PHP from harcoding sed shim path
     ENV["lt_cv_path_SED"] = "sed"
 
+    # Ensure system dylibs can be found by linker on Sierra
+    ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version == :sierra
+
     args = [
       "--prefix=#{prefix}",
       "--localstatedir=#{var}",
