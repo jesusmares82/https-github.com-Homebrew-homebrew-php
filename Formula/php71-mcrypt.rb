@@ -7,9 +7,9 @@ class Php71Mcrypt < AbstractPhp71Extension
   revision 18
 
   bottle do
-    sha256 "fa8ebd34a00d42e2a032b35cbc11993f57eec566f9f7f2e50765d35a2ec4683e" => :high_sierra
-    sha256 "6fee7e0fefa5f717a847d6d76cd1877248e90f813265d7cdfeaa99690f7b417f" => :sierra
-    sha256 "8f81b369672391fef2ffccf5f1aab74b693b7d6a56f17f2a2bbdcd263b370278" => :el_capitan
+    sha256 "48bc9402b64c61abef231ec09972a0f9547cb9fea065f8a0d0f3c36b3f0eeec4" => :high_sierra
+    sha256 "b2ca121b3e298e899779d6e673e3fc451771a83c5a922591b0016c79725ad046" => :sierra
+    sha256 "fba0ecb2914e4699211e8a966e0676bdcc9ddc3f7e1c1e86a233e6aed4f3f18f" => :el_capitan
   end
 
   url PHP_SRC_TARBALL
