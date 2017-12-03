@@ -397,7 +397,7 @@ INFO
       args << "--enable-maintainer-zts"
     end
 
-    if build.with? "sodium"
+    if build.with? "libsodium"
         args << "--with-sodium=#{Formula['libsodium'].opt_prefix}"
     end
 
