@@ -8,6 +8,13 @@ class Php72Xdebug < AbstractPhp72Extension
   sha256 "145f3a41e746e59872d73caf368399f68d4ee8379e449ebd1a62bdaf1927841f"
   head "https://github.com/xdebug/xdebug.git"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "9530856b0df0a3370879a71e63049fa449830a6096ed0c123bea72c647a640d0" => :high_sierra
+    sha256 "b980dcf86ae7d2bfc68c9c5be98fe9b991ab952520735a04f56fa6a1d8bb6d5d" => :sierra
+    sha256 "2300383bf347e89604dbdd62358f6d65c9d80bb9c98720af74304685b29f84b0" => :el_capitan
+  end
+
   def extension_type
     "zend_extension"
   end
