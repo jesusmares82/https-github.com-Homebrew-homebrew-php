@@ -1,8 +1,8 @@
 class Igbinary < Formula
   desc "Drop in replacement for the standard php serializer."
   homepage "https://pecl.php.net/package/igbinary"
-  url "https://github.com/igbinary/igbinary/archive/2.0.4.tar.gz"
-  sha256 "7b71e60aeada2b9729f55f3552da28375e3c5c66194b2c905af15c3756cf34c8"
+  url "https://github.com/igbinary/igbinary/archive/2.0.5.tar.gz"
+  sha256 "1d06fc3586d61fcffbae24a46649db54d938168586557965bc1346f6d6568555"
   head "https://github.com/igbinary/igbinary.git"
 
   bottle do
