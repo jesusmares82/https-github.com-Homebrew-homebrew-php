@@ -9,6 +9,13 @@ class Php72Amqp < AbstractPhp72Extension
   head "https://github.com/pdezwart/php-amqp.git"
   revision 1
 
+  bottle do
+    cellar :any
+    sha256 "321246d3b7fab5413d4755ea4bf3da7285f2709a08cee7d1c5d5ea2d33a6cddc" => :high_sierra
+    sha256 "6137f055ca5c60907c2f635f01cef77144c20268cb168ea85098889f5d982624" => :sierra
+    sha256 "429b0b5dd1e0e7370c538129d19c13a1b88f13b2699dc040b52df10f6e63057e" => :el_capitan
+  end
+
   depends_on "rabbitmq-c"
 
   def install
