@@ -7,7 +7,7 @@ class Php72Memcached < AbstractPhp72Extension
   url "https://github.com/php-memcached-dev/php-memcached/archive/v3.0.3.tar.gz"
   sha256 "9041ab502740678a2db158c152467b039e3e4d5c6b207939c2955c75fd345c96"
   head "https://github.com/php-memcached-dev/php-memcached.git"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "8e49d5918b2821ceb6e4791ff236b04c3755fad6f8a501d31e05ab2c757ff478" => :sierra

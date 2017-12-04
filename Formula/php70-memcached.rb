@@ -6,8 +6,8 @@ class Php70Memcached < AbstractPhp70Extension
   homepage "https://pecl.php.net/package/memcached"
   url "https://github.com/php-memcached-dev/php-memcached/archive/v3.0.3.tar.gz"
   sha256 "9041ab502740678a2db158c152467b039e3e4d5c6b207939c2955c75fd345c96"
-  revision 2
   head "https://github.com/php-memcached-dev/php-memcached.git"
+  revision 3
 
   bottle do
     sha256 "f8ccfaae71fffe0fc4d5abf43b572629d1198edebd8aef82767fe5e4de8e268c" => :sierra

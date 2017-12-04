@@ -7,6 +7,7 @@ class Php70Redis < AbstractPhp70Extension
   url "https://github.com/phpredis/phpredis/archive/3.1.3.tar.gz"
   sha256 "e415927538160628ba0eaf7ad72cc7f7752d29b46905dfdb21d627eb13c1d38f"
   head "https://github.com/phpredis/phpredis.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation

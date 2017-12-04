@@ -7,6 +7,7 @@ class Php72Molten < AbstractPhp72Extension
   url "https://github.com/chuan-yun/Molten/archive/v0.1.1.tar.gz"
   sha256 "9502d915c406326ce16fc2bc428a04188c7d03da2fc95772baed0c6e284f1397"
   head "https://github.com/chuan-yun/Molten.git"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
