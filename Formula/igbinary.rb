@@ -7,9 +7,9 @@ class Igbinary < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d1d2f072a296a5081a1b15017030544771fd1d8357b8bdb1854533266c060efe" => :sierra
-    sha256 "924ea52c92530ed20c9b5fb191828403eeea0404e14fee04ca70064485cb88d6" => :el_capitan
-    sha256 "924ea52c92530ed20c9b5fb191828403eeea0404e14fee04ca70064485cb88d6" => :yosemite
+    sha256 "3c260ff3fc5a1bfd4cf0b57f430ab041246ddbdf824b5f31083bb2e73a8d00f0" => :high_sierra
+    sha256 "3c260ff3fc5a1bfd4cf0b57f430ab041246ddbdf824b5f31083bb2e73a8d00f0" => :sierra
+    sha256 "3c260ff3fc5a1bfd4cf0b57f430ab041246ddbdf824b5f31083bb2e73a8d00f0" => :el_capitan
   end
 
   def install
