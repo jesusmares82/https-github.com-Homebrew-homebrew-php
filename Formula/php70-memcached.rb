@@ -10,9 +10,9 @@ class Php70Memcached < AbstractPhp70Extension
   revision 3
 
   bottle do
-    sha256 "f8ccfaae71fffe0fc4d5abf43b572629d1198edebd8aef82767fe5e4de8e268c" => :sierra
-    sha256 "6acc7f8d23c53db2cd1a3a37ad434451b85704c1fe69838dc175b4c59a73238c" => :el_capitan
-    sha256 "5eeec97d55365f8b53563a8c114b9aac8dd31f0c9969fe22e4cb6518d52a7cf2" => :yosemite
+    sha256 "95b9de6a2ac199fa9a375e062042da36eacbdca5f78e99f8598b88116adfc2ad" => :high_sierra
+    sha256 "86aeee231ddda6eb0fe7195a321731f2ca372046bea9a4d116ed5be7a96b5221" => :sierra
+    sha256 "9f2f9769118a07ec4d0a4f7ce3e4dc0c508c92a603f643c08ed6e7a8494c1552" => :el_capitan
   end
 
   option "with-sasl", "Build with sasl support"
