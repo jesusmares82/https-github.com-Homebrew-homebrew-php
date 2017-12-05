@@ -7,6 +7,7 @@ class Php55Couchbase < AbstractPhp55Extension
   url "https://pecl.php.net/get/couchbase-2.3.4.tgz"
   sha256 "90af2271485ab6c9a2bc0f1ceac7d0e3a0165fb0b5a7aa73531990219b180cad"
   head "https://github.com/couchbase/php-couchbase.git"
+  revision 1
 
   bottle do
     cellar :any
