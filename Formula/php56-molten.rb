@@ -11,9 +11,9 @@ class Php56Molten < AbstractPhp56Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "68e6e9931edaa4bac6769883b93857cf4b370d638207c233ef56e70349bb5acf" => :high_sierra
-    sha256 "bbc2c2367516074f2a7d96d637b56a297633cd56a1ee819787e1d9ace4dbfda4" => :sierra
-    sha256 "767ebec66adb3d569bc9d53c387f9bae03765475ecbd587affd0983667107756" => :el_capitan
+    sha256 "83013acc9c4f32dc86ac6aedc7291d70419418afe6b259b65f8bc3960a19dbb4" => :high_sierra
+    sha256 "c89db0f7de08253349ac535e44f878a11cc48fe0feb054845168181de2ba54dc" => :sierra
+    sha256 "b9dc93da289511df9452f2d75eae7638fa4b6160e47e7ff1985054c91a4ab6db" => :el_capitan
   end
 
   option "without-zipkin", "Disable zipkin headers"
