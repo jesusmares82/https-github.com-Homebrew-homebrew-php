@@ -10,9 +10,9 @@ class Php55Memcached < AbstractPhp55Extension
   revision 4
 
   bottle do
-    sha256 "5de6776e2c03f24d442bd256f80a491ab0daf8e035792ecd0aecd10c455714c5" => :sierra
-    sha256 "18ccdb8fa632655177c0c250ce559509410c86b76f0e52948c215b8af40289ee" => :el_capitan
-    sha256 "245e5dff40c5929d879ef0f76db642f0e81f07655de84955c70a1eaea112280b" => :yosemite
+    sha256 "4af64a819de9a18684fa7a1996c830ed2285c1e3328c39d520167dbfb7c80128" => :high_sierra
+    sha256 "a5ea528c91b22d6eecc13a6739cf99c84c87eab7e425f523bf003bf345bf8fdb" => :sierra
+    sha256 "6d19781486812dce0fcb7dbd3b87c597405c30089b96cb8fcfb0229ea214efc8" => :el_capitan
   end
 
   option "with-sasl", "Build with sasl support"
