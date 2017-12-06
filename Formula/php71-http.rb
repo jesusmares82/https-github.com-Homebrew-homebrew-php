@@ -10,9 +10,10 @@ class Php71Http < AbstractPhp71Extension
   revision
 
   bottle do
-    sha256 "30baa58757262a928c9ba25a25971786d984733c019333d1656a97e77b0d720c" => :sierra
-    sha256 "e43f3be7a7197e10b1cff09bee61fb21bf280c51c53806faa4b3026d8eb1fa0e" => :el_capitan
-    sha256 "59eb6e159406d67e1a13d0eb438af9244742071888f4f372306c0bdddc092f04" => :yosemite
+    rebuild 1
+    sha256 "2039e8f50fc0db46a9a625b8820c8fe11772168c07260c663b246b9660d24f8b" => :high_sierra
+    sha256 "c401dc5b3b3baa1f752e31d29efe731cb0455220e80d8853a1059f9e0c457eab" => :sierra
+    sha256 "5e57fa565e7312ff2c2fdc552c161dbd7dd9a8c82062593e8f9ab332ee44802c" => :el_capitan
   end
 
   depends_on "libevent"
