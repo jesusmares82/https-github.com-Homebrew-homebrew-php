@@ -9,9 +9,9 @@ class Php55Intl < AbstractPhp55Extension
   revision 5
 
   bottle do
-    sha256 "4292580f921378187dafaa39d999bf09231c22d1fa86bb6c218dde5fedf335c6" => :high_sierra
-    sha256 "59eb17390018d079ef5e5f508f609afb2b59259e7f8e0510af66450e12c75dc1" => :sierra
-    sha256 "5f0d9bf82c1ab24298f4dc00819fca5e42246e716cbebfcb720bd4e9f5eb8e8d" => :el_capitan
+    sha256 "6e66d658f7a6f961fcdf75b8f44ec1322dcf9833a4c9a8b82ae8c33eba16e525" => :high_sierra
+    sha256 "0e3c7ef4b38bf53302b9a15212a203825072526b9451c289a457270708a9fa8e" => :sierra
+    sha256 "91e48d21ec84b652f7d1b8cd90541a12942b1058000c5db6dd71782e8e586736" => :el_capitan
   end
 
   depends_on "icu4c"
