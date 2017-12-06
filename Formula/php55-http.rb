@@ -11,9 +11,9 @@ class Php55Http < AbstractPhp55Extension
 
   bottle do
     cellar :any
-    sha256 "535291d686e64c5d557d4688b203b8062b4bda554bb62d623e38c0d62b8f19d4" => :high_sierra
-    sha256 "e2314ef0b2973c7e1fdea7553a270fa1fa424e16fbc7aeb4a0627f68ee0cac44" => :sierra
-    sha256 "94a13d1893bbff3093be21f0108beaa244efb39b5558c30be29335a0499a5321" => :el_capitan
+    sha256 "c668c28ddb6ec6875fb410924a8e26ce12ec828f8f91a51482607d542ce9653d" => :high_sierra
+    sha256 "83606769ef5776e63e167866f856f1ca3666857f8fa601932ab8d6d69e1a93bd" => :sierra
+    sha256 "68cd6ca5122b25ecc86f5d90e973f49585adf1d4dc07a2c773ab4148378875bf" => :el_capitan
   end
 
   depends_on "curl"
