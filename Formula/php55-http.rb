@@ -7,6 +7,7 @@ class Php55Http < AbstractPhp55Extension
   url "https://github.com/m6w6/ext-http/archive/RELEASE_2_6_0.tar.gz"
   sha256 "1ff7c8d9cbeae67837033ddff7032f4acdd0c7bda3e3f12a1ca80620d949a775"
   head "https://github.com/m6w6/ext-http.git"
+  revision 1
 
   bottle do
     cellar :any

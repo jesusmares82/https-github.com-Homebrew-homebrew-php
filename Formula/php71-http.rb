@@ -7,6 +7,7 @@ class Php71Http < AbstractPhp71Extension
   url "https://github.com/m6w6/ext-http/archive/RELEASE_3_1_0.tar.gz"
   sha256 "6b931205c1af59bba227715dd846b1495b441b76dabd661054791ef21b719214"
   head "https://github.com/m6w6/ext-http.git"
+  revision
 
   bottle do
     sha256 "30baa58757262a928c9ba25a25971786d984733c019333d1656a97e77b0d720c" => :sierra
