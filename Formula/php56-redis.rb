@@ -7,13 +7,12 @@ class Php56Redis < AbstractPhp56Extension
   url "https://github.com/phpredis/phpredis/archive/3.1.4.tar.gz"
   sha256 "656cab2eb93bd30f30701c1280707c60e5736c5420212d5d547ebe0d3f4baf71"
   head "https://github.com/phpredis/phpredis.git"
-  revision 1
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f5ec9ab1515598169df6ea76e550d024bf18192c21dcc50defebf7c3dbddc08e" => :high_sierra
-    sha256 "e55bb35c436a180fd12b0be9393938ebc62968fcc56f03913f1b3b59318ee18d" => :sierra
-    sha256 "95c86f3d58f56f0330672680261791c0130ada5e1e6a506e9f025ba6ee683445" => :el_capitan
+    sha256 "55c35605f6c661c89ec1099b8981395170f1727dfe0022f868ab7f87d17d554f" => :sierra
+    sha256 "be8fcfb87ef0e464b26a6fee3a813478384158ee518951f4e08996e667570a52" => :el_capitan
+    sha256 "7c622ebaebddd43c85fa19c088af9cf7356f6ff9a27298d0eea4e4e2b456603e" => :yosemite
   end
 
   depends_on "php56-igbinary"
