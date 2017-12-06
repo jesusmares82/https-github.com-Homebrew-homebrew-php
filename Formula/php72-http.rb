@@ -10,9 +10,9 @@ class Php72Http < AbstractPhp72Extension
   revision 1
 
   bottle do
-    sha256 "7f9236272ef6099247a811c7c90466a1d42efb323f0719c2df974fe5a170e64d" => :sierra
-    sha256 "8cafbec70bf00e81d5103ac72da07a5315db44ca73bb54a0fb387479bc36afbe" => :el_capitan
-    sha256 "9fa112434ac25db68e75fa1d727f2d7557a50789fabdc347b3250877f30902ed" => :yosemite
+    sha256 "7df9e54d99325450112f274637cea3b8a53fb742950c38204de9d8caa6448ba3" => :high_sierra
+    sha256 "e2b433f62cfdb42e63dd13e8814b182f81b44553119298ca05d629878de8eb29" => :sierra
+    sha256 "ab0161afcbda72ad4484d45daf58063f5bad9d4c6aac8874ed592f2d75a763bb" => :el_capitan
   end
 
   depends_on "libevent"
