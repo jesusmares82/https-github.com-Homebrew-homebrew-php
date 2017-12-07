@@ -5,8 +5,8 @@ class Phan < Formula
 
   desc "Static analyzer for PHP"
   homepage "https://github.com/phan/phan"
-  url "https://github.com/phan/phan/archive/0.10.2.tar.gz"
-  sha256 "a255427696066bebc440ea792c63a68fc80cbfb6de5d837eaa02fbae03670054"
+  url "https://github.com/phan/phan/archive/0.11.0.tar.gz"
+  sha256 "c62613d20c69568a9790ceafdb066658bd99e914ae955976bd4c68e2d3047053"
   head "https://github.com/phan/phan.git"
 
   bottle do
@@ -17,10 +17,10 @@ class Phan < Formula
     sha256 "94efb4985bb039de568cc1cd3917e683a850c94117e512508930569b84ce2307" => :el_capitan
   end
 
-  depends_on "php71-ast"
-  depends_on "php71"
+  depends_on "php72-ast"
+  depends_on "php72"
 
-  conflicts_with "phan@0.9", :because => "it provivides a phan binary"
+  conflicts_with "phan@0.10", :because => "it provivides a phan binary"
   conflicts_with "phan@0.8", :because => "it provivides a phan binary"
 
   def install

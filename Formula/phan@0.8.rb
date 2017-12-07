@@ -17,10 +17,10 @@ class PhanAT08 < Formula
     sha256 "b20f87a2b889eef14c62a9ac235810c52ab9195a752c5a8b0f86185bdd9b549b" => :el_capitan
   end
 
+  keg_only :versioned_formula
+
   depends_on "php70-ast"
   depends_on "php70"
-
-  keg_only :versioned_formula
 
   def install
     composer_install
