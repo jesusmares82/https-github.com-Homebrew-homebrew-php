@@ -84,6 +84,7 @@ class AbstractPhp < Formula
 
     option "with-cgi", "Enable building of the CGI executable (implies --without-fpm)"
     option "with-debug", "Compile with debugging symbols"
+    option "with-embed", "Compile with embed support (built as a static library)"
     option "with-homebrew-curl", "Include Curl support via Homebrew"
     option "with-homebrew-libressl", "Include LibreSSL instead of OpenSSL via Homebrew"
     option "with-homebrew-libxslt", "Include LibXSLT support via Homebrew"
@@ -276,6 +277,10 @@ INFO
 
     if build.with? "debug"
       args << "--enable-debug"
+    end
+
+    if build.with? "embed"
+      args << "--enable-embed=static"
     end
 
     if build.with? "enchant"
