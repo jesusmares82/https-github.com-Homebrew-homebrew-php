@@ -7,7 +7,7 @@ class Php72Imagick < AbstractPhp72Extension
   url "https://pecl.php.net/get/imagick-3.4.3.tgz"
   sha256 "1f3c5b5eeaa02800ad22f506cd100e8889a66b2ec937e192eaaa30d74562567c"
   head "https://github.com/mkoppanen/imagick.git"
-  revision 2
+  revision 3
 
   bottle do
     sha256 "60dca304888c91f9f646402fb07670144c74738407e47ad58138ce74a8c9b339" => :high_sierra
