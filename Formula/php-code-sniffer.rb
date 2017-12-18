@@ -8,9 +8,9 @@ class PhpCodeSniffer < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "e42e61fe8a96c2f8ac2c31aeb7426f589e93da54e6165c58c892e532b80ee88d" => :high_sierra
-    sha256 "e42e61fe8a96c2f8ac2c31aeb7426f589e93da54e6165c58c892e532b80ee88d" => :sierra
-    sha256 "e42e61fe8a96c2f8ac2c31aeb7426f589e93da54e6165c58c892e532b80ee88d" => :el_capitan
+    sha256 "893412ba2fd770f130be7ddfe225b3a7258ccaa20d5c121fc541b67f51bf6c69" => :high_sierra
+    sha256 "893412ba2fd770f130be7ddfe225b3a7258ccaa20d5c121fc541b67f51bf6c69" => :sierra
+    sha256 "893412ba2fd770f130be7ddfe225b3a7258ccaa20d5c121fc541b67f51bf6c69" => :el_capitan
   end
 
   depends_on PhpMetaRequirement
