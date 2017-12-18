@@ -9,9 +9,9 @@ class Php55Maxminddb < AbstractPhp55Extension
 
   bottle do
     cellar :any
-    sha256 "c29c2225e9bcddc977dd7337416cbeec380d4b8f05ef23fc3b37706bdba5e01f" => :el_capitan
-    sha256 "6a249d6b8f0b237380001b9f54cf7be70a679a14cfeb33d1b94e7bdeab808244" => :yosemite
-    sha256 "1345548ea23baffb28aa0a204660ec73137056ce268d777319cc3d4a4391c500" => :mavericks
+    sha256 "362425a6f18dd3912d15cfe6d2a770a662080ce2f0c2b9f741db37578681d0ee" => :high_sierra
+    sha256 "680c8a9fbc6c6845286cc9dcda36493bdf47f40c4e882eb42fc5d131b0d800dc" => :sierra
+    sha256 "181619f360e8501615ed8867aa3793aa26a66dc46cc4737548c46f279a2818b2" => :el_capitan
   end
 
   depends_on "libmaxminddb"
