@@ -7,6 +7,11 @@ class Composer < AbstractPhpPhar
   sha256 "25e75d72818c4f1d46b3ae47a8deaaf4ef25c87198329d4a6ee53601b00459e5"
   head "https://getcomposer.org/composer.phar"
 
+  devel do
+    url "https://getcomposer.org/download/1.6.0-RC/composer.phar"
+    sha256 "fbbc2a8085331976ff08a7920230a30e38b847b1f3bfbae54e1c0ea6676b2fae"
+  end
+
   bottle do
     cellar :any_skip_relocation
     sha256 "f936d39b1d1ce8ba86cf03ad2a7c472a08c9bd4986e62f932e4306193081b393" => :high_sierra
