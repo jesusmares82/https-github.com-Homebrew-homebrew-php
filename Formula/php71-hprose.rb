@@ -4,10 +4,9 @@ class Php71Hprose < AbstractPhp71Extension
   init
   desc "High Performance Remote Object Service Engine"
   homepage "https://pecl.php.net/package/hprose"
-  url "https://pecl.php.net/get/hprose-1.6.5.tgz"
-  sha256 "a453053719dad6352d54543d708d8d09b62de28df7b29fd47b4b5a9fcf8025a7"
-  revision 2
+  url "https://pecl.php.net/get/hprose-1.6.6.tgz"
   head "https://github.com/hprose/hprose-pecl.git"
+  sha256 "29292d9ba15c3f838622bbf8f608a0fb4fb6bba6019f6e6bffe1eedb572881b8"
 
   bottle do
     cellar :any_skip_relocation
