@@ -8,6 +8,13 @@ class Php55Hprose < AbstractPhp55Extension
   head "https://github.com/hprose/hprose-pecl.git"
   sha256 "29292d9ba15c3f838622bbf8f608a0fb4fb6bba6019f6e6bffe1eedb572881b8"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "bc6dc2abdad10f92b48f4bcf60bcb4a42ccc734a1a35295e67f5b70e85643b39" => :high_sierra
+    sha256 "d01dbfcad5d8d18d066a0a03ca2ab6aa019788cf85377f2e946aacf0ec73d0e4" => :sierra
+    sha256 "a3e849a17c3a2a0aeac884bd79ef8e60b88b5f05c91717072b739c8f7070b9e7" => :el_capitan
+  end
+
   def install
     Dir.chdir "hprose-#{version}" unless build.head?
 
