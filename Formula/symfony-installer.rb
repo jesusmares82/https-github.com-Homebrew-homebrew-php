@@ -13,9 +13,9 @@ class SymfonyInstaller < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "f415b015f43df161f2c78e42b065481082441e0349e42119d00a4f65b2f8b8d3" => :sierra
-    sha256 "8905df9c7b3be652e8bb6676ead38bea2c817d3bdb38dc5a30195017e7ecd6de" => :el_capitan
-    sha256 "8d609e49978d20a51031506fb3fbfba90c53fcb97604a797b0827afc09b9aa1e" => :yosemite
+    sha256 "df646f411d5bf06312ec9aa6ddf150563fdc05040691fa834a44bb6bba8230f7" => :high_sierra
+    sha256 "ec1e33d375425a74e0df848522c67b3ae37d62a14afa4a094cbccec12d71cc63" => :sierra
+    sha256 "6d3d018c9f5d121b618a3a2c130587503ce4c09f4a785a455ae3c6bfbd267d33" => :el_capitan
   end
 
   depends_on PhpMetaRequirement
