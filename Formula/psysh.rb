@@ -6,8 +6,8 @@ class Psysh < Formula
 
   desc "Runtime developer console, interactive debugger & REPL"
   homepage "https://github.com/bobthecow/psysh"
-  url "https://github.com/bobthecow/psysh/archive/v0.8.16.tar.gz"
-  sha256 "18abe38037ccfac7329897a871d76118b3a639c5e872ea9fafb0d29a1130c1d3"
+  url "https://github.com/bobthecow/psysh/archive/v0.8.17.tar.gz"
+  sha256 "3161ef575702a10e0e7172572470ae59842da5e00f07c24c115562f95dbe0e74"
   head "https://github.com/bobthecow/psysh.git"
 
   bottle do
