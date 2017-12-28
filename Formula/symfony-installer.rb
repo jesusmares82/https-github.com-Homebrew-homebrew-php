@@ -4,11 +4,11 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class SymfonyInstaller < Formula
   include Language::PHP::Composer
 
-  desc "Create Symfony framework projects."
+  desc "Create Symfony framework projects"
   homepage "https://github.com/symfony/symfony-installer"
   url "https://github.com/symfony/symfony-installer.git",
-    :tag => "v1.5.9",
-    :revision => "e965861351b693b1459adb22049c4924cc825f4a"
+    :tag => "v1.5.10",
+    :revision => "e3bf2ed78bbea1dce9f5454a136e5895b313d03a"
   head "https://github.com/symfony/symfony-installer.git"
 
   bottle do
@@ -29,6 +29,6 @@ class SymfonyInstaller < Formula
   end
 
   test do
-    system "symfony", "about"
+    system bin/"symfony", "about"
   end
 end
