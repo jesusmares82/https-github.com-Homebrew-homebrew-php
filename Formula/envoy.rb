@@ -6,8 +6,8 @@ class Envoy < Formula
 
   desc "Elegant SSH tasks for PHP"
   homepage "https://github.com/laravel/envoy"
-  url "https://github.com/laravel/envoy/archive/v1.3.4.tar.gz"
-  sha256 "c53c043203ee9d611603affefde11f983256ea2df442cb96ac0a67edbe2e6222"
+  url "https://github.com/laravel/envoy/archive/v1.4.0.tar.gz"
+  sha256 "8e7892941136bec0352430ea4f6f592fc6dc58f5123ce82b9ea9727503cfe706"
   head "https://github.com/laravel/envoy.git"
 
   bottle do
