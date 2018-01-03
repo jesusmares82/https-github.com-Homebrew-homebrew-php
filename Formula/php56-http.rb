@@ -7,7 +7,7 @@ class Php56Http < AbstractPhp56Extension
   url "https://github.com/m6w6/ext-http/archive/RELEASE_2_6_0.tar.gz"
   sha256 "1ff7c8d9cbeae67837033ddff7032f4acdd0c7bda3e3f12a1ca80620d949a775"
   head "https://github.com/m6w6/ext-http.git"
-  revision 1
+  revision 2
 
   bottle do
     cellar :any
@@ -16,11 +16,10 @@ class Php56Http < AbstractPhp56Extension
     sha256 "e54bbdbddd0b0daac4ea61ab21ea7961abc0960fedefb54640473c649585ecd5" => :el_capitan
   end
 
-  depends_on "curl"
-  depends_on "libevent"
-  depends_on "php56-intl"
   depends_on "php56-raphf"
   depends_on "php56-propro"
+  depends_on "libevent" => :optional
+  depends_on "icu4c" => :optional
 
   # overwrite the config file name to ensure extension is loaded after dependencies
   def config_filename
@@ -40,10 +39,15 @@ class Php56Http < AbstractPhp56Extension
     mkdir_p "ext/propro"
     cp "#{Formula["php56-propro"].opt_prefix}/include/php_propro.h", "ext/propro/php_propro.h"
 
-    system "./configure", "--prefix=#{prefix}",
-                          phpconfig,
-                          "--with-libevent-dir=#{Formula["libevent"].opt_prefix}",
-                          "--with-curl-dir=#{Formula["curl"].opt_prefix}"
+    args = []
+    args << "--prefix=#{prefix}"
+    args << phpconfig
+    args << "--with-http-libcurl-dir"
+    args << "--with-http-zlib-dir"
+    args << "--with-http-libevent-dir=#{Formula["libevent"].opt_prefix}" if build.with? "libevent"
+    args << "--with-http-libicu-dir=#{Formula["icu4c"].opt_prefix}" if build.with? "icu4c"
+
+    system "./configure", *args
     system "make"
     prefix.install "modules/http.so"
     write_config_file if build.with? "config-file"
