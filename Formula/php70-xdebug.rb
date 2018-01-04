@@ -8,6 +8,11 @@ class Php70Xdebug < AbstractPhp70Extension
   sha256 "72108bf2bc514ee7198e10466a0fedcac3df9bbc5bd26ce2ec2dafab990bf1a4"
   head "https://github.com/xdebug/xdebug.git"
 
+  devel do
+    url "https://xdebug.org/files/xdebug-2.6.0beta1.tgz"
+    sha256 "49de661e1e18cbbd739fc9fb7a014a36f97a84d2c4a89417c358dd258340527d"
+  end
+
   bottle do
     cellar :any_skip_relocation
     sha256 "c37fbb14658e36398b25f6fca9dd8530398d5b4b306f2bb8687987a4cc532446" => :sierra
