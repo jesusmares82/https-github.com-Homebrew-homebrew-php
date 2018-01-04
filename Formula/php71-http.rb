@@ -10,9 +10,9 @@ class Php71Http < AbstractPhp71Extension
   revision 1
 
   bottle do
-    sha256 "2039e8f50fc0db46a9a625b8820c8fe11772168c07260c663b246b9660d24f8b" => :high_sierra
-    sha256 "c401dc5b3b3baa1f752e31d29efe731cb0455220e80d8853a1059f9e0c457eab" => :sierra
-    sha256 "5e57fa565e7312ff2c2fdc552c161dbd7dd9a8c82062593e8f9ab332ee44802c" => :el_capitan
+    sha256 "87b287c4da084c137c4a9534b568d0bd6d91afa02025371ad1082078b75a1f06" => :high_sierra
+    sha256 "0cb8bbcbc8311a3ec8fc34d7d24c7d0d4f47ffede17cac30af11c2468d59de52" => :sierra
+    sha256 "5692d1b3ff22205fce34bdbf398af41d9ba5e472a8dd176cca43a48d648596c1" => :el_capitan
   end
 
   depends_on "php71-raphf"
