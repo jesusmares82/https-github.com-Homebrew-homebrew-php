@@ -10,9 +10,9 @@ class Php70Http < AbstractPhp70Extension
   revision 2
 
   bottle do
-    sha256 "ba00e21f912e7ced734c5e26d4dcd6efe15beb02ee4fc7ac72a25f1b2e05fb5f" => :high_sierra
-    sha256 "2da9a293b876cfcc67084a4ec71115bdbd3c591f5ac994525f250df2b344b1a1" => :sierra
-    sha256 "dabcc71083cd1c14788da4d8d2fc73927bfa9d7fa56f9d74d66a02df0c03caf2" => :el_capitan
+    sha256 "3cb8b297d70902765dfe4422ece3e5289998b4a2aa345db20481d88cf492ca50" => :high_sierra
+    sha256 "dfe770610bd2da2551d620cb53e1ca7d4f055845215312342128e6f2fdab3f54" => :sierra
+    sha256 "5400fe3bdc15640fc6a5a3af228af221a815b7e23903a70509fb761ece1143b2" => :el_capitan
   end
 
   depends_on "php70-raphf"
