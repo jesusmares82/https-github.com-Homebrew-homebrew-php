@@ -15,9 +15,10 @@ class Php71Xdebug < AbstractPhp71Extension
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "2a6d04b32d3c688b2ff163992d00fa9d23c41d35b248c95df7f0f5380096fe01" => :sierra
-    sha256 "418e6879cef7f6a0b78faecd6640bf559b462af67eaafd036d7520b40b6903a2" => :el_capitan
-    sha256 "87c1d5aaa0aa5cceb8f63cb89ae768541d401be397dffa621396eec461585f27" => :yosemite
+    rebuild 1
+    sha256 "d091a999f4d1f83b97f0cbbf651d1ef63d7ec157718dbc8aaa1ab45edfe00a3b" => :high_sierra
+    sha256 "86e077db10f67489d65f2dc33eef6bbc911a73a274137df42e12c02e69ba8800" => :sierra
+    sha256 "3bd2df1011e8f297e2447712511b39d76117bd7f3ab7ab9c70177fd7eb1c6de2" => :el_capitan
   end
 
   def extension_type
