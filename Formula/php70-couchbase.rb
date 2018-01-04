@@ -4,10 +4,9 @@ class Php70Couchbase < AbstractPhp70Extension
   init
   desc "Provides fast access to documents stored in a Couchbase Server."
   homepage "https://developer.couchbase.com/documentation/server/current/sdk/php/start-using-sdk.html"
-  url "https://pecl.php.net/get/couchbase-2.4.2.tgz"
-  sha256 "17e76335c60e1673e7d86189d5dfd8d1482e1266e89db53894d671ccb3052f42"
+  url "https://pecl.php.net/get/couchbase-2.4.3.tgz"
+  sha256 "98c0d7acf6dd1b3930c25f8902decc98a334891736e460124557065e720d7a96"
   head "https://github.com/couchbase/php-couchbase.git"
-  revision 1
 
   bottle do
     cellar :any
