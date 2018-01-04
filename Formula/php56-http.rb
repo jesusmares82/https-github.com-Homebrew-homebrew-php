@@ -10,10 +10,10 @@ class Php56Http < AbstractPhp56Extension
   revision 2
 
   bottle do
-    cellar :any
-    sha256 "35fa46a54d33fca4a6208094d43ea5b6aade2ada7838f61f4df419e8016c6f60" => :high_sierra
-    sha256 "0106216262a8a9988b4140a2c1688c08f99fa2ffd921f5075559fe1850f70bdf" => :sierra
-    sha256 "e54bbdbddd0b0daac4ea61ab21ea7961abc0960fedefb54640473c649585ecd5" => :el_capitan
+    cellar :any_skip_relocation
+    sha256 "7b9866e27ba30ae870419b442dada1a16b6056fce7d3598f9b18bbe66f58e4ee" => :high_sierra
+    sha256 "90116f54b83605698574507824d77f4e10745cdd4077d0ac077ac2a54c164525" => :sierra
+    sha256 "668e825ca3a738467989acdd135e8b219f8b1eaaa8520322e5c75c79c8b10870" => :el_capitan
   end
 
   depends_on "php56-raphf"
