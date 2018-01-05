@@ -4,8 +4,8 @@ class Php71Lua < AbstractPhp71Extension
   init
   desc "This extension embeds the lua interpreter.."
   homepage "https://pecl.php.net/package/lua"
-  url "http://pecl.php.net/get/lua-2.0.2.tgz"
-  sha256 "eb11c68a8f2259ad02486f0a135785bd13c08166b6ec4a1301c862e72dc8a30d"
+  url "https://pecl.php.net/get/lua-2.0.5.tgz"
+  sha256 "bb49431ce5494ebebba98d9c477537df97234e13d4bd46529809ca1a2b8c287e"
   head "https://github.com/laruence/php-lua.git"
 
   bottle do
@@ -18,8 +18,6 @@ class Php71Lua < AbstractPhp71Extension
 
   def install
     Dir.chdir "lua-#{version}" unless build.head?
-
-    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
