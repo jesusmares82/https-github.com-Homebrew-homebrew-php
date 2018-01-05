@@ -4,7 +4,7 @@ class Php72Snmp < AbstractPhp72Extension
   init
   desc "SNMP core php extension"
   homepage "https://php.net/manual/en/book.snmp.php"
-  revision 8
+  revision 9
 
   bottle do
     sha256 "533e91d569b7da7337efd848dee9008cad986f49950b831515399ecff0f0d151" => :high_sierra
