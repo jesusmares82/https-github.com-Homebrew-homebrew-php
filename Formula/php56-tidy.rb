@@ -6,7 +6,7 @@ class Php56Tidy < AbstractPhp56Extension
   homepage "http://php.net/manual/en/book.tidy.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  revision 5
+  revision 6
 
   bottle do
     sha256 "38403f75201ec38093c34531ce07d0074eb97eb45eed93bfb2137da9c16cfd6a" => :high_sierra

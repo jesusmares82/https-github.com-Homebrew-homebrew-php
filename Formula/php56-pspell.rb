@@ -6,7 +6,7 @@ class Php56Pspell < AbstractPhp56Extension
   homepage "http://php.net/manual/en/book.pspell.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  revision 5
+  revision 6
 
   bottle do
     sha256 "0e899157c022acb0ca010cbeb7e889d5e7ff3550fa951b0e25fc0839cadb6113" => :high_sierra

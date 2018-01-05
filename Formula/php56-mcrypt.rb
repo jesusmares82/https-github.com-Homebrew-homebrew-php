@@ -6,7 +6,7 @@ class Php56Mcrypt < AbstractPhp56Extension
   homepage "http://php.net/manual/en/book.mcrypt.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  revision 6
+  revision 7
 
   bottle do
     sha256 "6dfde992141a421050caed0061db43f09368ff4023eb652b1528a7293fb11a00" => :high_sierra

@@ -6,7 +6,7 @@ class Php56PdoPgsql < AbstractPhp56Extension
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_pgsql"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  revision 5
+  revision 6
 
   bottle do
     cellar :any
