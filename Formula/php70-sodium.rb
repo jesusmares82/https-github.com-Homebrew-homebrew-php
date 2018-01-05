@@ -4,8 +4,8 @@ class Php70Sodium < AbstractPhp70Extension
   init
   desc "Modern and easy-to-use crypto library"
   homepage "https://github.com/jedisct1/libsodium-php"
-  url "https://github.com/jedisct1/libsodium-php/archive/2.0.7.tar.gz"
-  sha256 "9967a78900a9502f06de02b1516bfd6bbc85cbf20d2dbce032943dcb55728047"
+  url "https://github.com/jedisct1/libsodium-php/archive/2.0.10.tar.gz"
+  sha256 "2eebf3772d7441449b47abfe8f52043b9c6d6b5aff66aebd339c5d459d7fca28"
   head "https://github.com/jedisct1/libsodium-php.git"
 
   bottle do
