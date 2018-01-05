@@ -9,9 +9,9 @@ class Php70Lua < AbstractPhp70Extension
   head "https://github.com/laruence/php-lua.git"
 
   bottle do
-    sha256 "fc7c300cb3393adc3686c0ea83aacb87423f13f29790ab798385aea884a58b5f" => :sierra
-    sha256 "d1d01f910adfe8d71b38c092f398b6b2880356d8f43baed8efd075da13c3bebc" => :el_capitan
-    sha256 "76c9675ef52ce2973c71999f67dcb825b16ac497ccfb08cdcb7226c2cb3a97a3" => :yosemite
+    sha256 "87777bd523ab40829c788e9b52368b71bfa064b0ce67597c0df709cdfa5d960a" => :high_sierra
+    sha256 "7710f0cbfc0bb3dcac6cf4a2a44dd85adbc8bed07d31600f00cbc5aa6f89a7de" => :sierra
+    sha256 "2719fb55ce107f456b7213afee441360e1b8423d1b660eedffed75a3cda16b5c" => :el_capitan
   end
 
   depends_on "lua"
