@@ -6,9 +6,9 @@ class Php72 < AbstractPhp
   revision 12
 
   bottle do
-    sha256 "372cc9a03e6622f0c6bcf286bdb31b95bb8fae12e29ea7e16bf97d54441dc981" => :high_sierra
-    sha256 "1904b0d61747d30ef0adfa74216107bccebe28fd9a772154e30aca144937d07d" => :sierra
-    sha256 "befa06e73d9f66f8dda6d97280147b36bce4f29f61d090009af7fe52fed98746" => :el_capitan
+    sha256 "fa8adca0854f31aac6d74d70539fabdf2394f3222138eed6a105bafd7a6d3abf" => :high_sierra
+    sha256 "2a4696ee084155b981cc7435e2ec3603c8d2e5917365ea85549078794f45070e" => :sierra
+    sha256 "3940c952e237dd1a5bd25d58888cff1a5af464a7c6d352a355bf95ee4273e81a" => :el_capitan
   end
 
   include AbstractPhpVersion::Php72Defs
