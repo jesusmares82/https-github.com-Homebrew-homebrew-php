@@ -9,9 +9,9 @@ class Php56PdoDblib < AbstractPhp56Extension
   revision 6
 
   bottle do
-    sha256 "72c6962d68ef902b5387585aca26e9ca2b0b3cfc3253db7212f807078c07dc8e" => :high_sierra
-    sha256 "1efc9e97d54a9fd4d45db8c14dacedf56185779b93dc1fadcecb8f15759dad3d" => :sierra
-    sha256 "3eaa91bedbdd8949464cf3b8342c3e2671de9b7fd7072a9a9ef0c7889321fdea" => :el_capitan
+    sha256 "9e053a4f22020ca1e903dcbd90f499cb8b8ce90fc760a255a5859f27aad2a139" => :high_sierra
+    sha256 "2cc85fb8577c55ebffb7cb9c724bfd5b9a107a2a30c4c549cb76b9120edfec6a" => :sierra
+    sha256 "79e2f3133149e0c5a72754b374d838366e54c9d1510ae6d836b2fa09fac76cf4" => :el_capitan
   end
 
   depends_on "freetds"
