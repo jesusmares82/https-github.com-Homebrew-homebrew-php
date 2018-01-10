@@ -9,10 +9,9 @@ class Composer < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    rebuild 1
-    sha256 "89d8ea984fc8a3d73e3690009b1ee22af967e5dd929b8ebcd27bbd3e1a785f36" => :high_sierra
-    sha256 "89d8ea984fc8a3d73e3690009b1ee22af967e5dd929b8ebcd27bbd3e1a785f36" => :sierra
-    sha256 "89d8ea984fc8a3d73e3690009b1ee22af967e5dd929b8ebcd27bbd3e1a785f36" => :el_capitan
+    sha256 "bee673482a6aaa6e47c16886856fc1529a9baa7cb7eca4c663e5f7a7abb4ca08" => :high_sierra
+    sha256 "bee673482a6aaa6e47c16886856fc1529a9baa7cb7eca4c663e5f7a7abb4ca08" => :sierra
+    sha256 "bee673482a6aaa6e47c16886856fc1529a9baa7cb7eca4c663e5f7a7abb4ca08" => :el_capitan
   end
 
   depends_on PharRequirement
