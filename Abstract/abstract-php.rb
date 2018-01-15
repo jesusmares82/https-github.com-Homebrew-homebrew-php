@@ -59,7 +59,7 @@ class AbstractPhp < Formula
     depends_on "libsodium" => :recommended if name.split("::")[2].downcase.start_with?("php72")
 
     deprecated_option "with-pgsql" => "with-postgresql"
-    depends_on :postgresql => :optional
+    depends_on "postgresql" => :optional
 
     # Sanity Checks
 
