@@ -1,7 +1,9 @@
 require File.join(File.dirname(__FILE__), 'homebrew-php-requirement')
 
 class PhpMetaRequirement < HomebrewPhpRequirement
-  satisfy { which("php") }
+  def satisfied?
+	which("php")
+  end
 
   def message
     <<-EOLTEXT.undent
