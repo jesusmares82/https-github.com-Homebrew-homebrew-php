@@ -5,7 +5,7 @@ A centralized repository for PHP-related brews.
 ## Requirements
 
 * [Homebrew](https://github.com/Homebrew/brew)
-* El Capitan, Sierra and High Sierra. Untested everywhere else.
+* El Capitan, Sierra or High Sierra. Untested everywhere else.
 
 ## Installation
 
