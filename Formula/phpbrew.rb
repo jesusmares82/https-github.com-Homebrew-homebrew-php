@@ -32,7 +32,7 @@ class Phpbrew < AbstractPhpPhar
     "phpbrew"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     phpbrew is now installed!
 
     To start using it, please run
