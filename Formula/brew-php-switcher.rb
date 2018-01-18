@@ -20,7 +20,7 @@ class BrewPhpSwitcher < Formula
     bin.install_symlink sh
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     To run brew php switcher do the following:
       "brew-php-switcher 53".
 
