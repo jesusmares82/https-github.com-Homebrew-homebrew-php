@@ -27,7 +27,7 @@ class Php72Igbinary < AbstractPhp72Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
       ; Enable or disable compacting of duplicate strings
       ; The default is On.
       ;igbinary.compact_strings=On
