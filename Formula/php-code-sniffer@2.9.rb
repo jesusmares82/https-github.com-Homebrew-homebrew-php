@@ -68,7 +68,7 @@ class PhpCodeSnifferAT29 < Formula
     end
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Verify your installation by running:
 
       #{phpcs_script_name} --version
@@ -81,7 +81,7 @@ class PhpCodeSnifferAT29 < Formula
   end
 
   test do
-    (testpath/"test.php").write <<-EOS.undent
+    (testpath/"test.php").write <<~EOS
       <?php
       echo "foo"."bar"
     EOS
