@@ -17,7 +17,7 @@ class Ezcomponents < Formula
     (lib+"ezc").install Dir["*"]
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     The eZ Components are installed in #{HOMEBREW_PREFIX}/lib/ezc
     Remember to update your php include_path if needed
     EOS
