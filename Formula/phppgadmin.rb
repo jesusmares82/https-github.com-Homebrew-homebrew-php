@@ -12,7 +12,7 @@ class Phppgadmin < Formula
     (share+"phppgadmin").install Dir["*"]
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Note that this formula will NOT install PostgreSQL. It is not
     required since you might want to get connected to a remote
     database server.
