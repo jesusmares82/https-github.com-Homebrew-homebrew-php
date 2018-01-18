@@ -34,7 +34,7 @@ class Phpmyadmin3 < Formula
     ln_s (etc+"phpmyadmin3.config.inc.php"), (share+"phpmyadmin3/config.inc.php")
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Note that this formula will NOT install mysql. It is not
     required since you might want to get connected to a remote
     database server.
