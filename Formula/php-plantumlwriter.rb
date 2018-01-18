@@ -26,14 +26,14 @@ class PhpPlantumlwriter < Formula
   end
 
   test do
-    (testpath/"testClass.php").write <<-EOS.undent
+    (testpath/"testClass.php").write <<~EOS
       <?php
       class OneClass
       {
       }
     EOS
 
-    (testpath/"testClass.puml").write <<-EOS.undent
+    (testpath/"testClass.puml").write <<~EOS
       @startuml
       class OneClass {
       }
