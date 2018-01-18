@@ -22,7 +22,7 @@ class PhpBuild < Formula
     man1.install "man/php-build.1"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Tidy is enabled by default which will only work
     on 10.7. Be sure to disable or patch Tidy for
     earlier versions of OS X.
