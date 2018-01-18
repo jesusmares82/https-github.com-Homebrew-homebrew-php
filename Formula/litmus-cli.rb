@@ -27,7 +27,7 @@ class LitmusCli < AbstractPhpPhar
   # script, so override this method. See
   # https://github.com/Homebrew/homebrew-php/issues/3590
   def phar_wrapper
-    <<-EOS.undent
+    <<~EOS
       #!/usr/bin/env php
       <?php
       array_shift($argv);
