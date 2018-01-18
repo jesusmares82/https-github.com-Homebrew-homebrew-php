@@ -46,7 +46,7 @@ class Php54Memcached < AbstractPhp54Extension
   def config_file
     # Use upsteam defaults (https://github.com/php-memcached-dev/php-memcached/blob/2.2.0/memcached.ini)
     # with default values pre-filled
-    super + <<-EOS.undent
+    super + <<~EOS
 
       ; Use session locking
       ; valid values: On, Off
