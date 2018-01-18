@@ -15,7 +15,7 @@ class Adminer < Formula
     pkgshare.install "adminer-"+version+".php" => "index.php"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Note that this formula will NOT install MySQL or any other
     database. It is not required since you might want to get
     connected to a remote database server.
