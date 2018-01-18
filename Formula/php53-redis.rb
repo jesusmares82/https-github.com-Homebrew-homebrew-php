@@ -36,7 +36,7 @@ class Php53Redis < AbstractPhp53Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
 
       ; phpredis can be used to store PHP sessions.
       ; To do this, uncomment and configure below
