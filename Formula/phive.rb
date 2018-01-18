@@ -23,7 +23,7 @@ class Phive < AbstractPhpPhar
   end
 
   def phar_wrapper
-    <<-EOS.undent
+    <<~EOS
       #!/usr/bin/env php
       <?php
       array_shift($argv);
