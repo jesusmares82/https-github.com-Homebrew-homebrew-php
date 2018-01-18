@@ -32,7 +32,7 @@ class Php53Zenddebugger < AbstractPhp53Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
       zend_debugger.allow_hosts=127.0.0.1/32
       zend_debugger.allow_tunnel=
       zend_debugger.deny_hosts=
