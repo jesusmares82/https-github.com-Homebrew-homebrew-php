@@ -35,7 +35,7 @@ class Php72Intl < AbstractPhp72Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
 
       ;intl.default_locale =
       ; This directive allows you to produce PHP errors when some error
