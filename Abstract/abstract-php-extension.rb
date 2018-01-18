@@ -9,7 +9,7 @@ end
 
 class InvalidPhpizeError < RuntimeError
   def initialize(installed_php_version, required_php_version)
-    super <<-EOS.undent
+    super <<~EOS
       Version of phpize (PHP#{installed_php_version}) in $PATH does not support building this extension version (PHP#{required_php_version}). Consider installing  with the `--without-homebrew-php` flag.
     EOS
   end
@@ -108,7 +108,7 @@ class AbstractPhpExtension < Formula
   end
 
   def config_file
-    <<-EOS.undent
+    <<~EOS
       [#{extension}]
       #{extension_type}="#{module_path}"
       EOS
