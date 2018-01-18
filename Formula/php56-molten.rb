@@ -37,7 +37,7 @@ class Php56Molten < AbstractPhp56Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
     ; Molten is transparency tool for application tracing it self module call.
     ; It trace php app core call and output zipkin/opentracing format trace log.
     ; Provides features about muliti trace sapi, multi sampling type,
