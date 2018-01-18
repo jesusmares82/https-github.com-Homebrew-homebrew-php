@@ -23,7 +23,7 @@ class AbstractPhpPhar < Formula
   end
 
   def phar_wrapper
-    <<-EOS.undent
+    <<~EOS
       #!/usr/bin/env bash
       /usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off #{libexec}/#{@real_phar_file} "$@"
     EOS
