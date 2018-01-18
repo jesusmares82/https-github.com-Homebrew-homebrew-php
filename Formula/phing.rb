@@ -19,7 +19,7 @@ class Phing < AbstractPhpPhar
   end
 
   test do
-    (testpath/"build.xml").write <<-EOS.undent
+    (testpath/"build.xml").write <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <project name="test" default="default">
       <target name="default">
