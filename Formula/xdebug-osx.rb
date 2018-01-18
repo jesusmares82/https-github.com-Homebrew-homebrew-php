@@ -26,7 +26,7 @@ class XdebugOsx < Formula
     bin.install "xdebug-toggle"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Signature:
       xdebug-toggle <on | off> [--no-server-restart]
 
