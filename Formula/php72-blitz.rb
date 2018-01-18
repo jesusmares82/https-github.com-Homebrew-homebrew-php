@@ -27,7 +27,7 @@ class Php72Blitz < AbstractPhp72Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
       blitz.auto_escape=0
       blitz.check_recursion=1
       blitz.comment_close="*/"
