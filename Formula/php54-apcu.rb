@@ -39,7 +39,7 @@ class Php54Apcu < AbstractPhp54Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
       apc.enabled=1
       apc.shm_size=64M
       apc.ttl=7200
