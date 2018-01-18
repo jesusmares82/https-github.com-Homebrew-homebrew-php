@@ -34,7 +34,7 @@ class Php54Apc < AbstractPhp54Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
       apc.enabled=1
       apc.shm_segments=1
       apc.shm_size=64M
