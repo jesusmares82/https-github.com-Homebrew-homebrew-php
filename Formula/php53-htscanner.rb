@@ -28,7 +28,7 @@ class Php53Htscanner < AbstractPhp53Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
       htscanner.config_file = .htaccess
       htscanner.default_ttl = 300
       htscanner.stop_on_error = 0
@@ -37,7 +37,7 @@ class Php53Htscanner < AbstractPhp53Extension
   end
 
   def caveats
-    super + <<-EOS.undent
+    super + <<~EOS
       With this small modification in htscanner,
       you can force it to always use the default docroot set in the php.ini configuration.
 
