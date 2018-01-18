@@ -33,7 +33,7 @@ class Php55Riak < AbstractPhp55Extension
   end
 
   def config_file
-    super + <<-EOS.undent
+    super + <<~EOS
       riak.persistent.connections=20
       riak.persistent.timeout=1800
       riak.socket.keep_alive=1
@@ -43,7 +43,7 @@ class Php55Riak < AbstractPhp55Extension
   end
 
   def caveats
-    super + <<-EOS.undent
+    super + <<~EOS
 
       Note that this formula will NOT install Riak unless you intall
       it with --with-riak option.
