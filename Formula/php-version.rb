@@ -17,7 +17,7 @@ class PhpVersion < Formula
   end
 
   def caveats
-    <<-EOS.undent
+    <<~EOS
       Add the following to $HOME/.bashrc, $HOME/.zshrc, or your shell's equivalent configuration file:
 
         source $(brew --prefix php-version)/php-version.sh && php-version 5
