@@ -26,7 +26,7 @@ class Drush < Formula
 
     prefix.install_metafiles
     libexec.install Dir["*"]
-    (bin+"drush").write <<-EOS.undent
+    (bin+"drush").write <<~EOS
       #!/bin/sh
 
       export ETC_PREFIX=${ETC_PREFIX:=#{HOMEBREW_PREFIX}}
