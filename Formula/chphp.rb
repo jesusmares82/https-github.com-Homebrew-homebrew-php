@@ -18,7 +18,7 @@ class Chphp < Formula
     system "make", "install", "PREFIX=#{prefix}"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Add the following to the ~/.bashrc or ~/.zshrc file:
 
       source #{opt_prefix}/share/chphp/chphp.sh
