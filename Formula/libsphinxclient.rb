@@ -25,7 +25,7 @@ class Libsphinxclient < Formula
 
     # libsphinxclient doesn"t seem to support concurrent jobs:
     #  https://bbs.archlinux.org/viewtopic.php?id=77214
-    ENV.j1
+    ENV.deparallelize
 
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
