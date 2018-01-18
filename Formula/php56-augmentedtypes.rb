@@ -38,7 +38,7 @@ class Php56Augmentedtypes < AbstractPhp56Extension
 
   def config_file
     if active_spec.build.with? "default-enforcement"
-      super + <<-EOS.undent
+      super + <<~EOS
         augmented_types.enforce_by_default = 1
       EOS
     else
