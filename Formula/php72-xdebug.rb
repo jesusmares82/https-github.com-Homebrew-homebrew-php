@@ -4,8 +4,8 @@ class Php72Xdebug < AbstractPhp72Extension
   init
   desc "Provides debugging and profiling capabilities."
   homepage "https://xdebug.org"
-  url "https://xdebug.org/files/xdebug-2.6.0beta1.tgz"
-  sha256 "49de661e1e18cbbd739fc9fb7a014a36f97a84d2c4a89417c358dd258340527d"
+  url "https://xdebug.org/files/xdebug-2.6.0RC2.tgz"
+  sha256 "eea67ce63287fa6eb8fffbd7ed218295c2d649eaee245c114d10a6ebe4c0b019"
   head "https://github.com/xdebug/xdebug.git"
 
   bottle do
