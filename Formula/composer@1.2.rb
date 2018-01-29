@@ -41,9 +41,9 @@ class ComposerAT12 < AbstractPhpPhar
   end
 
   def caveats
-    <<-EOT.undent
+    <<~EOS
       This installs the older composer version #{version} as '#{phar_bin}'.
-    EOT
+    EOS
   end
 
   test do

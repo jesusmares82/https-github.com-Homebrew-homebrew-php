@@ -26,9 +26,9 @@ class Php70Ref < AbstractPhp70Extension
   end
 
   def caveats
-    <<-EOT.undent
+    <<~EOS
       This installs the older php-ref version #{version} which is no longer
       supported because PHP 7.0 support in php-ref discontinued.
-    EOT
+    EOS
   end
 end

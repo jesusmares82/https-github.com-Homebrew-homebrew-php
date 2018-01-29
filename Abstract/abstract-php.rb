@@ -617,7 +617,7 @@ INFO
     end
   end
 
-  def plist; <<-EOPLIST.undent
+  def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
@@ -645,6 +645,6 @@ INFO
       <string>#{opt_prefix}/var/log/php-fpm.log</string>
     </dict>
     </plist>
-    EOPLIST
+    EOS
   end
 end

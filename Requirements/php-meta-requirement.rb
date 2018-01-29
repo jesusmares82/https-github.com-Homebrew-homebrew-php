@@ -6,10 +6,10 @@ class PhpMetaRequirement < HomebrewPhpRequirement
   end
 
   def message
-    <<-EOLTEXT.undent
+    <<~EOS
     Missing a core php install from homebrew-php. 
     Please run: brew install php72
     or install another php version from the homebrew-php tap
-    EOLTEXT
+    EOS
   end
 end
