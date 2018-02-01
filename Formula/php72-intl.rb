@@ -13,7 +13,7 @@ class Php72Intl < AbstractPhp72Extension
 
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  revision 10
+  revision 11
 
   depends_on "icu4c"
 
