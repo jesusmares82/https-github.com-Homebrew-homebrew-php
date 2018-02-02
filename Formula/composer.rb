@@ -39,10 +39,9 @@ class Composer < AbstractPhpPhar
 
   def caveats
     <<-EOS
-      composer no longer depends on the homebrew php Formulas since the last couple of macOS releases
-      contains a php version compatible with composer. If this has been part of your workflow
-      previously then please make the appropriate changes and `brew install php71` or other appropriate
-      Homebrew PHP version.
+      composer no longer depends on the homebrew php formulae, since the last couple of macOS releases
+      contain a php version compatible with composer. If you were previously relying on the composer
+      formula to install php, please `brew install php71` or other appropriate Homebrew PHP version.
     EOS
   end
 end
