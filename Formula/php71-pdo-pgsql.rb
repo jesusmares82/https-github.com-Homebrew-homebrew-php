@@ -4,7 +4,7 @@ class Php71PdoPgsql < AbstractPhp71Extension
   init
   desc "Unified PostgreSQL driver for PDO"
   homepage "https://github.com/php/php-src/tree/master/ext/pdo_pgsql"
-  revision 19
+  revision 20
 
   bottle do
     cellar :any
