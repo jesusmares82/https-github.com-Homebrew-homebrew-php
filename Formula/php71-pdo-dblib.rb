@@ -7,9 +7,9 @@ class Php71PdoDblib < AbstractPhp71Extension
   revision 20
 
   bottle do
-    sha256 "9dc4341d88f88a98cf87f676e92bd22973dc70dd2fa92afb9ca822953b710845" => :high_sierra
-    sha256 "8d7428b2d41b7df2dbfb4417f51eb3aea1f57d03ecd683c03f3dc173bbd65cc8" => :sierra
-    sha256 "f007be0b8b1899378122afb813fd74f563fd0a08270ac7ecaaa503aa16076661" => :el_capitan
+    sha256 "ec6711e80d147fbcf86f38ff947526272931ff9811ce4ebbe53b0d06c096ee8b" => :high_sierra
+    sha256 "b0b08e8bc7542929baf4444d02ecc161c492bc11fc2fab5c7d8df058e761d4c1" => :sierra
+    sha256 "4b10ea5b404836c617f5182484beff61d0078ceeec7cccd2d65ab7431ace9ff3" => :el_capitan
   end
 
   url PHP_SRC_TARBALL
