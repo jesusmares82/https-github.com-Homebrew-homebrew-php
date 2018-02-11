@@ -606,6 +606,13 @@ INFO
       EOS
     end
 
+    s += <<~EOS
+      By 31st March 2018 we will deprecate and archive the PHP tap.
+      Some of the formulae will be migrated to homebrew-core.
+
+      For more details, see https://github.com/Homebrew/homebrew-php/issues/4721
+    EOS
+
     s.join "\n"
   end
 
