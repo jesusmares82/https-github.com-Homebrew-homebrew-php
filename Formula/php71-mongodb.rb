@@ -4,14 +4,9 @@ class Php71Mongodb < AbstractPhp71Extension
   init
   desc "MongoDB driver for PHP."
   homepage "https://pecl.php.net/package/mongodb"
-  url "https://pecl.php.net/get/mongodb-1.3.4.tgz"
-  sha256 "c78190115c0d51a440d66c75b6c12192f6d97873d141b34c5c2406a816fe1bb2"
+  url "https://pecl.php.net/get/mongodb-1.4.0.tgz"
+  sha256 "b970fce679b7682260eacdd1dbf6bdb895ea56e0de8a2ff74dc5af881e4d7d6a"
   head "https://github.com/mongodb/mongo-php-driver.git"
-
-  devel do
-    url "https://pecl.php.net/get/mongodb-1.4.0beta1.tgz"
-    sha256 "427185ef5a668ccb79dcdbbd853b74664cee8fe0fbb9ce241ebc5919e36c3ac7"
-  end
 
   bottle do
     sha256 "f252611a51c9974319767b68c45d158f427fd37c16fe84e9c76bfa27c492e38d" => :high_sierra
@@ -19,15 +14,13 @@ class Php71Mongodb < AbstractPhp71Extension
     sha256 "30f4a71c580ca48e8cf3a8af0eb9f9f1953a425786a01db09608fea1b64875f5" => :el_capitan
   end
 
-  depends_on "openssl"
-
   def install
     Dir.chdir "mongodb-#{version}" unless build.head?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
                           phpconfig,
-                          "--with-openssl-dir=#{Formula["openssl"].opt_prefix}"
+                          "--with-mongodb-ssl=darwin"
     system "make"
     prefix.install "modules/mongodb.so"
     write_config_file if build.with? "config-file"
