@@ -9,9 +9,9 @@ class Phpcpd < AbstractPhpPhar
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "81d791d99104fd8fb5bcd79fe8de93081fc98c9629c58a1c90c7b30d17278df5" => :high_sierra
-    sha256 "81d791d99104fd8fb5bcd79fe8de93081fc98c9629c58a1c90c7b30d17278df5" => :sierra
-    sha256 "81d791d99104fd8fb5bcd79fe8de93081fc98c9629c58a1c90c7b30d17278df5" => :el_capitan
+    sha256 "9c58331f8a6ee580b9abcacd9ceed0974758da1e05216e8c8fe5e6380815d98d" => :high_sierra
+    sha256 "9c58331f8a6ee580b9abcacd9ceed0974758da1e05216e8c8fe5e6380815d98d" => :sierra
+    sha256 "9c58331f8a6ee580b9abcacd9ceed0974758da1e05216e8c8fe5e6380815d98d" => :el_capitan
   end
 
   def phar_file
