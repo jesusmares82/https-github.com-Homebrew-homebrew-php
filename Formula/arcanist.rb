@@ -3,17 +3,16 @@ require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
 class Arcanist < Formula
   desc "Phabricator Arcanist Tool"
   homepage "https://secure.phabricator.com/book/phabricator/article/arcanist/"
-  revision 1
 
   stable do
-    url "https://github.com/wikimedia/arcanist/archive/release/2017-11-29/1.tar.gz"
-    sha256 "33eef2c3b88f143f7b87e121e54b9a10c7c976fe647ec5d65276458a54e43a25"
-    version "201711291"
+    url "https://github.com/wikimedia/arcanist/archive/release/2018-02-15/1.tar.gz"
+    sha256 "75888393e3f0ffb8a567a877b31903db8390b622f73ad501b8eb1bcafb4320fa"
+    version "201802151"
 
     resource "libphutil" do
-      url "https://github.com/wikimedia/phabricator-libphutil/archive/release/2017-11-29/1.tar.gz"
-      sha256 "d43338b02e24a91cf93b30da4f7d2a971d3e185b170df2bb490b7e01a4452524"
-      version "201711291"
+      url "https://github.com/wikimedia/phabricator-libphutil/archive/release/2018-02-15/1.tar.gz"
+      sha256 "a46f0721fa8166ed5edf24ecfe395d7d41e4728681969dded12c664c6fb2074e"
+      version "201802151"
     end
   end
   bottle do
