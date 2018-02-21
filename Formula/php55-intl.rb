@@ -6,7 +6,7 @@ class Php55Intl < AbstractPhp55Extension
   homepage "https://php.net/manual/en/book.intl.php"
   url PHP_SRC_TARBALL
   sha256 PHP_CHECKSUM[:sha256]
-  revision 5
+  revision 6
 
   bottle do
     sha256 "6e66d658f7a6f961fcdf75b8f44ec1322dcf9833a4c9a8b82ae8c33eba16e525" => :high_sierra
