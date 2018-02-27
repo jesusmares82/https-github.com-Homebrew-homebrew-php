@@ -12,9 +12,9 @@ class Terminus < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "d10c2e22800455755a3e3ddb30c3cbc2c03d7b726213f6ab616b15b761888939" => :high_sierra
-    sha256 "9e93fad9ac3927b0b977b0387dd346e263ccc38683eadc118a2d220214e4e641" => :sierra
-    sha256 "eb58bfda108430d2a78eb871c10a5ad86a419c8f50eaf43cba3c5680ff1f6262" => :el_capitan
+    sha256 "f5eb5dd60efe5c1342fda55f0bf765e227794f84a0dbb50f9714495e98511716" => :high_sierra
+    sha256 "c76543347e7faac9456e10578a9599353b80525eb2bc35897067828834fd7653" => :sierra
+    sha256 "8fa28e4adbca94445455a6ef558f483b75630e2e09a1157b600b1cce388eec9d" => :el_capitan
   end
 
   depends_on PhpMetaRequirement
