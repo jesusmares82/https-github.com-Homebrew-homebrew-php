@@ -23,6 +23,9 @@ class AbstractPhp < Formula
     # remove our self from the list
     php_formulas.delete(name.split("::")[2].downcase)
 
+    # Add homebrew-core as a conflicted formula
+    php_formulas << "php"
+
     # conflict with out php versions
     php_formulas.each do |php_formula_name|
       conflicts_with php_formula_name, :because => "different php versions install the same binaries."
