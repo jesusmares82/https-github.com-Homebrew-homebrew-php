@@ -1,5 +1,6 @@
 {
   "phpenv": "homebrew/boneyard",
   "phpsh": "homebrew/boneyard",
-  "php72": "homebrew/core"
+  "php72": "homebrew/core",
+  "wp-cli": "homebrew/core"
 }
