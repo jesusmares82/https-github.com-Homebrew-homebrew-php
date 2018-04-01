@@ -1,5 +1,6 @@
 {
   "composer": "homebrew/core",
+  "php-code-sniffer": "homebrew/core",
   "php-cs-fixer": "homebrew/core",
   "php56": "homebrew/core",
   "php71": "homebrew/core",
