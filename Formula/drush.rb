@@ -18,7 +18,6 @@ class Drush < Formula
   end
 
   depends_on PhpMetaRequirement
-  depends_on "php55" if Formula["php55"].linked_keg.exist?
   depends_on "php56" if Formula["php56"].linked_keg.exist?
 
   def install
