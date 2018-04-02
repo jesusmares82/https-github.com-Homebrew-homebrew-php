@@ -14,9 +14,6 @@ class Phpmyadmin3 < Formula
   end
 
   if build.with? "mcrypt"
-    depends_on "php53-mcrypt" if Formula["php53"].linked_keg.exist?
-    depends_on "php54-mcrypt" if Formula["php54"].linked_keg.exist?
-    depends_on "php55-mcrypt" if Formula["php55"].linked_keg.exist?
     depends_on "php56-mcrypt" if Formula["php56"].linked_keg.exist?
     depends_on "php70-mcrypt" if Formula["php70"].linked_keg.exist?
   end
