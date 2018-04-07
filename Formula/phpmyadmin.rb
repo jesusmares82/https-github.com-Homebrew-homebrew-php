@@ -1,7 +1,5 @@
-require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-
 class Phpmyadmin < Formula
-  desc "A web interface for MySQL and MariaDB"
+  desc "Web interface for MySQL and MariaDB"
   homepage "https://www.phpmyadmin.net"
   url "https://files.phpmyadmin.net/phpMyAdmin/4.7.8/phpMyAdmin-4.7.8-all-languages.tar.gz"
   sha256 "a78d28cd516dbffa85233b85f22d1db5d247cbc26091532f818ce742437b2215"
@@ -13,8 +11,6 @@ class Phpmyadmin < Formula
     sha256 "a4fc107a3300e748eb2935919e21b64bff5ba3d2b58c2d96f43a617de672a070" => :sierra
     sha256 "a4fc107a3300e748eb2935919e21b64bff5ba3d2b58c2d96f43a617de672a070" => :el_capitan
   end
-
-  depends_on PhpMetaRequirement
 
   def install
     (share+"phpmyadmin").install Dir["*"]
