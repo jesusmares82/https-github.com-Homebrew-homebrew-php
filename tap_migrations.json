@@ -1,4 +1,5 @@
 {
+  "brew-php-switcher": "homebrew/core",
   "composer": "homebrew/core",
   "php-code-sniffer": "homebrew/core",
   "php-cs-fixer": "homebrew/core",
