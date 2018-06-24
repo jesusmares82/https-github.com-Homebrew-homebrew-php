@@ -8,6 +8,7 @@
   "php71": "homebrew/core",
   "php72": "homebrew/core",
   "phplint": "homebrew/core",
+  "phpmyadmin": "homebrew/core",
   "phpunit": "homebrew/core",
   "wp-cli": "homebrew/core"
 }
